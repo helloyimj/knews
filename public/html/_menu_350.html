@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>해외투자안내 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="해외투자안내 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="해외투자안내 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="해외투자안내 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <!-- 이 원형은 목록/상세 게시판 DOM이 없어 게시판 JS를 넣지 않음 -->
+    <!-- <script src="../js/board_list.js"></script> -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">해외투자안내</h3>
+
+<script>
+function cfd(file,ofile){
+    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
+    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
+    
+    var doc = document.contFileDown;
+    doc.target = "_self";
+    doc.action = "/ajaxa/fileCpnt/cfd.do";
+    doc.submit();
+}
+</script>
+<form id="contFileDown" name="contFileDown" method="POST">
+    <input type="hidden" name="FILE_NM">
+    <input type="hidden" name="FILE_ORG_NM">
+</form>
+
+	<!--컨텐츠 영역-->
+<div class="foreign_investment">
+   <div class="txtContArea" style="line-height: 150%;">
+      <h1><strong class="contTit_line"><span style="font-family: " 맑은="" 고딕",="" "malgun="" gothic";="" font-size:="" 24px;"="">해외투자</span></strong></h1>
+      <div class="txtG">
+         <p class="txt" style="line-height: 1.15;"><span style="font-size: 11pt; font-family: 굴림;">해외투자에 대한 결정을 하기까지는 「투자정보 조사 사업계획 수립 사업 타당성 분석」의 사이클을 거칩니다. 그러나 해외투자에 대한 경험이 많은 기업도 한 번의 사이클로 투자를 결정하는 경우는 드물며 적게는 몇 번에서, 많게는 수십 번에 달하는 사이클을 거쳐 투자를 결정합니다. 그만큼 해외에 투자하여 수익을 내기가 쉽지 않습니다.</span></p>
+         <p class="txt" style="line-height: 1.15;"><span style="font-size: 11pt; font-family: 굴림;">투자정보 조사가 끝나면 조사내용을 반영하고 회사의 역량을 고려한 사업계획을 수립합니다. 제조업 투자 시 '先 판로 확보, 後 투자'의 원칙이 중요합니다. 판로가 확보되지 않은 상태에서 투자하여 주문이 없어 공장 가동을 하지 못하고 결국 경영이 악화되는 사례를 자주 접하였으며, 이런 사태는 예방해야 합니다.</span></p>
+         <p class="txt" style="line-height: 1.15;"><span style="font-size: 11pt; font-family: 굴림;">사업계획이 수립되면 사업타당성 분석이 필요합니다. 사업 타당성 분석이란 재무제표를 작성해 보고 수익성을 분석하는 작업이며 보통 투자시점부터 3개년 내지 5개년까지는 검토가 필요합니다. 해외투자 기준(내부수익률 몇 %, 투자회수기간 몇 년, 부채비율 몇 % 등)을 수립하여 기준에 충족되는지를 평가하는 것이 좋습니다. (예 : 내부수익률은 20% 이상이 되어야 하고, 투자회수기간은 3년 이내)</span></p>
+         <p class="txt" style="line-height: 1.15;"><span style="font-size: 11pt; font-family: 굴림;">재무제표 작성 및 분석은 보통 회사 내 재무관리 부서가 중심이 되어 검토하며 투자를 기획하는 담당자라면 재무제표를 이해할 수 있을 정도의 전문성을 갖춰야 합니다.</span></p>
+         <p class="txt" style="line-height: 1.15;"><span style="font-family: " 맑은="" 고딕",="" "malgun="" gothic";="" font-size:="" 11pt;"="">&nbsp;</span></p>
+         </div>
+      <h1><strong class="contTit_line"><span style="font-family: " 맑은="" 고딕",="" "malgun="" gothic";="" font-size:="" 24px;"="">내부수익률(Internal Rate of Return): 투자수익률을 분석하는 방법</span></strong></h1>
+      <div class="box_step1 item4">
+         <ul>
+            <li>
+               <div class="Num">
+                  <div class="innerRow">
+                     <h3><b><span style="font-size: 11pt; font-family: 굴림;">01</span><br></b><span style="font-size: 11pt; font-family: 굴림;">&nbsp; &nbsp; &nbsp; &nbsp;투자정보 조사(체크리스트)</span></h3>
+                     </div>
+                  </div>
+               <div class="txt_Info">
+                  <p class="sDot"><span style="font-size: 11pt; font-family: 굴림;">대기업: 체크리스트 준비</span><br><b><span style="font-size: 11pt; font-family: 굴림;">→ 자체 정보망 활용</span></b></p>
+                  <p class="sDot"><span style="font-size: 11pt; font-family: 굴림;">중소기업: 체크리스트 미흡</span><br><b><span style="font-size: 11pt; font-family: 굴림;">→ 외부 정보망 의존</span></b></p>
+                  </div>
+               </li>
+            <li class="no">
+               <div class="Num">
+                  <h3><b><span style="font-size: 11pt; font-family: 굴림;">02</span><br></b><span style="font-size: 11pt; font-family: 굴림;"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 사업계획 수립</span></h3>
+                  </div>
+               <div class="txt_Info">
+                  <p><span style="font-size: 11pt; font-family: 굴림;">사업 목표, 4P(제품, 가격, 유통, 판촉)전략, 공장입지, 투자규모, 자금조달, 부품수급, 조직운영, 법인 형태</span></p>
+                  </div>
+               </li>
+            <li class="yes">
+               <div class="Num">
+                  <h3><b><span style="font-size: 11pt; font-family: 굴림;">03<br></span></b><span style="font-size: 11pt; font-family: 굴림;"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 사업타당성 분석</span></h3>
+                  </div>
+               <div class="txt_Info">
+                  <p><span style="font-size: 11pt; font-family: 굴림;">재무제표 작성(3~5년)</span><br><span style="font-size: 11pt; font-family: 굴림;">- 손익계산서, 사업성 분석(RR 등), 대차대조표</span></p>
+                  </div>
+               </li>
+            <li>
+               <div class="Num">
+                  <h3><b><span style="font-size: 11pt; font-family: 굴림;">04<br></span></b><span style="font-size: 11pt; font-family: 굴림;"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 해외투자 확정</span></h3>
+                  </div>
+               <div class="txt_Info">
+                  <p class="sDot"><span style="font-size: 11pt; font-family: 굴림;">대기업: 철저한 검토결과 반영</span><br><b><span style="font-size: 11pt; font-family: 굴림;">→ 검토기간</span></b></p>
+                  <p class="sDot"><span style="font-size: 11pt; font-family: 굴림;">중소기업: 경영층의 결단 → 검토기간</span></p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+<!--/컨텐츠 영역-->
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

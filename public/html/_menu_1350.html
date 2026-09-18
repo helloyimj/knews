@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>진출기업정보 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="진출기업정보 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="진출기업정보 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="진출기업정보 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <script src="../js/board_list.js"></script>
+    <!-- 상세 페이지용. 목록에서는 로드하지 않음 -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">진출기업정보</h3>
+
+<script>
+	$()
+			.ready(
+					function() {
+
+						//대륙 선택
+						$(document)
+								.on(
+										'click',
+										'[name=pRegnCd]',
+										function() {
+											var ck = "";
+											if ("true" == "true")
+												ck = "checked";
+											$("#natArea").html('');
+
+											$("#kbcArea").html('');
+											$(".kbcArea")
+													.css("display", "none");
+
+											var val = $(this).val();
+
+											if (val == '') {
+												$(".natArea").css("display",
+														"none");
+												return;
+											}
+
+											fn_comm_ajax({
+												url : "/ajaxf/frNation/getNationCodeList.do",
+												data : {
+													"cd" : val
+												},
+												dataType : "json",
+												async : false,
+												success : function(data) {
+													if (null != data) {
+														$(".natArea").css(
+																"display",
+																"flex");
+
+														var html = '';
+														for (var idx = 0; idx < data.length; idx++) {
+															var ck = "";
+
+															if ("" == data[idx].UN_NAT_CD) {
+																ck = "checked";
+															}
+
+															html += '<input type="radio" name="pNatCd" id="nat'+data[idx].UN_NAT_CD+'" value="'+data[idx].UN_NAT_CD+'" '+ck+'>';
+															html += '<label style="cursor: pointer;" for="nat'+data[idx].UN_NAT_CD+'">'
+															html += '<img src="/ajaxa/fileCpnt/fileView.do?gbn=c02&natSn='
+																	+ data[idx].UN_NAT_CD
+																	+ '" style="width: 28px; margin-right: 14px; vertical-align: middle; border-radius: 20px; height: 28px; border: 1px #fff solid;" alt="'
+																	+ data[idx].UNTY_NAT_NAME
+																	+ ' 국기">'
+																	+ data[idx].UNTY_NAT_NAME;
+															html += '</label>';
+														}
+
+														$(html).appendTo(
+																$("#natArea"));
+													}
+
+													$("#sendForm [name=pageNo]")
+															.val('1');
+													fn_list();
+												}
+											});
+										});
+
+						//국가 선택
+						$(document)
+								.on(
+										'click',
+										'[name=pNatCd]',
+										function() {
+											var ck = "";
+											if ("true" == "true")
+												ck = "checked";
+											$("#kbcArea").html('');
+
+											var val = $(this).val();
+
+											if (val == '') {
+												$(".kbcArea").css("display",
+														"none");
+												return;
+											}
+
+											fn_comm_ajax({
+												url : "/ajaxf/frInvestment/getKbcCodeList.do",
+												data : {
+													"cd" : val
+												},
+												dataType : "json",
+												async : false,
+												success : function(data) {
+													if (null != data) {
+														$(".kbcArea").css(
+																"display",
+																"flex");
+
+														var html = '';
+														for (var idx = 0; idx < data.length; idx++) {
+															var ck = "";
+
+															if ("" == data[idx].UN_NAT_CD) {
+																ck = "checked";
+															}
+
+															html += '<input type="radio" name="pKbcCd" id="kbc'+data[idx].CMMN_CD+'" value="'+data[idx].CMMN_CD+'" '+ck+'>';
+															html += '<label style="cursor: pointer; margin-right: 10px;" for="kbc'+data[idx].CMMN_CD+'">'
+																	+ data[idx].CD_NAME
+																	+ '</label>'
+														}
+
+														$(html).appendTo(
+																$("#kbcArea"));
+													}
+
+													$("#sendForm [name=pageNo]")
+															.val('1');
+													fn_list();
+												}
+											});
+										});
+
+						//무역관 선택
+						$(document).on('click', '[name=pKbcCd]', function() {
+							$("#sendForm [name=pageNo]").val('1');
+							fn_list();
+						});
+
+						//페이지 출력개수 
+						$(document)
+								.on(
+										'change',
+										'[name=viewCnt]',
+										function() {
+											var cntVal = $(this).val();
+											if (cntVal != '') {
+												$("#sendForm [name=pageNo]")
+														.val('1');
+												$(
+														"#sendForm [name=recordCountPerPage]")
+														.val(cntVal);
+												fn_list();
+											}
+										});
+
+						fn_list();
+						//페이지 출력개수 
+						$(document)
+								.on(
+										'click',
+										'.btnC_s',
+										function() {
+											var searchVal = $(
+													'[name=sSearchVal]').val();
+
+											if ($(
+													"#sendForm input:hidden[name=pageNo]")
+													.val() == "") {
+												$(
+														"#sendForm input:hidden[name=pageNo]")
+														.val("1");
+											}
+
+											if ($(
+													"#sendForm input:hidden[name=recordCountPerPage]")
+													.val() == "") {
+												$(
+														"#sendForm input:hidden[name=recordCountPerPage]")
+														.val("10");
+											}
+
+											fn_list();
+										});
+
+					})
+
+	/************************************************************************
+	 * 함수명 : fn_list
+	 * 설 명 : 게시물 리스트 조회
+	 * 인 자 :
+	 * 작성자 : bvs
+	 * 수정일 수정자 수정내용
+	 * ------ ------ -------------------
+	 * 2021.03.15 bvs 최초생성
+	 ************************************************************************/
+	function fn_list() {
+		if ($("#sendForm input:hidden[name=pageNo]").val() == "") {
+			$("#sendForm input:hidden[name=pageNo]").val("1");
+		}
+
+		if ($("#sendForm input:hidden[name=recordCountPerPage]").val() == "") {
+			$("#sendForm input:hidden[name=recordCountPerPage]").val("10");
+		}
+
+		fn_comm_ajax({
+			url : '/ajaxf/frInvestment/getAdvncEntpList.do',
+			data : $("#sendForm").serialize(),
+			dataType : "json",
+			success : function(data) {
+				if (data != null) {
+					fn_comm_setList("#tbody", data, "#listTemplate",
+							"#noListTemplate", "#rowCount", ".pagination");
+					if ($("#tbody .typeNoArticle").length > 0) {
+						$("#tbody .typeNoArticle > td").prop("colspan",
+								$("#listTable > thead th").length);
+					}
+				}
+			}
+		});
+	}
+
+	/************************************************************************
+	 * 함수명 : fn_linkPage
+	 * 설 명 :  페이징
+	 * 인 자 :  pageNo(페이지번호)
+	 * 작성자 : bvs
+	 * 수정일 수정자 수정내용
+	 * ------ ------ -------------------
+	 * 2021.03.15 bvs 최초생성
+	 ************************************************************************/
+	function fn_linkPage(pageNo) {
+		$("#sendForm [name='pageNo']").val(pageNo);
+		fn_list();
+	}
+
+	/************************************************************************
+	 * 함수명 : fn_fileDown
+	 * 설 명 :  첨부파일 다운로드
+	 * 인 자 :  obj(파일다운 컨트롤러)
+	 * 작성자 : bvs
+	 * 수정일 수정자 수정내용
+	 * ------ ------ -------------------
+	 * 2022.08.29 bvs 최초생성
+	 ************************************************************************/
+	function fn_fileDown(obj) {
+		var pGbnCd = $(obj).data("gbncd");
+		if ($(obj).data('filenm') == null) {
+			alert("파일이 등록되어 있지 않습니다.");
+			return;
+		}
+		var pUrl = "/ajaxa/fileCpnt/fileDown.do?gbn=i02" + "&pGbnCd=" + pGbnCd;
+		var pFilename = $(obj).data('filenm');
+		fn_filedown_progress(pUrl, pFilename);
+	}
+
+	/************************************************************************
+	 함수명 : fn_searchReset
+	 설 명 : 검색조건 초기화
+	 인 자 :
+	 작성자 : [대외경제정보 통합 플랫폼] 포털파트
+	 수정일              수정자                                   수정내용
+	 ----------  ---------------------   ------------------
+	 2021-03-12  [대외경제정보 통합 플랫폼]      최초 생성
+	 ************************************************************************/
+	function fn_searchReset() {
+		$("#sendForm .searchOpt input:text").val("");
+	}
+</script>
+<div class="board_area" data-board-type="news">
+	<div class="lineList_v noSpacing" style="border-top: 0px;">
+		<dl>
+			<dt></dt>
+			<dd>
+				<div class="gray_Icon_box typeWhite" style="margin-bottom: 50px; background: #f2f3f5;">
+					<div class="innerBox full">
+						<img src="/type/common/img/kor/overseasInvestment/ico_companyInfo_info.png" alt=""> <b>해외진출 한국기업 디렉토리 DB 총 80개국 125개 무역관에서 수집한 우리기업
+							9,930 여개사 정보 수록</b>
+						<ul class="list_dotBlack">
+							<li>주요 내용 : 기업의 기본정보 및 진출 투자업종, 취급분야 등의 영업현황 정보</li>
+							<li>업데이트주기 : 격년</li>
+							<li>비용부과유무 : 무료</li>
+						</ul>
+						<p class="exclam Orange">
+							기업 세부정보 포함 자료는 유료 판매중 (무역자료실/간행물판매) <a href="#;" class="btnI fileDown" title="가격 및 구입방법 안내문  다운로드" data-gbncd="I" data-filenm="가격 및 구입방법 안내문(25.03.10.).hwp" onclick="fn_fileDown(this);"> <span>가격 및 구입방법 안내문 </span>
+							</a>
+						</p>
+						<p class="txt">- 본 디렉토리는 해외진출기업 전수를 수록한 것이 아니며, 정보제공에 동의 의사를
+							표하는 기업에 한해 수록된 자료입니다.</p>
+						<p class="txt">- 조사시점은 2024년 6~9월이나, 기업의 요청에 따른 추가 등재 및 철수 후
+							삭제를 반영하고 있습니다.</p>
+						<p class="telTxt">
+							<a href="tel:02-3460-3246">문의처 : 투자M&amp;A팀 02-3460-7359</a>
+						</p>
+						<p class="txt">- 구매링크 :
+							https://www.kotra.or.kr/subList/20000018759</p>
+					</div>
+				</div>
+				<!-- 내용 -->
+				<div class="view_txt">
+					<div class="view_cont invest_companyInfo">
+						<form id="sendForm" method="post">
+							<input type="hidden" name="pageNo" id="pageNo" value="1"> <input type="hidden" name="pagePerCnt" value="10"> <input type="hidden" name="MENU_ID" id="MENU_ID" value="1350"> <input type="hidden" name="CONTENTS_NO" value="1"> <input type="hidden" name="recordCountPerPage" value="10">
+							<div class="searchOpt" style="width: -webkit-fill-available; margin-bottom: 30px; padding-top: 30px">
+
+								<div class="searchOptBox ele-1 on" style="margin-bottom: 20px;">
+									<div class="searchOpt_wrap" style="border: 1px solid #ddd;">
+										<div class="searchOpt">
+											<ul>
+												<li>
+													<div class="optGrp T2">
+														<strong class="sort" style="width: 130px !important">
+															<label for="comName">기업명(국문) 검색</label>
+														</strong>
+														<div class="opt" style="margin-left: 140px;">
+															<input type="text" name="sSearchVal" class="inp_t half" id="comName" placeholder="검색어를 입력하세요." style="height: auto;"> <input type="text" style="display: none">
+															<button class="btnC_s Navy" type="button">
+																<span>검색</span>
+															</button>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 대륙지도 -->
+								<div class="oversea-map">
+									<div class="oversea-map__continent oversea-map__north-america">
+										<input class="oversea-map__continent--radio-btn" type="radio" id="label_europe" name="pRegnCd" value="04"> <label class="oversea-map__continent--label" for="label_europe">
+											<!-- <img class="oversea-map__continent--label-img" src="./type/common/img/common/oversea-map/europe.png" alt=""> -->
+											<span class="oversea-map__continent--label-txt"> <em>북미</em>
+												<b>North America</b> 
+													
+												
+													
+												
+													
+												
+													진출기업 : 1065개
+												
+													
+												
+													
+												
+													
+												
+										</span>
+										</label>
+									</div>
+									<div class="oversea-map__continent oversea-map__asia">
+										<input class="oversea-map__continent--radio-btn" type="radio" id="label_south-east-asia" name="pRegnCd" value="01">
+										<label class="oversea-map__continent--label" for="label_south-east-asia"> <!-- <img class="oversea-map__continent--label-img" src="./type/common/img/common/oversea-map/east-asia.png" alt=""> -->
+											<span class="oversea-map__continent--label-txt"> <em>아시아</em>
+												<b>Asia</b> 
+													진출기업 : 7263개
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+										</span>
+										</label>
+									</div>
+
+									<div class="oversea-map__continent oversea-map__middle-east">
+										<input class="oversea-map__continent--radio-btn" type="radio" id="label_northAmerica" name="pRegnCd" value="02"> <label class="oversea-map__continent--label" for="label_northAmerica"> <!-- <img class="oversea-map__continent--label-img" src="./type/common/img/common/oversea-map/north-america.png" alt=""> -->
+											<span class="oversea-map__continent--label-txt"> <em>중동</em>
+												<b>Middle East</b> 
+													
+												
+													진출기업 : 214개
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+										</span>
+										</label>
+									</div>
+
+									<div class="oversea-map__continent oversea-map__oceania">
+										<input class="oversea-map__continent--radio-btn" type="radio" id="label_middle-east" name="pRegnCd" value="07"> <label class="oversea-map__continent--label" for="label_middle-east">
+											<!-- <img class="oversea-map__continent--label-img" src="./type/common/img/common/oversea-map/middle-asia.png" alt=""> -->
+											<span class="oversea-map__continent--label-txt"> <em>대양주</em>
+												<b>Oceania</b> 
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													진출기업 : 55개
+												
+										</span>
+										</label>
+									</div>
+
+									<div class="oversea-map__continent oversea-map__europe">
+										<input class="oversea-map__continent--radio-btn" type="radio" id="label_america" name="pRegnCd" value="03"> <label class="oversea-map__continent--label" for="label_america">
+											<!-- <img class="oversea-map__continent--label-img" src="./type/common/img/common/oversea-map/ameraca.png" alt=""> -->
+											<span class="oversea-map__continent--label-txt"> <em>유럽</em>
+												<b>Europe</b> 
+													
+												
+													
+												
+													진출기업 : 1010개
+												
+													
+												
+													
+												
+													
+												
+													
+												
+										</span>
+										</label>
+									</div>
+
+									<div class="oversea-map__continent oversea-map__south-america">
+										<input class="oversea-map__continent--radio-btn" type="radio" id="label_south-america" name="pRegnCd" value="05"> <label class="oversea-map__continent--label" for="label_south-america"> <!-- <img class="oversea-map__continent--label-img" src="./type/common/img/common/oversea-map/south-america.png" alt=""> -->
+											<span class="oversea-map__continent--label-txt"> <em>중남미</em>
+												<b>Central/South America</b> 
+													
+												
+													
+												
+													
+												
+													
+												
+													진출기업 : 268개
+												
+													
+												
+													
+												
+										</span>
+										</label>
+									</div>
+
+									<div class="oversea-map__continent oversea-map__africa">
+										<input class="oversea-map__continent--radio-btn" type="radio" id="label_cis" name="pRegnCd" value="06"> <label class="oversea-map__continent--label" for="label_cis">
+											<!-- <img class="oversea-map__continent--label-img" src="./type/common/img/common/oversea-map/cis.png" alt=""> -->
+											<span class="oversea-map__continent--label-txt"> <em>아프리카</em>
+												<b>Africa</b> 
+													
+												
+													
+												
+													
+												
+													
+												
+													
+												
+													진출기업 : 55개
+												
+													
+												
+										</span>
+										</label>
+									</div>
+								</div>
+								<dl class="sch-opt natArea" style="display: none">
+									<dt class="sch-opt__tit">국가</dt>
+									<dd class="sch-opt__cnts nation" id="natArea" style="padding: 30px 20px 20px 30px !important;"></dd>
+								</dl>
+								<dl class="sch-opt kbcArea" style="display: none">
+									<dt class="sch-opt__tit">무역관</dt>
+									<dd class="sch-opt__cnts agency" id="kbcArea" style="padding: 30px 20px 20px 30px !important;"></dd>
+								</dl>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="boardOptBox">
+					<div class="func_list">
+						<p class="listNum">
+							총<b id="rowCount">9,930</b>건
+						</p>
+						<div class="perPage">
+							<select class="inp_s" name="viewCnt" title="페이지당 목록 수">
+								<option value="10">10</option>
+								<option value="20">20</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+							</select>
+						</div>
+					</div>
+					<div class="func">
+						<a href="#none" class="btnI fileDown Navy excelDown" data-gbncd="D" data-filenm="2025 해외진출 한국기업 디렉토리 (외부).xlsx" onclick="fn_fileDown(this);" title="전문 다운로드"><span>전문
+								다운로드</span></a>
+					</div>
+				</div>
+				<!-- 리스트(항목노출) -->
+				<div class="board_area">
+					<div class="lineList_tb noCateg">
+						<table id="listTable">
+							<caption><p>
+								진출기업정보목록
+							</p></caption>
+							<colgroup>
+								<col style="width: 5%">
+								<col style="width: 7%">
+								<col style="width: 7%">
+								<col style="width: 10%">
+								<col style="width: 10%">
+								<col style="width: 15%">
+								<col style="width: 15%">
+								<col style="width: 25%">
+								<col style="width: 7%">
+								<col style="width: 8%">
+								<col style="width: 8%">
+								<col style="width: 8%">
+								<col style="width: 8%">
+								<col style="width: 8%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">번호</th>
+									<th scope="col">지역</th>
+									<th scope="col">진출국가</th>
+									<th scope="col">관할무역관</th>
+									<th scope="col">기업명(국문)</th>
+									<th scope="col">기업명(영문)</th>
+									<th scope="col">기업명(중문)</th>
+									<th scope="col">주소</th>
+									<th scope="col">우편번호</th>
+									<th scope="col">진출형태</th>
+									<th scope="col">투자형태</th>
+									<th scope="col">모기업명</th>
+									<th scope="col">업종 대분류</th>
+									<th scope="col">업종 중분류</th>
+								</tr>
+							</thead>
+							<tbody id="tbody"><tr class="typeCommen typeIco">          <td class="no">9930</td>          <td>유럽</td>          <td>러시아연방</td>          <td>노보시비르스크</td>          <td>오리온 인터내셔널 유로</td>          <td>ORION INTERNATIONAL EURO</td>          <td>-</td>          <td>Novosibirsk branch Russia, Novosibirsk city, Kirovsky District, Severny Proezd, 35</td>          <td>630088</td>          <td>판매법인</td>          <td>단독투자</td>          <td>오리온</td>          <td>C. 제조업</td>          <td>식료품 제조업</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9929</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>포스코인터내셔널 모스크바지사</td>          <td>POSCO INTERNATIONAL CORPORATION</td>          <td>-</td>          <td>ENTRANCE 3, 5TH FLOOR, OFFICE 502A, KRASNOPRESNENSKAYA NABEREZHNAYA 12, MOSCOW, RUSSIA</td>          <td>123610</td>          <td>지사/지점</td>          <td>-</td>          <td>포스코</td>          <td>B. 광업</td>          <td>-</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9928</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>LG전자(러시아)</td>          <td>LG ELECTRONICS RUS</td>          <td>-</td>          <td>Moscow, 4th Lesnoy Lane, 4</td>          <td>125047</td>          <td>기타법인</td>          <td>단독투자</td>          <td>LG Electronics Inc.</td>          <td>C. 제조업</td>          <td>전자 부품, 컴퓨터, 영상, 음향 및 기통신장비 제조업</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9927</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>대한항공(러시아)</td>          <td>KOREAN AIR LINES CO., LTD.</td>          <td>-</td>          <td>Moscow, Krasnopresenenskaya emb., 12, WTC, bld.1, 6 th floor, office 604</td>          <td>123610</td>          <td>지사/지점</td>          <td>-</td>          <td>-</td>          <td>H. 운수 및 창고업</td>          <td>-</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9926</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>삼성전자CIS총괄 및 러시아판매법인</td>          <td>SAMSUNG ELECTRONICS CIS HQ / RUS COMPANY</td>          <td>-</td>          <td>3 FLOOR, 31 NOVINSKIY BLVD, MOSCOW RUSSIA</td>          <td>123242</td>          <td>판매법인</td>          <td>단독투자</td>          <td>삼성전자</td>          <td>G. 도매 및 소매업</td>          <td>-</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9925</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>현대코퍼레이션(러시아)</td>          <td>HYUNDAI CORPORATION</td>          <td>-</td>          <td>World Trade Center, Ent 3 #703, Krasnopresnenskaya nab.12, Moscow, Russia</td>          <td>123610</td>          <td>연락사무소</td>          <td>-</td>          <td>-</td>          <td>G. 도매 및 소매업</td>          <td>-</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9924</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>LX인터내셔널(러시아)</td>          <td>LX INTERNATIONAL</td>          <td>-</td>          <td>Russia, Moscow, Krasnopresenskaya Nab. 12, WTC Office 602</td>          <td>123610</td>          <td>연락사무소</td>          <td>-</td>          <td>LX홀딩스</td>          <td>B. 광업</td>          <td>-</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9923</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>효성러시아법인</td>          <td>HYOSUNG CORPORATION MOSCOW OFFICE RUS</td>          <td>-</td>          <td>5th floor BC Kapitolity</td>          <td>119311</td>          <td>판매법인</td>          <td>단독투자</td>          <td>효성</td>          <td>G. 도매 및 소매업</td>          <td>-</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9922</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>에코비스로지스틱스러시아법인</td>          <td>ECOVICE LOGISTICS CO., LTD.</td>          <td>-</td>          <td>KRASNOPRESENSKAYA NAB.12, WTC, ENTR. 6, OFFICE 707, MOSCOW. RUSSIA</td>          <td>123610</td>          <td>서비스법인</td>          <td>단독투자</td>          <td>에코비스통상</td>          <td>H. 운수 및 창고업</td>          <td>-</td>         </tr><tr class="typeCommen typeIco">          <td class="no">9921</td>          <td>유럽</td>          <td>러시아연방</td>          <td>모스크바</td>          <td>라닉스엠(러시아)</td>          <td>LANIX M CO., LTD.</td>          <td>-</td>          <td>Russia,Moscow,125413, Solnechnogorskaya 4, bld. 13</td>          <td>125581</td>          <td>판매법인</td>          <td>단독투자</td>          <td>-</td>          <td>G. 도매 및 소매업</td>          <td>-</td>         </tr></tbody>
+							<script id="noListTemplate" type="text/x-jquery-tmpl">
+								<tr class="typeNoArticle">
+									<td>
+										<p class="no_article">등록된 게시물이 없습니다.</p>
+									</td>
+								</tr>
+							</script>
+							<script id="listTemplate" type="text/x-jquery-tmpl">
+								<tr class="typeCommen typeIco">
+									<td class="no">{%= RNUM_DESC%}</td>
+									<td>{%= UNTY_CNTT_NAME %}</td>
+									<td>{%= NAT_NAME %}</td>
+									<td>{%= KBC_NAME %}</td>
+									<td>{%= KOR_ENTP_NAME %}</td>
+									<td>{%= ENG_ENTP_NAME %}</td>
+									<td>{%= CHN_ENTP_NAME %}</td>
+									<td>{%= ADRES %}</td>
+									<td>{%= ZIP %}</td>
+									<td>{%= ADVNC_TY_NAME %}</td>
+									<td>{%= INVT_TY_NAME %}</td>
+									<td>{%= PCOMP_NAME %}</td>
+									<td>{%= INDUTY_LCLAS_NAME %}</td>
+									<td>{%= INDUTY_MCLAS_NAME %}</td>
+								</tr>
+							</script>
+						</table>
+					</div>
+					<div class="pagination">
+
+
+
+<div class="num_paging"><span>Page 1/993</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(993);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
+				</div>
+				<!-- //내용 -->
+			</dd>
+		</dl>
+	</div>
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

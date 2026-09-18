@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>API - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="API - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="API - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="API - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <!-- 이 원형은 목록/상세 게시판 DOM이 없어 게시판 JS를 넣지 않음 -->
+    <!-- <script src="../js/board_list.js"></script> -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">API</h3>
+
+<script>
+function cfd(file,ofile){
+    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
+    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
+    
+    var doc = document.contFileDown;
+    doc.target = "_self";
+    doc.action = "/ajaxa/fileCpnt/cfd.do";
+    doc.submit();
+}
+</script>
+<form id="contFileDown" name="contFileDown" method="POST">
+    <input type="hidden" name="FILE_NM">
+    <input type="hidden" name="FILE_ORG_NM">
+</form>
+
+	<div class="apiUse">
+   <div class="txtContArea">
+      <strong class="contTit_line">Open API 이용안내</strong>
+      <div class="stepTxt mT0">
+         <span class="step">Step 1</span>회원가입
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">①</span>한국정보화진흥원 공공데이터포털을 통해 회원가입을 합니다.
+         </li>
+         <li>
+            <span class="num">②</span> 개인은 일반회원, 기관 및 민간기업은 기관회원으로 가입합니다.
+         </li>
+         <li>
+            <span class="num">③</span> KOTRA에서 제공하는 무역관련 OpenAPI 서비스를 이용하기 위해서는 공공데이터포털에 회원가입을 해야 합니다.
+         </li>
+      </ul>
+      <div class="imgBox">
+         <img src="/type/common/img/kor/etc/apiUse1.png" alt="">
+      </div>
+      <div class="stepTxt">
+         <span class="step">Step 2</span>개발계정신청 및 심의
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">①</span> 데이터셋 &gt; 오픈API를 통해 KOTRA가 제공하는 OpenAPI 서비스 목록을 확인합니다.
+         </li>
+      </ul>
+      <div class="imgBox">
+         <img src="/type/common/img/kor/etc/apiUse2.png" alt="">
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">②</span> 이용하고 싶은 서비스를 클릭하여 서비스의 상세정보를 확인하고, 활용신청 버튼을 클릭하여 신청합니다.
+         </li>
+      </ul>
+      <div class="imgBox">
+         <img src="/type/common/img/kor/etc/apiUse3.png" alt="">
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">③</span> 인증유형, 활용용도, 활용목적, 상세기능, 표준약관 동의는 필수 사항입니다.
+         </li>
+      </ul>
+      <div class="imgBox">
+         <img src="/type/common/img/kor/etc/apiUse4.png" alt="">
+         <ul class="list_dotBlack">
+            <li>개발 계정이란? 실제 운영하기 전 API를 활용하여 테스트 및 개발을 하기 위한 단계</li>
+            <li>개발계정이기 때문에 일일 트래픽(1,000건)을 초과하여 활용할 수 없습니다.</li>
+            <li>심의에서 신청 내용이 미완성일 경우 반려 또는 보류될 수 있습니다.</li>
+         </ul>
+      </div>
+      <div class="stepTxt">
+         <span class="step">Step 3</span>서비스 키 발급
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">①</span>마이페이지에서 인증키 받기 버튼을 클릭하면 인증키를 발급받을 수 있습니다.
+         </li>
+      </ul>
+      <div class="imgBox">
+         <img src="/type/common/img/kor/etc/apiUse5.png" alt="">
+         <ul class="list_dotBlack">
+            <li>서비스키는 재발급 신청이 가능합니다. (기존 서비스키는 자동 폐기)</li>
+            <li>개발 계정을 신청하게 되면 심의를 거쳐 서비스키가 발급 됩니다.</li>
+            <li>서비스키는 1인당 하나만 발급되며 서비스키를 통하여 모든 공공데이터포털 OpenAPI를 활용할 수 있습니다.</li>
+         </ul>
+      </div>
+      <div class="stepTxt">
+         <span class="step">Step 4</span>운영계정 신청 및 심의
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">①</span> 운영 계정(테스트 계정)활용 신청
+         </li>
+      </ul>
+      <div class="imgBox">
+         <img src="/type/common/img/kor/etc/apiUse6.png" alt="">
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">②</span> 운영계정은 KOTRA 담당자의 승인이 필요하며, 약 1~2일 정도 소요됩니다. (API 등록시 수동으로 했을 때, 만약에 자동으로 하시면 이 단계는 필요 없습니다.)
+            <ul class="list_dotBlack">
+               <li>운영 계정이란? 실제 서비스를 진행하기 위한 단계</li>
+               <li>운영 단계 신청 시 필요한 트래픽을 활용자가 작성할 수 있습니다.</li>
+               <li>개발된 어플리케이션에 대한 활용사례를 등록해야 합니다.</li>
+               <li>심의에서 신청 내용이 미완성일 경우 반려 또는 보류될 수 있습니다.</li>
+               <li>운영 계정 승인 요건
+                  <ul>
+                     <li>1. 개발 계정으로 테스트 이력(로그) 확인</li>
+                     <li>2. 파라미터 “mobileApp”값에 서비스 고유명 확인</li>
+                     <li>3. 서비스 되는 앱/웹에서 Kotra API 적용 확인</li>
+                     <li>4. 개발 계정, 운영 계정, 서비스키 등의 진행 및 활용정보는 공공데이터포털 마이페이지에서 확인할 수 있습니다.</li>
+                  </ul>
+                  </li>
+            </ul>
+         </li>
+      </ul>
+      <div class="stepTxt">
+         <span class="step">Step 5</span>OpenAPI 활용
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">①</span>OpenAPI 활용
+         </li>
+         <li>
+            <span class="num">②</span> 제공된 kotra Open API를 활용하여 다양한 매쉬업 서비스를 만들 수 있습니다. 활용을 위해 공공데이터포털에서 개발가이드, 온라인 매뉴얼, 다양한 활용사례를 제공합니다.
+         </li>
+      </ul>
+      <div class="stepTxt">
+         <span class="step">Step 6</span>OpenAPI 이용시 준수사항
+      </div>
+      <ul class="txtNumList">
+         <li>
+            <span class="num">①</span>원저작물 표기와 원문 훼손 금지는 공공누리 유형별 활용범위를 준수하여야 합니다
+         </li>
+         <li>
+            <span class="num">②</span> 공공누리 유형에도 불구하고 이미지, 통계 등 공사가 저작권을 갖고 있지 않고 별도 출처를 명기한 외부 자료는 해당 자료원의 사용허가를 취득하여 사용하여야 합니다.
+         </li>
+         <li>
+            <span class="num">③</span> 대한무역투자진흥공사에서 제공하는 Open API를 사용하지 않고, 홈페이지의 자료를 무단으로 캐싱(로컬 서버에 저장)하여 사용 금지합니다.
+         </li>
+      </ul>
+      <strong class="contTit_line">코트라에서 제공하는 API 및 파일 목록</strong>
+      <p class="txt">API 목록</p>
+      <div class="lineTop_tbArea mT0">
+         <table class="lineTop_tb2">
+            <caption><p>
+               코트라에서 제공하는 API 및 파일 목록 안내표
+               </p></caption><colgroup><col style="width:22%"><col><col></colgroup>
+            <thead>
+               <tr>
+                  <th scope="col">개방 형태</th>
+                  <th scope="col">데이터 명</th>
+                  <th scope="col">데이터 포맷</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>REST</td>
+                  <td class="txtL">국가정보</td>
+                  <td>XML,JSON</td>
+               </tr>
+               <tr>
+                  <td>REST</td>
+                  <td class="txtL">해외시장뉴스</td>
+                  <td>XML,JSON</td>
+               </tr>
+               <tr>
+                  <td>REST</td>
+                  <td class="txtL">상품 DB</td>
+                  <td>XML,JSON</td>
+               </tr>
+               <tr>
+                  <td>REST,FILE</td>
+                  <td class="txtL">GCL(글로벌역량진단)</td>
+                  <td>XML,JSON,EXCEL 파일</td>
+               </tr>
+               <tr>
+                  <td>REST</td>
+                  <td class="txtL">해외시장 데이터</td>
+                  <td>XML,JSON</td>
+               </tr>
+               <tr>
+                  <td>REST,FILE</td>
+                  <td class="txtL">무역투자상담 데이터</td>
+                  <td>XML,JSON,EXCEL 파일</td>
+               </tr>
+               <tr>
+                  <td>REST,FILE</td>
+                  <td class="txtL">무역사기사례</td>
+                  <td>XML,JSON,EXCEL 파일</td>
+               </tr>
+               <tr>
+                  <td>REST,FILE</td>
+                  <td class="txtL">기업성공사례</td>
+                  <td>XML,JSON,EXCEL 파일</td>
+               </tr>
+               <tr>
+                  <td>REST,FILE</td>
+                  <td class="txtL">해외유망프로젝트</td>
+                  <td>XML,JSON,EXCEL 파일</td>
+               </tr>
+               <tr>
+                  <td>FILE</td>
+                  <td class="txtL">해외전문조사기관</td>
+                  <td>EXCEL 파일</td>
+               </tr>
+               <tr>
+                  <td>FILE</td>
+                  <td class="txtL">해외기업검색사이트</td>
+                  <td>EXCEL 파일</td>
+               </tr>
+               <tr>
+                  <td>FILE</td>
+                  <td class="txtL">해외진출기업</td>
+                  <td>EXCEL 파일</td>
+               </tr>
+               <tr>
+                  <td>LINK</td>
+                  <td class="txtL">해외투자법규, 서식</td>
+                  <td>PDF 파일</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

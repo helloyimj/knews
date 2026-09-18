@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>뷰어다운로드 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="뷰어다운로드 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="뷰어다운로드 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="뷰어다운로드 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <!-- 이 원형은 목록/상세 게시판 DOM이 없어 게시판 JS를 넣지 않음 -->
+    <!-- <script src="../js/board_list.js"></script> -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">뷰어다운로드</h3>
+
+<script>
+function cfd(file,ofile){
+    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
+    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
+    
+    var doc = document.contFileDown;
+    doc.target = "_self";
+    doc.action = "/ajaxa/fileCpnt/cfd.do";
+    doc.submit();
+}
+</script>
+<form id="contFileDown" name="contFileDown" method="POST">
+    <input type="hidden" name="FILE_NM">
+    <input type="hidden" name="FILE_ORG_NM">
+</form>
+
+	<div class="system_policy border_vCustom_contBottom">
+   <h3 class="txtHidden">뷰어 다운로드</h3>
+   <div class="lineTop_tbArea">
+      <table class="lineTop_tb2" style="min-width:600px;">
+         <caption><p>
+            뷰어 명, 설명, 다운로드 순으로 뷰어 다운로드 정보를 확인 할 수 있는 표
+            </p></caption><colgroup class="system_policy_tab6"><col style="width:15%"><col><col style="width:240px"></colgroup>
+         <thead>
+            <tr>
+               <th scope="col">뷰어 명</th>
+               <th scope="col">설명</th>
+               <th scope="col">다운로드</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <p class="txt">한글뷰어 2007</p>
+               </td>
+               <td>
+                  <p class="txt txtL">한글과컴퓨터 사의 한글 프로그램<br>한글과컴퓨터에서 개발하여 배포하는 한글 전용 뷰어 프로그램으로 프로그램을 다운로드하신 뒤에 실행시키면, 한글 2002에서작성한 문서이든 한글 97에서 작성한 문서이든 상관없이 모든 (*.hwp 파일)의 내용을 확인하거나 인쇄할 수 있습니다.</p>
+               </td>
+               <td>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_HwpViewer2007.exe', 'HwpViewer2007.exe');"><span><img src="/type/common/img/common/file_hwp.png" alt="한글파일">한글뷰어 2007</span></a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <p class="txt">아크로뱃리더</p>
+               </td>
+               <td>
+                  <p class="txt txtL">Adobe 사의 Acrobat 프로그램</p>
+                  <p class="txt sDot txtL">Adobe 사의 Acrobat 문서인 (*.pdf 파일)을 읽을 수 있게 해주는 필수 프로그램으로, 인터넷 익스플로러와 넷스케이프의 플러그인 프로그램으로도 사용할 수 있습니다. </p>
+                  <p class="txt sDot txtL">프로그램을 다운로드하신 뒤에 실행시키면 설치가 됩니다.</p>
+               </td>
+               <td>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_AdbeRdr80_ko_KR.exe', 'AdbeRdr80_ko_KR.exe');"><span><img src="/type/common/img/common/file_pdf.png" alt="PDF파일">아크로뱃리더</span></a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <p class="txt">MS 워드뷰어</p>
+               </td>
+               <td>
+                  <p class="txt txtL">Microsoft 사의 워드 프로그램</p>
+                  <p class="txt sDot txtL">MS Word로 제작된 문서(*.doc 파일) 을 읽을 수 있는 프로그램입니다. </p>
+                  <p class="txt sDot txtL">프로그램을 다운로드하신 뒤에 실행시키면 설치가 됩니다.</p>
+               </td>
+               <td>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_wdviewer.exe', 'wdviewer.exe');"><span><img src="/type/common/img/common/file_word.png" alt="워드파일">MS 워드뷰어</span></a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <p class="txt">MS 엑셀뷰어</p>
+               </td>
+               <td>
+                  <p class="txt txtL">Microsoft 사의 EXCEL 프로그램</p>
+                  <p class="txt sDot txtL">Microsoft 사의 프로그램인 EXCEL로 제작된 문서(*.xls 파일)을 읽을 수 있는 프로그램입니다. </p>
+                  <p class="txt sDot txtL">프로그램을 다운로드하신 뒤에 실행시키면 설치가 됩니다.</p>
+               </td>
+               <td>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_xlviewer.exe', 'xlviewer.exe');"><span><img src="/type/common/img/common/file_excel.png" alt="엑셀파일">MS 엑셀뷰어</span></a>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <p class="txt">파워포인트 뷰어</p>
+               </td>
+               <td>
+                  <p class="txt txtL">Microsoft 사의 POWER POINT 프로그램</p>
+                  <p class="txt sDot txtL">Microsoft 사의 프로그램인 POWER POINT로 제작된 문서(*.ppt 파일) 을 읽을 수 있는 프로그램입니다. </p>
+                  <p class="txt sDot txtL">프로그램을 다운로드하신 뒤에 실행시키면 설치가 됩니다.</p>
+               </td>
+               <td>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_ppviewer.exe', 'ppviewer.exe');"><span><img src="/type/common/img/common/file_ppt.png" alt="파워포인트파일">파워포인트 뷰어</span></a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

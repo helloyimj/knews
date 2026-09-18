@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>동영상뉴스 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="동영상뉴스 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="동영상뉴스 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="동영상뉴스 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <script src="../js/board_list.js"></script>
+    <!-- 상세 페이지용. 목록에서는 로드하지 않음 -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">동영상뉴스</h3>
+
+<!-- datepicker -->
+<!-- datepicker -->
+
+
+<script type="text/javascript">
+$().ready(function() {
+	
+	// 게시일 수정 (2023-12-05)
+    $(document).on('focus', '[name=START_DT]', function(){
+        var startDt = $('#START_DT').val().split('/').join('');
+        datePickerController.setRangeLow('END_DT', startDt)
+    })
+    
+    $(document).on('focus', '[name=END_DT]', function(){
+        var endDt = $('#END_DT').val().split('/').join('');
+        datePickerController.setRangeHigh('START_DT', endDt)
+    })
+    
+	 datePickerController.createDatePicker({
+         formElements:{
+             "START_DT":"%Y/%m/%d"
+         }
+     });
+     datePickerController.createDatePicker({
+         formElements:{
+             "END_DT":"%Y/%m/%d"
+         }
+     });
+	
+	$("#sendForm [name=SEARCH_FLD]").val("");
+	$("#sendForm [name=SEARCH]").val(decodeURI(""));
+	
+	//뒤로가기시 ready시점 fn_list() #sendForm 파라미터 셋팅 초기화를 위한 부분
+	if(window.performance && window.performance.navigation.type == 2){
+	    fn_searchReset();
+	    if($('[name=pNatCd]:checked').length < 1) $('#natAll').prop('checked',true);
+	}
+	 
+
+	//뒤로가기시 pageshow시점 검색 파라미터 셋팅 초기화를 위한 부분
+	$(window).bind("pageshow",function(event){
+	    if(event.originalEvent.persisted || (window.performance && window.performance.navigation.type == 2)){
+	        fn_searchReset();
+	        if($('[name=pNatCd]:checked').length < 1) $('#natAll').prop('checked',true);
+	    }
+	}) 
+	
+    $(document).on("click",".btn_search",function(){
+    	$("#sendForm input:hidden[name=pageNo]").val("1");
+    	fn_list();
+    });
+    
+    $(document).on("click",".listViewType button",function(){
+    	
+    	var listType = $("ul.listViewType").find('.on').attr('class') ;
+		
+        if(listType == 'typeTit on'){
+        	$(".thumbnailList").addClass('none');
+        	$(".bookCoverList").addClass('none');
+        	$(".normalList").removeClass('none');
+        }else if($("ul.listViewType").find('.on').attr('class') == 'typeThumb on'){
+        	$(".normalList").addClass('none');
+        	$(".bookCoverList").addClass('none');
+        	$(".thumbnailList").removeClass('none');
+        }else{
+        	$(".thumbnailList").addClass('none');
+        	$(".normalList").addClass('none');
+        	$(".bookCoverList").removeClass('none');
+        }
+        $(window).trigger('resize');
+    });
+    
+    $(document).on("click","div.photo > a, div.txtL > a, td.txtL > a",function(){
+    	var bbs_seq = $(this).data("idno");
+    	
+    	$(this).attr("href","#;");
+    	$("#sendForm input:hidden[name=BBS_SEQ]").val(bbs_seq);
+        fn_comm_ajax({
+            url : "/ajaxf/frBoard/bbsChecking.do",
+            data : $("#sendForm").serialize(),
+            dataType : "json",
+            success : function(data) {
+                if(data == 0){
+                    alert('비밀글입니다.');
+                }else if(data == 1){
+					location.href = "/kotranews/cms/board/boardView.do?"+encodeURI($("#sendForm").serialize());
+                }else if(data == 2){
+                	alert('권한이 없습니다.');
+                }else {
+                	alert('잘못된 접근입니다.');
+                    return;
+                }
+            }
+        });
+    });
+    
+    $(document).on('click', '.hscdPop', function(){
+		$(document).find('body').css("overflow-y","hidden");
+		frameBtnObj = $(this);
+		$('<iframe id="iframePop" src="/cms/frCom/actionHsSearchPop.do" class="pop_iframe on" height="100%" scrolling="no" frameborder="0" title="HSCODE 검색 팝업"/>').appendTo($("body #container"));
+	});
+    
+    $(document).on('change', '[name=viewCnt]', function(){
+    	var cntVal = $(this).val();
+    	if(cntVal != ''){
+    		$("#sendForm [name=pageNo]").val('1');
+        	$("#sendForm [name=recordCountPerPage]").val(cntVal);
+        	fn_list();    		
+    	}
+    });
+    
+  //지역 선택
+    $(document).on('click', '[name=pRegnCd]', function(){
+    	var ck = "";
+       	if($('[name=sNatCd]').val() == "") ck = "checked";
+    	$("#natArea").html('<li><span class="inp_r"><input type="radio" name="pNatCd" id="natAll" value="" '+ck+'><label for="natAll">전체</label></span></li>');
+    	
+    	var val =$(this).val();
+    	
+    	if(val == ''){
+    		$("[name=pKbcCd]").html('<option value="" selected="selected">전체</option>');
+    		return;
+    	}
+    	
+        fn_comm_ajax({
+           url: "/ajaxf/frNews/getKotraBoardNationList.do",
+           data: {"cd" : val},
+           async: false,
+           dataType: "json",
+           success: function (data) {
+               if(null != data){
+                   var html = '';
+                  	
+                   for(var idx=0; idx<data.length; idx++){
+                       	var ck = "";
+                       	
+                       	if($('[name=sNatCd]').val() == data[idx].UN_NAT_CD){
+                       		ck = "checked";
+                       	}
+                       	html += '<li>';
+                       	html += '<span class="inp_r">';
+                       	html += '<input type="radio" name="pNatCd" id="nat'+data[idx].UN_NAT_CD+'" value="'+data[idx].UN_NAT_CD+'" '+ck+'>';
+                       	html += '<label for="nat'+data[idx].UN_NAT_CD+'">' + data[idx].UNTY_NAT_NAME + '</label>';
+                       	html += '</span>';
+                       	html += '</li>';
+                   }
+                   
+                   $(html).appendTo($("#natArea"));
+                   
+                   if($("[name=pNatCd]:checked").val() == ''){
+                	   $("[name=pKbcCd]").html('<option value="" selected="selected">전체</option>');
+                   }else{
+                	   $("[name=pKbcCd]").html('<option value="" selected="selected">선택</option>');
+                   }
+                   
+                   if("" != ''){
+                   		$("[name=pNatCd]:checked").trigger('click');
+                   }
+               }
+           }
+        });
+    });
+
+    //국가변경
+    $(document).on('click', '[name=pNatCd]', function(){
+        //하위코드 초기화
+        $("[name=pKbcCd]").html('<option value="" selected="selected">선택</option>');
+
+        var val =$(this).val();
+        
+        if(val == ''){
+        	$("[name=pKbcCd]").html('<option value="" selected="selected">전체</option>');
+        	return;
+        }
+        
+        if(val != ''){
+            fn_comm_ajax({
+                url : "/ajaxf/frNews/getKotraBoardTradeList.do",
+                data : {"cd" : val},
+                dataType : "json",
+                async: false,
+                success : function(data) {
+                    if(null != data){
+                        var html = '';
+                        for(var idx=0; idx<data.length; idx++){
+                        	var ck = "";
+                        	if($('[name=sKbcCd]').val() == data[idx].CMMN_CD){
+                        		ck = "selected";
+                        	}
+                            html += '<option value="' + data[idx].CMMN_CD + '" '+ck+'>' + data[idx].CD_NAME + '</option>';
+                        }
+                        $(html).appendTo("[name=pKbcCd]");
+                    }
+                }
+            });
+        }
+    });
+    
+	$("[name=pRegnCd]:checked").trigger('click');
+    
+    fn_setDefaultShowType();
+    fn_list();
+    
+});
+
+/************************************************************************
+* 함수명 : fn_list
+* 설 명 : 게시물 리스트 조회
+* 인 자 :
+* 작성자 : bvs
+* 수정일 수정자 수정내용
+* ------ ------ -------------------
+* 2021.03.15 bvs 최초생성
+************************************************************************/
+function fn_list() {
+	
+	if($("#sendForm input:hidden[name=pageNo]").val() == ""){
+		$("#sendForm input:hidden[name=pageNo]").val("1");
+	}
+	
+    if($("#sendForm input:hidden[name=recordCountPerPage]").val() == ""){
+    	if($("#sendForm input:hidden[name=pagePerCnt]").val() != ""){
+    		$("#sendForm input:hidden[name=recordCountPerPage]").val($("#sendForm input:hidden[name=pagePerCnt]").val());
+    	} else {
+    		$("#sendForm input:hidden[name=recordCountPerPage]").val("10");	
+    	}
+    }
+	
+	var st = new Date($('#START_DT').val());
+	var et = new Date($('#END_DT').val());
+	
+	if((st != null || st == '') && (et != null || et == '')){
+		if(st > et){
+			alert('시작일은 종료일보다 이전이어야 합니다');
+			return;
+		}
+	}
+	
+	var ajaxUrl = '/ajaxf/frBoard/bbsViewList.do';
+	
+    fn_comm_ajax({
+        url : ajaxUrl,
+        data : $("#sendForm").serialize(),
+        async: false,
+        dataType : "json",
+        success : function(data) {
+        	
+           	fn_comm_setList("#tbody", data, "#listTemplate", "#noListTemplate", "#rowCount", ".pagination");
+           	fn_comm_setList("#galley_list", data, "#galleyListTemplate", "#noGalleyListTemplate", "#rowCount", ".pagination");
+			if($("#tbody .typeNoArticle").length > 0){
+         		$("#tbody #noData td").prop("colspan", $("#listTable > thead th").length);
+            }
+			
+			var listType = $("ul.listViewType").find('.on').attr('class') ;
+			
+            if(listType == 'typeTit on'){
+            	$(".thumbnailList").addClass('none');
+            	$(".bookCoverList").addClass('none');
+            	$(".normalList").removeClass('none');
+            }else if($("ul.listViewType").find('.on').attr('class') == 'typeThumb on'){
+            	$(".normalList").addClass('none');
+            	$(".bookCoverList").addClass('none');
+            	$(".thumbnailList").removeClass('none');
+            }else{
+            	$(".thumbnailList").addClass('none');
+            	$(".normalList").addClass('none');
+            	$(".bookCoverList").removeClass('none');
+            }
+            if('Y' == 'Y'){
+	            fn_makeAttachFileIcon(data);
+            }
+            fn_replaceContents(data);
+            galleryRate();
+        }
+    });
+}
+
+/************************************************************************
+* 함수명 : fn_linkPage
+* 설 명 :  페이징
+* 인 자 :  pageNo(페이지번호)
+* 작성자 : bvs
+* 수정일 수정자 수정내용
+* ------ ------ -------------------
+* 2021.03.15 bvs 최초생성
+************************************************************************/
+function fn_linkPage(pageNo){
+    $("#sendForm [name='pageNo']").val(pageNo);
+    fn_list();
+}
+
+/************************************************************************
+* 함수명 : searchEnterKey
+* 설 명 : 엔터키 trigger - 리스트 조회 펑션 동작 
+* 인 자 : 
+* 작성자 : bvs
+* 수정일 수정자 수정내용
+* ------ ------ -------------------
+* 2021.03.15 bvs 최초생성
+************************************************************************/
+function fn_searchEnterkey() {
+   	$(".btn_search").trigger("click");
+}
+
+/************************************************************************
+ * 함수명 : fn_boardItemModi
+ * 설 명 : 수정페이지 이동
+ * 인 자 : 
+ * 작성자 : bvs
+ * 수정일 수정자 수정내용
+ * ------ ------ -------------------
+ * 2021.03.15 bvs 최초생성
+ ************************************************************************/
+ function fn_boardItemModi(){
+	 $("#sendForm input:hidden[name=BBS_SEQ]").val("");
+ 	 location.href="/kotranews/cms/board/boardWrite.do?"+$("#sendForm").serialize(); 
+ }
+ 
+ /************************************************************************
+  * 함수명 : fn_replaceContents
+  * 설 명 : Contents(내용)에 html 태그제거
+  * 인 자 : 
+  * 작성자 : bvs
+  * 수정일 수정자 수정내용
+  * ------ ------ -------------------
+  * 2021.03.15 bvs 최초생성
+  ************************************************************************/
+ function fn_replaceContents(data){
+	 
+	 for(var idx in data.list){
+		 var contents = data.list[idx].CONTENTS;
+		 var replaceCt = "";
+		 if(contents != null){
+			if(/<[a-z][\s\S]*>/i.test(contents)){
+				replaceCt += contents;
+			}else{
+				replaceCt += contents.replace(/\n/g,"<br/>");
+			}
+	 	}
+		$("#txt_s"+data.list[idx].BBS_SEQ).html(replaceCt);
+	 }
+	 
+ }
+
+ 
+ /************************************************************************
+ * 함수명 : fn_makeAttachFileIcon
+ * 설 명 :  첨부파일이 존재하면 첨부파일 컬럼에 아이콘 생성
+ * 인 자 :  data(boardFileList)
+ * 작성자 : dygo
+ * 수정일 수정자 수정내용
+ * ------ ------ -------------------
+ * 2021.07.28 dygo 최초생성
+ * 2021.08.08 dygo 아이콘 디자인 추가(첨부파일,이미지 아이콘 추가 작업 필요)
+ ************************************************************************/
+ function fn_makeAttachFileIcon(data){
+	 
+ 	if(data.list.length > 0){
+ 	    $(".openY").each(function(i){
+ 	    	var extIcon = "";
+ 	    	
+			if(data.list[i].EXISTFILE.EXIST_FILE_YN == 'Y'){
+				extIcon = "<em class='mSort'>첨부파일</em><span class='hasFile'><em>첨부파일 존재</em></span>";
+			}else{
+				extIcon = "<em class='mSort'>첨부파일</em>-";
+			}
+			
+			$(this).find(".attachFile").append(extIcon);
+ 	    });
+ 	}
+ }
+ 
+ /************************************************************************
+ 함수명 : fn_searchReset
+ 설 명 : 검색조건 초기화
+ 인 자 :
+ 작성자 : [대외경제정보 통합 플랫폼] 포털파트
+ 수정일              수정자                                   수정내용
+ ----------  ---------------------   ------------------
+ 2021-03-12  [대외경제정보 통합 플랫폼]      최초 생성
+ ************************************************************************/
+ function fn_searchReset(){
+ 	$("[name=START_DT]").val('');
+ 	$("[name=END_DT]").val('');
+ 	$("[name=SEARCH_FLD] option").eq(0).prop('selected', 'selected');
+ 	$("[name=SEARCH]").val('');
+ 	$("[name=pRegnCd]").eq(0).prop('checked', 'checked');
+ 	$("[name=sNatCd]").val('');
+ 	$("[name=sKbcCd]").val('');
+ 	$("[name=pRegnCd]:checked").trigger('click');
+ 	$("[name=pIndustCd] option").eq(0).prop('selected', 'selected');
+ 	$("[name=pHsCode]").val('');
+ 	$("[name=pHsCodeNm]").val('');
+ 	$("[name=CATE_SEQ]").val('');
+ }
+ 
+ /************************************************************************
+ 함수명 : fn_hscodeSel
+ 설 명 : HSCODE 선택
+ 인 자 : -
+ 작성자 : [대외경제정보 통합 플랫폼] 포털파트
+  수정일              수정자                                   수정내용
+ ----------  ---------------------   ------------------
+ 2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+ ************************************************************************/
+ function fn_hscodeSel(untyCdClCd, hscd, hsnm){
+ 	$('[name=pHsCode]').val(hscd);
+ 	$('[name=pHsCodeNm]').val(hsnm);
+ 	$('[name=pHsCdType]').val(untyCdClCd);
+ 	
+ 	fn_ifmPopClose();
+ }
+ 
+ /************************************************************************
+ 함수명 : fn_ifmPopClose
+ 설 명 : iframe 비활성화
+ 인 자 : -
+ 작성자 : [대외경제정보 통합 플랫폼] 포털파트
+  수정일              수정자                                   수정내용
+ ----------  ---------------------   ------------------
+ 2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+ ************************************************************************/
+ function fn_ifmPopClose(){
+	$("body").css("overflow","");
+	$("body").css("overflow-y","");
+ 	$("#iframePop").remove();
+ }
+ 
+ /************************************************************************
+ 함수명 : fn_setDefaultShowType
+ 설 명 : iframe 비활성화
+ 인 자 : -
+ 작성자 : [대외경제정보 통합 플랫폼] 포털파트
+  수정일              수정자                                   수정내용
+ ----------  ---------------------   ------------------
+ 2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+ ************************************************************************/
+ function fn_setDefaultShowType(){
+ 	var showType = 'B0302';
+ 	
+ 	if(showType == "B0301"){
+ 		$("ul.listViewType > li").find('.typeTit').addClass('on') ;
+ 		$("ul.listViewType > li").find('.typeTit').attr('title', '선택됨');
+ 	}else{
+ 		$("ul.listViewType").show();
+	 	$("ul.listViewType > li").find('.typeThumb').addClass('on') ;
+	 	$("ul.listViewType > li").find('.typeThumb').attr('title', '선택됨');
+ 	}
+ }
+ 
+</script>
+<!-- board -->
+<div class="searchOptBox on">
+    <div class="searchOpt_wrap">
+    <form id="sendForm" method="post">
+		<input type="hidden" name="pageNo" id="pageNo" value="1">
+		<input type="hidden" name="pagePerCnt" value="12">
+		<input type="hidden" name="recordCountPerPage" value="12">
+		<input type="hidden" name="MENU_ID" id="MENU_ID" value="540">
+		<input type="hidden" name="CONTENTS_NO" value="1">
+		<input type="hidden" name="SITE_NO" value="3">
+		<input type="hidden" name="BOARD_SEQ" value="1">
+		<input type="hidden" name="BBS_SEQ">
+		<input type="hidden" name="PWD">
+		<input type="hidden" name="sRegnCd" value="">
+		<input type="hidden" name="sNatCd" value="">
+		<input type="hidden" name="sKbcCd" value="">
+		
+		
+		<!--  
+		<div class="boxBtn">
+			<button type="button" class="btn_optBoxOpen"><span>검색조건 열기</span></button>
+		</div>
+		-->
+		
+		<div class="searchOpt">
+			<ul>
+				<li class="L400">
+					<div class="optGrp T3">
+                        <strong class="sort">
+                        	<label for="START_DT" id="START_DT_label">게시일</label>
+                        </strong>
+                        <div class="opt">
+	                        <div class="optSetDate">
+	                            <!-- 검색조건-->
+	                            <input type="text" class="inp_t" name="START_DT" id="START_DT" title="게시일 시작 날짜 입력" value="" readonly=""><a href="#START_DT" class="date-picker-control" title="달력 보기" id="fd-but-START_DT" role="button" aria-haspopup="true" tabindex="0"><span>&nbsp;</span><span class="fd-screen-reader">달력 보기</span></a>
+	                            <span class="picker_txt">~</span>
+	                            <input type="text" class="inp_t" name="END_DT" id="END_DT" title="게시일 종료 날짜 입력" value="" readonly=""><a href="#END_DT" class="date-picker-control" title="달력 보기" id="fd-but-END_DT" role="button" aria-haspopup="true" tabindex="0"><span>&nbsp;</span><span class="fd-screen-reader">달력 보기</span></a>
+	                            <!-- //검색조건 -->
+	                        </div>
+                        </div>
+                    </div>
+					<div class="optGrp T3">
+						<strong class="sort">
+							<label for="SEARCH">검색</label>
+						</strong>
+						<div class="opt">
+							<!-- <div class="optSet01">
+								<select name="SEARCH_FLD" class="inp_s" title="검색옵션 선택">
+									<option value="">전체</option>
+									<option value="SUBJECT">제목</option>
+									<option value="CONTENTS">내용</option>
+									<option value="WRITER">작성자명</option>
+								</select>
+							</div> -->
+							<input type="text" id="SEARCH" name="SEARCH" class="inp_t" placeholder="검색어를 입력하세요." title="검색어 입력" onkeypress="if(event.keyCode == 13){fn_linkPage(1);return false;}">
+						</div>
+					</div>
+				</li>
+				
+				
+				<li class="searchBaseDN">
+                    <div class="optGrp T2">
+                        <strong class="sort">대륙</strong>
+                        <div class="opt">
+                            <ul class="radioNcheck" id="regnArea">
+								<li>
+                           			<span class="inp_r">
+                           				<input type="radio" name="pRegnCd" id="regnAll" value="" checked="checked">
+                           				<label for="regnAll">전체</label>
+                           			</span>
+                           		</li>
+                           		
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn01" value="01">
+                            				<label for="regn01">아시아</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn02" value="02">
+                            				<label for="regn02">중동</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn03" value="03">
+                            				<label for="regn03">유럽</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn04" value="04">
+                            				<label for="regn04">북미</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn05" value="05">
+                            				<label for="regn05">중남미</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn06" value="06">
+                            				<label for="regn06">아프리카</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn07" value="07">
+                            				<label for="regn07">대양주</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn91" value="91">
+                            				<label for="regn91">KOTRA 본사</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn98" value="98">
+                            				<label for="regn98">전세계</label>
+                            			</span>
+                            		</li>
+                            	
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+				<li class="searchBaseDN">
+                    <div class="optGrp T4">
+                        <strong class="sort">국가/지역</strong>
+                        <div class="opt">
+                            <ul class="radioNcheck" id="natArea"><li><span class="inp_r"><input type="radio" name="pNatCd" id="natAll" value="" checked=""><label for="natAll">전체</label></span></li></ul>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="P20 searchBaseDN">
+                	<div class="optGrp T3">
+                        <strong class="sort">무역관</strong>
+                        <div class="opt">
+                            <select class="inp_s" title="무역관 선택" name="pKbcCd" style="width:250px;"><option value="" selected="selected">전체</option></select>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+                
+            </ul>
+            <div class="btn">
+                <a href="#;" class="btnC" onclick="fn_searchReset();"><span>조건 초기화</span></a>
+                <a href="#;" class="btnC Navy btn_search"><span>검색</span></a>
+            </div>
+        </div>
+        <div class="boxBtn">
+            <button type="button" class="btn_optBoxClose seachOptTypeOpen"><span>상세 검색 열기</span></button>
+        </div>
+	</form>
+    </div>
+</div>
+
+<div class="boardOptBox">
+	<div class="func_list">
+		<p class="listNum">총<b id="rowCount">284</b>건</p>
+		<div class="perPage">
+			<select class="inp_s" name="viewCnt" style="width:80px;" title="페이지당 목록 수">
+				
+					<option value="12" selected="selected">12</option>
+				
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+           	</select>
+		</div>
+	</div>
+
+    <div class="func">
+        <ul class="listViewType" style="">
+            <li><button type="button" class="typeTit">리스트기본형</button></li>
+            <li><button type="button" class="typeThumb on" title="선택됨">포토썸네일형</button></li>
+            
+        </ul>
+        
+    </div>
+</div>
+
+
+<div class="board_area" data-board-type="news">
+	<div class="lineList_tb normalList noCateg none">
+		<table id="listTable">
+			<caption><p>동영상뉴스 목록</p></caption>
+			<colgroup>
+				<col style="width:7%">
+				
+				<col class="subject">
+				<col style="width:8%">
+				
+				<col style="width:10%">
+				
+				<col class="date">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">번호</th>
+					
+					<th scope="col">제목</th>
+					<th scope="col">첨부파일</th>
+					
+					<th scope="col">국가</th>
+					
+					<th scope="col">게시일</th>
+				</tr>
+			</thead>
+			<tbody id="tbody"><tr class="openY" data-idno="1265">      <td class="no">284</td>            <td class="txtL">       <a href="#" data-idno="1265" data-url="N">비결(비즈니스 직결!) 해외시장정보 | [세계이슈톡톡] Ep18. 할랄 인증 없으면 못 판다? - 인도네시아 소비재 시장의 새 기준</a>              <img src="/type/common/img/common/ico_new.png" alt="NEW" class="ico_new">             </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>인도네시아</td>                                                      <td><em class="mSort">게시일</em>2026.09.17</td>     </tr><tr class="openY" data-idno="1264">      <td class="no">283</td>            <td class="txtL">       <a href="#" data-idno="1264" data-url="N">비결(비즈니스 직결!) 해외시장정보 | 카자흐스탄 사람들 대부분이 쓰는 앱!(Kaspi)</a>              <img src="/type/common/img/common/ico_new.png" alt="NEW" class="ico_new">             </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>카자흐스탄</td>                                                      <td><em class="mSort">게시일</em>2026.09.16</td>     </tr><tr class="openY" data-idno="1263">      <td class="no">282</td>            <td class="txtL">       <a href="#" data-idno="1263" data-url="N"> 비결(비즈니스 직결!) 해외시장정보 | [코라지 8월호] 브라질 SAF부터 파나마 K-푸드까지! 변화하는 중남미 산업·소비시장</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>파나마</td>                                                      <td><em class="mSort">게시일</em>2026.09.11</td>     </tr><tr class="openY" data-idno="1262">      <td class="no">281</td>            <td class="txtL">       <a href="#" data-idno="1262" data-url="N"> 비결(비즈니스 직결!) 해외시장정보 | 건기식부터 화장품까지, 운남에서 발견한 새로운 성장 기회</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>중국</td>                                                      <td><em class="mSort">게시일</em>2026.09.11</td>     </tr><tr class="openY" data-idno="1261">      <td class="no">280</td>            <td class="txtL">       <a href="#" data-idno="1261" data-url="N">“어서 와, 한국!” 요르단 2만 명이 몰렸다?!?! Ya Hala, Meet Korea</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>요르단</td>                                                      <td><em class="mSort">게시일</em>2026.09.07</td>     </tr><tr class="openY" data-idno="1260">      <td class="no">279</td>            <td class="txtL">       <a href="#" data-idno="1260" data-url="N">[세계이슈톡톡] 세계인의 일상에 스며드는 K-라이프스타일</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>KOTRA 본사</td>                                                      <td><em class="mSort">게시일</em>2026.09.07</td>     </tr><tr class="openY" data-idno="1259">      <td class="no">278</td>            <td class="txtL">       <a href="#" data-idno="1259" data-url="N">[세계이슈톡톡] Ep15. 미국인들이 K-소비재에 빠진 진짜 이유 - 웰니스(Wellness)의 나라 한국</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>KOTRA 본사</td>                                                      <td><em class="mSort">게시일</em>2026.08.24</td>     </tr><tr class="openY" data-idno="1258">      <td class="no">277</td>            <td class="txtL">       <a href="#" data-idno="1258" data-url="N">[세계이슈톡톡] Ep14. 라이브 한 번에 재고가 싹?!🤯 더우인 역직구로 중국 시장 뚫는 법 전부 알려드림</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>중국</td>                                                      <td><em class="mSort">게시일</em>2026.08.24</td>     </tr><tr class="openY" data-idno="1257">      <td class="no">276</td>            <td class="txtL">       <a href="#" data-idno="1257" data-url="N">[코라지 7월호] 한-콜롬비아 FTA 10주년부터 쿠바 경제개혁까지! 우리 기업이 주목해야 할 중남미 5개국 시장 전망</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>콜롬비아</td>                                                      <td><em class="mSort">게시일</em>2026.08.24</td>     </tr><tr class="openY" data-idno="1256">      <td class="no">275</td>            <td class="txtL">       <a href="#" data-idno="1256" data-url="N">카자흐스탄에 진출한 한국 프랜차이즈 직접 가봤습니다 | 본죽·BBQ·아트박스</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>카자흐스탄</td>                                                      <td><em class="mSort">게시일</em>2026.08.13</td>     </tr><tr class="openY" data-idno="1255">      <td class="no">274</td>            <td class="txtL">       <a href="#" data-idno="1255" data-url="N">[세계이슈톡톡] EP13. K-소비재 수출지형 변화와 일본시장 진출 확대 전략</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>일본</td>                                                      <td><em class="mSort">게시일</em>2026.08.03</td>     </tr><tr class="openY" data-idno="1254">      <td class="no">273</td>            <td class="txtL">       <a href="#" data-idno="1254" data-url="N">[해.시.태그] AI로 세대교체하는 세계 의료기기 시장</a>                           </td>                           <td class="attachFile">                     <em class="mSort">첨부파일</em>-</td>                                          <td><em class="mSort">국가</em>KOTRA 본사</td>                                                      <td><em class="mSort">게시일</em>2026.07.30</td>     </tr></tbody>
+			<script id="noListTemplate" type="text/x-jquery-tmpl">
+                <tr id="noData" class="typeNoArticle">
+                	<td>
+						<p class="no_article">등록된 게시물이 없습니다.</p>
+					</td>
+                </tr>
+            </script>
+            <script id="listTemplate" type="text/x-jquery-tmpl">
+				<tr class="openY" data-idno="{%= BBS_SEQ %}">
+					<td class="no">{%if TOP_YN == 'Y' %}<div class="btnC_s Blue"><span>공지</span><div>{%/if%}{%if TOP_YN == 'N' %}{%= RNUM_DESC%}{%/if%}</td>
+					
+					<td class="txtL">
+						<a href="#" data-idno="{%= BBS_SEQ%}" data-url="{%= LINK_URL_YN%}">{%if OPEN_GBN == 'N' %}<em class="txtOpt Red">[미게시]</em>{%/if%}{%= SUBJECT%}</a>
+						{%if COMMENT_CNT > 0 %}<span class="info_comment"><em>댓글</em>[{%= COMMENT_CNT %}]</span>{%/if%}
+						{%if NEW_YN == 'Y' %}<img src="/type/common/img/common/ico_new.png" alt="NEW" class="ico_new" />{%/if%}
+						{%if SECRET_YN == 'Y' %}<img src="/type/common/img/board/ico_lock.png" alt="비밀글" class="ico_lock"/>{%/if%}
+					</td>
+					
+                    <td class="attachFile">
+                    </td>
+                	
+					
+					
+					{%if NAT_NAME != null%}
+					<td><em class="mSort">국가</em>{%= NAT_NAME%}</td>
+					{%/if%}
+					{%if NAT_NAME == null%}
+					<td><em class="mSort">국가</em>-</td>
+					{%/if%}
+					
+                	
+                	<td><em class="mSort">게시일</em>{%= WRITE_DATE %}</td>
+				</tr>
+			</script>
+		</table>
+	</div>
+	<div class="lineList_ul typeGallery thumbnailList">
+		<ul id="galley_list"><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1265"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1265" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1265"> 비결(비즈니스 직결!) 해외시장정보 | [세계이슈톡톡] Ep18. 할랄 인증 없으면 못 판다? - 인도네시아 소비재 시장의 새 기준</a>      <span class="info_comment"></span>      <img src="/type/common/img/common/ico_new.png" alt="NEW" class="ico_new">           </div>     <div class="txtInfo">      <ul>                     <li>인도네시아</li>                     <li>자카르타무역관</li>                            <li>최수희</li>                     <li class="date">2026.09.17</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1264"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1264" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1264"> 비결(비즈니스 직결!) 해외시장정보 | 카자흐스탄 사람들 대부분이 쓰는 앱!(Kaspi)</a>      <span class="info_comment"></span>      <img src="/type/common/img/common/ico_new.png" alt="NEW" class="ico_new">           </div>     <div class="txtInfo">      <ul>                     <li>카자흐스탄</li>                     <li>알마티무역관</li>                            <li>최수희</li>                     <li class="date">2026.09.16</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1263"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1263" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1263">  비결(비즈니스 직결!) 해외시장정보 | [코라지 8월호] 브라질 SAF부터 파나마 K-푸드까지! 변화하는 중남미 산업·소비시장</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>파나마</li>                     <li>파나마무역관</li>                            <li>최수희</li>                     <li class="date">2026.09.11</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1262"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1262" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1262">  비결(비즈니스 직결!) 해외시장정보 | 건기식부터 화장품까지, 운남에서 발견한 새로운 성장 기회</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>중국</li>                     <li>청두무역관</li>                            <li>최수희</li>                     <li class="date">2026.09.11</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1261"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1261" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1261"> “어서 와, 한국!” 요르단 2만 명이 몰렸다?!?! Ya Hala, Meet Korea</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>요르단</li>                     <li>암만무역관</li>                            <li>최수희</li>                     <li class="date">2026.09.07</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1260"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1260" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1260"> [세계이슈톡톡] 세계인의 일상에 스며드는 K-라이프스타일</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>KOTRA 본사</li>                                   <li>최수희</li>                     <li class="date">2026.09.07</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1259"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1259" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1259"> [세계이슈톡톡] Ep15. 미국인들이 K-소비재에 빠진 진짜 이유 - 웰니스(Wellness)의 나라 한국</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>KOTRA 본사</li>                                   <li>최수희</li>                     <li class="date">2026.08.24</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1258"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1258" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1258"> [세계이슈톡톡] Ep14. 라이브 한 번에 재고가 싹?!🤯 더우인 역직구로 중국 시장 뚫는 법 전부 알려드림</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>중국</li>                     <li>칭다오무역관</li>                            <li>최수희</li>                     <li class="date">2026.08.24</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1257"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1257" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1257"> [코라지 7월호] 한-콜롬비아 FTA 10주년부터 쿠바 경제개혁까지! 우리 기업이 주목해야 할 중남미 5개국 시장 전망</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>콜롬비아</li>                     <li>보고타무역관</li>                            <li>최수희</li>                     <li class="date">2026.08.24</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1256"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1256" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1256"> 카자흐스탄에 진출한 한국 프랜차이즈 직접 가봤습니다 | 본죽·BBQ·아트박스</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>카자흐스탄</li>                     <li>알마티무역관</li>                            <li>최수희</li>                     <li class="date">2026.08.13</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1255"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1255" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1255"> [세계이슈톡톡] EP13. K-소비재 수출지형 변화와 일본시장 진출 확대 전략</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>일본</li>                     <li>도쿄무역관</li>                            <li>최수희</li>                     <li class="date">2026.08.03</li>             </ul>     </div>    </li><li class="typeIco ">     <div class="photo">      <a href="#" data-idno="1254"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1254" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')" style="height: 188px;"></a>     </div>               <div class="txtL">      <a href="#" data-idno="1254"> [해.시.태그] AI로 세대교체하는 세계 의료기기 시장</a>      <span class="info_comment"></span>                 </div>     <div class="txtInfo">      <ul>                     <li>KOTRA 본사</li>                                   <li>최다희</li>                     <li class="date">2026.07.30</li>             </ul>     </div>    </li></ul>
+		<script id="noGalleyListTemplate" type="text/x-jquery-tmpl">
+			<li class="typeNoArticle">
+				<p class="no_article">등록된 게시물이 없습니다.</p>
+			</li>
+		</script>
+		<script id="galleyListTemplate" type="text/x-jquery-tmpl">
+			<li class="typeIco {%if COMMENT_CNT > 0 %}typeComment{%/if%}">
+				<div class="photo">
+					<a href="#" data-idno="{%= BBS_SEQ %}"><img src="/ajaxa/fileCpnt/fileView.do?gbn=b01&SITE_NO={%= SITE_NO %}&BOARD_SEQ={%= BOARD_SEQ %}&BBS_SEQ={%= BBS_SEQ %}" alt="{%= THUMB_SUB_TEXT %}" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')"/></a>
+				</div>
+				{%if TOP_YN == 'Y' %}<span class="mark_noti">공지</span>{%/if%}
+				
+				<div class="txtL">
+					<a href="#" data-idno="{%= BBS_SEQ %}">{%if OPEN_GBN == 'N' %}<em class="txtOpt Red">[미게시]</em>{%/if%} {%= SUBJECT%}</a>
+					<span class="info_comment">{%if COMMENT_CNT > 0 %}<em>댓글</em>[{%= COMMENT_CNT %}]{%/if%}</span>
+					{%if NEW_YN == 'Y' %}<img src="/type/common/img/common/ico_new.png" alt="NEW" class="ico_new" />{%/if%}
+					{%if SECRET_YN == 'Y' %}<img src="/type/common/img/board/ico_lock.png" alt="비밀글" class="ico_lock"/>{%/if%}
+				</div>
+				<div class="txtInfo">
+					<ul>
+						
+						{%if NAT_NAME != null %}
+						<li>{%= NAT_NAME%}</li>
+						{%/if%}
+						{%if CMMN_NAME != null %}
+						<li>{%= CMMN_NAME%}</li>
+						{%/if%}
+						
+						{%if WRITER_NM != null %}
+						<li>{%= WRITER_NM %}</li>
+						{%/if%}
+						{%if WRITE_DATE != null %}
+						<li class="date">{%= WRITE_DATE %}</li>
+						{%/if%}
+					</ul>
+				</div>
+			</li>
+		</script>
+	</div>
+	
+	<div class="pagination">
+
+
+
+<div class="num_paging"><span>Page 1/24</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(24);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

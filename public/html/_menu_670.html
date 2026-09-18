@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>뉴스레터신청 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="뉴스레터신청 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="뉴스레터신청 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="뉴스레터신청 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <!-- 이 원형은 목록/상세 게시판 DOM이 없어 게시판 JS를 넣지 않음 -->
+    <!-- <script src="../js/board_list.js"></script> -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">뉴스레터신청</h3>
+
+<script>
+function cfd(file,ofile){
+    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
+    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
+    
+    var doc = document.contFileDown;
+    doc.target = "_self";
+    doc.action = "/ajaxa/fileCpnt/cfd.do";
+    doc.submit();
+}
+</script>
+<form id="contFileDown" name="contFileDown" method="POST">
+    <input type="hidden" name="FILE_NM">
+    <input type="hidden" name="FILE_ORG_NM">
+</form>
+
+	<div class="newsletter border_vCustom_contBottom">
+   <div class="info_imgBox">
+      <div class="imgArea" style="background:url(/type/dream/img/dreamgarden/newsletter_Main.png) no-repeat left 50% top 50%;">&nbsp;</div>
+      <div class="infoArea">
+         <strong>KOTRA 해외시장뉴스 뉴스레터는 <br>KOTRA 회원으로 가입하시면 받아보실 수 있습니다.</strong>
+         <p class="Dot tit">
+            <b>신규회원 :</b>KOTRA(www.kotra.or.kr) 회원 가입 시 관심서비스란에서 '통합시장정보' EMAIL 수신여부 체크하기
+         </p>
+         <p class="Dot tit">
+            <b>기존회원:</b>KOTRA 홈페이지(www.kotra.or.kr)에서 로그인 후 My KOTRA - 회원정보수정에서 <br>'통합시장정보'의 EMAIL 수신여부 체크하기
+         </p>
+      </div>
+   </div>
+   <p class="exclamS black">회원가입 관련 문의는 KOTRA 고객안내센터 (1600-7119 연결 후 1번)으로 연락 주시면 안내해 드리겠습니다.</p>
+   <div class="btnArea">
+      <a href="https://www.kotra.or.kr/subList/20000005978" class="btnC arrowR" title="새 창 열림" target="_blank"><span>KOTRA 뉴스레터</span></a>
+   </div>
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

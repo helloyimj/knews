@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>RSS2.0 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="RSS2.0 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="RSS2.0 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="RSS2.0 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <!-- 이 원형은 목록/상세 게시판 DOM이 없어 게시판 JS를 넣지 않음 -->
+    <!-- <script src="../js/board_list.js"></script> -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">RSS2.0</h3>
+
+<script>
+function cfd(file,ofile){
+    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
+    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
+    
+    var doc = document.contFileDown;
+    doc.target = "_self";
+    doc.action = "/ajaxa/fileCpnt/cfd.do";
+    doc.submit();
+}
+</script>
+<form id="contFileDown" name="contFileDown" method="POST">
+    <input type="hidden" name="FILE_NM">
+    <input type="hidden" name="FILE_ORG_NM">
+</form>
+
+	<!--컨텐츠 영역-->
+<div class="rss20">
+   <div class="txtContArea">
+      
+      <div class="info_topBox">
+         <p>
+            <strong>KOTRA 해외시장뉴스 최신정보를 <br>RSS 2.0 서비스로 가장 먼저 받아보세요.</strong>
+         </p>
+         </div>
+      <strong class="contTit_line">RSS란?</strong>
+      <ul class="list_dotBlack">
+         <li>RSS의 사전적의미는 Really Simple Syndication(또는 Rich Site Summary) 의 줄임말로 자주 업데이트되는 콘텐츠를 사용자에게 쉽게 제공하기 위해 XML기반의 표준포맷입니다. </li>
+         <li>RSS서비스를 이용하면 KOTRA 해외시장뉴스에서 제공하는 서비스를 일일이 사이트에 방문하지 않아도 최신 게시물이 업데이트 될 때마다 바로 확인할 수 있습니다.</li>
+         </ul>
+      <strong class="contTit_line">RSS 이용하는 방법</strong>
+      <p class="txt">아래 영역의 RSS 아이콘을 클릭하시면 관련 URL이 복사됩니다. 복사본 URL를 사용하시는 RSS리더에 붙이세요.</p>
+      <p class="txt">RSS 서비스 정책이 변경되어 RSS 서비스를 이용하시려면 담당자(bigdream@kotra.or.kr)에 문의 주십시오.</p>
+      <strong class="contTit_line">KOTRA 해외시장뉴스 RSS 서비스 주소 XML</strong>
+      <p class="txt">
+         <strong><span style="color: #0000ff;">(※ 서버 부하로 인해 RSS 서비스를 당분간 중지합니다. 서비스 안정화 후 재개할 예정입니다.&nbsp;</span></strong>
+      </p>
+      <div class="lineTop_tbArea typeDropDownTb">
+         <table class="lineTop_tb2" style="min-width:600px;">
+            <caption><p>
+               구분,카테고리,퍼가기 항목 순으로 KOTRA 해외시장뉴스 RSS 서비스 주소 XML 안내표
+               </p></caption><colgroup><col style="width:20%"><col><col style="width:15%"></colgroup>
+            <thead>
+               <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">카테고리</th>
+                  <th scope="col">퍼가기</th>
+                  </tr>
+               </thead>
+            <tbody>
+               <tr class="news">
+                  <td rowspan="51" class="newsRow">해외시장뉴스</td>
+                  <td class="txtL">전체</td>
+                  <td>
+                     <a href="#none" title="전체 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1_default default on">
+                  <td class="txtL">경제·무역<button type="button" class="arrBtn type1_top"><span class="txtHidden">하위메뉴 펼침</span></button></td>
+                  <td>
+                     <a href="#;" title="경제·무역 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">아시아</td>
+                  <td>
+                     <a href="#none" title="아시아 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">중동</td>
+                  <td>
+                     <a href="#none" title="중동 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">유럽</td>
+                  <td>
+                     <a href="#none" title="유럽 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">북미</td>
+                  <td>
+                     <a href="#none" title="북미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">중남미</td>
+                  <td>
+                     <a href="#none" title="중남미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">아프리카</td>
+                  <td>
+                     <a href="#none" title="아프리카 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">대양주</td>
+                  <td>
+                     <a href="#none" title="대양주 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">KOTRA 본사</td>
+                  <td>
+                     <a href="#none" title="KOTRA 본사 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type1">
+                  <td class="txtL bgGray">전 세계</td>
+                  <td>
+                     <a href="#none" title="전세계 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2_default default on">
+                  <td class="txtL">통상·규제<button type="button" class="arrBtn type2_top"><span class="txtHidden">하위메뉴 펼침</span></button></td>
+                  <td>
+                     <a href="#none" title="통상·규제 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">아시아</td>
+                  <td>
+                     <a href="#none" title="아시아 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">중동</td>
+                  <td>
+                     <a href="#none" title="중동 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">유럽</td>
+                  <td>
+                     <a href="#none" title="유럽 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">북미</td>
+                  <td>
+                     <a href="#none" title="북미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">중남미</td>
+                  <td>
+                     <a href="#none" title="중남미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">아프리카</td>
+                  <td>
+                     <a href="#none" title="아프리카 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">대양주</td>
+                  <td>
+                     <a href="#none" title="대양주 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">KOTRA 본사</td>
+                  <td>
+                     <a href="#none" title="KOTRA 본사 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type2">
+                  <td class="txtL bgGray">전 세계</td>
+                  <td>
+                     <a href="#none" title="전세계 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3_default default on">
+                  <td class="txtL">투자진출<button type="button" class="arrBtn type3_top"><span class="txtHidden">하위메뉴 펼침</span></button></td>
+                  <td>
+                     <a href="#none" title="전체 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">아시아</td>
+                  <td>
+                     <a href="#none" title="아시아 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">중동</td>
+                  <td>
+                     <a href="#none" title="중동 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">유럽</td>
+                  <td>
+                     <a href="#none" title="유럽 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">북미</td>
+                  <td>
+                     <a href="#none" title="북미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">중남미</td>
+                  <td>
+                     <a href="#none" title="중남미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">아프리카</td>
+                  <td>
+                     <a href="#none" title="아프리카 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">대양주</td>
+                  <td>
+                     <a href="#none" title="대양주 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">KOTRA 본사</td>
+                  <td>
+                     <a href="#none" title="KOTRA 본사 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type3">
+                  <td class="txtL bgGray">전 세계</td>
+                  <td>
+                     <a href="#none" title="전세계 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4_default default on">
+                  <td class="txtL">현장인터뷰<button type="button" class="arrBtn type4_top"><span class="txtHidden">하위메뉴 펼침</span></button></td>
+                  <td>
+                     <a href="#none" title="현장인터뷰 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">아시아</td>
+                  <td>
+                     <a href="#none" title="아시아 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">중동</td>
+                  <td>
+                     <a href="#none" title="중동 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">유럽</td>
+                  <td>
+                     <a href="#none" title="유럽 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">북미</td>
+                  <td>
+                     <a href="#none" title="북미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">중남미</td>
+                  <td>
+                     <a href="#none" title="중남미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">아프리카</td>
+                  <td>
+                     <a href="#none" title="아프리카 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">대양주</td>
+                  <td>
+                     <a href="#none" title="대양주 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">KOTRA 본사</td>
+                  <td>
+                     <a href="#none" title="KOTRA 본사 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type4">
+                  <td class="txtL bgGray">전 세계</td>
+                  <td>
+                     <a href="#none" title="전세계 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5_default default on">
+                  <td class="txtL">기고<button type="button" class="arrBtn type5_top"><span class="txtHidden">하위메뉴 펼침</span></button></td>
+                  <td>
+                     <a href="#none" title="기고 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">아시아</td>
+                  <td>
+                     <a href="#none" title="아시아 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">중동</td>
+                  <td>
+                     <a href="#none" title="중동 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">유럽</td>
+                  <td>
+                     <a href="#none" title="유럽 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">북미</td>
+                  <td>
+                     <a href="#none" title="북미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">중남미</td>
+                  <td>
+                     <a href="#none" title="중남미 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">아프리카</td>
+                  <td>
+                     <a href="#none" title="아프리카 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">대양주</td>
+                  <td>
+                     <a href="#none" title="대양주 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">KOTRA 본사</td>
+                  <td>
+                     <a href="#none" title="KOTRA 본사 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr class="news type5">
+                  <td class="txtL bgGray">전 세계</td>
+                  <td>
+                     <a href="#none" title="전세계 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td rowspan="3">상품·산업</td>
+                  <td class="txtL">트렌드</td>
+                  <td>
+                     <a href="#none" title="트렌드 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td class="txtL">상품DB</td>
+                  <td>
+                     <a href="#none" title="상품DB RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td class="txtL">국별주요산업</td>
+                  <td>
+                     <a href="#none" title="국별주요산업 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td rowspan="4">국가·지역정보</td>
+                  <td class="txtL">북한정보</td>
+                  <td>
+                     <a href="#none" title="북한정보 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td class="txtL">북한 대외무역동향</td>
+                  <td>
+                     <a href="#none" title="북한 대외무역동향 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td class="txtL">진출전략</td>
+                  <td>
+                     <a href="#none" title="진출전략 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td class="txtL">출장자료</td>
+                  <td>
+                     <a href="#none" title="출장자료 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td>보고서</td>
+                  <td class="txtL">보고서</td>
+                  <td>
+                     <a href="#none" title="보고서 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               <tr>
+                  <td>멀티미디어뉴스</td>
+                  <td class="txtL">포토뉴스</td>
+                  <td>
+                     <a href="#none" title="포토뉴스 RSS URL 복사" data-clipboard-text="" class="btn_rss"><span>RSS</span></a>
+                  </td>
+                  </tr>
+               </tbody>
+         </table>
+         </div>
+      <strong class="contTit_line">한글지원 RSS리더 안내</strong>
+      <p class="txt">프로그램 및 사이트 : 네이버me 구독, 한RSS, Feedly Plus 등</p>
+      </div>
+   </div>
+<!--/컨텐츠 영역-->
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

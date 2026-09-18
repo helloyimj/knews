@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>전체 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="전체 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="전체 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="전체 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <script src="../js/board_list.js"></script>
+    <!-- 상세 페이지용. 목록에서는 로드하지 않음 -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">전체</h3>
+
+<!-- datepicker -->
+<!-- datepicker -->
+
+
+
+
+
+ 
+
+
+<div class="searchOptBox on">
+    <div class="searchOpt_wrap">
+    
+    <form id="sendForm" method="post">
+		<input type="hidden" name="pageNo" id="pageNo" value="1">
+		<input type="hidden" name="pagePerCnt" value="10">
+		<input type="hidden" name="SITE_NO" value="3">
+		<input type="hidden" name="MENU_ID" id="MENU_ID" value="170">
+		<input type="hidden" name="CONTENTS_NO" value="1">
+		<input type="hidden" name="bbsGbn" value="01">
+		<input type="hidden" name="bbsSn" value="243,254,403,257">
+		<input type="hidden" name="pNttSn" value="">
+		<input type="hidden" name="recordCountPerPage" value="10">
+		<input type="hidden" name="viewType" value="">
+		<input type="hidden" name="pNewsGbn" value="">
+		
+		<!--
+    	<div class="boxBtn">
+			<button type="button" class="btn_optBoxOpen"><span>검색조건 열기</span></button>
+		</div>
+		-->
+		
+		<div class="searchOpt">
+			<ul>
+				<li class="L400">
+					<div class="optGrp T3">
+                        <strong class="sort">게시일</strong>
+                        <div class="optSetDate">
+                            <!-- 검색조건-->
+                            <input type="text" class="inp_t" name="pStartDt" id="pStartDt" title="시작 날짜 입력(YYYY/MM/DD)" style="width:137px;" value="" readonly=""><a href="#pStartDt" class="date-picker-control" title="달력 보기" id="fd-but-pStartDt" role="button" aria-haspopup="true" tabindex="0"><span>&nbsp;</span><span class="fd-screen-reader">달력 보기</span></a>
+                            <span class="picker_txt">~</span>
+                            <input type="text" class="inp_t" name="pEndDt" id="pEndDt" title="종료 날짜 입력(YYYY/MM/DD)" style="width:137px;" value="" readonly=""><a href="#pEndDt" class="date-picker-control" title="달력 보기" id="fd-but-pEndDt" role="button" aria-haspopup="true" tabindex="0"><span>&nbsp;</span><span class="fd-screen-reader">달력 보기</span></a>
+                            <script>
+                            datePickerController.createDatePicker({
+                                formElements:{
+                                    "pStartDt":"%Y/%m/%d"
+                                }
+                            });
+                            datePickerController.createDatePicker({
+                                formElements:{
+                                    "pEndDt":"%Y/%m/%d"
+                                }
+                            });
+                            </script>
+                            <!-- //검색조건 -->
+                        </div>
+                    </div>
+                    
+					<div class="optGrp T2">
+						<strong class="sort">검색</strong>
+						<div class="opt">
+<!-- 							<div class="optSet01"> -->
+<!-- 								<select name="sSearchGbn" class="inp_s" title="검색옵션 선택"> -->
+<!-- 									<option value="">전체</option> -->
+<!-- 									<option value="subject">제목</option> -->
+<!-- 									<option value="keyword">키워드</option> -->
+<!-- 								</select> -->
+								<input type="text" name="sSearchVal" class="inp_t" placeholder="검색어를 입력하세요." title="검색어 입력" onkeypress="if(event.keyCode == 13){fn_linkPage(1);return false;}">
+<!-- 							</div> -->
+						</div>
+					</div>
+				</li>
+				
+				<li class="searchBaseDN">
+                    <div class="optGrp T2">
+                        <strong class="sort">대륙</strong>
+                        <p class="exclam Orange" style="float: right;">대륙 및 국가목록은 데이터가 존재하는 지역만 표시됩니다.</p>
+                        <div class="opt">
+                            <ul class="radioNcheck" id="regnArea">
+								<li>
+                           			<span class="inp_r">
+                           				<input type="radio" name="pRegnCd" id="regnAll" value="" checked="checked">
+                           				<label for="regnAll">전체</label>
+                           			</span>
+                           		</li>
+                           		
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn07" value="07">
+                            				<label for="regn07">대양주</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn04" value="04">
+                            				<label for="regn04">북미</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn01" value="01">
+                            				<label for="regn01">아시아</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn06" value="06">
+                            				<label for="regn06">아프리카</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn03" value="03">
+                            				<label for="regn03">유럽</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn05" value="05">
+                            				<label for="regn05">중남미</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn02" value="02">
+                            				<label for="regn02">중동</label>
+                            			</span>
+                            		</li>
+                            	
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+				<li class="searchBaseDN">
+                    <div class="optGrp T4">
+                        <strong class="sort">국가/지역</strong>
+                        <div class="opt">
+                            <ul class="radioNcheck" id="natArea"><li><span class="inp_r"><input type="radio" name="pNatCd" id="natAll" value="" checked=""><label for="natAll">전체</label></span></li></ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="P20 searchBaseDN">
+                    <div class="optGrp T3">
+                        <strong class="sort">무역관</strong>
+                        <div class="opt">
+                            <select class="inp_s" title="무역관 선택" name="pKbcCd" style="width:250px;"><option value="" selected="selected">전체</option></select>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+                
+				<li class="L400 searchBaseDN">
+                    <div class="optGrp T4">
+                        <strong class="sort">산업분류</strong>
+                        <div class="opt">
+                            <select class="inp_s" name="pIndustCd" title="산업분류명 선택" style="width:200px;">
+                                <option value="">선택</option>
+                                
+                                
+                                	<option value="I001193">농림수산식품</option>
+                                
+                                	<option value="I001195">광물/에너지</option>
+                                
+                                	<option value="I001212">화학</option>
+                                
+                                	<option value="I001197">섬유/패션</option>
+                                
+                                	<option value="I001198">생활소비재</option>
+                                
+                                	<option value="I001201">철강/금속</option>
+                                
+                                	<option value="I001199">기계류</option>
+                                
+                                	<option value="I001200">자동차/수송기기</option>
+                                
+                                	<option value="I001202">전자/전기</option>
+                                
+                                	<option value="I001206">의료바이오</option>
+                                
+                                	<option value="I001203">환경</option>
+                                
+                                	<option value="I001204">건설/인프라/플랜트</option>
+                                
+                                	<option value="I001208">유통/물류</option>
+                                
+                                	<option value="I001205">IT</option>
+                                
+                                	<option value="I001207">문화콘텐츠</option>
+                                
+                                	<option value="I001209">금융</option>
+                                
+                                	<option value="I001210">관광/교육/서비스</option>
+                                
+                                	<option value="I001211">기타</option>
+                                
+                                	<option value="I001307">산업일반</option>
+                                
+                                	<option value="I001213">그리드(전력망·기자재)</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="optGrp T4">
+                        <strong class="sort">HSCODE</strong>
+                        <div class="opt typeFindCode2">
+                            <input type="text" class="inp_t" name="pHsCode" id="pHsCode" title="HSCODE를 입력하세요" style="width:150px;" value="">
+                            <input type="text" class="inp_t" name="pHsCodeNm" id="pHsCodeNm" title="품목명을 입력하세요" style="width:150px;" value="">
+                            <input type="hidden" name="pHsCdType" value="">
+                            
+                            <a href="#;" class="btnC_s Gray hscdPop"><span>찾기</span></a>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+                                
+            </ul>
+            <div class="btn">
+                <a href="#;" class="btnC" onclick="fn_searchReset();"><span>조건 초기화</span></a>
+                <a href="#;" class="btnC Navy btn_search" onclick="fn_linkPage('1');"><span>검색</span></a>
+            </div>
+        </div>
+        <div class="boxBtn">
+            <button type="button" class="btn_optBoxClose seachOptTypeOpen"><span>상세 검색 열기</span></button>
+        </div>
+	</form>
+    </div>
+</div>
+
+<div id="frameDiv"></div>
+
+<div class="boardOptBox">
+	<div class="func_list">
+		<p class="listNum">총<b id="rowCount">45,200</b>건</p>
+		<div class="perPage">
+			<select class="inp_s" name="viewCnt" title="페이지당 목록 수">
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+           	</select>
+		</div>
+	</div>
+
+    <div class="func">
+    	<div class="sub_util">
+	        <div class="btnGrp">
+	            <a href="#;" class="btnI fileDown" onclick="fn_downFile('html');"><span>HTML 다운로드</span></a>
+	            <a href="#;" class="btnI fileDown" onclick="fn_downFile('pdf');"><span>PDF 다운로드</span></a>
+	        </div>
+	    </div>
+	    
+        <ul class="listViewType">
+            <li><button type="button" data-viewtype="thumb" class="typeThumbList on" title="선택됨">포토리스트형</button></li>
+            <li><button type="button" data-viewtype="list" class="typeTit">리스트기본형</button></li>
+        </ul>
+    </div>
+</div>
+
+<div class="board_area" data-board-type="news">
+	
+		<div class="lineList_ul typeGalleryList typeCheckbox">
+			<ul id="tbody"><li class="nttTr">     <span class="no">      45200     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244120" class="chk_list" name="downChk" value="244120" data-bbssn="403">       <label for="chk_244120">        <em class="txtHidden">[해시뉴스플러스] 2026년 태국 방위산업 정보 </em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244120&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244120">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244120&amp;atFileSn=119993" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244120&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244120">[해시뉴스플러스] 2026년 태국 방위산업 정보 </a>     </div>     <p class="txt_s">태국은 방산 자립과 군 현대화를 병행하며 전투기·함정·무인체계, 지휘통제·사이버 등 주요 분야의 역량 강화를 추진하고 있다. 이에 따라 한국 기업은 기술이전·현지생산·공동개발, MRO 및 핵심부품 공급 등 현지 산업과 연계한 중장기 진출전략을 검토할 필요가 있다.</p>      <div class="txtInfo">      <ul>       <li class="categ">국별 주요산업</li>      </ul>      <ul>       <li>태국</li>       <li>방콕무역관</li>       <li class="date">2026-09-18</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45199     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244051" class="chk_list" name="downChk" value="244051" data-bbssn="254">       <label for="chk_244051">        <em class="txtHidden">﻿페루 주석도금강판(틴플레이트) 시장동향</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244051&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244051">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244051&amp;atFileSn=119886" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244051&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244051">﻿페루 주석도금강판(틴플레이트) 시장동향</a>     </div>     <p class="txt_s">﻿2025년 페루의 틴플레이트(HS 7210.12) 수입은 1억 2241만 달러로 전년 대비 54.0% 급증하며 중국·일본·독일이 97.9%를 과점했다. 대한(對韓) 수입은 92.8% 급감해 3년 연속 감소했으며, 한국 기업의 품질·신뢰성 기반 시장 재진입 전략이 필요하다.</p>      <div class="txtInfo">      <ul>       <li class="categ">상품DB</li>      </ul>      <ul>       <li>페루</li>       <li>리마무역관</li>       <li class="date">2026-09-18</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45198     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244070" class="chk_list" name="downChk" value="244070" data-bbssn="254">       <label for="chk_244070">        <em class="txtHidden">인도 합성고무 시장동향</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244070&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244070">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244070&amp;atFileSn=119917" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244070&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244070">인도 합성고무 시장동향</a>     </div>     <p class="txt_s">인도 합성고무 시장은 자동차·타이어 산업 성장과 전기차 보급, 산업용 고무제품 수요 확대에 힘입어 성장하고 있으며, 국내 생산이 소비를 따라가지 못하면서 수입 수요도 지속적으로 확대되고 있다. 향후 시장은 범용 합성고무 중심에서 전기차용 타이어 소재와 특수 탄성중합체 등 고기능·고부가가치 제품 중심으로 점차 재편될 것으로 전망된다.</p>      <div class="txtInfo">      <ul>       <li class="categ">상품DB</li>      </ul>      <ul>       <li>인도</li>       <li>뭄바이무역관</li>       <li class="date">2026-09-18</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45197     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244209" class="chk_list" name="downChk" value="244209" data-bbssn="243">       <label for="chk_244209">        <em class="txtHidden">美 방산시장의 숨은 수요, 장비 도입 뒤 이어지는 ‘유지·보수’</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244209&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244209">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244209&amp;atFileSn=120140" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244209&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244209">美 방산시장의 숨은 수요, 장비 도입 뒤 이어지는 ‘유지·보수’</a>     </div>     <p class="txt_s">미국 방산시장은 장비 도입 이후에도 수십 년간 유지보수와 교체부품 수요가 지속된다. DLA와 TACOM을 중심으로 지상장비 유지 지원 공급망이 형성돼 있으며, 전자부품과 자동차부품, 밸브, 펌프, 모터 등 일반 제조업과 맞닿은 품목도 폭넓게 조달된다. 한국 기업은 실제 조달 수요와 원산지, 공급원 승인, 기술 요건 등을 함께 확인할 필요가 있다.</p>      <div class="txtInfo">      <ul>       <li class="categ">트렌드</li>      </ul>      <ul>       <li>미국</li>       <li>디트로이트무역관</li>       <li class="date">2026-09-18</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45196     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244063" class="chk_list" name="downChk" value="244063" data-bbssn="243">       <label for="chk_244063">        <em class="txtHidden">인도 K-POP, 팬덤을 넘어 산업으로…공연·IP·현지 제작시장 열린다</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244063&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244063">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244063&amp;atFileSn=119910" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244063&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244063">인도 K-POP, 팬덤을 넘어 산업으로…공연·IP·현지 제작시장 열린다</a>     </div>     <p class="txt_s">인도 K-POP 시장이 온라인 팬덤 중심의 소비를 넘어 공연, 공식 MD, IP, 아티스트 육성·제작으로 확장되고 있다. 라이브 이벤트 시장 성장과 HYBE INDIA의 현지화가 맞물리면서 한국 기업에는 음반·굿즈뿐 아니라 공연기술, 콘텐츠 제작, 라이선싱 등 B2B 협력 기회도 확대될 전망이다.</p>      <div class="txtInfo">      <ul>       <li class="categ">트렌드</li>      </ul>      <ul>       <li>인도</li>       <li>벵갈루루무역관</li>       <li class="date">2026-09-17</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45195     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244046" class="chk_list" name="downChk" value="244046" data-bbssn="254">       <label for="chk_244046">        <em class="txtHidden">브라질 플라스틱 기능성 캡 시장동향</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244046&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244046">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244046&amp;atFileSn=119885" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244046&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244046">브라질 플라스틱 기능성 캡 시장동향</a>     </div>     <p class="txt_s">브라질 기능성 캡 시장은 플라스틱 포장재 산업의 핵심 품목으로, 385억 달러 규모 포장재 시장 성장과 함께 확대되고 있다. 친환경 규제, 경량화, ANVISA 안전 기준 강화가 시장 변화를 주도하고 있다. 수입은 5년 연속 증가하나 수출은 3년 연속 감소해 무역 적자가 확대되고 있다. 독일·중국·미국 3개국이 수입 시장의 약 59%를 과점하는 구조가 지속되고 있다. </p>      <div class="txtInfo">      <ul>       <li class="categ">상품DB</li>      </ul>      <ul>       <li>브라질</li>       <li>상파울루무역관</li>       <li class="date">2026-09-17</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45194     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244102" class="chk_list" name="downChk" value="244102" data-bbssn="254">       <label for="chk_244102">        <em class="txtHidden">중국 플라스틱제 생활용품 시장동향</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244102&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244102">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244102&amp;atFileSn=119991" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244102&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244102">중국 플라스틱제 생활용품 시장동향</a>     </div>     <p class="txt_s">중국 플라스틱제 생활용품 시장은 생산기반이 안정적인 가운데 범용제품을 중심으로 가격경쟁이 심화되고 있다. 한국 기업은 디자인·기능성·소재 등 차별화 제품을 중심으로 시장을 공략하고, 중국 기업과의 공동개발 및 B2B 공급망 협력을 통해 진출기회를 모색할 필요가 있다.</p>      <div class="txtInfo">      <ul>       <li class="categ">상품DB</li>      </ul>      <ul>       <li>중국</li>       <li>정저우무역관</li>       <li class="date">2026-09-17</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45193     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244069" class="chk_list" name="downChk" value="244069" data-bbssn="403">       <label for="chk_244069">        <em class="txtHidden">2026년 우즈베키스탄 산업개관</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244069&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244069">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244069&amp;atFileSn=119916" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244069&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244069">2026년 우즈베키스탄 산업개관</a>     </div>     <p class="txt_s">우즈베키스탄은 서비스업 비중 확대와 제조업 투자 증가를 바탕으로 농업·자원 중심 경제에서 다변화된 산업구조로 전환하고 있다. 정부는 원료의 국내 가공과 고부가가치화, 외국인투자 및 민간부문 확대, 지역별 산업 특화, 디지털·녹색 전환을 중심으로 산업 고도화를 추진하고 있다.</p>      <div class="txtInfo">      <ul>       <li class="categ">국별 주요산업</li>      </ul>      <ul>       <li>우즈베키스탄</li>       <li>타슈켄트무역관</li>       <li class="date">2026-09-17</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45192     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_244096" class="chk_list" name="downChk" value="244096" data-bbssn="243">       <label for="chk_244096">        <em class="txtHidden"> 중국 6.3조 원 규모의 립 메이크업 시장, ‘정밀화 성장’ 시대의 서막</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244096&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="244096">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=244096&amp;atFileSn=119966" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=244096&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="244096"> 중국 6.3조 원 규모의 립 메이크업 시장, ‘정밀화 성장’ 시대의 서막</a>     </div>     <p class="txt_s">중국 립 메이크업 시장은 이미 고속 확장 단계에서 정밀화 성장 단계로 전환되었으며, 2025년 시장 규모는 315억 9000만 위안(약 한화 6.3조 원)에 달하고 향후 성장률은 4%~7%로 둔화될 전망이다. 채널은 '온라인 주도, 오프라인 체험 상호 보완' 구도를 보이며, 관심형 이커머스와 온라인 쇼핑몰이 핵심이다. </p>      <div class="txtInfo">      <ul>       <li class="categ">트렌드</li>      </ul>      <ul>       <li>중국</li>       <li>창춘무역관</li>       <li class="date">2026-09-17</li>      </ul>     </div>    </li><li class="nttTr">     <span class="no">      45191     </span>     <div class="checkbox">      <span class="inp_c only">       <input type="checkbox" id="chk_243853" class="chk_list" name="downChk" value="243853" data-bbssn="243">       <label for="chk_243853">        <em class="txtHidden">중국 신(新)전자상거래, AI·디지털휴먼이 이끄는 질적 성장 국면 진입</em>       </label>      </span>     </div>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=243853&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" data-source="243853">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243853&amp;atFileSn=119687" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=170&amp;CONTENTS_NO=1&amp;bbsGbn=01&amp;bbsSn=243%2C254%2C403%2C257&amp;pNttSn=243853&amp;recordCountPerPage=10&amp;viewType=&amp;pNewsGbn=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;pHsCode=&amp;pHsCodeNm=&amp;pHsCdType=&amp;sSearchVal=" class="subjectTxt" data-source="243853">중국 신(新)전자상거래, AI·디지털휴먼이 이끄는 질적 성장 국면 진입</a>     </div>     <p class="txt_s">라이브커머스·즉시소매·감성소비 등 신업태가 성장을 견인하고, 디지털휴먼 방송·AR 가상 체험 등 AI 기술이 전(全) 밸류체인으로 확산되면서 중국 전자상거래 시장이 규모 확장에서 질적 성장 단계로 전환되고 있다.</p>      <div class="txtInfo">      <ul>       <li class="categ">트렌드</li>      </ul>      <ul>       <li>중국</li>       <li>샤먼무역관</li>       <li class="date">2026-09-17</li>      </ul>     </div>    </li></ul>
+		</div>
+		
+		<script id="noListTemplate" type="text/x-jquery-tmpl">
+			<li class="typeNoArticle">
+				<p class="no_article">등록된 게시물이 없습니다.</p>
+			</li>
+		</script>
+		
+		<script id="listTemplate" type="text/x-jquery-tmpl">
+			<li class="nttTr">
+				<span class="no">
+					{%= RNUM_DESC%}
+				</span>
+				<div class="checkbox">
+					<span class="inp_c only">
+						<input type="checkbox" id="chk_{%= NTT_SN%}" class="chk_list" name="downChk" value="{%= NTT_SN%}" data-bbssn="{%= BBS_SN%}"/>
+						<label for="chk_{%= NTT_SN%}">
+							<em class="txtHidden">{%= NTT_SJ%}</em>
+						</label>
+					</span>
+				</div>
+				<div class="photo">
+					<a href="#;" data-source="{%= NTT_SN %}">
+						<img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&nttSn={%= NTT_SN%}&atFileSn={%= THUMB_FILE_IDX_VAL%}" alt="{%= NTT_THUMB_IMG_DC_CN %}" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')"/>
+					</a>
+				</div>
+				<div class="txtL">
+					<a href="#;" class="subjectTxt" data-source="{%= NTT_SN %}">{%= NTT_SJ%}</a>
+				</div>
+				<p class="txt_s">{%= SMMAR_CN%}</p>
+					<div class="txtInfo">
+					<ul>
+						<li class="categ">{%= BBS_NAME%}</li>
+					</ul>
+					<ul>
+						{%if NAT != null && NAT != ''%}<li>{%= NAT%}</li>{%/if%}
+						{%if KBC != null && KBC != ''%}<li>{%= KBC%}</li>{%/if%}
+						<li class="date">{%= OTHBC_DT_NM%}</li>
+					</ul>
+				</div>
+			</li>
+		</script>
+		<div class="pagination">
+
+
+
+<div class="num_paging"><span>Page 1/4520</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(4520);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
+	
+		
+	
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>미국 통상정책 주요 동향 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta name="description" content="미국 통상정책 주요 동향 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:title" content="미국 통상정책 주요 동향 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="미국 통상정책 주요 동향 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <script src="../js/board_list.js"></script>
+    <!-- 상세 페이지용. 목록에서는 로드하지 않음 -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+          <h3 class="sr-only">미국 통상정책 주요 동향</h3>
+
+<!-- datepicker -->
+<!-- datepicker -->
+
+
+
+
+
+ 
+<script type="text/javascript">
+var chkNatCd = "N";
+var chkKbcCd = "N";
+
+$().ready(function (){
+	
+	// 게시일 수정 (2023-12-05)
+    $(document).on('focus', '[name=pStartDt]', function(){
+        var startDt = $('#pStartDt').val().split('/').join('');
+        datePickerController.setRangeLow('pEndDt', startDt)
+    })
+    
+    $(document).on('focus', '[name=pEndDt]', function(){
+        var endDt = $('#pEndDt').val().split('/').join('');
+        datePickerController.setRangeHigh('pStartDt', endDt)
+    })	
+	
+	//뒤로가기시 ready시점 fn_list() #sendForm 파라미터 셋팅 초기화를 위한 부분
+	if(window.performance && window.performance.navigation.type == 2){
+		fn_searchReset();
+	}
+	
+	//뒤로가기시 pageshow시점 검색 파라미터 셋팅 초기화를 위한 부분
+	$(window).bind("pageshow",function(event){
+		if(event.originalEvent.persisted || (window.performance && window.performance.navigation.type == 2)){
+			fn_searchReset();
+			if($('[name=pNatCd]:checked').length < 1) $('#natAll').prop('checked',true);
+		}
+	})
+	
+	if("" != '') chkNatCd = "Y";
+	if("" != '') chkKbcCd = "Y";
+	if("" != '') $("#sendForm [name=sSearchVal]").val(decodeURI(""));
+	
+	
+	$(document).on('change', '.check_all', function() {
+        $('.'+$(this).data('check')).not(":disabled").prop('checked', $(this).prop('checked'));
+    });
+	
+	$(document).on('click', '.listViewType button', function(){
+		var viewType = $(this).data('viewtype');
+		location.href = "/kotranews/cms/com/index.do?MENU_ID=1580&CONTENTS_NO=1&viewType=" + viewType + "&"+$("#sendForm").serialize();
+	});
+	
+	$(document).on('change', '[name=viewCnt]', function(){
+    	var cntVal = $(this).val();
+    	if(cntVal != ''){
+    		$("#sendForm [name=pageNo]").val('1');
+        	$("#sendForm [name=recordCountPerPage]").val(cntVal);
+        	fn_list();    		
+    	}
+    });
+	
+	//대륙 선택
+	$(document).on('click', '[name=pRegnCd]', function(){
+		var ck = "";
+       	if("true" == "true") ck = "checked";
+		$("#natArea").html('<li><span class="inp_r"><input type="radio" name="pNatCd" id="natAll" value="" '+ck+'><label for="natAll">전체</label></span></li>');
+		
+		var regnCd =$(this).val();
+		
+		if(regnCd == ''){
+			$("[name=pKbcCd]").html('<option value="" selected="selected">전체</option>');
+			return;
+		}
+
+		//20240614 데이터가 있는 지역 및 대륙만 표시되도록 변경
+		var hotClipGbnVal = $("[name=hotClipGbn]").val();
+	    fn_comm_ajax({
+	       url: "/ajaxf/frNewsHotClip/getHotClipNationList.do",
+	       data: {"regnCd" : regnCd, "hotClipGbn" : hotClipGbnVal},
+	       dataType: "json",
+	       async: false,
+	       success: function (data) {
+               if(null != data){
+                   var html = '';
+                  	
+                   for(var idx=0; idx<data.length; idx++){
+	                   	var ck = "";
+	                   	
+	                   	if("" == data[idx].UN_NAT_CD && chkNatCd == "Y"){
+	                   		ck = "checked";
+	                   	}
+	                   	html += '<li>';
+	                   	html += '<span class="inp_r">';
+	                   	html += '<input type="radio" name="pNatCd" id="nat'+data[idx].UN_NAT_CD+'" value="'+data[idx].UN_NAT_CD+'" '+ck+'>';
+	                   	html += '<label for="nat'+data[idx].UN_NAT_CD+'">' + data[idx].UNTY_NAT_NAME + '</label>';
+	                   	html += '</span>';
+	                   	html += '</li>';
+                   }
+                   
+                   $(html).appendTo($("#natArea"));
+
+                   if($("[name=pNatCd]:checked").length < 1){
+                	   $("[name=pNatCd]").eq(0).prop('checked', 'checked');
+                   }
+                   
+                   if($("[name=pNatCd]:checked").val() == ''){
+                	   $("[name=pKbcCd]").html('<option value="" selected="selected">전체</option>');
+                   }else{
+                	   $("[name=pKbcCd]").html('<option value="" selected="selected">선택</option>');
+                   }
+                   
+                   if("" != ''){
+                       $("[name=pNatCd]:checked").trigger('click');
+                       chkNatCd = "N";
+                   	   chkKbcCd = "N";
+                   }
+               }
+	       }
+	    });
+	});
+	
+    //국가변경
+    $(document).on('click', '[name=pNatCd]', function(){
+        //하위코드 초기화
+        $("[name=pKbcCd]").html('<option value="" selected="selected">선택</option>');
+
+        var val =$(this).val();
+        
+        if(val == ''){
+        	$("[name=pKbcCd]").html('<option value="" selected="selected">전체</option>');
+        	return;
+        }
+        
+        if(val != ''){
+            fn_comm_ajax({
+                url : "/ajaxf/frNews/getKotraBoardTradeList.do",
+                data : {"cd" : val},
+                dataType : "json",
+                async: false,
+                success : function(data) {
+                    if(null != data){
+                        var html = '';
+                        for(var idx=0; idx<data.length; idx++){
+                        	var ck = "";
+                        	if("" == data[idx].CMMN_CD && chkKbcCd == "Y"){
+                        		ck = "selected";
+                        	}
+                            html += '<option value="' + data[idx].CMMN_CD + '" '+ck+'>' + data[idx].CD_NAME + '</option>';
+                        }
+                        $(html).appendTo("[name=pKbcCd]");
+                        chkNatCd = "N";
+                        chkKbcCd = "N";
+//                         if("" != ''){
+//                         	$("[name=pKbcCd]").trigger('change');
+//                         }
+                    }
+                }
+            });
+        }
+    });
+	
+	$("[name=pRegnCd]:checked").trigger('click');
+
+	fn_list();
+});
+
+/************************************************************************
+함수명 : fn_list
+설 명 : KOTRA 핫클립 게시물 목록 조회
+인 자 : -
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-12  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+function fn_list(){
+	var pStartDt = $("#pStartDt").val();
+	var pEndDt = $("#pEndDt").val();
+	if(pStartDt != '' && pEndDt != ''){
+		if(pStartDt > pEndDt){
+			alert('시작일은 종료일보다 클 수 없습니다.');
+			return;
+		}
+	}
+	
+	if($("#sendForm [name=pageNo]").val() == ''){
+		$("#sendForm [name=pageNo]").val('1');
+	}
+	
+    if($("#sendForm input:hidden[name=recordCountPerPage]").val() == ""){
+        $("#sendForm input:hidden[name=recordCountPerPage]").val("10");
+    }
+	
+   fn_comm_ajax({
+       url: "/ajaxf/frNewsHotClip/getKotraBoardHotClipList.do",
+       data: $("#sendForm").serialize(),
+       dataType: "json",
+       success: function (data) {
+           fn_comm_setList("#tbody", data, "#listTemplate", "#noListTemplate", "#rowCount", ".pagination");
+           
+           
+           galleryRate();
+           
+           
+			// a태그 href 추가
+			
+	        $('#tbody li a').each(function(idx){
+	        	var setUrl = '';
+	        	var nttSn = $(this).attr('data-source');
+	        	$("#sendForm [name=pNttSn]").val(nttSn);
+	        	setUrl = "/kotranews/cms/news/actionKotraBoardDetail.do?" + $("#sendForm").serialize() + "&sSearchVal=" + encodeURI($("[name=sSearchVal]").val());
+	        	$(this).attr('href', setUrl);
+	        	$("#sendForm [name=pNttSn]").val('');
+	        })
+			
+			           
+       }
+   });
+}
+
+/************************************************************************
+함수명 : fn_linkPage
+설 명 : 리스트 페이징
+인 자 : pageNo(검색시 페이지 넘버)
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-12  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+function fn_linkPage(pageNo) {
+   $("#sendForm [name='pageNo']").val(pageNo);
+   fn_list();
+}
+
+/************************************************************************
+함수명 : fn_searchReset
+설 명 : 검색조건 초기화
+인 자 :
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-12  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+function fn_searchReset(){
+	$("[name=pStartDt]").val('');
+	$("[name=pEndDt]").val('');
+	$("[name=sSearchGbn] option").eq(0).prop('selected', 'selected');
+	$("[name=sSearchVal]").val('');
+	$("[name=pRegnCd]").eq(0).prop('checked', 'checked');
+	$("[name=pRegnCd]:checked").trigger('click');
+	$("[name=pIndustCd] option").eq(0).prop('selected', 'selected');
+	$("[name=pJobTrendGbnCd]").eq(0).prop('checked', 'checked');
+}
+
+/************************************************************************
+함수명 : fn_ifmPopClose
+설 명 : iframe 비활성화
+인 자 : -
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+ 수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+function fn_ifmPopClose(){
+	$("body").css("overflow","");
+	$("body").css("overflow-y","");
+	$("#iframePop").remove();
+}
+
+/************************************************************************
+함수명 : fn_view
+설 명 : 상세페이지 이동
+인 자 : -
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+ 수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+function fn_view(nttSn){
+	$("#sendForm [name=pNttSn]").val(nttSn);
+// 	location.href = "/kotranews/cms/news/actionKotraBoardDetail.do?"+encodeURI($("#sendForm").serialize());
+	location.href = "/kotranews/cms/newsHotClip/actionKotraBoardHotClipDetail.do?" + $("#sendForm").serialize() + "&hotClipGbn=13&gbn=HotClip&sSearchVal=" + encodeURI($("[name=sSearchVal]").val());
+}
+
+/************************************************************************
+함수명 : fn_downFile
+설 명 : 상세화면 html, pdf 다운로드
+인 자 : -
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+ 수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+var totalCnt = 0;
+var compCnt = 0;
+function fn_downFile(type){
+	$('#frameDiv').empty();
+	if($('[name=downChk]:checked').length < 1){
+		alert('선택된 게시글이 없습니다.');
+		return;
+	}
+	
+	totalCnt = $('[name=downChk]:checked').length;
+	compCnt = 0;
+	fn_comm_showProgressbar();
+	
+	$('[name=downChk]:checked').each(function(){
+		var nttSn = $(this).val();
+		var bbsSn = $(this).data('bbssn');
+		var title = $(this).closest('li').find('.subjectTxt').text();
+		if(title == ''){
+			title = '-';
+		}
+		var src = "/kotranews/cms/newsHotClip/actionKotraBoardDownDetail.do?MENU_ID=1580&pNttSn=" + nttSn + "&bbsSn=" + bbsSn;
+		$('<iframe class="pdfFrame" id="downloadFrame'+$(this).val()+'" src="'+src+'" data-title="'+title+'" style="width:100%;visibility:hidden; position:absolute;"></iframe>').appendTo($("#frameDiv"));
+	});
+	
+	$('.pdfFrame').load(function(){
+		var title 	= $(this).data('title').trim();
+		if(title == ''){
+			title = '-';
+		}
+		var cont = this.contentWindow.document.querySelector('#pdfArea');
+		$(cont).find('.fileTr').remove();
+		
+		var serverUrl = 'https://dream.kotra.or.kr/';
+		$(cont).find('img').each(function(){
+			var src = $(this).attr('src');
+			
+			if(src.startsWith('/attach/')){
+				src = src.replace('/attach/', serverUrl + 'attach/');
+				$(this).attr('src', src);
+			}
+		});
+		
+		var id = $(this).attr('id');
+		
+		$(cont).css('width', '100%');
+		
+		if(type == 'pdf'){
+			html2canvas(cont, {
+				allowTaint: true,
+				useCORS: true,
+				scale: 1
+			}).then(function(canvas){
+				var imgData = canvas.toDataURL('image/png');
+				var imgWidth = 210;
+				var pageHeight = imgWidth * 1.414;
+				var imgHeight = canvas.height * imgWidth / canvas.width;
+				var heightLeft = imgHeight;
+				var margin = 0;
+				var doc = new jsPDF('p', 'mm', 'a4');
+				var position = 0;
+				
+				doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+				heightLeft -= pageHeight;
+				
+				while(heightLeft >= 20){
+					position = heightLeft - imgHeight;
+					doc.addPage();
+					doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+					heightLeft -= pageHeight;
+				}
+				
+				doc.save(title + '.pdf');
+				$("#"+id).remove();
+				
+				compCnt++;
+				fn_downCallbak(compCnt);
+			});
+		}else{
+			cont = this.contentWindow.document.querySelector('#pdfArea');
+			$(cont).find('.fileArea').remove();
+			$(cont).find('.photoSliderArea').remove();
+			
+			var hostName = "http://"+window.location.host;
+			var content =	"<!doctype html>" 
+						+	"<html lang=\"ko\">"
+						+	"<head>"
+						+	"<meta charset=\"utf-8\">"
+						+	"<link rel='stylesheet' type='text/css' href='"+hostName+"/type/common/css/board.css' />"
+						+	"<link rel='stylesheet' type='text/css' href='"+hostName+"/type/common/css/common.css' />"
+						+	"<title>pdf</title>"
+						+	"</head>"
+						+	"<body class='typeSub'>"
+						+	"<div class='board_area' data-board-type="news">"
+						+	"<div class='lineList_v'>"
+						+ 	$(cont).html()
+						+	"</div>"
+						+	"</div>"
+						+	"</body>"
+						+	"</html>";
+
+			var agent = navigator.userAgent.toLowerCase();
+			if(		(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1)
+				||	(navigator.appName == 'Netscape' && navigator.userAgent.search('Edge') != -1)	
+				|| 	(agent.indexOf("msie") != -1)){
+				var element = document.createElement('a');
+				file = new Blob([content], {type:'text/plain;charset=utf-8'});
+				if(window.navigator.msSaveOrOpenBlob){
+					window.navigator.msSaveOrOpenBlob(file, title+".html");
+				}else{
+					var url = URL.createObjectURL(file);
+					element.href = url;
+					element.download = title+".html";
+					document.body.appendChild(element);
+					element.click();
+					setTimeOut(function(){
+						document.body.removeChild(element);
+						window.URL.revokeObjectURL(url);
+					}, 0);
+					
+				}
+			}else{
+				var element = document.createElement('a');
+				file = new Blob([content], {type:'text/plain;charset=utf-8'});
+				var url = URL.createObjectURL(file);
+				element.href = url;
+				element.download = title+".html";
+				document.body.appendChild(element);
+				element.click();
+				document.body.removeChild(element);
+			}
+			
+			compCnt++;
+			fn_downCallbak(compCnt);
+		}
+	});
+}
+
+/************************************************************************
+함수명 : fn_downCallbak
+설 명 : 다운로드콜백함수
+인 자 : compCnt(다운로드 완료 횟수)
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+ 수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+function fn_downCallbak(compCnt){
+	if(totalCnt == compCnt){
+		fn_comm_hideProgressbar();
+	}
+}
+</script>
+		
+<div class="searchOptBox on">
+    <div class="searchOpt_wrap">
+		<form id="sendForm" method="post">
+			<input type="hidden" name="pageNo" id="pageNo" value="1">
+			<input type="hidden" name="pagePerCnt" value="10">
+			<input type="hidden" name="SITE_NO" value="3">
+			<input type="hidden" name="MENU_ID" id="MENU_ID" value="1580">
+			<input type="hidden" name="CONTENTS_NO" value="1">
+			<input type="hidden" name="recordCountPerPage" value="10">
+			<input type="hidden" name="hotClipGbn" value="13">
+			<input type="hidden" name="viewType" value="">
+			
+			<input type="hidden" name="pNttSn" value="">
+	    	
+	    	<!-- 
+	    	<div class="boxBtn">
+				<button type="button" class="btn_optBoxOpen"><span>검색조건 열기</span></button>
+			</div>
+			-->
+			
+			<div class="searchOpt">
+				<ul>
+					<li class="L400">
+						<div class="optGrp T3">
+	                        <strong class="sort">게시일</strong>
+	                        <div class="optSetDate">
+	                            <!-- 검색조건-->
+	                            <input type="text" class="inp_t" name="pStartDt" id="pStartDt" title="시작 날짜 입력(YYYY/MM/DD)" style="width:137px;" value="" readonly=""><a href="#pStartDt" class="date-picker-control" title="달력 보기" id="fd-but-pStartDt" role="button" aria-haspopup="true" tabindex="0"><span>&nbsp;</span><span class="fd-screen-reader">달력 보기</span></a>
+	                            <span class="picker_txt">~</span>
+	                            <input type="text" class="inp_t" name="pEndDt" id="pEndDt" title="종료 날짜 입력(YYYY/MM/DD)" style="width:137px;" value="" readonly=""><a href="#pEndDt" class="date-picker-control" title="달력 보기" id="fd-but-pEndDt" role="button" aria-haspopup="true" tabindex="0"><span>&nbsp;</span><span class="fd-screen-reader">달력 보기</span></a>
+	                            <script>
+	                            datePickerController.createDatePicker({
+	                                formElements:{
+	                                    "pStartDt":"%Y/%m/%d"
+	                                }
+	                            });
+	                            datePickerController.createDatePicker({
+	                                formElements:{
+	                                    "pEndDt":"%Y/%m/%d"
+	                                }
+	                            });
+	                            </script>
+	                            <!-- //검색조건 -->
+	                        </div>
+	                    </div>
+	                    
+						<div class="optGrp T2">
+							<strong class="sort">검색</strong>
+							<div class="opt">
+	<!-- 							<div class="optSet01"> -->
+	<!-- 								<select name="sSearchGbn" class="inp_s" title="검색옵션 선택"> -->
+	<!-- 									<option value="">전체</option> -->
+	<!-- 									<option value="subject">제목</option> -->
+	<!-- 									<option value="keyword">키워드</option> -->
+	<!-- 								</select> -->
+									<input type="text" name="sSearchVal" class="inp_t" placeholder="검색어를 입력하세요." title="검색어 입력" onkeypress="if(event.keyCode == 13){fn_linkPage(1);return false;}">
+	<!-- 							</div> -->
+							</div>
+						</div>
+					</li>
+					
+					<li class="searchBaseDN">
+	                    <div class="optGrp T2">
+	                        <strong class="sort">대륙</strong>
+                            <p class="exclam Orange" style="float: right;">대륙 및 국가목록은 데이터가 존재하는 지역만 표시됩니다.</p>
+	                        <div class="opt">
+	                            <ul class="radioNcheck" id="regnArea">
+									<li>
+	                           			<span class="inp_r">
+	                           				<input type="radio" name="pRegnCd" id="regnAll" value="" checked="checked">
+	                           				<label for="regnAll">전체</label>
+	                           			</span>
+	                           		</li>
+	                           		
+	                            	
+	                            		<li>
+	                            			<span class="inp_r">
+	                            				<input type="radio" name="pRegnCd" id="regn91" value="91">
+	                            				<label for="regn91">KOTRA 본사</label>
+	                            			</span>
+	                            		</li>
+	                            	
+	                            		<li>
+	                            			<span class="inp_r">
+	                            				<input type="radio" name="pRegnCd" id="regn07" value="07">
+	                            				<label for="regn07">대양주</label>
+	                            			</span>
+	                            		</li>
+	                            	
+	                            		<li>
+	                            			<span class="inp_r">
+	                            				<input type="radio" name="pRegnCd" id="regn04" value="04">
+	                            				<label for="regn04">북미</label>
+	                            			</span>
+	                            		</li>
+	                            	
+	                            		<li>
+	                            			<span class="inp_r">
+	                            				<input type="radio" name="pRegnCd" id="regn01" value="01">
+	                            				<label for="regn01">아시아</label>
+	                            			</span>
+	                            		</li>
+	                            	
+	                            		<li>
+	                            			<span class="inp_r">
+	                            				<input type="radio" name="pRegnCd" id="regn06" value="06">
+	                            				<label for="regn06">아프리카</label>
+	                            			</span>
+	                            		</li>
+	                            	
+	                            		<li>
+	                            			<span class="inp_r">
+	                            				<input type="radio" name="pRegnCd" id="regn03" value="03">
+	                            				<label for="regn03">유럽</label>
+	                            			</span>
+	                            		</li>
+	                            	
+	                            		<li>
+	                            			<span class="inp_r">
+	                            				<input type="radio" name="pRegnCd" id="regn05" value="05">
+	                            				<label for="regn05">중남미</label>
+	                            			</span>
+	                            		</li>
+	                            	
+	                            		<li>
+	                            			<span class="inp_r">
+	                            				<input type="radio" name="pRegnCd" id="regn02" value="02">
+	                            				<label for="regn02">중동</label>
+	                            			</span>
+	                            		</li>
+	                            	
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </li>
+	                
+					<li class="searchBaseDN">
+	                    <div class="optGrp T4">
+	                        <strong class="sort">국가/지역</strong>
+	                        <div class="opt">
+	                            <ul class="radioNcheck" id="natArea"><li><span class="inp_r"><input type="radio" name="pNatCd" id="natAll" value="" checked=""><label for="natAll">전체</label></span></li></ul>
+	                        </div>
+	                    </div>
+	                </li>
+	
+	                <li class="P20 searchBaseDN">
+	                    <div class="optGrp T3">
+	                        <strong class="sort">무역관</strong>
+	                        <div class="opt">
+	                            <select class="inp_s" title="무역관 선택" name="pKbcCd" style="width:250px;"><option value="" selected="selected">전체</option></select>
+	                        </div>
+	                    </div>
+	                </li>
+	                
+					<li class="P20 searchBaseDN">
+	                    <div class="optGrp T4">
+	                        <strong class="sort">산업분류</strong>
+	                        <div class="opt">
+	                        
+	                            <select class="inp_s" name="pIndustCd" title="산업분류명 선택" style="width:200px;">
+	                                <option value="">선택</option>
+	                                
+	                                
+	                                	<option value="I001193">농림수산식품</option>
+	                                
+	                                	<option value="I001195">광물/에너지</option>
+	                                
+	                                	<option value="I001212">화학</option>
+	                                
+	                                	<option value="I001197">섬유/패션</option>
+	                                
+	                                	<option value="I001198">생활소비재</option>
+	                                
+	                                	<option value="I001201">철강/금속</option>
+	                                
+	                                	<option value="I001199">기계류</option>
+	                                
+	                                	<option value="I001200">자동차/수송기기</option>
+	                                
+	                                	<option value="I001202">전자/전기</option>
+	                                
+	                                	<option value="I001206">의료바이오</option>
+	                                
+	                                	<option value="I001203">환경</option>
+	                                
+	                                	<option value="I001204">건설/인프라/플랜트</option>
+	                                
+	                                	<option value="I001208">유통/물류</option>
+	                                
+	                                	<option value="I001205">IT</option>
+	                                
+	                                	<option value="I001207">문화콘텐츠</option>
+	                                
+	                                	<option value="I001209">금융</option>
+	                                
+	                                	<option value="I001210">관광/교육/서비스</option>
+	                                
+	                                	<option value="I001211">기타</option>
+	                                
+	                                	<option value="I001307">산업일반</option>
+	                                
+	                                	<option value="I001213">그리드(전력망·기자재)</option>
+	                                
+	                            </select>
+	                        </div>
+	                    </div>
+	                </li>
+	                
+	                
+	            </ul>
+	            <div class="btn">
+	                <a href="#;" class="btnC" onclick="fn_searchReset();"><span>조건 초기화</span></a>
+	                <a href="#;" class="btnC Navy btn_search" onclick="fn_linkPage('1');"><span>검색</span></a>
+	            </div>
+	        </div>
+	        <div class="boxBtn">
+	            <button type="button" class="btn_optBoxClose seachOptTypeOpen"><span>상세 검색 열기</span></button>
+	        </div>
+        </form>
+    </div>
+</div>
+
+<div id="frameDiv"></div>
+
+<div class="boardOptBox">
+	<div class="func_list">
+		<p class="listNum">총<b id="rowCount">233</b>건</p>
+		<div class="perPage">
+			<select class="inp_s" name="viewCnt" title="페이지당 목록 수">
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+           	</select>
+		</div>
+	</div>
+
+    <div class="func">
+        <ul class="listViewType">        	
+            <li><button type="button" data-viewtype="thumb" class="typeThumbList on" title="선택됨">포토리스트형</button></li>
+            <li><button type="button" data-viewtype="list" class="typeTit">리스트기본형</button></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="board_area" data-board-type="news">
+	
+		<div class="lineList_ul typeGalleryList">
+			<ul id="tbody"><li>     <span class="no">233</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243645&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243645">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243645&amp;atFileSn=119490" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243645&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243645">'최대 2척 해외 건조' 빗장 푼 미국, 글로벌 조선 강국들 현지 투자 속도전 전망</a>     </div>     <p class="txt_s">미국 정부가 조선산업 재건을 위해 일정 조건을 충족한 외국 조선기업의 해외 건조와 미국 내 투자·기술이전을 연계하는 방안을 제시했다. 한화·HD현대 등 한국 기업과 이탈리아·일본 기업의 대미 진출 경쟁이 확대될 전망인 가운데, 무기체계 통합과 유지·보수, 미국 내 정치·산업계 반발 등 향후 정책 이행 과정도 주목할 필요가 있다.</p>      <div class="txtInfo">      <ul>       <li class="categ">투자진출</li>      </ul>      <ul>       <li>미국</li>       <li>뉴욕무역관</li>       <li class="date">2026-08-24</li>      </ul>     </div>    </li><li>     <span class="no">232</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243553&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243553">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243553&amp;atFileSn=119393" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243553&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243553">[기고] 한미 FTA 관세 혜택, 원산지증명서만으로 충분할까? - CBP Form 28 대응 실무</a>     </div>     <p class="txt_s">2026년 6월 미국 행정명령 제14411호 발표 이후 CBP의 원산지 및 특혜관세 검증이 한층 강화된 가운데, 미국 관세사가 전문가의 시각에서 KORUS FTA 관세 혜택 유지를 위한 CBP Form 28 실무 대응 전략과 원산지 관리 체계 구축 방안을 제시한다.</p>      <div class="txtInfo">      <ul>       <li class="categ">외부전문가 기고</li>      </ul>      <ul>       <li>미국</li>       <li>로스앤젤레스무역관</li>       <li class="date">2026-08-21</li>      </ul>     </div>    </li><li>     <span class="no">231</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243583&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243583">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243583&amp;atFileSn=119431" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243583&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243583">[미국 경제통상리포트(US26-29)] 미국의 AI 기반 관세회피·우회수출 단속 강화와 우리 기업 시사점</a>     </div>     <p class="txt_s">◈ 백악관 무역제조정책실, 「The Great Transshipment Scam」 보고서 발표
+◈ 트럼프 정부, AI 탐지 시스템, 'Detective Border'을 통해 환적·관세 회피 적발 추진
+◈ 대중 부품 의존도 높은 韓 반도체·전자·배터리 공급망, 원산지 검증 강화 리스크 유의
+
+※ 세부 내용은 유첨 보고서를 참고하시기 바랍니다. 끝.&nbsp;</p>      <div class="txtInfo">      <ul>       <li class="categ">글로벌 이슈 모니터링</li>      </ul>      <ul>       <li>미국</li>       <li>워싱턴DC무역관</li>       <li class="date">2026-08-19</li>      </ul>     </div>    </li><li>     <span class="no">230</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243582&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243582">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243582&amp;atFileSn=119429" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243582&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243582">[미국 경제통상리포트(US26-28)] 美 무역법 제301조 강제노동 관세 조치 및 소송 동향</a>     </div>     <p class="txt_s">◈ USTR, 제301조를 활용해 60개 경제권 대상 강제노동 연계 관세체계 도입
+◈ IEEPA 관세(상호관세 등) 무효·제122조 관세 종료 이후 제301조 활용 확대로 Post-IEEPA 관세체계 재편
+◈ 품목별 면제·국가별 특례 등에 따라 동일 명목세율에도 국가별 실효 관세부담 상이
+◈ CIT 소송 결과에 따라 제301조의 다수 교역국 대상 활용범위 및 향후 관세정책에 영향 가능
+
+※ 세부 내용은 유첨 보고서를 참고하시기 바랍니다. 끝.&nbsp;</p>      <div class="txtInfo">      <ul>       <li class="categ">글로벌 이슈 모니터링</li>      </ul>      <ul>       <li>미국</li>       <li>워싱턴DC무역관</li>       <li class="date">2026-08-19</li>      </ul>     </div>    </li><li>     <span class="no">229</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243495&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243495">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243495&amp;atFileSn=119350" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243495&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243495">(GIM) 美 해군 조선업 재건 및 조선 산업기반 강화 대통령각서 발표</a>     </div>     <p class="txt_s">현지시각 8.13일, 트럼프 대통령이 美 해운 조선업 재건 및 조선 산업기반 강화를 위한 대통령각서를 발표하여 관련 내용을 유첨 보고서와&nbsp;같이 안내드립니다.&nbsp;</p>      <div class="txtInfo">      <ul>       <li class="categ">글로벌 이슈 모니터링</li>      </ul>      <ul>       <li>KOTRA 본사</li>       <li>본사</li>       <li class="date">2026-08-14</li>      </ul>     </div>    </li><li>     <span class="no">228</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243494&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243494">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243494&amp;atFileSn=119348" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243494&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243494">(GIM) 美, 드론 및 부품에 232조 관세 도입 발표</a>     </div>     <p class="txt_s">현지시각 8.13일, 트럼프 대통령이 드론(무인항공체계/UAS) 및 부품에 대해 최대 100%까지 관세를 부과하는 포고문에 서명하여 관련 내용을 유첨 보고서와 같이 안내드립니다.&nbsp;</p>      <div class="txtInfo">      <ul>       <li class="categ">글로벌 이슈 모니터링</li>      </ul>      <ul>       <li>KOTRA 본사</li>       <li>본사</li>       <li class="date">2026-08-14</li>      </ul>     </div>    </li><li>     <span class="no">227</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243464&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243464">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243464&amp;atFileSn=119318" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243464&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243464">[미국 경제통상리포트(US26-27)] 트럼프 행정부의 공급망 온쇼어링·자국산업 보호 정책 동향 및 시사점</a>     </div>     <p class="txt_s">◈ 트럼프 행정부, 핵심 공급망 강화 및 자국산업 보호를 위한 조치를 연속 발표
+◈ 비우호국 의존 축소 및 미국 내 생산기반 강화(온쇼어링)이라는 일관된 정책 기조 반영
+◈ 국가·산업안보 관점에서 미국 내 공급망을 강화하려는 전략의 일환으로 평가
+
+※ 세부 내용은 유첨 보고서를 참고하시기 바랍니다. 끝.&nbsp;</p>      <div class="txtInfo">      <ul>       <li class="categ">글로벌 이슈 모니터링</li>      </ul>      <ul>       <li>미국</li>       <li>워싱턴DC무역관</li>       <li class="date">2026-08-13</li>      </ul>     </div>    </li><li>     <span class="no">226</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243366&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243366">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243366&amp;atFileSn=119217" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243366&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243366">(GIM) 美, 폴리실리콘 수입품에 최저 가격제 및 232조 관세 도입 발표</a>     </div>     <p class="txt_s">현지시각 8.6일, 트럼프 대통령이 폴리실리콘 수입품 대상 최저 가격제 및 232조 관세 도입을 발표하여 관련 내용을 유첨 보고서와 같이 안내드립니다.&nbsp;
+&nbsp; ※ HTS 코드별 세율은 추후 KOTRA 홈페이지 온라인 관세 확인 시스템(링크)에 업데이트 될 예정입니다.&nbsp;</p>      <div class="txtInfo">      <ul>       <li class="categ">글로벌 이슈 모니터링</li>      </ul>      <ul>       <li>KOTRA 본사</li>       <li>본사</li>       <li class="date">2026-08-07</li>      </ul>     </div>    </li><li>     <span class="no">225</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243270&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243270">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243270&amp;atFileSn=119080" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243270&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243270">[기고] 美 IEEPA 상호관세는 끝났지만, Section 301 추가관세가 시작됐다</a>     </div>     <p class="txt_s">미국 관세법 변호사이자 관세전문가의 시각에서  7월 24일 개시된 Section 301 관세 조치의 동향과 의미 그리고 한국 기업들이 준비해야 할 사항을 폭넓게 조망한다.  </p>      <div class="txtInfo">      <ul>       <li class="categ">외부전문가 기고</li>      </ul>      <ul>       <li>미국</li>       <li>로스앤젤레스무역관</li>       <li class="date">2026-08-06</li>      </ul>     </div>    </li><li>     <span class="no">224</span>     <div class="photo">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243112&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" data-source="243112">       <img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&amp;nttSn=243112&amp;atFileSn=118911" alt="" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')">      </a>     </div>     <div class="txtL">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=1580&amp;CONTENTS_NO=1&amp;recordCountPerPage=10&amp;hotClipGbn=13&amp;viewType=&amp;pNttSn=243112&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243112">(GIM) 트럼프 행정부, 글로벌 10% 관세 만료에 따른 강제노동 301조 관세 발표</a>     </div>     <p class="txt_s">현지시각 7.23일, 미 무역대표부(USTR)이 강제노동 301조 관세를 발표하여&nbsp;관련 내용을 유첨 보고서와 같이 안내드립니다.&nbsp;</p>      <div class="txtInfo">      <ul>       <li class="categ">글로벌 이슈 모니터링</li>      </ul>      <ul>       <li>KOTRA 본사</li>              <li class="date">2026-07-24</li>      </ul>     </div>    </li></ul>
+		</div>
+		
+		<script id="noListTemplate" type="text/x-jquery-tmpl">
+			<li class="typeNoArticle">
+				<p class="no_article">등록된 게시물이 없습니다.</p>
+			</li>
+		</script>
+		
+		<script id="listTemplate" type="text/x-jquery-tmpl">
+			<li>
+				<span class="no">{%= RNUM_DESC%}</span>
+				<div class="photo">
+					<a href="#;" data-source="{%= NTT_SN %}">
+						<img src="/ajaxa/fileCpnt/fileView.do?gbn=n06&nttSn={%= NTT_SN%}&atFileSn={%= THUMB_FILE_IDX_VAL%}" alt="{%= NTT_THUMB_IMG_DC_CN %}" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumbList.png')"/>
+					</a>
+				</div>
+				<div class="txtL">
+					<a href="#;" class="subjectTxt" data-source="{%= NTT_SN %}">{%= NTT_SJ%}</a>
+				</div>
+				<p class="txt_s">{%= SMMAR_CN%}</p>
+					<div class="txtInfo">
+					<ul>
+						<li class="categ">{%= BBS_NAME%}</li>
+					</ul>
+					<ul>
+						{%if NAT != null && NAT != ''%}<li>{%= NAT%}</li>{%/if%}
+						{%if KBC != null && KBC != ''%}<li>{%= KBC%}</li>{%/if%}
+						<li class="date">{%= OTHBC_DT_NM%}</li>
+					</ul>
+				</div>
+			</li>
+		</script>
+		<div class="pagination">
+
+
+
+<div class="num_paging"><span>Page 1/24</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(24);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
+	
+		
+	
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

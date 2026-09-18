@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>무역관뉴스레터 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta property="keywords" content="kotra, globalwindow, 글로벌윈도우, kotra해외시장뉴스, 코트라, 열린마당, 뉴스레터, 해외무역관뉴스레터" />
+    <meta name="description" content="해외무역관에서 생산하는 지역별, 산업별 뉴스레터를 보실 수 있습니다." />
+    <meta property="og:title" content="무역관뉴스레터 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="해외무역관에서 생산하는 지역별, 산업별 뉴스레터를 보실 수 있습니다." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
+    <!-- <script src="../js/board.js"></script>
+    <script src="../type/news/js/filter_board.js"></script> -->
+
+    <!-- board 추가 정리중 -->
+    <script src="../js/board_list.js"></script>
+    <!-- 상세 페이지용. 목록에서는 로드하지 않음 -->
+    <!-- <script src="../js/board_detail.js"></script> -->
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색: layout_common.js 가 헤더 검색에 사용 -->
+    <form id="searchForm" action="/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form>
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb"></div>
+
+        <article>
+<!-- datepicker -->
+<!-- datepicker -->
+
+ 
+
+
+<style>
+.invest_concept .info_imgBox .imgArea {
+    height: 320px;
+    background: url(/type/common/img/common/trdFraudCase.png) no-repeat left 50% top 50%;
+}
+.btn_box.down{
+	letter-spacing: -1px;
+    vertical-align: middle;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    background: #1c83ee;
+    color: #fff;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    padding: 0 25px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 28px;
+    min-width: auto;
+    background-color: #737f8b;
+    text-align: left;
+    margin-left: 10px;
+    top: -2px;
+}
+.btn_box.down:before{
+	display: inline-block;
+    background-image: url(/type/common/img/common/ico_down_white.png);
+    content: '';
+    width: 25px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    vertical-align: top;
+}
+.btn_box.link{
+    letter-spacing: -1px;
+    vertical-align: middle;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    background: #1c83ee;
+    color: #222;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+    padding: 0 25px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 28px;
+    min-width: auto;
+    background-color: #fff;
+    text-align: left;
+    margin-left: 10px;
+    top: -2px;
+}
+.btn_box.link:after{
+	display: inline-block;
+    background-image: url(/type/common/img/common/icon_link_hover_20.png);
+    content: '';
+    width: 25px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    vertical-align: top;
+}
+.list_lineBlack>li::before {
+	height: 0px;
+}
+.list_lineBlack>li {
+	font-size: 16px;
+    line-height: 1.8em;
+}
+.list_dotBlack>li {
+	font-size: 16px;
+    line-height: 1.8em;
+}
+.info_imgBox .infoArea>strong {
+	margin-bottom: 15px;
+    line-height: 20px;
+}
+</style>
+
+
+
+ 
+
+
+<h3 class="sr-only">무역관뉴스레터</h3>
+<div class="searchOptBox on" style="margin-bottom: 40px;">
+    <div class="searchOpt_wrap">
+    <form id="sendForm" method="post">
+		<input type="hidden" name="pageNo" id="pageNo" value="1">
+		<input type="hidden" name="pagePerCnt" value="10">
+		<input type="hidden" name="SITE_NO" value="3">
+		<input type="hidden" name="MENU_ID" id="MENU_ID" value="270">
+		<input type="hidden" name="CONTENTS_NO" value="1">
+		<input type="hidden" name="bbsGbn" value="306">
+		<input type="hidden" name="bbsSn" value="306">
+		<input type="hidden" name="pNttSn" value="">
+		<input type="hidden" name="recordCountPerPage" value="10">
+		<input type="hidden" name="viewType" value="">
+		
+		<!-- 
+		<div class="boxBtn">
+            <button type="button" class="btn_optBoxOpen"><span>검색조건 열기</span></button>
+        </div>		
+		 -->
+
+		<div class="searchOpt">
+			<ul>
+				<li class="L400">
+					<div class="optGrp T3">
+                        <strong class="sort">게시일</strong>
+                        <div class="optSetDate">
+                            <!-- 검색조건-->
+                            <input type="text" class="inp_t" name="pStartDt" id="pStartDt" title="시작 날짜 입력 (YYYY/MM/DD)" style="width:137px;" value="" readonly=""><a href="#pStartDt" class="date-picker-control" title="달력 보기" id="fd-but-pStartDt" role="button" aria-haspopup="true" tabindex="0"><span>&nbsp;</span><span class="fd-screen-reader">달력 보기</span></a>
+                            <span class="picker_txt">~</span>
+                            <input type="text" class="inp_t" name="pEndDt" id="pEndDt" title="종료 날짜 입력 (YYYY/MM/DD)" style="width:137px;" value="" readonly=""><a href="#pEndDt" class="date-picker-control" title="달력 보기" id="fd-but-pEndDt" role="button" aria-haspopup="true" tabindex="0"><span>&nbsp;</span><span class="fd-screen-reader">달력 보기</span></a>
+                            <script>
+                            datePickerController.createDatePicker({
+                                formElements:{
+                                    "pStartDt":"%Y/%m/%d"
+                                }
+                            });
+                            datePickerController.createDatePicker({
+                                formElements:{
+                                    "pEndDt":"%Y/%m/%d"
+                                }                    
+                            });
+                            </script>
+                            <!-- //검색조건 -->
+                        </div>
+                    </div>
+                    
+					<div class="optGrp T2">
+						<strong class="sort">검색</strong>
+						<div class="opt">
+<!-- 							<div class="optSet01"> -->
+<!-- 								<select name="sSearchGbn" class="inp_s" title="검색옵션 선택"> -->
+<!-- 									<option value="">전체</option> -->
+<!-- 									<option value="subject">제목</option> -->
+<!-- 									<option value="keyword">키워드</option> -->
+<!-- 								</select> -->
+								<input type="text" name="sSearchVal" class="inp_t" placeholder="검색어를 입력하세요." title="검색어 입력" onkeypress="if(event.keyCode == 13){fn_linkPage(1);return false;}">
+<!-- 							</div> -->
+						</div>
+					</div>
+				</li>
+				
+				
+				<li class="searchBaseDN">
+                    <div class="optGrp T2">
+                        <strong class="sort">대륙</strong>
+                        <p class="exclam Orange" style="float: right;">대륙 및 국가목록은 데이터가 존재하는 지역만 표시됩니다.</p>
+                        <div class="opt">
+                            <ul class="radioNcheck" id="regnArea">
+								<li>
+                           			<span class="inp_r">
+                           				<input type="radio" name="pRegnCd" id="regnAll" value="" checked="checked">
+                           				<label for="regnAll">전체</label>
+                           			</span>
+                           		</li>
+                           		
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn91" value="91">
+                            				<label for="regn91">
+                            					KOTRA 본사
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn04" value="04">
+                            				<label for="regn04">
+                            					북미
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn01" value="01">
+                            				<label for="regn01">
+                            					아시아
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn06" value="06">
+                            				<label for="regn06">
+                            					아프리카
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn03" value="03">
+                            				<label for="regn03">
+                            					유럽
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn05" value="05">
+                            				<label for="regn05">
+                            					중남미
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input type="radio" name="pRegnCd" id="regn02" value="02">
+                            				<label for="regn02">
+                            					중동
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+				<li class="searchBaseDN">
+                    <div class="optGrp T4">
+                        <strong class="sort">국가/지역</strong>
+                        <div class="opt">
+                            <ul class="radioNcheck" id="natArea"><li><span class="inp_r"><input type="radio" name="pNatCd" id="natAll" value="" checked=""><label for="natAll">전체</label></span></li></ul>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+                <li class="P20 searchBaseDN">
+                    <div class="optGrp T3">
+                        <strong class="sort">무역관</strong>
+                        <div class="opt">
+                            <select class="inp_s" title="무역관 선택" name="pKbcCd" style="width:250px;"><option value="" selected="selected">전체</option></select>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+				<li class="P20 searchBaseDN">
+                    <div class="optGrp T4">
+                        <strong class="sort">산업분류</strong>
+                        <div class="opt">
+                        
+                            <select class="inp_s" name="pIndustCd" title="산업분류명 선택" style="width:200px;">
+                                <option value="">선택</option>
+                                
+                                
+                                	<option value="I001193">농림수산식품</option>
+                                
+                                	<option value="I001195">광물/에너지</option>
+                                
+                                	<option value="I001212">화학</option>
+                                
+                                	<option value="I001197">섬유/패션</option>
+                                
+                                	<option value="I001198">생활소비재</option>
+                                
+                                	<option value="I001201">철강/금속</option>
+                                
+                                	<option value="I001199">기계류</option>
+                                
+                                	<option value="I001200">자동차/수송기기</option>
+                                
+                                	<option value="I001202">전자/전기</option>
+                                
+                                	<option value="I001206">의료바이오</option>
+                                
+                                	<option value="I001203">환경</option>
+                                
+                                	<option value="I001204">건설/인프라/플랜트</option>
+                                
+                                	<option value="I001208">유통/물류</option>
+                                
+                                	<option value="I001205">IT</option>
+                                
+                                	<option value="I001207">문화콘텐츠</option>
+                                
+                                	<option value="I001209">금융</option>
+                                
+                                	<option value="I001210">관광/교육/서비스</option>
+                                
+                                	<option value="I001211">기타</option>
+                                
+                                	<option value="I001307">산업일반</option>
+                                
+                                	<option value="I001213">그리드(전력망·기자재)</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+            <div class="btn">
+                <a href="#;" class="btnC" onclick="fn_searchReset();"><span>조건 초기화</span></a>
+                <a href="#;" class="btnC Navy btn_search" onclick="fn_linkPage('1');"><span>검색</span></a>
+            </div>
+        </div>
+        <div class="boxBtn">
+            <button type="button" class="btn_optBoxClose seachOptTypeOpen"><span>상세 검색 열기</span></button>
+        </div>
+	</form>
+    </div>
+</div>
+
+<div id="frameDiv"></div>
+
+
+
+<div class="boardOptBox">
+	<div class="func_list">
+		<p class="listNum">총<b id="rowCount">12,947</b>건</p>
+		<div class="perPage">
+			
+				<select class="inp_s" name="viewCnt" title="페이지당 목록 수">
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+	           	</select>
+			
+			
+		</div>
+    	
+	</div>
+	
+    <div class="func">
+    	
+    	
+	    
+    </div>
+</div>
+
+<div class="board_area" data-board-type="news">
+	
+		
+	
+		<div class="lineList_tb noCateg ">
+			<table>
+				<caption><p>무역관뉴스레터 목록</p></caption>
+				<colgroup>
+					<col style="width:7%">
+					
+					
+					<col>
+					
+					
+						<col style="width:12%">
+					
+					
+						<col style="width:12%">
+					
+					
+					<col style="width:12%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">No</th>
+						
+						
+						<th scope="col">제목</th>
+						
+						
+							<th scope="col">국가</th>
+						
+						
+							<th scope="col">무역관</th>
+						
+						
+						<th scope="col">게시일</th>
+					</tr>
+				</thead>
+				<tbody id="noticeArea"></tbody>
+				<tbody id="tbody"><tr data-idno="244165" class="nttTr ">       <td class="no">12947</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=244165&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="244165">미국 경제통상 브리핑 9월 3주차</a>               </td>                       <td>         <em class="mSort">국가</em>                  미국        </td>                      <td>         <em class="mSort">무역관</em>                  워싱턴DC무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-16</td>      </tr><tr data-idno="244156" class="nttTr ">       <td class="no">12946</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=244156&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="244156">EU 경제통상 브리핑 9월 3주차</a>               </td>                       <td>         <em class="mSort">국가</em>                  벨기에        </td>                      <td>         <em class="mSort">무역관</em>                  브뤼셀무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-16</td>      </tr><tr data-idno="244134" class="nttTr ">       <td class="no">12945</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=244134&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="244134">중국 경제통상 브리핑 9월 3주차</a>               </td>                       <td>         <em class="mSort">국가</em>                  중국        </td>                      <td>         <em class="mSort">무역관</em>                  베이징무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-15</td>      </tr><tr data-idno="244118" class="nttTr ">       <td class="no">12944</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=244118&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="244118">일본 경제통상 브리핑 9월 3주차</a>               </td>                       <td>         <em class="mSort">국가</em>                  일본        </td>                      <td>         <em class="mSort">무역관</em>                  도쿄무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-15</td>      </tr><tr data-idno="244066" class="nttTr ">       <td class="no">12943</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=244066&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="244066">중국시장뉴스996호</a>               </td>                       <td>         <em class="mSort">국가</em>                  중국        </td>                      <td>         <em class="mSort">무역관</em>                  베이징무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-11</td>      </tr><tr data-idno="243992" class="nttTr ">       <td class="no">12942</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=243992&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243992">미국 경제통상 브리핑 9월 2주차</a>               </td>                       <td>         <em class="mSort">국가</em>                  미국        </td>                      <td>         <em class="mSort">무역관</em>                  워싱턴DC무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-09</td>      </tr><tr data-idno="243988" class="nttTr ">       <td class="no">12941</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=243988&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243988">EU 경제통상 브리핑 9월 2주차</a>               </td>                       <td>         <em class="mSort">국가</em>                  벨기에        </td>                      <td>         <em class="mSort">무역관</em>                  브뤼셀무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-08</td>      </tr><tr data-idno="243980" class="nttTr ">       <td class="no">12940</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=243980&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243980">일본 경제통상 브리핑 9월 2주차</a>               </td>                       <td>         <em class="mSort">국가</em>                  일본        </td>                      <td>         <em class="mSort">무역관</em>                  도쿄무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-08</td>      </tr><tr data-idno="243971" class="nttTr ">       <td class="no">12939</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=243971&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243971">중국 경제통상 브리핑 9월 2주차</a>               </td>                       <td>         <em class="mSort">국가</em>                  중국        </td>                      <td>         <em class="mSort">무역관</em>                  베이징무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-08</td>      </tr><tr data-idno="243918" class="nttTr ">       <td class="no">12938</td>                     <td class="txtL">        <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=270&amp;CONTENTS_NO=1&amp;bbsGbn=306&amp;bbsSn=306&amp;pNttSn=243918&amp;recordCountPerPage=10&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;pIndustCd=&amp;sSearchVal=" class="subjectTxt" data-source="243918">중국시장뉴스995호</a>               </td>                       <td>         <em class="mSort">국가</em>                  중국        </td>                      <td>         <em class="mSort">무역관</em>                  베이징무역관        </td>                       <td><em class="mSort">게시일</em>2026-09-04</td>      </tr></tbody>
+				
+				
+				
+				
+				
+				
+				
+					
+				
+				
+					
+				
+				<script id="noListTemplate" type="text/x-jquery-tmpl">
+               		<tr class="typeNoArticle">
+               			<td colspan="5">
+							<p class="no_article">등록된 게시물이 없습니다.</p>
+						</td>
+               		</tr>
+           		</script>
+           		<script id="listTemplate" type="text/x-jquery-tmpl">
+					<tr data-idno="{%= NTT_SN%}" class="nttTr {%if CMMNT_CNT > 0 %}typeCommen typeIco{%/if%}">
+						<td class="no">{%= RNUM_DESC%}</td>
+						
+						
+						<td class="txtL">
+							<a href="#;" class="subjectTxt" data-source="{%= NTT_SN %}">{%= NTT_SJ%}</a>
+							{%if CMMNT_CNT > 0 %}<span class="info_comment"><em>댓글</em>[{%= CMMNT_CNT %}]</span>{%/if%}
+						</td>
+
+						
+						
+							<td>
+								<em class="mSort">국가</em>
+								{%if NAT == null || NAT == '' %}-{%/if%}
+								{%if NAT != null && NAT != '' %}{%= NAT%}{%/if%}
+							</td>
+						
+						
+							<td>
+								<em class="mSort">무역관</em>
+								{%if KBC == null || KBC == '' %}-{%/if%}
+								{%if KBC != null && KBC != '' %}{%= KBC%}{%/if%}
+							</td>
+						
+
+						
+
+						<td><em class="mSort">게시일</em>{%= OTHBC_DT_NM%}</td>
+					</tr>
+				</script>
+			</table>
+		</div>
+		<div class="pagination">
+
+
+
+<div class="num_paging"><span>Page 1/1295</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(1295);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
+	
+	
+	
+	
+	<template id="noticeTemplate">
+		<tr class="nttTr">
+			<td class="no">
+				<div class="btnC_s Blue">
+					<span>공지</span>
+				</div>
+			</td>
+			
+			
+			<td class="txtL">
+				<a href="#;" class="subjectTxt"></a>
+			</td>
+						
+			
+			<td>
+				<em class="mSort">국가</em>본사
+			</td>			
+			
+			
+			<td>
+				<em class="mSort">무역관</em>본사
+			</td>			
+						
+				
+			<td class="noticeOthbcDt"><em class="mSort">게시일</em></td>			
+		</tr>
+	</template>
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>
