@@ -79,7 +79,8 @@
 
     <!-- board 추가 정리중 -->
 		<script src="../js/board_list.js"></script>
-		<script src="../js/board_detail.js"></script>
+		<!-- 상세 페이지용. 목록(_news_page4)에서는 아직 없음 / 로드하지 않음 -->
+		<!-- <script src="../js/board_detail.js"></script> -->
 
 
   </head>
@@ -587,7 +588,11 @@
 			</li>
 		</script>
 
-		<div class="pagination"></div>
+		<div class="pagination">
+
+
+
+<div class="num_paging"><span>Page 1/2502</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(2502);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
 	
 		
 	<template id="noticeTemplate">
