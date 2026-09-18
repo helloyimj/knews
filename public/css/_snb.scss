@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* snb */
+#snb { position:relative;z-index:0;height:121px;background:linear-gradient(90deg, #8568ce 50%, #427fd9 50%);}
+#snb::before { display:block;position:absolute;top:0;left:50%;z-index:0;width:1920px;height:121px;margin-left:-960px;background:url(../img/common/snb_bg.png) no-repeat center;background-size:auto 121px;content:'';}
+#snb .snb_wrap { display:block;overflow:hidden;position:relative;z-index:1;box-sizing:border-box;width:100%;max-width:1500px;height:121px;margin:0 auto;padding:0 30px;}
+#snb .snb_mem { display:inline-block;float:left;vertical-align:top;}
+#snb .snb_mem>div { display:table-cell;height:121px;font-size:0;text-align:left;vertical-align:middle;}
+#snb .snb_mem .name { display:inline-block;margin-right:9px;color:#fff;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:32px;line-height:42px;font-weight:500;vertical-align:middle;}
+#snb .snb_mem .name>em { display:inline-block;font-size:18px;font-weight:400;font-style:normal;}
+#snb .snb_mem .level { display:inline-block;overflow:hidden;box-sizing:border-box;height:23px;padding:0 11px;border:1px solid #fff;border-radius:12px;color:#fff;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:13px;line-height:24px;font-weight:400;vertical-align:middle;}
+#snb .snb_memInfo { overflow:hidden;float:right;padding:38px 0;}
+#snb .snb_memInfo>li { float:left;box-sizing:border-box;height:45px;padding:0 59px;color:#fff;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;line-height:20px;font-weight:400;}
+#snb .snb_memInfo>li+li { border-left:1px solid rgba(255,255,255,0.2);}
+#snb .snb_memInfo>li b { display:block;margin-bottom:12px;color:#fff;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:17px;font-weight:400;}
+
+#snb_board { position:relative;height:59px;border-bottom:1px solid #ededed;background:#fff;}
+#snb_board .snb_wrap { display:block;overflow:hidden;position:relative;z-index:1;box-sizing:border-box;width:100%;max-width:1500px;height:59px;margin:0 auto;padding:0 30px;}
+#snb_board .snb_bookmark { float:left;width:60%;max-width:630px;height:29px;padding:15px 0;text-align:left;}
+#snb_board .snb_bookmark>strong { display:block;float:left;width:72px;margin-right:19px;color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:14px;line-height:29px;font-weight:500;vertical-align:top;}
+#snb_board .snb_bookmark .list { float:left;width:calc(100% - 91px);padding:0 18px;vertical-align:top;}
+#snb_board .snb_bookmark .list .unit { padding:0 2px;}
+#snb_board .snb_bookmark .list .unit a { display:block;overflow:hidden;box-sizing:border-box;max-width:145px;height:29px;padding:0 14px;border-radius:15px;background:#f2f2f2;color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:14px;line-height:30px;font-weight:400;text-overflow:ellipsis;}
+#snb_board .snb_bookmark .slick-arrow { display:block;overflow:hidden;position:absolute;top:50%;width:8px;height:13px;margin-top:-7px;text-indent:-999px;}
+#snb_board .snb_bookmark .slick-prev { left:0;background:url(../img/common/sprite_component.png) no-repeat -430px -114px;}
+#snb_board .snb_bookmark .slick-next { right:0;background:url(../img/common/sprite_component.png) no-repeat -430px -147px;}
+#snb_board .snb_nav { overflow:hidden;float:right;padding-top:22px;}
+#snb_board .snb_nav>a { display:block;overflow:hidden;float:left;width:16px;height:15px;background:url(../img/common/nav_home.png) no-repeat center;text-indent:-999px;}
+#snb_board .snb_nav>ul { overflow:hidden;float:left;white-space:nowrap;}
+#snb_board .snb_nav>ul>li { float:left;padding-left:30px;background:url(../img/common/nav_arrR.png) no-repeat left 12px center;}
+#snb_board .snb_nav>ul>li>a { display:block;overflow:hidden;color:#000;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:14px;line-height:17px;font-weight:400;}
+#snb_board .snb_nav>ul>li>span { display:block;overflow:hidden;color:#000;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:14px;line-height:17px;font-weight:400;}
+#snb_board .snb_nav>ul>li:last-child>a { color:#000;font-weight:500;}
+#snb_board .snb_nav>ul>li:last-child>span { color:#000;font-weight:500;}
+
+#snb_totalSearch { position:relative;z-index:0;height:164px;background:linear-gradient(90deg, #8568ce 50%, #427fd9 50%);}
+#snb_totalSearch::before { display:block;position:absolute;top:0;left:50%;z-index:0;width:1920px;height:164px;margin-left:-960px;background:url(../img/common/snb_bg.png) no-repeat center;background-size:auto 164px;content:'';}

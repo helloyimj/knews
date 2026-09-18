@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+// 엔트리. 컴파일하면 total.css 한 장으로 펼쳐진다.
+// sass css/total.scss css/total.css
+
+@import "fonts";
+@import "reset";
+
+@import "skip_menu";
+@import "top_notice";
+@import "header";
+@import "pnb";
+@import "snb";
+@import "footer";
+@import "btn_top";
+@import "layout_frame";
+@import "layout_mq";
+
+@import "button";
+@import "form";
+@import "pagination";
+
+@import "search_filter";
+@import "board_common";
+@import "board_list";
+@import "board_detail";
+@import "board_etc";
+
+@import "common_etc";
+@import "news";
+@import "kor";
+@import "html_css";

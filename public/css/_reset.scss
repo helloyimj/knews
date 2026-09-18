@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* Reset */
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td
+{margin:0;padding:0;color:#0f0f0f;
+    /* font-family:'Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif; */
+    /* 디자인 스타일 가이드 기준 설정 */
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif; 
+    /* 접근성 최적화 폰트 설정 (시스템 폴백 폰트 추가 20260916) */
+    /* font-family: 'Roboto', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;  */
+    font-size:16px;line-height:1.6;-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;}
+b, span, strong, input, a, button { color:inherit;font-family:inherit;font-size:inherit;}
+article, aside, dialog, footer, header, section, footer, nav, figure, hgroup, details, summary, figure, figcaption { display:block;}
+cite { display:inline;}
+html, body { height:100%;}
+body { margin:0px;overflow-x:hidden;}
+a:link,
+a:visited { text-decoration:none;}
+img{max-width:100%;border:0;}
+label, input, textarea, select{vertical-align:middle;}
+ol, ul { list-style:none;}
+table { border-collapse:collapse;table-layout:fixed;}
+fieldset { border:none;}
+.skip, hr, legend{overflow:hidden;position:absolute;left:-1000%;width:1px;height:1px;font-size:0;line-height:0;}
+button { display:inline-block;margin:0;padding:0;border:none;background:none;cursor:pointer;}
+.date-picker-control:link,
+.date-picker-control:visited { top:-6px !important;}
+.txtHidden { overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0, 0);}
+
+/* placeholder 클릭 시 감춤 */
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { /* WebKit browsers */ color:transparent !important; }
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color:transparent !important; }
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ color:transparent !important; }
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color:transparent !important; }

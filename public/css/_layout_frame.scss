@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/*** Layout ***/
+.alt_hidden, legend,
+caption>p { overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0, 0);}
+caption>p { display:inline;}
+
+#dim,
+#gnb_dim { visibility:hidden;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity:0;}
+#dim.on { visibility:visible;z-index:1200;opacity:0.4;} /*header 위로*/
+#gnb_dim.on { visibility:visible;z-index:900;opacity:0.4;} /*header 아래로*/
+.innerCont{max-width:1480px;margin:0 auto;padding-left:20px;padding-right:20px;box-sizing:border-box;}
+#container {padding-top:128px;overflow-x:hidden;}
+#contents {position:relative;overflow:hidden;width:100%;max-width:1500px;min-height:500px;margin:0 auto;box-sizing:border-box;padding:35px 30px 130px}
+#contents>article {min-height:531px;}

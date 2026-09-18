@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* paging */
+.pagination { overflow:hidden;clear:both;position:relative;height:30px;margin:0 auto;padding:40px 0 0;font-size:0;text-align:center;letter-spacing:-0.5px;}
+.pagination .num_paging { position:absolute;top:0;left:0;}
+.pagination>button,
+.pagination>a { display:inline-block;overflow:hidden;width:18px;height:30px;color:#222;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:30px;vertical-align:top;}
+.pagination>button>span,
+.pagination>a>span { display:block;width:18px;height:30px;background-repeat:no-repeat;background-position:center;text-indent:-999px;}
+.pagination>.btn_first,
+.pagination>.btn_prev { margin-right:7px;}
+.pagination>.btn_next,
+.pagination>.btn_end { margin-left:7px;}
+.pagination>.btn_first>span,
+.pagination>.btn_first>span { background:url(../img/common/sprite_component.png) no-repeat -110px -374px;}
+.pagination>.btn_prev>span { background:url(../img/common/sprite_component.png) no-repeat -426px -72px;}
+.pagination>.btn_next>span { background:url(../img/common/sprite_component.png) no-repeat -426px -39px;}
+.pagination>.btn_end>span { background:url(../img/common/sprite_component.png) no-repeat -77px -374px;}
+.pagination .paging { display:inline-block;overflow:hidden;height:30px;padding:0;font-size:0;text-align:center;}
+.pagination .paging>li { display:inline-block;padding:0 5px;}
+.pagination .paging>li>button,
+.pagination .paging>li>a { display:inline-block;overflow:hidden;box-sizing:border-box;min-width:30px;height:30px;padding:0 5px;border-radius:3px;color:#666;font-family:'Roboto',sans-serif;font-size:15px;line-height:30px;transition:0.2s;}
+.pagination .paging>li>:hover,
+.pagination .paging>li>.on { background:#212e4e;color:#fff;font-weight:500;}
+
+.typeNoArticle { height:auto !important;padding:0 !important;}
+.no_article { display:block;width:100%;padding:165px 0 65px;background:url(../img/board/ico_noArticle.png) no-repeat 50% 60px;color:#72737a;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:18px;line-height:25px;text-align:center;}
+.no_article_box { padding:20px;border:1px solid #e8e8e8;text-align:center;}
+.num_paging {display:block;position:relative;height:40px;margin-bottom:-40px;box-sizing:border-box;padding-top:18px;font-size:0;}
+.num_paging>span {display:inline-block;color:#666;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:19px;vertical-align:top;}

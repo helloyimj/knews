@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/***** 공통 *****/
+.board_area {margin:0 auto;}
+
+.btnAreaL {padding:40px 0 55px;font-size:0;text-align:left;}
+.btnAreaC {position:relative;padding:40px 0 55px;font-size:0;text-align:center;}
+.btnAreaR {padding:40px 0 55px;font-size:0;text-align:right;}
+.btnAreaC a+a {margin-left:10px;}
+.btnAreaC>.btnGrp {position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:0;}
+.btnAreaC>.btnGrp a+a {margin-left:5px;}
+.btnAreaC>.btnGrp .radioGrp {display:inline-block;margin-right:8px;vertical-align:top;font-size:0;;}
+.btnAreaC>.btnGrp .radioGrp .sort {display:inline-block;padding-right:15px;vertical-align:top;line-height:40px;font-size:16px;color:#0f0f0f;font-weight:500;}
+.btnAreaC>.btnGrp .radioGrp .inp_r {margin-top:7px;margin-right:10px;}
+
+.txtOpt {font-style:normal;font-size:inherit;font-weight:400 !important;}
+.txtOpt.Red {color:#fe4354;}
+
+/*게시판옵션*/
+.boardOptBox {position:relative;min-height:40px;overflow:hidden;margin-bottom:15px;}
+.boardOptBox .listNum {position:absolute;left:0;bottom:0px;display:block;color:#666;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;line-height:30px;font-weight:400;letter-spacing:-1px;}
+.boardOptBox .listNum b {margin-left:3px;margin-right:2px;color:#111;font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;}
+.boardOptBox .func {overflow:hidden;float:right;font-size:0;}
+.boardOptBox .func .listViewType {display:inline-block;overflow:hidden;height:40px;margin-left:4px;box-sizing:border-box;border:1px solid #e6e6e6;border-radius:2px;font-size:0;vertical-align:top;}
+.boardOptBox .func .listViewType li {float:left;}
+.boardOptBox .func .listViewType li>button {display:block;float:left;overflow:hidden;width:40px;height:38px;background-repeat:no-repeat;background-position:center;text-indent:-999px;transition:0s;}
+.boardOptBox .func .listViewType li>button.on {background-color:#4286ea !important;}
+.boardOptBox .func .listViewType .typeTit {background:url(../img/common/sprite_component.png) no-repeat -35px -413px;}
+.boardOptBox .func .listViewType .typeTit.on {background-position:1px -413px;}
+.boardOptBox .func .listViewType .typeTitTxt {background:url(../img/common/sprite_component.png) no-repeat -109px -413px;}
+.boardOptBox .func .listViewType .typeTitTxt.on {background-position:-73px -413px;}
+.boardOptBox .func .listViewType .typeThumb {background:url(../img/common/sprite_component.png) no-repeat -148px -413px;}
+.boardOptBox .func .listViewType .typeThumb.on {background-position:-186px -413px;}
+.boardOptBox .func .listViewType .typeThumbList {background:url(../img/common/sprite_component.png) no-repeat -224px -413px;}
+.boardOptBox .func .listViewType .typeThumbList.on {background-position:-261px -413px;}
+.boardOptBox .func .sub_util {display:inline-block;margin-bottom:0;}
+.boardOptBox .func .sub_util+.perPage {margin-left:5px;}
+.boardOptBox .func .perPage {display:inline-block;min-width:90px;margin-bottom:0;margin-right:5px;vertical-align:top;}
+.boardOptBox .func_list {position:absolute;left:0;top:0;display:inline-block;}
+.boardOptBox .func_list .perPage {display:inline-block;width:90px;vertical-align:middle;}
+.boardOptBox .func_list .listNum {position:relative;display:inline-block;margin-right:20px;vertical-align:middle;}
+.boardOptBox .func_list .setArea {display:inline-block;width:200px;margin-right:10px;vertical-align:middle;}
+.boardOptBox .func_list .setArea .sort {display:inline-block;width:45px;font-weight:500;}
+.boardOptBox .func_list .setArea .inp_s {width:calc(100% - 55px);}
+.boardOptBox .btn_txtDown {padding-top:9px;}
