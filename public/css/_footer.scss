@@ -53,3 +53,155 @@ footer address span:last-of-type {margin-right:0;padding-right:0;}
 footer address span:last-of-type::after {display:none;}
 footer .copyright {display:block;color:rgba(255,255,255,0.6);font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:19px;}
 footer .copyright br {display:none;}
+
+@media print {
+    #footer {
+        display:none;
+    }
+}
+
+@media all and (max-width: 1280px) {
+    footer .f_bnr {
+        max-width:546px;
+    }
+}
+
+@media all and (max-width: 1240px) {
+    footer .f_bnr {
+        max-width:546px;
+    }
+}
+
+@media all and (max-width: 1041px) {
+    #footer {
+        padding-top:16px;
+    }
+    footer .f_bnr {
+        width:325px;height:25px;margin-bottom:16px;
+    }
+    footer .f_bnr .unit img {
+        height:25px;
+    }
+    footer .f_bnr .slick-arrow {
+        top:5px;
+    }
+    footer .f_menu {
+        padding-top:5px;
+    }
+    footer .f_menu li a {
+        font-size:13px;line-height:20px;
+    }
+    footer .f_etc .familySite {
+        width:170px;margin-left:20px;
+    }
+    footer .f_etc .familySite .btn_familysite {
+        width:170px;height:39px;font-size:12px;line-height:40px;
+    }
+    footer .f_etc .familySite .list_familysite {
+        bottom:39px;padding:5px 0;
+    }
+    footer .f_etc .familySite .list_familysite>li {
+        padding:4px 0;
+    }
+    footer .f_etc .familySite .list_familysite>li>a {
+        font-size:13px;line-height:15px;
+    }
+    footer .f_etc .btn_wa {
+        margin-top:0;
+    }
+    footer .f_etc .btn_wa img {
+        height:40px;
+    }
+    footer address {
+        width:100%;margin-bottom:17px;padding-top:20px;
+    }
+    footer address span {
+        margin-right:10px;padding-right:13px;font-size:13px;line-height:20px;white-space: nowrap;
+    }
+    footer address span::after {
+        top:0;width:1px;height:12px;margin-top:4px;border-radius:0;background:#4d4d4d;
+    }
+    footer address .address {
+        display:block;margin-right:0;padding-right:0;
+    }
+    footer address .address::after {
+        display:none;
+    }
+    /* footer .f_sns {position:inherit;left:0;top:0;padding-top:20px;}
+        footer .f_sns .tit {margin-bottom:10px;font-size:14px;}
+        footer .f_sns>ul li {margin-left:15px;}
+        footer .f_sns>ul li>a {width:23px;height:23px;background-size:auto 350px !important;} */
+    /* footer .f_sns>ul li .sns_instagram {background-position:-187px -191px;}
+        footer .f_sns>ul li .sns_facebook {width:13px;background-position:-155px -191px;}
+        footer .f_sns>ul li .sns_youtube {background-position:-256px -42px;}
+        footer .f_sns>ul li .sns_nBlog {margin-left:5px;background-position:-257px -6px;} */
+    footer .f_sns {
+        position:inherit;left:0;top:0;padding-top:20px;
+    }
+    footer .f_sns .tit {
+        margin-bottom:10px;font-size:14px;
+    }
+    footer .f_sns>ul li {
+        margin-left:10px;
+    }
+    footer .f_sns>ul li>a {
+        width:20px;height:20px;background-size:20px auto !important;
+    }
+    footer .f_sns>ul li .sns_nBlog {
+        margin-left:5px;
+    }
+    footer .copyright {
+        font-size:12px;line-height:16px;
+    }
+    footer .copyright br {
+        display:block;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #footer {
+        padding-bottom:0;
+    }
+    #footer footer {
+        padding:10px 15px 50px;
+    }
+    footer .f_bnr {
+        float:none;width:100%;max-width:none;margin-bottom:16px;
+    }
+    footer .f_menu {
+        width:100%;
+    }
+    footer .f_etc {
+        width:100%;right:auto;left:0;bottom:64px;padding:0 15px;box-sizing:border-box;text-align:left;white-space:normal;
+    }
+    footer .f_etc .familySite {
+        width:100%;margin-bottom:15px;
+    }
+    footer .f_etc .familySite .btn_familysite {
+        width:100%;
+    }
+    footer address {
+        margin-bottom:16px;padding-top:14px;border-top:none;
+    }
+    footer address .address {
+        display:inline-block;margin-right:12px;padding-right:14px;
+    }
+    footer address .address::after {
+        display:block;
+    }
+    footer .copyright br {
+        display:none;
+    }
+}
+
+@media all and (max-width: 560px) {
+    footer address .address {
+        display:block;margin-right:0;padding-right:0;
+    }
+    footer address .address::after {
+        display:none;
+    }
+    footer .copyright br {
+        display:block;
+    }
+}

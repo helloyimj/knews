@@ -13,3 +13,27 @@ caption>p { display:inline;}
 #container {padding-top:128px;overflow-x:hidden;}
 #contents {position:relative;overflow:hidden;width:100%;max-width:1500px;min-height:500px;margin:0 auto;box-sizing:border-box;padding:35px 30px 130px}
 #contents>article {min-height:531px;}
+
+@media all and (max-width: 1041px) {
+    #container {
+        padding-top:65px
+    }
+    #contents {
+        padding:20px 15px 59px
+    }
+    #contents>article {
+        min-height:200px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #contents {
+        padding-top:15px;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .innerCont {
+        padding-left:15px;padding-right:15px;
+    }
+}
