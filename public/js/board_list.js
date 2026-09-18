@@ -172,7 +172,52 @@
 		$("#iframePop").remove();
 	};
 
+	function noticeTemplateCell(name) {
+		if (name === "제목") {
+			return '<td class="txtL"><a href="#;" class="subjectTxt"></a></td>';
+		}
+		if (name === "게시일") {
+			return '<td class="noticeOthbcDt"><em class="mSort">게시일</em></td>';
+		}
+		if (name === "국가") {
+			return '<td><em class="mSort">국가</em>본사</td>';
+		}
+		if (name === "무역관") {
+			return '<td><em class="mSort">무역관</em>본사</td>';
+		}
+		return "<td></td>";
+	}
+
+	function ensureNoticeTemplate() {
+		if (!$("#noticeArea").length) return;
+
+		var $ths = $("#noticeArea").closest("table").find("thead th");
+		if (!$ths.length) {
+			$ths = $(".board_area thead th");
+		}
+
+		var cells = ['<td class="no"><div class="btnC_s Blue"><span>공지</span></div></td>'];
+		if ($ths.length) {
+			$ths.each(function (idx) {
+				if (idx === 0) return;
+				cells.push(noticeTemplateCell($.trim($(this).text())));
+			});
+		} else {
+			cells.push(noticeTemplateCell("제목"));
+			cells.push(noticeTemplateCell("국가"));
+			cells.push(noticeTemplateCell("무역관"));
+			cells.push(noticeTemplateCell("게시일"));
+		}
+
+		$("#noticeTemplate").remove();
+		var template = document.createElement("template");
+		template.id = "noticeTemplate";
+		template.innerHTML = '<tr class="nttTr">' + cells.join("") + "</tr>";
+		document.body.appendChild(template);
+	}
+
 	window.fn_noticeList = function () {
+		ensureNoticeTemplate();
 		if (!$("#noticeArea").length || !$("#noticeTemplate").length) return;
 		fn_comm_ajax({
 			url: cfg().noticeUrl,
