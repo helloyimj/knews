@@ -131,7 +131,7 @@
 						attachList[idx2].REAL_ATFILE_NAME +
 						'" onclick="fn_fileDown(this);">';
 					obj +=
-						'<img src="/type/common/img/common/file_' +
+						'<img src="https://dream.kotra.or.kr/kotranews/type/common/img/common/file_' +
 						attachList[idx2].ATFILE_EXT_NAME +
 						'.png" alt="' +
 						attachList[idx2].NTT_ATFILE_IMG_MVP_DC_CN +

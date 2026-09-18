@@ -2157,7 +2157,7 @@ function fn_makeShortUrl(url){
 		<script id="galleyListTemplate" type="text/x-jquery-tmpl">
 			<li class="typeIco {%if COMMENT_CNT > 0 %}typeComment{%/if%}">
 				<div class="photo">
-					<a href="#" data-idno="{%= BBS_SEQ %}"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&SITE_NO={%= SITE_NO %}&BOARD_SEQ={%= BOARD_SEQ %}&BBS_SEQ={%= BBS_SEQ %}" alt="{%= THUMB_SUB_TEXT %}" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')"/></a>
+					<a href="#" data-idno="{%= BBS_SEQ %}"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&SITE_NO={%= SITE_NO %}&BOARD_SEQ={%= BOARD_SEQ %}&BBS_SEQ={%= BBS_SEQ %}" alt="{%= THUMB_SUB_TEXT %}" onerror="$(this).attr('src','../type/common/img/board/blankImg_thumb_default.png')"/></a>
 				</div>
 				{%if TOP_YN == 'Y' %}<span class="mark_noti">공지</span>{%/if%}
 				
