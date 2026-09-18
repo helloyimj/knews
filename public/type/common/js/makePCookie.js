@@ -64,8 +64,6 @@ function Nethru_makePersistentCookie(name,length,path,domain)
 
     Nethru_SetCookie(name,value,expiredDate,path,domain);
 }
-
-
 function Nethru_makePersistentCookie1(name,length,path,domain)
 {
 	if ( domain == null ) return 1;						

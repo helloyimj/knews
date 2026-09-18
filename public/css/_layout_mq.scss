@@ -1,25 +1,22 @@
 @charset "utf-8";
 
+
 @media print {
     #header, #footer, #snb_nav {display:none;}
 }
-
 @media all and (max-width:1880px){
     .mTopNotice .closedArea {right:50px;}
 }
-
 @media all and (max-width:1760px){
     header>nav #gnb>li .gnbTit {left:0;width:208px;margin-left:0;padding-left:30px;}
     header>nav #gnb ul.menuM {left:278px;width:calc(100% - 278px);margin-left:0;padding:30px 20px 35px 30px;}
 }
-
 @media all and (max-width: 1510px){
     #header.gnbOn:after {display:none;}
 
     header .top_util .moreSiteArea ul {padding:0 50px;}
     header .top_util .moreSiteArea ul li  {width:25%;}
 }
-
 
 @media all and (max-width: 1400px){
     header>nav #gnb>li {padding:0 1.6%;}
@@ -28,11 +25,9 @@
     header .gnb_util .totalSearchArea {width:225px;}
     .gnb_autoCompleteArea {max-width:225px;}
 }
-
 @media all and (max-width: 1280px){
     footer .f_bnr {max-width:546px;}
 }
-
 @media all and (max-width: 1240px){
     header .logo {top:17px;}
     header .logo a img {height:40px;}
@@ -52,7 +47,6 @@
     
     footer .f_bnr {max-width:546px;}
 }
-
 @media all and (max-width: 1041px){
     #gnb_dim {top:51px;}
 
@@ -222,8 +216,6 @@
     footer .f_sns>ul li {margin-left:10px;}
     footer .f_sns>ul li>a {width:20px;height:20px;background-size:20px auto !important;}
     footer .f_sns>ul li .sns_nBlog {margin-left:5px;}
-
-
     footer .copyright {font-size:12px;line-height:16px;}
     footer .copyright br {display:block;}
 
@@ -241,7 +233,6 @@
     header .top_util .btn_kotraSite {display:none !important;}
     header .top_util>.btn_join::after {display:none;}
 }
-
 @media all and (max-width: 768px){
     /* 상단배너 */
     .mTopNotice .Alert{width:calc(100% - 190px);}
@@ -274,7 +265,6 @@
 
     #contents {padding-top:15px;}
 }
-
 @media all and (max-width: 560px){
     /* 상단공지 */
     .typeTopNotice{padding-top:85px;}
@@ -307,15 +297,12 @@
     footer address .address::after {display:none;}
     footer .copyright br {display:block;}
 }
-
 @media all and (max-width: 430px){
     header>nav #gnb>li>a {letter-spacing:-1px;font-size:15px;}
 }
-
 @media all and (max-width: 360px){
     header>nav #gnb>li>a {font-size:14px;}
 }
-
 @media all and (max-width: 340px){
     header .top_util .btn_goDream {width:100px !important}
     header .top_util .btn_goDream>span {padding-left:0;}

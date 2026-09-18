@@ -389,8 +389,6 @@ function fn_reltdList(){
         }
     });
 }
-
-
 /************************************************************************
  함수명 : fn_setAttachList
  설 명 : KOTRA 게시물 목록 - 첨부파일 조회
@@ -774,8 +772,6 @@ function fn_comment_save(){
         alert('댓글 최대 글자수 ' + 300 + ' 보다 많이 입력 할 수 없습니다.');
         return;
     }
-
-
     if(!confirm('저장하시겠습니까?')) {
         return;
     }

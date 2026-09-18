@@ -174,8 +174,6 @@ function fn_enterkey() {
          $('.btn_search').trigger('click');
     }
 }
-
-
 var frameBtnObj;
 
 function setHref(obj, org){

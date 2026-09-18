@@ -2382,8 +2382,6 @@ function ifrSiteMapPop(id, src){
 		});
     });
 }
-
-
 function ifrPop(id, src, spot,scYn){
 	//$("#pop_dim").css("z-index","5000").addClass("on");
 	$spot = $("body #container #contents article");

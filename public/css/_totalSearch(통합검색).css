@@ -145,8 +145,6 @@
 .resultGrp li.typeThumList .result_box ul>li.noThum .txt {float:left;width:calc(100% - 105px);height:auto;max-height:43px;}
 .resultGrp li.typeThumList .result_box ul>li.noThum .tit {width:calc(100% - 105px);}
 
-
-
 input.topSearch_inp::-webkit-input-placeholder { /* Chrome/Opera/Safari */color:#666;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
 input.topSearch_inp::-moz-placeholder { /* Firefox 19+ */color:#666;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
 input.topSearch_inp:-ms-input-placeholder { /* IE 10+ */color:#666;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
@@ -273,8 +271,6 @@ footer .f_etc .btn_wa {display:none;}
 .typeNews footer .f_sns>ul li .sns_nBlog {margin-left:10px;background:url(../img/common/ico_f_nBlog.png) no-repeat center;}
 .typeNews footer .f_sns>ul li .sns_youtube {background:url(../img/common/ico_f_youtube.png) no-repeat center;}
 .typeNews footer .f_sns>ul li .sns_instagram {background:url(../img/common/ico_f_instagram.png) no-repeat center;}
-
-
 /* 자동완성 */
 .autoCompleteArea {display:none;position:absolute;left:0;top:57px;;width:100%;max-width:350px;padding:15px 20px;box-sizing:border-box;background:#fff;z-index:99;border-bottom-left-radius:5px;border-bottom-right-radius:5px;box-shadow:0 5px 20px -10px rgb(0 0 0 / 39%)}
 .autoCompleteArea.on {display:block;}
@@ -361,8 +357,6 @@ footer .f_etc .btn_wa {display:none;}
 .reN_2022 .jqcloud-word a:hover {color: inherit !important;}
 
 .reN_2022 .resultGrp li.result .result_box ul li.noResult>p {max-width:1270px;text-align:center;font-size:15px;color:#666;}
-
-
 .totalSearch_categ {margin-top:40px;}
 .totalSearch_categ .cateG_list ul {border:1px solid #d7d7d7;border-top:2px solid #0f0f0f;box-sizing:border-box;}
 .totalSearch_categ .cateG_list ul>li {position:relative;box-sizing:border-box;border-bottom:1px solid #d7d7d7;font-size:0;}
@@ -418,8 +412,6 @@ footer .f_etc .btn_wa {display:none;}
 .detailSch_area .searchOptBox .searchOpt .optGrp>.opt {width:calc(100% - 130px) !important;margin-left:130px;}
 .detailSch_area .searchOptBox .searchOpt .optGrp>.opt .inp_c>label {line-height:18px;}
 .detailSch_area .searchOptBox .searchOpt .optGrp>.opt .radioNcheck li+li {margin-left:15px;}
-
-
 .detailSch_area .w_schWord {width:calc(100% + 17px);margin-left:-17px;font-size:0;}
 .detailSch_area .w_schWord>input {width:calc(33.333% - 17px);margin-left:17px;}
 .detailSch_area .w_schNation {width:calc(100% + 17px);margin-left:-17px;font-size:0;}
@@ -466,8 +458,6 @@ footer .f_etc .btn_wa {display:none;}
 .schHelp_area .help_cont .guide .guide_box+.guide_box {margin-top:10px;}
 .schHelp_area .btn_close {position:absolute;right:27px;top:22px;display:block;width:17px;height:17px;background:url(../img/common/ico_close_detaiolSch.png) no-repeat;}
 .schHelp_area .btn_close>span {position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;overflow:hidden; clip:rect(0, 0, 0, 0)}
-
-
 .reN_2022 .totalSearchBox .searchBox_wrap {padding-top:30px;}
 .reN_2022 .toogleChkBox {display:inline-block;vertical-align:top;}
 .reN_2022 .vitalization {width:100%;background:transparent;top:-76px;right:-40px;}
@@ -489,17 +479,14 @@ footer .f_etc .btn_wa {display:none;}
 .toogleChkBox2.on>span:last-child {font-weight:400;opacity:1;}
 
 
-
 @media all and (max-width: 1280px){
     .typeTotalNews footer .f_bnr {max-width:546px;}
     .typeNews footer .f_bnr {max-width:546px;}
 }
-
 @media all and (max-width: 1240px){
     .typeTotalNews footer .f_bnr {max-width:546px;}
     .typeNews footer .f_bnr {max-width:546px;}
 }
-
 @media all and (max-width: 1041px){
     #header {height:51px !important;;border-bottom:1px solid #dfe3e6;}
     #header header {height:51px;padding:0 15px;}
@@ -784,8 +771,6 @@ footer .f_etc .btn_wa {display:none;}
     .schHelp_area .help_cont .guide .guide_box .exArea .ex:before {display:none;}
     .schHelp_area .help_cont .guide .guide_box .exArea .ex:after {display:none;}
     .schHelp_area .help_cont .guide .guide_txt {font-size:13px;margin-bottom:10px;}
-
-
     .reN_2022 .vitalization {right:auto;left:-20px;top:-56px;text-align:left;}
     .toogleChkBox2>span {font-size:12px;}
     .toogleChkBox2 .chkArea .handle {right:18px;}
@@ -795,7 +780,6 @@ footer .f_etc .btn_wa {display:none;}
     .toogleChkBox2:before {height:10px;}
     .toogleChkBox2 .chkArea {width:35px;height:22px;margin:0 5px;}
 }
-
 @media all and (max-width: 768px){
     #footer {padding-bottom:0;}
     #footer footer {padding:0 15px 10px;}
@@ -842,7 +826,6 @@ footer .f_etc .btn_wa {display:none;}
     .totalSearch_categ .cateG_list ul>li .cateG_list>p {margin-right:2px;}
     .totalSearch_categ .cateG_list ul>li .cateG_list>p>a {padding:5px 7px;font-size:13px;}
 }
-
 @media all and (max-width: 600px){
     .typeTotalNews .totalSearchBox .search_wrap {padding-top:55px;}
     .typeTotalNews .totalSearchBox .searchBox_wrap .search_wrap .inp_s {float:inherit;position:absolute;left:0;top:0;display:block;padding-bottom:0;}
@@ -850,7 +833,6 @@ footer .f_etc .btn_wa {display:none;}
     .typeTotalNews .totalSearchBox .search_wrap>input {width:calc(100% - 60px);}
     .typeTotalNews .totalSearchBox .search_wrap .btn_txtDel {top:68px;}
 }
-
 @media all and (max-width: 560px){
     .resultGrp li.typeMenu .result_box .unit_nav {padding-left:0}
     
@@ -884,12 +866,10 @@ footer .f_etc .btn_wa {display:none;}
     .typeTotalNews footer address .address::after {display:none;}
     .typeTotalNews footer .copyright br {display:block;}
 }
-
 @media all and (max-width: 500px){
     .resultGrp li.typeResultList .result_box ul dd.info>span.date {display:block;margin-left:0;padding-left:0;}
     .resultGrp li.typeResultList .result_box ul dd.info>span.date::before {display:none;}
 }
-
 @media all and (max-width: 380px){
     .tit_area .grp_tit {font-size:16px;}
     .resultGrp li .result_box .sort_option .inp_r {margin-right:5px;}
@@ -906,12 +886,10 @@ footer .f_etc .btn_wa {display:none;}
     .resultGrp .result_opt {top:0;}
 }
 
-
 @media all and (max-width:460px){
     .reN_2022 .totalSearchBox {margin-top:-35px;}
     /* .reN_2022 .vitalization {right:auto;left:-20px;top: -100px;text-align:left;text-align: right;left: auto;right: -20px;} */
 }
-
 @media all and (max-width:390px){
     .reN_2022 .toogleChkBox2 {padding-right:10px;margin-right:2px;}
     .reN_2022 .vitalization {width:calc(100% + 60px);}
@@ -919,10 +897,9 @@ footer .f_etc .btn_wa {display:none;}
     .vitalization .toogleChkBox .handle::before {font-size:12px;}
     .vitalization .toogleChkBox .handle::after {font-size:12px;}
 }
+
 @media all and (max-width:360px){
     .resultGrp li.typeThumList .result_box ul>li .info>span {margin-left:7px;padding-left:7px;}
-
-
     .detailSch_area .schDate .inp_t {width:100%;max-width:100%;}
     .detailSch_area .schDate .inp_t:first-child {margin-bottom:0}
     .detailSch_area .schDate>span {width:100%;height:20px;line-height:20px;text-align:center;;}
@@ -961,6 +938,7 @@ footer .f_etc .btn_wa {display:none;}
 	padding:20px;
 	float:right;
 }
+
 @media all and (max-width:900px){
 	.resultGrp {
 		display: flex;
@@ -1052,7 +1030,6 @@ footer .f_etc .btn_wa {display:none;}
     background: #212e4e;
 }
 .ct_totalSearch .result_info .btn_original:hover:before {background-position:-339px -424px;}
-
 @media all and (max-width:1041px){
     .totalSearchBox .keyword_wrap dd .btn_favorite {
         height: 23px;
@@ -1066,6 +1043,7 @@ footer .f_etc .btn_wa {display:none;}
         line-height: 26px;
     }
 }
+
 @media all and (max-width:900px){
     .resultGrp {flex-direction: column;}
     .resultGrp .search_rank_box{margin-top:30px; width:100%; display:flex; border:1px solid #d7d7d7; padding:20px; flex-shrink: 0; box-sizing: border-box; margin-left:0px;padding:20px;}
@@ -1080,6 +1058,7 @@ footer .f_etc .btn_wa {display:none;}
     .resultGrp .search_rank_box .rank_cont_wrap .popular_list li {font-size: 12px !important;}
     .resultGrp .search_rank_box .rank_cont_wrap .search_tag .tag {height: 24px; font-size: 12px; line-height: 24px;}    
 }
+
 @media all and (max-width: 768px){
     .detailSch_area .searchOptBox .searchOpt .optGrp>.opt .schDate .btn-line {margin-left:0px;} 
     .pop_favorite_search .favorite_slide_wrap .swiper-button-next, 
@@ -1091,18 +1070,18 @@ footer .f_etc .btn_wa {display:none;}
         margin-top:6px;
     }
 }
+
 @media all and (max-width:660px){
     .resultGrp .search_rank_box{display: flex; flex-wrap: wrap;}
     .resultGrp .search_rank_box .cont_wrap {width:calc(50% - 22px);}
     .resultGrp .search_rank_box .cont_wrap:last-child {margin-left:0; padding-left:0; border-left:0; margin-top:30px; width:100%;}    
 }
+
 @media all and (max-width:480px){
     .resultGrp .search_rank_box{display: flex; flex-wrap: wrap;}
     .resultGrp .search_rank_box .cont_wrap {width:100%; margin-left:0; padding-left:0; border-left:0; margin-top:10px; padding-top:20px; border-top:1px solid #d7d7d7;}
     .resultGrp .search_rank_box .cont_wrap:last-child {margin-left:0; padding-left:0; border-left:0; margin-top:10px; padding-top:20px; width:100%;}
 }
-
-
 .sr-only {
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -1126,6 +1105,7 @@ footer .f_etc .btn_wa {display:none;}
     left:40px;
     top:100px;
 }
+
 @media all and (max-width:1042px){
     .totalSearchBox .recently-search {
         position:absolute;
@@ -1163,6 +1143,7 @@ footer .f_etc .btn_wa {display:none;}
     background-size: 24px;
     background-position: left top 4px;  
 }
+
 @media all and (max-width:1042px){
     .totalSearchBox .recently-search .recently-search-list li .txt {
         background-position: left top 0px;  
@@ -1434,7 +1415,6 @@ footer .f_etc .btn_wa {display:none;}
     border: 1px solid transparent;
     color: #fff;
 }
-
 @media(max-width:1400px){
     .country-info-con{
         flex-direction: column;
@@ -1447,6 +1427,7 @@ footer .f_etc .btn_wa {display:none;}
         padding: 24px;
     }
 }
+
 @media(max-width:768px){
     .country-info-con .tab-list-head{
         height: auto;
@@ -1477,6 +1458,7 @@ footer .f_etc .btn_wa {display:none;}
         padding: 24px 20px;
     }
 }
+
 @media(max-width:540px){
 	.tab-con-item .card-list>a{
 		width:100% !important;

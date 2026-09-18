@@ -175,8 +175,6 @@ function fn_enterkey() {
          $('.btn_search').trigger('click');
     }
 }
-
-
 var chkNatCd = "N";
 var chkKbcCd = "N";
 

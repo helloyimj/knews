@@ -1609,8 +1609,6 @@ function hexDouble(num) {
   var str = num.toString(16).toUpperCase();
   return (str.length < 2) ? "0" + str : str;
 }
-
-
 //create a list of reverse color names
 var reverseNames = {};
 for (var name in colorName$1) {
@@ -5827,8 +5825,6 @@ function toClip(value) {
 		left: l
 	};
 }
-
-
 var controller_line = core_datasetController.extend({
 
 	datasetElementType: elements.Line,
@@ -8311,8 +8307,6 @@ function splitNewlines(str) {
 	}
 	return str;
 }
-
-
 /**
  * Private helper to create a tooltip item model
  * @param element - the chart element (point, arc, bar) to create the tooltip item for

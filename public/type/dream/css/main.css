@@ -18,8 +18,6 @@ html{
 .mPopZone .closedArea .inp_c>label {font-size:14px;color:#666;line-height:18px;}
 .mPopZone .closedArea .closedBtn {position:absolute;right:20px;top:50%;display:block;width:15px;height:15px;margin-top:-7.5px;background:url(../img/main/icon_mPop_dayClosed.png) no-repeat;}
 .mPopZone .closedArea .closedBtn>span {position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;overflow:hidden; clip:rect(0, 0, 0, 0)}
-
-
 /* 상단 배너 */
 .typeTopNotice.typeMain #header {top:70px;}
 .typeTopNotice.typeMain #header::before{top:199px;}
@@ -52,8 +50,6 @@ html{
 .typeMain #header.gnbOn .btn_aiReport span{background-image:url(../img/layout/ico_aiReport_black.png);color:#000;}
 .typeMain #header.gnbOn .gnb_util .btn_aiReport:before {background-image:url(../img/layout/btn_aiReport_arrR.png);}
 .typeMain #header.gnbOn {z-index:1100;}
-
-
 /* gnbOn */
 .typeMain #header.gnbOn {border-bottom:1px solid #dfe3e6;background:#fff;}
 .typeMain #header.gnbOn header>nav #gnb>li>a {color:#000;}
@@ -155,8 +151,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     0% {transform:translateY(0);opacity:1;}
     100% {transform:translateY(100px);opacity:0;}
 }
-
-
 /* mLineMark */
 .mLineMark {position:relative;height:65px;font-size:0;z-index:3;}
 .mLineMark .lineZone {position:relative;display:inline-block;width:39%;height:100%;padding:15px 15px 15px 60px;transition:500ms all ease-in-out;box-sizing:border-box;vertical-align:top;z-index:5;}
@@ -254,8 +248,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 .mBnrBand .siteSliderArea .list_control button {display:block;overflow:hidden;width:20px;height:20px;border:1px solid #666;box-sizing:border-box;border-radius:50%;background-repeat:no-repeat;background-position:center;text-indent:-999px;}
 .mBnrBand .siteSliderArea .list_control .btn_play {background-image:url(../img/main/btn_play_gray.png);background-position:left 7px top 4px;}
 .mBnrBand .siteSliderArea .list_control .btn_pause {background-image:url(../img/main/btn_stop_gray.png);background-position:left 50% top 5px;}
-
-
 
 /* mOrganInfo */
 .mOrganInfo {position:relative;height:346px;padding:50px 0 0 240px;box-sizing:border-box;background:linear-gradient(90deg, rgba(0,137,159,1) 0%, rgba(0,130,155,1) 100%);}
@@ -356,8 +348,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 .mVisual .stepMenu>li:after {background-image:url(../img/main/mVisual_arrR_front_w.png);}
 .mVisual .stepMenu>li:before {background-image:url(../img/main/mVisual_arrR_back_w.png);}
 .mVisual .stepMenu>li>a {color:#0f0f0f;}
-
-
 /* 리뉴얼 css */
 .reN.typeMain #header {box-shadow:none;}
 .reN.typeMain #header .top_link.on  {background:#4286eb;}
@@ -390,8 +380,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 .reN.typeMain.mSticky header .gnb_util .btn_login {background-color:transparent;background-position: -461px -308px;}
 .reN.typeMain.mSticky header .gnb_util .btn_mypage {background-color:transparent;background-position: -10px -428px;}
 .reN.typeMain.mSticky header .gnb_util .btn_sitemap {background-position:-337px -290px}
-
-
 /* reN */
 .innerCont {max-width:1610px;font-size:0;}
 .reN .mTopNotice .innerCont {max-width:1610px;}
@@ -560,8 +548,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 .mFixMark .item.keyword .hit_list .list>li>a:before {content:'';position:absolute;right:30px;top:50%;margin-top:-7px;display:block;width:20px;height:14px;background: url(../img/layout/reN/layout_sprite.png) no-repeat -339px -428px;opacity:0;transform:translateX(-20px);transition:transform .3s, opacity .7s;}
 .mFixMark .item.keyword .hit_list .list>li>a:hover:before {opacity:1;transform:translateX(0)}
 
-
-
 @keyframes fixMark_on {
     0% {
         right:-500px;
@@ -582,8 +568,6 @@ a.mTit {display:inline-block;vertical-align:top;}
         transition:cubic-bezier(0.895, 0, 0.18, 1);
     }
 }
-
-
 /* .typeTopNotice .mFixMark {top:70px;height:calc(100% - 70px);}
 .typeTopNotice .mFixMark .item .list_wrap {top:70px;height:calc(100% - 70px);} */
 
@@ -668,8 +652,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 .mConnect .innerCont .m_info .list_control>button {display:block;width:8px;height:11px;background:url(../img/layout/reN/layout_sprite.png) no-repeat -380px -645px;text-indent:-999px;overflow:hidden;}
 .mConnect .innerCont .m_info .list_control>.btn_play {background-position: -380px -615px;}
 
-
-
 .mbnrZone {margin-top:80px;}
 .mbnrZone .innerCont {text-align:center;}
 .mbnrZone .innerCont .mTit {text-align:left;}
@@ -742,11 +724,9 @@ a.mTit {display:inline-block;vertical-align:top;}
 .mNavigation .m_listNav>ul>li>a {position:relative;display:block;width:100%;max-height:20px;font-weight:500;padding-left:10px;box-sizing:border-box;padding-right: 92px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .mNavigation .m_listNav>ul>li>a .date {position:absolute;right:0;color:#666;font-weight:400;font-size:14px;}
 .mNavigation .m_listNav>ul>li>a:before {content:'';position:absolute;left:0;top:11px;display:block;width:2px;height:2px;background:#222;}
-
 @media all and (max-width:1850px){
     .mLineMark .keywordZone ul {width:calc(100% - 380px)}
 }
-
 @media all and (max-width:1800px){
     .innerCont {padding-right:80px;}
     .mFixMark {width:50px;}
@@ -756,11 +736,8 @@ a.mTit {display:inline-block;vertical-align:top;}
     /* .typeMain.reN #header .top_link .inner {padding-right:80px;} */
     .mNews .btn_go {right:80px;}
 }
-
 @media all and (max-width:1650px){
     .mLineMark .keywordZone ul {width:calc(100% - 280px)}
-
-
     .reN .innerCont .type1 {max-width:320px;}
     .reN .innerCont .type2 {max-width:480px;}
     .reN .innerCont .type3 {width:calc(100% - 860px);}
@@ -795,7 +772,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 
     .mFixMark {height:890px;}
 }
-
 
 @media all and (max-width:1510px){
     /* mVisual */
@@ -865,8 +841,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mNews .listNews>ul {width:calc(100% + 15px);margin-left:-15px;}
     .mNews .listNews>ul>li {width:calc(50% - 15px);margin-left:15px;}
     .mNews .listNews>ul>li>a .txt {padding-right:80px;}
-
-
     .mNavigation {height:auto;padding:50px 0}
     .mNavigation::before {margin-left:0;}
     .mNavigation .m_icoNav .item {padding-right:20px;box-sizing:border-box;}
@@ -877,7 +851,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mFixMark .item.keyword .tit {margin:0 auto;}
     .mFixMark .item.keyword .btn_more {margin:0 auto;margin-top:18px;margin-bottom:18px;}
 }
-
 @media all and (max-width:1400px){
     /* mCardNotice */
     .mCardNotice {padding:50px 0 40px 0;}
@@ -916,7 +889,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mbnrZone .list .item {height:220px;}
 
 }
-
 
 
 @media all and (max-width:1300px){
@@ -965,7 +937,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     
     .mbnrZone .list .item {height:190px;}
 }
-
 @media all and (max-width:1270px){
     .mVisual {height:500px;}
     
@@ -976,10 +947,8 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mVisual .mVisual_cont .btnGuide {top:13px;left:148px;padding:2px 5px;font-size:15px;}
     .mVisual .mVisual_cont.on .btnGuide {top:36px;left:219px;}
 }
-
 @media all and (max-width:1250px){
 }
-
 @media all and (max-width:1200px){
     /* mCardNotice */
     .mCardNotice .noti_list {width:calc(100% + 20px);margin-left:-20px;}
@@ -993,14 +962,12 @@ a.mTit {display:inline-block;vertical-align:top;}
 
     .mbnrZone .list .item {height:170px;}
 }
-
 @media all and (max-width:1150px){
     .mLineMark .keywordZone .explainBubble {left:auto;right:10px;}
 
      /* mNotice */
     .mNotice .mIcoNav .ico_item {margin-right:8%;}
 }
-
 @media all and (max-width:1041px){
      /* 메인 팝업존 */
     .mPopZone {position:absolute;left:0;top:100px;padding:0 20px;text-align:center;;}
@@ -1166,8 +1133,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mBnrBand .siteSliderArea .list_control {right:0;bottom:2px;}
     .mBnrBand .siteSliderArea .list_control .btn_play {background-size:5px auto;background-position:left 7px top 5px;}
     .mBnrBand .siteSliderArea .list_control .btn_pause  {background-size:5px auto;}
-
-
     /* mOrganInfo */
     .mOrganInfo {height:auto;padding:35px 0 40px 0;}
     /* .mOrganInfo .info_list .info_item {padding:20px 0;}
@@ -1362,8 +1327,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mMain .m_boxBnr .item .guide.type2:before {display:none;}
     .mMain .m_boxBnr .item .guide.type1>span:before {content:'';position:absolute;left:0;top:50%;display:block;width:18px;height:18px;margin-top:-9px;background: url(../img/layout/reN/layout_sprite.png) no-repeat -508px -174px;}
     .mMain .m_boxBnr .item .guide.type2>span:before {content:'';position:absolute;left:0;top:50%;display:block;width:20px;height:20px;margin-top:-10px;background: url(../img/layout/reN/layout_sprite.png) no-repeat -259px -428px;}
-
-
     .mSiteBnr {height:auto;}
     .mSiteBnr .siteSliderArea {padding-top:20px;border-bottom:0;}
     .mSiteBnr .siteSliderArea .list {width:calc(100% - 22px);padding:0 15px;}
@@ -1469,17 +1432,14 @@ a.mTit {display:inline-block;vertical-align:top;}
 
     /* .typeMain #footer {padding-bottom:80px;} */
 }
-
 @media all and (max-width:900px){
     .mBnrBand .bnrArea .banner {height:160px;}
 
     .mbnrZone .list .item {height:140px;}
 }
-
 @media all and (max-width:830px){
     .mbnrZone .list .item {height:auto;}
 }
-
 @media all and (max-width:768px){
     /* 메인 팝업존 */
     .mPopZone {padding:0 15px;}
@@ -1601,7 +1561,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 
     .reN.typeMain.mSticky #header .top_link .btn_goNews>span {background:none;}
 }
-
 @media all and (max-width:560px){
     /* 팝업존 */
     .mPopZone {top:115px;}
@@ -1622,21 +1581,18 @@ a.mTit {display:inline-block;vertical-align:top;}
     .typeTopNotice.typeMain #header {top:85px;}
 
 }
-
 @media all and (max-width:480px){
     .mVisual .mVisual_cont .txt {padding-right:65px;}
     .mVisual .mVisual_cont.on .txt {padding-right:65px;}
     /* .mVisual .mVisual_cont .stepMenu>li>a {padding-left:22px !important;padding-right:0 !important}
     .mVisual .mVisual_cont .stepMenu>li:first-child>a {padding-left:40px !important;padding-right: 0 !important} */
 }
-
 @media all and (max-width:460px){
     .mVisual .mVisual_cont.on .txt {padding-right:35px;}
     .mVisual .stepMenu {width:calc(100% + 20px)}
     /* .mVisual .mVisual_cont .stepMenu>li>a {padding-left:12px !important;padding-right:0 !important} */
     /* .mVisual .mVisual_cont .stepMenu>li:first-child>a {padding-left:30px !important;padding-right: 0 !important} */
 }
-
 @media all and (max-width:410px){
     .mVisual .stepMenu>li>a {font-size:14px;letter-spacing: -0.5px;}
     .mVisual .mVisual_cont.on .stepMenu>li>a {font-size:14px;letter-spacing:-0.5px;}
@@ -1646,7 +1602,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mVisual .mVisual_cont .stepMenu>li:first-child>a {padding-left:30px !important;padding-right: 0 !important} */
 }
 
-
 @media all and (max-width:380px){
     .mVisual .mVisual_cont.on .txt {padding-right:25px;}
     .mVisual .stepMenu {width:calc(100% + 40px)}
@@ -1655,7 +1610,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mMain .m_boxBnr .item .link>span:before {display:none;}
     .mMain .m_boxBnr .item.typeDreamKock:before {display:none;}
 }
-
 @media all and (max-width:360px){
     .mVisual .mVisual_cont .visTit {font-size:35px;}
     .mVisual .mVisual_cont.on .visTit {font-size:35px;}
@@ -1664,18 +1618,15 @@ a.mTit {display:inline-block;vertical-align:top;}
     /* .mVisual .mVisual_cont .stepMenu>li:first-child>a {padding-left:25px !important}
     .mVisual .mVisual_cont .stepMenu>li>a {padding-left:7px !important} */
 }
-
 @media all and (max-width:350px){
     .mMain .m_boxBnr .item .tit {font-size:17px;}
     .mMain .m_boxBnr .item {padding-left:15px;}
 }
 
 
-
 @media all and (max-height:835px){
     .mFixMark .item.bookmark~.item.keyword .view_list {max-height:230px;}
 }
-
 
 @media all and (max-height:760px){
     .mFixMark .item.bookmark~.item.keyword .view_list {max-height:150px;}
@@ -1683,8 +1634,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     .mFixMark .item.keyword .hit_list .list>li>a {line-height:40px !important}
     .mFixMark .item.keyword .hit_list .list>li .num {top:10px;}
 }
-
-
 /* #fullpage .section{
     overflow: hidden;
     padding-top: 128px;
@@ -1730,8 +1679,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     min-height: auto;
     padding-bottom: 0;
 }
-
-
 
 .typeMain #fp-nav.left{
     left: 40px;
@@ -2130,8 +2077,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     background: url(../img/layout/reN/layout_sprite.png) -100px -630px no-repeat;
     transform: translateY(-50%);
 }
-
-
 
 
 .news-report__body--header-opt .category{
@@ -2547,8 +2492,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     background: url(../img/layout/reN/layout_sprite.png) -100px -630px no-repeat;
     transform: translateY(-50%);
 }
-
-
 .alim-madang{
     /* height: 100vh; */
     /* padding: 100px 0 0; */
@@ -2629,8 +2572,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 .alim-madang__controls{
     position: relative;
 }
-
-
 .slick-controll{
     display: flex;
     justify-content: center;
@@ -2844,8 +2785,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     height: 190px;
     background-color: #dfe0e1;
 }
-
-
 .linkNnotice__notice--tit{
     position: relative;
     margin-bottom: 10px;
@@ -3054,8 +2993,6 @@ a.mTit {display:inline-block;vertical-align:top;}
 .qmenu__list.open .qmenu__list--btn{
     transform: rotate(0);
 }
-
-
 /* 20231103 추가 - quick menu 가이드 */
 .qmenu__guide{
     position: absolute;
@@ -3229,7 +3166,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     background-color: transparent;
 }
 
-
 @media all and (max-width: 1800px){
     .news-report__body--list .least__date{
         display: none;
@@ -3289,7 +3225,6 @@ a.mTit {display:inline-block;vertical-align:top;}
     }
         
 }
-
 @media all and (max-width: 1300px){
     .mainIndex__sub-tit{
         font-size: 27px;
@@ -3326,6 +3261,7 @@ a.mTit {display:inline-block;vertical-align:top;}
     }
 }
 /* 231111 - 배너 간격 수정 : 추가 */
+
 @media all and (max-width:1200px){
     .alim-madang__inner--rolling .slick-current{
         display: none !important;
@@ -3336,6 +3272,7 @@ a.mTit {display:inline-block;vertical-align:top;}
     }
 }
 /*// 231111 - 배너 간격 수정 : 추가 */
+
 
 @media all and (max-width:1041px){
     /* #fullpage .section{
@@ -3491,7 +3428,6 @@ a.mTit {display:inline-block;vertical-align:top;}
         margin:0;
     }
 }
-
 @media all and (max-width:768px){
     .mainIndex{
         padding: 150px 16px 100px;
@@ -3681,13 +3617,11 @@ a.mTit {display:inline-block;vertical-align:top;}
     }
 
 }
-
 @media all and (max-width:390px){
     .news-report__body--header-opt{
         margin: 0 8px 8px auto;
     }
 }
-
 @media all and (min-width:2880px){
     .mainVisual .slick-slide img{
         object-fit: cover;

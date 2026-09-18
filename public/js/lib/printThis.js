@@ -35,7 +35,8 @@
  *  });
  *
  * Notes:
- *  - the loadCSS will load additional css (with or without @media print) into the iframe, adjusting layout
+ *  - the loadCSS will load additional css (with or without 
+@media print) into the iframe, adjusting layout
  */
 ;
 (function($) {

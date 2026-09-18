@@ -528,8 +528,6 @@ $(function(){
 			}
 		});
 	}
-
-
 	/* 모바일 탭 슬라이드 전환 */
 	function mbSlickTab(){
 		if(window.innerWidth <= 1041){

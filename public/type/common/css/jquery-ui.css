@@ -55,16 +55,12 @@
 .ui-front {
 	z-index: 100;
 }
-
-
 /* Interaction Cues
 ----------------------------------*/
 .ui-state-disabled {
 	cursor: default !important;
 	pointer-events: none;
 }
-
-
 /* Icons
 ----------------------------------*/
 .ui-icon {
@@ -1271,8 +1267,6 @@ a.ui-button:active,
 .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
 .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
 .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
-
-
 /* Misc visuals
 ----------------------------------*/
 

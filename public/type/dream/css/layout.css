@@ -375,8 +375,6 @@ footer .f_accessibility>span>a {display:block;}
 
 .reN header>nav #gnb ul.menuM>li.child>a>span {position:relative;}
 .reN header>nav #gnb ul.menuM>li.child>a>span:before {content:'';display:block;position:absolute;right:0;top:50%;margin-top:-4.5px;width:6px;height:9px;background:url(../img/layout/reN/layout_sprite.png) no-repeat -302px -472px;}
-
-
 .reN header>nav #gnb ul.menuS>li.child>a>span {position:relative;}
 .reN header>nav #gnb ul.menuS>li.child>a>span:before {content:'';display:block;position:absolute;right:0;top:50%;margin-top:-4.5px;width:6px;height:9px;background:url(../img/layout/reN/layout_sprite.png) no-repeat -302px -472px;}
 .reN header>nav #gnb ul.menuS>li.child.over>a>span:before,
@@ -580,8 +578,6 @@ footer .f_accessibility>span>a {display:block;}
 .reN header .gnb_util .btn_sitemap {width:18px;height:18px;margin-top:9px;background:url(../img/layout/reN/layout_sprite.png) no-repeat -173px -630px;}
 .reN header .gnb_util .btn_search {width:44px;height:44px;margin-top:-6px;background:url(../img/layout/reN/layout_sprite.png) no-repeat -496px -122px;border-radius:50%;background-color:#5a66d2;}
 .reN header .gnb_util .btn_mypage {width:24px;height:24px;margin-top:6px;background:url(../img/layout/reN/layout_sprite.png) no-repeat -24px -630px;}
-
-
 .reN #snb_board {height:45px; }
 .reN #snb_board .snb_wrap {height:45px}
 .reN #snb_board .snb_bookmark {float:inherit;width:100%;max-width:100%;padding:8px 0;}
@@ -594,8 +590,6 @@ footer .f_accessibility>span>a {display:block;}
 .reN.typeMyPage  #container {padding-top:129px;}
 .reN #snb_board {position:fixed;left:0;top:129px;width:100%;background:#fff;z-index:10;}
 .reN #snb_nav {position:fixed;left:0;top:175px;width:100%;background:#fff;z-index:10;}
-
-
 @keyframes fadeIn {
 	0% {opacity:0;}
     100% {opacity:1;}
@@ -697,8 +691,6 @@ footer .f_accessibility>span>a {display:block;}
 #pnb .link img {margin-right:6px;vertical-align:top;}
 #pnb .link img+img {margin-left:5px;}
 #pnb .link .btn_shortcut {display:inline-block;overflow:hidden;padding-right:25px;background:url(../img/board/ico_shortcut_cirGray.png) no-repeat right 0 center;}
-
-
 /* footer */
 .reN #btn_top {right:70px;bottom:30px;width:60px;height:60px;background:#000 url(../img/layout/reN/layout_sprite.png) no-repeat -485px -74px;}
 .reN #btn_top.fixStop {position:absolute;}
@@ -728,20 +720,15 @@ footer .f_accessibility>span>a {display:block;}
 	vertical-align:middle;
 	margin-left: 5px;
 }
-
 @media all and (max-width:1880px){
     .mTopNotice .closedArea {right:50px;}
 }
-
 @media all and (max-width:1760px){
     header>nav #gnb>li .gnbTit {left:0;width:208px;margin-left:0;padding-left:30px;}
     header>nav #gnb ul.menuM {left:278px;width:calc(100% - 278px);margin-left:0;padding:30px 20px 35px 30px;}
-
-
     /* reN */
     .reN header>nav #gnb ul.menuM {width:100%;}
 }
-
 @media all and (max-width: 1630px){
 
     /* reN */
@@ -763,14 +750,12 @@ footer .f_accessibility>span>a {display:block;}
     .reN header>nav #gnb ul.menuSS>li>a {padding:9px 10px 9px 25px;}
     .reN header>nav #gnb>li>.group {left:50%;max-width:700px;transform:translateX(-50%);margin-left:-70px;}
 }
-
 @media all and (max-width: 1510px){
     #header.gnbOn:after {display:none;}
     header>nav #gnb {padding-left:200px;}
 
     header>nav #gnb>li {padding:0 10px;}
 }
-
 @media all and (max-width: 1380px){
     header>nav #gnb {padding-left:180px;}
     .reN header>nav #gnb{max-width: 950px;}
@@ -801,7 +786,6 @@ footer .f_accessibility>span>a {display:block;}
     .reN header>nav #gnb ul.menuSS>li {width:184px;}
     .reN header>nav #gnb ul.menuSS>li>a {font-size:16px;}
 }
-
 @media all and (max-width: 1280px){
     .reN header>nav #gnb{max-width: 850px;}
     .reN header>nav #gnb>li>a {font-size:18px;}
@@ -812,7 +796,6 @@ footer .f_accessibility>span>a {display:block;}
 
     footer .f_bnr {max-width:546px;}
 }
-
 @media all and (max-width: 1270px){
     header>nav #gnb {padding-left:165px;}
     header .gnb_util .btn_search+.btn_logout,
@@ -848,12 +831,10 @@ footer .f_accessibility>span>a {display:block;}
     #snb_nav #snb_menu li a span {font-size:16px;}
     
 }
-
 @media all and (max-width: 1310px){
     .reN header>nav #gnb>li .bnrZone>a {width:255px;height:94px;background-size:400px auto;background-position:-5px -5px;}
     .reN header>nav #gnb>li.hasBnrZone2 .bnrZone>a {background-position:-5px -110px;}
 }
-
 @media all and (max-width: 1200px){
     /* reN */
     .reN header>nav #gnb {max-width: 800px;}
@@ -872,7 +853,6 @@ footer .f_accessibility>span>a {display:block;}
     .reN header>nav #gnb>li .bnrZone>a {width:210px;height:80px;background-size:330px auto;background-position:-5px -5px;}
     .reN header>nav #gnb>li.hasBnrZone2 .bnrZone>a {background-position:-5px -91px;}
 }
-
 @media all and (max-width: 1041px){
 
 	
@@ -1019,8 +999,6 @@ footer .f_accessibility>span>a {display:block;}
     .gnbOn .mBtn_close {display:block;}
     .gnbOn header>nav #gnb>li>a.act~.m_gnbEtc {display:block !important;}
     .gnbOn header .gnb_util .btn_interestInfo {position:fixed;left:20px;bottom:15px;display:block;width:auto !important;height:25px !important;padding-left:25px;margin:0;background-image:url(../img/layout/m/ico_lineHeart.png);background-size:16.5px auto;background-position:left 0 top 50%;line-height:25px;font-size:14px;z-index:9999;text-indent:0;}
-
-
     #footer {padding-top:16px;padding-bottom:16px;}
     footer .f_bnr .list {padding:0 15px;}
     footer .f_bnr {width:325px;height:25px;margin-bottom:16px;}
@@ -1270,14 +1248,10 @@ footer .f_accessibility>span>a {display:block;}
     .reN #snb_board {top:85px;}
     .reN #snb_nav {top:131px;}
     .reN #container {padding-top:181px;}
-
-
 }
-
 @media all and (max-width: 850px){
     .reN #header.gnbOn header .gnb_util .btn_search {display:none;}
 }
-
 @media all and (max-width: 768px){
     /* 상단배너 */
     .mTopNotice .Alert{width:calc(100% - 190px);}
@@ -1337,7 +1311,6 @@ footer .f_accessibility>span>a {display:block;}
     
     .reN #contents {padding-bottom:30px;}
 }
-
 @media all and (max-width: 560px){
     /* 상단공지 */
     .typeTopNotice{padding-top:85px;}
@@ -1391,26 +1364,21 @@ footer .f_accessibility>span>a {display:block;}
     }
     /*// 231111 추가 - 모바일 상단에서 삭제 */
 }
-
 @media all and (max-width: 390px){
     .reN footer .f_menu li {margin-right:15px;}
 }
-
 @media all and (max-width: 370px){
     header>nav #gnb>li>a {font-size:15px;letter-spacing:-1px;}
     
     .reN footer .f_menu li {margin-right:10px;}
     .reN footer .f_menu li a {font-size:14px;}
 }
-
 @media all and (max-width: 350px){
     header .gnb_util .btn_aiReport {width:76px !important;}
     header .gnb_util .btn_aiReport>span {padding-left:20px;background-size:auto 11px;font-size:12px;}
     header .gnb_util .btn_aiReport:before {right:3px;}
     header .gnb_util .btn_aiReport+.btn_search {margin-left:8px;}
 }
-
-
 /*header_footer.css*/
 /* 상단 배너 */
 .typeTopNotice #header .top_link {background:transparent;}
@@ -1421,7 +1389,6 @@ footer .f_accessibility>span>a {display:block;}
 /* 리뉴얼 css */
 #header .top_link .btn_kotraSite.on>span {background:none;}
 #header.gnbON ~ #container {z-index:900;}
-
 @media all and (max-width:1300px){
     #header .top_link a, 
     #header .top_link button,
@@ -1432,7 +1399,6 @@ footer .f_accessibility>span>a {display:block;}
         right: 16px;
     }
 }
-
 @media all and (max-width:1041px){
     /* reN */
     .reN header nav {top:0 !important}
@@ -1441,7 +1407,6 @@ footer .f_accessibility>span>a {display:block;}
     .reN.typeTopNotice header .gnb_util .btn_search {top:118px;}
     .reN header .mBtn .mBtn_close {top:0 !important}
 }
-
 @media all and (max-width:560px){
     .reN.typeTopNotice header .gnb_util .btn_search {top:132px;}
 }
@@ -1491,8 +1456,6 @@ footer .f_accessibility>span>a {display:block;}
     margin:0;
     color: #aaa;
 }
-
-
 /*231107 수정사항*/
 .typeSub #footer {background:#00264f;border-top:0;}
 .reN #header .top_link  .right_area a:first-of-type{margin-right: 30px;}
@@ -1525,7 +1488,6 @@ footer .f_accessibility>span>a {display:block;}
 .reN.typeMain.mSticky #header .top_link {background:#4286eb;}
 .reN .gnb_infoArea .siteZone>ul>li>a:before {width:28px !important;}
 
-
 @media all and (max-width:1041px){
     .reN #header .top_link .link{
         line-height: 30px;
@@ -1544,7 +1506,6 @@ footer .f_accessibility>span>a {display:block;}
         white-space: nowrap;
     }
 }
-
 @media all and (max-width:768px){
     .main-header{
         height: initial;

@@ -333,8 +333,6 @@ function fn_actionNatIemList(pRegnCd, pNatCd){
 	
 	location.href = "/kotranews/cms/nation/actionNatIemList.do?" + $("#sendForm").serialize();
 }
-
-
 /************************************************************************
 함수명 : fn_nationPdfDown
 설 명 : 국가정보 PDF 다운로드 

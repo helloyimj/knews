@@ -81,8 +81,6 @@ header nav {height:85px;}
 .m_searchResult {display:none;}
 
 header>nav #gnb {overflow:hidden;padding:35px 335px 0 190px;font-size:0;text-align:center}
-
-
 /*1depth*/
 header>nav #gnb>li {display:inline-block;overflow:hidden;padding:0 2.3%;vertical-align:top;}
 header>nav #gnb>li>a {display:block;overflow:hidden;color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:24px;font-weight:500;line-height:28px;}
@@ -320,8 +318,6 @@ div.new_header_19 .home_box a.btn_o strong {
 .sitemapBox_reN .mCSB_scrollTools .mCSB_draggerRail { opacity:0;}
 .sitemapBox_reN.off { animation:siteBoxAni_off 0.2s forwards ease-out;}
 .sitemapBox_reN.on { animation:siteBoxAni_on 0.4s forwards ease-out;}
-
-
 @keyframes siteBoxAni_on { 
     0% { 
         right:-1090px;
@@ -365,8 +361,6 @@ div.new_header_19 .home_box a.btn_o strong {
 
 .sitemapBox .mCSB_scrollTools .mCSB_draggerContainer::before { display:block;position:absolute;top:0;left:50%;width:2px;height:100%;margin-left:-1px;background:rgba(220,220,220,0.4);content:'';}
 .sitemapBox .mCSB_scrollTools .mCSB_draggerRail { background:rgba(220,220,220,0);}
-
-
 /* 사이트맵 (페이지) */
 .sitemapArea { position:relative;padding-top:30px;}
 .sitemapArea .mCSB_scrollTools .mCSB_draggerRail { background:#fff;}

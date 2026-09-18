@@ -858,8 +858,6 @@ $(document).on('ready', function() {
           if (_.$dots) {
               _.$dots.remove();
           }
-
-
           if ( _.$prevArrow && _.$prevArrow.length ) {
 
               _.$prevArrow
@@ -884,8 +882,6 @@ $(document).on('ready', function() {
               }
 
           }
-
-
           if (_.$slides) {
 
               _.$slides
@@ -2720,8 +2716,6 @@ $(document).on('ready', function() {
           if (_.options.verticalSwiping === true) {
               positionOffset = _.touchObject.curY > _.touchObject.startY ? 1 : -1;
           }
-
-
           swipeLength = _.touchObject.swipeLength;
 
           _.touchObject.edgeHit = false;

@@ -318,8 +318,6 @@ function fn_setAttachList(data){
 	}
 }
 
-
-
 /************************************************************************
 * 함수명 : fn_fileDown
 * 설 명 :  첨부파일 다운로드
@@ -633,8 +631,6 @@ function fn_setDetailUrl($item, nttSn) {
 	$item.attr('href', setUrl);
 	$("#sendForm [name=pNttSn]").val('');	
 }
-
-
 var frameBtnObj;
 
 function setHref(obj, org){

@@ -174,8 +174,6 @@ function fn_enterkey() {
          $('.btn_search').trigger('click');
     }
 }
-
-
 $().ready(function() {
 	
 	// 게시일 수정 (2023-12-05)

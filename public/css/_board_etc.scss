@@ -47,8 +47,6 @@
 #pop_fileView_error {width:90%;max-width:400px;max-height:90%;background:#fff;}
 #pop_fileView_error .errorTxt p {display:block;width:100%;padding:90px 0 0px;background:url(../img/board/ico_noArticle.png) no-repeat 50% 0px;color:#72737a;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:18px;line-height:25px;text-align:center;}
 #pop_fileView_error .btnArea {padding-top:30px !important}
-
-
 /* 관심파트너 */
 .lineList_ul.typeLikeList>ul>li {position:relative;font-size:0;}
 .lineList_ul.typeLikeList>ul>li .txtL {margin-top:1px;font-size:0;}
@@ -145,6 +143,7 @@
 
 
 
+
 @media all and (max-width:1480px){
     /***** 리스트 *****/
     .lineList_ul.typeGallery .txtInfo ul>li.date {display:block;margin-left:0;margin-top:5px;padding-left:0;}
@@ -152,18 +151,15 @@
     .lineList_ul.typeGallery .txtInfo ul>li:nth-child(3) {display:block;margin-left:0;padding-left:0;margin-top:5px;}
     .lineList_ul.typeGallery .txtInfo ul>li:nth-child(3):before {display:none;}
 }
-
 @media all and (max-width:1300px){
     .lineList_v.typeReportView.typeScrap dt {padding-top:80px;}
     .lineList_v.typeReportView.typeScrap .txtL>h2 {padding-right:0 !important;}
     .lineList_v.typeReportView dt .reportInfo ul {width:100%;}
     .lineList_v.typeReportView dt .reportInfo ul>li {padding-right:20px;box-sizing:border-box;}
 }
-
 @media all and (max-width:1200px){
     .lineList_ul .txtInfo ul>li {font-size:14px;}
 }
-
 @media all and (max-width:1041px){
     /***** 공통 *****/
     .num_paging {height:30px;padding-top:8px;}
@@ -329,8 +325,6 @@
     .lineList_v .subTitleArea .subTit {font-size:15px;}
     .lineList_v .subTitleArea:before {top:2px;width:2px;height:calc(100% - 4px);}
     .lineList_v .view_txt {margin-top:0;margin-bottom:0px;font-size:15px;line-height:1.4;}
-
-
     .board_area .add_sympathy ul li {padding:0 25px;}
     .board_area .add_sympathy ul li>button {min-width:32px;padding-top:40px;background-size:32px auto;font-size:11px;line-height:16px;}
     .board_area .add_sympathy ul li .sym_best:before {width:32px;height:32px;margin-left:-16px;background-position:-8px -113px;background-size:350px auto;}
@@ -592,8 +586,6 @@
     .info_LayerPop {margin-top:20px;}
     .info_LayerPop .head_tit  {width:120px;padding:9px;font-size:14px;}
     .info_LayerPop .info {width:calc(100% - 120px);padding:9px 10px;font-size:14px;}
-
-
     /* 이미지 상세보기 팝업 */
     #pop_board_imgView .imgTit {font-size:17px;}
 
@@ -727,7 +719,6 @@
     .downListArea>ul>li .download {position:relative;left:0;right:auto;margin-top:5px;}
     .downListArea>ul>li .nation {padding-right:0;width:100%;margin-top:5px;}
 }
-
 @media all and (max-width:768px){
     /***** 공통 *****/
     .lineList_tb tr.typeNoArticle td {height:154px !important;}
@@ -901,7 +892,6 @@
     #pop_kockDream .lineList_tb td.txtL a {overflow:hidden;white-space:nowrap;}
     
 }
-
 @media all and (max-width:560px){
     /***** 공통 *****/
     /*게시판옵션*/
@@ -949,7 +939,6 @@
     .top_titArea .contTit_g+.origin {margin-top:5px;}
     
 }
-
 @media all and (max-width:499px){
     /***** 공통 *****/
     /*게시판 옵션*/
@@ -1321,140 +1310,29 @@
 .replyArea .fileArea p a {display:inline;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 25px);color:#1056ab;font-size:15px;line-height:20px;vertical-align:middle;}
 .replyArea .fileArea p a:hover {text-decoration:underline;}
 
+/* 개인정보 활동 동의 */ .use_agree{ margin-top:40px; } 
+.use_agree__tit{ margin-bottom: 20px; font-size: 22px; color:#222; } 
+.use_agree__txt{ overflow: auto; height: 160px; padding: 25px 30px; border: 1px solid #e0e1e3; background-color: #f7f7f7; font-size: 16px; } 
+.use_agree__txt + .use_agree__tit{ margin-top:50px; } 
+.use_agree__select{ margin-top: 20px; text-align: right; } 
+.use_agree__select-box{ margin-top:-6px; float: right; } 
+.use_agree__select-box .inp_r{ margin-left: 24px; } /* 질문 게시판 쓰기 */ .board_write{ border-top:1px solid #333; } 
+.board_write table{ width: 100%; } 
+.board_write table th, .board_write table td{ padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid #e0e1e3; } 
+.board_write table th{ width:15%; } 
+.board_write table th em{ color:#4286eb; } 
+.board_write table .inp_t{ width: calc(100% - 20%); } 
+.board_write textarea{ width: calc(100% - 24px - 20%); height: 136px; padding:12px; border: 1px solid #d9d9d9; } 
+.board_write .filebox{ display: inline-flex; flex-wrap: wrap; width: 50%; max-width: 400px; margin-right: 15px; } 
+.board_write .filebox__name { float:left; width: calc(100% - 122px); height: 40px; padding: 0 10px; vertical-align: middle; border:1px solid #d9d9d9; } 
+.board_write .filebox__label { float:left; height: 40px; line-height: 40px; padding: 0 20px; border:1px solid #d9d9d9; border-left:0; background-color: #f2f3f5; color: #444; vertical-align: middle; white-space: nowrap; cursor: pointer; } 
+.board_write .filebox__addFile { position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0; } 
+.board_write .filebox__info--box{ margin-top:4px; } 
+.board_write .filebox__info{ margin-right: 20px; font-size: 13px; color: #666; white-space: nowrap; } 
+.board_write .added_file__box{ display: inline-flex; flex-wrap: wrap; width: calc(50% - 20px); } 
+.added_file__box--item{ position: relative; display: inline-block; margin: 0 10px 12px 0; padding: 12px 40px 12px 30px; border: 1px solid #d9d9d9; border-radius: 20px; font-size:15px; letter-spacing: -1px; line-height: 1; color:#5a66d2; } 
+.added_file__box--item::after{ content:''; position: absolute; top: 50%; right:15px; width: 10px; height: 10px; margin-top: -5px; background: url(../img/common/sprite_component.png) no-repeat  -358px -376px; }
 
-/* 개인정보 활동 동의 */
-.use_agree{
-    margin-top:40px;
-}
-.use_agree__tit{
-    margin-bottom: 20px;
-    font-size: 22px;
-    color:#222;
-}
-.use_agree__txt{
-    overflow: auto;
-    height: 160px;
-    padding: 25px 30px;
-    border: 1px solid #e0e1e3;
-    background-color: #f7f7f7;
-    font-size: 16px;
-}
-.use_agree__txt + .use_agree__tit{
-    margin-top:50px;
-}
-.use_agree__select{
-    margin-top: 20px;
-    text-align: right;
-}
-.use_agree__select-box{
-    margin-top:-6px;
-    float: right;
-}
-.use_agree__select-box .inp_r{
-    margin-left: 24px;
-}
-
-/* 질문 게시판 쓰기 */
-.board_write{
-    border-top:1px solid #333;
-}
-.board_write table{
-    width: 100%;
-}
-.board_write table th,
-.board_write table td{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e0e1e3;
-}
-.board_write table th{
-    width:15%;
-}
-.board_write table th em{
-    color:#4286eb;
-}
-
-.board_write table .inp_t{
-    width: calc(100% - 20%);
-}
-.board_write textarea{
-    width: calc(100% - 24px - 20%);
-    height: 136px;
-    padding:12px;
-    border: 1px solid #d9d9d9;
-}
-.board_write .filebox{
-    display: inline-flex;
-    flex-wrap: wrap;
-    width: 50%;
-    max-width: 400px;
-    margin-right: 15px;
-}
-.board_write .filebox__name {
-    float:left;
-    width: calc(100% - 122px);
-    height: 40px;
-    padding: 0 10px;
-    vertical-align: middle;
-    border:1px solid #d9d9d9;
-}
-.board_write .filebox__label {
-    float:left;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 20px;
-    border:1px solid #d9d9d9;
-    border-left:0;
-    background-color: #f2f3f5;
-    color: #444;
-    vertical-align: middle;
-    white-space: nowrap;
-    cursor: pointer;
-}
-.board_write .filebox__addFile {
-    position: absolute;
-    width: 0;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-}
-.board_write .filebox__info--box{
-    margin-top:4px;
-}
-.board_write .filebox__info{
-    margin-right: 20px;
-    font-size: 13px;
-    color: #666;
-    white-space: nowrap;
-}
-.board_write .added_file__box{
-    display: inline-flex;
-    flex-wrap: wrap;
-    width: calc(50% - 20px);
-}
-.added_file__box--item{
-    position: relative;
-    display: inline-block;
-    margin: 0 10px 12px 0;
-    padding: 12px 40px 12px 30px;
-    border: 1px solid #d9d9d9;
-    border-radius: 20px;
-    font-size:15px;
-    letter-spacing: -1px;
-    line-height: 1;
-    color:#5a66d2;
-}
-.added_file__box--item::after{
-    content:'';
-    position: absolute;
-    top: 50%;
-    right:15px;
-    width: 10px;
-    height: 10px;
-    margin-top: -5px;
-    background: url(../img/common/sprite_component.png) no-repeat  -358px -376px;
-}
 @media all and (max-width:650px){
     .board_write table th{
         width: 80px;
@@ -1480,92 +1358,17 @@
         white-space: normal;
     }
 }
-
-/* 해외진출기업 */
-.oversea-map{
-    display: flex;
-    flex-wrap: wrap;
-}
-.oversea-map__continent{
-    position: relative;
-}
-.oversea-map__continent--radio-btn{
-    width: 0;
-    height: 0;
-    position: absolute;
-    top:0;
-    left:0;
-}
-.oversea-map__continent--label{
-    display: block;
-    height: 100%;
-    border: 1px solid #d8dde1;
-    background-color: #e1e5e7;
-    background-position-x: 50%;
-    background-size: 100% 200%; /*231111-2 추가 - 지도 이미지 조정*/
-    cursor: pointer;
-}
-.oversea-map__continent--label-img{
-    width: 100%;
-    height: 100%;
-    float: left;
-}
-.oversea-map__continent--radio-btn:checked ~ .oversea-map__continent--label{
-    position: relative;
-    z-index: 1;
-    border-color: #4286eb;
-    background-repeat: no-repeat;
-    background-position-y: 100%;
-}
-.oversea-map__continent--label-txt{
-    position: absolute;
-    z-index: 2;
-    font-size: 15px;
-    letter-spacing: -0.25px;
-    color: #222;
-}
-.oversea-map__continent--label-txt em{
-    font-size: 23px;
-    font-style: normal;
-    line-height: 121%;
-    color: #000;
-}
-.oversea-map__continent--label-txt b{
-    display: block;
-    font-size: 17px;
-    letter-spacing: -0.25px;
-    color: #000;
-}
-/* .oversea-map__middle-east .oversea-map__continent--radio-btn:checked + .oversea-map__continent--label .oversea-map__continent--label-txt,
-.oversea-map__middle-east .oversea-map__continent--radio-btn:checked + .oversea-map__continent--label .oversea-map__continent--label-txt b,
-.oversea-map__cis .oversea-map__continent--radio-btn:checked + .oversea-map__continent--label .oversea-map__continent--label-txt,
-.oversea-map__cis .oversea-map__continent--radio-btn:checked + .oversea-map__continent--label .oversea-map__continent--label-txt b{
-    color:#fff;
-}	 */
-
-
-.oversea-map__north-america,
-.oversea-map__asia,
-.oversea-map__middle-east{
-    width: calc(100%/3);
-}
-.oversea-map__oceania,
-.oversea-map__europe,
-.oversea-map__south-america,
-.oversea-map__africa{
-    width: 25%;
-}
-
-.oversea-map__north-america,
-.oversea-map__asia,
-.oversea-map__middle-east,
-.oversea-map__oceania,
-.oversea-map__europe,
-.oversea-map__south-america,
-.oversea-map__africa{
-    height: 284px;
-}
-
+/* 해외진출기업 */ .oversea-map{ display: flex; flex-wrap: wrap; } 
+.oversea-map__continent{ position: relative; } 
+.oversea-map__continent--radio-btn{ width: 0; height: 0; position: absolute; top:0; left:0; } 
+.oversea-map__continent--label{ display: block; height: 100%; border: 1px solid #d8dde1; background-color: #e1e5e7; background-position-x: 50%; background-size: 100% 200%; /*231111-2 추가 - 지도 이미지 조정*/ cursor: pointer; } 
+.oversea-map__continent--label-img{ width: 100%; height: 100%; float: left; } 
+.oversea-map__continent--radio-btn:checked ~ .oversea-map__continent--label{ position: relative; z-index: 1; border-color: #4286eb; background-repeat: no-repeat; background-position-y: 100%; } 
+.oversea-map__continent--label-txt{ position: absolute; z-index: 2; font-size: 15px; letter-spacing: -0.25px; color: #222; } 
+.oversea-map__continent--label-txt em{ font-size: 23px; font-style: normal; line-height: 121%; color: #000; } 
+.oversea-map__continent--label-txt b{ display: block; font-size: 17px; letter-spacing: -0.25px; color: #000; } /* .oversea-map__middle-east .oversea-map__continent--radio-btn:checked + .oversea-map__continent--label .oversea-map__continent--label-txt, .oversea-map__middle-east .oversea-map__continent--radio-btn:checked + .oversea-map__continent--label .oversea-map__continent--label-txt b, .oversea-map__cis .oversea-map__continent--radio-btn:checked + .oversea-map__continent--label .oversea-map__continent--label-txt, .oversea-map__cis .oversea-map__continent--radio-btn:checked + .oversea-map__continent--label .oversea-map__continent--label-txt b{ color:#fff; }	 */ .oversea-map__north-america, .oversea-map__asia, .oversea-map__middle-east{ width: calc(100%/3); } 
+.oversea-map__oceania, .oversea-map__europe, .oversea-map__south-america, .oversea-map__africa{ width: 25%; } 
+.oversea-map__north-america, .oversea-map__asia, .oversea-map__middle-east, .oversea-map__oceania, .oversea-map__europe, .oversea-map__south-america, .oversea-map__africa{ height: 284px; }
 
 .oversea-map__north-america .oversea-map__continent--label{
     background-image: url(../img/common/oversea-map/continent-north-america.png);
@@ -1589,213 +1392,56 @@
     background-image: url(../img/common/oversea-map/continent-africa.png);
 }
 
+/*텍스트 위치*/ .oversea-map__north-america .oversea-map__continent--label-txt{ bottom:40px; left:30px; } 
+.oversea-map__asia .oversea-map__continent--label-txt{ bottom:40px; right:30px; } 
+.oversea-map__middle-east .oversea-map__continent--label-txt{ bottom:40px; right:30px; } 
+.oversea-map__oceania .oversea-map__continent--label-txt{ bottom:40px; left:30px; } 
+.oversea-map__europe .oversea-map__continent--label-txt{ top:40px; left:30px; } 
+.oversea-map__south-america .oversea-map__continent--label-txt{ bottom:40px; left:30px; } 
+.oversea-map__africa .oversea-map__continent--label-txt{ bottom: 40px; left: 30px; } 
+.sch-opt{ display: flex; margin-top:20px; border: 1px solid #e0e1e3; } 
+.sch-opt:first-of-type{ margin-top:40px; } 
+.sch-opt__tit{ display: flex; min-width: 210px; border-right: 1px solid #e0e1e3; justify-content: center; align-items: center; font-size: 22px; font-weight: 500; color: #222; } 
+.sch-opt__cnts input[type="radio"]{ width: 0; height: 0; } 
+.sch-opt__cnts.nation{ padding:30px 20px 20px 40px; } 
+.sch-opt__cnts.nation label{ display: inline-block; position: relative; line-height: 40px; margin: 0 10px 10px 0; padding: 0 24px 4px 10px; border-radius: 22px; border: 1px solid #d9d9d9; font-size: 17px; color: #333; } 
+.sch-opt__cnts.nation label img{ width: 28px; height: 28px; margin-right: 14px; vertical-align: middle; border-radius: 50%; } 
+.sch-opt__cnts.nation input:checked + label{ background-color: #212e4e; color: #fff; } 
+.sch-opt__cnts.agency{ padding: 20px 20px 10px; } 
+.sch-opt__cnts.agency label{ display: inline-block; margin-bottom: 10px; padding: 0 28px; border: 1px solid #d9d9d9; border-radius: 20px; line-height: 40px; } 
+.sch-opt__cnts.agency input:checked + label{ background-color: #212e4e; font-weight: 500; color: #fff; } 
+.sch-opt__cnts.detail{ display: flex; flex-wrap: wrap; padding: 20px 0 20px 30px; } 
+.sch-opt__cnts.detail dl{ display: flex; width: calc(50% - 25px); margin: 0 25px 8px 0; } 
+.sch-opt__cnts.detail dl dt{ display: flex; align-items: center; width: 150px; } 
+.sch-opt__cnts.detail dl dd{ width: calc(100% - 150px); } 
+.sch-opt__cnts.detail dl dd input{ width: calc(100% - 28px); padding: 0 14px; border:1px solid #d9d9d9; line-height: 40px; } 
+.list-box{ margin-top:65px; }
 
-/*텍스트 위치*/
-.oversea-map__north-america .oversea-map__continent--label-txt{
-    bottom:40px;
-    left:30px;
+@media all and (max-width:1041px){ 
+.oversea-map__continent--label-txt{ width: 80%; top:0 !important; left:0 !important; bottom: 0 !important; right: 0 !important; padding: 10%; font-size: 14px } 
+.oversea-map__north-america, .oversea-map__asia, .oversea-map__middle-east, .oversea-map__oceania, .oversea-map__europe, .oversea-map__south-america, .oversea-map__africa{ height: 240px; } 
+.oversea-map__continent--label-txt b{ font-size: 20px; } 
+.sch-opt__cnts.detail dl{ width: calc(100% - 25px); } #pop_board_imgView .txtArea{ height: 50px; } 
 }
-.oversea-map__asia .oversea-map__continent--label-txt{
-    bottom:40px;
-    right:30px;
-}
-.oversea-map__middle-east .oversea-map__continent--label-txt{
-    bottom:40px;
-    right:30px;
-}
-.oversea-map__oceania .oversea-map__continent--label-txt{
-    bottom:40px;
-    left:30px;
-}
-.oversea-map__europe .oversea-map__continent--label-txt{
-    top:40px;
-    left:30px;
-}
-.oversea-map__south-america .oversea-map__continent--label-txt{
-    bottom:40px;
-    left:30px;
-}
-.oversea-map__africa .oversea-map__continent--label-txt{
-    bottom: 40px;
-    left: 30px;
-}
+ 
 
+@media all and (max-width:768px){ 
+.oversea-map__continent{ width: 50%; } 
+.oversea-map__north-america, .oversea-map__asia, .oversea-map__middle-east, .oversea-map__oceania, .oversea-map__europe, .oversea-map__south-america, .oversea-map__africa{ height: 200px; } 
+.oversea-map__continent--label-img{ object-fit: cover; } 
+.sch-opt__cnts.detail{ padding-bottom: 10px; } 
+.sch-opt__cnts.detail dl{ display: block; } 
+.sch-opt__cnts.detail dl dt{ width: 110px; } 
+.sch-opt__cnts.detail dl dd{ width: 100%; margin: 10px 0 20px; } 
+.sch-opt__tit{ min-width: 80px; padding: 0 10px; font-size: 13px; font-weight: 500; line-height: 17px; vertical-align: top; } 
+.sch-opt__cnts.nation{ padding: 20px 10px 10px 20px; } 
+.sch-opt__cnts.nation label{ font-size: 13px; line-height: 30px; } 
+}
+ 
 
-
-.sch-opt{
-    display: flex;
-    margin-top:20px;
-    border: 1px solid #e0e1e3;
+@media all and (max-width:500px){ 
+.sch-opt__cnts.nation label{ width: calc(100% - 34px); } 
 }
-.sch-opt:first-of-type{
-    margin-top:40px;
-}
-.sch-opt__tit{
-    display: flex;
-    min-width: 210px;
-    border-right: 1px solid #e0e1e3;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    font-weight: 500;
-    color: #222;
-}
-.sch-opt__cnts input[type="radio"]{
-    width: 0;
-    height: 0;
-}
-.sch-opt__cnts.nation{
-    padding:30px 20px 20px 40px;
-}
-.sch-opt__cnts.nation label{
-    display: inline-block;
-    position: relative;
-    line-height: 40px;
-    margin: 0 10px 10px 0;
-    padding: 0 24px 4px 10px;
-    border-radius: 22px;
-    border: 1px solid #d9d9d9;
-    font-size: 17px;
-    color: #333;
-}
-.sch-opt__cnts.nation label img{
-    width: 28px;
-    height: 28px;
-    margin-right: 14px;
-    vertical-align: middle;
-    border-radius: 50%;
-}
-.sch-opt__cnts.nation input:checked + label{
-    background-color: #212e4e;
-    color: #fff;
-}
-
-
-.sch-opt__cnts.agency{
-    padding: 20px 20px 10px;
-}
-.sch-opt__cnts.agency label{
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 0 28px;
-    border: 1px solid #d9d9d9;
-    border-radius: 20px;
-    line-height: 40px;
-}
-.sch-opt__cnts.agency input:checked + label{
-    background-color: #212e4e;
-    font-weight: 500;
-    color: #fff;
-}
-.sch-opt__cnts.detail{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 0 20px 30px;
-}
-.sch-opt__cnts.detail dl{
-    display: flex;
-    width: calc(50% - 25px);
-    margin: 0 25px 8px 0;
-}
-.sch-opt__cnts.detail dl dt{
-    display: flex;
-    align-items: center;
-    width: 150px;
-}
-.sch-opt__cnts.detail dl dd{
-    width: calc(100% - 150px);
-}
-.sch-opt__cnts.detail dl dd input{
-    width: calc(100% - 28px);
-    padding: 0 14px;
-    border:1px solid #d9d9d9;
-    line-height: 40px;
-}
-
-.list-box{
-    margin-top:65px;
-}
-
-@media all and (max-width:1041px){
-    .oversea-map__continent--label-txt{
-        width: 80%;
-        top:0 !important;
-        left:0 !important;
-        bottom: 0 !important;
-        right: 0 !important;
-        padding: 10%;
-        font-size: 14px
-    }
-    .oversea-map__north-america,
-    .oversea-map__asia,
-    .oversea-map__middle-east,
-    .oversea-map__oceania,
-    .oversea-map__europe,
-    .oversea-map__south-america,
-    .oversea-map__africa{
-        height: 240px;
-    }
-    .oversea-map__continent--label-txt b{
-        font-size: 20px;
-    }
-    .sch-opt__cnts.detail dl{
-        width: calc(100% - 25px);
-    }
-    #pop_board_imgView .txtArea{
-        height: 50px;
-    }
-}
-@media all and (max-width:768px){
-    .oversea-map__continent{
-        width: 50%;
-    }
-    .oversea-map__north-america,
-    .oversea-map__asia,
-    .oversea-map__middle-east,
-    .oversea-map__oceania,
-    .oversea-map__europe,
-    .oversea-map__south-america,
-    .oversea-map__africa{
-        height: 200px;
-    }    
-    .oversea-map__continent--label-img{
-        object-fit: cover;
-    }
-    .sch-opt__cnts.detail{
-        padding-bottom: 10px;
-    }
-    .sch-opt__cnts.detail dl{
-        display: block;
-    }
-    .sch-opt__cnts.detail dl dt{
-        width: 110px;
-    }
-    .sch-opt__cnts.detail dl dd{
-        width: 100%;
-        margin: 10px 0 20px;
-    }    
-    .sch-opt__tit{
-        min-width: 80px;
-        padding: 0 10px;
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 17px;
-        vertical-align: top;        
-    }
-    .sch-opt__cnts.nation{
-        padding: 20px 10px 10px 20px;
-    }
-    .sch-opt__cnts.nation label{
-        font-size: 13px;
-        line-height: 30px;
-    }
-}
-@media all and (max-width:500px){
-    .sch-opt__cnts.nation label{
-        width: calc(100% - 34px);
-    }
-}
-
 
 
 @media all and (max-width:1041px){
@@ -1996,7 +1642,6 @@
     .aiRecommArea .area .list {margin-top:10px;}
 
 }
-
 @media all and (max-width:768px){
     /* 공통 */
     .pagination+.btnAreaL,
@@ -2141,8 +1786,6 @@
     .lineList_ul.typeFaq li dt.on {background-position:right 15px top 40px;}
     .lineList_ul.typeFaq li dd.on {padding-left:45px;padding-right:45px;}
     .lineList_ul.typeFaq dt .txtInfo>span {font-size:13px;}
-
-
     /* pdf */
     .lineList_v.typePdfview .pdf_info {float:inherit;width:100%;}
     .lineList_v.typePdfview .pdf_info .pdf_infoList {margin-top:15px;}
@@ -2191,12 +1834,10 @@
     .boardOptBox .func_list .setArea {width:150px;}
     .boardOptBox .func_list .setArea .inp_s {width:calc(100% - 40px);}
 }
-
 @media all and (max-width:640px){
     /* 쓰기 */
     .list_guide {text-align:left;line-height:20px;}
 }
-
 @media all and (max-width:600px){
     .lineList_v .txtInfo ul>li.hsCode>p {display:block;padding-right:0;}
     .lineList_v .txtInfo ul>li.hsCode>p:before {display:none;}
@@ -2211,7 +1852,6 @@
     .boardOptBox .func {float:inherit;text-align:right;}
     .boardOptBox .sub_util+.listViewType {margin-top:10px;}
 }
-
 @media all and (max-width:560px){
     .BBS_option {padding-bottom:40px;}
     .BBS_option .searchBox {margin:0;width:100%;}
@@ -2226,7 +1866,6 @@
     
     .lineList_v .txtInfo .btn_recommAi {}/*20240729수정*/
 }
-
 @media all and (max-width:499px){
     .link+.boardOptBox {margin-top:0}
 
@@ -2245,13 +1884,11 @@
         margin-top:10px;
     }
 }
-
 @media all and (max-width:480px){
 	/* 공통 */
 	/* .boardOptBox .func_list {position:relative;margin-bottom:5px;text-align:right;;} */
     /* .sub_util .util_l {float:inherit;position:relative;margin-bottom:5px;text-align:right;;} */
 }
-
 
 @media all and (max-width:460px){
 	/* 공통 */
@@ -2261,7 +1898,6 @@
     .boardOptBox .func .btnI.fileDown>span {padding-right:0;}
     .boardOptBox .func .btnI.fileDown>span:before {display:none;}
 }
-
 @media all and (max-width:420px){
     /* 공통 */
     .btnArea a+a,
@@ -2302,7 +1938,6 @@
     .boardOptBox .func .btnI.fileDown {padding:0 10px;}
     .boardOptBox .func_list .perPage {width:75px;}
 }
-
 @media all and (max-width:380px){
     /* 상세 */
     /* .lineList_v .txtInfo .btn_original {margin-left:-103px;} */
@@ -2317,7 +1952,6 @@
     /* .lineList_v .txtInfo ul>li.source em {font-size:13px;letter-spacing:0;} */
     /* .lineList_v .txtInfo ul>li.source {font-size:12px;letter-spacing:-1px;}  */
 }
-
 @media all and (max-width:320px){
     /* 검색 */
     .BBS_option.sel02 .searchBox .inp_s {width:calc(50% - 6px);}
@@ -2331,55 +1965,17 @@
 .pop_wrap {position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;/*background:rgba(0,0,0,0.7);*/z-index:1500} /*iframe에서 반투명 bg사용, 팝업 bg 제거*/
 .pop_wrap #pop_pwCheck,
 .popLayer #pop_pwCheck {width:440px;overflow:hidden}
-
 @media all and (max-width:768px){
     #pop_pwCheck {width:80%;}
 }
-
-
-/* 해외진출기업 */
-.thumbList{
-    display: flex;
-    flex-wrap: wrap;   
-    justify-content: space-between;
-}
-.thumbList__items{
-    width: 22%;
-    margin-bottom: 50px;
-    border: 1px solid #d5dade;
-}
-.thumbList__items-tit{
-    padding: 30px 0;
-    border-bottom: 1px solid #d5dade;
-    background-color: #f5fafd;
-    text-align: center;
-}
-.thumbList__items-tit--flag{
-    width: 107px;
-    height: 71px;
-}
-.thumbList__items-tit--txt{
-    margin-top:14px;
-    color:#222;
-    font-size: 20px;
-    letter-spacing: -2px;
-}
-.thumbList__items-info{
-    padding:16px;
-}
-.thumbList__items-info--agency{
-    padding-left: 16px;
-    background: url(../img/common/icn-location.png) 0 50% no-repeat;
-    color:#555; 
-    font-size: 15px;
-}
-.thumbList__items-info--date{
-    float:right;
-    color:#555; 
-    font-size: 15px;
-}
-
-
+/* 해외진출기업 */ .thumbList{ display: flex; flex-wrap: wrap; justify-content: space-between; } 
+.thumbList__items{ width: 22%; margin-bottom: 50px; border: 1px solid #d5dade; } 
+.thumbList__items-tit{ padding: 30px 0; border-bottom: 1px solid #d5dade; background-color: #f5fafd; text-align: center; } 
+.thumbList__items-tit--flag{ width: 107px; height: 71px; } 
+.thumbList__items-tit--txt{ margin-top:14px; color:#222; font-size: 20px; letter-spacing: -2px; } 
+.thumbList__items-info{ padding:16px; } 
+.thumbList__items-info--agency{ padding-left: 16px; background: url(../img/common/icn-location.png) 0 50% no-repeat; color:#555; font-size: 15px; } 
+.thumbList__items-info--date{ float:right; color:#555; font-size: 15px; }
 @media all and (max-width:1200px){
     .thumbList__items-info--date{
         float:none;
@@ -2387,111 +1983,35 @@
         text-align: right;
     }
 }
-
 @media all and (max-width:1000px){
     .thumbList__items{
         width: 48%;
     }    
 }
-
 @media all and (max-width:500px){
     .thumbList__items{
         width: 100%;
         margin-bottom: 25px;
     }    
 }
+/*인증기관 추가 20251111*/ .organWrap {display:flex;column-gap: 20px;} 
+.organ-item { border: 1px solid #ddd; border-radius: 8px; background: #fff; text-align: center; min-width: 350px; } 
+.organ-logo{ display:block; margin: 20px 5px; } 
+.organ-logo img { height: 32px; vertical-align: middle; } 
+.organ-name { font-weight: bold; margin-top: 8px; } 
+.organ-link{ display:block; margin: 20px 5px 10px 5px; } 
+.organ-info  {width: 100%;} 
+.organ-info-list{ list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); /* 두 컬럼: 레이블+값 블록을 2개씩 배치 */ gap: var(--gap); align-items: stretch; max-width: 900px; } /* 각 셀(원래 테이블의 td 하나)을 li로 표현 */ .organ-info-item{ display: grid; grid-template-columns: 1fr 2fr; /* 레이블:값 비율 */ gap: 8px; align-items: center; border: 1px solid var(--border); border-radius: var(--radius); padding: 0px; background: white; min-height: 40px; box-sizing: border-box; } 
+.organ-info-label{ font-size: 0.92rem; background: var(--label-bg); color: var(--label-color); padding: 6px 8px; border-radius: 6px; display: inline-block; text-align: left; white-space: nowrap; } 
+.organ-info-value{ font-size: 0.95rem; word-break: break-word; text-align: left; } 
+.organ-info-value a{ text-decoration: none; color: inherit; } 
 
+@media (max-width:780px){ 
+.organWrap{flex-direction:column} 
+.organ-info{margin-top: 20px;} 
+} 
 
-/*인증기관 추가 20251111*/
-.organWrap {display:flex;column-gap: 20px;}
-
-.organ-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-	text-align: center;
-	min-width: 350px;
+@media (max-width:480px){ 
+.organ-info-list{ grid-template-columns: repeat(1, 1fr); } 
 }
-
-.organ-logo{
-	display:block;
-	margin: 20px 5px;
-}
-
-.organ-logo img {
-	height: 32px;
-	vertical-align: middle;
- }
-
-.organ-name {
-	font-weight: bold;
-	margin-top: 8px;
-}
-
-.organ-link{
-	display:block;
-	margin: 20px 5px 10px 5px;
-}
-
-.organ-info  {width: 100%;}
-
-.organ-info-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 두 컬럼: 레이블+값 블록을 2개씩 배치 */
-    gap: var(--gap);
-    align-items: stretch;
-    max-width: 900px;
-}
-
-  /* 각 셀(원래 테이블의 td 하나)을 li로 표현 */
-.organ-info-item{
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* 레이블:값 비율 */
-    gap: 8px;
-    align-items: center;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 0px;
-    background: white;
-    min-height: 40px;
-    box-sizing: border-box;
-}
-
-.organ-info-label{
-    font-size: 0.92rem;
-    background: var(--label-bg);
-    color: var(--label-color);
-    padding: 6px 8px;
-    border-radius: 6px;
-    display: inline-block;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.organ-info-value{
-    font-size: 0.95rem;
-    word-break: break-word;
-    text-align: left;
-}
-
-.organ-info-value a{
-    text-decoration: none;
-    color: inherit;
-}
-
-@media (max-width:780px){
-	.organWrap{flex-direction:column}
-	.organ-info{margin-top: 20px;}
-}
-
-@media (max-width:480px){
-	.organ-info-list{
-	    grid-template-columns: repeat(1, 1fr);
-	}
-}
-/*인증기관 추가 END*/
-
-.none{display: none;}
+ /*인증기관 추가 END*/ .none{display: none;}

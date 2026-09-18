@@ -845,8 +845,6 @@ $('section.sitemapBox').html(`
 //         `);
 
 // {/* <div id="snb_board"></div> */}
-
-
 // SNS공유
 
  $('#container #contents #pnb').html(`
@@ -1463,8 +1461,6 @@ function fn_enterkey() {
 
             return shortUrl;
           }
-
-
 
           // SNS 보드
 

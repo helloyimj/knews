@@ -78,8 +78,6 @@ function fn_util_chkEmpty(objValue)
 
     return false;
 }
-
-
 function fn_util_nvl(objValue, defValue)
 {
     if (fn_util_isNull(objValue)) {
@@ -357,8 +355,6 @@ function fn_util_isNumber(obj) {
         return true;
     }
 }
-
-
 /**
  *    숫자인지 체크
  *    true - 음수, 0, 양수, 소수점이 있는 수
@@ -392,8 +388,6 @@ function fn_util_isNum(objValue)
     }
     return true;
 }
-
-
 /**
  *    숫자인지 체크하고 숫자가 아니면 메시지 창을 띄움
  *  true - 숫자
@@ -627,8 +621,6 @@ function fn_util_alphaCheck(arg_v)
     else
         return true;
 }
-
-
 function fn_util_isAlphaNum(input)
 {
     var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -975,8 +967,6 @@ function fn_util_num2han(num){
 
     return pm + result; //부호 + 숫자값
 }
-
-
 function fn_util_removeDateObj(obj) {
   obj.value = fn_util_removeDate(obj.value);
 }
@@ -1124,8 +1114,6 @@ function fn_util_checkDate_YYYY(argObj) //============년도체크
     return true;
 }
 
-
-
 function fn_util_checkDate_stat(value1, value2) {
     value1 = fn_util_removeDate(value1);
     value2 = fn_util_removeDate(value2);
@@ -1209,8 +1197,6 @@ function fn_util_checkDecimalsForNum(theNum, thePointCnt)
 
     return NomalDecimals ;
 }
-
-
 function fn_util_htmlEncode(val, initV) {
     if (val==null || val==undefined)
         return initV;
@@ -1337,8 +1323,6 @@ function fn_util_getBrowserType() {
           , version     : -1
         };
     }
-
-
     for (var idx = 0; idx < works.length; idx++) {
         browserKeyword = works[idx].browserKeyword;
         indexOfKeyword = works[idx].indexOfKeyword;
@@ -2205,8 +2189,6 @@ function fn_util_openByPost(formSelector, url, params, skipSubmit) {
     }
     return $form;
 }
-
-
 /**
  * 팝업 차단여부 감지
  * 출처 : http://h5bak.tistory.com/194
