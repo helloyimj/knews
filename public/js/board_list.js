@@ -1,3 +1,8 @@
+/*
+ * 프론트 HTML/JS만 공통 모듈화한다.
+ * /ajaxf, /ajaxa, /bvs, /kotranews, /cms 등 서버 경로·파일은 변경하지 않는다.
+ * 아래 URL은 기존 board4.js 와 동일하게 호출만 한다.
+ */
 (function (window, $) {
 	"use strict";
 
@@ -8,8 +13,7 @@
 			detailUrl: "/kotranews/cms/news/actionKotraBoardDetail.do",
 			nationUrl: "/ajaxf/frNews/getInNewsNationList.do",
 			tradeUrl: "/ajaxf/frNews/getKotraBoardTradeList.do",
-			clsfUrl: "/ajaxf/frNews/getKotraBoardClsfCdList.do",
-			pageSize: 5
+			clsfUrl: "/ajaxf/frNews/getKotraBoardClsfCdList.do"
 		}
 	};
 
@@ -28,90 +32,9 @@
 		var $area = $(".board_area[data-board-type]").first();
 		var type = ($area.data("boardType") || "news") + "";
 		var base = $.extend({}, BOARD_TYPES[type] || BOARD_TYPES.news);
-		if ($area.data("listUrl")) base.listUrl = $area.data("listUrl");
-		if ($area.data("detailUrl")) base.detailUrl = $area.data("detailUrl");
 		if ($area.attr("data-attach") === "Y") base.attach = true;
 		return base;
 	}
-
-	function fn_board_renderPagination(data, selector) {
-		var $box = $(selector);
-		if (!$box.length) return;
-
-		var current = Math.max(1, Number(data.currentPageNo) || 1);
-		var rec = Math.max(1, Number(data.recordCountPerPage) || 10);
-		var totalCnt = Number(data.totalRecordCount) || 0;
-		var pageSize = Number(data.pageSize) || cfg().pageSize || 5;
-		var totalPage = Math.max(1, Math.ceil(totalCnt / rec) || 1);
-		var jsFn = data.jsFunction || "fn_linkPage";
-
-		if (!totalCnt) {
-			$box.empty();
-			return;
-		}
-
-		var start = Math.floor((current - 1) / pageSize) * pageSize + 1;
-		var end = Math.min(start + pageSize - 1, totalPage);
-		var html = [];
-
-		html.push('<div class="num_paging"><span>Page ' + current + "/" + totalPage + "</span></div>");
-
-		if (totalPage > pageSize) {
-			html.push(
-				'<button type="button" class="btn_first" onclick="' +
-					jsFn +
-					'(1);" title="첫 페이지로 이동"><span>처음</span></button> '
-			);
-			html.push(
-				'<button type="button" class="btn_prev" onclick="' +
-					jsFn +
-					"(" +
-					(start > 1 ? start - 1 : 1) +
-					');" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> '
-			);
-		}
-
-		html.push('<ul class="paging">');
-		for (var i = start; i <= end; i++) {
-			if (i === current) {
-				html.push('<li><button type="button" class="on" title="선택됨">' + i + "</button></li> ");
-			} else {
-				html.push(
-					'<li><button type="button" onclick="' +
-						jsFn +
-						"(" +
-						i +
-						');" title="' +
-						i +
-						'번 페이지로 이동">' +
-						i +
-						"</button></li> "
-				);
-			}
-		}
-		html.push("</ul>");
-
-		if (totalPage > pageSize) {
-			html.push(
-				'<button type="button" class="btn_next" onclick="' +
-					jsFn +
-					"(" +
-					(end < totalPage ? start + pageSize : totalPage) +
-					');" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> '
-			);
-			html.push(
-				'<button type="button" class="btn_end" onclick="' +
-					jsFn +
-					"(" +
-					totalPage +
-					');" title="마지막 페이지로 이동"><span>끝</span></button>'
-			);
-		}
-
-		$box.html(html.join(""));
-	}
-
-	window.fn_board_renderPagination = fn_board_renderPagination;
 
 	window.fn_list = function () {
 		var option = cfg();
@@ -134,11 +57,7 @@
 			data: $("#sendForm").serialize(),
 			dataType: "json",
 			success: function (data) {
-				if (!$("#pagingDummy").length) {
-					$('<div id="pagingDummy" style="display:none" aria-hidden="true"></div>').appendTo("body");
-				}
-				fn_comm_setList("#tbody", data, "#listTemplate", "#noListTemplate", "#rowCount", "#pagingDummy");
-				fn_board_renderPagination(data, ".pagination");
+				fn_comm_setList("#tbody", data, "#listTemplate", "#noListTemplate", "#rowCount", ".pagination");
 
 				$("#tbody a[data-source]").each(function () {
 					fn_setDetailUrl($(this), $(this).attr("data-source"));
