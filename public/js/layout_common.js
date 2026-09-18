@@ -553,7 +553,7 @@ function initCommonLayout() {
                   <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" title="기고 현재창  이동" data-sub="Y" target="_self">기고</a>
                   <ul class="menuS">
                     <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=130" title="" data-sub="N" target="_self">전문가기고</a></li>
-                    <li class="on"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=140" title="" data-sub="N" target="_self">직원기고</a></li>
+                    <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=140" title="" data-sub="N" target="_self">직원기고</a></li>
                   </ul>
                 </li>
                 <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" title="글로벌 이슈 모니터링 현재창  이동" data-sub="N" target="_self">글로벌 이슈 모니터링</a></li>
@@ -693,58 +693,17 @@ function initCommonLayout() {
     </div>
   `);
 
-  // 브레드크럼
-  // pnb
+  // 브레드크럼: 메뉴명/목록은 initPnbFromGnb() 가 현재 MENU_ID 기준으로 채움
   $('#container #contents #pnb').html(`
           <div class="pnb_nav">
             <a href="https://dream.kotra.or.kr/kotranews/index.do" class="btn_home" title="홈 화면 이동" target="_self"><span class="txtHidden">홈</span></a>
-            <ul>
-              <li>
-                <div class="navList">
-                  <div class="menu">
-                    <button type="button" class="btnTit">뉴스</button>
-                    <ul>
-                      <li><a href="javascript:void(0);" data-menuno="10" title="현재창 이동" target="_self">뉴스</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="20" title="현재창 이동" target="_self">상품·산업</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="30" title="현재창 이동" target="_self">국가·지역정보</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="40" title="현재창 이동" target="_self">보고서</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="50" title="현재창 이동" target="_self">멀티미디어뉴스</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="60" title="현재창 이동" target="_self">해외투자</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="navList">
-                  <div class="menu">
-                    <button type="button" class="btnTit">기고</button>
-                    <ul>
-                      <li><a href="javascript:void(0);" data-menuno="70" title="현재창 이동" target="_self">전체</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="80" title="현재창 이동" target="_self">경제∙무역</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="90" title="현재창 이동" target="_self">통상∙규제</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="100" title="현재창 이동" target="_self">투자진출</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="110" title="현재창 이동" target="_self">현장∙인터뷰</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="1480" title="현재창 이동" target="_self">기고</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="290" title="현재창 이동" target="_self">글로벌 이슈 모니터링</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="1550" title="현재창 이동" target="_self">글로벌 공급망 동향</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="1500" title="현재창 이동" target="_self">글로벌 ESG 정보</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="1580" title="현재창 이동" target="_self">미국 통상정책 주요 동향</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="1470" title="현재창 이동" target="_self">핫클립</a></li>
-                      <li><a href="javascript:void(0);" data-menuno="1630" title="현재창 이동" target="_self">산업뉴스콕콕</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
+            <ul></ul>
           </div>
           <div class="pnb_menu">
             <div class="pnbList">
               <div class="menu">
-                <button type="button" class="btnTit">직원기고</button>
-                <ul>
-                  <li><a href="javascript:void(0);" data-menuno="130" title="현재창 이동" target="_self">전문가기고</a></li>
-                  <li><a href="javascript:void(0);" data-menuno="140" title="현재창 이동" target="_self">직원기고</a></li>
-                </ul>
+                <button type="button" class="btnTit" title="열기"></button>
+                <ul></ul>
               </div>
             </div>
           </div>
@@ -1298,12 +1257,16 @@ function getCurrentMenuId() {
 
   try {
     if (window.URLSearchParams) {
-      return new URLSearchParams(window.location.search).get('MENU_ID') || '';
+      menuId = new URLSearchParams(window.location.search).get('MENU_ID') || '';
+      if (menuId) return String(menuId);
     }
   } catch (e) {}
 
   var matched = String(window.location.search).match(/[?&]MENU_ID=(\d+)/i);
-  return matched ? matched[1] : '';
+  if (matched) return matched[1];
+
+  var pathMatch = String(window.location.pathname || '').match(/(?:^|\/)_?menu_(\d+)\.html$/i);
+  return pathMatch ? pathMatch[1] : '';
 }
 
 function getGnbMenuNo($a) {
@@ -1330,7 +1293,9 @@ function applyGnbCurrentByMenuId() {
   var menuId = getCurrentMenuId();
   if (!menuId) return;
 
-  var $a = $('#gnb a').filter('.' + menuId);
+  var $a = $('#gnb a').filter(function () {
+    return (' ' + (this.className || '') + ' ').indexOf(' ' + menuId + ' ') > -1;
+  });
   if (!$a.length) {
     $a = $('#gnb a[href*="MENU_ID=' + menuId + '"]');
   }
@@ -1373,15 +1338,27 @@ function getVisibleSiblingLis($li) {
   });
 }
 
+function getPnbSiblingLis($li) {
+  return $li.parent().children('li').not('.emptyArea');
+}
+
 function escapePnbText(text) {
   return $('<div>').text(text == null ? '' : text).html();
+}
+
+function escapePnbAttr(text) {
+  return String(text == null ? '' : text)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;');
 }
 
 function buildPnbDropdownHtml($siblingLis) {
   var html = '';
   $siblingLis.each(function () {
     var $a = $(this).children('a').first();
-    html += '<li><a href="javascript:void(0);" data-menuno="' + getGnbMenuNo($a) + '" title="현재창 이동" target="_self">' + escapePnbText($.trim($a.text())) + '</a></li>';
+    var href = $a.attr('href') || 'javascript:void(0);';
+    html += '<li><a href="' + escapePnbAttr(href) + '" data-menuno="' + getGnbMenuNo($a) + '" title="현재창 이동" target="_self">' + escapePnbText($.trim($a.text())) + '</a></li>';
   });
   return html;
 }
@@ -1412,13 +1389,13 @@ function initPnbFromGnb() {
   var navHtml = '';
   for (var i = 0; i < ancestors.length; i++) {
     navHtml += '<li><div class="navList"><div class="menu">';
-    navHtml += '<button type="button" class="btnTit">' + escapePnbText(ancestors[i].text) + '</button>';
-    navHtml += '<ul>' + buildPnbDropdownHtml(getVisibleSiblingLis(ancestors[i].$li)) + '</ul>';
+    navHtml += '<button type="button" class="btnTit" title="열기">' + escapePnbText(ancestors[i].text) + '</button>';
+    navHtml += '<ul>' + buildPnbDropdownHtml(getPnbSiblingLis(ancestors[i].$li)) + '</ul>';
     navHtml += '</div></div></li>';
   }
   $pnb.find('.pnb_nav > ul').html(navHtml);
-  $pnb.find('.pnb_menu .pnbList .btnTit').text(current.text);
-  $pnb.find('.pnb_menu .pnbList .menu > ul').html(buildPnbDropdownHtml(getVisibleSiblingLis(current.$li)));
+  $pnb.find('.pnb_menu .pnbList .btnTit').attr('title', '열기').text(current.text);
+  $pnb.find('.pnb_menu .pnbList .menu > ul').html(buildPnbDropdownHtml(getPnbSiblingLis(current.$li)));
 }
 /* ============================================================
  * 11. gnb 현재 메뉴 on 클래스 세팅 (layout.js)

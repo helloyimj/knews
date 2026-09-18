@@ -53,6 +53,7 @@
 
     <!-- 공통 레이아웃 통합 -->
     <script src="../js/layout_common.js"></script>
+    <script src="../js/cms_file.js"></script>
 
     <!-- SNS -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -100,24 +101,7 @@
 
         <article>
           <h3 class="sr-only">해외투자안내</h3>
-
-<script>
-function cfd(file,ofile){
-    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
-    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
-    
-    var doc = document.contFileDown;
-    doc.target = "_self";
-    doc.action = "/ajaxa/fileCpnt/cfd.do";
-    doc.submit();
-}
-</script>
-<form id="contFileDown" name="contFileDown" method="POST">
-    <input type="hidden" name="FILE_NM">
-    <input type="hidden" name="FILE_ORG_NM">
-</form>
-
-	<!--컨텐츠 영역-->
+<!--컨텐츠 영역-->
 <div class="foreign_investment">
    <div class="txtContArea" style="line-height: 150%;">
       <h1><strong class="contTit_line"><span style="font-family: " 맑은="" 고딕",="" "malgun="" gothic";="" font-size:="" 24px;"="">해외투자</span></strong></h1>

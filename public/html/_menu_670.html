@@ -53,6 +53,7 @@
 
     <!-- 공통 레이아웃 통합 -->
     <script src="../js/layout_common.js"></script>
+    <script src="../js/cms_file.js"></script>
 
     <!-- SNS -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -100,24 +101,7 @@
 
         <article>
           <h3 class="sr-only">뉴스레터신청</h3>
-
-<script>
-function cfd(file,ofile){
-    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
-    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
-    
-    var doc = document.contFileDown;
-    doc.target = "_self";
-    doc.action = "/ajaxa/fileCpnt/cfd.do";
-    doc.submit();
-}
-</script>
-<form id="contFileDown" name="contFileDown" method="POST">
-    <input type="hidden" name="FILE_NM">
-    <input type="hidden" name="FILE_ORG_NM">
-</form>
-
-	<div class="newsletter border_vCustom_contBottom">
+<div class="newsletter border_vCustom_contBottom">
    <div class="info_imgBox">
       <div class="imgArea" style="background:url(../type/dream/img/dreamgarden/newsletter_Main.png) no-repeat left 50% top 50%;">&nbsp;</div>
       <div class="infoArea">

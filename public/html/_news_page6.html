@@ -351,7 +351,7 @@ function fn_enterkey() {
 <!-- 							<img src="../type/news/img/layout/logo_t_01_s.png" alt="KOTRA 지원안내"> -->
 <!-- 						</a> -->
 						<a href="https://www.kotra.or.kr/kp/kotra/cmm/sso/loginBySSO.do?div=kp" target="_blank" title="새 창 열림">
-							<img src="../type/common/img/common/logo_t_06_s.png" alt="KOTRA 지원안내">
+							<img src="../img/common/logo_t_06_s.png" alt="KOTRA 지원안내">
 						</a>
 						<a href="https://www.buykorea.or.kr/" target="_blank" title="새 창 열림" class="btn_s">
 							<img src="../type/news/img/layout/logo_t_07_s.png" alt="바이코리아(Seller)" title="바이코리아(Seller)">
@@ -378,7 +378,7 @@ function fn_enterkey() {
 <!-- 							</p> -->
 							<p>
 								<a href="/kp/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block;" title="새 창 열림">
-									<img src="../type/common/img/common/more_siteLogo12.png" alt="KOTRA 무역투자24" title="KOTRA 무역투자24">
+									<img src="../img/common/more_siteLogo12.png" alt="KOTRA 무역투자24" title="KOTRA 무역투자24">
 								</a>
 								<a href="/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
 									<strong>KOTRA 무역투자24</strong>
@@ -2125,8 +2125,8 @@ function fn_makeShortUrl(url){
 					<td class="txtL">
 						<a href="#" data-idno="{%= BBS_SEQ%}" data-url="{%= LINK_URL_YN%}">{%if OPEN_GBN == 'N' %}<em class="txtOpt Red">[미게시]</em>{%/if%}{%= SUBJECT%}</a>
 						{%if COMMENT_CNT > 0 %}<span class="info_comment"><em>댓글</em>[{%= COMMENT_CNT %}]</span>{%/if%}
-						{%if NEW_YN == 'Y' %}<img src="../type/common/img/common/ico_new.png" alt="NEW" class="ico_new" />{%/if%}
-						{%if SECRET_YN == 'Y' %}<img src="../type/common/img/board/ico_lock.png" alt="비밀글" class="ico_lock"/>{%/if%}
+						{%if NEW_YN == 'Y' %}<img src="../img/common/ico_new.png" alt="NEW" class="ico_new" />{%/if%}
+						{%if SECRET_YN == 'Y' %}<img src="../img/board/ico_lock.png" alt="비밀글" class="ico_lock"/>{%/if%}
 					</td>
 					
                     <td class="attachFile">
@@ -2157,15 +2157,15 @@ function fn_makeShortUrl(url){
 		<script id="galleyListTemplate" type="text/x-jquery-tmpl">
 			<li class="typeIco {%if COMMENT_CNT > 0 %}typeComment{%/if%}">
 				<div class="photo">
-					<a href="#" data-idno="{%= BBS_SEQ %}"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&SITE_NO={%= SITE_NO %}&BOARD_SEQ={%= BOARD_SEQ %}&BBS_SEQ={%= BBS_SEQ %}" alt="{%= THUMB_SUB_TEXT %}" onerror="$(this).attr('src','../type/common/img/board/blankImg_thumb_default.png')"/></a>
+					<a href="#" data-idno="{%= BBS_SEQ %}"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&SITE_NO={%= SITE_NO %}&BOARD_SEQ={%= BOARD_SEQ %}&BBS_SEQ={%= BBS_SEQ %}" alt="{%= THUMB_SUB_TEXT %}" onerror="$(this).attr('src','../img/board/blankImg_thumb_default.png')"/></a>
 				</div>
 				{%if TOP_YN == 'Y' %}<span class="mark_noti">공지</span>{%/if%}
 				
 				<div class="txtL">
 					<a href="#" data-idno="{%= BBS_SEQ %}">{%if OPEN_GBN == 'N' %}<em class="txtOpt Red">[미게시]</em>{%/if%} {%= SUBJECT%}</a>
 					<span class="info_comment">{%if COMMENT_CNT > 0 %}<em>댓글</em>[{%= COMMENT_CNT %}]{%/if%}</span>
-					{%if NEW_YN == 'Y' %}<img src="../type/common/img/common/ico_new.png" alt="NEW" class="ico_new" />{%/if%}
-					{%if SECRET_YN == 'Y' %}<img src="../type/common/img/board/ico_lock.png" alt="비밀글" class="ico_lock"/>{%/if%}
+					{%if NEW_YN == 'Y' %}<img src="../img/common/ico_new.png" alt="NEW" class="ico_new" />{%/if%}
+					{%if SECRET_YN == 'Y' %}<img src="../img/board/ico_lock.png" alt="비밀글" class="ico_lock"/>{%/if%}
 				</div>
 				<div class="txtInfo">
 					<ul>

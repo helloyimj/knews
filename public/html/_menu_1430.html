@@ -53,6 +53,7 @@
 
     <!-- 공통 레이아웃 통합 -->
     <script src="../js/layout_common.js"></script>
+    <script src="../js/cms_file.js"></script>
 
     <!-- SNS -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -100,28 +101,11 @@
 
         <article>
           <h3 class="sr-only">개인정보처리방침</h3>
-
-<script>
-function cfd(file,ofile){
-    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
-    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
-    
-    var doc = document.contFileDown;
-    doc.target = "_self";
-    doc.action = "/ajaxa/fileCpnt/cfd.do";
-    doc.submit();
-}
-</script>
-<form id="contFileDown" name="contFileDown" method="POST">
-    <input type="hidden" name="FILE_NM">
-    <input type="hidden" name="FILE_ORG_NM">
-</form>
-
-	<div class="policy">
+<div class="policy">
    <div class="txtContArea">
       <div class="gray_Icon_box">
          <div class="innerBox full">
-            <img src="../type/common/img/kor/etc/info_copyrightPolicy.png" alt="">
+            <img src="../img/kor/etc/info_copyrightPolicy.png" alt="">
             <p class="txt">「해외경제정보드림」은 취급하는 모든 개인정보에 대하여 KOTRA 「개인정보보호법」 등 관련법령을 준수하여 수집·보유 및 처리하고 있으며, <br class="pcBr">정보주체의 개인정보 및 권익을 보호하고 이와 관련한 고충을 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
          </div>
          </div>

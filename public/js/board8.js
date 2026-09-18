@@ -249,31 +249,31 @@ function fn_flagList(){
         			for(var i =0; i < data.list.length; i++){
         				if(data.list[i].UNTY_CNTT_CD =="01"){
         					asiaObj +='<li><span class="inp_c only"><input type="checkbox" class="nation_asia" name="chkNatSn" id="natSn_'+data.list[i].UN_NAT_CD+'" value="'+data.list[i].UN_NAT_CD+'"><label for="natSn_'+data.list[i].UN_NAT_CD+'"><span class="txtHidden">'+data.list[i].UNTY_NAT_NAME+'</span></label></span>';
-        					asiaObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../type/common/img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
+        					asiaObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
         					asiaCnt = asiaCnt + 1;
             			}else if(data.list[i].UNTY_CNTT_CD =="02"){
             				mdestObj +='<li><span class="inp_c only"><input type="checkbox" class="nation_mdest" name="chkNatSn" id="natSn_'+data.list[i].UN_NAT_CD+'" value="'+data.list[i].UN_NAT_CD+'"><label for="natSn_'+data.list[i].UN_NAT_CD+'"><span class="txtHidden">'+data.list[i].UNTY_NAT_NAME+'</span></label></span>';
-            				mdestObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../type/common/img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
+            				mdestObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
             				mdestCnt = mdestCnt + 1;
             			}else if(data.list[i].UNTY_CNTT_CD =="03"){
             				euObj +='<li><span class="inp_c only"><input type="checkbox" class="nation_eu" name="chkNatSn" id="natSn_'+data.list[i].UN_NAT_CD+'" value="'+data.list[i].UN_NAT_CD+'"><label for="natSn_'+data.list[i].UN_NAT_CD+'"><span class="txtHidden">'+data.list[i].UNTY_NAT_NAME+'</span></label></span>';
-            				euObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../type/common/img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
+            				euObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
             				euCnt = euCnt + 1;
             			}else if(data.list[i].UNTY_CNTT_CD =="04"){
             				nthamObj +='<li><span class="inp_c only"><input type="checkbox" class="nation_ntham" name="chkNatSn" id="natSn_'+data.list[i].UN_NAT_CD+'" value="'+data.list[i].UN_NAT_CD+'"><label for="natSn_'+data.list[i].UN_NAT_CD+'"><span class="txtHidden">'+data.list[i].UNTY_NAT_NAME+'</span></label></span>';
-            				nthamObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../type/common/img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
+            				nthamObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
             				nthamCnt = nthamCnt + 1;
             			}else if(data.list[i].UNTY_CNTT_CD =="05"){
             				lamrcObj +='<li><span class="inp_c only"><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_'+data.list[i].UN_NAT_CD+'" value="'+data.list[i].UN_NAT_CD+'"><label for="natSn_'+data.list[i].UN_NAT_CD+'"><span class="txtHidden">'+data.list[i].UNTY_NAT_NAME+'</span></label></span>';
-            				lamrcObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')" value="'+data.list[i].UN_NAT_CD+'"><img src="../type/common/img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
+            				lamrcObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')" value="'+data.list[i].UN_NAT_CD+'"><img src="../img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
             				lamrcCnt = lamrcCnt + 1;
             			}else if(data.list[i].UNTY_CNTT_CD =="06"){
             				afrcaObj +='<li><span class="inp_c only"><input type="checkbox" class="nation_afrca" name="chkNatSn" id="natSn_'+data.list[i].UN_NAT_CD+'" value="'+data.list[i].UN_NAT_CD+'"><label for="natSn_'+data.list[i].UN_NAT_CD+'"><span class="txtHidden">'+data.list[i].UNTY_NAT_NAME+'</span></label></span>';
-            				afrcaObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../type/common/img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
+            				afrcaObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
             				afrcaCnt = afrcaCnt + 1;
             			}else if(data.list[i].UNTY_CNTT_CD =="07"){
             				ocniaObj +='<li><span class="inp_c only"><input type="checkbox" class="nation_ocnia" name="chkNatSn" id="natSn_'+data.list[i].UN_NAT_CD+'" value="'+data.list[i].UN_NAT_CD+'"><label for="natSn_'+data.list[i].UN_NAT_CD+'"><span class="txtHidden">'+data.list[i].UNTY_NAT_NAME+'</span></label></span>';
-            				ocniaObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../type/common/img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
+            				ocniaObj +='<a href="#" onclick="fn_actionNatIemList('+data.list[i].UNTY_CNTT_CD+','+data.list[i].UN_NAT_CD+')"><img src="../img/common/flag/flag_'+data.list[i].ISO_WD2_NAT_CD+'.png" alt=""><span>'+data.list[i].UNTY_NAT_NAME+'</span></a></li>';
             				ocniaCnt = ocniaCnt + 1;
             			}
         			}

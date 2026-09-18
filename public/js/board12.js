@@ -409,7 +409,7 @@ function fn_setAttachList(data) {
                 for (var idx2 = 0; idx2 < attachList.length; idx2++) {
                 	if(attachList[idx2].NTT_ATFILE_IMG_MVP_DC_CN == null || attachList[idx2].NTT_ATFILE_IMG_MVP_DC_CN == '' || attachList[idx2].NTT_ATFILE_IMG_MVP_DC_CN == 'undefined') attachList[idx2].NTT_ATFILE_IMG_MVP_DC_CN = '';
                     obj += '<a href="#;" class="file-download" title="' + attachList[idx2].NTT_ATFILE_IMG_MVP_DC_CN + '"data-atfilesn="'+attachList[idx2].ATFILE_SN+'"data-filename="'+ attachList[idx2].REAL_ATFILE_NAME +'" onclick="fn_fileDown(this);">';
-                    obj += '<img src="../type/common/img/common/file_' + attachList[idx2].ATFILE_EXT_NAME + '.png" class="ico_file' + attachList[idx2].ATFILE_EXT_NAME + '" alt="'+attachList[idx2].NTT_ATFILE_IMG_MVP_DC_CN+'" onError="this.src=\'/type/common/img/common/file_etc.png\'"/>';
+                    obj += '<img src="../img/common/file_' + attachList[idx2].ATFILE_EXT_NAME + '.png" class="ico_file' + attachList[idx2].ATFILE_EXT_NAME + '" alt="'+attachList[idx2].NTT_ATFILE_IMG_MVP_DC_CN+'" onError="this.src=\'/type/common/img/common/file_etc.png\'"/>';
                     obj += '</a>&nbsp;';
                 }
             } else {

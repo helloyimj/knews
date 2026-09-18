@@ -53,6 +53,7 @@
 
     <!-- 공통 레이아웃 통합 -->
     <script src="../js/layout_common.js"></script>
+    <script src="../js/cms_file.js"></script>
 
     <!-- SNS -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -100,24 +101,7 @@
 
         <article>
           <h3 class="sr-only">뷰어다운로드</h3>
-
-<script>
-function cfd(file,ofile){
-    $("#contFileDown").find("input:hidden[name=FILE_NM]").val(file);
-    $("#contFileDown").find("input:hidden[name=FILE_ORG_NM]").val(ofile);
-    
-    var doc = document.contFileDown;
-    doc.target = "_self";
-    doc.action = "/ajaxa/fileCpnt/cfd.do";
-    doc.submit();
-}
-</script>
-<form id="contFileDown" name="contFileDown" method="POST">
-    <input type="hidden" name="FILE_NM">
-    <input type="hidden" name="FILE_ORG_NM">
-</form>
-
-	<div class="system_policy border_vCustom_contBottom">
+<div class="system_policy border_vCustom_contBottom">
    <h3 class="txtHidden">뷰어 다운로드</h3>
    <div class="lineTop_tbArea">
       <table class="lineTop_tb2" style="min-width:600px;">
@@ -140,7 +124,7 @@ function cfd(file,ofile){
                   <p class="txt txtL">한글과컴퓨터 사의 한글 프로그램<br>한글과컴퓨터에서 개발하여 배포하는 한글 전용 뷰어 프로그램으로 프로그램을 다운로드하신 뒤에 실행시키면, 한글 2002에서작성한 문서이든 한글 97에서 작성한 문서이든 상관없이 모든 (*.hwp 파일)의 내용을 확인하거나 인쇄할 수 있습니다.</p>
                </td>
                <td>
-                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_HwpViewer2007.exe', 'HwpViewer2007.exe');"><span><img src="../type/common/img/common/file_hwp.png" alt="한글파일">한글뷰어 2007</span></a>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_HwpViewer2007.exe', 'HwpViewer2007.exe');"><span><img src="../img/common/file_hwp.png" alt="한글파일">한글뷰어 2007</span></a>
                </td>
             </tr>
             <tr>
@@ -153,7 +137,7 @@ function cfd(file,ofile){
                   <p class="txt sDot txtL">프로그램을 다운로드하신 뒤에 실행시키면 설치가 됩니다.</p>
                </td>
                <td>
-                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_AdbeRdr80_ko_KR.exe', 'AdbeRdr80_ko_KR.exe');"><span><img src="../type/common/img/common/file_pdf.png" alt="PDF파일">아크로뱃리더</span></a>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_AdbeRdr80_ko_KR.exe', 'AdbeRdr80_ko_KR.exe');"><span><img src="../img/common/file_pdf.png" alt="PDF파일">아크로뱃리더</span></a>
                </td>
             </tr>
             <tr>
@@ -166,7 +150,7 @@ function cfd(file,ofile){
                   <p class="txt sDot txtL">프로그램을 다운로드하신 뒤에 실행시키면 설치가 됩니다.</p>
                </td>
                <td>
-                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_wdviewer.exe', 'wdviewer.exe');"><span><img src="../type/common/img/common/file_word.png" alt="워드파일">MS 워드뷰어</span></a>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_wdviewer.exe', 'wdviewer.exe');"><span><img src="../img/common/file_word.png" alt="워드파일">MS 워드뷰어</span></a>
                </td>
             </tr>
             <tr>
@@ -179,7 +163,7 @@ function cfd(file,ofile){
                   <p class="txt sDot txtL">프로그램을 다운로드하신 뒤에 실행시키면 설치가 됩니다.</p>
                </td>
                <td>
-                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_xlviewer.exe', 'xlviewer.exe');"><span><img src="../type/common/img/common/file_excel.png" alt="엑셀파일">MS 엑셀뷰어</span></a>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_xlviewer.exe', 'xlviewer.exe');"><span><img src="../img/common/file_excel.png" alt="엑셀파일">MS 엑셀뷰어</span></a>
                </td>
             </tr>
             <tr>
@@ -192,7 +176,7 @@ function cfd(file,ofile){
                   <p class="txt sDot txtL">프로그램을 다운로드하신 뒤에 실행시키면 설치가 됩니다.</p>
                </td>
                <td>
-                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_ppviewer.exe', 'ppviewer.exe');"><span><img src="../type/common/img/common/file_ppt.png" alt="파워포인트파일">파워포인트 뷰어</span></a>
+                  <a href="#none" class="btnC_s lineGray fileIcon" onclick="cfd('3_ppviewer.exe', 'ppviewer.exe');"><span><img src="../img/common/file_ppt.png" alt="파워포인트파일">파워포인트 뷰어</span></a>
                </td>
             </tr>
          </tbody>

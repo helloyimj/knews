@@ -53,6 +53,7 @@
 
     <!-- 공통 레이아웃 통합 -->
     <script src="../js/layout_common.js"></script>
+    <script src="../js/cms_file.js"></script>
 
     <!-- SNS -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -448,7 +449,7 @@ function fn_fileDown(obj){
                 <td class="txtL">
                     <a href="#;" data-source="{%= NTT_SN %}">{%= NTT_SJ %}</a>
 					{%if NEW_YN == 'Y' %}
-						<img src="../type/common/img/common/ico_new.png" alt="NEW" class="ico_new">
+						<img src="../img/common/ico_new.png" alt="NEW" class="ico_new">
                     {%/if%}
                 </td>
                 <td class="atfile_{%= NTT_SN %}">
