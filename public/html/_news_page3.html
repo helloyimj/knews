@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+<title> 진출전략 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+<meta name="description" content="각 나라별 주요 이슈 및 전망, 진출환경 분석, 시장 분석, 시장 진출 전략 등 다양한 자료를 제공합니다." />
+<meta property="og:title" content="진출전략 - KOTRA 해외시장뉴스|해외경제정보드림" />
+<meta property="og:description" content="각 나라별 주요 이슈 및 전망, 진출환경 분석, 시장 분석, 시장 진출 전략 등 다양한 자료를 제공합니다." />
+<meta property="og:type" content="website" />
+
+<meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+    <!-- reset -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <!-- board -->
+    <link rel="stylesheet" type="text/css" href="../css/board.css" />
+    <!-- 개별 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <!-- contents -->
+    <link rel="stylesheet" type="text/css" href="../css/kor.css" />
+    <link rel="stylesheet" type="text/css" href="../css/news.css" />
+    <!-- html 파일 내부 인라인 css 정리 - news.css 와 통합 후 삭제예정 -->
+    <link rel="stylesheet" type="text/css" href="../css/html_css.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- datepicker 새 버전 -->
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/lib/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- 공통 레이아웃 통합 -->
+    <script src="../js/layout_common.js"></script>
+
+    <!-- 상단 필터 -->
+    <script src="../js/filter_board.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- board 추가 -->
+    <!-- 홈 > 상품·산업 > 트렌드 > 게시물 상세 -->
+    <script src="../js/board.js"></script>
+
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색 -->
+    <!-- <form id="searchForm" action="https://dream.kotra.or.kr/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form> -->
+
+    <!-- 헤더 -->
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+    <div id="header"></div>
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <div id="snb_board"></div>
+
+      <div id="contents">
+        <!-- 페이지 SNS 공유 -->
+        <div id="pnb">
+    <div class="pnb_nav">
+        <a href="https://dream.kotra.or.kr/kotranews/index.do" class="btn_home" title="홈 화면 이동" target="_self"><span class="txtHidden">홈</span></a>
+        <ul>
+			
+				<li>
+					<div class="navList">
+			            <div class="menu">
+			                <button type="button" class="btnTit">국가·지역정보</button>
+			                
+			                <ul>
+			                	
+			                		
+				                    	<li><a href="#;" data-menuno="10" title="현재창 이동" target="_self">뉴스</a></li>
+			                		
+			                	
+			                		
+				                    	<li><a href="#;" data-menuno="20" title="현재창 이동" target="_self">상품·산업</a></li>
+			                		
+			                	
+			                		
+				                    	<li><a href="#;" data-menuno="30" title="현재창 이동" target="_self">국가·지역정보</a></li>
+			                		
+			                	
+			                		
+				                    	<li><a href="#;" data-menuno="40" title="현재창 이동" target="_self">보고서</a></li>
+			                		
+			                	
+			                		
+				                    	<li><a href="#;" data-menuno="50" title="현재창 이동" target="_self">멀티미디어뉴스</a></li>
+			                		
+			                	
+			                		
+				                    	<li><a href="#;" data-menuno="60" title="현재창 이동" target="_self">해외투자</a></li>
+			                		
+			                	
+			                		
+			                	
+			                		
+			                	
+			                </ul>
+			                
+			            </div>
+			        </div>
+				</li>
+			
+			
+			
+			            
+        </ul>
+    </div>
+    
+    <div class="pnb_menu">
+    
+        <!-- 메뉴리스트로 있을때 -->
+        <div class="pnbList">
+            <div class="menu">
+                <button type="button" class="btnTit">진출전략</button>
+                
+                <ul>
+                	
+                    <li><a href="#;" data-menuno="220" title="현재창 이동" target="_self">국가지역정보</a></li>
+                	
+                    <li><a href="#;" data-menuno="240" title="현재창 이동" target="_self">북한정보</a></li>
+                	
+                    <li><a href="#;" data-menuno="250" title="현재창 이동" target="_self">진출전략</a></li>
+                	
+                    <li><a href="#;" data-menuno="260" title="현재창 이동" target="_self">출장자료</a></li>
+                	
+                    <li><a href="#;" data-menuno="270" title="현재창 이동" target="_self">무역관뉴스레터</a></li>
+                	
+                </ul>
+                
+            </div>
+<!--             <p class="menu_txt"> -->
+<!--                 <span>메뉴 안내 영역입니다. 한줄을 넘어가지 않는 길이로 요약하여 작성하는 것을 추천합니다.</span> -->
+<!--             </p> -->
+        </div>
+        <!-- //메뉴리스트로 있을때 -->
+    </div>
+
+    <div class="pnb_func">
+    	
+	        <button type="button" class="btn_print" title="프린트">프린트</button>
+	        <button type="button" class="btn_share" title="공유하기">공유</button>
+	    
+        
+        <!-- 공유박스 -->
+        <!-- 2024-06-25 -->
+        <div class="shareBox">
+            <div class="shareBox_wrap">
+                <strong>공유하기</strong>
+                <ul>
+                    <li><a href="javascript:void(0);" class="btn_facebook" onclick="shareSns('facebook');" title="페이스북 공유하기">페이스북</a></li>
+                    <li><a href="javascript:void(0);" class="btn_twitter" onclick="shareSns('twitter');" title="X 공유하기">X</a></li>
+                    <li><a href="javascript:void(0);" id="kakao-link-btn" class="btn_kakaotalk" title="카카오톡 공유하기">카카오톡</a></li>
+                    <li><a href="javascript:void(0);" class="btn_nBlog" onclick="shareSns('blog');" title="네이버블로그 공유하기">네이버블로그</a></li>
+                    <li><a href="javascript:void(0);" class="btn_nBand" onclick="shareSns('band');" title="네이버밴드 공유하기">네이버밴드</a></li>
+                    <li class="etc">
+                        <input type="text" id="copyUrl" title="복사할 URL" />
+                        <button type="button" class="btn_urlCopy">URL 복사</button>
+                    </li>
+                </ul>
+                <button type="button" class="btn_close">닫기</button>
+            </div>
+        </div>
+        <!-- //공유박스 -->
+    </div>
+</div>
+
+        <article>
+          <!-- 페이지 제목 -->
+          <h3 class="sr-only">진출전략</h3>
+<form id="searchForm" action="/kotranews/search.do" method="post">
+	<input type="hidden" name="searchTxt"/>
+	<input type="hidden" name="tDiv" value="ALL"/>
+	<input type="hidden" name="pRetUrl"/>
+</form>
+
+          <!-- 검색 필터 옵션 -->
+          <div class="searchOptBox on">
+    <div class="searchOpt_wrap">
+    <form id="sendForm" method="post">
+		<input type="hidden" name="pageNo" id="pageNo" value=""/>
+		<input type="hidden" name="pagePerCnt" value="10"/>
+		<input type="hidden" name="SITE_NO" value="3"/>
+		<input type="hidden" name="MENU_ID" id="MENU_ID" value="250"/>
+		<input type="hidden" name="CONTENTS_NO" value="1"/>
+		<input type="hidden" name="bbsGbn" value="252"/>
+		<input type="hidden" name="bbsSn" value="252"/>
+		<input type="hidden" name="pNttSn"/>
+		<input type="hidden" name="recordCountPerPage" value=""/>
+		<input type="hidden" name="viewType" value=""/>
+		
+		<!-- 
+		<div class="boxBtn">
+            <button type="button" class="btn_optBoxOpen"><span>검색조건 열기</span></button>
+        </div>		
+		 -->
+
+		<div class="searchOpt">
+			<ul>
+				<li class="L400">
+					<div class="optGrp T3">
+                        <strong class="sort">게시일</strong>
+                        <div class="optSetDate">
+                            <!-- 검색조건-->
+                            <input type="text" class="inp_t" name="pStartDt" id="pStartDt" title="시작 날짜 입력 (YYYY/MM/DD)" value="" readonly/>
+                            <span class="picker_txt">~</span>
+                            <input type="text" class="inp_t" name="pEndDt" id="pEndDt" title="종료 날짜 입력 (YYYY/MM/DD)" value="" readonly/>
+                            <script>
+                            datePickerController.createDatePicker({
+                                formElements:{
+                                    "pStartDt":"%Y/%m/%d"
+                                }
+                            });
+                            datePickerController.createDatePicker({
+                                formElements:{
+                                    "pEndDt":"%Y/%m/%d"
+                                }                    
+                            });
+                            </script>
+                            <!-- //검색조건 -->
+                        </div>
+                    </div>
+                    
+					<div class="optGrp T2">
+						<strong class="sort">검색</strong>
+						<div class="opt">
+<!-- 							<div class="optSet01"> -->
+<!-- 								<select name="sSearchGbn" class="inp_s" title="검색옵션 선택"> -->
+<!-- 									<option value="">전체</option> -->
+<!-- 									<option value="subject">제목</option> -->
+<!-- 									<option value="keyword">키워드</option> -->
+<!-- 								</select> -->
+								<input type="text" name="sSearchVal" class="inp_t" placeholder='검색어를 입력하세요.' title="검색어 입력" onkeypress="if(event.keyCode == 13){fn_linkPage(1);return false;}" />
+<!-- 							</div> -->
+						</div>
+					</div>
+				</li>
+				
+				
+				<li class="searchBaseDN">
+                    <div class="optGrp T2">
+                        <strong class="sort">대륙</strong>
+                        <p class="exclam Orange" style="float: right;">대륙 및 국가목록은 데이터가 존재하는 지역만 표시됩니다.</p>
+                        <div class="opt">
+                            <ul class="radioNcheck" id="regnArea">
+								<li>
+                           			<span class="inp_r">
+                           				<input type="radio" name="pRegnCd" id="regnAll" value="" checked="checked"/>
+                           				<label for="regnAll">전체</label>
+                           			</span>
+                           		</li>
+                           		
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input 
+                            					type="radio" 
+                            					name="pRegnCd" 
+                            					id="regn07" 
+                            					value="07" 
+                            				/>
+                            				<label for="regn07">
+                            					대양주
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input 
+                            					type="radio" 
+                            					name="pRegnCd" 
+                            					id="regn04" 
+                            					value="04" 
+                            				/>
+                            				<label for="regn04">
+                            					북미
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input 
+                            					type="radio" 
+                            					name="pRegnCd" 
+                            					id="regn01" 
+                            					value="01" 
+                            				/>
+                            				<label for="regn01">
+                            					아시아
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input 
+                            					type="radio" 
+                            					name="pRegnCd" 
+                            					id="regn06" 
+                            					value="06" 
+                            				/>
+                            				<label for="regn06">
+                            					아프리카
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input 
+                            					type="radio" 
+                            					name="pRegnCd" 
+                            					id="regn03" 
+                            					value="03" 
+                            				/>
+                            				<label for="regn03">
+                            					유럽
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input 
+                            					type="radio" 
+                            					name="pRegnCd" 
+                            					id="regn98" 
+                            					value="98" 
+                            				/>
+                            				<label for="regn98">
+                            					전세계
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input 
+                            					type="radio" 
+                            					name="pRegnCd" 
+                            					id="regn05" 
+                            					value="05" 
+                            				/>
+                            				<label for="regn05">
+                            					중남미
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            		<li>
+                            			<span class="inp_r">
+                            				<input 
+                            					type="radio" 
+                            					name="pRegnCd" 
+                            					id="regn02" 
+                            					value="02" 
+                            				/>
+                            				<label for="regn02">
+                            					중동
+                            				</label>
+                            			</span>
+                            		</li>
+                            	
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+				<li class="searchBaseDN">
+                    <div class="optGrp T4">
+                        <strong class="sort">국가/지역</strong>
+                        <div class="opt">
+                            <ul class="radioNcheck" id="natArea">
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                
+                <li class="P20 searchBaseDN">
+                    <div class="optGrp T3">
+                        <strong class="sort">무역관</strong>
+                        <div class="opt">
+                            <select class="inp_s" title="무역관 선택" name="pKbcCd" style="width:250px;">
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+            <div class="btn">
+                <a href="#;" class="btnC" onclick="fn_searchReset();"><span>조건 초기화</span></a>
+                <a href="#;" class="btnC Navy btn_search" onclick="fn_linkPage('1');"><span>검색</span></a>
+            </div>
+        </div>
+        <div class="boxBtn">
+            <button type="button" class="btn_optBoxClose seachOptTypeOpen"><span>상세 검색 열기</span></button>
+        </div>
+	</form>
+    </div>
+</div>
+
+          <div id="frameDiv"></div>
+
+          <!-- 게시판 정렬 옵션 -->
+          <!-- <div class="boardOptBox"></div> -->
+          <div class="boardOptBox">
+	<div class="func_list">
+		<p class="listNum">총<b id="rowCount">0</b>건</p>
+		<div class="perPage">			
+				<select class="inp_s" name="viewCnt" title="페이지당 목록 수">
+					<option value="10" >8</option>
+					<option value="20" >16</option>
+					<option value="50" >24</option>
+					<option value="100" >32</option>
+				</select>
+		</div>
+	</div>
+    <div class="func">
+    </div>
+</div>
+
+          <!-- 게시판 영역 -->
+         <div class="board_area">
+	
+		
+	
+	
+	
+		<ul class="thumbList" id="ul"><li class="thumbList__items">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=250&amp;CONTENTS_NO=1&amp;bbsGbn=252&amp;bbsSn=252&amp;pNttSn=237862&amp;recordCountPerPage=8&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;sSearchVal=" data-source="237862">       <div class="thumbList__items-tit">        <img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&amp;natSn=842" alt="2026 미국 진출전략" onerror="$(this).hide();$('#NotNation_237862').show();$('#NotNation_237862').css('display','flex')">        <div id="NotNation_237862" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">2026 미국 진출전략</div>        <div class="thumbList__items-tit--txt">2026 미국 진출전략</div>       </div>       <div class="thumbList__items-info">        <span class="thumbList__items-info--agency">                  워싱턴DC무역관</span>        <span class="thumbList__items-info--date">2025-12-22</span>       </div>      </a>     </li><li class="thumbList__items">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=250&amp;CONTENTS_NO=1&amp;bbsGbn=252&amp;bbsSn=252&amp;pNttSn=237861&amp;recordCountPerPage=8&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;sSearchVal=" data-source="237861">       <div class="thumbList__items-tit">        <img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&amp;natSn=124" alt="2026 캐나다 진출전략" onerror="$(this).hide();$('#NotNation_237861').show();$('#NotNation_237861').css('display','flex')">        <div id="NotNation_237861" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">2026 캐나다 진출전략</div>        <div class="thumbList__items-tit--txt">2026 캐나다 진출전략</div>       </div>       <div class="thumbList__items-info">        <span class="thumbList__items-info--agency">                  토론토무역관</span>        <span class="thumbList__items-info--date">2025-12-22</span>       </div>      </a>     </li><li class="thumbList__items">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=250&amp;CONTENTS_NO=1&amp;bbsGbn=252&amp;bbsSn=252&amp;pNttSn=237860&amp;recordCountPerPage=8&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;sSearchVal=" data-source="237860">       <div class="thumbList__items-tit">        <img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&amp;natSn=158" alt="2026 대만 진출전략" onerror="$(this).hide();$('#NotNation_237860').show();$('#NotNation_237860').css('display','flex')">        <div id="NotNation_237860" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">2026 대만 진출전략</div>        <div class="thumbList__items-tit--txt">2026 대만 진출전략</div>       </div>       <div class="thumbList__items-info">        <span class="thumbList__items-info--agency">                  타이베이무역관</span>        <span class="thumbList__items-info--date">2025-12-22</span>       </div>      </a>     </li><li class="thumbList__items">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=250&amp;CONTENTS_NO=1&amp;bbsGbn=252&amp;bbsSn=252&amp;pNttSn=237859&amp;recordCountPerPage=8&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;sSearchVal=" data-source="237859">       <div class="thumbList__items-tit">        <img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&amp;natSn=276" alt="2026 독일 진출전략" onerror="$(this).hide();$('#NotNation_237859').show();$('#NotNation_237859').css('display','flex')">        <div id="NotNation_237859" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">2026 독일 진출전략</div>        <div class="thumbList__items-tit--txt">2026 독일 진출전략</div>       </div>       <div class="thumbList__items-info">        <span class="thumbList__items-info--agency">                  프랑크푸르트무역관</span>        <span class="thumbList__items-info--date">2025-12-22</span>       </div>      </a>     </li><li class="thumbList__items">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=250&amp;CONTENTS_NO=1&amp;bbsGbn=252&amp;bbsSn=252&amp;pNttSn=237858&amp;recordCountPerPage=8&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;sSearchVal=" data-source="237858">       <div class="thumbList__items-tit">        <img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&amp;natSn=528" alt="2026 네덜란드 진출전략" onerror="$(this).hide();$('#NotNation_237858').show();$('#NotNation_237858').css('display','flex')">        <div id="NotNation_237858" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">2026 네덜란드 진출전략</div>        <div class="thumbList__items-tit--txt">2026 네덜란드 진출전략</div>       </div>       <div class="thumbList__items-info">        <span class="thumbList__items-info--agency">                  암스테르담무역관</span>        <span class="thumbList__items-info--date">2025-12-22</span>       </div>      </a>     </li><li class="thumbList__items">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=250&amp;CONTENTS_NO=1&amp;bbsGbn=252&amp;bbsSn=252&amp;pNttSn=237857&amp;recordCountPerPage=8&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;sSearchVal=" data-source="237857">       <div class="thumbList__items-tit">        <img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&amp;natSn=56" alt="2026 벨기에 진출전략" onerror="$(this).hide();$('#NotNation_237857').show();$('#NotNation_237857').css('display','flex')">        <div id="NotNation_237857" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">2026 벨기에 진출전략</div>        <div class="thumbList__items-tit--txt">2026 벨기에 진출전략</div>       </div>       <div class="thumbList__items-info">        <span class="thumbList__items-info--agency">                  브뤼셀무역관</span>        <span class="thumbList__items-info--date">2025-12-22</span>       </div>      </a>     </li><li class="thumbList__items">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=250&amp;CONTENTS_NO=1&amp;bbsGbn=252&amp;bbsSn=252&amp;pNttSn=237856&amp;recordCountPerPage=8&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;sSearchVal=" data-source="237856">       <div class="thumbList__items-tit">        <img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&amp;natSn=757" alt="2026 스위스 진출전략" onerror="$(this).hide();$('#NotNation_237856').show();$('#NotNation_237856').css('display','flex')">        <div id="NotNation_237856" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">2026 스위스 진출전략</div>        <div class="thumbList__items-tit--txt">2026 스위스 진출전략</div>       </div>       <div class="thumbList__items-info">        <span class="thumbList__items-info--agency">                  취리히무역관</span>        <span class="thumbList__items-info--date">2025-12-22</span>       </div>      </a>     </li><li class="thumbList__items">      <a href="/kotranews/cms/news/actionKotraBoardDetail.do?pageNo=1&amp;pagePerCnt=10&amp;SITE_NO=3&amp;MENU_ID=250&amp;CONTENTS_NO=1&amp;bbsGbn=252&amp;bbsSn=252&amp;pNttSn=237855&amp;recordCountPerPage=8&amp;viewType=&amp;pStartDt=&amp;pEndDt=&amp;sSearchVal=&amp;pRegnCd=&amp;pNatCd=&amp;pKbcCd=&amp;sSearchVal=" data-source="237855">       <div class="thumbList__items-tit">        <img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&amp;natSn=724" alt="2026 스페인 진출전략" onerror="$(this).hide();$('#NotNation_237855').show();$('#NotNation_237855').css('display','flex')">        <div id="NotNation_237855" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">2026 스페인 진출전략</div>        <div class="thumbList__items-tit--txt">2026 스페인 진출전략</div>       </div>       <div class="thumbList__items-info">        <span class="thumbList__items-info--agency">                  마드리드무역관</span>        <span class="thumbList__items-info--date">2025-12-22</span>       </div>      </a>     </li></ul>
+			<script id="noListTemplate" type="text/x-jquery-tmpl">
+           		<tr class="typeNoArticle">
+            		<td colspan="">
+						<p class="no_article">등록된 게시물이 없습니다.</p>
+					</td>
+               	</tr>
+           	</script>
+           	<script id="listTemplate" type="text/x-jquery-tmpl">
+				<li class="thumbList__items">
+					<a href="#" data-source="{%= NTT_SN %}">
+						<div class="thumbList__items-tit">
+							<img class="thumbList__items-tit--flag" src="/ajaxa/fileCpnt/fileView.do?gbn=c02&natSn={%= UN_NAT_CD%}" alt="{%= NTT_SJ%}" onerror="$(this).hide();$('#NotNation_{%= NTT_SN %}').show();$('#NotNation_{%= NTT_SN %}').css('display','flex')">
+							<div id="NotNation_{%= NTT_SN %}" style="width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;">{%= NTT_SJ%}</div>
+							<div class="thumbList__items-tit--txt">{%= NTT_SJ%}</div>
+						</div>
+						<div class="thumbList__items-info">
+							<span class="thumbList__items-info--agency">
+								{%if KBC == null || KBC == '' %} KOTRA{%/if%}
+								{%if KBC != null && KBC != '' %}{%= KBC%}{%/if%}</span>
+							<span class="thumbList__items-info--date">{%= OTHBC_DT_NM%}</span>
+						</div>
+					</a>
+				</li>
+			</script>
+		<div class="pagination">
+
+
+
+<div class="num_paging"><span>Page 1/140</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(140);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
+	
+	
+	<template id="noticeTemplate">
+		<tr class="nttTr">
+			<td class="no">
+				<div class="btnC_s Blue">
+					<span>공지</span>
+				</div>
+			</td>
+			
+			
+			<td class="txtL">
+				<a href="#;" class="subjectTxt"></a>
+			</td>
+						
+			
+			<td>
+				<em class="mSort">국가</em>본사
+			</td>			
+			
+			
+			<td>
+				<em class="mSort">무역관</em>본사
+			</td>			
+						
+				
+			<td class="noticeOthbcDt"><em class="mSort">게시일</em></td>			
+		</tr>
+	</template>
+</div>
+        </article>
+      </div>
+    </div>
+
+    <!-- TOP버튼 -->
+    <!-- <div id="btnTop"></div> -->
+
+    <!-- 푸터 -->
+    <div id="footer"></div>
+  </body>
+</html>

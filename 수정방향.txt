@@ -1,0 +1,7 @@
+js css  저장 폴더 경로 수정, 일원화 ( /common/dream/common 폴더 경로 축소 예정)
+
+js - layout_common.js
+공통레이아웃 렌더 
+
+css
+html 마크업 인라인스타일 속성 삭제 중

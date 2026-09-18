@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.authInfoView .contTit_line:nth-of-type(n+2) {margin-top:65px}
+.authInfoView .lineTop_tbArea {margin-top:35px;}
+.authInfoView .lineTop_tbArea .lineTop_tbL2 th {padding-left:30px;padding-right:10px;text-align:left;}
+.authInfoView .lineTop_tbArea .lineTop_tbL2 td {text-align:left;}
+.authInfoView .lineTop_tbArea .lineTop_tbL2 td .fileI+.fileI {margin-top:10px;}
+.authInfoView .lineTop_tbArea .lineTop_tbL2 td .tit {display:block;margin-bottom:5px;font-weight:500;}
+.authInfoView .lineTop_tbArea .lineTop_tbL2 td .tit:nth-child(n+2) {margin-top:6px;}
+.authInfoView .lineTop_tbArea .lineTop_tbL2 td .exclamTxt {margin:5px 0;}
+.authInfoView .lineTop_tbArea .lineTop_tbL2 td ul+.exclamTxt {padding-left:10px;}
+
+@media all and (max-width:1041px){
+    .fileI {padding-left:23px !important;background-size:auto 17px !important}
+
+    .authInfoView .contTit_line:nth-of-type(n+2) {margin-top:45px}
+    .authInfoView .lineTop_tbArea {margin-top:20px;} 
+    .authInfoView .lineTop_tbArea .lineTop_tbL2 th {padding-left:15px;}
+    .authInfoView .lineTop_tbArea .lineTop_tbL2 colgroup>col:nth-child(1) {width:110px}
+    .authInfoView .lineTop_tbArea .lineTop_tbL2 colgroup>col:nth-child(3) {width:110px}
+    .authInfoView .lineTop_tbArea .lineTop_tbL2 td .tit {margin-bottom:3px;}
+    .authInfoView .lineTop_tbArea .lineTop_tbL2 td .tit:nth-child(n+2) {margin-top:3px;}
+}
+
+@media all and (max-width:768px){
+    .authInfoView .contTit_line:nth-of-type(n+2) {margin-top:30px}
+}
+
+.infoLst{
+	position: relative;
+	display:flex;
+	flex-wrap: wrap;
+	border-top: 1px solid #080808;
+}
+.infoLst::after{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.infoLst dl{
+	display:flex;
+	width:100%;
+}
+
+.infoLst dt ,
+.infoLst dd{
+	float:left;
+	width:50%;
+	border-bottom: 1px solid #d9d9d9;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.infoLst dt{
+	display: table;
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+	border-right: 1px solid #d9d9d9;
+	background-color: #f4f5f7;
+	color: #222;
+}
+
+.infoLst dt span{
+	display: table-row;
+}
+
+.infoLst dt span b{
+	display:table-cell;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+.infoLst dd{
+	padding: 0.5rem;
+}
+
+.infoLst dd a {
+	display: inline-block;
+	padding: 0.25rem 2rem 0.5rem 1rem;
+	border: 1px solid #222;
+	border-radius: 0.25rem;
+	background: url(../img/common/ico_s_link.png) no-repeat right 8px top 40%;
+	line-height: 1;
+}
+
+
+@media all and (min-width:768px){
+	.infoLst dl{
+		width:50%;
+	}
+}
+
+@media all and (min-width:1041px){
+	.infoLst dl{
+		width:calc(100% / 3);
+	}
+}
+
+@media all and (min-width:1420px){
+	.infoLst dl{
+		width:25%;
+	}
+}
