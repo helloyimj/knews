@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>페이지이름 - KOTRA 해외시장뉴스|해외경제정보드림</title>
+
+    <meta property="keywords" content="코트라 해외시장뉴스, KOTRA 해외시장뉴스, 코트라, KOTRA, 글로벌윈도우, globalwindow, 페이지이름" />
+    <meta name="description" content="페이지이름  정보제공합니다." />
+    <meta property="og:title" content="페이지이름 - KOTRA 해외시장뉴스|해외경제정보드림" />
+    <meta property="og:description" content="페이지이름  정보제공합니다." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
+
+    <link rel="shortcut icon" href="../type/common/img/common/favicon_news.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <script src="../js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/lib/jquery.easing.1.3.js"></script>
+
+    <!-- 슬라이더 -->
+    <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
+    <script src="../js/lib/slick/slick.min.js"></script>
+    <script src="../js/lib/slick/slick.acc.js"></script>
+    <script src="../js/lib/sly-master/sly.min.js"></script>
+
+    <!-- 커스텀스크롤 -->
+    <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+    <!-- board -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
+    <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
+    <script src="../js/lib/jquery-ui.min.js"></script>
+    <script src="../js/lib/comm_fr.js"></script>
+    <script src="../js/lib/util.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/lib/clipboard.min.js"></script>
+    <script src="../js/lib/printThis.js"></script>
+    <script src="../js/lib/makePCookie.js"></script>
+    <script src="../js/lib/nlogger.js"></script>
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- datepicker 새 버전 -->
+
+    <!-- 공통 레이아웃 통합 -->
+    <!-- <script src="../js/layout_common.js"></script>   -->
+    <script src="../js/layout_common_header.js"></script>
+
+    <!-- 상단 필터, 게시판 관련 js -->
+    <script src="../js/filter_board.js"></script>
+
+    <!-- 게시판 관련 -->
+    <script src="../js/lib/jspdf.min.js"></script>
+    <script src="../js/lib/html2canvas.min.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
+
+    <!-- SNS -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <!-- logger -->
+    <script src="../js/logger.js"></script>
+
+    <!-- 헤더 수정중 -->
+    <link rel="stylesheet" type="text/css" href="../css/header_top.css" />
+  </head>
+
+  <body class="typeSub">
+    <!-- 스킵 메뉴 -->
+    <div id="skip_menu"></div>
+
+    <!-- 통합검색 -->
+    <!-- <form id="searchForm" action="https://dream.kotra.or.kr/kotranews/search.do" method="post">
+      <input type="hidden" name="searchTxt" />
+      <input type="hidden" name="tDiv" value="ALL" />
+      <input type="hidden" name="pRetUrl" />
+    </form> -->
+
+    <!-- 헤더 -->
+
+
+
+    <header id="header_kotra" class="masthead_kotra">
+      <div class="h-top">
+        <div class="ht-box">
+
+        <div class="left_kotra">
+          <div class="logo_kotra">
+            <a href="javascript:void(0);" target="_blank" aria-label="KOTRA 사이트로 이동 (새 창 열림)">
+              <!-- <img src="https://www.kotra.or.kr/bigdata/resources/images/comm/logo_kotra.png" alt="KOTRA 로고" /> -->
+            </a>
+						<!-- <a class="logo_kotra" href="javascript:void(0);"> 
+              <span class="sr-only">KOTRA 사이트로 이동</span>
+						</a> -->
+					</div>
+
+          <div id="family-site">
+            <!-- <a href="javascript:void(0);" target="_blank">
+              <img src="https://www.kotra.or.kr/bigdata/resources/images/comm/logo_kotra.png" alt="KOTRA" />
+            </a> -->
+            <button type="button" class="btn_more" aria-expanded="false">
+              <span class="sr-only">KOTRA 사이트 더보기</span>
+            </button>
+            		<div class="pop_home">
+                  <ul class="home_box">
+                    <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr" target="_blank" class="family_site01" aria-label="kotra 무역투자24 (새 창 열림)">kotra 무역투자24</a></li>
+                    <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://dream.kotra.or.kr/dream" target="_blank" class="family_site02" aria-label=" (새 창 열림)">해외비즈니스 정보 포털</a></li>
+                    <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.gep.or.kr/" target="_blank" class="family_site03" aria-label=" (새 창 열림)">글로벌 전시포털</a></li>
+                    <li><a href="https://www.kotra.or.kr/gtc_kor" target="_blank" class="family_site04" aria-label=" (새 창 열림)">KOTRA 해외인재유치센터</a></li>
+                    <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.investkorea.org/" target="_blank" class="family_site05" aria-label=" (새 창 열림)">투자유치정보제공</a></li>
+                    <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.buykorea.or.kr/" target="_blank" class="family_site06" aria-label=" (새 창 열림)">수출지원 온라인 플랫폼</a></li>
+                    <li><a href="/bigdata/" target="_blank" class="family_site07">빅데이터 서비스</a></li>
+                    <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://president.globalwindow.org" target="_blank" class="family_site08" aria-label=" (새 창 열림)">경제외교 활용포털</a></li>
+                    <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/kodits" target="_blank" class="family_site09" aria-label=" (새 창 열림)">방산물자교역지원센터</a></li>
+                    <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://ombudsman.kotra.or.kr/ob-kr" target="_blank" class="family_site10" aria-label=" (새 창 열림)">외투기업고충처리</a></li>
+                    <li><a href="https://www.exportvoucher.com" target="_blank" class="family_site11" aria-label="수출바우처 · 지사화 (새 창 열림)">수출바우처 · 지사화</a></li>
+                  </ul>
+                  <button type="button" class="btn_close">닫기</button>
+                </div>
+
+          </div>
+        </div>
+
+        <div class="h-top-links">
+          <ul class="ht-left">
+            <li>
+              <a href="javascript:void(0);">로그아웃</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">홍길동님</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">한국이디에스</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">마이코트라 로고</a>
+            </li>
+          </ul>
+          <ul class="ht-right">
+            <li>
+              <a href="javascript:void(0);">사이트맵</a>
+            </li>
+          </ul>
+      </div>
+
+        </div>
+
+      </div>
+
+	
+    </header>
+    
+      <script>
+        $(function () {
+          $("button.btn_more").click(function () {
+            $("div.pop_home").slideDown();
+          });
+          $("div.pop_home p").hover(function () {
+            $(this).addClass("on").siblings().removeClass("on");
+            // $(this).find('.btn_s').hide();
+            // $(this).find('.btn_o').show();
+          });
+
+          // $('div.pop_home p').mouseout(function(e){
+          // 	$(this).siblings('p').removeClass('on');
+          // 	$(this).siblings('p').find('.btn_o').hide();
+          // 	$(this).siblings('p').find('.btn_s').show();
+          // });
+
+          // $('div.pop_home').hover(function(){
+          // 	var btnOn = $('div.pop_home p.on');
+          // 	btnOn.removeClass('on');
+          // 	if( btnOn ){
+          // 		btnOn.find('.btn_o').hide();
+          // 		btnOn.find('.btn_s').show();
+          // 	}
+          // });
+
+          $("div.pop_home .btn_close").click(function () {
+            var btnOn = $("div.pop_home p.on");
+            btnOn.removeClass("on");
+            if (btnOn) {
+              btnOn.find(".btn_o").hide();
+              btnOn.find(".btn_s").show();
+            }
+            // if (window.innerWidth <= _TABLET_MAX_WIDTH) {
+            //   $("#header").hide();
+            // }
+
+            $("div.pop_home").slideUp();
+          });
+        });
+
+      </script>
+
+
+
+    <div id="dim"></div>
+    <div id="gnb_dim"></div>
+
+    <!-- <div id="header"></div> -->
+
+    <!-- 사이트맵 -->
+    <section class="sitemapBox"></section>
+
+    <!-- container -->
+    <div id="container">
+      <!-- <div id="snb_board"></div>
+      <div id="contents">
+        <div id="pnb"></div>
+        <article>
+          <h3 class="sr-only">페이지 제목</h3>
+          <div class="searchOptBox"></div>
+          <div id="frameDiv"></div>
+          <div class="boardOptBox"></div>
+          <div class="board_area"></div>
+        </article>
+      </div> -->
+    </div>
+
+    <!-- TOP버튼 -->
+    <!-- <div id="btnTop"></div> -->
+
+    <!-- 푸터 -->
+    <div id="footer_kotra">
+      <footer>
+      <div class="mu-footer">
+        <div class="wrapper">
+          <p class="mu-footer-logo"><img src="https://www.kotra.or.kr/bigdata/resources/images/comm/logo_footer.png" alt="Kotra 로고"></p>
+          <div class="mu-footer-info">
+            <ul class="mu-footer-menu">
+              <li><a href="javascript:void(0);" target="_self" title="페이지 이동">이용약관</a></li>
+              <li><a href="javascript:void(0);" target="_self" title="페이지 이동">저작권정책</a></li>
+              <li><a href="javascript:void(0);" target="_self" title="페이지 이동" class="policy">개인정보처리방침</a></li>
+              <li><a href="javascript:void(0);" target="_self" title="페이지 이동">정보공개</a></li>
+              <li><a href="javascript:void(0);" target="_self" title="페이지 이동">사이트맵</a></li>
+              <li><a href="javascript:void(0);" target="_self" title="페이지 이동">관련사이트</a></li>
+            </ul>
+            <ul class="copy">
+              <li>서울시 서초구 헌릉로 13 &nbsp;|&nbsp;
+                  사업자등록번호 : 120-82-00275 &nbsp;|&nbsp;
+                  대표자명 : 강경성 &nbsp; TEL.
+                <span class="desktop-tel">1600-7119</span>
+              </li>
+              <li>
+                <p>COPYRIGHT(c)2023 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</p>
+              </li>
+            </ul>
+<!-- 
+            <ul class="copy">
+              <li>
+                <span>서울시 서초구 헌릉로 13</span>
+                <span>사업자등록번호 : 120-82-00275</span>
+                  <span>
+                    대표자명 : 강경성 &nbsp; TEL.
+                  <em class="desktop-tel">1600-7119</em>
+                  </span>
+              </li>
+              <li>
+                <p>COPYRIGHT(c)2023 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</p>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>

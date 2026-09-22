@@ -2,17 +2,25 @@
 
 /* Reset */
 html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td
-{margin:0;padding:0;color:#0f0f0f;
-    /* font-family:'Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif; */
-    /* 디자인 스타일 가이드 기준 설정 */
+{
+    box-sizing: border-box;
+    margin:0; padding:0;
+    /* font-family:'Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif; */   
+    -webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;
+}
+b, span, strong, input, a, button { color:inherit;font-family:inherit;font-size:inherit;
+// box-sizing: border-box;
+}
+article, aside, dialog, footer, header, section, footer, nav, figure, hgroup, details, summary, figure, figcaption { display:block;}
+cite { display:inline;}
+html, body { height:100%; font-size:16px;  color:#0f0f0f;
+ /* 디자인 스타일 가이드 기준 설정 */
     font-family: 'Roboto', 'Noto Sans KR', sans-serif; 
     /* 접근성 최적화 폰트 설정 (시스템 폴백 폰트 추가 20260916) */
     /* font-family: 'Roboto', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;  */
-    font-size:16px;line-height:1.6;-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;}
-b, span, strong, input, a, button { color:inherit;font-family:inherit;font-size:inherit;}
-article, aside, dialog, footer, header, section, footer, nav, figure, hgroup, details, summary, figure, figcaption { display:block;}
-cite { display:inline;}
-html, body { height:100%;}
+    // line-height:1.6; 
+    line-height:1.5; 
+}
 body { margin:0px;overflow-x:hidden;}
 a:link,
 a:visited { text-decoration:none;}
@@ -34,3 +42,9 @@ textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color:transparen
 input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ color:transparent !important; }
 input:focus:-ms-input-placeholder,
 textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color:transparent !important; }
+
+
+// 추가 20260922
+a, button{
+    display: block;
+}

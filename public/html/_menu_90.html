@@ -104,103 +104,8 @@
 <!-- datepicker -->
 <!-- datepicker -->
 
- 
-
-
-<style>
-.invest_concept .info_imgBox .imgArea {
-    height: 320px;
-    background: url(/type/common/img/common/trdFraudCase.png) no-repeat left 50% top 50%;
-}
-.btn_box.down{
-	letter-spacing: -1px;
-    vertical-align: middle;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
-    font-weight: 500;
-    background: #1c83ee;
-    color: #fff;
-    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
-    box-sizing: border-box;
-    padding: 0 25px;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    height: 30px;
-    border-radius: 20px;
-    font-size: 14px;
-    line-height: 28px;
-    min-width: auto;
-    background-color: #737f8b;
-    text-align: left;
-    margin-left: 10px;
-    top: -2px;
-}
-.btn_box.down:before{
-	display: inline-block;
-    background-image: url(/type/common/img/common/ico_down_white.png);
-    content: '';
-    width: 25px;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: left center;
-    vertical-align: top;
-}
-.btn_box.link{
-    letter-spacing: -1px;
-    vertical-align: middle;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
-    font-weight: 500;
-    background: #1c83ee;
-    color: #222;
-    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
-    box-sizing: border-box;
-    padding: 0 25px;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    height: 30px;
-    border-radius: 20px;
-    font-size: 14px;
-    line-height: 28px;
-    min-width: auto;
-    background-color: #fff;
-    text-align: left;
-    margin-left: 10px;
-    top: -2px;
-}
-.btn_box.link:after{
-	display: inline-block;
-    background-image: url(/type/common/img/common/icon_link_hover_20.png);
-    content: '';
-    width: 25px;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: right center;
-    vertical-align: top;
-}
-.list_lineBlack>li::before {
-	height: 0px;
-}
-.list_lineBlack>li {
-	font-size: 16px;
-    line-height: 1.8em;
-}
-.list_dotBlack>li {
-	font-size: 16px;
-    line-height: 1.8em;
-}
-.info_imgBox .infoArea>strong {
-	margin-bottom: 15px;
-    line-height: 20px;
-}
-</style>
-
-
-
- 
-
-
 <h3 class="sr-only">통상∙규제</h3>
+<div class="searchOptBox on"></div>
 <div class="searchOptBox on" style="margin-bottom: 40px;">
     <div class="searchOpt_wrap">
     <form id="sendForm" method="post">
@@ -532,6 +437,39 @@
 
 
 <div class="num_paging"><span>Page 1/700</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(700);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
+	
+		
+	
+	
+	
+	
+	<template id="noticeTemplate">
+		<tr class="nttTr">
+			<td class="no">
+				<div class="btnC_s Blue">
+					<span>공지</span>
+				</div>
+			</td>
+			
+			
+			<td class="txtL">
+				<a href="#;" class="subjectTxt"></a>
+			</td>
+						
+			
+			<td>
+				<em class="mSort">국가</em>본사
+			</td>			
+			
+			
+			<td>
+				<em class="mSort">무역관</em>본사
+			</td>			
+						
+				
+			<td class="noticeOthbcDt"><em class="mSort">게시일</em></td>			
+		</tr>
+	</template>
 </div>
         </article>
       </div>
