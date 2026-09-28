@@ -147,9 +147,9 @@ $(document).ready(function () {
 //     // 헤더 상단 코트라 공통 TOP
 //   // $('#skip_menu').prepend(`
 //   //  <div class="h-top">
-// 	// 			<div class="ht-box">
+// 	// 			<div class="inner_wrapper">
 // 	// 				<div id="family-site">
-// 	// 					<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/" target="_blank"><img src="/bigdata/resources/images/comm/logo_kotra.png" alt="KOTRA"></a> 
+// 	// 					<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/" target="_blank"><img src="/bigdata/resources/images/comm/masthead_logo.png" alt="KOTRA"></a> 
 // 	// 					<button type="button" class="btn_more">
 // 	// 						<span>사이트 더보기</span>
 // 	// 					</button>
@@ -161,16 +161,16 @@ $(document).ready(function () {
 
 //       <header id="header_top">
 // 			<div class="h-top">
-// 				<div class="ht-box">
+// 				<div class="inner_wrapper">
 // 					<div id="family-site">
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/" target="_blank"><img src="/bigdata/resources/images/comm/logo_kotra.png" alt="KOTRA"></a> 
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/" target="_blank"><img src="/bigdata/resources/images/comm/masthead_logo.png" alt="KOTRA"></a> 
 // 						<button type="button" class="btn_more">
 // 							<span>사이트 더보기</span>
 // 						</button>
 // 					</div>
 					
 // 					<!-- 2024_kotra -->
-// 					<ul class="ht-right">
+// 					<ul class="masthead_utils">
 // 						<li><a href="javascript:void(0);" onclick="login(); return false;">로그인</a></li>
 // 							<li><span>|</span></li>
 // 							<li><a href="https://www.kotra.or.kr/membership/indvdlMberJoinTyChoc.do?siteName=big">회원가입</a></li>
@@ -324,7 +324,7 @@ $(document).ready(function () {
 // // }
 
 //     // $(function() {
-//     //   $('.ht-box .btn_more').click(function(){
+//     //   $('.inner_wrapper .btn_more').click(function(){
 //     //     $('div.pop_home').slideDown();
 //     //   });
 //     //   $('div.pop_home p').hover(function(){

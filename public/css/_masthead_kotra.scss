@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+
+// =========================================================
+// 최 상단 코트라 masthead_kotra
+// =========================================================
+
+
 // =========================================================
 // 변수
 // =========================================================
@@ -7,7 +13,7 @@ $img-path: "https://www.kotra.or.kr/bigdata/resources/images";
 $header-max-width: 1300px;
 
 $c-primary: #0091ff; // header 하단 라인
-$c-top-bg: #004a98; // .h-top / footer 배경
+$c-top-bg: #004a98; // .masthead_wrapper / footer 배경
 $c-top-text: #fff;
 $c-global: #497391;
 $c-login-bg: #003369;
@@ -33,9 +39,9 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
 }
 
 // =========================================================
-// #header
+// masthead_kotra
 // =========================================================
-#header_kotra {
+.masthead_kotra {
   width: 100%;
   position: relative;
   z-index: 1000;
@@ -45,33 +51,30 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
     height: auto;
   }
 
-  // ---------- .h-top ----------
-  .h-top {
+  // ---------- .masthead_wrapper ----------
+  .masthead_wrapper {
     width: 100%;
     height: 45px;
     background-color: $c-top-bg;
     position: relative;
 
     display: flex;
-        align-items: center;
+  align-items: center;
 
-    .ht-box {
+    .masthead_inner_wrapper {
       position: relative;
       margin: 0 auto;
       padding: 0 20px;
       // max-width: $header-max-width;
       width: 1300px;
-
-
       // box-sizing: border-box;
       // @include clearfix;
-
       display: flex;
         align-items: center;
         justify-content: space-between;
 
 
-        .h-top-links {
+        .masthead_links {
           display: flex;
         align-items: center;
         gap: 60px;
@@ -79,8 +82,10 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
         font-size: 14px;
         letter-spacing: -0.4px;
         text-align: left;
+          font-weight: bold;
 
-          .ht-left {
+
+          .masthead_menus {
             display: flex;
             color: #fff;
             gap: 30px;
@@ -88,12 +93,12 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
         }
 
 
-      .left_kotra {
+      .masthead_logo_wrapper {
         display: flex;
         align-items: center;
       }
 
-      .logo_kotra {
+      .masthead_logo {
         a {
           width: 87px;
           height: 23px;
@@ -117,7 +122,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
       }
     }
 
-    .ht-right {
+    .masthead_utils {
       display: flex;
       align-items: center;
       gap: 30px;
@@ -125,9 +130,6 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
       color: #ccc;
       // float: right;
       // height: 45px;
-
-
-   
 
       a.global {
         color: $c-global;
@@ -137,7 +139,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
   }
 
   // ---------- family-site ----------
-  #family-site {
+  .masthead_family {
     // float: left;
     display: flex;
     justify-content: space-between;
@@ -146,7 +148,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
       max-width: 100%;
     }
 
-    .btn_more {
+    .btn_family_more {
       display: inline-block;
       width: 20px;
       height: 20px;
@@ -168,8 +170,8 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
     // padding: 0 20px;
   }
 
-  // ---------- .pop_home (family site 팝업) ----------
-  .pop_home {
+  // ---------- .pop_kotra_family (family site 팝업) ----------
+  .pop_kotra_family {
     display: none;
     position: fixed;
     top: 10px;
@@ -178,7 +180,8 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
     width: 600px;
     margin-left: -500px; // TODO: 중앙 정렬이면 -320px(content-box 기준) 확인 필요
     /* padding: 6px 19px 20px; */
-    padding: 21px 10.5px;
+    /* padding: 21px 10.5px; */
+    padding: 21px;
     border: 1px solid #aaa;
     border-radius: 10px;
     background-color: #fff;
@@ -190,15 +193,18 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
         float: left;
         position: relative;
 
-        margin-left: 10.5px;
-        margin-right: 10.5px;
+        margin-left: 17.5px;
+        margin-right: 17.5px;
+        &:nth-child(-n+2) {
+          margin-top: 6px;
+        }
         &:nth-child(n+3) {
-          margin-top: 30px;
+          margin-top: 22px;
         }
 
         a {
           display: block;
-          width: 257px;
+          width: 240px;
           height: 60px;
           background-position: 0 0;
           background-size: 100%;
@@ -222,7 +228,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
 
             &:hover {
               background-image: url("#{$img-path}/kh/family_site#{$n}_on.png");
-              background-size: 100% 60px;
+              background-size: 100%;
 
             }
           }
@@ -246,107 +252,107 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
 // =========================================================
 // 2024_kotra 공통 컴포넌트 (로그인 상태 / 버튼 / 신호등)
 // =========================================================
-.login-on {
-  padding: 5px 8px 5px 5px;
-  border-radius: 14px;
-  background-color: $c-login-bg;
-  color: #fff !important;
-  box-sizing: border-box;
-  cursor: default;
+// .login-on {
+//   padding: 5px 8px 5px 5px;
+//   border-radius: 14px;
+//   background-color: $c-login-bg;
+//   color: #fff !important;
+//   box-sizing: border-box;
+//   cursor: default;
 
-  .ico-user {
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    margin: -2px 6px 0 0;
-    border-radius: 50%;
-    background: url("#{$img-path}/comm/ico_my.png") no-repeat 0 0 / 100%;
-    vertical-align: middle;
-  }
-}
+//   .ico-user {
+//     display: inline-block;
+//     width: 21px;
+//     height: 21px;
+//     margin: -2px 6px 0 0;
+//     border-radius: 50%;
+//     background: url("#{$img-path}/comm/ico_my.png") no-repeat 0 0 / 100%;
+//     vertical-align: middle;
+//   }
+// }
 
-.btn-color {
-  position: relative;
-  box-sizing: border-box;
-  height: 28px;
-  padding: 5px 12px 5px 6px;
-  border: solid 2px $c-green;
-  border-radius: 14px;
-  background-color: #fff;
-  color: #222 !important;
-  font-weight: bold;
+// .btn-color {
+//   position: relative;
+//   box-sizing: border-box;
+//   height: 28px;
+//   padding: 5px 12px 5px 6px;
+//   border: solid 2px $c-green;
+//   border-radius: 14px;
+//   background-color: #fff;
+//   color: #222 !important;
+//   font-weight: bold;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: 1px;
-    width: 7px;
-    height: 12px;
-    margin-left: 11px;
-    background: url("#{$img-path}/comm/ico_info.svg") no-repeat 0 0;
-  }
-}
+//   &::after {
+//     content: "";
+//     display: inline-block;
+//     position: relative;
+//     top: 1px;
+//     width: 7px;
+//     height: 12px;
+//     margin-left: 11px;
+//     background: url("#{$img-path}/comm/ico_info.svg") no-repeat 0 0;
+//   }
+// }
 
-.ico-round {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin: -2px 13px 0 0;
-  border-radius: 50%;
-  vertical-align: middle;
+// .ico-round {
+//   display: inline-block;
+//   width: 14px;
+//   height: 14px;
+//   margin: -2px 13px 0 0;
+//   border-radius: 50%;
+//   vertical-align: middle;
 
-  @each $name, $from, $to in $status-colors {
-    &.#{$name} {
-      border: solid 2px rgba(255, 255, 255, 0.45);
-      background-image: linear-gradient(to bottom, $from, $to);
-    }
-  }
-}
+//   @each $name, $from, $to in $status-colors {
+//     &.#{$name} {
+//       border: solid 2px rgba(255, 255, 255, 0.45);
+//       background-image: linear-gradient(to bottom, $from, $to);
+//     }
+//   }
+// }
 
-.popup-layer.dim .pop-traffic {
-  width: 345px;
-  height: auto;
-}
+// .popup-layer.dim .pop-traffic {
+//   width: 345px;
+//   height: auto;
+// }
 
-.popup-wrap .desc .traffic-list {
-  display: flex;
-  margin-top: 20px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #222;
+// .popup-wrap .desc .traffic-list {
+//   display: flex;
+//   margin-top: 20px;
+//   font-size: 14px;
+//   font-weight: bold;
+//   color: #222;
 
-  li {
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 1px;
-      height: 26px;
-      margin: -4px 15px 0;
-      background-color: #ddd;
-      vertical-align: middle;
-    }
+//   li {
+//     &::before {
+//       content: "";
+//       display: inline-block;
+//       width: 1px;
+//       height: 26px;
+//       margin: -4px 15px 0;
+//       background-color: #ddd;
+//       vertical-align: middle;
+//     }
 
-    &:first-child::before {
-      content: none;
-    }
-  }
+//     &:first-child::before {
+//       content: none;
+//     }
+//   }
 
-  .ico-round {
-    width: 23px;
-    height: 23px;
-    margin-right: 16px;
-  }
-}
+//   .ico-round {
+//     width: 23px;
+//     height: 23px;
+//     margin-right: 16px;
+//   }
+// }
 
 /* tablet */
 @media screen and (max-width: 1024px) {
-  #header_kotra .pop_home {
+  .masthead_kotra .pop_kotra_family {
     margin-left: 0;
     left: 160px;
   }
 
-  #header_kotra .pop_home {
+  .masthead_kotra .pop_kotra_family {
     overflow-y: auto;
     width: 100%;
     height: 100vh;
@@ -358,7 +364,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
     border-radius: 0;
     //  border: none;
 
-    #header_kotra .pop_home .btn_close {
+    .masthead_kotra .pop_kotra_family .btn_close {
       top: 20px;
       right: 15px;
     }
