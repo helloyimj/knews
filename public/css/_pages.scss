@@ -499,3 +499,16 @@
 .flagList.typeChk>ul>li>a span { display:inline-block;padding-top:7px;font-size:13px;line-height:14px;vertical-align:top;}
 }
 
+
+
+// 202609
+// html 인라인 스타일 css 추가 정리
+
+
+// __news_page3.html
+//국가·지역정보 > 진출전략 게시판 목록
+// .thumbList__items-tit > div:not(.thumbList__items-tit--txt) {
+.thumbList__items-tit > .thumbList__items-tit--flag+div {
+    width: 225px; height: 71px; background: #004a98; color: #fff; margin: 0 auto; padding: 4px; display: none; align-items: center; justify-content: center;
+
+}
