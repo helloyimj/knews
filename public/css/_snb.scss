@@ -41,3 +41,51 @@
         display:none;
     }
 }
+
+@media all and (max-width:1041px){
+
+    /*snb*/
+    #snb,
+    #snb::before,
+    #snb .snb_wrap,
+    #snb .snb_mem>div { height:60px;}
+    #snb::before { left:0;width:100%;margin-left:0;background:#8568ce url(../img/common/m/menuSearch_bg.png) no-repeat right top;background-size:auto 60px;}
+    #snb .snb_wrap { padding:0 15px;}
+    #snb .snb_mem .name { margin-right:5px;font-size:16px;line-height:21px;}
+    #snb .snb_mem .name>em { font-size:12px;}
+    #snb .snb_mem .level { height:15px;padding:0 7px;border-radius:8px;font-size:11px;line-height:15px;}
+    #snb .snb_memInfo { padding:14px 0;}
+    #snb .snb_memInfo>li { height:32px;padding:0 30px;font-size:12px;line-height:16px;text-align:right;}
+    #snb .snb_memInfo>li b { margin:0;font-size:12px;line-height:16px;text-align:left;}
+
+    #snb_board { height:42px;}
+    #snb_board .snb_wrap { height:42px;padding:0 15px;}
+    #snb_board .snb_bookmark { width:100%;max-width:none;height:22px;padding:10px 0;}
+    #snb_board .snb_bookmark .slick-arrow { display:none !important;}
+    #snb_board .snb_bookmark>strong { margin-right:10px;font-size:12px;line-height:22px;}
+    #snb_board .snb_bookmark .list { padding:0;}
+    #snb_board .snb_bookmark .list .unit a { height:21px;font-size:12px;line-height:23px;}
+    #snb_board .snb_nav { display:none;}
+
+    #snb_totalSearch { height:124px;}
+    #snb_totalSearch::before { height:124px;background-position:left center;}
+
+
+}
+
+
+@media all and (max-width:768px){
+
+    /*snb*/
+    #snb,
+    #snb::before,
+    #snb .snb_wrap { height:121px;}
+    #snb { box-sizing:border-box;padding-top:5px;}
+    #snb::before { background-size:auto 121px;}
+    #snb .snb_mem>div { height:50px;}
+    #snb .snb_memInfo { float:none;width:100%;padding-top:10px;border-top:1px solid rgba(255,255,255,0.2);}
+    #snb .snb_memInfo>li { display:block;float:none;width:100%;height:auto;padding:0;border:none !important;}
+    #snb .snb_memInfo>li+li { margin-top:5px;}
+    #snb .snb_memInfo>li b { float:left;width:70px;margin:0;font-size:12px;line-height:16px;text-align:left;}
+
+}

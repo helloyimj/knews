@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/* datepicker */
+/* .date-picker-control:link { margin-top:8px !important;} */
+.date-picker { z-index:1500 !important;}
+.picker_txt { display:inline-block;padding-left:5px;line-height:40px;text-align:center;vertical-align:top;}
+.date-picker .prev-but,
+.date-picker .next-but { font-size:18px !important;}
+.ui-datepicker td a { padding:0 !important;font-size:12px !important;text-align:center !important;letter-spacing:-0.5px !important;}
+
+input.timepicker { padding-right:30px;background:#fff url(../img/common/ico_clock_black.png) no-repeat right 10px top 11px !important;}
+input.inp_t~.timepicker { margin-left:5px;}
+.ui-timepicker-standard a { text-align:left !important;}
+
+.multipickerBox { display:inline-block;position:relative;vertical-align:top;}
+.multipickerBox>input { padding-right:30px;background:#fff url(../js/multidatepicker/datepicker-calendar.png) no-repeat right 10px top 10px !important;cursor:pointer;}
+.multipickerBox .multidatepicker { position:absolute;top:35px;left:0;z-index:5000;box-shadow:0 0 10px -5px #000;}
+.multipickerBox .multidatepicker .btn_close { display:none;}
+.multipickerBox .multidatepicker.hasDatepicker .btn_close { display:block;overflow:hidden;position:absolute;top:0;right:-20px;z-index:5000;box-sizing:border-box;width:21px;height:20px;border:1px solid #c5c5c5;border-left:none;background:#fff url(../js/multidatepicker/datepicker-close.png) no-repeat center;background-size:auto 10px;border-top-right-radius:4px;border-bottom-right-radius:4px;text-indent:-999px;}
+.multipickerBox+.picker_txt { padding-left:0;}
+
+.yearPickerBox  { display:inline-block;position:relative;vertical-align:top;}
+.yearPickerBox >input { padding-right:30px;background:#fff url(../js/multidatepicker/datepicker-calendar.png) no-repeat right 10px top 10px !important;cursor:pointer;}

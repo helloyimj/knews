@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-/* pnb */
+/* pnb 페이지 SNS 공유 */
+
 #pnb { position:relative;z-index:200;box-sizing:border-box;width:100%;min-height:42px;margin-bottom:20px;padding:0 200px 0 0;}
 #pnb .pnb_menu { display:inline-block;vertical-align:top;}
 #pnb .pnb_menu .pnbTit,
@@ -72,3 +73,90 @@
 #pnb .pnb_nav .navList .menu>ul>li { margin-bottom:17px;font-size:0;text-align:left;}
 #pnb .pnb_nav .navList .menu>ul>li>a { display:inline-block;overflow:hidden;color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:19px;font-weight:400;transition:0.2s;vertical-align:top;}
 #pnb .pnb_nav .navList .menu>ul>li>a:hover { color:#4286ea;text-decoration:underline;}
+
+@media all and (max-width:1041px){
+
+    #pnb .pnb_menu { padding-top:4px;}
+    #pnb .pnb_menu .pnbTit,
+    #pnb .pnb_menu .pnbList { position:relative;z-index:10;}
+    #pnb .pnb_menu .pnbList .btnTit { font-size:25px;line-height:35px;}
+    #pnb .pnb_menu .pnbList .menu .btnTit { padding-right:26px;}
+    #pnb .pnb_menu .pnbList .menu .btnTit:before { right:0;width:21px;height:21px;margin-top:-10.5px;background-position:-190px -295px;background-size:350px auto;}
+    #pnb .pnb_menu .pnbList .menu .btnTit:hover:before { background-position:-201px -125px;}
+    #pnb .pnb_menu .pnbList.on .menu .btnTit:before { background-position:-201px -161px;}
+    #pnb .pnb_menu .pnbList .menu_txt>span { height:35px;padding-left:0;font-size:13px;line-height:17px;}
+    #pnb .pnb_menu .pnbList .menu>ul { top:35px;}
+    #pnb .pnb_menu .pnbList .menu>ul { min-width:150px;max-width:310px;padding:12px 10px 3px;}
+    #pnb .pnb_menu .pnbList .menu>ul>li { margin-bottom:9px;}
+    #pnb .pnb_menu .pnbList .menu>ul>li>a { font-size:13px;line-height:17px;}
+    #pnb .pnb_func .shareBox strong { margin-bottom:9px;font-size:13px;line-height:17px;}
+    #pnb .pnb_func .shareBox ul>li>a { min-width:35px;min-height:35px;padding-top:39px;font-size:12px;line-height:16px;}
+    #pnb .pnb_func .shareBox ul>li>a:before { width:35px;height:35px;margin-left:-17.5px;background-position:-7px -5px;background-size:300px auto;}
+    #pnb .pnb_func .shareBox .btn_facebook:before { background-position:-5px -5px;}
+    #pnb .pnb_func .shareBox .btn_twitter:before { background-position:-50px -50px;}
+    #pnb .pnb_func .shareBox .btn_kakaotalk:before { background-position:-50px -5px;}
+    #pnb .pnb_func .shareBox .btn_nBlog:before { background-position:-5px -50px;}
+    /* 2024-06-25 */
+	#pnb .pnb_func .shareBox .btn_nBand:before { background-position:-115px -388px;}
+    #pnb .link img { height:15px;margin-right:0;}
+    #pnb .link .btn_shortcut { padding-right:20px;background-size:auto 15px;}
+
+    #pnb .pnb_nav { margin-right:15px;padding-top:5px;}
+    #pnb .pnb_nav>a { margin-top:8px;}
+    #pnb .pnb_nav>ul>li { padding-left:22px;background-position:left 9px top 11px;}
+    #pnb .pnb_nav>ul>li>span { font-size:15px;line-height:35px;}
+
+    #pnb .pnb_nav .navTit,
+    #pnb .pnb_nav .navList .btnTit { font-size:15px;line-height:35px;}
+    #pnb .pnb_nav .navList .menu>ul { top:35px;}
+    #pnb .pnb_nav .navList .menu>ul { min-width:150px;max-width:310px;padding:12px 10px 3px;}
+    #pnb .pnb_nav .navList .menu>ul>li { margin-bottom:9px;}
+    #pnb .pnb_nav .navList .menu>ul>li>a { font-size:13px;line-height:17px;}
+}
+
+@media all and (max-width:768px){
+
+    /*pnb*/
+    #pnb { margin-bottom:13px;padding:0;}
+    #pnb .pnb_menu { margin-bottom:15px;}
+    #pnb .pnb_menu .pnbList .menu_txt { display:block;width:100% !important;}
+    #pnb .pnb_menu .pnbList .menu_txt>span { display:block;height:auto;}
+    #pnb .pnb_menu .pnbList .menu>ul { z-index:50;}
+    #pnb .pnb_func { position:relative;top:auto;right:auto;width:100%;margin-top:-40px;text-align:right;}
+    #pnb .pnb_func>button { margin:0 5px 0 0;}
+    #pnb .pnb_func>button { width:28px;height:28px;background-size:28px auto;}
+
+    #pnb .pnb_func .btn_print { background-position:-53px -169px;background-size:370px auto;}
+    #pnb .pnb_func .btn_share { background-position:-138px -169px ;background-size:370px auto;}
+    #pnb .pnb_func .btn_bookmark { background-position:-57px -120px ;background-size:370px auto;}
+    #pnb .pnb_func .btn_bookmark.on { background-position:-101px -120px;}
+    #pnb .pnb_func .btn_copy:hover { background-position:-138px -169px ;background-size:370px auto;}
+    #pnb .pnb_func .btn_down:hover { background-position:-138px -169px ;background-size:370px auto;}
+    #pnb .pnb_func .btn_bookmark:hover { background-position:-101px -120px;}
+    #pnb .pnb_func .btn_print:hover { background:url(../img/common/sprite_component.png) no-repeat -116px -206px;}
+    #pnb .pnb_func .btn_share:hover,
+    #pnb .pnb_func .btn_share.on { background-position:-213px -8px;}
+
+    /* 2024-06-25 */
+    #pnb .pnb_func .shareBox { z-index:40;width:360px;}
+    #pnb .pnb_func .shareBox .shareBox_wrap { padding-top:15px;}
+    #pnb .pnb_func .shareBox ul>li { width:auto;}
+    #pnb .pnb_func .shareBox ul>li.etc input { width:calc(100% - 66px);height:25px;font-size:12px;}
+    #pnb .pnb_func .shareBox ul>li.etc .btn_urlCopy { width:66px;height:25px;font-size:12px;line-height:25px;}
+    #pnb .pnb_func .shareBox .btn_close { right:10px;}
+    #pnb .link { display:block;width:160px;}
+
+    #pnb .pnb_nav { display:block;position:relative;z-index:10;padding-top:0;}
+    #pnb .pnb_menu { position:relative;top:9px;padding-top:0;}
+    #pnb .pnb_nav>a { margin-top:9px;}
+    #pnb .pnb_nav>ul>li { padding-left:17px;background-position:left 6px top 12px;background-size:5px auto;}
+    #pnb .pnb_nav>ul>li>span { font-size:14px;line-height:35px;}
+
+    #pnb .pnb_nav .navTit,
+    #pnb .pnb_nav .navList .btnTit { font-size:14px;line-height:35px;}
+
+    #pnb .pnb_nav { overflow:visible;}
+    #pnb .pnb_nav>a { display:inline-block;float:inherit;vertical-align:top;}
+    #pnb .pnb_nav>ul { display:inline-block;float:inherit;vertical-align:top;}
+    
+}

@@ -18,11 +18,26 @@
 @import "form";
 @import "pagination";
 
+// 0929 분리 // public\type\common\css
+@import "input";
+@import "datepicker";
+@import "page_tab"; // 시장뉴스에는 #pageTab, #selectTab_wrap 이 없음 , #contTab_fix은 존재함
+
+// 검색조건
+@import "search_option";
+@import "table_style";
+
+
+
+// 0929 분리 // public\type\common\css
+
+
 @import "top_notice";
 @import "search_filter";
 
 // 기존 css 
 @import "common"; // public\type\common\css
+@import "common_res"; // public\type\common\css
 // @import "common_etc";
 @import "news";
 @import "kor";

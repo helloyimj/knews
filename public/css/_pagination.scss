@@ -28,3 +28,37 @@
 .no_article_box { padding:20px;border:1px solid #e8e8e8;text-align:center;}
 .num_paging {display:block;position:relative;height:40px;margin-bottom:-40px;box-sizing:border-box;padding-top:18px;font-size:0;}
 .num_paging>span {display:inline-block;color:#666;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:19px;vertical-align:top;}
+
+
+@media all and (max-width:1041px){
+
+
+    /* paging */
+    .pagination>button,
+    .pagination>a,
+    .pagination>button>span,
+    .pagination>a>span { width:14px;height:28px;}
+    .pagination .paging { height:28px;}
+    .pagination .paging>li { padding:0 3px;}
+    .pagination .paging>li>button,
+    .pagination .paging>li>a { min-width:28px;height:28px;padding:0 3px;font-size:13px;line-height:28px;}
+
+    .no_article_box { padding:10px 20px;}
+    .no_article { display:block;width:100%;padding:95px 0 33px;background:url(../img/board/ico_noArticle.png) no-repeat 50% 30px;background-size:auto 50px;font-size:15px;line-height:16px;}
+
+}
+
+@media all and (max-width:768px){
+      /* paging */
+    .pagination .paging { width:160px;}
+    .pagination .paging>li { padding:0 1px;}
+    .pagination .paging>li:nth-child(n+6) { display:none;}
+    .pagination+.btnAreaL,
+    .pagination+.btnAreaR,
+    .pagination+.btnAreaC { padding:30px 0 0 !important;text-align:center !important;}
+    .pagination+.btnAreaL>a, .pagination+.btnAreaL>button,
+    .pagination+.btnAreaR>a, .pagination+.btnAreaR>button,
+    .pagination+.btnAreaC>.fL>a,.pagination+.btnAreaC>.fl>button,
+    .pagination+.btnAreaC>.fR>a,.pagination+.btnAreaC>.fR>button { position:relative !important;}
+}
+

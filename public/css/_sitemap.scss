@@ -150,3 +150,26 @@
 .sitemapArea #sitemap a:hover { text-decoration:underline;}
 
 
+@media all and (max-width:1041) {
+    
+    /* 사이트맵 */
+    .sitemapArea { margin-top:0;}
+    .sitemapArea .map_gnb { margin-top:-15px;margin-bottom:15px;}
+    .sitemapArea .map_gnb>li { margin-top:15px;}
+    .sitemapArea .map_gnb>li>a { font-size:22px;}
+    .sitemapArea #sitemap .menuM>li:nth-child(n+5) { margin-top:15px;}
+    .sitemapArea #sitemap .menuM>li>a { margin-bottom:15px;font-size:16px;}
+    .sitemapArea #sitemap .menuS>li>a { margin-bottom:10px;font-size:14px;line-height:17px;}
+    .sitemapArea #sitemap .menuSS>li>a { font-size:13px;line-height:20px;}
+
+}
+
+@media all and (max-width:768px){
+
+
+    /* 사이트맵 */
+    .sitemapArea .map_gnb>li { width:50%;margin-top:0;}
+    .sitemapArea #sitemap .menuM>li { width:50%;}
+    .sitemapArea #sitemap .menuM>li:nth-child(n+3) { margin-top:15px;}
+
+}
