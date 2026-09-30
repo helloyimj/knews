@@ -375,6 +375,7 @@ td .ico_file_avi {margin-right:0px !important;}
     .lineList_tb.noCateg.typeCheckbox tr {padding-top:65px;}
     .lineList_tb.noCateg.typeCheckbox.typeBookMark tr {padding-top:40px;}
     .lineList_tb.noCateg.typeCheckbox td.txtL:not(.navigation) {top:38px;}
+    .lineList_tb.noCateg td.txtL.stamp_list:not(.navigation) { top:5px;left: 25px;}
 }
 @media all and (max-width:560px){
     /*갤러리,동영상*/

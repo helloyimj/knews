@@ -184,6 +184,66 @@
 /* .searchOptBox .inp_t{width: calc(100% - 77px);} */
 .searchOptBox.ele-1 .searchOpt .optGrp>.opt{display: inline-table;}
 
+.searchOptBox .sort.disabled { color:rgba(0,0,0,0.5);}
+.searchOptBox .btn_line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchOptBox .searchOpt > ul > li.trisect { 
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp { 
+    display: flex;
+    align-items: center;
+    width:calc(33.333% - 15px);
+    padding:0;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .sort { 
+    position: relative;
+    top:auto;
+    left:auto;
+    min-width:120px;
+    margin-right:20px;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .sort.required::after { 
+    display: inline-block;
+    width:4px;
+    height:4px;
+    margin-bottom: 5px;
+    margin-left:10px;
+    border-radius:50%;
+    background-color: #ff0000;
+    content:'';
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .optSetDate { 
+    text-align: left;
+    flex-grow: 1;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .search_input_wrap { 
+    position:relative;
+    width:200px;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .search_input_wrap .inp_t { 
+    padding-right: 40px;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .search_input_wrap .btn_sch { 
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:40px;
+    height:40px;
+    background-image: url(../img/common/icon_search03.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .search_input_wrap .btn_sch span { 
+    font-size:0;
+}
+
 
 
 // 드림
@@ -292,6 +352,12 @@
 
     .compare_Btn>span{height:28px;padding-right:17px;background-size:13px auto !important;font-size:13px;line-height:30px;}
 
+    .searchOptBox .searchOpt .searchSite>li { margin-right:25px;}
+    .searchOptBox .searchOpt .optGrp.searchSolo>.sort { width:40px !important;}
+    .searchOptBox .searchOpt>ul>li.selectGrp .selectBox{
+        width: 100%;
+        margin-right: 0;
+    }
 
 }
 
@@ -322,5 +388,59 @@
     .icoLineBox.noArticle p.txt { line-height:26px;text-align:center;}
     .icoLineBox .btn_original { margin-top:0;}
 
+    .searchOptBox .searchOpt>ul>li.selectTriple{
+        flex-wrap: wrap;
+    }
+    .searchOptBox .searchOpt>ul>li.selectTriple .selectGrp{
+        width: 100%;
+    }
 
+}
+
+@media all and (max-width:1150px) {
+.searchOptBox .searchOpt>ul>li.trisect { 
+    flex-direction: column;
+    gap:10px;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp { 
+    width: 100%;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt { 
+    display: inline-table;
+    width: calc(100% - 100px) !important;
+    margin-left: 0 !important;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .inp_t,
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .inp_s,
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .inp_area { 
+    font-size: 13px;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .inp_s,
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .inp_t { 
+    width:100% !important;
+    height: 30px;
+    line-height: 30px;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .search_input_wrap .btn_sch { 
+    width: 30px;
+    height: 30px;
+    background-size: 15px;
+}
+}
+@media all and (max-width:500px) {
+/* 검색옵션 */
+.searchOptBox .inp_r>label, .searchOptBox .inp_r>label { padding-left:23px;}
+.searchOptBox .inp_r>label, .searchOptBox .inp_c>label { padding-left:25px;}
+}
+@media all and (max-width:480px) {
+.searchOptBox .searchOpt>ul>li.trisect .optGrp { 
+    align-items: flex-start;
+    flex-direction: column;
+}
+.searchOptBox .searchOpt>ul>li.trisect .optGrp .opt { 
+    width: 100% !important;
+}
+}
+@media all and (max-width:330px) {
+.searchOptBox .optSetDate .inp_t { width:110px !important;}
 }
