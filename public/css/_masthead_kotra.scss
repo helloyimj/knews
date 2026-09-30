@@ -2,7 +2,7 @@
 
 
 // =========================================================
-// 최 상단 코트라 masthead_kotra
+// 최상단 코트라 masthead_kotra
 // =========================================================
 
 
@@ -11,7 +11,6 @@
 // =========================================================
 $img-path: "https://www.kotra.or.kr/bigdata/resources/images";
 $header-max-width: 1300px;
-
 $c-primary: #0091ff; // header 하단 라인
 $c-top-bg: #004a98; // .masthead_wrapper / footer 배경
 $c-top-text: #fff;
@@ -186,17 +185,17 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
     border-radius: 10px;
     background-color: #fff;
 
-    .home_box {
-      @include clearfix; // 추가: li float 해제 (원본에 없음)
+    .list_kotra_family {
+      @include clearfix; // 추가: li float 해제
 
       li {
         float: left;
         position: relative;
-
         margin-left: 17.5px;
         margin-right: 17.5px;
+
         &:nth-child(-n+2) {
-          margin-top: 6px;
+          margin-top: 10px;
         }
         &:nth-child(n+3) {
           margin-top: 22px;
@@ -345,60 +344,340 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
 //   }
 // }
 
+
+
+
+
+
 /* tablet */
 @media screen and (max-width: 1024px) {
-  .masthead_kotra .pop_kotra_family {
-    margin-left: 0;
-    left: 160px;
-  }
 
-  .masthead_kotra .pop_kotra_family {
-    overflow-y: auto;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    margin-left: 0;
-    padding: 0;
-    padding-top: 25px;
-    border-radius: 0;
-    //  border: none;
+.masthead_kotra {
 
-    .masthead_kotra .pop_kotra_family .btn_close {
-      top: 20px;
-      right: 15px;
-    }
-    .home_box li {
-      float: none;
-      margin-top: 15px;
-      a {
-        width: auto;
-        height: 40px;
-        margin: 0 auto;
-        background-position: center;
+  // ---------- .masthead_wrapper ----------
+  .masthead_wrapper {
+   
+    .masthead_inner_wrapper {
+      width: 100%;
+    
+        .masthead_links {
+        gap: 40px;
 
-        // .family_site01 ~ .family_site11 (off / hover=on)
-        // ↳ 하단에 있던 family_site01~11의 off/on 배경 이미지 CSS는
-        //   이 @for 루프가 이미 동일하게 생성하므로 중복 삭제함
-        @for $i from 1 through 11 {
-          $n: "#{$i}";
-          @if $i < 10 {
-            $n: "0#{$i}";
-          }
-
-          .family_site#{$n} {
-            background-size: auto 35px;
-
-            &:hover {
-              background-size: auto 40px;
-            }
-          }
+          // .masthead_menus {
+          //   gap: 30px;
+          // }
         }
-      }
+
+      // .masthead_logo {
+      //   a {
+      //     width: 70px;
+      //     height: auto;
+      //   }
+      // }
     }
+
+    // .masthead_utils {
+    //   // gap: 30px;
+    // }
   }
+
+  // ---------- family-site ----------
+  // .masthead_family {
+  // }
+
+  // ---------- 로고 ----------
+  // .h-box {
+  //   position: relative;
+  //   margin: 0 auto;
+  // }
+
+  // ---------- .pop_kotra_family (family site 팝업) ----------
+  
+  // .pop_kotra_family {
+  //   overflow-y: auto;
+  //   width: 100%;
+  //   height: 100vh;
+  //   top: 0;
+  //   left: 0;
+  //   margin-left: 0;
+  //   padding: 0;
+  //   padding-top: 25px;
+  //   border-radius: 0;
+  //   //  border: none;
+
+  //   .btn_close {
+  //     top: 20px;
+  //     right: 15px;
+  //   }
+
+  //   .list_kotra_family {
+  //     //  display: flex;
+  //     // flex-direction: column;
+  //     // gap: 15px;
+
+  //      li {
+  //     float: none;
+     
+  //     height: 40px;
+  //     margin-left: 0;
+  //     margin-right: 0;
+  //     margin-top: 15px;
+
+  //     a {
+  //       width: 175px;
+  //       height: 40px;
+  //       margin: 0 auto;
+  //     }
+  //     // .family_site01 ~ .family_site11 (off / hover=on)
+  //     // ↳ 하단에 있던 family_site01~11의 off/on 배경 이미지 CSS는
+  //     //   이 @for 루프가 이미 동일하게 생성하므로 중복 삭제함
+  //     @for $i from 1 through 11 {
+  //       $n: "#{$i}";
+  //       @if $i < 10 {
+  //         $n: "0#{$i}";
+  //       }
+
+  //       .family_site#{$n} {
+  //         background-size: auto 35px;
+
+  //         &:hover {
+  //           background-size: auto 40px;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   }
+
+    
+
+
+  // }
+
+    .pop_kotra_family {
+     margin-left: 0;
+     left: 150px;
+   }
+
+
+}
+
 }
 
 /* mobile */
 @media screen and (max-width: 767px) {
+
+  
+.masthead_kotra {
+
+  // ---------- .masthead_wrapper ----------
+  .masthead_wrapper {
+   
+    .masthead_inner_wrapper {
+      width: 100%;
+    
+        .masthead_links {
+        gap: 30px;
+
+          .masthead_menus {
+            gap: 20px;
+          }
+        }
+
+      .masthead_logo {
+        a {
+          width: 70px;
+        }
+      }
+    }
+
+    .masthead_utils {
+      gap: 20px;
+    }
+  }
+
+  // ---------- family-site ----------
+  // .masthead_family {
+  // }
+
+  // ---------- 로고 ----------
+  // .h-box {
+  //   position: relative;
+  //   margin: 0 auto;
+  // }
+
+  // ---------- .pop_kotra_family (family site 팝업) ----------
+  
+  .pop_kotra_family {
+    width: 100%;    
+    top: 0;
+    left: 0;
+    padding: 20px;
+    border-radius: 0;
+
+    .btn_close {
+      top: 18px;
+    }
+
+    .list_kotra_family {
+      // gap: 15px;
+
+    li {
+      float: none;
+      height: 40px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 10px;
+      
+      &:nth-child(-n+2) {
+        margin-top: 10px;
+      }
+      &:nth-child(n+3) {
+        margin-top: 10px;
+      }
+      
+      &:nth-child(1) {
+        margin-top: 20px;
+      }
+
+      a {
+        width: 175px;
+        height: 40px;
+        margin: 0 auto;
+      }
+      // .family_site01 ~ .family_site11 (off / hover=on)
+      // ↳ 하단에 있던 family_site01~11의 off/on 배경 이미지 CSS는
+      //   이 @for 루프가 이미 동일하게 생성하므로 중복 삭제함
+      @for $i from 1 through 11 {
+        $n: "#{$i}";
+        @if $i < 10 {
+          $n: "0#{$i}";
+        }
+
+        .family_site#{$n} {
+          background-size: auto 35px;
+
+          &:hover {
+            background-size: auto 40px;
+          }
+        }
+      }
+    }
+    }
+
+    
+
+
+  }
+}
+
+
+}
+
+
+/* mobile */
+@media screen and (max-width: 480px) {
+
+
+  .masthead_kotra {
+
+  // ---------- .masthead_wrapper ----------
+  .masthead_wrapper {
+    height: 30px;
+   
+    .masthead_inner_wrapper {
+      width: 100%;
+      padding: 0 12px;
+    
+        .masthead_links {
+         display: none;
+        }
+
+      .masthead_logo {
+        a {
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  // ---------- family-site ----------
+  .masthead_family {
+    .btn_family_more {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  // ---------- 로고 ----------
+  // .h-box {
+  //   position: relative;
+  //   margin: 0 auto;
+  // }
+
+  // ---------- .pop_kotra_family (family site 팝업) ----------
+  
+  // .pop_kotra_family {
+  //   width: 100%;    
+  //   top: 0;
+  //   left: 0;
+  //   padding: 20px;
+  //   border-radius: 0;
+
+  //   .btn_close {
+  //     top: 18px;
+  //   }
+
+  //   .list_kotra_family {
+  //     // gap: 15px;
+
+  //   li {
+  //     float: none;
+  //     height: 40px;
+  //     margin-left: 0;
+  //     margin-right: 0;
+  //     margin-top: 10px;
+      
+  //     &:nth-child(-n+2) {
+  //       margin-top: 10px;
+  //     }
+  //     &:nth-child(n+3) {
+  //       margin-top: 10px;
+  //     }
+      
+  //     &:nth-child(1) {
+  //       margin-top: 20px;
+  //     }
+
+  //     a {
+  //       width: 175px;
+  //       height: 40px;
+  //       margin: 0 auto;
+  //     }
+  //     // .family_site01 ~ .family_site11 (off / hover=on)
+  //     // ↳ 하단에 있던 family_site01~11의 off/on 배경 이미지 CSS는
+  //     //   이 @for 루프가 이미 동일하게 생성하므로 중복 삭제함
+  //     @for $i from 1 through 11 {
+  //       $n: "#{$i}";
+  //       @if $i < 10 {
+  //         $n: "0#{$i}";
+  //       }
+
+  //       .family_site#{$n} {
+  //         background-size: auto 35px;
+
+  //         &:hover {
+  //           background-size: auto 40px;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   }
+
+    
+
+
+  // }
+}
+
+
 }

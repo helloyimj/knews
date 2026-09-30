@@ -48,3 +48,9 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color:transpa
 a, button{
     display: block;
 }
+
+li {
+box-sizing: content-box;
+}
+// div, h1, h2, h3, h4, h5, h6, p, a, button{
+//     box-sizing: border-box;}

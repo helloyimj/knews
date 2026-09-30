@@ -13,8 +13,8 @@
     <meta property="og:description" content="페이지이름  정보제공합니다." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
-    
-    <link rel="shortcut icon" href="../img/common/favicon_news.ico" /> 
+
+    <link rel="shortcut icon" href="../type/common/img/common/favicon_news.ico" />
 
     <link rel="stylesheet" type="text/css" href="../css/total.css" />
 
@@ -31,12 +31,6 @@
     <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
 
-    <!-- datepicker -->
-    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
-    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
-
-    <!-- datepicker 새 버전 -->
-
     <!-- board -->
     <script src="../js/lib/board.js"></script>
     <script src="../js/lib/jquery.form.js"></script>
@@ -47,15 +41,27 @@
     <script src="../js/lib/util.js"></script>
     <script src="../js/lib/jquery.tmpl.js"></script>
     <script src="../js/lib/clipboard.min.js"></script>
-    <script src="../type/admin/js/printThis.js"></script>
+    <script src="../js/lib/printThis.js"></script>
     <script src="../js/lib/makePCookie.js"></script>
     <script src="../js/lib/nlogger.js"></script>
+
+    <!-- datepicker -->
+    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
+
+    <!-- datepicker 새 버전 -->
+
+    <!-- 공통 레이아웃 통합 -->
+    <!-- <script src="../js/layout_common.js"></script>   -->
+    <script src="../js/layout_common_header.js"></script>
+
+    <!-- 상단 필터, 게시판 관련 js -->
+    <script src="../js/filter_board.js"></script>
+
+    <!-- 게시판 관련 -->
     <script src="../js/lib/jspdf.min.js"></script>
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
-
-    <!-- 공통 레이아웃 통합 -->
-    <script src="../js/layout_common.js"></script>
 
     <!-- SNS -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -63,21 +69,11 @@
     <!-- logger -->
     <script src="../js/logger.js"></script>
 
-    <!-- board 추가 -->
-    <!-- 페이지별 게시판 스크립트  인라인 -> 파일로 분리 -->
-    <!-- 기존 게시판 관련 스크립트 통합 -->
-    <!-- <script src="../js/board.js"></script>
-    <script src="../type/news/js/filter_board.js"></script> -->
-
-    <!-- board 추가 정리중 -->
-		<script src="../js/board_list.js"></script>
-		<!-- board 상세 페이지 -->
-		<script src="../js/board_detail.js"></script>
-
+    <!-- 헤더 수정중 -->
+    <link rel="stylesheet" type="text/css" href="../css/header_top.css" />
   </head>
 
   <body class="typeSub">
-    
     <!-- 스킵 메뉴 -->
     <div id="skip_menu"></div>
 
@@ -88,51 +84,56 @@
       <input type="hidden" name="pRetUrl" />
     </form> -->
 
-    <!-- 헤더 -->
-    <div id="dim"></div>
-    <div id="gnb_dim"></div>
+    
+
     <div id="masthead_kotra"></div>
-    <div id="header"></div>
+    <!-- <div id="header"></div> -->
 
     <!-- 사이트맵 -->
-    <section class="sitemapBox"></section>
+    <!-- <section class="sitemapBox"></section> -->
 
     <!-- container -->
     <div id="container">
-
-      <div id="snb_board"></div>
-
+      <!-- <div id="snb_board"></div>
       <div id="contents">
-       
-        <!-- 페이지 SNS 공유 -->
         <div id="pnb"></div>
-
         <article>
-
-          <!-- 페이지 제목 -->
-          <h3 class="sr-only">직원기고</h3>
-
-          <!-- 검색 필터 옵션 -->
+          <h3 class="sr-only">페이지 제목</h3>
           <div class="searchOptBox"></div>
-
           <div id="frameDiv"></div>
-
-          <!-- 게시판 정렬 옵션 -->
           <div class="boardOptBox"></div>
-
-          <!-- 게시판 영역 -->
           <div class="board_area"></div>
-          
         </article>
-
-      </div>
+      </div> -->
     </div>
 
     <!-- TOP버튼 -->
     <!-- <div id="btnTop"></div> -->
 
     <!-- 푸터 -->
-    <div id="footer"></div>
-    
+    <div id="footer_kotra">
+      <footer class="footer_kotra">
+          <div class="footer_kotra_wrapper">
+            <p class="footer_kotra_logo"><img src="https://www.kotra.or.kr/bigdata/resources/images/comm/logo_footer.png" alt="Kotra 로고"></p>
+            <div class="footer_kotra_info">
+              <ul class="footer_list_menu">
+                <li><a href="javascript:void(0);" target="_self" aria-label="이용약관 (페이지 이동)">이용약관</a></li>
+                <li><a href="javascript:void(0);" target="_self" aria-label="저작권정책 (페이지 이동)">저작권정책</a></li>
+                <li><a href="https://www.kotra.or.kr/module/stplatLog/selectPolicyLogList.do?stplatSeq=2000002272" target="_self" aria-label="개인정보처리방침 (페이지 이동)" class="policy">개인정보처리방침</a></li>
+                <li><a href="javascript:void(0);" target="_self" aria-label="정보공개 (페이지 이동)">정보공개</a></li>
+                <li><a href="javascript:void(0);" target="_self" aria-label="사이트맵 (페이지 이동)">사이트맵</a></li>
+                <li><a href="javascript:void(0);" target="_self" aria-label="관련사이트 (페이지 이동)">관련사이트</a></li>
+              </ul>
+              <ul class="footer_list_info">
+                  <li><span>서울시 서초구 헌릉로 13</span></li>
+                  <li><span>사업자등록번호 : 120-82-00275</span></li>
+                  <li><span>대표자명 : 강경성 TEL.</span><span><a href="tel:16007119">1600-7119</a></span></li>
+              </ul>
+              <p class="copyright">COPYRIGHT(c)2023 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</p>
+            </div>
+          </div>
+      </footer>
+    </div>
+
   </body>
 </html>

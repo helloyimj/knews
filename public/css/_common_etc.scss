@@ -1385,10 +1385,7 @@ td .needs { color:#272727;font-weight:bold;}
     .searchOptBox .searchOpt>ul>li { padding:15px 0 5px;}
     .searchOptBox .searchOpt>ul>li.radioGrp .radioGrp__tit,
     .searchOptBox .searchOpt>ul>li.selectGrp .selectGrp__tit,
-    .searchOptBox .searchOpt>ul>li.selectTriple .selectGrp .sort{
-        font-size: 14px;
-        line-height: 30px;
-    }
+    .searchOptBox .searchOpt>ul>li.selectTriple .selectGrp .sort{font-size: 14px;line-height: 30px;}
     .searchOptBox .searchOpt .optGrp { width:100% !important;padding:0;font-size:0;text-align:left;}
     .searchOptBox .searchOpt .optGrp>.sort { display:inline-table;overflow:hidden;position:relative;top:1px;width:100px !important;font-size:13px;line-height:17px;}
     .searchOptBox .searchOpt .optGrp>.opt { display:inline-table;width:calc(100% - 100px) !important;margin-left:0 !important;}
@@ -1407,7 +1404,6 @@ td .needs { color:#272727;font-weight:bold;}
     .searchOptBox .searchOpt>ul>li.typeHalf4 .optGrp+.optGrp { margin-left:0;}
     .searchOptBox .searchOpt>ul>li.typeHalf4 .optGrp+.optGrp .opt select { width:calc(50% - 2.5px) !important;}
     .searchOptBox .searchOpt>ul>li.typeHalf4 .optGrp+.optGrp .opt select+select { margin-left:5px;}
-    
 
     .searchOptBox .searchOpt>ul>li.compare{padding-right:150px;}
     .searchOptBox .searchOpt>ul>li.compare .compare_Btn{top:18px;}

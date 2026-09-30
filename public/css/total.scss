@@ -8,9 +8,10 @@
 
 @import "util";
 @import "header";
+@import "sitemap";
 @import "pnb";
 @import "snb";
-@import "footer";
+// @import "footer";
 @import "layout_frame";
 
 @import "button";
@@ -19,16 +20,19 @@
 
 @import "top_notice";
 @import "search_filter";
-@import "board_common";
-@import "board_list";
-@import "board_detail";
-@import "board_etc";
 
-@import "common_etc";
+// 기존 css 
+@import "common"; // public\type\common\css
+// @import "common_etc";
 @import "news";
 @import "kor";
 @import "html_css";
 
+// 게시판
+@import "board_common";
+@import "board_list";
+@import "board_detail";
+@import "board_etc";
 
 // 20260921
 @import "masthead_kotra";

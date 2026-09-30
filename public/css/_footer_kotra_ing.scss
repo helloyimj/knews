@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+// =========================================================
+// 변수
+// =========================================================
+$img-path:         'https://www.kotra.or.kr/bigdata/resources/images';
+$header-max-width: 1300px;
+
+$c-primary:        #0091ff;   // header 하단 라인
+$c-top-bg:         #004a98;   // .masthead_wrapper / footer 배경
+$c-top-text:       #fff;
+$c-global:         #497391;
+$c-login-bg:       #003369;
+$c-green:          #6dd400;
+
+// 상태 아이콘 (이름, 그라데이션 시작, 끝)
+$status-colors: (
+  (green,  #6dd400, #60c400),
+  (yellow, #ffb900, #ff9600),
+  (red,    #dc0000, #ba0000)
+);
+
+// =========================================================
+// 믹스인
+// =========================================================
+@mixin clearfix {
+  &::after { content: ""; display: block; clear: both; }
+}
+
+@mixin hide-text {
+  text-indent: -9999em;
+  font-size: 0;
+}
+
+
+// =========================================================
+// footer_kotra
+// =========================================================
+.mu-footer {
+  height: 200px;
+  padding: 40px 0 65px;
+  background: $c-top-bg;
+
+  .wrapper {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    @include clearfix;
+    font-weight: bold;
+    /* 자간 (0) */
+      letter-spacing: 0;
+
+      /* 폰트 렌더링 선명하게 (가독성 최적화) */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+
+    // padding: 0 20px;
+  }
+
+  &-logo {
+    float: left;
+    width: 185px;
+    height: 61px;
+
+    img { width: 100%; }
+  }
+
+  &-info {
+    float: right;
+    padding-right: 22px;
+
+    .copy {
+      margin-top: 32.2px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #aaa;
+
+
+      // address, span { display: block; }
+
+      // span {
+      //    &:not(:last-child) {
+      //   margin-right: 45px;
+
+      //   &::after {
+      //     content: "";
+      //     display: block;
+      //     width: 1px;
+      //     height: 13px;
+      //     background-color: #aaa;
+      //     position: absolute;
+      //     top: 50%;
+      //     right: -22.5px;
+      //     transform: translateY(-50%);
+      //   }
+      // }
+      // }
+
+
+    }
+
+    .mark {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 45px;
+      height: 45px;
+    }
+    .desktop-tel { display: inline !important; }
+    .mobile-tel  { display: none !important; }
+  }
+
+  &-menu {
+    // @include clearfix;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    li {
+      // float: left;
+      position: relative;
+      justify-content: right;
+
+      &:not(:last-child) {
+        margin-right: 45px;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 13px;
+          background-color: #aaa;
+          position: absolute;
+          top: 50%;
+          right: -22.5px;
+          transform: translateY(-50%);
+        }
+      }
+
+      a { font-size: 16px; color: #fff; 
+        
+      }
+    }
+
+    .policy { color: #ffeaa1; }
+  }
+}
+
+#footer_kotra footer::after { display: none; }
+
+
+// .customs_report
+// .mu-footer {height: 110px; background: #171C61; color:#FFFFFF;}
+// .mu-footer-logo{float:left;margin-top:30px;}
+// .mu-footer-info{position:relative;float:left; margin-left:50px;}
+// .mu-footer-info .copy {margin-top:10px; font-size:13px;line-height:18px; color:#aaa;}
+// .mu-footer-info .copy address,
+// .mu-footer-info .copy span{display:block}
+// .mu-footer-info .copy address span{display:inline; font-size:13px; }
+// .mu-footer-info .desktop-tel{display:inline !important;}
+// .mu-footer-info .mobile-tel{display:none !important;}
+
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+
+  
+  #footer_kotra {
+    .mu-footer-logo,
+    .none,
+    .mu-footer-info .mark { display: none; }
+
+    .mu-footer-info {
+      float: left;
+      width: 100%;
+      margin: 0;
+
+      .copy {
+        position: relative;
+        top: 0;
+        right: auto;
+        margin: 15px 0 20px;
+        text-align: left;
+      }
+    }
+
+    .mu-footer-menu li {
+      margin: 0 25px 0 0;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+
+        &::after { right: -11px; }
+      }
+
+      &:first-child { margin-left: 0; }
+    }
+
+    .mu-footer-menu .policy { margin-left: 0; }
+  }
+
+
+}
+
+
+/* mobile */
+@media screen and (max-width: 767px) {
+  .mu-footer-info {
+    .desktop-tel { display: none !important; }
+    .mobile-tel  { display: inline !important; }
+  }
+
+// .mu-footer{height:auto}
+.mu-footer-logo,
+.none,
+.mu-footer-info .mark{display:none}
+.mu-footer-info{float:left;width:100%;margin:0;}
+.mu-footer-menu li{margin:0 25px 0 0}
+.mu-footer-menu li:not(:last-child){margin-right:20px;}
+.mu-footer-menu li:not(:last-child):after{right:-11px;}
+.mu-footer-menu li:first-child{margin-left:0}
+.mu-footer-menu .policy{margin-left:0}
+.mu-footer-info .copy{position:relative;top:0;right:auto;margin:15px 0 20px;text-align:left}
+
+}
