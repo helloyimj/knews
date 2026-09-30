@@ -3,16 +3,6 @@
 /***** 공통 *****/
 .board_area {margin:0 auto;}
 
-.btnAreaL {padding:40px 0 55px;font-size:0;text-align:left;}
-.btnAreaC {position:relative;padding:40px 0 55px;font-size:0;text-align:center;}
-.btnAreaR {padding:40px 0 55px;font-size:0;text-align:right;}
-.btnAreaC a+a {margin-left:10px;}
-.btnAreaC>.btnGrp {position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:0;}
-.btnAreaC>.btnGrp a+a {margin-left:5px;}
-.btnAreaC>.btnGrp .radioGrp {display:inline-block;margin-right:8px;vertical-align:top;font-size:0;;}
-.btnAreaC>.btnGrp .radioGrp .sort {display:inline-block;padding-right:15px;vertical-align:top;line-height:40px;font-size:16px;color:#0f0f0f;font-weight:500;}
-.btnAreaC>.btnGrp .radioGrp .inp_r {margin-top:7px;margin-right:10px;}
-
 .txtOpt {font-style:normal;font-size:inherit;font-weight:400 !important;}
 .txtOpt.Red {color:#fe4354;}
 

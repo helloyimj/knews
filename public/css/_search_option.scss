@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-
 /*검색조건*/
+/* 0930: _search_filter.scss 와 동일 본문 + 반응형. filter 파일은 제거함. */
 .searchOptBox { position:relative;margin-bottom:60px;background:#fff;}
 .searchOptBox .searchOpt_wrap { box-sizing:border-box;margin-bottom:22px;padding:0 40px;border-bottom:1px solid #74acff;}
 .searchOptBox .searchOpt { display:block;margin-bottom:25px;padding-top:10px;}
@@ -195,7 +195,10 @@
 .oda-resutl .lineList_tb tbody td{ padding: 0 20px; text-align: right; } 
 .oda-resutl .lineList_tb tbody td:first-of-type{ overflow: visible; text-align: left; white-space: nowrap; } 
 .oda-resutl .lineList_tb tbody td .view_popup{ display: inline-block; width: 24px; height: 24px; margin-left: 10px; background: url(../img/board/icn_scope.png) no-repeat; vertical-align: middle; } 
-.oda-resutl .lineList_tb .typeNoArticle td{ text-align: center; } /* 해외직접투자설계 */ .status-tit{ margin: 130px 0; color: #4286EB; font-size: 34px; line-height: normal; font-weight: 700; font-style: normal; } 
+.oda-resutl .lineList_tb .typeNoArticle td{ text-align: center; }
+
+/* 해외직접투자설계 */
+.status-tit{ margin: 130px 0; color: #4286EB; font-size: 34px; line-height: normal; font-weight: 700; font-style: normal; } 
 .status-tit__sub{ position: relative; margin-bottom: 40px; padding-bottom: 20px; color: #000; font-size: 26px; line-height: normal; font-weight: 700; font-style: normal; } 
 .status-tit__sub::after{ position: absolute; bottom: 0; left: 0; width: 41px; height: 3px; background: linear-gradient(90deg, #8267D1 0%, #4486EA 100%); content: ''; } 
 .status-tbl{ width: 100%; margin-bottom: 130px; overflow-x: auto; } 
@@ -312,8 +315,6 @@
 
     .topSearchOptBox .radioNcheck { text-align:left;}
     .topSearchOptBox .inp_r, .topSearchOptBox .inp_c { margin:3px 0;}
-
-    .sub_util .btnGrp .inp_s { display:block;min-width:243px;margin-right:0;margin-bottom:5px;}
 
     .icoLineBox.noArticle { padding-top:65px;background-position: left 50% top 15px;}
     .icoLineBox .btn_original { margin-right:5px;margin-left:7px;}

@@ -46,6 +46,9 @@
     .no_article_box { padding:10px 20px;}
     .no_article { display:block;width:100%;padding:95px 0 33px;background:url(../img/board/ico_noArticle.png) no-repeat 50% 30px;background-size:auto 50px;font-size:15px;line-height:16px;}
 
+    .num_paging {height:30px;padding-top:8px;}
+    .num_paging>span {font-size:13px;line-height:17px;}
+
 }
 
 @media all and (max-width:768px){

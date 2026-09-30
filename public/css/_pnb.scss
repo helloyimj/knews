@@ -160,3 +160,9 @@
     #pnb .pnb_nav>ul { display:inline-block;float:inherit;vertical-align:top;}
     
 }
+
+@media all and (max-width:360px){
+    #pnb .pnb_nav>ul>li { padding-left:15px;background-position:left 6px top 13px;}
+    #pnb .pnb_nav>ul>li:last-child>span { font-size:13px;letter-spacing:-1px;}
+    #pnb .pnb_nav>a { margin-top:10px;}
+}

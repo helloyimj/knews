@@ -197,6 +197,16 @@
 }
 
 /* button 영역 */
+.btnAreaL {padding:40px 0 55px;font-size:0;text-align:left;}
+.btnAreaC {position:relative;padding:40px 0 55px;font-size:0;text-align:center;}
+.btnAreaR {padding:40px 0 55px;font-size:0;text-align:right;}
+.btnAreaC a+a {margin-left:10px;}
+.btnAreaC>.btnGrp {position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:0;}
+.btnAreaC>.btnGrp a+a {margin-left:5px;}
+.btnAreaC>.btnGrp .radioGrp {display:inline-block;margin-right:8px;vertical-align:top;font-size:0;;}
+.btnAreaC>.btnGrp .radioGrp .sort {display:inline-block;padding-right:15px;vertical-align:top;line-height:40px;font-size:16px;color:#0f0f0f;font-weight:500;}
+.btnAreaC>.btnGrp .radioGrp .inp_r {margin-top:7px;margin-right:10px;}
+
 .btnArea { margin:0 !important;padding:25px 0 0 !important;font-size:0;text-align:center !important;}
 .btnArea a+a,
 .btnArea button+button { margin:0 0 0 10px !important;}
@@ -272,6 +282,14 @@
     .boxS_del .btn_del { top:6px;right:5px;}
 
     .btnArea { padding:12px 0 0 !important;}
+
+    .btnAreaL,
+    .btnAreaC,
+    .btnAreaR {padding:20px 0 30px;}
+    .btnAreaC a+a {margin-left:5px;}
+    .btnAreaC>.btnGrp .radioGrp .inp_r {margin-top:3px;}
+    .btnAreaC>.btnGrp .radioGrp .sort {padding-right:10px;font-size:14px;line-height:30px;}
+    .view_data.multi + .btnAreaC>.btnGrp {position:relative;left:0;right:auto;top:0;margin-top:15px;transform:none;}
     
     .tbArea_btn > a + a { margin-left:5px;}
 
@@ -324,4 +342,11 @@
     .info_bubble ul.list_dotBlack>li { font-size:13px;}
 
     .moreVideoArea .file-download img { height:17px;}
+}
+
+@media all and (max-width:768px){
+    .btnAreaC>.btnGrp {position:inherit;top:0;left:0;right:auto;transform:none;margin-top:15px;}
+    .pagination+.btnAreaL,
+    .pagination+.btnAreaR,
+    .pagination+.btnAreaC {display:block;}
 }

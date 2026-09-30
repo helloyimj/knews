@@ -199,3 +199,212 @@ td .ico_file_avi {margin-right:0px !important;}
 .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtL,
 .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txt_s,
 .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtInfo {width:calc(100% - 258px);}
+
+@media all and (max-width:1480px){
+    /***** 리스트 *****/
+    .lineList_ul.typeGallery .txtInfo ul>li.date {display:block;margin-left:0;margin-top:5px;padding-left:0;}
+    .lineList_ul.typeGallery .txtInfo ul>li.date::before {display:none;}
+    .lineList_ul.typeGallery .txtInfo ul>li:nth-child(3) {display:block;margin-left:0;padding-left:0;margin-top:5px;}
+    .lineList_ul.typeGallery .txtInfo ul>li:nth-child(3):before {display:none;}
+}
+@media all and (max-width:1200px){
+    .lineList_ul .txtInfo ul>li {font-size:14px;}
+}
+@media all and (max-width:1041px){
+    /***** 리스트 *****/
+    /*리스트(항목형/table타입)*/
+    .lineList_tb>table col.date {min-width:80px;}
+    .lineList_tb th {height:40px;font-size:13px;line-height:17px;}
+    .lineList_tb td {font-size:13px;line-height:17px;}
+    .lineList_tb td.txtL a {font-size:14px;line-height:18px;}
+    .lineList_tb td.txtL span {font-size:14px;line-height:18px;}
+    .lineList_tb .txtL .info_comment {font-size:14px;line-height:18px;}
+    .lineList_tb td.txtL .ico_new {height:15px;margin-left:3px;margin-top:-2px;}
+    .lineList_tb td.txtL .ico_reply {height:15px;margin-left:3px;margin-top:-2px;}
+    .lineList_tb td.txtL .ico_comment {height:15px;margin-left:3px;margin-top:-2px;}
+    .lineList_tb td.txtL .ico_lock {height:15px;margin-left:3px;margin-top:-2px;}
+
+    .lineList_tb .typeIco.typeCommen .txtL a {max-width:calc(100% - 120px);}
+    .lineList_tb .typeIco .txtL a,
+    .lineList_tb .typeCommen .txtL a  {max-width:calc(100% - 50px);}
+    .lineList_tb .hasFile {width:22px;background-size:9px auto;background-position:top 0 left 50%;}
+    .lineList_tb .ico_view  {width:22px;background-size:19px auto;background-position:top 0 left 50%;}
+
+    /* file icon */
+    td .ico_file_exel,
+    td .ico_file_excel,
+    td .ico_file_hwp,
+    td .ico_file_pdf,
+    td .ico_file_ppt,
+    td .ico_file_word,
+    td .ico_file_video,
+    td .ico_file_img,
+    td .ico_file_etc,
+    td .ico_file_zip,
+    td .ico_file_xlsx,
+    td .ico_file_xls,
+    td .ico_file_txt,
+    td .ico_file_swf,
+    td .ico_file_svg,
+    td .ico_file_pptx,
+    td .ico_file_png,
+    td .ico_file_mp4,
+    td .ico_file_jpg,
+    td .ico_file_jpeg,
+    td .ico_file_gif,
+    td .ico_file_docx,
+    td .ico_file_doc,
+    td .ico_file_csv,
+    td .ico_file_bmp,
+    td .ico_file_avi {height:17px;margin-right:1px;}
+
+    .lineList_tb tbody td>a+a {margin-left:3px;}
+
+    /*리스트(일반형/ul타입)*/
+    .lineList_ul .txtL>a {font-size:14px;line-height:19px;}
+    .lineList_ul .txt_s {height:34px;font-size:13px;line-height:17px;}
+    .lineList_ul .txtInfo ul>li {margin-left:7px;padding-left:7px;font-size:13px;line-height:17px;}
+    .lineList_ul .txtInfo ul>li::before {height:12px;}
+
+    /*갤러리,동영상*/
+    .lineList_ul.typeGallery>ul {width:calc(100% + 18px);margin-left:-18px;}
+    .lineList_ul.typeGallery>ul>li {margin-bottom:30px;padding-left:18px;}
+    .lineList_ul.typeGallery>ul>li.typeNoArticle {padding-left:18px !important;}
+    .lineList_ul.typeGallery .photo {margin-bottom:7px;}
+    .lineList_ul.typeGallery .mark_noti {display:inline-block;height:20px;margin-bottom:10px;padding:0px 6px;border:1px solid #4286ea;border-radius:15px;box-sizing:border-box;vertical-align:top;font-size:12px;color:#4286ea;text-align:center;line-height:20px;}
+    .lineList_ul.typeGallery .mark_categ {margin-bottom:10px;font-size:13px;line-height:21px;}
+    .lineList_ul.typeGallery .mark_noti+.mark_categ {margin-left:3px;}
+    .lineList_ul.typeGallery .txtL {height:38px;}
+    .lineList_ul.typeGallery .txtL>a {height:38px;}
+    .lineList_ul.typeGallery .txtInfo {padding-top:5px;}
+    .lineList_ul.typeGallery .txtInfo ul>li.date {margin-top:3px;}
+    .lineList_ul.typeGallery .txtInfo ul>li:nth-child(3) {margin-top:3px;}
+    .lineList_ul.typeGallery .txtL .info_comment {margin-top:0;font-size:14px;line-height:18px;}
+    .lineList_ul.typeGallery .txtL .ico_new {height:15px;}
+    .lineList_ul.typeGallery .txtL .ico_lock {height:15px;}
+    .lineList_ul.typeGallery .typeIco .txtL>a {width:calc(100% - 40px);}
+    .lineList_ul.typeGallery .typeCommen .txtL>a {width:calc(100% - 70px);}
+    .lineList_ul .txt_s {margin-top:0;}
+
+    .lineList_ul.typeGalleryList>ul>li {padding-left:70px;}
+    .lineList_ul.typeGalleryList>ul>li .no {width:70px;margin-top:-9px;font-size:13px;line-height:17px;}
+    .lineList_ul.typeGalleryList .photo {margin-right:20px;}
+    .lineList_ul.typeGalleryList .txtL,
+    .lineList_ul.typeGalleryList .txt_s {width:calc(100% - 234px);}
+    .lineList_ul.typeGalleryList .txtInfo {position:absolute;left:290px;bottom:25px;width:100%;}
+    .lineList_ul.typeGalleryList.noNum .txtInfo {left:240px;}
+
+    .lineList_ul.typeGalleryList.typeCheckbox .photo {margin-right:20px;}
+    .lineList_ul.typeGalleryList.typeCheckbox .txtInfo {position:absolute;left:357px;bottom:25px;width:100%;}
+
+    .lineList_ul.typeGallery.typeBookcover>ul {width:calc(100% + 18px);}
+    .lineList_ul.typeGalleryList.typeBookcover .txtL,
+    .lineList_ul.typeGalleryList.typeBookcover .txt_s,
+    .lineList_ul.typeGalleryList.typeBookcover .txtInfo {width:calc(100% - 120px);}
+    .lineList_ul.typeGalleryList.typeBookcover .txtInfo {left:190px}
+    .lineList_ul.typeGallery.typeBookcover .txtL .ico_new {margin:1px 0 0 4px}
+
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtL,
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txt_s,
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtInfo {width:calc(100% - 205px);}
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtInfo {left:255px}
+
+    .lineList_tb.titLine3 td.txtL a {max-height:51px;font-size:14px;}
+}
+@media all and (max-width:768px){
+    /***** 리스트 *****/
+    .lineList_tb tr.typeNoArticle td {height:154px !important;}
+
+    /* 리스트(항목형/table타입) */
+    .lineList_tb>table {display:block;}
+    .lineList_tb>table caption {display:none;}
+    .lineList_tb>table tbody {display:block;}
+    .lineList_tb colgroup,
+    .lineList_tb thead,
+    .lineList_tb td.no {display:none}
+    .lineList_tb tr {display:block;position:relative;padding:65px 0 13px;border-bottom:1px solid #e1e1e1;font-size:0}
+    .lineList_tb td {display:block;width:100%;height:auto;min-height:22px;border:0;text-align:left;}
+    .lineList_tb td .mSort {display:inline-block;margin-right:5px;color:#0f0f0f;font-style:normal;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:13px;font-weight:500;line-height:17px;vertical-align:top;}
+    .lineList_tb td.no {display:none;}
+    .lineList_tb td.categ {position:absolute;left:0;top:13px;}
+    .lineList_tb td.categ .mSort {display:none;}
+    .lineList_tb td.txtL  {position:absolute;left:0;top:38px;}
+    .lineList_tb td.txtL a {font-size:15px;line-height:19px;}
+    .lineList_tb td.txtL span {font-size:15px;line-height:19px;}
+    .lineList_tb.typeSPS>table {min-width:100%;}
+    .lineList_tb.typeSPS .sumTxt {margin-top:5px;max-height:37px;font-size:13px;}
+    .oda-resutl .lineList_tb tbody td{text-align: left;}
+
+    .lineList_tb.typeCheckbox td.checkbox {position:absolute;left:0;top:9px;}
+    .lineList_tb.typeCheckbox td.categ {position:absolute;left:30px;top:13px;}
+
+    .lineList_tb tr.total td {background-color:transparent;font-weight:500;color:#666;}
+
+    /*갤러리,동영상*/
+    .lineList_ul.typeGallery>ul>li {width:33.3%;}
+    .lineList_ul.typeGallery a.btn_play::before {background-size:auto 36px;}
+
+    .lineList_ul.typeGalleryList>ul>li {padding-left:0;}
+    .lineList_ul.typeGalleryList.noNum>ul>li {padding-left:0;}
+    .lineList_ul.typeGalleryList.noNum .txtInfo {left:0;}
+    .lineList_ul.typeGalleryList>ul>li .no {display:none;}
+    .lineList_ul.typeGalleryList .txtL,
+    .lineList_ul.typeGalleryList .txt_s {width:calc(100% - 224px);}
+    .lineList_ul.typeGalleryList .txtInfo {left:220px;}
+    .lineList_ul.typeGalleryList .txtInfo>ul {display:block;}
+    .lineList_ul.typeGalleryList .txtInfo>ul+ul {margin-top:5px;}
+    .lineList_ul.typeGalleryList .txtInfo>ul+ul>li:first-child {margin-left:0;padding-left:0;}
+    .lineList_ul.typeGalleryList .txtInfo>ul+ul>li:first-child::before {display:none;}
+
+    .lineList_ul.typeGalleryList.typeCheckbox>ul>li {padding-left:0;}
+    .lineList_ul.typeGalleryList.typeCheckbox .checkbox {width:60px;}
+    .lineList_ul.typeGalleryList.typeCheckbox .txtL,
+    .lineList_ul.typeGalleryList.typeCheckbox .txt_s  {width:calc(100% - 280px);}
+    .lineList_ul.typeGalleryList.typeCheckbox .txtInfo {left:280px;}
+
+    .lineList_ul.typeGalleryList.typeBookcover .txtInfo {left:120px;}
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtInfo {left:180px;}
+
+    .lineList_tb.titLine3 td.txtL a {max-height:100%;display:block;padding:0;white-space:nowrap;}
+
+    /* 일반 게시판 */
+    .lineList_tb.noCateg tr {padding-top:40px;}
+    .lineList_tb.noCateg .txtL.navigation {position:relative;top:0;}
+    .lineList_tb.noCateg.noTit tr {padding-top:13px;}
+    .lineList_tb.noCateg td.txtL:not(.navigation) {top:12px;}
+    .lineList_tb.noCateg.typeCheckbox tr {padding-top:65px;}
+    .lineList_tb.noCateg.typeCheckbox.typeBookMark tr {padding-top:40px;}
+    .lineList_tb.noCateg.typeCheckbox td.txtL:not(.navigation) {top:38px;}
+}
+@media all and (max-width:560px){
+    /*갤러리,동영상*/
+    .lineList_ul.typeGallery>ul>li {width:50%;}
+
+    .lineList_ul.typeGalleryList>ul>li {height:auto;}
+    .lineList_ul.typeGalleryList .photo {float:none;width:100%;height:auto;margin:0;text-align:center;}
+    .lineList_ul.typeGalleryList .photo img {max-width:210px;}
+    .lineList_ul.typeGalleryList .txtL {width:100%;margin-top:13px;}
+    .lineList_ul.typeGalleryList .txt_s {width:100%;}
+    .lineList_ul.typeGalleryList .txtInfo {position:relative;left:auto;bottom:auto;padding-top:12px}
+    .lineList_ul.typeGalleryList .txtInfo>ul+ul {margin-top:3px;}
+
+    .lineList_ul.typeGalleryList.typeCheckbox>ul>li {height:auto;}
+    .lineList_ul.typeGalleryList.typeCheckbox .photo {float:none;width:100%;height:auto;;text-align:center;}
+    .lineList_ul.typeGalleryList.typeCheckbox .txtL {width:100%;margin-top:13px;}
+    .lineList_ul.typeGalleryList.typeCheckbox .txt_s {width:100%;}
+    .lineList_ul.typeGalleryList.typeCheckbox .txtInfo {position:relative;left:auto;bottom:auto;padding-top:12px}
+    .lineList_ul.typeGalleryList.typeCheckbox .txtInfo>ul+ul {margin-top:3px;}
+    .lineList_ul.typeGalleryList.typeCheckbox .checkbox {position:absolute;left:0;top:20px;float:inherit;width:auto;height:auto;line-height:inherit;text-align:center;}
+
+    .lineList_ul.typeGalleryList.typeBookcover .photo {width:98px;margin:0 auto}
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .photo {width:98px;}
+    .lineList_ul.typeGalleryList.typeBookcover .txtL,
+    .lineList_ul.typeGalleryList.typeBookcover .txt_s,
+    .lineList_ul.typeGalleryList.typeBookcover .txtInfo {width:100%;}
+    .lineList_ul.typeGalleryList.typeBookcover .txtInfo {left:0;}
+
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtL,
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txt_s,
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtInfo {width:100%;}
+    .lineList_ul.typeGalleryList.typeBookcover.typeCheckbox .txtInfo {left:0;}
+}

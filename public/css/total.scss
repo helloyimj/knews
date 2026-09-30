@@ -23,17 +23,13 @@
 @import "datepicker";
 @import "page_tab"; // 시장뉴스에는 #pageTab, #selectTab_wrap 이 없음 , #contTab_fix은 존재함
 
-// 검색조건
+// 검색조건 — _search_filter.scss 는 _search_option.scss 에 통합 (0930)
 @import "search_option";
 @import "table_style";
 
-
-
 // 0929 분리 // public\type\common\css
 
-
 @import "top_notice";
-@import "search_filter";
 
 // 기존 css 
 @import "common"; // public\type\common\css
@@ -48,7 +44,11 @@
 @import "board_list";
 @import "board_detail";
 @import "board_etc";
+@import "pages"; // 페이지 전용(수출파트너, 해외진출기업, 로그인, 에러)
 
 // 20260921
 @import "masthead_kotra";
 @import "footer_kotra";
+
+// dream 분리 — 시장뉴스 html 미사용(마이드림, mbti, ODA, 대시보드 등)
+@import "common_dream";
