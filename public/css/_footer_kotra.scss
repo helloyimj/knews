@@ -3,28 +3,27 @@
 // =========================================================
 // 변수
 // =========================================================
-$img-path:         'https://www.kotra.or.kr/bigdata/resources/images';
+$img-path: "https://www.kotra.or.kr/bigdata/resources/images";
 $header-max-width: 1300px;
-
-$c-primary:        #0091ff;   // header 하단 라인
-$c-top-bg:         #004a98;   // .masthead_wrapper / footer 배경
-$c-top-text:       #fff;
-$c-global:         #497391;
-$c-login-bg:       #003369;
-$c-green:          #6dd400;
+$c-primary: #0091ff; // header 하단 라인
+$c-top-bg: #004a98; // .masthead_wrapper / footer 배경
+$c-top-text: #fff;
+$c-global: #497391;
+$c-login-bg: #003369;
+$c-green: #6dd400;
 
 // 상태 아이콘 (이름, 그라데이션 시작, 끝)
-$status-colors: (
-  (green,  #6dd400, #60c400),
-  (yellow, #ffb900, #ff9600),
-  (red,    #dc0000, #ba0000)
-);
+$status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #dc0000, #ba0000));
 
 // =========================================================
 // 믹스인
 // =========================================================
 @mixin clearfix {
-  &::after { content: ""; display: block; clear: both; }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 @mixin hide-text {
@@ -32,13 +31,12 @@ $status-colors: (
   font-size: 0;
 }
 
-
 // =========================================================
 // footer_kotra
 // =========================================================
 .footer_kotra {
   background: $c-top-bg;
-  
+
   .footer_kotra_wrapper {
     position: relative;
     max-width: 1300px;
@@ -47,12 +45,12 @@ $status-colors: (
     margin: 0 auto;
     @include clearfix;
     font-weight: bold;
-
-    // letter-spacing: 0;
-    //   -webkit-font-smoothing: antialiased;
-    //   -moz-osx-font-smoothing: grayscale;
-    //   text-rendering: optimizeLegibility;
-
+    a, span, .copyright , p, li, ul {
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
   }
 
   &_logo {
@@ -60,28 +58,20 @@ $status-colors: (
     width: 185px;
     height: 61px;
 
-    img { width: 100%; }
+    img {
+      width: 100%;
+    }
   }
 
   &_info {
     float: right;
-    
-    // .mark {
-    //   position: absolute;
-    //   top: 50px;
-    //   right: 0;
-    //   width: 45px;
-    //   height: 45px;
-    // }
-    
   }
 
   .footer_list_menu {
     display: flex;
+    flex-wrap: wrap;
     padding-right: 22px;
-    // align-items: center;
-    // justify-content: right;
-    // @include clearfix;
+    gap: 5px 0;
 
     li {
       // float: left;
@@ -104,305 +94,193 @@ $status-colors: (
         }
       }
 
-      a { font-size: 16px; color: #fff; 
-        
+      a {
+        font-size: 16px;
+        color: #fff;
       }
     }
 
-    .policy { color: #ffeaa1; }
+    .policy {
+      color: #ffeaa1;
+    }
   }
 
-    .footer_list_info {
-      display: flex;
-      gap: 20px;
-      margin-top: 32.2px;
-      font-size: 14px;
-      line-height: 1.4;
-      color: #aaa;
-       li {
-        position: relative;
-        
-        a {
-          display: inline-block;
-        }
+  .footer_list_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 32.2px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #aaa;
+    li {
+      position: relative;
 
-        &::after {
-          content: "";
-          display: block;
-          width: 1px;
-          height: 14px;
-          background-color: #aaa;
-          position: absolute;
-          top: 50%;
-          right: -11px;
-          transform: translateY(-50%);
+      a {
+        display: inline-block;
+      }
 
-        }
-        &:nth-last-of-type(1)::after {
-          display: none;
-        }
-
-       }
-      // address, span { display: block; }
-
-      // span {
-      //    &:not(:last-child) {
-      //   margin-right: 45px;
-
-      //   &::after {
-      //     content: "";
-      //     display: block;
-      //     width: 1px;
-      //     height: 13px;
-      //     background-color: #aaa;
-      //     position: absolute;
-      //     top: 50%;
-      //     right: -22.5px;
-      //     transform: translateY(-50%);
-      //   }
-      // }
-      // }
+      &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 14px;
+        background-color: #aaa;
+        position: absolute;
+        top: 50%;
+        right: -11px;
+        transform: translateY(-50%);
+      }
+      &:nth-last-of-type(1)::after {
+        display: none;
+      }
     }
-    .copyright {
-      font-size: 14px;
-      line-height: 1.4;
-      color: #aaa;
-      font-weight: bold;
-
-      letter-spacing: 0; /* 자간 0 */
-      -webkit-font-smoothing: antialiased; /* 선명하게 (웹 폰트 렌더링 최적화) */
-      -moz-osx-font-smoothing: grayscale;
-
-    }
-
-
-
+  }
+  .copyright {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #aaa;
+    font-weight: bold;
+  }
 }
-
-// #footer_kotra footer::after { display: none; }
-
-
-// .customs_report
-// .footer_kotra {height: 110px; background: #171C61; color:#FFFFFF;}
-// .footer_kotra_logo{float:left;margin-top:30px;}
-// .footer_kotra_info{position:relative;float:left; margin-left:50px;}
-// .footer_kotra_info .copy {margin-top:10px; font-size:13px;line-height:18px; color:#aaa;}
-// .footer_kotra_info .copy address,
-// .footer_kotra_info .copy span{display:block}
-// .footer_kotra_info .copy address span{display:inline; font-size:13px; }
-// .footer_kotra_info .desktop-tel{display:inline !important;}
-// .footer_kotra_info .mobile-tel{display:none !important;}
-
 
 /* tablet */
 @media screen and (max-width: 1400px) {
-
-.footer_kotra {
-  .footer_kotra_wrapper {
-    max-width: unset;
-    width: 100%;
-    padding: 40px 20px 65px;
+  .footer_kotra {
+    .footer_kotra_wrapper {
+      max-width: unset;
+      height: unset;
+      width: 100%;
+      padding: 40px 20px 65px;
+    }
   }
-  }
-
 }
 
-
-
 @media screen and (max-width: 1024px) {
-
   .footer_kotra {
     height: auto;
 
-  &_logo {
-    width: 150px;
-  }
+    &_logo {
+      width: 150px;
+    }
 
-  .footer_list_menu {
-    padding-right: 0;
+    .footer_list_menu {
+      padding-right: 0;
 
-    li {
-      justify-content: right;
-      margin: 0 25px 0 0;
+      li {
+        justify-content: right;
+        margin: 0 25px 0 0;
 
-      &:not(:last-child) {
-      margin-right: 20px;
-        &::after { right: -11px; }
-      }
-      &:first-child { margin-left: 0; }
+        &:not(:last-child) {
+          margin-right: 20px;
 
-      a { font-size: 16px; color: #fff; 
-        
+          &::after {
+            right: -11px;
+          }
+        }
       }
     }
   }
-
-    .footer_list_info {
-      display: flex;
-      gap: 20px;
-      margin-top: 32.2px;
-      font-size: 14px;
-      line-height: 1.4;
-      color: #aaa;
-       li {
-        position: relative;
-        
-        a {
-          display: inline-block;
-        }
-
-        &::after {
-          content: "";
-          display: block;
-          width: 1px;
-          height: 14px;
-          background-color: #aaa;
-          position: absolute;
-          top: 50%;
-          right: -11px;
-          transform: translateY(-50%);
-
-        }
-        &:nth-last-of-type(1)::after {
-          display: none;
-        }
-
-       }
-      // address, span { display: block; }
-
-      // span {
-      //    &:not(:last-child) {
-      //   margin-right: 45px;
-
-      //   &::after {
-      //     content: "";
-      //     display: block;
-      //     width: 1px;
-      //     height: 13px;
-      //     background-color: #aaa;
-      //     position: absolute;
-      //     top: 50%;
-      //     right: -22.5px;
-      //     transform: translateY(-50%);
-      //   }
-      // }
-      // }
-    }
-    
 }
-
-}
-
 
 /* mobile */
 @media screen and (max-width: 767px) {
+  // .footer_kotra_logo {display:none}
 
+  .footer_kotra {
+    .footer_kotra_wrapper {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
 
-// .footer_kotra{height:auto}
-.footer_kotra_logo {display:none}
-
-
-// .footer_kotra_info{float:left;width:100%;margin:0;}
-// .footer_list_menu li{margin:0 25px 0 0}
-// .footer_list_menu li:not(:last-child){margin-right:20px;}
-// .footer_list_menu li:not(:last-child):after{right:-11px;}
-// .footer_list_menu li:first-child{margin-left:0}
-// .footer_kotra_info .copy{position:relative;top:0;right:auto;margin:15px 0 20px;text-align:left}
-
-
- .footer_kotra {
-
-  .footer_kotra_wrapper {
-    padding: 40px 20px;
-  }
-
-  &_info {
-      float: none;
-
-  }
-  &_logo {
-    width: 150px;
-  }
-
-  .footer_list_menu {
-    padding-right: 0;
-
-    li {
-      justify-content: right;
-      margin: 0 25px 0 0;
-
-      &:not(:last-child) {
-      margin-right: 20px;
-        &::after { right: -11px; }
-      }
-      &:first-child { margin-left: 0; }
-
-      a { font-size: 16px; color: #fff; 
-        
+      &::after {
+        display: none;
       }
     }
-  }
+
+    &_info {
+      float: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &_logo {
+      float: none;
+      width: 150px;
+    }
+
+    .footer_list_menu {
+      padding-right: 0;
+
+      li {
+        justify-content: right;
+        margin: 0 25px 0 0;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+          &::after {
+            right: -11px;
+          }
+        }
+      }
+    }
 
     .footer_list_info {
       display: flex;
-      gap: 20px;
-      margin-top: 32.2px;
-      font-size: 14px;
-      line-height: 1.4;
-      color: #aaa;
-       li {
-        position: relative;
-        
-        a {
-          display: inline-block;
-        }
+      gap: 10px 20px;
+      margin-top: 0;
+    }
+  }
+}
 
+@media screen and (max-width: 480px) {
+  .footer_kotra {
+    
+    .footer_kotra_wrapper {
+      padding: 40px 16px;
+    }
+
+    &_info {
+      float: none;
+      gap: 14px;
+    }
+    &_logo {
+      max-width: 30%;
+    }
+
+    .footer_list_menu {
+      padding-right: 0;
+
+      li {
+        justify-content: right;
+        margin: 0 25px 0 0;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+          &::after {
+            right: -11px;
+          }
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .footer_list_info {
+      flex-direction: column;
+      gap: 5px 10px;
+      li {
         &::after {
-          content: "";
-          display: block;
-          width: 1px;
-          height: 14px;
-          background-color: #aaa;
-          position: absolute;
-          top: 50%;
-          right: -11px;
-          transform: translateY(-50%);
-
-        }
-        &:nth-last-of-type(1)::after {
           display: none;
         }
-
-       }
-      // address, span { display: block; }
-
-      // span {
-      //    &:not(:last-child) {
-      //   margin-right: 45px;
-
-      //   &::after {
-      //     content: "";
-      //     display: block;
-      //     width: 1px;
-      //     height: 13px;
-      //     background-color: #aaa;
-      //     position: absolute;
-      //     top: 50%;
-      //     right: -22.5px;
-      //     transform: translateY(-50%);
-      //   }
-      // }
-      // }
+      }
     }
-    
+
+    .copyright {
+      font-size: 12px;
+    }
+  }
 }
-
-
-}
-
-
-
-
-@media screen and (max-width: 767px) {
-
-  
