@@ -57,7 +57,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
     background-color: $c-top-bg;
     position: relative;
 
-    display: flex;
+  display: flex;
   align-items: center;
 
     .masthead_inner_wrapper {
@@ -69,26 +69,28 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
       // box-sizing: border-box;
       // @include clearfix;
       display: flex;
-        align-items: center;
-        justify-content: space-between;
-
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
 
         .masthead_links {
-          display: flex;
+        display: flex;
         align-items: center;
         gap: 60px;
 
         font-size: 14px;
         letter-spacing: -0.4px;
         text-align: left;
-          font-weight: bold;
-
 
           .masthead_menus {
             display: flex;
             color: #fff;
             gap: 30px;
           }
+        }
+
+        .btn_sitemap {
+        font-weight: bold;
         }
 
 
@@ -175,7 +177,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
     position: fixed;
     top: 10px;
     left: 50%;
-    z-index: 200;
+    z-index: 2000;
     width: 600px;
     margin-left: -500px; // TODO: 중앙 정렬이면 -320px(content-box 기준) 확인 필요
     /* padding: 6px 19px 20px; */

@@ -52,7 +52,7 @@
 /* 에러페이지 */
 .conts_error { width:100%;max-width:100%;height:100%;max-height:100%;margin-top:100px;background:#fff;}
 .conts_error.typeFull { position:fixed;top:0;left:0;z-index:9999;margin-top:0;}
-.conts_error .errorBox { position:relative;left:50%;box-sizing:border-box;width:720px;padding-top:140px;background:#fff url(../img/common/ico_errorMark.png) no-repeat 50% 0px;transform:translateX(-50%);}
+.conts_error .errorBox { position:relative;left:50%;box-sizing:border-box;width:720px;padding-top:140px;background:#fff url(../img/common/ico_errorMark.png) no-repeat 50% 0;transform:translateX(-50%);}
 .conts_error.typeFull .errorBox { top:50%;transform:translate(-50%, -50%);}
 .conts_error .errorBox strong { display:block;overflow:hidden;width:80%;margin:0 auto 17px;color:#0f0f0f;font-family:'Noto Sans KR';font-size:30px;line-height:40px;font-weight:400;text-align:center;letter-spacing:-0.2px;}
 .conts_error .errorBox p { display:block;overflow:hidden;width:80%;margin:0 auto 45px;color:#666;font-size:16px;line-height:27px;text-align:center;}
@@ -141,7 +141,7 @@
 .findParter_view .list {display:inline-block;width:100%;border-top:1px solid #000;vertical-align:top;}
 .findParter_view .lineList_ul {border-top:0;}
 .findParter_view .lineList_ul.typeLikeList>ul>li .txtL strong {overflow:visible;white-space:inherit;}
-.findParter_view .lineList_ul.typeLikeList>ul>li {padding:30px 0px;box-sizing:border-box;}
+.findParter_view .lineList_ul.typeLikeList>ul>li {padding:30px 0;box-sizing:border-box;}
 .findParter_view .lineList_ul.typeLikeList>ul>li.status {padding-top:15px;padding-bottom:15px;background:#f5f6f9;text-align:center;font-size:18px;color:#222;}
 .findParter_view .lineList_ul.typeLikeList>ul>li.status p {font-size:18px;}
 .findParter_view .lineList_ul.typeLikeList>ul>li.status p>em {margin-left:5px;font-style:normal;font-weight:700;color:#222;font-size:24px;}
@@ -229,7 +229,7 @@
     .findParter_view .list.multi .iconTop_infoBox {min-height:100%;padding-top:20px;}
 
     .findParter_view p.exclam.Orange br {display:none;}
-    .findParter_view .area>p .tit {top:0px;}
+    .findParter_view .area>p .tit {top:0;}
     .findParter_view .area>p {padding-left:80px;}
 
     .findParter_view .lineList_ul.typeLikeList>ul>li .txt_s{max-height:100%;}
@@ -284,7 +284,10 @@
 .oversea-map__continent{ position: relative; } 
 .oversea-map__continent--radio-btn{ width: 0; height: 0; position: absolute; top:0; left:0; } 
 .oversea-map__continent--label{ display: block; height: 100%; border: 1px solid #d8dde1; background-color: #e1e5e7; background-position-x: 50%; background-size: 100% 200%; /*231111-2 추가 - 지도 이미지 조정*/ cursor: pointer; } 
-.oversea-map__continent--label-img{ width: 100%; height: 100%; float: left; } 
+.oversea-map__continent--label-img{ width: 100%; height: 100%; float: left; }
+@supports (object-fit: cover) {
+.oversea-map__continent--label-img{ object-fit: cover; }
+} 
 .oversea-map__continent--radio-btn:checked ~ .oversea-map__continent--label{ position: relative; z-index: 1; border-color: #4286eb; background-repeat: no-repeat; background-position-y: 100%; } 
 .oversea-map__continent--label-txt{ position: absolute; z-index: 2; font-size: 15px; letter-spacing: -0.25px; color: #222; } 
 .oversea-map__continent--label-txt em{ font-size: 23px; font-style: normal; line-height: 121%; color: #000; } 
@@ -351,7 +354,7 @@
 @media all and (max-width:768px){ 
 .oversea-map__continent{ width: 50%; } 
 .oversea-map__north-america, .oversea-map__asia, .oversea-map__middle-east, .oversea-map__oceania, .oversea-map__europe, .oversea-map__south-america, .oversea-map__africa{ height: 200px; } 
-.oversea-map__continent--label-img{ object-fit: cover; } 
+.oversea-map__continent--label-img{ width: 100%; height: 100%; } 
 .sch-opt__cnts.detail{ padding-bottom: 10px; } 
 .sch-opt__cnts.detail dl{ display: block; } 
 .sch-opt__cnts.detail dl dt{ width: 110px; } 
@@ -393,25 +396,48 @@
         margin-bottom: 25px;
     }    
 }
-/*인증기관 추가 20251111*/ .organWrap {display:flex;column-gap: 20px;} 
-.organ-item { border: 1px solid #ddd; border-radius: 8px; background: #fff; text-align: center; min-width: 350px; } 
+/*인증기관 추가 20251111*/
+.organWrap { display: block; font-size: 0; }
+.organ-item { display: inline-block; vertical-align: top; margin-right: 20px; border: 1px solid #ddd; border-radius: 8px; background: #fff; text-align: center; min-width: 350px; font-size: 16px; }
+@supports (display: flex) {
+.organWrap { display: flex; font-size: inherit; }
+.organ-item { display: block; font-size: inherit; }
+}
+@supports (column-gap: 20px) {
+.organWrap { column-gap: 20px; }
+.organ-item { margin-right: 0; }
+}
 .organ-logo{ display:block; margin: 20px 5px; } 
 .organ-logo img { height: 32px; vertical-align: middle; } 
 .organ-name { font-weight: bold; margin-top: 8px; } 
 .organ-link{ display:block; margin: 20px 5px 10px 5px; } 
-.organ-info  {width: 100%;} 
-.organ-info-list{ list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); /* 두 컬럼: 레이블+값 블록을 2개씩 배치 */ gap: var(--gap); align-items: stretch; max-width: 900px; } /* 각 셀(원래 테이블의 td 하나)을 li로 표현 */ .organ-info-item{ display: grid; grid-template-columns: 1fr 2fr; /* 레이블:값 비율 */ gap: 8px; align-items: center; border: 1px solid var(--border); border-radius: var(--radius); padding: 0px; background: white; min-height: 40px; box-sizing: border-box; } 
-.organ-info-label{ font-size: 0.92rem; background: var(--label-bg); color: var(--label-color); padding: 6px 8px; border-radius: 6px; display: inline-block; text-align: left; white-space: nowrap; } 
-.organ-info-value{ font-size: 0.95rem; word-break: break-word; text-align: left; } 
+.organ-info { width: 100%; }
+.organ-info-list{ list-style: none; margin: 0; padding: 0; overflow: hidden; max-width: 900px; }
+.organ-info-item{ float: left; width: 48%; margin: 0 4% 12px 0; border: 1px solid #ddd; border-radius: 8px; padding: 0; background: #fff; min-height: 40px; box-sizing: border-box; }
+.organ-info-item:nth-child(2n){ margin-right: 0; }
+.organ-info-label{ display: inline-block; width: 32%; vertical-align: middle; font-size: 15px; background: #f4f5f7; color: #222; padding: 6px 8px; border-radius: 6px; text-align: left; white-space: nowrap; }
+.organ-info-value{ display: inline-block; width: 62%; vertical-align: middle; font-size: 15px; word-break: break-word; text-align: left; }
+@supports (display: grid) {
+.organ-info-list{ display: grid; overflow: visible; grid-template-columns: repeat(2, 1fr); gap: 12px; align-items: stretch; }
+.organ-info-item{ display: grid; float: none; width: auto; margin: 0; grid-template-columns: 1fr 2fr; gap: 8px; align-items: center; }
+.organ-info-label,
+.organ-info-value{ display: block; width: auto; }
+}
 .organ-info-value a{ text-decoration: none; color: inherit; } 
 
 @media (max-width:780px){ 
-.organWrap{flex-direction:column} 
+.organWrap{ flex-direction: column; }
+.organ-item { margin-right: 0; margin-bottom: 20px; }
+@supports (row-gap: 20px) {
+.organWrap { row-gap: 20px; }
+.organ-item { margin-bottom: 0; }
+}
 .organ-info{margin-top: 20px;} 
 } 
 
 @media (max-width:480px){ 
-.organ-info-list{ grid-template-columns: repeat(1, 1fr); } 
+.organ-info-list{ grid-template-columns: repeat(1, 1fr); }
+.organ-info-item{ float: none; width: 100%; margin-right: 0; }
 }
 
 /* ============================================================ */
@@ -420,7 +446,7 @@
 /* 국기리스트 */
 .flagList .flagTit { display:block;width:100%;height:60px;margin-top:50px;background:#2d4054;color:#fff;font-size:18px;line-height:60px;font-weight:500;text-align:center;}
 .flagList .flagTit .inp_c { display:inline-block;margin-right:5px;vertical-align:middle;}
-.flagList .flagTit:nth-of-type(1) { margin-top:0px;}
+.flagList .flagTit:nth-of-type(1) { margin-top:0;}
 .flagList>ul { box-sizing:border-box;padding:60px 40px;border:1px solid #ddd;border-top:0;font-size:0;}
 .flagList>ul>li { display:inline-block;position:relative;box-sizing:border-box;width:16.666%;vertical-align:top;}
 .flagList>ul>li a { display:block;}

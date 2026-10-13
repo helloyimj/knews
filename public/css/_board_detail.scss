@@ -6,7 +6,7 @@
 /* .lineList_v.noSpacing dt {padding-left:0;padding-right:0;padding-top:0;} */
 /* .lineList_v.noSpacing dd {padding-left:0;padding-right:0;} */
 .lineList_v.typeNoLine {border-top:0;}
-.lineList_v dt {padding:29px 0px 22px 45px;border-bottom:1px solid #e2e2e2;} /* 2024-08-06 수정 */
+.lineList_v dt {padding:29px 0 22px 45px;border-bottom:1px solid #e2e2e2;} /* 2024-08-06 수정 */
 .lineList_v dd {padding:29px 50px 60px;}
 .lineList_v+.btnAreaC {border-top:1px solid #e2e2e2} /* 첨부파일 */ .lineList_v+.addFile { display: flex; position: relative; margin-top: 20px; border:1px solid #e0e1e3; } 
 .lineList_v+.addFile::before { content: ''; position: absolute; top:-20px; width: 100%; height: 1px; border-top:1px solid #e0e1e3 } 
@@ -167,7 +167,7 @@
 .board_area .photoSliderArea .photoSlider .unit {position:relative;width:211px;height:149px;margin-right:15px;}
 .board_area .photoSliderArea .photoSlider .unit>a {display:block;width:100%;height:100%;}
 .board_area .photoSliderArea .photoSlider .unit img {position:absolute;left:50%;top:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%, -50%)}
-.board_area .photoSliderArea .photoSlider .slick-arrow {position:absolute;display:block;width:50px;height:50px;background:#fff;border-radius:50%;background-repeat:no-repeat;background-position:50% 50%;font-size:1px;text-indent:-9999px;z-index:10;box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.15);}
+.board_area .photoSliderArea .photoSlider .slick-arrow {position:absolute;display:block;width:50px;height:50px;background:#fff;border-radius:50%;background-repeat:no-repeat;background-position:50% 50%;font-size:1px;text-indent:-9999px;z-index:10;box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.15);}
 .board_area .photoSliderArea .photoSlider .slick-prev {left:-25px;top:50px;background:#fff url(../img/common/sprite_component.png) no-repeat  -156px -130px;}
 .board_area .photoSliderArea .photoSlider .slick-next {right:-25px;top:50px;background:#fff url(../img/common/sprite_component.png) no-repeat  -410px 5px;}
 
@@ -290,7 +290,7 @@ dd .add_openNoti {width:100%;margin-left:0px;}
 .typePhotoView .view_txt .photo_txt {margin-top:25px;line-height:1.9em;font-size:18px;color:#333;}
 .typePhotoView .photoSoloSlider {position:relative;;margin:0 auto;max-width:800px;;}
 .typePhotoView .photoSoloSlider .unit img {display:block;margin:0 auto;width:100%;max-height:500px;}
-.typePhotoView .photoSoloSlider .slick-arrow {position:absolute;top:50%;margin-top:-40px;display:block;width:80px;height:80px;border-radius:50%;background-repeat:no-repeat;background-color:#fcfcfc;box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.15);font-size:1px;text-indent:-999px;overflow:hidden;z-index:1;}
+.typePhotoView .photoSoloSlider .slick-arrow {position:absolute;top:50%;margin-top:-40px;display:block;width:80px;height:80px;border-radius:50%;background-repeat:no-repeat;background-color:#fcfcfc;box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.15);font-size:1px;text-indent:-999px;overflow:hidden;z-index:1;}
 .typePhotoView .photoSoloSlider .slick-prev {left:-40px;background-image:url(../img/board/btn_slickPhoto_arrL.png);background-position:left 30px top 50%;}
 .typePhotoView .photoSoloSlider .slick-next {right:-40px;background-image:url(../img/board/btn_slickPhoto_arrR.png);background-position:right 30px top 50%;}
 .typePhotoView .photoSoloSlider .slick-dots {margin-top:20px;text-align:center;}
@@ -344,7 +344,7 @@ dd .add_openNoti {width:100%;margin-left:0px;}
 .replyArea .write .addInfo>span:nth-child(n+2):before {content:'';display:block;position:absolute;left:0;top:7px;width:1px;height:11px;background:#d9d9d9;}
 .replyArea .write .addInfo .part  {color:#4286ea;}
 .replyArea .list {margin-top:-10px;border-bottom:1px solid #e6e6e6;}
-.replyArea .list li {position:relative;padding:25px 0px}
+.replyArea .list li {position:relative;padding:25px 0}
 .replyArea .list li+li {border-top:1px solid #e6e6e6;}
 .replyArea .list>li .txtInfo {position:relative;overflow:hidden;margin-bottom:10px;font-size:0;}
 .replyArea .list>li .txtInfo>span {position:relative;display:inline-block;margin-right:10px;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:14px;line-height:26px;vertical-align:top;color:#888}

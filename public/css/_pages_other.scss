@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+// 임시 html 인라인 소스코드 분리 (__news_page4~12, 15)
+
+/* 보고서형(typeBookcover) 표지 썸네일 — 구 인라인 style="height: 368px;" */
+.lineList_ul.typeGallery.typeBookcover .photo img {height:368px;}
+/* 보고서 유형(RPT_TY_CD) — 구 인라인 style="color:blue; font-size:15px" */
+.lineList_ul.typeGallery.typeBookcover .txtL>a:first-child {color:blue;font-size:15px;}
+
+/* 검색 안내 — 구 인라인 style="float:right" */
+.searchOpt p.exclam.Orange {float:right;}
+
+/* 검색 셀렉트 폭 — 구 인라인 width:250px / 200px / 80px */
+.searchOpt select[name="pKbcCd"] {width:250px;}
+.searchOpt select[name="pIndustCd"],
+.searchOpt select[name="pIdstrCate"],
+.searchOpt select[name="pNttCtgrySn"],
+.searchOpt select[name="LCLSF_CD"],
+.searchOpt select[name="CLSF_CD"] {width:200px;}
+.boardOptBox .perPage select[name="viewCnt"] {width:80px;}
+
+/* 숨김 — 구 인라인 display:none */
+.isHide {display:none;}
+.boardOptBox .func .listViewType.isHide {display:none;}
+#commentList {display:none;}
+
+/* 국가지역정보 PDF 버튼 — 구 인라인 margin-top:30px */
+.flagList.typeChk+.sub_util {margin-top:30px;}
+
+/* PDF 일괄다운 iframe — 구 인라인 width:100%; visibility:hidden; position:absolute */
+.pdfFrame {width:100%;visibility:hidden;position:absolute;}
+
+/* 표 col 폭 — 구 인라인 col style="width:n%" */
+.lineList_tb col.w5 {width:5%;}
+.lineList_tb col.w6 {width:6%;}
+.lineList_tb col.w7 {width:7%;}
+.lineList_tb col.w8 {width:8%;}
+.lineList_tb col.w10 {width:10%;}
+.lineList_tb col.w12 {width:12%;}
+.lineList_tb col.w15 {width:15%;}
+.lineList_tb col.w25 {width:25%;}
+
+/* 보고서 상단 첨부 — 구 인라인 display:flex / margin / padding */
+.fileDownRow {display:flex;}
+.fileDownRow>.btn_fileDown.btnPdf {margin-bottom:5px;}
+.fileDownRow .btnGrp .btnC_s.btnPdf {margin-bottom:5px;padding:3px;margin-left:5px;}
+.fileDownRow .btnGrp .btnC_s.btnPdf>span {height:auto;line-height:normal;}
+
+.viewDataWrap > p.viewAuthor {text-align:right;}
+.prevNnext .article > a {white-space:pre-line;}
+
+.thumbList__items-tit [id^="NotNation_"],
+.thumbList__items-tit .notNation {
+	width:225px;height:71px;background:#004a98;color:#fff;margin:0 auto;padding:4px;display:none;align-items:center;justify-content:center;
+}
+
+/* 목록형 상단안내카드(__news_page9) — 구 인라인 */
+.lineList_v.noSpacing {border-top:0;}
+.lineList_v.noSpacing .gray_Icon_box.typeWhite {margin-bottom:50px;background:#f2f3f5;}
+.invest_companyInfo>form>.searchOpt {width:-webkit-fill-available;width:100%;margin-bottom:30px;padding-top:30px;}
+.invest_companyInfo .searchOptBox.ele-1 {margin-bottom:20px;}
+.invest_companyInfo .searchOptBox.ele-1 .searchOpt_wrap {border:1px solid #ddd;}
+.invest_companyInfo .searchOptBox.ele-1 .sort {width:130px !important;}
+.invest_companyInfo .searchOptBox.ele-1 .opt {margin-left:140px;}
+.invest_companyInfo .searchOptBox.ele-1 .opt .inp_t.half {height:auto;}
+.invest_companyInfo .sch-opt.natArea,
+.invest_companyInfo .sch-opt.kbcArea {display:none;}
+.invest_companyInfo .sch-opt__cnts.nation,
+.invest_companyInfo .sch-opt__cnts.agency {padding:30px 20px 20px 30px !important;}
+
+/* 국가정보 관련뉴스 표 — 구 인라인 margin-top/border */
+.lineList_tb.noCateg.nationNews {margin-top:25px;border:0;}
+
+/* datepicker ~ 텍스트: 앞선 부분의 데스크톱 .picker_txt 보다 미디어쿼리가 지도록 엔트리 마지막에 둔다 */
+@media (max-width: 1041px) {
+    .picker_txt {
+        padding-left: 8px;
+        line-height: 30px;
+    }
+    .searchOptBox .optSetDate .picker_txt,
+    .searchOptBox .searchOpt>ul>li.typeHalf3 .optSetDate .picker_txt {
+        padding-left: 8px;
+        line-height: 30px;
+    }
+    .multipickerBox+.picker_txt { height:30px;}
+}

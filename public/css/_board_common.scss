@@ -8,7 +8,7 @@
 
 /*게시판옵션*/
 .boardOptBox {position:relative;min-height:40px;overflow:hidden;margin-bottom:15px;}
-.boardOptBox .listNum {position:absolute;left:0;bottom:0px;display:block;color:#666;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;line-height:30px;font-weight:400;letter-spacing:-1px;}
+.boardOptBox .listNum {position:absolute;left:0;bottom:0;display:block;color:#666;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;line-height:30px;font-weight:400;letter-spacing:-1px;}
 .boardOptBox .listNum b {margin-left:3px;margin-right:2px;color:#111;font-family:'Roboto',sans-serif;font-size:16px;font-weight:700;}
 .boardOptBox .func {overflow:hidden;float:right;font-size:0;}
 .boardOptBox .func .listViewType {display:inline-block;overflow:hidden;height:40px;margin-left:4px;box-sizing:border-box;border:1px solid #e6e6e6;border-radius:2px;font-size:0;vertical-align:top;}

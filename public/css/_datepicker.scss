@@ -21,3 +21,12 @@ input.inp_t~.timepicker { margin-left:5px;}
 
 .yearPickerBox  { display:inline-block;position:relative;vertical-align:top;}
 .yearPickerBox >input { padding-right:30px;background:#fff url(../js/multidatepicker/datepicker-calendar.png) no-repeat right 10px top 10px !important;cursor:pointer;}
+
+@media all and (max-width:1041px){
+    .picker_txt { padding-left:8px;line-height:30px;}
+    .date-picker-control:link,
+    .date-picker-control:visited { top:5px !important;vertical-align:top !important;}
+    input.timepicker { background-position:right 10px top 7px !important;}
+    .multipickerBox+.picker_txt { height:30px;}
+    .multipickerBox>input { background-position:right 10px top 5px !important;}
+}

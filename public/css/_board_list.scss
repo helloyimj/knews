@@ -86,7 +86,7 @@ td .ico_file_docx:last-child,
 td .ico_file_doc:last-child,
 td .ico_file_csv:last-child,
 td .ico_file_bmp:last-child,
-td .ico_file_avi {margin-right:0px !important;}
+td .ico_file_avi {margin-right:0 !important;}
 
 /*리스트(항목형/table타입) / 마이드림*/
 .typeMy thead th.headNo {width:60px;}
@@ -152,7 +152,7 @@ td .ico_file_avi {margin-right:0px !important;}
 .lineList_ul.typeGallery .photo {overflow:hidden;max-width:330px;margin-bottom:16px;}
 .lineList_ul.typeGallery .photo a {display:block;overflow:hidden;font-size:0;}
 .lineList_ul.typeGallery .photo img {width:100%;height:100%;vertical-align:top;}
-.lineList_ul.typeGallery .mark_noti {display:inline-block;height:23px;margin-bottom:15px;padding:0px 8px;border:1px solid #4286ea;border-radius:15px;box-sizing:border-box;vertical-align:top;font-size:13px;color:#4286ea;text-align:center;line-height:23px;}
+.lineList_ul.typeGallery .mark_noti {display:inline-block;height:23px;margin-bottom:15px;padding:0 8px;border:1px solid #4286ea;border-radius:15px;box-sizing:border-box;vertical-align:top;font-size:13px;color:#4286ea;text-align:center;line-height:23px;}
 .lineList_ul.typeGallery .mark_categ {display:inline-block;margin-bottom:15px;vertical-align:top;font-size:15px;color:#4286ea;line-height:23px;}
 .lineList_ul.typeGallery .mark_noti+.mark_categ {margin-left:5px;}
 .lineList_ul.typeGallery .txtL {height:56px;margin-top:0;overflow:hidden;}
@@ -271,7 +271,7 @@ td .ico_file_avi {margin-right:0px !important;}
     .lineList_ul.typeGallery>ul>li {margin-bottom:30px;padding-left:18px;}
     .lineList_ul.typeGallery>ul>li.typeNoArticle {padding-left:18px !important;}
     .lineList_ul.typeGallery .photo {margin-bottom:7px;}
-    .lineList_ul.typeGallery .mark_noti {display:inline-block;height:20px;margin-bottom:10px;padding:0px 6px;border:1px solid #4286ea;border-radius:15px;box-sizing:border-box;vertical-align:top;font-size:12px;color:#4286ea;text-align:center;line-height:20px;}
+    .lineList_ul.typeGallery .mark_noti {display:inline-block;height:20px;margin-bottom:10px;padding:0 6px;border:1px solid #4286ea;border-radius:15px;box-sizing:border-box;vertical-align:top;font-size:12px;color:#4286ea;text-align:center;line-height:20px;}
     .lineList_ul.typeGallery .mark_categ {margin-bottom:10px;font-size:13px;line-height:21px;}
     .lineList_ul.typeGallery .mark_noti+.mark_categ {margin-left:3px;}
     .lineList_ul.typeGallery .txtL {height:38px;}

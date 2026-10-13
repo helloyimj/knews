@@ -12,7 +12,6 @@
 // 기존 common css 분리
 @import "util";
 @import "pop";
-
 @import "pnb";
 @import "snb";
 // @import "footer"; // 기존푸터 kotra로 수정
@@ -46,10 +45,10 @@
 
 // 게시판
 @import "board_common";
-@import "board_list";
-@import "board_detail";
-@import "board_etc";
-@import "pages"; // 페이지 전용(수출파트너, 해외진출기업, 로그인, 에러)
+@import "board_list"; // 게시판 목록페이지 레이아웃 관련
+@import "board_detail"; // 게시판 상세페이지 레이아웃 관련
+@import "board_etc"; // 게시판 상세페이지 유틸 등
+@import "pages"; // 개별 페이지(수출파트너, 해외진출기업, 로그인, 에러)
 
 // 20260921 코트라 푸터 
 @import "masthead_kotra";
@@ -64,3 +63,7 @@
 // 삭제 예정
 @import "header";
 @import "sitemap"; // .sitemapBox / .sitemapArea (구 common.css 사이트맵)
+
+// 임시 html 인라인 소스코드 분리 (__news_page4~12, 15)
+@import "pages_other";
+

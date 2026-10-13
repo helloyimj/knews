@@ -103,7 +103,7 @@
 .compare_Btn{display:inline-block;box-sizing:border-box;padding:0 15px;border:1px solid #111111;border-radius:3px;}
 .compare_Btn>span{display:block;height:38px;padding-right:35px;background:url(../../common/img/common/icon_compare_Btn.png) no-repeat right center;color:#111;font-size:15px;line-height:40px;}
 .searchOptBox .searchOpt>ul>li.compare { position:relative;padding-right:220px;}
-.searchOptBox .searchOpt>ul>li.compare .compare_Btn{position:absolute;top:13px;right:0px;}
+.searchOptBox .searchOpt>ul>li.compare .compare_Btn{position:absolute;top:13px;right:0;}
 
 .searchOptBox .T2 .sort { width:30px !important;}
 .searchOptBox .T2 .opt { width:calc(100% - 35px) !important;margin-left:35px;}
@@ -231,8 +231,8 @@
 }
 .searchOptBox .searchOpt>ul>li.trisect .optGrp .opt .search_input_wrap .btn_sch { 
     position: absolute;
-    top:0px;
-    right:0px;
+    top:0;
+    right:0;
     width:40px;
     height:40px;
     background-image: url(../img/common/icon_search03.png);
@@ -318,12 +318,12 @@
     .searchOptBox .searchOpt .optGrp>.opt .optSet01 .inp_s { width:150px !important;}
     .searchOptBox .searchOpt .optGrp>.opt .w300 { width:100%;}
     .searchOptBox .searchOpt+.boxBtn { margin-bottom:-15px;}
-    .searchOptBox .searchOpt>ul>li.typeHalf .optGrp+.optGrp { margin-left:0px;}
-    .searchOptBox .searchOpt>ul>li.typeHalf2 .optGrp+.optGrp { margin-left:0px;}
+    .searchOptBox .searchOpt>ul>li.typeHalf .optGrp+.optGrp { margin-left:0;}
+    .searchOptBox .searchOpt>ul>li.typeHalf2 .optGrp+.optGrp { margin-left:0;}
     
     .searchOptBox .searchOpt>ul>li.typeHalf3 .optGrp+.optGrp { margin-left:0;}
     .searchOptBox .searchOpt>ul>li.typeHalf3 .optSetDate .inp_t { width:135px;}
-    .searchOptBox .searchOpt>ul>li.typeHalf3 .optSetDate .picker_txt { width:20px;padding-left: 5px;font-size:14px;text-align:center;}
+    .searchOptBox .searchOpt>ul>li.typeHalf3 .optSetDate .picker_txt { width:20px;padding-left:8px;line-height:30px;font-size:14px;text-align:center;}
     
     .searchOptBox .searchOpt>ul>li.typeHalf4 .optGrp+.optGrp { margin-left:0;}
     .searchOptBox .searchOpt>ul>li.typeHalf4 .optGrp+.optGrp .opt select { width:calc(50% - 2.5px) !important;}

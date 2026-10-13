@@ -474,7 +474,7 @@
     empty-cells:show;
     border-spacing:2px;
     border-collapse:separate;
-    box-shadow:0px 0px 5px #aaa;
+    box-shadow:0 0px 5px #aaa;
     }
 /*
     Create a "Lifted Corners" effect on the table. Ripped straight from @necolas
@@ -820,7 +820,7 @@
     {
     border-color:#999;
     border-color:rgba(153,153,153,.8);
-    box-shadow:0px 0px 5px #aaa;
+    box-shadow:0 0px 5px #aaa;
     }
 /*
     Draggable datepickers

@@ -182,16 +182,16 @@ function initCommonLayout() {
                     <a href="javascript:void(0);" target="_self">홍길동님</a>
                     <!-- <a href="https://www.kotra.or.kr/kp/cmm/mber/sbscrb/selectSbscrbUsrTy.do">회원가입</a> -->
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="javascript:void(0);" target="_self">한국이디에스</a>
                   </li>
                   <li>
                     <a href="javascript:void(0);" target="_self">마이코트라 로고</a>
-                  </li>
+                  </li> -->
                 </ul>
                 <ul class="masthead_utils masthead_utils">
                   <li>
-                    <a href="javascript:void(0);" target="_self">사이트맵</a>
+                    <button type="button" class="btn_sitemap" aria-label="사이트맵"><span>사이트맵</span></button>
                   </li>
                 </ul>
             </div>
@@ -213,6 +213,289 @@ function initCommonLayout() {
                     <button type="button" class="btn_close">닫기</button>
                   </div>
             </div>	
+            <section class="sitemapBox">
+      <h2 class="box_tit">사이트맵</h2>
+      <div class="sitemap_wrap">
+        <h2 class="box_tit">사이트맵</h2>
+        <div class="box_ct">
+          <ul class="map_gnb">
+            <li><a href="#" title="뉴스">뉴스</a></li>
+            <li><a href="#" title="상품·산업">상품·산업</a></li>
+            <li><a href="#" title="국가·지역정보">국가·지역정보</a></li>
+            <li><a href="#" title="보고서">보고서</a></li>
+            <li><a href="#" title="멀티미디어뉴스">멀티미디어뉴스</a></li>
+            <li><a href="#" title="해외투자">해외투자</a></li>
+            <li style="display: none"><a href="#" title="열린마당">열린마당</a></li>
+            <li style="display: none"><a href="#" title="로그인">로그인</a></li>
+          </ul>
+            <div class="map_nav">
+                <ul id="sitemap">
+                  <li class="child">
+                    <h3 class="txtHidden">뉴스</h3>
+                    <ul class="menuM menuStep">
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=70" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=80" title="경제∙무역 현재창  이동" data-sub="N" target="_self">경제∙무역</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=90" title="통상∙규제 현재창  이동" data-sub="N" target="_self">통상∙규제</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=100" title="투자진출 현재창  이동" data-sub="N" target="_self">투자진출</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=110" title="현장∙인터뷰 현재창  이동" data-sub="N" target="_self">현장∙인터뷰</a>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1480" title="기고 현재창  이동" data-sub="Y" target="_self">기고</a>
+
+                        <ul class="menuS">
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=130" title="" data-sub="N" target="_self">전문가기고</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=140" title="" data-sub="N" target="_self">직원기고</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=290" title="글로벌 이슈 모니터링 현재창  이동" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1550" title="글로벌 공급망 동향 현재창  이동" data-sub="Y" target="_self">글로벌 공급망 동향</a>
+
+                        <ul class="menuS">
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1360" title="" data-sub="N" target="_self">동향뉴스</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1560" title="" data-sub="N" target="_self">글로벌 공급망 인사이트</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1500" title="글로벌 ESG 정보 현재창  이동" data-sub="Y" target="_self">글로벌 ESG 정보</a>
+
+                        <ul class="menuS">
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1520" title="" data-sub="N" target="_self">동향뉴스</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1510" title="" data-sub="N" target="_self">연관 보고서</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1570" title="" data-sub="N" target="_self">ESG 활용지원센터</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1580" title="미국 통상정책 주요 동향 현재창  이동" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1470" title="핫클립 현재창  이동" data-sub="Y" target="_self">핫클립</a>
+
+                        <ul class="menuS">
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1590" title="" data-sub="N" target="_self">우크라이나 사태 해외동향</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1490" title="" data-sub="N" target="_self">중동 관련 주요 동향</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1460" title="" data-sub="N" target="_self">지금 수출 현장은</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=120" title="" data-sub="N" target="_self">기획리포트</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=150" title="" data-sub="N" target="_self">일자리동향</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1630" title="산업뉴스콕콕 현재창  이동" data-sub="Y" target="_self">산업뉴스콕콕</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="child">
+                    <h3 class="txtHidden">상품·산업</h3>
+                    <ul class="menuM menuStep">
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=170" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=180" title="트렌드 현재창  이동" data-sub="N" target="_self">트렌드</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=190" title="상품DB 현재창  이동" data-sub="N" target="_self">상품DB</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=200" title="국별주요산업 현재창  이동" data-sub="N" target="_self">국별주요산업</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=210" title="해외인증정보 현재창  이동" data-sub="N" target="_self">해외인증정보</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="child">
+                    <h3 class="txtHidden">국가·지역정보</h3>
+                    <ul class="menuM menuStep">
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=220" title="국가지역정보 현재창  이동" data-sub="N" target="_self">국가지역정보</a>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=240" title="북한정보 현재창  이동" data-sub="Y" target="_self">북한정보</a>
+                        <ul class="menuS">
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=520" title="" data-sub="N" target="_self">북한정보</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=530" title="" data-sub="N" target="_self">북한대외무역동향</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=250" title="진출전략 현재창  이동" data-sub="N" target="_self">진출전략</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=260" title="출장자료 현재창  이동" data-sub="N" target="_self">출장자료</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=270" title="무역관뉴스레터 현재창  이동" data-sub="N" target="_self">무역관뉴스레터</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="child">
+                    <h3 class="txtHidden">보고서</h3>
+                    <ul class="menuM menuStep">
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=280" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="child">
+                    <h3 class="txtHidden">멀티미디어뉴스</h3>
+                    <ul class="menuM menuStep">
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=540" title="동영상뉴스 현재창  이동" data-sub="N" target="_self">동영상뉴스</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=310" title="포토뉴스 현재창  이동" data-sub="N" target="_self">포토뉴스</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=320" title="카드뉴스 현재창  이동" data-sub="N" target="_self">카드뉴스</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="child">
+                    <h3 class="txtHidden">해외투자</h3>
+                    <ul class="menuM menuStep">
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=350" title="해외투자안내 현재창  이동" data-sub="N" target="_self">해외투자안내</a>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=360" title="직접투자절차 현재창  이동" data-sub="Y" target="_self">직접투자절차</a>
+                        <ul class="menuS">
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=570" title="" data-sub="N" target="_self">해외투자준비</a>
+                          </li>
+                          <li class="">
+                            <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=600" title="" data-sub="N" target="_self">FAQ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=370" title="국별참고자료 현재창  이동" data-sub="Y" target="_self">국별참고자료</a>
+                        <ul class="menuS">
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=610" title="" data-sub="N" target="_self">법규·서식</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=620" title="" data-sub="N" target="_self">진출기업지원세미나자료</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1350" title="진출기업정보 현재창  이동" data-sub="N" target="_self">진출기업정보</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="child">
+                    <h3 class="txtHidden">열린마당</h3>
+                    <ul class="menuM menuStep">
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1310" title="공지사항 현재창  이동" data-sub="Y" target="_self">공지사항</a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1320" title="고객조사제안  현재창  이동" data-sub="Y" target="_self">고객조사제안 </a>
+                      </li>
+                      <li>
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=670" title="뉴스레터신청 현재창  이동" data-sub="Y" target="_self">뉴스레터신청</a>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=1340" title="고객문의 현재창  이동" data-sub="Y" target="_self">고객문의</a>
+
+                        <ul class="menuS">
+                          <li class="" style="display: none">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=640" title="" data-sub="Y" target="_self">고객문의</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=680" title="사이트이용 현재창  이동" data-sub="Y" target="_self">사이트이용</a>
+                        <ul class="menuS">
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=710" title="" data-sub="Y" target="_self">API</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=720" title="" data-sub="Y" target="_self">RSS2.0</a>
+                          </li>
+                          <li class="" style="display: none">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=750" title="" data-sub="Y" target="_self">뷰어다운로드</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="child">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=730" title="정책∙방침 현재창  이동" data-sub="Y" target="_self">정책∙방침</a>
+                        <ul class="menuS">
+                          <li class="" style="display: none">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1010" title="" data-sub="Y" target="_self">저작권정책</a>
+                          </li>
+                          <li class="">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1400" title="" data-sub="Y" target="_self">개인정보처리방침</a>
+                            <ul class="menuSS">
+                              <li class="">
+                                <a href="/kotranews/cms/com/index.do?MENU_ID=1430" title="" target="_self">개인정보처리방침</a>
+                              </li>
+                              <li class="" style="display: none">
+                                <a href="/kotranews/cms/com/index.do?MENU_ID=1020" title="" target="_self">개인정보처리방침(2022.05.16)</a>
+                              </li>
+                              <li class="" style="display: none">
+                                <a href="/kotranews/cms/com/index.do?MENU_ID=1410" title="" target="_self">개인정보처리방침(2021.07.07)</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="" style="display: none">
+                            <a href="/kotranews/cms/com/index.do?MENU_ID=1030" title="" data-sub="Y" target="_self">공공데이터개방</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="map_func"></div>
+        <button type="button" class="btn_close">닫기</button>
+      </div>
+    </section>
           </div>    
         <script>
           $(function () {
@@ -235,13 +518,40 @@ function initCommonLayout() {
 
               $(".masthead_kotra .pop_kotra_family").slideUp();
             });
+
+            /* sitemapBox 열기/닫기 (on / off) */
+            initMastheadSitemapBox();
           });
 
         </script>
     `);
 
+  initMastheadSitemapBox();
 
-  // 헤더
+  /* 사이트맵 패널: 마스트헤드 다음, #container 앞. 목업에서 슬롯이 주석이면 만든다. */
+  if (!$('section.sitemapBox').length) {
+    var $sitemapSlot = $('<section class="sitemapBox"></section>');
+    if ($('#masthead_kotra').length) {
+      $sitemapSlot.insertAfter('#masthead_kotra');
+    } else if ($('#container').length) {
+      $sitemapSlot.insertBefore('#container');
+    } else {
+      $sitemapSlot.appendTo('body');
+    }
+  }
+
+  // 헤더. 목업에서 #header 를 주석 처리하면 #gnb 가 없어
+  // initPnbFromGnb() 가 pnb_nav > ul 을 채우지 못하므로 숨긴 슬롯을 만든다.
+  if (!$('#header').length) {
+    var $hiddenHeader = $('<div id="header" class="isHide" aria-hidden="true" style="display:none"></div>');
+    if ($('section.sitemapBox').length) {
+      $hiddenHeader.insertAfter('section.sitemapBox');
+    } else if ($('#masthead_kotra').length) {
+      $hiddenHeader.insertAfter('#masthead_kotra');
+    } else {
+      $hiddenHeader.prependTo('body');
+    }
+  }
   $('#header').html(`
     <header>
     <h1 class="logo">
@@ -782,41 +1092,49 @@ function initCommonLayout() {
     </div>
   `);
 
-  // 브레드크럼: 메뉴명/목록은 initPnbFromGnb() 가 현재 MENU_ID 기준으로 채움
+  // 브레드크럼 뼈대(원본 #pnb 마크업). 메뉴명/목록은 initPnbFromGnb() 가 MENU_ID·GNB 로 채움
   $('#container #contents #pnb').html(`
-          <div class="pnb_nav">
-            <a href="https://dream.kotra.or.kr/kotranews/index.do" class="btn_home" title="홈 화면 이동" target="_self"><span class="txtHidden">홈</span></a>
-            <ul></ul>
-          </div>
-          <div class="pnb_menu">
-            <div class="pnbList">
-              <div class="menu">
+    <div class="pnb_nav">
+        <a href="https://dream.kotra.or.kr/kotranews/index.do" class="btn_home" title="홈 화면 이동" target="_self"><span class="txtHidden">홈</span></a>
+        <ul></ul>
+    </div>
+    <div class="pnb_menu">
+        <!-- 메뉴리스트로 있을때 -->
+        <div class="pnbList">
+            <div class="menu">
                 <button type="button" class="btnTit" title="열기"></button>
                 <ul></ul>
-              </div>
             </div>
-          </div>
-          <div class="pnb_func">
-            <button type="button" class="btn_print" title="프린트">프린트</button>
-            <button type="button" class="btn_share" title="공유하기">공유</button>
-            <div class="shareBox">
-              <div class="shareBox_wrap">
+<!--             <p class="menu_txt"> -->
+<!--                 <span>메뉴 안내 영역입니다. 한줄을 넘어가지 않는 길이로 요약하여 작성하는 것을 추천합니다.</span> -->
+<!--             </p> -->
+        </div>
+        <!-- //메뉴리스트로 있을때 -->
+    </div>
+    <div class="pnb_func">
+	        <button type="button" class="btn_print" title="프린트">프린트</button>
+	        <button type="button" class="btn_share" title="공유하기">공유</button>
+        <!-- 공유박스 -->
+        <!-- 2024-06-25 -->
+        <div class="shareBox">
+            <div class="shareBox_wrap">
                 <strong>공유하기</strong>
                 <ul>
-                  <li><a href="javascript:void(0);" class="btn_facebook" onclick="shareSns('facebook')" title="페이스북 공유하기">페이스북</a></li>
-                  <li><a href="javascript:void(0);" class="btn_twitter" onclick="shareSns('twitter')" title="X 공유하기">X</a></li>
-                  <li><a href="javascript:void(0);" id="kakao-link-btn" class="btn_kakaotalk" title="카카오톡 공유하기">카카오톡</a></li>
-                  <li><a href="javascript:void(0);" class="btn_nBlog" onclick="shareSns('blog')" title="네이버블로그 공유하기">네이버블로그</a></li>
-                  <li><a href="javascript:void(0);" class="btn_nBand" onclick="shareSns('band')" title="네이버밴드 공유하기">네이버밴드</a></li>
-                  <li class="etc">
-                    <input type="text" id="copyUrl" title="복사할 URL" />
-                    <button type="button" class="btn_urlCopy">URL 복사</button>
-                  </li>
+                    <li><a href="javascript:void(0);" class="btn_facebook" onclick="shareSns('facebook');" title="페이스북 공유하기">페이스북</a></li>
+                    <li><a href="javascript:void(0);" class="btn_twitter" onclick="shareSns('twitter');" title="X 공유하기">X</a></li>
+                    <li><a href="javascript:void(0);" id="kakao-link-btn" class="btn_kakaotalk" title="카카오톡 공유하기">카카오톡</a></li>
+                    <li><a href="javascript:void(0);" class="btn_nBlog" onclick="shareSns('blog');" title="네이버블로그 공유하기">네이버블로그</a></li>
+                    <li><a href="javascript:void(0);" class="btn_nBand" onclick="shareSns('band');" title="네이버밴드 공유하기">네이버밴드</a></li>
+                    <li class="etc">
+                        <input type="text" id="copyUrl" title="복사할 URL">
+                        <button type="button" class="btn_urlCopy">URL 복사</button>
+                    </li>
                 </ul>
                 <button type="button" class="btn_close">닫기</button>
-              </div>
             </div>
-          </div>
+        </div>
+        <!-- //공유박스 -->
+    </div>
         `);
 
   // TOP버튼
@@ -828,15 +1146,15 @@ function initCommonLayout() {
   $('#footer').html(`
     <footer class="footer_kotra">
           <div class="footer_kotra_wrapper">
-            <p class="footer_kotra_logo"><img src="https://www.kotra.or.kr/bigdata/resources/images/comm/logo_footer.png" alt="Kotra 로고"></p>
+            <p class="footer_kotra_logo">
+            <img src="../img/logo/logo_kotra_news_white.svg" alt="코트라뉴스 로고">
+            </p>
             <div class="footer_kotra_info">
               <ul class="footer_list_menu">
-                <li><a href="javascript:void(0);" target="_self" aria-label="이용약관 (페이지 이동)">이용약관</a></li>
-                <li><a href="javascript:void(0);" target="_self" aria-label="저작권정책 (페이지 이동)">저작권정책</a></li>
+                <li><a href="https://www.kotra.or.kr/module/stplatLog/selectStplatLogList.do?stplatSeq=2000002282" target="_self" aria-label="이용약관 (페이지 이동)">이용약관</a></li>
+                <li><a href="https://dream.kotra.or.kr/dream/cms/com/index.do?MENU_ID=4880" target="_self" aria-label="저작권정책 (페이지 이동)">저작권정책</a></li>
                 <li><a href="https://www.kotra.or.kr/module/stplatLog/selectPolicyLogList.do?stplatSeq=2000002272" target="_self" aria-label="개인정보처리방침 (페이지 이동)" class="policy">개인정보처리방침</a></li>
-                <li><a href="javascript:void(0);" target="_self" aria-label="정보공개 (페이지 이동)">정보공개</a></li>
-                <li><a href="javascript:void(0);" target="_self" aria-label="사이트맵 (페이지 이동)">사이트맵</a></li>
-                <li><a href="javascript:void(0);" target="_self" aria-label="관련사이트 (페이지 이동)">관련사이트</a></li>
+                <li><a href="https://www.kotra.or.kr/subList/20000005857" target="_self" aria-label="정보공개 (페이지 이동)">정보공개</a></li>
               </ul>
               <ul class="footer_list_info">
                   <li><span>서울시 서초구 헌릉로 13</span></li>
@@ -1943,49 +2261,80 @@ function initPnbOptions() {
   });
 }
 /* ============================================================
- * 17. 상단 사이트맵 팝업 열기/닫기 트리거 (layout.js)
+ * 마스트헤드 사이트맵 패널 (on / off)
+ * masthead 주입 스크립트 하단과 동일 동작
  * ============================================================ */
-function initSitemapPopupTrigger() {
-  var sitemapPrevLoc;
+function initMastheadSitemapBox() {
+  var sitemapPrevLoc = 0;
+  var sitemapBtnSel = ".masthead_kotra .btn_sitemap, header .gnb_util .btn_sitemap";
 
-  $("header .gnb_util .btn_sitemap").click(function () {
+  function openSitemapBox() {
     sitemapPrevLoc = $(window).scrollTop();
-    var siteMapInnerH = $('.map_nav').height();
-    var siteMapLastH = $('.sitemapBox #sitemap>li:last-child .menuM').height();
+    var siteMapInnerH = $(".sitemapBox .map_nav").height();
+    var siteMapLastH = $(".sitemapBox #sitemap>li:last-child .menuM").height();
 
-    $("html").css('overflow', 'hidden');
-    $("body").css('overflow', 'hidden');
+    $("html").css("overflow", "hidden");
+    $("body").css("overflow", "hidden");
+    $(".sitemapBox #sitemap>li:last-child").css("height", siteMapInnerH - siteMapLastH);
+    $("#dim").addClass("on");
+    $(".sitemapBox").addClass("on").removeClass("off");
+  }
 
-    $('.sitemapBox #sitemap>li:last-child').css('height', siteMapInnerH - siteMapLastH)
+  function closeSitemapBox() {
+    $("html").css("overflow", "");
+    $("body").css("overflow", "");
+    $("html, body").animate({ scrollTop: sitemapPrevLoc }, 0);
+    $(".sitemapBox").addClass("off").removeClass("on");
+    $("#dim").removeClass("on");
+  }
 
-    $("#dim").addClass('on');
-    $(".sitemapBox").addClass('on').removeClass('off');
+  $(document).off("click.sitemapBox").on("click.sitemapBox", sitemapBtnSel, function (e) {
+    e.preventDefault();
+    openSitemapBox();
   });
 
-  $(".sitemapBox .btn_close").click(function () {
-    $("html").css('overflow', '');
-    $("body").css('overflow', '');
-    $("html, body").animate({
-      scrollTop: sitemapPrevLoc
-    }, 0);
+  $(document).off("click.sitemapBoxClose").on("click.sitemapBoxClose", ".sitemapBox .btn_close", function (e) {
+    e.preventDefault();
+    closeSitemapBox();
+  });
 
-    $(".sitemapBox").addClass('off').removeClass('on');
-    $("#dim").removeClass('on');
+  $(document).off("keydown.sitemapBoxClose").on("keydown.sitemapBoxClose", ".sitemapBox .btn_close", function (event) {
+    var v_keyCode = event.keyCode || event.which;
+    if (v_keyCode == 13) {
+      var $sitemapBtn = $(".masthead_kotra .btn_sitemap");
+      if (!$sitemapBtn.length) {
+        $sitemapBtn = $("header .gnb_util .btn_sitemap");
+      }
+      $sitemapBtn.focus();
+      closeSitemapBox();
+      return false;
+    }
+    if (v_keyCode == 9 && !event.shiftKey) {
+      $(".sitemapBox .map_gnb li:first-child").find("a").focus();
+      return false;
+    }
+  });
+
+  $(document).off("keydown.sitemapBoxGnb").on("keydown.sitemapBoxGnb", ".sitemapBox .map_gnb li:first-child a", function (event) {
+    var v_keyCode = event.keyCode || event.which;
+    if (v_keyCode == 9 && event.shiftKey) {
+      $(".sitemapBox .btn_close").focus();
+      return false;
+    }
   });
 
   window.sitemapClose = function sitemapClose() {
-    if (window.innerWidth <= 1041) {
-      if ($('.sitemapBox').hasClass('on')) {
-        $("html").css('overflow', '');
-        $("html, body").animate({
-          scrollTop: sitemapPrevLoc
-        }, 0);
-        $(".sitemapBox").addClass('off').removeClass('on');
-        $("#dim").removeClass('on');
-      }
+    if (window.innerWidth <= 1041 && $(".sitemapBox").hasClass("on")) {
+      closeSitemapBox();
     }
   };
+}
 
+/* ============================================================
+ * 17. 상단 사이트맵 팝업 열기/닫기 트리거 (layout.js)
+ * 사이트맵 on/off 는 initMastheadSitemapBox() 가 담당한다.
+ * ============================================================ */
+function initSitemapPopupTrigger() {
   $("header .gnb_util .totalSearchArea .btn_searchOpt").click(function () {
     if ($('.search_opt').hasClass('on')) {
       $('.search_opt').removeClass('on');
@@ -2231,34 +2580,7 @@ function initAccessibility() {
     $(this).trigger('mouseleave');
   });
 
-  //사이트맵 팝업
-  $(".sitemapBox .btn_close").keydown(function (event) {
-    var v_keyCode = event.keyCode || event.which;
-
-    if (v_keyCode == 13) {
-      $("header .gnb_util .btn_sitemap").focus();
-      $(".sitemapBox .btn_close").trigger('click');
-      return false;
-    }
-
-    if (v_keyCode == 9) {
-      if (!event.shiftKey) {
-        $('.sitemapBox .map_gnb li:first-child').find('a').focus();
-        return false;
-      }
-    }
-  });
-
-  $('.sitemapBox .map_gnb li:first-child a').keydown(function (event) {
-    var v_keyCode = event.keyCode || event.which;
-
-    if (v_keyCode == 9) {
-      if (event.shiftKey) {
-        $('.sitemapBox .btn_close').focus()
-        return false;
-      }
-    }
-  });
+  // 사이트맵 팝업 키보드는 initMastheadSitemapBox() 에서 처리
 
   //pnb
   $("#pnb .pnb_func .shareBox .btn_close").keydown(function (event) {

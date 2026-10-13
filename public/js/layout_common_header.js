@@ -421,7 +421,7 @@ function initCommonLayout() {
                   </button>
                 </div>
               </div>
-              <div class="masthead_links masthead_links">
+              <div class="masthead_links">
                 <ul class="masthead_menus masthead_menus">
                   <li>
                     <a href="javascript:void(0);" target="_self">로그아웃</a>
@@ -438,9 +438,9 @@ function initCommonLayout() {
                     <a href="javascript:void(0);" target="_self">마이코트라 로고</a>
                   </li>
                 </ul>
-                <ul class="masthead_utils masthead_utils">
+                <ul class="masthead_utils">
                   <li>
-                    <a href="javascript:void(0);" target="_self">사이트맵</a>
+                    <button type="button" class="btn_sitemap" aria-label="사이트맵">사이트맵</button>
                   </li>
                 </ul>
             </div>

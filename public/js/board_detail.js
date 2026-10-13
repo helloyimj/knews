@@ -10,7 +10,8 @@
 	"use strict";
 
 	function isDetailPage() {
-		return $(".lineList_v").length > 0 || $("#commentForm").length > 0 || $(".prevNnext").length > 0;
+		/* 안내카드(.lineList_v)는 진출기업 목록에도 있어 상세 판별에 쓰지 않는다 */
+		return $("#commentForm").length > 0 || $(".prevNnext").length > 0;
 	}
 
 	function isHotClip() {
@@ -303,31 +304,29 @@
 	};
 
 	/************************************************************************
-	 * 함수명 : fn_linkPage
-	 * 설 명 : 댓글 페이징 (상세 전용. 목록 페이지에서는 board_list.js 를 쓴다)
+	 * 함수명 : bindDetailPaging
+	 * 설 명 : 댓글 페이징·상세 첨부 (상세에서만 window 에 붙인다. 목록 fn_linkPage 를 덮지 않음)
 	 ************************************************************************/
-	window.fn_linkPage = function (pageNo) {
-		$("#commentForm [name='pageNo']").val(pageNo);
-		fn_comment_list();
-	};
+	function bindDetailPaging() {
+		window.fn_linkPage = function (pageNo) {
+			$("#commentForm [name='pageNo']").val(pageNo);
+			fn_comment_list();
+		};
 
-	/************************************************************************
-	 * 함수명 : fn_fileDown
-	 * 설 명 : 첨부파일 다운로드
-	 ************************************************************************/
-	window.fn_fileDown = function (obj) {
-		var pUrl =
-			"/ajaxa/fileCpnt/fileDown.do?gbn=n01&nttSn=" +
-			$("#sendForm [name=pNttSn]").val() +
-			"&atFileSn=" +
-			$(obj).data("atfilesn") +
-			"&pFrontYn=Y";
-		if (needsPrivacyFileDown()) {
-			fn_filedown_progress_privacy(pUrl, $(obj).data("filename"));
-		} else {
-			fn_filedown_progress(pUrl, $(obj).data("filename"));
-		}
-	};
+		window.fn_fileDown = function (obj) {
+			var pUrl =
+				"/ajaxa/fileCpnt/fileDown.do?gbn=n01&nttSn=" +
+				$("#sendForm [name=pNttSn]").val() +
+				"&atFileSn=" +
+				$(obj).data("atfilesn") +
+				"&pFrontYn=Y";
+			if (needsPrivacyFileDown()) {
+				fn_filedown_progress_privacy(pUrl, $(obj).data("filename"));
+			} else {
+				fn_filedown_progress(pUrl, $(obj).data("filename"));
+			}
+		};
+	}
 
 	/************************************************************************
 	 * 함수명 : fn_prev
@@ -435,6 +434,7 @@
 
 	$(function () {
 		if (!isDetailPage()) return;
+		bindDetailPaging();
 
 		if ($("#commentForm").length) {
 			fn_comment_list();

@@ -36,6 +36,12 @@
 		return base;
 	}
 
+	function listSel() {
+		if ($("#tbody").length) return "#tbody";
+		if ($("#ul").length) return "#ul";
+		return "#tbody";
+	}
+
 	window.fn_list = function () {
 		var option = cfg();
 		var pStartDt = $("#pStartDt").val();
@@ -57,14 +63,24 @@
 			data: $("#sendForm").serialize(),
 			dataType: "json",
 			success: function (data) {
-				fn_comm_setList("#tbody", data, "#listTemplate", "#noListTemplate", "#rowCount", ".pagination");
+				var sel = listSel();
+				fn_comm_setList(sel, data, "#listTemplate", "#noListTemplate", "#rowCount", ".pagination");
 
-				$("#tbody a[data-source]").each(function () {
+				$(sel + " a[data-source]").each(function () {
 					fn_setDetailUrl($(this), $(this).attr("data-source"));
 				});
 
 				if (option.attach) {
 					fn_setAttachList(data.list);
+				}
+				if ($("#galley_list").length && $("#galleyListTemplate").length) {
+					fn_comm_setList("#galley_list", data, "#galleyListTemplate", "#noGalleyListTemplate", "#rowCount", ".pagination");
+				}
+				if (typeof window.fn_makeAttachFileIcon === "function") {
+					fn_makeAttachFileIcon(data);
+				}
+				if (typeof window.fn_replaceContents === "function") {
+					fn_replaceContents(data);
 				}
 				if (typeof galleryRate === "function") {
 					galleryRate();
@@ -240,6 +256,29 @@
 
 	$(function () {
 		if (!$("#sendForm").length || !$(".board_area").length) return;
+		/* 뉴스 상세(__news_page2): 댓글/이전다음. 목록 AJAX 를 돌리지 않는다 */
+		if ($("#commentForm").length || $(".prevNnext").length) return;
+		/* 산업보고서 상세(__news_page12)는 board_report.js 가 목록/첨부를 담당한다 */
+		if ($("#listForm [name=pRptNo]").length) return;
+		/* 진출기업(__news_page9)는 board_invest.js 가 담당한다 */
+		if ($(".invest_companyInfo").length || $(".board_area[data-board-type=invest]").length) return;
+		/* 국별모아드림 항목 상세(__news_page14 투자환경 등)는 board_nation_item.js 가 담당한다 */
+		if ($("#pageTab").length || $("#newsBody").length) return;
+
+		if (window.datePickerController) {
+			if ($("#pStartDt").length) {
+				datePickerController.createDatePicker({ formElements: { pStartDt: "%Y/%m/%d" } });
+			}
+			if ($("#pEndDt").length) {
+				datePickerController.createDatePicker({ formElements: { pEndDt: "%Y/%m/%d" } });
+			}
+			if ($("#START_DT").length) {
+				datePickerController.createDatePicker({ formElements: { START_DT: "%Y/%m/%d" } });
+			}
+			if ($("#END_DT").length) {
+				datePickerController.createDatePicker({ formElements: { END_DT: "%Y/%m/%d" } });
+			}
+		}
 
 		var qNat = queryVal("pNatCd");
 		var qKbc = queryVal("pKbcCd");
@@ -278,6 +317,26 @@
 		});
 
 		$(document).on("click", ".listViewType button", function () {
+			if ($(".thumbnailList").length && $(".normalList").length) {
+				$(".listViewType button").removeClass("on").removeAttr("title");
+				$(this).addClass("on").attr("title", "선택됨");
+				var listType = $("ul.listViewType").find(".on").attr("class");
+				if (listType === "typeTit on") {
+					$(".thumbnailList").addClass("none");
+					$(".bookCoverList").addClass("none");
+					$(".normalList").removeClass("none");
+				} else if (listType === "typeThumb on") {
+					$(".normalList").addClass("none");
+					$(".bookCoverList").addClass("none");
+					$(".thumbnailList").removeClass("none");
+				} else {
+					$(".thumbnailList").addClass("none");
+					$(".normalList").addClass("none");
+					$(".bookCoverList").removeClass("none");
+				}
+				$(window).trigger("resize");
+				return;
+			}
 			var viewType = $(this).data("viewtype");
 			var menuId = $("#sendForm [name=MENU_ID]").val();
 			var contentsNo = $("#sendForm [name=CONTENTS_NO]").val();
@@ -408,9 +467,292 @@
 		});
 
 		$("[name=pRegnCd]:checked").trigger("click");
+		if (typeof window.fn_setDefaultShowType === "function") {
+			window.fn_setDefaultShowType();
+		}
 		if ($("#noticeArea").length) {
 			fn_noticeList();
 		}
 		fn_list();
 	});
 })(window, jQuery);
+
+/* __news_page11 원문 일괄 다운로드 — 구 인라인 스크립트 */
+/************************************************************************
+함수명 : fn_downFile
+설 명 : 상세화면 html, pdf 다운로드
+인 자 : -
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+ 수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+var totalCnt = 0;
+var compCnt = 0;
+function fn_downFile(type){
+	$('#frameDiv').empty();
+	if($('[name=downChk]:checked').length < 1){
+		alert('선택된 게시글이 없습니다.');
+		return;
+	}
+	
+	totalCnt = $('[name=downChk]:checked').length;
+	compCnt = 0;
+	fn_comm_showProgressbar();
+	
+	$('[name=downChk]:checked').each(function(){
+		var nttSn = $(this).val();
+		var bbsSn = $(this).data('bbssn');
+		var title = $(this).closest('.nttTr').find('.subjectTxt').text();
+
+// 		window.open("https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDownDetail.do?MENU_ID=320&pNttSn=" + nttSn + "&bbsSn=" + bbsSn + "&type=" + type);
+		var src = "https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDownDetail.do?MENU_ID=320&pNttSn=" + nttSn + "&bbsSn=" + bbsSn;
+		$('<iframe class="pdfFrame" id="downloadFrame'+$(this).val()+'" src="'+src+'" data-title="'+title+'"></iframe>').appendTo($("#frameDiv"));
+	});
+	
+	$('.pdfFrame').load(function(){
+		var title 	= $(this).data('title').trim();
+		if(title == ''){
+			title = '-';
+		}
+		var cont = this.contentWindow.document.querySelector('#pdfArea');
+		$(cont).find('.fileTr').remove();
+		
+		var serverUrl = 'https://dream.kotra.or.kr/';
+		$(cont).find('img').each(function(){
+			var src = $(this).attr('src');
+			
+			if(src.startsWith('/attach/')){
+				src = src.replace('/attach/', serverUrl + 'attach/');
+				$(this).attr('src', src);
+			}
+		});
+		
+		var id = $(this).attr('id');
+		
+		$(cont).css('width', '100%');
+		
+		if(type == 'pdf'){
+			html2canvas(cont, {
+				allowTaint: true,
+				useCORS: true,
+				scale: 1
+			}).then(function(canvas){
+				var imgData = canvas.toDataURL('image/png');
+				var imgWidth = 210;
+				var pageHeight = imgWidth * 1.414;
+				var imgHeight = canvas.height * imgWidth / canvas.width;
+				var heightLeft = imgHeight;
+				var margin = 0;
+				var doc = new jsPDF('p', 'mm', 'a4');
+				var position = 0;
+				
+				doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+				heightLeft -= pageHeight;
+				
+				while(heightLeft >= 20){
+					position = heightLeft - imgHeight;
+					doc.addPage();
+					doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+					heightLeft -= pageHeight;
+				}
+				
+				doc.save(title + '.pdf');
+				$("#"+id).remove();
+				
+				compCnt++;
+				fn_downCallbak(compCnt);
+			});
+		}else{
+			cont = this.contentWindow.document.querySelector('#pdfArea');
+			$(cont).find('.fileArea').remove();
+			$(cont).find('.photoSliderArea').remove();
+			
+			var hostName = "http://"+window.location.host;
+			var content =	"<!doctype html>" 
+						+	"<html lang=\"ko\">"
+						+	"<head>"
+						+	"<meta charset=\"utf-8\">"
+						+	"<link rel='stylesheet' type='text/css' href='"+hostName+"../css/board.css' />"
+						+	"<link rel='stylesheet' type='text/css' href='"+hostName+"../css/common.css' />"
+						+	"<title>pdf</title>"
+						+	"</head>"
+						+	"<body class='typeSub'>"
+						+	"<div class='board_area'>"
+						+	"<div class='lineList_v'>"
+						+ 	$(cont).html()
+						+	"</div>"
+						+	"</div>"
+						+	"</body>"
+						+	"</html>";
+
+			var agent = navigator.userAgent.toLowerCase();
+			if(		(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1)
+				||	(navigator.appName == 'Netscape' && navigator.userAgent.search('Edge') != -1)	
+				|| 	(agent.indexOf("msie") != -1)){
+				var element = document.createElement('a');
+				file = new Blob([content], {type:'text/plain;charset=utf-8'});
+				if(window.navigator.msSaveOrOpenBlob){
+					window.navigator.msSaveOrOpenBlob(file, title+".html");
+				}else{
+					var url = URL.createObjectURL(file);
+					element.href = url;
+					element.download = title+".html";
+					document.body.appendChild(element);
+					element.click();
+					setTimeOut(function(){
+						document.body.removeChild(element);
+						window.URL.revokeObjectURL(url);
+					}, 0);
+					
+				}
+			}else{
+				var element = document.createElement('a');
+				file = new Blob([content], {type:'text/plain;charset=utf-8'});
+				var url = URL.createObjectURL(file);
+				element.href = url;
+				element.download = title+".html";
+				document.body.appendChild(element);
+				element.click();
+				document.body.removeChild(element);
+			}
+			
+			compCnt++;
+			fn_downCallbak(compCnt);
+		}
+	});
+}
+
+/************************************************************************
+함수명 : fn_downCallbak
+설 명 : 다운로드콜백함수
+인 자 : compCnt(다운로드 완료 횟수)
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+ 수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+function fn_downCallbak(compCnt){
+	if(totalCnt == compCnt){
+		fn_comm_hideProgressbar();
+	}
+}
+
+/************************************************************************
+ * 함수명 : fn_viewPage
+ * 설 명 : 상세보고서로 이동 (__news_page5 목록 인라인)
+ ************************************************************************/
+function fn_viewPage(RPT_NO) {
+	$("#sendForm input:hidden[name=pRptNo]").val(RPT_NO);
+	location.href =
+		"https://dream.kotra.or.kr/kotranews/cms/indReport/actionIndReportDetail.do?" +
+		$("#sendForm").serialize();
+}
+
+/************************************************************************
+함수명 : fn_nationPdfDown
+설 명 : 국가정보 PDF 다운로드
+인 자 : -
+작성자 : [대외경제정보 통합 플랫폼] 포털파트
+ 수정일              수정자                                   수정내용
+----------  ---------------------   ------------------
+2021-03-15  [대외경제정보 통합 플랫폼]      최초 생성
+************************************************************************/
+function fn_nationPdfDown() {
+	if ($("[name=chkNatSn]:checked").length < 1) {
+		alert("국가를 선택하세요.");
+		return;
+	}
+	var pUrl = "/ajaxa/frNation/nationPdfDown.do?" + $("#sendForm").serialize();
+	var pFilename = "";
+	if ($("[name=chkNatSn]:checked").length > 1) {
+		pFilename = "국가정보.zip";
+	} else if ($("[name=chkNatSn]:checked").length == 1) {
+		pFilename = $("label[for='natSn_" + $("[name=chkNatSn]:checked").val() + "']").text() + ".pdf";
+	}
+	fn_filedown_progress(pUrl, pFilename);
+}
+
+/************************************************************************
+ * 함수명 : fn_replaceContents
+ * 설 명 : Contents(내용)에 html 태그제거 (__news_page6)
+ * 작성자 : bvs
+ * 수정일 수정자 수정내용
+ * ------ ------ -------------------
+ * 2021.03.15 bvs 최초생성
+ ************************************************************************/
+function fn_replaceContents(data) {
+	if (!data || !data.list) return;
+	for (var idx in data.list) {
+		var contents = data.list[idx].CONTENTS;
+		var replaceCt = "";
+		if (contents != null) {
+			if (/<[a-z][\s\S]*>/i.test(contents)) {
+				replaceCt += contents;
+			} else {
+				replaceCt += contents.replace(/\n/g, "<br/>");
+			}
+		}
+		$("#txt_s" + data.list[idx].BBS_SEQ).html(replaceCt);
+	}
+}
+
+/************************************************************************
+ * 함수명 : fn_makeAttachFileIcon
+ * 설 명 : 첨부파일이 존재하면 첨부파일 컬럼에 아이콘 생성 (__news_page6)
+ * 작성자 : dygo
+ ************************************************************************/
+function fn_makeAttachFileIcon(data) {
+	if (!data || !data.list || !data.list.length) return;
+	$(".openY").each(function (i) {
+		if (!data.list[i] || !data.list[i].EXISTFILE) return;
+		var extIcon = "";
+		if (data.list[i].EXISTFILE.EXIST_FILE_YN == "Y") {
+			extIcon = "<em class='mSort'>첨부파일</em><span class='hasFile'><em>첨부파일 존재</em></span>";
+		} else {
+			extIcon = "<em class='mSort'>첨부파일</em>-";
+		}
+		$(this).find(".attachFile").append(extIcon);
+	});
+}
+
+/************************************************************************
+ * 함수명 : fn_setDefaultShowType
+ * 설 명 : 동영상형 목록/썸네일 기본 보기 (__news_page6)
+ ************************************************************************/
+function fn_setDefaultShowType() {
+	if (!$(".thumbnailList").length) return;
+	var showType = "B0302";
+	if (showType == "B0301") {
+		$("ul.listViewType > li").find(".typeTit").addClass("on");
+		$("ul.listViewType > li").find(".typeTit").attr("title", "선택됨");
+	} else {
+		$("ul.listViewType").show();
+		$("ul.listViewType > li").find(".typeThumb").addClass("on");
+		$("ul.listViewType > li").find(".typeThumb").attr("title", "선택됨");
+	}
+}
+
+$(document).on("click", "tr.openY td.txtL > a, .thumbnailList div.photo > a, .thumbnailList div.txtL > a", function () {
+	var bbs_seq = $(this).data("idno");
+	if (!bbs_seq) return;
+	$(this).attr("href", "#;");
+	$("#sendForm input:hidden[name=BBS_SEQ]").val(bbs_seq);
+	fn_comm_ajax({
+		url: "/ajaxf/frBoard/bbsChecking.do",
+		data: $("#sendForm").serialize(),
+		dataType: "json",
+		success: function (data) {
+			if (data == 0) {
+				alert("비밀글입니다.");
+			} else if (data == 1) {
+				location.href = "/kotranews/cms/board/boardView.do?" + encodeURI($("#sendForm").serialize());
+			} else if (data == 2) {
+				alert("권한이 없습니다.");
+			} else {
+				alert("잘못된 접근입니다.");
+			}
+		}
+	});
+});
+
