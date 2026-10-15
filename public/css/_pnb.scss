@@ -2,7 +2,7 @@
 
 /* pnb 브레드크럼, 페이지 SNS 공유, 프린트 */
 
-#pnb { position:relative;z-index:200;box-sizing:border-box;width:100%;min-height:42px;margin-bottom:20px;padding:0 200px 0 0;}
+#pnb { position:relative;z-index:20;box-sizing:border-box;width:100%;min-height:42px;margin-bottom:20px;padding:0 200px 0 0;}
 #pnb .pnb_menu { display:inline-block;vertical-align:top;}
 #pnb .pnb_menu .pnbTit,
 #pnb .pnb_menu .pnbList .btnTit { display:inline-block;overflow:hidden;color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:32px;line-height:42px;font-weight:700;text-align:left;vertical-align:top;}

@@ -363,8 +363,8 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
       width: 100%;
     
         .masthead_links {
-        gap: 40px;
-
+          display: none;
+          gap: 40px;
           // .masthead_menus {
           //   gap: 30px;
           // }
@@ -584,21 +584,21 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
 
   // ---------- .masthead_wrapper ----------
   .masthead_wrapper {
-    height: 30px;
+    // height: 30px;
    
     .masthead_inner_wrapper {
       width: 100%;
       padding: 0 12px;
     
-        .masthead_links {
-         display: none;
-        }
+        // .masthead_links {
+        //  display: none;
+        // }
 
-      .masthead_logo {
-        a {
-          width: 50px;
-        }
-      }
+      // .masthead_logo {
+      //   a {
+      //     width: 50px;
+      //   }
+      // }
     }
   }
 

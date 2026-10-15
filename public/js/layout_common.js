@@ -172,8 +172,8 @@ function initCommonLayout() {
                   </button>
                 </div>
               </div>
-              <div class="masthead_links masthead_links">
-                <ul class="masthead_menus masthead_menus">
+              <div class="masthead_links">
+                <ul class="masthead_menus">
                   <li>
                     <a href="javascript:void(0);" target="_self">로그아웃</a>
                     <!-- <a href="javascript:void(0);">로그인</a> -->
@@ -552,376 +552,381 @@ function initCommonLayout() {
       $hiddenHeader.prependTo('body');
     }
   }
-  $('#header').html(`
-    <header>
-    <h1 class="logo">
-      <a href="https://dream.kotra.or.kr/kotranews/index.do">
-        <img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=x01&SITE_GROUP_NO=2&SITE_NO=3" alt="KOTRA 해외시장뉴스" />
-      </a>
-    </h1>
-    <button type="button" title="전체메뉴" class="mBtn_topMenu">전체메뉴</button>
+  // $('#header').html(`
+  //   <header>
+  //   <h1 class="logo">
+  //     <a href="https://dream.kotra.or.kr/kotranews/index.do">
+  //       <img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=x01&SITE_GROUP_NO=2&SITE_NO=3" alt="KOTRA 해외시장뉴스" />
+  //     </a>
+  //   </h1>
+  //   <button type="button" title="전체메뉴" class="mBtn_topMenu">전체메뉴</button>
     
-    <!-- 모바일 전용 -->
-    <div class="top_util">
-      <a href="javascript:void(0);" class="btn_topLogin" title="로그인"><span>로그인</span></a>
-      <a href="https://www.kotra.or.kr/kp/cmm/mber/sbscrb/selectSbscrbUsrTy.do" class="btn_join" title="회원가입"><span>회원가입</span></a>
+  //   <!-- 모바일 전용 -->
+  //   <div class="top_util">
+  //     <a href="javascript:void(0);" class="btn_topLogin" title="로그인"><span>로그인</span></a>
+  //     <a href="https://www.kotra.or.kr/kp/cmm/mber/sbscrb/selectSbscrbUsrTy.do" class="btn_join" title="회원가입"><span>회원가입</span></a>
 
-      <div class="new_header_19">
-        <div class="clearfix">
-          <div class="fL">
-            <a href="https://www.kotra.or.kr/kp/kotra/cmm/sso/loginBySSO.do?div=kp" target="_blank" title="새 창 열림">
-              <img src="https://dream.kotra.or.kr/type/common/img/common/logo_t_06_s.png" alt="KOTRA 지원안내" />
-            </a>
-            <a href="https://www.buykorea.or.kr/" target="_blank" title="새 창 열림" class="btn_s">
-              <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_07_s.png" alt="바이코리아(Seller)" title="바이코리아(Seller)" />
-            </a>
-            <a href="https://www.investkorea.org/" target="_blank" title="새 창 열림" class="btn_s">
-              <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_05_s.png" alt="Inverst KOREA" title="Inverst KOREA" />
-            </a>
-            <button type="button" class="btn_more"><span>사이트 더보기</span></button>
-          </div>
-        </div>
-        <div class="pop_home" style="display: none">
-          <div class="home_box">
-            <div>
-              <h3>KOTRA 사이트</h3>
-              <p>
-                <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
-                  <img src="https://dream.kotra.or.kr/type/common/img/common/more_siteLogo12.png" alt="KOTRA 무역투자24" title="KOTRA 무역투자24" />
-                </a>
-                <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>KOTRA 무역투자24</strong>
-                </a>
-              </p>
-              <p>
-                <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_s" title="새 창 열림">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_12.png" alt="해외경제정보드림" title="해외경제정보드림" />
-                </a>
-                <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>해외경제정보드림</strong>
-                </a>
-              </p>
-              <p>
-                <a href="https://www.exportvoucher.com" target="_blank" class="btn_s" title="새 창 열림">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_03.png" alt="수출지원기반 활용사업" title="수출지원기반 활용사업" />
-                </a>
-                <a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none">
-                  <strong>수출바우처 · 지사화</strong>
-                </a>
-              </p>
-              <p class="">
-                <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_04.png" alt="옴부즈만" title="옴부즈만" />
-                </a>
-                <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>외투기업고충처리</strong>
-                </a>
-              </p>
-              <p class="">
-                <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_05.png" alt="Inverst KOREA" title="Inverst KOREA" />
-                </a>
-                <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>투자유치정보제공</strong>
-                </a>
-              </p>
-              <p class="">
-                <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_06.png" alt="글로벌 전시포털" title="글로벌 전시포털" />
-                </a>
-                <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>국내 · 해외전시정보</strong>
-                </a>
-              </p>
-              <p class="">
-                <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_07.png" alt="바이코리아(Seller)" title="바이코리아(Seller)" />
-                </a>
-                <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>수출지원 온라인 플랫폼</strong>
-                </a>
-              </p>
-              <p class="">
-                <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_08.png" alt="경제외교 활용포털" title="경제외교 활용포털" />
-                </a>
-                <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>경제외교 활용포털</strong>
-                </a>
-              </p>
-              <p class="">
-                <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_s" title="새 창 열림" style="">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_09.png" alt="Contract KOREA" title="Contract KOREA" />
-                </a>
-                <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>해외전문인력유치센터</strong>
-                </a>
-              </p>
-              <p class="">
-                <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_10.png" alt="Kodits" title="Kodits" />
-                </a>
-                <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>방산물자교역지원센터</strong>
-                </a>
-              </p>
-              <p class="">
-                <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
-                  <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_13.png" alt="무역투자빅데이터" title="무역투자빅데이터" />
-                </a>
-                <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
-                  <strong>무역투자빅데이터</strong>
-                </a>
-              </p>
-            </div>
-            <button type="button" class="btn_close"><span>닫기</span></button>
-          </div>
-        </div>
-      </div>
-      <a href="https://dream.kotra.or.kr/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새창 이동"><span>해외경제정보드림</span></a>
-    </div>
+  //     <div class="new_header_19">
+  //       <div class="clearfix">
+  //         <div class="fL">
+  //           <a href="https://www.kotra.or.kr/kp/kotra/cmm/sso/loginBySSO.do?div=kp" target="_blank" title="새 창 열림">
+  //             <img src="https://dream.kotra.or.kr/type/common/img/common/logo_t_06_s.png" alt="KOTRA 지원안내" />
+  //           </a>
+  //           <a href="https://www.buykorea.or.kr/" target="_blank" title="새 창 열림" class="btn_s">
+  //             <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_07_s.png" alt="바이코리아(Seller)" title="바이코리아(Seller)" />
+  //           </a>
+  //           <a href="https://www.investkorea.org/" target="_blank" title="새 창 열림" class="btn_s">
+  //             <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_05_s.png" alt="Inverst KOREA" title="Inverst KOREA" />
+  //           </a>
+  //           <button type="button" class="btn_more"><span>사이트 더보기</span></button>
+  //         </div>
+  //       </div>
+  //       <div class="pop_home" style="display: none">
+  //         <div class="home_box">
+  //           <div>
+  //             <h3>KOTRA 사이트</h3>
+  //             <p>
+  //               <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
+  //                 <img src="https://dream.kotra.or.kr/type/common/img/common/more_siteLogo12.png" alt="KOTRA 무역투자24" title="KOTRA 무역투자24" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>KOTRA 무역투자24</strong>
+  //               </a>
+  //             </p>
+  //             <p>
+  //               <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_s" title="새 창 열림">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_12.png" alt="해외경제정보드림" title="해외경제정보드림" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>해외경제정보드림</strong>
+  //               </a>
+  //             </p>
+  //             <p>
+  //               <a href="https://www.exportvoucher.com" target="_blank" class="btn_s" title="새 창 열림">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_03.png" alt="수출지원기반 활용사업" title="수출지원기반 활용사업" />
+  //               </a>
+  //               <a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>수출바우처 · 지사화</strong>
+  //               </a>
+  //             </p>
+  //             <p class="">
+  //               <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_04.png" alt="옴부즈만" title="옴부즈만" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>외투기업고충처리</strong>
+  //               </a>
+  //             </p>
+  //             <p class="">
+  //               <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_05.png" alt="Inverst KOREA" title="Inverst KOREA" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>투자유치정보제공</strong>
+  //               </a>
+  //             </p>
+  //             <p class="">
+  //               <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_06.png" alt="글로벌 전시포털" title="글로벌 전시포털" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>국내 · 해외전시정보</strong>
+  //               </a>
+  //             </p>
+  //             <p class="">
+  //               <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_07.png" alt="바이코리아(Seller)" title="바이코리아(Seller)" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>수출지원 온라인 플랫폼</strong>
+  //               </a>
+  //             </p>
+  //             <p class="">
+  //               <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_08.png" alt="경제외교 활용포털" title="경제외교 활용포털" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>경제외교 활용포털</strong>
+  //               </a>
+  //             </p>
+  //             <p class="">
+  //               <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_s" title="새 창 열림" style="">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_09.png" alt="Contract KOREA" title="Contract KOREA" />
+  //               </a>
+  //               <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>해외전문인력유치센터</strong>
+  //               </a>
+  //             </p>
+  //             <p class="">
+  //               <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_10.png" alt="Kodits" title="Kodits" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>방산물자교역지원센터</strong>
+  //               </a>
+  //             </p>
+  //             <p class="">
+  //               <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
+  //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_13.png" alt="무역투자빅데이터" title="무역투자빅데이터" />
+  //               </a>
+  //               <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //                 <strong>무역투자빅데이터</strong>
+  //               </a>
+  //             </p>
+  //           </div>
+  //           <button type="button" class="btn_close"><span>닫기</span></button>
+  //         </div>
+  //       </div>
+  //     </div>
+  //     <a href="https://dream.kotra.or.kr/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새창 이동"><span>해외경제정보드림</span></a>
+  //   </div>
 
-    <nav>
-      <ul id="gnb">
-        <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=10" title="뉴스 현재창  이동" data-sub="Y" target="_self" class="10">뉴스</a>
-          <p class="gnbTit">
-            <b>뉴스</b>
-            <span></span>
-          </p>
+  //   <nav>
+  //     <ul id="gnb">
+  //       <li class="child">
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=10" title="뉴스 현재창  이동" data-sub="Y" target="_self" class="10">뉴스</a>
+  //         <p class="gnbTit">
+  //           <b>뉴스</b>
+  //           <span></span>
+  //         </p>
 
-          <ul class="menuM">
-            <li class="emptyArea">
-              <p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p>
-            </li>
-            <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" class="70" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
-            </li>
-            <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" class="80" title="경제∙무역 현재창  이동" data-sub="N" target="_self">경제∙무역</a>
-            </li>
-            <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" class="90" title="통상∙규제 현재창  이동" data-sub="N" target="_self">통상∙규제</a>
-            </li>
-            <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" class="100" title="투자진출 현재창  이동" data-sub="N" target="_self">투자진출</a>
-            </li>
-            <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" class="110" title="현장∙인터뷰 현재창  이동" data-sub="N" target="_self">현장∙인터뷰</a>
-            </li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" class="1480" title="기고 현재창  이동" data-sub="Y" target="_self">기고</a>
-              <ul class="menuS">
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=130" class="130" title="" data-sub="N" target="_self">전문가기고</a>
-                </li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=140" class="140" title="" data-sub="N" target="_self">직원기고</a>
-                </li>
-              </ul>
-            </li>
-            <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" class="290" title="글로벌 이슈 모니터링 현재창  이동" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
-            </li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" class="1550" title="글로벌 공급망 동향 현재창  이동" data-sub="Y" target="_self">글로벌 공급망 동향</a>
-              <ul class="menuS">
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1360" class="1360" title="" data-sub="N" target="_self">동향뉴스</a>
-                </li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1560" class="1560" title="" data-sub="N" target="_self">글로벌 공급망 인사이트</a>
-                </li>
-              </ul>
-            </li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" class="1500" title="글로벌 ESG 정보 현재창  이동" data-sub="Y" target="_self">글로벌 ESG 정보</a>
-              <ul class="menuS">
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1520" class="1520" title="" data-sub="N" target="_self">동향뉴스</a>
-                </li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1510" class="1510" title="" data-sub="N" target="_self">연관 보고서</a>
-                </li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1570" class="1570" title="" data-sub="N" target="_self">ESG 활용지원센터</a>
-                </li>
-              </ul>
-            </li>
-            <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" class="1580" title="미국 통상정책 주요 동향 현재창  이동" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
-            </li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" class="1470" title="핫클립 현재창  이동" data-sub="Y" target="_self">핫클립</a>
-              <ul class="menuS">
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1590" class="1590" title="" data-sub="N" target="_self">우크라이나 사태 해외동향</a>
-                </li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1490" class="1490" title="" data-sub="N" target="_self">중동 관련 주요 동향</a>
-                </li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1460" class="1460" title="" data-sub="N" target="_self">지금 수출 현장은</a>
-                </li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=120" class="120" title="" data-sub="N" target="_self">기획리포트</a>
-                </li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=150" class="150" title="" data-sub="N" target="_self">일자리동향</a>
-                </li>
-              </ul>
-            </li>
-            <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" class="1630" title="산업뉴스콕콕 현재창  이동" data-sub="Y" target="_self">산업뉴스콕콕</a>
-            </li>
-          </ul>
-        </li>
+  //         <ul class="menuM">
+  //           <li class="emptyArea">
+  //             <p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p>
+  //           </li>
+  //           <li class="">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" class="70" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+  //           </li>
+  //           <li class="">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" class="80" title="경제∙무역 현재창  이동" data-sub="N" target="_self">경제∙무역</a>
+  //           </li>
+  //           <li class="">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" class="90" title="통상∙규제 현재창  이동" data-sub="N" target="_self">통상∙규제</a>
+  //           </li>
+  //           <li class="">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" class="100" title="투자진출 현재창  이동" data-sub="N" target="_self">투자진출</a>
+  //           </li>
+  //           <li class="">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" class="110" title="현장∙인터뷰 현재창  이동" data-sub="N" target="_self">현장∙인터뷰</a>
+  //           </li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" class="1480" title="기고 현재창  이동" data-sub="Y" target="_self">기고</a>
+  //             <ul class="menuS">
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=130" class="130" title="" data-sub="N" target="_self">전문가기고</a>
+  //               </li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=140" class="140" title="" data-sub="N" target="_self">직원기고</a>
+  //               </li>
+  //             </ul>
+  //           </li>
+  //           <li class="">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" class="290" title="글로벌 이슈 모니터링 현재창  이동" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
+  //           </li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" class="1550" title="글로벌 공급망 동향 현재창  이동" data-sub="Y" target="_self">글로벌 공급망 동향</a>
+  //             <ul class="menuS">
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1360" class="1360" title="" data-sub="N" target="_self">동향뉴스</a>
+  //               </li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1560" class="1560" title="" data-sub="N" target="_self">글로벌 공급망 인사이트</a>
+  //               </li>
+  //             </ul>
+  //           </li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" class="1500" title="글로벌 ESG 정보 현재창  이동" data-sub="Y" target="_self">글로벌 ESG 정보</a>
+  //             <ul class="menuS">
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1520" class="1520" title="" data-sub="N" target="_self">동향뉴스</a>
+  //               </li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1510" class="1510" title="" data-sub="N" target="_self">연관 보고서</a>
+  //               </li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1570" class="1570" title="" data-sub="N" target="_self">ESG 활용지원센터</a>
+  //               </li>
+  //             </ul>
+  //           </li>
+  //           <li class="">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" class="1580" title="미국 통상정책 주요 동향 현재창  이동" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
+  //           </li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" class="1470" title="핫클립 현재창  이동" data-sub="Y" target="_self">핫클립</a>
+  //             <ul class="menuS">
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1590" class="1590" title="" data-sub="N" target="_self">우크라이나 사태 해외동향</a>
+  //               </li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1490" class="1490" title="" data-sub="N" target="_self">중동 관련 주요 동향</a>
+  //               </li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1460" class="1460" title="" data-sub="N" target="_self">지금 수출 현장은</a>
+  //               </li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=120" class="120" title="" data-sub="N" target="_self">기획리포트</a>
+  //               </li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=150" class="150" title="" data-sub="N" target="_self">일자리동향</a>
+  //               </li>
+  //             </ul>
+  //           </li>
+  //           <li class="">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" class="1630" title="산업뉴스콕콕 현재창  이동" data-sub="Y" target="_self">산업뉴스콕콕</a>
+  //           </li>
+  //         </ul>
+  //       </li>
 
-        <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=20" title="상품·산업 현재창  이동" data-sub="Y" target="_self" class="20">상품·산업</a>
-          <p class="gnbTit"><b>상품·산업</b><span></span></p>
-          <ul class="menuM">
-            <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" class="170" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" class="180" title="트렌드 현재창  이동" data-sub="N" target="_self">트렌드</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" class="190" title="상품DB 현재창  이동" data-sub="N" target="_self">상품DB</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" class="200" title="국별주요산업 현재창  이동" data-sub="N" target="_self">국별주요산업</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" class="210" title="해외인증정보 현재창  이동" data-sub="N" target="_self">해외인증정보</a></li>
-          </ul>
-        </li>
+  //       <li class="child">
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=20" title="상품·산업 현재창  이동" data-sub="Y" target="_self" class="20">상품·산업</a>
+  //         <p class="gnbTit"><b>상품·산업</b><span></span></p>
+  //         <ul class="menuM">
+  //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" class="170" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" class="180" title="트렌드 현재창  이동" data-sub="N" target="_self">트렌드</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" class="190" title="상품DB 현재창  이동" data-sub="N" target="_self">상품DB</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" class="200" title="국별주요산업 현재창  이동" data-sub="N" target="_self">국별주요산업</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" class="210" title="해외인증정보 현재창  이동" data-sub="N" target="_self">해외인증정보</a></li>
+  //         </ul>
+  //       </li>
 
-        <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=30" title="국가·지역정보 현재창  이동" data-sub="Y" target="_self" class="30">국가·지역정보</a>
-          <p class="gnbTit"><b>국가·지역정보</b><span></span></p>
-          <ul class="menuM">
-            <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" class="220" title="국가지역정보 현재창  이동" data-sub="N" target="_self">국가지역정보</a></li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" class="240" title="북한정보 현재창  이동" data-sub="Y" target="_self">북한정보</a>
-              <ul class="menuS">
-                <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=520" class="520" title="" data-sub="N" target="_self">북한정보</a></li>
-                <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=530" class="530" title="" data-sub="N" target="_self">북한대외무역동향</a></li>
-              </ul>
-            </li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" class="250" title="진출전략 현재창  이동" data-sub="N" target="_self">진출전략</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" class="260" title="출장자료 현재창  이동" data-sub="N" target="_self">출장자료</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" class="270" title="무역관뉴스레터 현재창  이동" data-sub="N" target="_self">무역관뉴스레터</a></li>
-          </ul>
-        </li>
+  //       <li class="child">
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=30" title="국가·지역정보 현재창  이동" data-sub="Y" target="_self" class="30">국가·지역정보</a>
+  //         <p class="gnbTit"><b>국가·지역정보</b><span></span></p>
+  //         <ul class="menuM">
+  //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" class="220" title="국가지역정보 현재창  이동" data-sub="N" target="_self">국가지역정보</a></li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" class="240" title="북한정보 현재창  이동" data-sub="Y" target="_self">북한정보</a>
+  //             <ul class="menuS">
+  //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=520" class="520" title="" data-sub="N" target="_self">북한정보</a></li>
+  //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=530" class="530" title="" data-sub="N" target="_self">북한대외무역동향</a></li>
+  //             </ul>
+  //           </li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" class="250" title="진출전략 현재창  이동" data-sub="N" target="_self">진출전략</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" class="260" title="출장자료 현재창  이동" data-sub="N" target="_self">출장자료</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" class="270" title="무역관뉴스레터 현재창  이동" data-sub="N" target="_self">무역관뉴스레터</a></li>
+  //         </ul>
+  //       </li>
 
-        <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=40" title="보고서 현재창  이동" data-sub="Y" target="_self" class="40">보고서</a>
-          <p class="gnbTit"><b>보고서</b><span></span></p>
-          <ul class="menuM">
-            <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" class="280" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
-          </ul>
-        </li>
+  //       <li class="child">
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=40" title="보고서 현재창  이동" data-sub="Y" target="_self" class="40">보고서</a>
+  //         <p class="gnbTit"><b>보고서</b><span></span></p>
+  //         <ul class="menuM">
+  //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" class="280" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
+  //         </ul>
+  //       </li>
 
-        <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=50" title="멀티미디어뉴스 현재창  이동" data-sub="Y" target="_self" class="50">멀티미디어뉴스</a>
-          <p class="gnbTit"><b>멀티미디어뉴스</b><span></span></p>
-          <ul class="menuM">
-            <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" class="540" title="동영상뉴스 현재창  이동" data-sub="N" target="_self">동영상뉴스</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" class="310" title="포토뉴스 현재창  이동" data-sub="N" target="_self">포토뉴스</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" class="320" title="카드뉴스 현재창  이동" data-sub="N" target="_self">카드뉴스</a></li>
-          </ul>
-        </li>
+  //       <li class="child">
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=50" title="멀티미디어뉴스 현재창  이동" data-sub="Y" target="_self" class="50">멀티미디어뉴스</a>
+  //         <p class="gnbTit"><b>멀티미디어뉴스</b><span></span></p>
+  //         <ul class="menuM">
+  //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" class="540" title="동영상뉴스 현재창  이동" data-sub="N" target="_self">동영상뉴스</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" class="310" title="포토뉴스 현재창  이동" data-sub="N" target="_self">포토뉴스</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" class="320" title="카드뉴스 현재창  이동" data-sub="N" target="_self">카드뉴스</a></li>
+  //         </ul>
+  //       </li>
 
-        <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=60" title="해외투자 현재창  이동" data-sub="Y" target="_self" class="60">해외투자</a>
-          <p class="gnbTit"><b>해외투자</b><span></span></p>
-          <ul class="menuM">
-            <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" class="350" title="해외투자안내 현재창  이동" data-sub="N" target="_self">해외투자안내</a></li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" class="360" title="직접투자절차 현재창  이동" data-sub="Y" target="_self">직접투자절차</a>
-              <ul class="menuS">
-                <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=570" class="570" title="" data-sub="N" target="_self">해외투자준비</a></li>
-                <li class=""><a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a></li>
-                <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=600" class="600" title="" data-sub="N" target="_self">FAQ</a></li>
-              </ul>
-            </li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" class="370" title="국별참고자료 현재창  이동" data-sub="Y" target="_self">국별참고자료</a>
-              <ul class="menuS">
-                <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=610" class="610" title="" data-sub="N" target="_self">법규&middot;서식</a></li>
-                <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=620" class="620" title="" data-sub="N" target="_self">진출기업지원세미나자료</a></li>
-              </ul>
-            </li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" class="1350" title="진출기업정보 현재창  이동" data-sub="N" target="_self">진출기업정보</a></li>
-          </ul>
-        </li>
+  //       <li class="child">
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=60" title="해외투자 현재창  이동" data-sub="Y" target="_self" class="60">해외투자</a>
+  //         <p class="gnbTit"><b>해외투자</b><span></span></p>
+  //         <ul class="menuM">
+  //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" class="350" title="해외투자안내 현재창  이동" data-sub="N" target="_self">해외투자안내</a></li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" class="360" title="직접투자절차 현재창  이동" data-sub="Y" target="_self">직접투자절차</a>
+  //             <ul class="menuS">
+  //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=570" class="570" title="" data-sub="N" target="_self">해외투자준비</a></li>
+  //               <li class=""><a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a></li>
+  //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=600" class="600" title="" data-sub="N" target="_self">FAQ</a></li>
+  //             </ul>
+  //           </li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" class="370" title="국별참고자료 현재창  이동" data-sub="Y" target="_self">국별참고자료</a>
+  //             <ul class="menuS">
+  //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=610" class="610" title="" data-sub="N" target="_self">법규&middot;서식</a></li>
+  //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=620" class="620" title="" data-sub="N" target="_self">진출기업지원세미나자료</a></li>
+  //             </ul>
+  //           </li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" class="1350" title="진출기업정보 현재창  이동" data-sub="N" target="_self">진출기업정보</a></li>
+  //         </ul>
+  //       </li>
 
-        <li class="child" style="display: none">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=400" title="열린마당 현재창  이동" data-sub="Y" target="_self" class="400">열린마당</a>
-          <p class="gnbTit"><b>열린마당</b><span></span></p>
-          <ul class="menuM">
-            <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" class="1310" title="공지사항 현재창  이동" data-sub="Y" target="_self">공지사항</a></li>
-            <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" class="1320" title="고객조사제안  현재창  이동" data-sub="Y" target="_self">고객조사제안 </a></li>
-            <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" class="670" title="뉴스레터신청 현재창  이동" data-sub="Y" target="_self">뉴스레터신청</a></li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" class="1340" title="고객문의 현재창  이동" data-sub="Y" target="_self">고객문의</a>
-              <ul class="menuS">
-                <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=640" class="640" title="" data-sub="Y" target="_self">고객문의</a></li>
-              </ul>
-            </li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" class="680" title="사이트이용 현재창  이동" data-sub="Y" target="_self">사이트이용</a>
-              <ul class="menuS">
-                <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=710" class="710" title="" data-sub="Y" target="_self">API</a></li>
-                <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=720" class="720" title="" data-sub="Y" target="_self">RSS2.0</a></li>
-                <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=750" class="750" title="" data-sub="Y" target="_self">뷰어다운로드</a></li>
-              </ul>
-            </li>
-            <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" class="730" title="정책∙방침 현재창  이동" data-sub="Y" target="_self">정책∙방침</a>
-              <ul class="menuS">
-                <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1010" class="1010" title="" data-sub="Y" target="_self">저작권정책</a></li>
-                <li class="">
-                  <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1400" class="1400" title="" data-sub="Y" target="_self">개인정보처리방침</a>
-                  <ul class="menuX" style="display: none">
-                    <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1430" class="1430" title="" target="_self">개인정보처리방침</a></li>
-                    <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1020" class="1020" title="" target="_self">개인정보처리방침(2022.05.16)</a></li>
-                    <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1410" class="1410" title="" target="_self">개인정보처리방침(2021.07.07)</a></li>
-                  </ul>
-                </li>
-                <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1030" class="1030" title="" data-sub="Y" target="_self">공공데이터개방</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+  //       <li class="child" style="display: none">
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=400" title="열린마당 현재창  이동" data-sub="Y" target="_self" class="400">열린마당</a>
+  //         <p class="gnbTit"><b>열린마당</b><span></span></p>
+  //         <ul class="menuM">
+  //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" class="1310" title="공지사항 현재창  이동" data-sub="Y" target="_self">공지사항</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" class="1320" title="고객조사제안  현재창  이동" data-sub="Y" target="_self">고객조사제안 </a></li>
+  //           <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" class="670" title="뉴스레터신청 현재창  이동" data-sub="Y" target="_self">뉴스레터신청</a></li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" class="1340" title="고객문의 현재창  이동" data-sub="Y" target="_self">고객문의</a>
+  //             <ul class="menuS">
+  //               <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=640" class="640" title="" data-sub="Y" target="_self">고객문의</a></li>
+  //             </ul>
+  //           </li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" class="680" title="사이트이용 현재창  이동" data-sub="Y" target="_self">사이트이용</a>
+  //             <ul class="menuS">
+  //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=710" class="710" title="" data-sub="Y" target="_self">API</a></li>
+  //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=720" class="720" title="" data-sub="Y" target="_self">RSS2.0</a></li>
+  //               <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=750" class="750" title="" data-sub="Y" target="_self">뷰어다운로드</a></li>
+  //             </ul>
+  //           </li>
+  //           <li class="child">
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" class="730" title="정책∙방침 현재창  이동" data-sub="Y" target="_self">정책∙방침</a>
+  //             <ul class="menuS">
+  //               <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1010" class="1010" title="" data-sub="Y" target="_self">저작권정책</a></li>
+  //               <li class="">
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1400" class="1400" title="" data-sub="Y" target="_self">개인정보처리방침</a>
+  //                 <ul class="menuX" style="display: none">
+  //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1430" class="1430" title="" target="_self">개인정보처리방침</a></li>
+  //                   <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1020" class="1020" title="" target="_self">개인정보처리방침(2022.05.16)</a></li>
+  //                   <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1410" class="1410" title="" target="_self">개인정보처리방침(2021.07.07)</a></li>
+  //                 </ul>
+  //               </li>
+  //               <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1030" class="1030" title="" data-sub="Y" target="_self">공공데이터개방</a></li>
+  //             </ul>
+  //           </li>
+  //         </ul>
+  //       </li>
 
-        <li class="" style="display: none">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=770" title="로그인 현재창  이동" data-sub="Y" target="_self" class="770">로그인</a>
-          <p class="gnbTit"><b>로그인</b><span></span></p>
-        </li>
-      </ul>
-    </nav>
+  //       <li class="" style="display: none">
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=770" title="로그인 현재창  이동" data-sub="Y" target="_self" class="770">로그인</a>
+  //         <p class="gnbTit"><b>로그인</b><span></span></p>
+  //       </li>
+  //     </ul>
+  //   </nav>
 
-    <div class="gnb_util">
-      <fieldset class="totalSearchArea">
-        <legend>메뉴검색</legend>
-        <div class="search_opt">
-          <button type="button" title="검색어를 입력하세요" class="btn_searchOpt" name="tDiv" value="ALL">통합검색</button>
-          <ul>
-            <li><button type="button" value="ALL" title="통합검색">통합검색</button></li>
-            <li><button type="button" value="TITLE" title="제목">제목</button></li>
-            <li><button type="button" value="CONT" title="내용">내용</button></li>
-          </ul>
-        </div>
-        <input type="text" title="검색어입력" class="search_inp" onkeyup="fn_enterkey()" />
-        <button type="button" class="btn_search" title="검색"><span>검색</span></button>
-      </fieldset>
-      <button type="button" class="btn_sitemap" title="사이트맵"><span>사이트맵</span></button>
-    </div>
+  //   <div class="gnb_util">
+  //     <fieldset class="totalSearchArea">
+  //       <legend>메뉴검색</legend>
+  //       <div class="search_opt">
+  //         <button type="button" title="검색어를 입력하세요" class="btn_searchOpt" name="tDiv" value="ALL">통합검색</button>
+  //         <ul>
+  //           <li><button type="button" value="ALL" title="통합검색">통합검색</button></li>
+  //           <li><button type="button" value="TITLE" title="제목">제목</button></li>
+  //           <li><button type="button" value="CONT" title="내용">내용</button></li>
+  //         </ul>
+  //       </div>
+  //       <input type="text" title="검색어입력" class="search_inp" onkeyup="fn_enterkey()" />
+  //       <button type="button" class="btn_search" title="검색"><span>검색</span></button>
+  //     </fieldset>
+  //     <button type="button" class="btn_sitemap" title="사이트맵"><span>사이트맵</span></button>
+  //   </div>
 
-    <button type="button" title="메뉴 닫기" class="mBtn_close">메뉴 닫기</button>
-    <!-- 모바일 전용 -->
-  </header>
+  //   <button type="button" title="메뉴 닫기" class="mBtn_close">메뉴 닫기</button>
+  //   <!-- 모바일 전용 -->
+  // </header>
+  // `);
+
+  $('#header').html(`
+    
   `);
+
 
   // 사이트맵
   $('section.sitemapBox').html(`
@@ -1147,7 +1152,7 @@ function initCommonLayout() {
     <footer class="footer_kotra">
           <div class="footer_kotra_wrapper">
             <p class="footer_kotra_logo">
-            <img src="../img/logo/logo_kotra_news_white.svg" alt="코트라뉴스 로고">
+            <img src="../img/logo/logo_kotra_news_white.svg" alt="해외시장뉴스 로고">
             </p>
             <div class="footer_kotra_info">
               <ul class="footer_list_menu">
