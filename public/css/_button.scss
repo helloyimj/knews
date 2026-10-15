@@ -125,7 +125,7 @@
 .btnC_s.arrR>span:before  { display:block;position:absolute;top:50%;right:0;width:8px;height:12px;margin-top:-6px;background: url(../img/common/sprite_component.png) no-repeat -225px -545px;content:'';}
 
 .btn_infoOpen { display:block;position:relative;width:18px;height:18px;background: url(../img/common/sprite_component.png) no-repeat -178px -544px;}
-.btn_infoOpen>span { overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0, 0);}
+.btn_infoOpen>span { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 /* .btnC_s.listSolo { padding:0 15px;border:1px solid #4286ea !important;} */
 /* .btnC_s.listSolo>span { position:relative;padding-left:30px;color:#4286ea !important;} */
 .btnC_s.listSolo { padding:0 15px;border:1px solid #008580 !important;}
@@ -134,7 +134,7 @@
 .btnC_s.listSolo:hover { background:#fff !important;}
 
 .btn_downC { display:inline-block;width:46px;height:46px;border-radius:50%;background-color:#eeeff1;background-image:url(../img/common/ico_downS_black.png);background-repeat:no-repeat;background-position:center;transition:.2s all;vertical-align:top;}
-.btn_downC>span { overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0, 0);}
+.btn_downC>span { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 .btn_downC:hover { background-color:#212e4e;background-image:url(../img/common/ico_downS_white.png);}
 
 .btn_scrap { display:inline-block;overflow:hidden;position:relative;box-sizing:border-box;height:40px;padding:0 13px 0 40px;border:1px solid #4286ea;border-radius:2px;color:#4286ea;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:41px;font-weight:400;text-align:left;transition:0.2s;}
@@ -189,7 +189,7 @@
 .btn_loadClose { position:absolute;top:15px;right:15px;width:22px;height:22px;}
 .btn_loadClose .line1 { position: absolute;top:10px;left: 0px;width: 22px;height: 1px;background: #222;transform: rotate(45deg);}
 .btn_loadClose .line2 { position: absolute;top:10px;left: 0px;width: 22px;height: 1px;background: #222;transform: rotate(-45deg);}
-.btn_loadClose span { overflow: hidden;position: absolute;top: 0;left: 0;width: 1px;height: 1px;margin: 1px;border: none;clip: rect(0, 0, 0, 0);}
+.btn_loadClose span { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 
 @keyframes bar { 
 	from  { width:0; }

@@ -1,5 +1,22 @@
 @charset "utf-8";
 
+/* WCAG C40: dual focus ring (light + dark)
+   Always draw INSIDE the element so overflow:hidden parents cannot clip it.
+   - outline + negative offset: paints above children (visible on dark buttons)
+   - inset box-shadow: visible on light backgrounds
+   ($inset kept for call-site compat; always inner) */
+@mixin focus-ring-contrast($inset: true, $important: false) {
+	@if $important {
+		outline: 2px dashed #fff !important;
+		outline-offset: -2px !important;
+		box-shadow: inset 0 0 0 4px #212E4E !important;
+	} @else {
+		outline: 2px dashed #fff;
+		outline-offset: -2px;
+		box-shadow: inset 0 0 0 4px #212E4E;
+	}
+}
+
 /* skip menu */
 #skip_menu a{position:absolute;opacity:0;}
 #skip_menu a:focus{display:inline-block;z-index:9999;padding:10px;background:#000;color:#fff;font-size:15px;opacity:1;}
@@ -25,7 +42,7 @@
 }
 
 /* ============================================================ */
-/* 유틸 / 헬퍼 */
+/* ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¸ / ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼ */
 /* ============================================================ */
 .topExclam.txtR { margin-bottom:10px;}
 .txtL { text-align:left !important;}
@@ -360,21 +377,21 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, 
 	}
 }
 /* ============================================================ */
-/* 웹접근성 */
+/* ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ·ÃÂÃÂÃÂÃÂ¼ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ± */
 /* ============================================================ */
-/* 웹접근성 */
-.sr-only { 
-	overflow: hidden;
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-	clip: rect(0, 0, 0, 0);
+/* ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ·ÃÂÃÂÃÂÃÂ¼ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ± */
+.sr-only {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	white-space: nowrap !important;
+	border: 0 !important;
 }
 
-/* hs code 찾기 버튼 위치 조정 (뷰어다운로드) */
+/* hs code ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂ¾ÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂ° ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ²ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼ ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ (ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ·ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ) */
 @media all and (max-width:450px) {
 .lineTop_tbArea .lineTop_tb2{
             min-width: auto !important;

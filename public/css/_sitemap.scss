@@ -59,7 +59,7 @@
 .sitemapBox_reN .map_gnb>li+li { margin-left:70px;}
 .sitemapBox_reN #sitemap { position:relative;margin-top:-10px;}
 .sitemapBox_reN #sitemap>li { position:relative;}
-.sitemapBox_reN #sitemap>li>a { overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0, 0);}
+.sitemapBox_reN #sitemap>li>a { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 .sitemapBox_reN #sitemap .menuM>li { margin-top:10px;}
 .sitemapBox_reN #sitemap .menuM>li>a { display:block;box-sizing:border-box;width:100%;padding:10px 50px;background:#eff6fd;color:#222;font-size:18px;font-weight:700;}
 .sitemapBox_reN #sitemap .menuS { margin-top:-25px;padding:30px 50px;font-size:0;}
@@ -150,7 +150,7 @@
 .sitemapArea #sitemap a:hover { text-decoration:underline;}
 
 
-@media all and (max-width:1041) {
+@media all and (max-width:1041px) {
     
     /* 사이트맵 */
     .sitemapArea { margin-top:0;}

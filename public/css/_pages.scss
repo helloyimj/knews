@@ -172,7 +172,7 @@
 .findParter_view .list.multi .lineList_ul.typeLikeList>ul>li .likeBtn {width:100%;margin-top:10px;}
 .findParter_view .list.multi .lineList_ul.typeLikeList>ul>li .btn_like {position:relative;top:0;transform:none;}
 .findParter_view .list.multi .lineTop_tbArea .lineTop_tbL2 th {padding-left:15px;padding-right:10px;}
-.findParter_view .list.multi .lineTop_tbArea .lineTop_tbL2 td {padding-left:15px;padding-right:15px;word-break: break-word;}
+.findParter_view .list.multi .lineTop_tbArea .lineTop_tbL2 td {padding-left:15px;padding-right:15px;overflow-wrap: break-word;}
 .findParter_view .list.multi .iconTop_infoBox {min-height:370px;padding-top:100px;background:#fff;border:0;}
 .findParter_view .list.multi .iconTop_infoBox .txt {text-align:center;}
 .findParter_view .list.multi:nth-child(n+3) {margin-top:80px;}
@@ -416,7 +416,7 @@
 .organ-info-item{ float: left; width: 48%; margin: 0 4% 12px 0; border: 1px solid #ddd; border-radius: 8px; padding: 0; background: #fff; min-height: 40px; box-sizing: border-box; }
 .organ-info-item:nth-child(2n){ margin-right: 0; }
 .organ-info-label{ display: inline-block; width: 32%; vertical-align: middle; font-size: 15px; background: #f4f5f7; color: #222; padding: 6px 8px; border-radius: 6px; text-align: left; white-space: nowrap; }
-.organ-info-value{ display: inline-block; width: 62%; vertical-align: middle; font-size: 15px; word-break: break-word; text-align: left; }
+.organ-info-value{ display: inline-block; width: 62%; vertical-align: middle; font-size: 15px; overflow-wrap: break-word; text-align: left; }
 @supports (display: grid) {
 .organ-info-list{ display: grid; overflow: visible; grid-template-columns: repeat(2, 1fr); gap: 12px; align-items: stretch; }
 .organ-info-item{ display: grid; float: none; width: auto; margin: 0; grid-template-columns: 1fr 2fr; gap: 8px; align-items: center; }

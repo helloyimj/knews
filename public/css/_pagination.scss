@@ -23,6 +23,18 @@
 .pagination .paging>li>a { display:inline-block;overflow:hidden;box-sizing:border-box;min-width:30px;height:30px;padding:0 5px;border-radius:3px;color:#666;font-family:'Roboto',sans-serif;font-size:15px;line-height:30px;transition:0.2s;}
 .pagination .paging>li>:hover,
 .pagination .paging>li>.on { background:#212e4e;color:#fff;font-weight:500;}
+.pagination .paging>li>button:focus,
+.pagination .paging>li>button:focus-visible,
+.pagination .paging>li>a:focus,
+.pagination .paging>li>a:focus-visible {
+	@include focus-ring-contrast;
+}
+.pagination>button:focus,
+.pagination>button:focus-visible,
+.pagination>a:focus,
+.pagination>a:focus-visible {
+	@include focus-ring-contrast(false);
+}
 
 .typeNoArticle { height:auto !important;padding:0 !important;}
 .no_article { display:block;width:100%;padding:165px 0 65px;background:url(../img/board/ico_noArticle.png) no-repeat 50% 60px;color:#72737a;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:18px;line-height:25px;text-align:center;}

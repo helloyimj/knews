@@ -1485,7 +1485,7 @@ td .needs { color:#272727;font-weight:bold;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody tr:hover td { background-color:#f4f5f7;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody tr:hover .select { background-color:transparent;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody tr.typeNoArticle:hover td { background-color:transparent;}
-#pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody td{position:relative;padding-right:10px;padding-left:10px;font-size:15px;font-size:15px;word-break:break-word;}
+#pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody td{position:relative;padding-right:10px;padding-left:10px;font-size:15px;font-size:15px;overflow-wrap: break-word;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody td:nth-last-child(2) { border-right:none;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 .select { display:block;position:absolute;top:0;left:0;box-sizing:border-box;width:100%;height:100%;border:none;background-color:transparent;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 .select button { display:block;position:relative;width:100%;height:100%;}
@@ -1520,7 +1520,7 @@ td .needs { color:#272727;font-weight:bold;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody tr:hover td { background-color:#f4f5f7;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody tr:hover .select { background-color:transparent;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody tr.typeNoArticle:hover td { background-color:transparent;}
-#pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody td{padding-right:10px;padding-left:10px;font-size:15px;font-size:15px;word-break:break-word;}
+#pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody td{padding-right:10px;padding-left:10px;font-size:15px;font-size:15px;overflow-wrap: break-word;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody td:nth-last-child(2) { border-right:none;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 .select { display:block;position:absolute;top:0;left:0;box-sizing:border-box;width:100%;height:100%;border:none;background-color:transparent;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 .select button { display:block;position:relative;width:100%;height:100%;}
@@ -2696,7 +2696,7 @@ td .needs { color:#272727;font-weight:bold;}
     .flagList.typeChk>ul>li .inp_c.only { top:5px;}
 
     /* 로그인 팝업 */
-    #pop_myDream_account_logInfo .lineTop_tbArea .lineTop_tb2 tbody td { padding-right:5px;padding-left:5px;font-size:13px;letter-spacing:-.5px;word-break:break-word;}
+    #pop_myDream_account_logInfo .lineTop_tbArea .lineTop_tb2 tbody td { padding-right:5px;padding-left:5px;font-size:13px;letter-spacing:-.5px;overflow-wrap: break-word;}
     #pop_myDream_account_logInfo.popLayout .popConts .popInner.limit { max-height:400px !important;}
 
     .flowBox { padding-right:20px;}
@@ -4652,7 +4652,7 @@ td .needs { color:#272727;font-weight:bold;}
     white-space: normal;
     letter-spacing: -1px;
     text-overflow: ellipsis;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: keep-all;
@@ -4867,7 +4867,7 @@ td .needs { color:#272727;font-weight:bold;}
     white-space: normal;
     letter-spacing: -1px;
     text-overflow: ellipsis;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: keep-all;

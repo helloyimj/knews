@@ -50,7 +50,7 @@
 @import "board_etc"; // 게시판 상세페이지 유틸 등
 @import "pages"; // 개별 페이지(수출파트너, 해외진출기업, 로그인, 에러)
 
-// 20260921 코트라 푸터 
+// 코트라 아이덴티티, 푸터 
 @import "masthead_kotra";
 @import "footer_kotra";
 
@@ -59,6 +59,8 @@
 
 // dream 분리 — 시장뉴스 html 미사용(마이드림, mbti, ODA, 대시보드 등)
 @import "common_dream";
+// 팝업
+@import "popup";
 
 // 삭제 예정
 @import "header";

@@ -982,7 +982,7 @@ dd .add_openNoti {width:100%;margin-left:0;}
 .findParter_view .list.multi .lineList_ul.typeLikeList>ul>li .likeBtn {width:100%;margin-top:10px;}
 .findParter_view .list.multi .lineList_ul.typeLikeList>ul>li .btn_like {position:relative;top:0;transform:none;}
 .findParter_view .list.multi .lineTop_tbArea .lineTop_tbL2 th {padding-left:15px;padding-right:10px;}
-.findParter_view .list.multi .lineTop_tbArea .lineTop_tbL2 td {padding-left:15px;padding-right:15px;word-break: break-word;}
+.findParter_view .list.multi .lineTop_tbArea .lineTop_tbL2 td {padding-left:15px;padding-right:15px;overflow-wrap: break-word;}
 .findParter_view .list.multi .iconTop_infoBox {min-height:370px;padding-top:100px;background:#fff;border:0;}
 .findParter_view .list.multi .iconTop_infoBox .txt {text-align:center;}
 .findParter_view .list.multi:nth-child(n+3) {margin-top:80px;}
@@ -3301,7 +3301,7 @@ dd .add_openNoti {width:100%;margin-left:0;}
 
 .organ-info-value{
     font-size: 0.95rem;
-    word-break: break-word;
+    overflow-wrap: break-word;
     text-align: left;
 }
 

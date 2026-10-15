@@ -43,7 +43,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
 .masthead_kotra {
   width: 100%;
   position: relative;
-  z-index: 1000;
+  z-index: 100;
   // border-bottom: 2px solid $c-primary;
 
   &.open {

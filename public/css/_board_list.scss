@@ -23,9 +23,9 @@
 .lineList_tb .typeCommen .txtL a {max-width:calc(100% - 55px);}
 .lineList_tb .typeIco.typeCommen .txtL a {max-width:calc(100% - 135px);}
 .lineList_tb .hasFile {position:relative;display:inline-block;width:22px;height:19px;background:url(../img/common/ico_list_down.png) no-repeat left 50% top 50%;vertical-align:middle;}
-.lineList_tb .hasFile>em {position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;overflow:hidden; clip:rect(0, 0, 0, 0);vertical-align:middle;}
+.lineList_tb .hasFile>em {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;vertical-align:middle;}
 .lineList_tb .ico_view {position:relative;display:inline-block;width:23px;height:13px;background:url(../img/common/ico_viewFile.png) no-repeat left 50% top 50%;vertical-align:middle;}
-.lineList_tb .ico_view>em {position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;overflow:hidden; clip:rect(0, 0, 0, 0);vertical-align:middle;}
+.lineList_tb .ico_view>em {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;vertical-align:middle;}
 .lineList_tb.typeSPS {overflow-x:auto;}
 .lineList_tb.typeSPS>table {min-width:1200px;}
 .lineList_tb.typeSPS .sumTxt {display:inline-block;max-width: calc(100% - 23px);max-height:50px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;font-size:14px;text-align:left;}

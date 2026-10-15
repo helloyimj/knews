@@ -416,9 +416,25 @@ function initCommonLayout() {
                   </a>
                 </div>
                 <div class="masthead_family">
-                  <button type="button" class="btn_family_more" aria-expanded="false">
+                  <button type="button" class="btn_family_more" aria-expanded="false" aria-controls="pop_kotra_family" aria-haspopup="true">
                     <span class="sr-only">KOTRA 사이트 더보기</span>
                   </button>
+                  <div id="pop_kotra_family" class="pop_kotra_family" role="dialog" aria-label="KOTRA 패밀리 사이트" aria-hidden="true">
+                    <button type="button" class="btn_close" aria-label="패밀리 사이트 닫기">닫기</button>
+                    <ul class="list_kotra_family">
+                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr" target="_blank" class="family_site01" aria-label="kotra 무역투자24 (새 창 열림)">kotra 무역투자24</a></li>
+                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://dream.kotra.or.kr/dream" target="_blank" class="family_site02" aria-label="해외비즈니스 정보 포털 (새 창 열림)">해외비즈니스 정보 포털</a></li>
+                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.gep.or.kr/" target="_blank" class="family_site03" aria-label="글로벌 전시포털 (새 창 열림)">글로벌 전시포털</a></li>
+                      <li><a href="https://www.kotra.or.kr/gtc_kor" target="_blank" class="family_site04" aria-label="KOTRA 해외인재유치센터 (새 창 열림)">KOTRA 해외인재유치센터</a></li>
+                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.investkorea.org/" target="_blank" class="family_site05" aria-label="투자유치정보제공 (새 창 열림)">투자유치정보제공</a></li>
+                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.buykorea.or.kr/" target="_blank" class="family_site06" aria-label="수출지원 온라인 플랫폼 (새 창 열림)">수출지원 온라인 플랫폼</a></li>
+                      <li><a href="/bigdata/" target="_blank" class="family_site07" aria-label="빅데이터 서비스 (새 창 열림)">빅데이터 서비스</a></li>
+                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://president.globalwindow.org" target="_blank" class="family_site08" aria-label="경제외교 활용포털 (새 창 열림)">경제외교 활용포털</a></li>
+                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/kodits" target="_blank" class="family_site09" aria-label="방산물자교역지원센터 (새 창 열림)">방산물자교역지원센터</a></li>
+                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://ombudsman.kotra.or.kr/ob-kr" target="_blank" class="family_site10" aria-label="외투기업고충처리 (새 창 열림)">외투기업고충처리</a></li>
+                      <li><a href="https://www.exportvoucher.com" target="_blank" class="family_site11" aria-label="수출바우처 · 지사화 (새 창 열림)">수출바우처 · 지사화</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="masthead_links">
@@ -445,45 +461,13 @@ function initCommonLayout() {
                 </ul>
             </div>
               </div>
-              <div class="pop_kotra_family">
-                    <ul class="list_kotra_family">
-                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr" target="_blank" class="family_site01" aria-label="kotra 무역투자24 (새 창 열림)">kotra 무역투자24</a></li>
-                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://dream.kotra.or.kr/dream" target="_blank" class="family_site02" aria-label="해외비즈니스 정보 포털 (새 창 열림)">해외비즈니스 정보 포털</a></li>
-                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.gep.or.kr/" target="_blank" class="family_site03" aria-label="글로벌 전시포털 (새 창 열림)">글로벌 전시포털</a></li>
-                      <li><a href="https://www.kotra.or.kr/gtc_kor" target="_blank" class="family_site04" aria-label="KOTRA 해외인재유치센터 (새 창 열림)">KOTRA 해외인재유치센터</a></li>
-                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.investkorea.org/" target="_blank" class="family_site05" aria-label="투자유치정보제공 (새 창 열림)">투자유치정보제공</a></li>
-                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.buykorea.or.kr/" target="_blank" class="family_site06" aria-label="수출지원 온라인 플랫폼 (새 창 열림)">수출지원 온라인 플랫폼</a></li>
-                      <li><a href="/bigdata/" target="_blank" class="family_site07" aria-label="빅데이터 서비스 (새 창 열림)">빅데이터 서비스</a></li>
-                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://president.globalwindow.org" target="_blank" class="family_site08" aria-label="경제외교 활용포털 (새 창 열림)">경제외교 활용포털</a></li>
-                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/kodits" target="_blank" class="family_site09" aria-label="방산물자교역지원센터 (새 창 열림)">방산물자교역지원센터</a></li>
-                      <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://ombudsman.kotra.or.kr/ob-kr" target="_blank" class="family_site10" aria-label="외투기업고충처리 (새 창 열림)">외투기업고충처리</a></li>
-                      <li><a href="https://www.exportvoucher.com" target="_blank" class="family_site11" aria-label="수출바우처 · 지사화 (새 창 열림)">수출바우처 · 지사화</a></li>
-                    </ul>
-                    <button type="button" class="btn_close">닫기</button>
-                  </div>
             </div>	
           </div>    
         <script>
           $(function () {
-
-            $(".masthead_kotra .btn_family_more").click(function () {
-              $(".masthead_kotra .pop_kotra_family").slideDown();
-            });
-
-            $(".masthead_kotra .pop_kotra_family p").hover(function () {
-              $(this).addClass("on").siblings().removeClass("on");
-            });
-
-            $(".masthead_kotra .pop_kotra_family .btn_close").click(function () {
-              var btnOn = $(".pop_kotra_family p.on");
-              btnOn.removeClass("on");
-              if (btnOn) {
-                btnOn.find(".btn_o").hide();
-                btnOn.find(".btn_s").show();
-              }
-
-              $(".masthead_kotra .pop_kotra_family").slideUp();
-            });
+            if (typeof initMastheadFamilyPopup === "function") {
+              initMastheadFamilyPopup();
+            }
           });
 
         </script>

@@ -2,7 +2,7 @@
 
 /*** Layout ***/
 .alt_hidden, legend,
-caption>p { overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0, 0);}
+caption>p { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 caption>p { display:inline;}
 
 #dim,

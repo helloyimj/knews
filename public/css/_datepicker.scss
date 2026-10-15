@@ -30,3 +30,31 @@ input.inp_t~.timepicker { margin-left:5px;}
     .multipickerBox+.picker_txt { height:30px;}
     .multipickerBox>input { background-position:right 10px top 5px !important;}
 }
+
+/* --------------------------------------------------------------------------
+ * searchOpt focus override (datepicker.css / _form.scss 원본 수정 없음)
+ * - WCAG C40 이중 링 (흰 + #212E4E)
+ * -------------------------------------------------------------------------- */
+.searchOpt .date-picker-control,
+.searchOptBox .date-picker-control {
+	outline: none !important;
+}
+
+.searchOpt .date-picker-control:focus,
+.searchOpt .date-picker-control:focus-visible,
+.searchOptBox .date-picker-control:focus,
+.searchOptBox .date-picker-control:focus-visible {
+	@include focus-ring-contrast($important: true);
+}
+
+.searchOpt .inp_t:focus,
+.searchOpt .inp_t:focus-visible,
+.searchOpt .inp_s:focus,
+.searchOpt .inp_s:focus-visible,
+.searchOptBox .inp_t:focus,
+.searchOptBox .inp_t:focus-visible,
+.searchOptBox .inp_s:focus,
+.searchOptBox .inp_s:focus-visible {
+	border-color: #d9d9d9 !important;
+	@include focus-ring-contrast($important: true);
+}

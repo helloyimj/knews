@@ -666,11 +666,11 @@ td .needs { color:#272727;font-weight:bold;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody tr:hover td { background-color:#f4f5f7;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody tr:hover .select { background-color:transparent;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody tr.typeNoArticle:hover td { background-color:transparent;}
-#pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody td{position:relative;padding-right:10px;padding-left:10px;font-size:15px;font-size:15px;word-break:break-word;}
+#pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody td{position:relative;padding-right:10px;padding-left:10px;font-size:15px;font-size:15px;overflow-wrap: break-word;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 tbody td:nth-last-child(2) { border-right:none;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 .select { display:block;position:absolute;top:0;left:0;box-sizing:border-box;width:100%;height:100%;border:none;background-color:transparent;}
 #pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 .select button { display:block;position:relative;width:100%;height:100%;}
-#pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 .select button>span{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0 ,0);}
+#pop_hskNmtiCode .lineTop_tbArea.selTable .lineTop_tb2 .select button>span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 
 #pop_hskNmtiCode .lineTop_tbArea.codeTable .lineTop_tb2 tbody td { font-size:15px;}
 #pop_hskNmtiCode .lineTop_tbArea.codeTable .lineTop_tb2 tbody td ul.list_dotBlack li { font-size:15px;line-height:1.6em;}
@@ -701,11 +701,11 @@ td .needs { color:#272727;font-weight:bold;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody tr:hover td { background-color:#f4f5f7;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody tr:hover .select { background-color:transparent;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody tr.typeNoArticle:hover td { background-color:transparent;}
-#pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody td{padding-right:10px;padding-left:10px;font-size:15px;font-size:15px;word-break:break-word;}
+#pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody td{padding-right:10px;padding-left:10px;font-size:15px;font-size:15px;overflow-wrap: break-word;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 tbody td:nth-last-child(2) { border-right:none;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 .select { display:block;position:absolute;top:0;left:0;box-sizing:border-box;width:100%;height:100%;border:none;background-color:transparent;}
 #pop_hskCode .lineTop_tbArea .lineTop_tb2 .select button { display:block;position:relative;width:100%;height:100%;}
-#pop_hskCode .lineTop_tbArea .lineTop_tb2 .select button>span{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0 ,0);}
+#pop_hskCode .lineTop_tbArea .lineTop_tb2 .select button>span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 #pop_kiscCode { width:90%;max-width:960px;max-height:90%;}
 #pop_kiscCode p.exclam { margin-top:0;margin-bottom:15px;}
 #pop_kiscCode .lineTop_tbArea.selTable caption>p { display:none;}
@@ -1873,7 +1873,7 @@ td .needs { color:#272727;font-weight:bold;}
     .flagList.typeChk>ul>li .inp_c.only { top:5px;}
 
     /* 로그인 팝업 */
-    #pop_myDream_account_logInfo .lineTop_tbArea .lineTop_tb2 tbody td { padding-right:5px;padding-left:5px;font-size:13px;letter-spacing:-.5px;word-break:break-word;}
+    #pop_myDream_account_logInfo .lineTop_tbArea .lineTop_tb2 tbody td { padding-right:5px;padding-left:5px;font-size:13px;letter-spacing:-.5px;overflow-wrap: break-word;}
     #pop_myDream_account_logInfo.popLayout .popConts .popInner.limit { max-height:400px !important;}
 
     .flowBox { padding-right:20px;}
@@ -3829,7 +3829,7 @@ td .needs { color:#272727;font-weight:bold;}
     white-space: normal;
     letter-spacing: -1px;
     text-overflow: ellipsis;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: keep-all;
@@ -4044,7 +4044,7 @@ td .needs { color:#272727;font-weight:bold;}
     white-space: normal;
     letter-spacing: -1px;
     text-overflow: ellipsis;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: keep-all;
@@ -4172,7 +4172,7 @@ td .needs { color:#272727;font-weight:bold;}
     margin: -1px;
     padding: 0;
     border: 0;
-    clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
 }
 #pop_menuSet .lineList_tb table .btn_open{
     position: relative;
@@ -4816,7 +4816,9 @@ td .needs { color:#272727;font-weight:bold;}
     width: 1px !important;
     height: 1px !important;
     margin: -1px !important;
-    clip: rect(0 0 0 0) !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 .exchange_calc .inner .exchange_box .nt_slc,
 .exchange_calc .inner .exchange_result_box .nt_slc { 
@@ -5867,7 +5869,7 @@ td .needs { color:#272727;font-weight:bold;}
 	margin: -1px;
 	padding: 0;
 	border: 0;
-	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
 }
 /*20241129 웹접근성*/
 
@@ -6118,7 +6120,7 @@ a.btnYear.active { border:1px solid #EF524C;background:#EF524C; color:#FFF;}
 }
 
 /* 20251112 물류대시보드 */
-#logistics .sr-only { overflow: hidden; position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;border: 0; clip: rect(0, 0, 0, 0);}
+#logistics .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; white-space: nowrap !important; border: 0 !important; }
 
 #logistics .oversea-map__north-america .oversea-map__continent--label-txt, 
 #logistics .oversea-map__asia .oversea-map__continent--label-txt,
@@ -6387,7 +6389,7 @@ a.btnYear.active { border:1px solid #EF524C;background:#EF524C; color:#FFF;}
 /* 20251112 물류대시보드 */
 
 /* 20251112 인증대시보드 */
-#crtfc .sr-only { overflow: hidden; position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;border: 0; clip: rect(0, 0, 0, 0);}
+#crtfc .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; white-space: nowrap !important; border: 0 !important; }
 
 #crtfc .oversea-map__north-america .oversea-map__continent--label-txt, 
 #crtfc .oversea-map__asia .oversea-map__continent--label-txt,

@@ -1379,7 +1379,7 @@ footer .f_etc .btn_wa {display:none;}
     white-space: normal;
     height: 2.8em;
     text-align: left;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;

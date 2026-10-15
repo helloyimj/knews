@@ -527,12 +527,12 @@ dd .add_openNoti {width:100%;margin-left:0px;}
 .imgArea .path .next {display:block;width:66px;height:66px;content:'';position:absolute;
     right:-66px;
     top:calc(50% - 33px);background:url(../img/common/sprite_component.png) no-repeat -16px -455px;z-index:999;}
-.imgArea .path button span {position: absolute;top: 0;left: 0;width: 1px;height: 1px;margin: 1px;border: none;overflow: hidden;clip: rect(0, 0, 0, 0);}
+.imgArea .path button span {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 .imgArea .dotsWrap {position:relative;margin-top:15px;text-align:center;font-size: 0;}
 .imgArea .dotsWrap li {display:inline-block;vertical-align:top;width:10px;height:10px;border-radius:50%;box-sizing: border-box; background:#a8a8a8;transition: all 0.2s;cursor:pointer;}
 .imgArea .dotsWrap li+li {margin-left:12px;}
 .imgArea .dotsWrap li.on {width:30px;height:10px;border-radius:50px;background:#8366d0;transition: all 0.2s;box-sizing: border-box;}
-.imgArea .dotsWrap li span {position: absolute;top: 0;left: 0;width: 1px;height: 1px;margin: 1px;border: none;overflow: hidden;clip: rect(0, 0, 0, 0);}
+.imgArea .dotsWrap li span {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 
 .prevNnext {clear:both;}
 .prevNnext ul {border-top:1px solid #e2e2e2;}

@@ -226,7 +226,7 @@
     white-space: normal;
     letter-spacing: -1px;
     text-overflow: ellipsis;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: keep-all;
@@ -384,7 +384,7 @@
     white-space: normal;
     letter-spacing: -1px;
     text-overflow: ellipsis;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: keep-all;
@@ -2667,7 +2667,9 @@
     width: 1px !important;
     height: 1px !important;
     margin: -1px !important;
-    clip: rect(0 0 0 0) !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
 .exchange_calc .inner .exchange_box .nt_slc,
@@ -3572,7 +3574,7 @@ a.btnYear.active { border:1px solid #EF524C;background:#EF524C; color:#FFF;}
 /* ============================================================ */
 
 /* 물류대시보드 */
-#logistics .sr-only { overflow: hidden; position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;border: 0; clip: rect(0, 0, 0, 0);}
+#logistics .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; white-space: nowrap !important; border: 0 !important; }
 #logistics .oversea-map__north-america .oversea-map__continent--label-txt, 
 #logistics .oversea-map__asia .oversea-map__continent--label-txt,
 #logistics .oversea-map__middle-east .oversea-map__continent--label-txt,
@@ -3801,7 +3803,7 @@ a.btnYear.active { border:1px solid #EF524C;background:#EF524C; color:#FFF;}
 /* ============================================================ */
 
 /* 인증대시보드 */
-#crtfc .sr-only { overflow: hidden; position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;border: 0; clip: rect(0, 0, 0, 0);}
+#crtfc .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; white-space: nowrap !important; border: 0 !important; }
 #crtfc .oversea-map__north-america .oversea-map__continent--label-txt, 
 #crtfc .oversea-map__asia .oversea-map__continent--label-txt,
 #crtfc .oversea-map__middle-east .oversea-map__continent--label-txt,
@@ -4037,7 +4039,7 @@ a.btnYear.active { border:1px solid #EF524C;background:#EF524C; color:#FFF;}
 .sitemapBox_reN .map_gnb>li+li { margin-left:70px;}
 .sitemapBox_reN #sitemap { position:relative;margin-top:-10px;}
 .sitemapBox_reN #sitemap>li { position:relative;}
-.sitemapBox_reN #sitemap>li>a { overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none;clip:rect(0, 0, 0, 0);}
+.sitemapBox_reN #sitemap>li>a { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
 .sitemapBox_reN #sitemap .menuM>li { margin-top:10px;}
 .sitemapBox_reN #sitemap .menuM>li>a { display:block;box-sizing:border-box;width:100%;padding:10px 50px;background:#eff6fd;color:#222;font-size:18px;font-weight:700;}
 .sitemapBox_reN #sitemap .menuS { margin-top:-25px;padding:30px 50px;font-size:0;}
@@ -4130,7 +4132,7 @@ a.btnYear.active { border:1px solid #EF524C;background:#EF524C; color:#FFF;}
     margin: -1px;
     padding: 0;
     border: 0;
-    clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
 }
 #pop_menuSet .lineList_tb table .btn_open{
     position: relative;
@@ -4369,7 +4371,7 @@ a.btnYear.active { border:1px solid #EF524C;background:#EF524C; color:#FFF;}
 #pop_crtfc .tabcontent{position:relative; min-height:260px; padding: 20px 0; border-top:none;}
 #pop_crtfc .tabcontent .tabmore{position: absolute; top: -52px; right: 20px;}
 @media all and (max-width:768px) {
-#pop_myDream_account_logInfo .lineTop_tbArea .lineTop_tb2 tbody td { padding-right:5px;padding-left:5px;font-size:13px;letter-spacing:-.5px;word-break:break-word;}
+#pop_myDream_account_logInfo .lineTop_tbArea .lineTop_tb2 tbody td { padding-right:5px;padding-left:5px;font-size:13px;letter-spacing:-.5px;overflow-wrap: break-word;}
 #pop_myDream_account_logInfo.popLayout .popConts .popInner.limit { max-height:400px !important;}
 }
 
