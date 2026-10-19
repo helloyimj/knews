@@ -86,230 +86,452 @@
         <div id="pnb"></div>
         <article>
           <h3 class="sr-only">투자환경</h3>
-<form id="listForm" method="post">
-	<input type="hidden" name="pRegnCd" value="01">
-	<input type="hidden" name="pNatCd" value="158">
-	<input type="hidden" name="MENU_ID" id="MENU_ID" value="220">
-</form>
-<form id="sendForm" method="post">
-	<input type="hidden" name="pageNo" id="pageNo" value="">
-	<input type="hidden" name="pagePerCnt" value="10">
-	<input type="hidden" name="SITE_NO" value="3">
-	<input type="hidden" name="MENU_ID" id="MENU_ID" value="220">
-	<input type="hidden" name="CONTENTS_NO" value="1">
-	<input type="hidden" name="uperCd" value="3">
-	<input type="hidden" name="ctgySn" value="414">
-	<input type="hidden" name="lowerCtgySn" value="">
-	<input type="hidden" name="pRegnCd" value="01">
-	<input type="hidden" name="pNatCd" value="158">
-	<div class="sub_util">
-	    <div class="btnGrp">
-<!-- 	    	<a href="#none" class="btnI fileDown" onclick="fn_nationIemPdfDown()"><span>PDF</span></a> -->
-			<select id="upperIem" class="inp_s" title="정보 구분">
-			    <option value="1" data-idno="404">일반</option>
-			    <option value="2" data-idno="408">무역</option>
-			    <option value="3" data-idno="414" selected="">투자</option>
-			    <option value="4" data-idno="423">참고정보</option>
-			</select>
-			<a href="#" class="btnC_s Navy nationList" onclick="fn_actionNatIemList()"><span>항목리스트 바로가기</span></a>
-	        <button type="button" class="compare_Btn Green" onclick="fn_compareView()"><span>국별비교하기</span></button>
-		</div>
-	</div>
-	<div class="contTit_line nationTit">대만</div>
-	<div id="pageTab">
-		
-			<ul class="tabList tab9" style="width: auto;"><!-- 탭갯수(tab1 ~ tab20) 클래스 추가 -->
-				
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 414)" id="414" data-idno="003001000000000" data-name="투자환경" class="on">투자환경
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-05-27 19:09:36.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 415)" id="415" data-idno="003002000000000" data-name="외국인직접투자">외국인직접투자
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-09-15 10:05:17.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 416)" id="416" data-idno="003003000000000" data-name="한국기업 투자">한국기업 투자
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-09-14 18:43:32.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 417)" id="417" data-idno="003004000000000" data-name="투자진출방식">투자진출방식
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-05-28 18:07:44.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 421)" id="421" data-idno="003008000000000" data-name="외환">외환
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-05-28 19:08:33.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 419)" id="419" data-idno="003006000000000" data-name="노무">노무
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-05-29 15:22:00.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 420)" id="420" data-idno="003007000000000" data-name="세무">세무
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-05-29 19:41:08.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 483)" id="483" data-idno="003009000000000" data-name="지식재산권">지식재산권
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-05-29 20:40:03.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-			        <li>
-			        	<a href="#" onclick="fn_view(3, 418)" id="418" data-idno="003005000000000" data-name="청산 및 철수">청산 및 철수
-								<span id="info_update" class="iUpdate" data-updt-dt="2026-06-02 12:31:07.0" style="display:none;">update</span>
-			        	</a>
-			        </li>
-		        
-		    </ul>
-	    
-	</div>
+          <form id="listForm" method="post">
+            <input type="hidden" name="pRegnCd" value="01" />
+            <input type="hidden" name="pNatCd" value="158" />
+            <input type="hidden" name="MENU_ID" id="MENU_ID" value="220" />
+          </form>
+          <form id="sendForm" method="post">
+            <input type="hidden" name="pageNo" id="pageNo" value="" />
+            <input type="hidden" name="pagePerCnt" value="10" />
+            <input type="hidden" name="SITE_NO" value="3" />
+            <input type="hidden" name="MENU_ID" id="MENU_ID" value="220" />
+            <input type="hidden" name="CONTENTS_NO" value="1" />
+            <input type="hidden" name="uperCd" value="3" />
+            <input type="hidden" name="ctgySn" value="414" />
+            <input type="hidden" name="lowerCtgySn" value="" />
+            <input type="hidden" name="pRegnCd" value="01" />
+            <input type="hidden" name="pNatCd" value="158" />
+            <div class="sub_util">
+              <div class="btnGrp">
+                <!-- 	    	<a href="#none" class="btnI fileDown" onclick="fn_nationIemPdfDown()"><span>PDF</span></a> -->
+                <select id="upperIem" class="inp_s" title="정보 구분">
+                  <option value="1" data-idno="404">일반</option>
+                  <option value="2" data-idno="408">무역</option>
+                  <option value="3" data-idno="414" selected="">투자</option>
+                  <option value="4" data-idno="423">참고정보</option>
+                </select>
+                <a href="#" class="btnC_s Navy nationList" onclick="fn_actionNatIemList()"><span>항목리스트 바로가기</span></a>
+                <button type="button" class="compare_Btn Green" onclick="fn_compareView()"><span>국별비교하기</span></button>
+              </div>
+            </div>
+            <div class="contTit_line nationTit">대만</div>
+            <div id="pageTab">
+              <ul class="tabList tab9" style="width: auto">
+                <!-- 탭갯수(tab1 ~ tab20) 클래스 추가 -->
 
-	<div id="contTab_line">
-		
-		    <ul class="tabList tab2" style="width: 100%;"><!-- 탭갯수(tab1 ~ tab20) 클래스 추가 -->
-		    	
+                <li>
+                  <a href="#" onclick="fn_view(3, 414)" id="414" data-idno="003001000000000" data-name="투자환경" class="on"
+                    >투자환경
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-05-27 19:09:36.0" style="display: none">update</span>
+                  </a>
+                </li>
 
-		        	<li><a href="#" id="520" data-idno="0" class="lowerCtgy lowerCtgy_0 on">투자유치제도</a></li>
-		        
+                <li>
+                  <a href="#" onclick="fn_view(3, 415)" id="415" data-idno="003002000000000" data-name="외국인직접투자"
+                    >외국인직접투자
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-09-15 10:05:17.0" style="display: none">update</span>
+                  </a>
+                </li>
 
-		        	<li><a href="#" id="521" data-idno="1" class="lowerCtgy lowerCtgy_1">투자입지여건</a></li>
-		        
-		    </ul>
-	    
-	</div>
+                <li>
+                  <a href="#" onclick="fn_view(3, 416)" id="416" data-idno="003003000000000" data-name="한국기업 투자"
+                    >한국기업 투자
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-09-14 18:43:32.0" style="display: none">update</span>
+                  </a>
+                </li>
 
-<div class="nation_areainfo border_vCustom_contBottom"><div class="view_country_overview selectOption"><div class="list_Item" style="display:block"><div class="country on"><p class="nation"><span class="tit">투자유치제도</span></p><button type="button" class="dropIcon" aria-expanded="true">내용확장됨</button></div><div class="info_list" style="display: block;"><div class="subTab_Cont on"><div class="txtContArea"><p class="txtMid">외국인투자법</p><ul><li class="alignPre">  ㅇ 외국인투자조례(Statute for Investment by Foreign Nationals)
-    - 외국인의 대만 투자 관련 보장, 제한, 처리 기준을 규정한 법령으로 1954년 7월 6일 제정했다.
-    - 법령 전문(영어): https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=J0040002
-    - 대만은 1997년 11월부터 그대로 유지된 외국인투자조례 개정을 검토한 바 있다. 투자액 100만 달러 이하는 사후신고제로 전환하고 투자액 100만 달러 이상, 투자 제한·금지 업종, 기타 특수정황에 따른 예외에 대해서만 사전심의를 지속 적용한다는 것이 개정안의 특징이다. 이렇게 되면 종래 외국인투자 심사건수 기준 약 85%가 사후신고로 투자할 수 있게 돼 간이합병, 스타트업 진출에 용이해질 것으로 기대된 바 있다. 이 외에도 모든 구비서류를 제출한 것을 전제로 투자심사 기간을 1개월 이내로 단축하고 투자심사 기준, 판단근거를 공개해 투명성을 제고한다는 방침을 제시했었다. 해당 개정안은 2019년 2월 입법원(국회 격)에 제출되었으나 국제 정세 변화에 따른 지정학적 리스크와 경제안보 이슈로 법률 개정에 대한 공감대가 형성되지 못했고 계류 상태에 머물러 있다.
-    - 투자자가 화교일 경우 '화교귀국투자조례(Statute for Investment by Overseas Chinese)'에 따른다.
+                <li>
+                  <a href="#" onclick="fn_view(3, 417)" id="417" data-idno="003004000000000" data-name="투자진출방식"
+                    >투자진출방식
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-05-28 18:07:44.0" style="display: none">update</span>
+                  </a>
+                </li>
 
-  ㅇ 화교 및 외국인 투자 금지·제한 업종 리스트(Negative List for Investment by Overseas Chinese and Foreign Nationals) 
-    - 화교와 외국인에 대해 투자를 제한 또는 금지하고 있는 분야를 명시하고 있다. 
-    - 안보, 공공질서, 풍속, 건강에 악영향이 우려되는 업종과 법률로 특정한 업종에 대해 투자를 금지하며 투자제한업종은 관할부처의 허가를 취득해야 투자할 수 있다.</li></ul><p class="txtMid">투자인센티브</p><ul><li class="alignPre">대만은 기업의 연구개발 활동, 고용, 공공건설사업 참여 등과 같은 투자를 독려하기 위해 '산업혁신조례(Statute for Industrial Innovation)', '중소기업발전조례(Act for Development of Small and Medium Enterprises)' 등을 제정하고 상응하는 투자인센티브 조치를 마련해두었다. 
+                <li>
+                  <a href="#" onclick="fn_view(3, 421)" id="421" data-idno="003008000000000" data-name="외환"
+                    >외환
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-05-28 19:08:33.0" style="display: none">update</span>
+                  </a>
+                </li>
 
-1) RD 지원 인센티브
-RD 투자금액 기준으로 법인세를 감면해주는 제도이다. 조세감면 비율은 RD 투자금액의 15% 수준을 초과하지 않는 범위 내에 1년간 법인세를 공제해 주거나 투자금액의 10% 수준 이내에서 3년간 법인세를 감면한다. (감면금액은 당해연도 법인세의 30%를 초과하지 않는 것을 전제로 한다.)
+                <li>
+                  <a href="#" onclick="fn_view(3, 419)" id="419" data-idno="003006000000000" data-name="노무"
+                    >노무
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-05-29 15:22:00.0" style="display: none">update</span>
+                  </a>
+                </li>
 
-2) 중소기업의 현지인 추가 고용, 임금인상 인센티브
-중소기업이 만 24세 이하 또는 만 65세 이상의 현지인 정규 직원을 추가로 고용할 때 발생하는 인건비 200%를 당해연도 법인세에서 감면해 주고 있다. 세금 신고 시 인건비는 비용 처리되므로 사실상 100%를 감면 받게 된다.
-기존 직원의 임금을 인상할 경우에는 175%를 감면해 준다. 인상된 인건비 전액을 비용 처리한 다음 인상분의 75%를 감면해 주는 방식이다.
+                <li>
+                  <a href="#" onclick="fn_view(3, 420)" id="420" data-idno="003007000000000" data-name="세무"
+                    >세무
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-05-29 19:41:08.0" style="display: none">update</span>
+                  </a>
+                </li>
 
-3) 스마트기계, 5세대 이동통신, 사이버보안, 인공지능, 에너지절약 및 탄소감축 분야 상품·서비스 분야 투자지출에 대한 인센티브
-투자금액의 5% 한도 내에서 당해연도 법인세를 한 번에 감면 받거나 투자금액의 3% 한도 내에서 3년 동안 법인세를 분할 감면 받을 수 있다. 단, 혜택 부여 범위는 연간 투자금액 기준 100만 대만달러 이상~20억 대만달러 이하에 한하며, 총 감면금액은 당해연도 법인세의 30% 이하로 제한한다. 당초 스마트기계, 5세대 이동통신, 사이버보안 분야에 대해서만 혜택을 부여했으나 근거법령의 일몰기간을 2029년까지로 5년 추가 연장하면서 인공지능, 에너지절약 및 탄소감축 분야도 추가됐다.</li></ul><p class="txtMid">제한 및 금지(업종)</p><ul><li class="alignPre">화교 및 외국인 투자 금지·제한 업종 리스트(Negative List for Investment by Overseas Chinese and Foreign Nationals)에 명시한 분야에 대해 투자를 제한 또는 금지한다.
+                <li>
+                  <a href="#" onclick="fn_view(3, 483)" id="483" data-idno="003009000000000" data-name="지식재산권"
+                    >지식재산권
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-05-29 20:40:03.0" style="display: none">update</span>
+                  </a>
+                </li>
 
-&nbsp;&nbsp;ㅇ 투자금지업종(소분류 업종 기준 총 13개): 화학 원재료 제조업, 기타 화학제품 제조업, 기타 비철금속(base metal) 제조업, 기타 기계설비 제조업, 육상운수업, 우편업, 무선 라디오/TV 방송업, 민간공증 서비스업, 특수오락업, 우체국금융 서비스 등
+                <li>
+                  <a href="#" onclick="fn_view(3, 418)" id="418" data-idno="003005000000000" data-name="청산 및 철수"
+                    >청산 및 철수
+                    <span id="info_update" class="iUpdate" data-updt-dt="2026-06-02 12:31:07.0" style="display: none">update</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-&nbsp;&nbsp;ㅇ 투자제한업종(소분류 업종 기준 총 28개): 농산물 재배업, 목축업, 화학 원재료 제조업, 전력/액체연료 공급업, 수도업, 선박/항공운수업, 위성 TV업, 토지 등기대행서비스업 등
+            <div id="contTab_line">
+              <ul class="tabList tab2" style="width: 100%">
+                <!-- 탭갯수(tab1 ~ tab20) 클래스 추가 -->
 
-보다 상세한 금지·제한 분류 기준(업종별 품목, 관할부처)은 경제부 투자심의사 홈페이지에서 확인할 수 있다.
-  ㅇ https://www.moea.gov.tw/Mns/dir_e/home/Home.aspx 접속 후 'Services' 항목 중 'Overseas Chinese  Foreign Investment' 선택 → 'Laws/Regulations' 선택→ 'Negative List for Investment by Overseas Chinese and Foreign Nationals' 파일 다운로드</li></ul></div></div></div></div><div class="list_Item" style="display:block"><div class="country on"><p class="nation"><span class="tit">투자입지여건</span></p><button type="button" class="dropIcon" aria-expanded="true">내용확장됨</button></div><div class="info_list" style="display: block;"><div class="subTab_Cont on"><div class="txtContArea"><p class="txtMid">특별경제구역 및 자유무역지대</p><ul><li>1) 과학단지
-<br>크게 신주(Hsinchu-북부 지역), 중부, 남부 과학단지로 분류된다. 단지별로 핵심 업종이 다르다. 신주 단지는 반도체, 중부는 정밀기계, 남부는 광전자 및 반도체 유력 기업들이 밀집해 있다.
-<br>단지별로 중심 거점을 두고 여러 개의 위성 단지(지구)가 분포해 있다. 신주과학단지의 경우 TSMC 같은 대만 유수 기업과 이공계 명문대, 첨단기술 연구기관이 집결해 있어 대만의 실리콘밸리로 불리는 신주 지구를 포함해 총 6개로 형성돼 있다. 중부 단지는 타이중을 중심으로 5개의 지구, 남부 단지는 타이난을 중심으로 3개의 지구가 운영되고 있다. 남부 단지에서 추진하는 신규 위성 단지 개발사업(총 3곳)까지 포함하면 총 17개의 과학단지가 분포돼 있다고 할 수 있다.
-<br>과학단지의 공장 부지와 건물은 모두 임대차로만 입주할 수 있다. 입주기업이 자체 용도로 기계 설비/원료/연료/반제품을 수입할 경우 관세/물품세/부가가치세가 면제되며 상품/용역 수출 시 부가가치세가 면제된다.
-<br>
-<br>2) 산업단지(舊, 공업단지)
-<br>경제부 산업단지관리국과 기타 중앙부처, 지자체, 공/민영 기업이 개발한 단지를 합해 대만 전역에 총 123개가 분포해 있다. 이 가운데 71개는 경제부 산업단지 관리국이 관리하고 있다. 부지와 공장은 임대차·매매가 가능하며, 단지별 임대차/매매 정보 등은 경제부 산업단지관리국의 '대만공업용지공급서비스정보망(https://land.bip.gov.tw/supply/)'을 활용해 입수할 수 있다.
-<br>
-<br>3) 테크놀로지산업단지(舊, 가공수출구역)
-<br>총 9개의 단지가 중부 지역 타이중, 남부 지역 가오슝·핑둥에 각각 3개, 5개, 1개씩 분포해 있다. 초창기에는 경공업 제품을 가공수출하는 특화구역(가공수출구역)이었으나 산업 고도화에 따라 IT업계 입주가 많아지면서 2021년에 '테크놀로지산업단지'로 개명해 운영 중이다.
-<br>지역별로 타이중 소재 단지에는 광전자, 평판 디스플레이, 금속, 기계, 정보통신 서비스, 디지털 콘텐츠, 전자상거래 업종이 입주해 있고 가오슝 단지에는 반도체, 평판 디스플레이, 모니터, S/W, 디지털 콘텐츠 업종이, 핑둥 단지에는 태양광, 금속제품 업종이 입주해 있다.
-<br>토지는 임대차만 가능하며 투자자는 토지를 임차해 직접 공장을 짓거나 표준 공장을 매입할 수 있다. 토지 임차료는 공시 지가의 2.24~5% 수준으로 산정되며, 임대차 기간은 원칙 10년, 최장 20년까지 설정할 수 있고 계약 만료 후 갱신이 가능하다.
-<br>입주 시 투자신청에서 심사, 원산지 증명, 통관, 노무 행정, 사업자 등록 등 각종 회사설립/운영 관련 절차를 일괄 처리해주므로 편의성이 높다.
-<br>해외에서 수입한 기계 설비/원료/연료/반제품/샘플에 대한 수입 관세/물품세/부가가치세를 면제받을 수 있고 상품/용역의 수출 또는 단지 내 입주업체에 판매한 기계 설비/원료/연료/반제품에도 부가가치세가 면제된다.
-<br>
-<br>4) 자유무역구역
-<br>국제공항, 항구에서 총 7개 단지(공항 1, 항구 6)를 운영 중이며 단지별로 입주에 적합한 분야가 다르다.
-<br>  - 기룽항 단지(북부 지역): 부품류, 소비재
-<br>  - 가오슝항 단지(남부 지역): 철강, 금속제품, 기계, 몰드
-<br>  - 타이중항 단지(중부 지역): 정밀기계, 전자제품, 재생에너지, 자전거, 자동차부품
-<br>  - 타이베이항 단지(북부 지역): 농산물, 의료기기, 스마트 물류, 자동차 물류, 해상운송 택배, 해공(sea-air) 복합운송
-<br>  - 타오위앤 국제항공 단지(북부 지역): 전자, 국제물류, 의료용품, 화장품
-<br>  - 쑤아오항 단지(동부 지역): 국제물류, 재생에너지
-<br>  - 안핑항 단지(남부 지역): 창고관리, 국제물류
-<br>수출입 통관 행정업무가 간편하고 입주 시 각종 조세감면혜택을 누릴 수 있다.
-<br>수입 원료의 경우 관세를 비롯한 물품세/부가가치세/담뱃세/주류세/항만서비스비 등을 면제받을 수 있고 수입 연료/반제품/기계 설비의 경우 관세/물품세/부가가치세/항만서비스비/무역진흥서비스비를 면제받을 수 있다. 상품/용역의 수출과 대만 과세지역으로부터 구입한 원료/반제품/기계 설비에는 부가가치세가 면제된다."""</li></ul><p class="txtMid">산업단지</p></div><ul class="list_dotBlack"><li>Nankang Software Park</li></ul><div class="lineTop_tbArea"><table class="lineTop_tb2" style="min-width:540px"><caption><p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p></caption><colgroup><col style="width:150px"><col></colgroup><tbody><tr><th scope="col">규모</th><td class="txtL">총 10ha</td></tr><tr><th scope="col">위치</th><td class="txtL">No.19-2~19-16, Sanchong Rd., Nangang Dist., Taipei City, Taiwan</td></tr><tr><th scope="col">임차료</th><td class="txtL alignPre">별도 문의 필요</td></tr><tr><th scope="col">관할기관 및 연락처</th><td class="txtL alignPre">&nbsp;&nbsp;ㅇ 전화: 886-2-2655-3777
-  ㅇ 홈페이지: http://www.nksp.com.tw</td></tr><tr><th scope="col">비고</th><td class="txtL alignPre">S/W 개발, 컴퓨터/전자통신 제품 업체 위주로 입주해 있다.</td></tr></tbody></table></div><ul class="list_dotBlack"><li>Hsinchu Science Park</li></ul><div class="lineTop_tbArea"><table class="lineTop_tb2" style="min-width:540px"><caption><p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p></caption><colgroup><col style="width:150px"><col></colgroup><tbody><tr><th scope="col">규모</th><td class="txtL">총 1,470.73ha</td></tr><tr><th scope="col">위치</th><td class="txtL">No.2, Xin'an Rd., East Dist., Hsinchu City, Taiwan</td></tr><tr><th scope="col">임차료</th><td class="txtL alignPre">  ㅇ 지구별 토지(대만달러/제곱미터/월): 신주 59.54, 주난 28.22, 룽탄 20.87, 퉁뤄 23.92, 이란 24.66, 바이오메디컬 85.73
-  ㅇ 지구별 표준공장(대만달러/제곱미터/월): 신주 101~129, 주난 125, 이란 125~133, 바이오메디컬 114~177</td></tr><tr><th scope="col">관할기관 및 연락처</th><td class="txtL alignPre">  ㅇ 전화: 886-3-577-3311 #1705
-  ㅇ 홈페이지: https://www.sipa.gov.tw</td></tr><tr><th scope="col">비고</th><td class="txtL alignPre">대만의 대표적인 IT산업단지로 반도체, 컴퓨터, 광전자 업종 등이 밀집해 있고 총 6개 지구로 구분(신주, 주난, 룽탄, 퉁뤄, 이란, 바이오메디컬)한다. 이 중 신주지구 규모가 가장 크다. 총 면적 가운데 신주지구가 과반(53%)을 차지한다.</td></tr></tbody></table></div><ul class="list_dotBlack"><li>Central Taiwan Science Park</li></ul><div class="lineTop_tbArea"><table class="lineTop_tb2" style="min-width:540px"><caption><p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p></caption><colgroup><col style="width:150px"><col></colgroup><tbody><tr><th scope="col">규모</th><td class="txtL">총 1,575.09ha</td></tr><tr><th scope="col">위치</th><td class="txtL">No.2 Zhongke Rd., Xitun Dist., Taichung City, Taiwan</td></tr><tr><th scope="col">임차료</th><td class="txtL alignPre">  ㅇ 지구별 토지(대만달러/제곱미터/월): 타이중 33.93, 허우리 27.87, 후웨이 20.72, 얼린 10.28, 중씽 21.42
-  ㅇ 지구별 공장(대만달러/월): 타이중 10만~15만(200~300평), 후웨이 11만~31만(100~300평)</td></tr><tr><th scope="col">관할기관 및 연락처</th><td class="txtL alignPre">  ㅇ 전화: 886-4-2565-8588
-  ㅇ 홈페이지: https://www.ctsp.gov.tw</td></tr><tr><th scope="col">비고</th><td class="txtL alignPre">대만 중부 지역은 정밀기계산업 발달지역으로 이 단지에도 정밀기계, 광전자 업종 등 위주로 입주해 있다. 총 5개 지구로 구분(타이중, 후웨이, 허우리, 얼린, 중싱)하며 이 중 얼린지구 규모가 가장 크다.  </td></tr></tbody></table></div><ul class="list_dotBlack"><li>Southern Taiwan Science Park</li></ul><div class="lineTop_tbArea"><table class="lineTop_tb2" style="min-width:540px"><caption><p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p></caption><colgroup><col style="width:150px"><col></colgroup><tbody><tr><th scope="col">규모</th><td class="txtL">총 2,148.60ha</td></tr><tr><th scope="col">위치</th><td class="txtL">No.22, Nanke 3rd Rd., Xinshi Dist., Tainan City, Taiwan</td></tr><tr><th scope="col">임차료</th><td class="txtL alignPre">  ㅇ 지구별 토지(대만달러/제곱미터/월): 타이난 37.59, 가오슝 22.35, 챠오터우 28.75, 쟈이(공사 중) 21.54, 핑동(공사 중) 20.81
-  ㅇ 지구별 공장(대만달러/제곱미터/월): 타이난 94~142, 가오슝 91~120</td></tr><tr><th scope="col">관할기관 및 연락처</th><td class="txtL alignPre">  ㅇ 전화: 886-6-505-1001 (투자과: #2103, #2118, #2530, #2136, #2113, #2153)
-  ㅇ 홈페이지: https://www.stsp.gov.tw</td></tr><tr><th scope="col">비고</th><td class="txtL alignPre">타이난 단지는 반도체, 정밀기계, 바이오테크, 녹색에너지 분야 위주로 입주해 있다. 세계 1위 파운드리 업체인 TSMC의 선단공정(5나노, 3나노, 2나노) 팹이 소재해 있어 북부 지역의 신주과학단지와 균형을 이루고 있다.</td></tr></tbody></table></div><ul class="list_dotBlack"><li>Taichung Port Technology Industrial Park</li></ul><div class="lineTop_tbArea"><table class="lineTop_tb2" style="min-width:540px"><caption><p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p></caption><colgroup><col style="width:150px"><col></colgroup><tbody><tr><th scope="col">규모</th><td class="txtL">177.28ha</td></tr><tr><th scope="col">위치</th><td class="txtL">No.6, Daguan Rd., Wuqi Dist., Taichung City, Taiwan</td></tr><tr><th scope="col">임차료</th><td class="txtL alignPre">ㅇ 토지(대만달러/제곱미터/월): 전체 테크놀로지산업단지 기준 1.71~53.76</td></tr><tr><th scope="col">관할기관 및 연락처</th><td class="txtL alignPre">&nbsp;&nbsp;ㅇ 전화: 886-4-2658-1215~9
-&nbsp;&nbsp;ㅇ 이메일: tn_director@bip.gov.tw
-&nbsp;&nbsp;ㅇ 홈페이지: https://www.bip.gov.tw/harbor/index.aspx</td></tr><tr><th scope="col">비고</th><td class="txtL alignPre">타이중 지역에 소재한 거점으로 테크놀로지산업단지 중 면적이 가장 크다. 평판 디스플레이 관련 제조업 위주로 입주해 있다.</td></tr></tbody></table></div><p class="exclamS" style="margin-bottom:30px">자료원 : KOTRA 타이베이무역관 자체 조사</p><p class="txtMid">주요 지역별 여건</p><ul class="list_dotBlack"><li>타이베이(Taipei)</li></ul><ul style="margin-bottom:20px"><li class="alignPre">  ㅇ 면적: 272㎢
-  ㅇ 인구: 2026년 4월 기준 2,429,429명
-  ㅇ 대만의 수도로 상업이 발달해 있다. 백화점, 편의점, 대형 마트, 슈퍼마켓 등 소매유통채널이 운집해 있고, 타이베이 외곽의 신베이(New Taipei) 인구까지 합산 시 대만 인구의 28%가 수도권에 밀집해 있어 현지 시장 트렌드 조사에 유리하다.</li></ul><ul class="list_dotBlack"><li>타이중(Taichung)</li></ul><ul style="margin-bottom:20px"><li class="alignPre">  ㅇ 면적: 2,215㎢
-  ㅇ 인구: 2026년 4월 기준 2,868,452명
-  ㅇ 중부 지역 중심 도시로 경공업, 기계 산업이 밀집해 있다. 중소형 가족기업 위주로 구성돼 업계 내 네트워크, 분업이 면밀하다.</li></ul><ul class="list_dotBlack"><li>가오슝(Kaohsiung)</li></ul><ul style="margin-bottom:20px"><li class="alignPre">  ㅇ 면적: 2,952㎢
-  ㅇ 인구: 2026년 4월 기준 2,713,032명
-  ㅇ 남부 지역 중심 도시로 대만 최대 국제 항구인 가오슝항이 위치해있다. 원료/발주권을 보유한 철강/석유화학 분야 대기업 아래 하청업체가 피라미드식 구조로 형성돼 있다.</li></ul><ul class="list_dotBlack"><li>신베이(New Taipei)</li></ul><ul style="margin-bottom:20px"><li class="alignPre">  ㅇ 면적: 2,053㎢
-  ㅇ 인구: 2026년 4월 기준 4,041,149명
-  ㅇ 타이베이를 에워싸고 있는 도시로 지자체 중 최다 인구를 보유하고 있다. 전통산업(기계, 금속, 플라스틱, 방직), IT산업이 서부 지역 일대에 밀집해 있으며 동/남/북부 지역은 레저·관광업이 발달해 있다.</li></ul><ul class="list_dotBlack"><li>타오위앤(Taoyuan)</li></ul><ul style="margin-bottom:20px"><li class="alignPre">  ㅇ 면적: 1,221㎢
-  ㅇ 인구: 2026년 4월 기준 2,356,795명
-  ㅇ 타오위앤국제공항이 위치해 있는 대만의 관문 도시이다. 자유무역구역을 비롯해 신주과학단지의 롱탄지구, 경제부 관할 산업단지 등이 분포해 있다.</li></ul><ul class="list_dotBlack"><li>타이난(Tainan)</li></ul><ul style="margin-bottom:20px"><li class="alignPre">ㅇ 면적: 2,192㎢
-ㅇ 인구: 2026년 4월 기준 1,849,762명
-ㅇ 풍부한 역사 유산과 전통문화가 살아 있는 곳으로 사원과 고적이 밀집해 있다. TSMC 선단공정 팹을 중심으로 첨단산업도 발전해 전통과 현대가 공존하는 특색을 지니고 있다.</li></ul></div></div></div></div><p class="dateInfo">최종수정 : 2026-05-27 19:09</p></div>
-	
-	<div class="board_area">
-		
-	</div>
-	
-	<div class="lineList_tb noCateg nationNews">
-	<strong class="contTit_line">국가정보 - 관련뉴스</strong>
-	<table>
-		<caption><p>국가정보 - 관련뉴스</p></caption>
-		<colgroup>
-			<col style="width:7%">
-			<col>
-			<col style="width:12%">
-			<col style="width:12%">
-			<col style="width:12%">
-		</colgroup>
-		<thead>
-			<tr>
-				<th scope="col">No</th>
-				<th scope="col">제목</th>
-					<th scope="col">국가</th>
-					<th scope="col">무역관</th>
-				<th scope="col">게시일</th>
-			</tr>
-		</thead>
-		<tbody id="newsBody">
-		<tr data-idno="240338" class="nttTr "><td class="no">1</td><td class="txtL"><a href="/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=100&amp;CONTENTS_NO=1&amp;bbsSn=322&amp;pNttSn=240338" class="subjectTxt">대만의 데이터센터 투자 촉진 행보, 우리 기업의 시장 진출 기회로 부상</a></td><td><em class="mSort">국가</em>대만</td><td><em class="mSort">무역관</em>타이베이무역관</td><td><em class="mSort">게시일</em>2026-04-09</td></tr>
-		<tr data-idno="232026" class="nttTr "><td class="no">2</td><td class="txtL"><a href="/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=100&amp;CONTENTS_NO=1&amp;bbsSn=322&amp;pNttSn=232026" class="subjectTxt">대만 전력시장 동향과 시장진출 기회요인</a></td><td><em class="mSort">국가</em>대만</td><td><em class="mSort">무역관</em>타이베이무역관</td><td><em class="mSort">게시일</em>2025-08-04</td></tr>
-		</tbody>
-	</table>
-	<div class="board_area" style="display:block">
-		<div class="lineList_v">
-			<dl>
-				<dd style="padding:0px; margin-top:30px;">
-					<div class="add_openNoti">
-						<img src="https://dream.kotra.or.kr/type/common/img/board/img_opentype01.png" alt="공공누리 제 1유형(출처표시) - 공공저작물 자유이용허락" class="copyrightImg">
-						<p>국가정보[투자환경] 항목은 <em class="point_black">"공공누리 1유형 출처표시"</em> 조건에 따라 이용 할 수 있습니다.</p>
-					</div>
-				</dd>
-			</dl>
-		</div>
-	</div>
-	</div>
-</form>
-<!-- //board -->
-          </article>
+                <li><a href="#" id="520" data-idno="0" class="lowerCtgy lowerCtgy_0 on">투자유치제도</a></li>
+
+                <li><a href="#" id="521" data-idno="1" class="lowerCtgy lowerCtgy_1">투자입지여건</a></li>
+              </ul>
+            </div>
+
+            <div class="nation_areainfo border_vCustom_contBottom">
+              <div class="view_country_overview selectOption">
+                <div class="list_Item" style="display: block">
+                  <div class="country on">
+                    <p class="nation"><span class="tit">투자유치제도</span></p>
+                    <button type="button" class="dropIcon" aria-expanded="true">내용확장됨</button>
+                  </div>
+                  <div class="info_list" style="display: block">
+                    <div class="subTab_Cont on">
+                      <div class="txtContArea">
+                        <p class="txtMid">외국인투자법</p>
+                        <ul>
+                          <li class="alignPre">ㅇ 외국인투자조례(Statute for Investment by Foreign Nationals) - 외국인의 대만 투자 관련 보장, 제한, 처리 기준을 규정한 법령으로 1954년 7월 6일 제정했다. - 법령 전문(영어): https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=J0040002 - 대만은 1997년 11월부터 그대로 유지된 외국인투자조례 개정을 검토한 바 있다. 투자액 100만 달러 이하는 사후신고제로 전환하고 투자액 100만 달러 이상, 투자 제한·금지 업종, 기타 특수정황에 따른 예외에 대해서만 사전심의를 지속 적용한다는 것이 개정안의 특징이다. 이렇게 되면 종래 외국인투자 심사건수 기준 약 85%가 사후신고로 투자할 수 있게 돼 간이합병, 스타트업 진출에 용이해질 것으로 기대된 바 있다. 이 외에도 모든 구비서류를 제출한 것을 전제로 투자심사 기간을 1개월 이내로 단축하고 투자심사 기준, 판단근거를 공개해 투명성을 제고한다는 방침을 제시했었다. 해당 개정안은 2019년 2월 입법원(국회 격)에 제출되었으나 국제 정세 변화에 따른 지정학적 리스크와 경제안보 이슈로 법률 개정에 대한 공감대가 형성되지 못했고 계류 상태에 머물러 있다. - 투자자가 화교일 경우 '화교귀국투자조례(Statute for Investment by Overseas Chinese)'에 따른다. ㅇ 화교 및 외국인 투자 금지·제한 업종 리스트(Negative List for Investment by Overseas Chinese and Foreign Nationals) - 화교와 외국인에 대해 투자를 제한 또는 금지하고 있는 분야를 명시하고 있다. - 안보, 공공질서, 풍속, 건강에 악영향이 우려되는 업종과 법률로 특정한 업종에 대해 투자를 금지하며 투자제한업종은 관할부처의 허가를 취득해야 투자할 수 있다.</li>
+                        </ul>
+                        <p class="txtMid">투자인센티브</p>
+                        <ul>
+                          <li class="alignPre">대만은 기업의 연구개발 활동, 고용, 공공건설사업 참여 등과 같은 투자를 독려하기 위해 '산업혁신조례(Statute for Industrial Innovation)', '중소기업발전조례(Act for Development of Small and Medium Enterprises)' 등을 제정하고 상응하는 투자인센티브 조치를 마련해두었다. 1) RD 지원 인센티브 RD 투자금액 기준으로 법인세를 감면해주는 제도이다. 조세감면 비율은 RD 투자금액의 15% 수준을 초과하지 않는 범위 내에 1년간 법인세를 공제해 주거나 투자금액의 10% 수준 이내에서 3년간 법인세를 감면한다. (감면금액은 당해연도 법인세의 30%를 초과하지 않는 것을 전제로 한다.) 2) 중소기업의 현지인 추가 고용, 임금인상 인센티브 중소기업이 만 24세 이하 또는 만 65세 이상의 현지인 정규 직원을 추가로 고용할 때 발생하는 인건비 200%를 당해연도 법인세에서 감면해 주고 있다. 세금 신고 시 인건비는 비용 처리되므로 사실상 100%를 감면 받게 된다. 기존 직원의 임금을 인상할 경우에는 175%를 감면해 준다. 인상된 인건비 전액을 비용 처리한 다음 인상분의 75%를 감면해 주는 방식이다. 3) 스마트기계, 5세대 이동통신, 사이버보안, 인공지능, 에너지절약 및 탄소감축 분야 상품·서비스 분야 투자지출에 대한 인센티브 투자금액의 5% 한도 내에서 당해연도 법인세를 한 번에 감면 받거나 투자금액의 3% 한도 내에서 3년 동안 법인세를 분할 감면 받을 수 있다. 단, 혜택 부여 범위는 연간 투자금액 기준 100만 대만달러 이상~20억 대만달러 이하에 한하며, 총 감면금액은 당해연도 법인세의 30% 이하로 제한한다. 당초 스마트기계, 5세대 이동통신, 사이버보안 분야에 대해서만 혜택을 부여했으나 근거법령의 일몰기간을 2029년까지로 5년 추가 연장하면서 인공지능, 에너지절약 및 탄소감축 분야도 추가됐다.</li>
+                        </ul>
+                        <p class="txtMid">제한 및 금지(업종)</p>
+                        <ul>
+                          <li class="alignPre">화교 및 외국인 투자 금지·제한 업종 리스트(Negative List for Investment by Overseas Chinese and Foreign Nationals)에 명시한 분야에 대해 투자를 제한 또는 금지한다. &nbsp;&nbsp;ㅇ 투자금지업종(소분류 업종 기준 총 13개): 화학 원재료 제조업, 기타 화학제품 제조업, 기타 비철금속(base metal) 제조업, 기타 기계설비 제조업, 육상운수업, 우편업, 무선 라디오/TV 방송업, 민간공증 서비스업, 특수오락업, 우체국금융 서비스 등 &nbsp;&nbsp;ㅇ 투자제한업종(소분류 업종 기준 총 28개): 농산물 재배업, 목축업, 화학 원재료 제조업, 전력/액체연료 공급업, 수도업, 선박/항공운수업, 위성 TV업, 토지 등기대행서비스업 등 보다 상세한 금지·제한 분류 기준(업종별 품목, 관할부처)은 경제부 투자심의사 홈페이지에서 확인할 수 있다. ㅇ https://www.moea.gov.tw/Mns/dir_e/home/Home.aspx 접속 후 'Services' 항목 중 'Overseas Chinese Foreign Investment' 선택 → 'Laws/Regulations' 선택→ 'Negative List for Investment by Overseas Chinese and Foreign Nationals' 파일 다운로드</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list_Item" style="display: block">
+                  <div class="country on">
+                    <p class="nation"><span class="tit">투자입지여건</span></p>
+                    <button type="button" class="dropIcon" aria-expanded="true">내용확장됨</button>
+                  </div>
+                  <div class="info_list" style="display: block">
+                    <div class="subTab_Cont on">
+                      <div class="txtContArea">
+                        <p class="txtMid">특별경제구역 및 자유무역지대</p>
+                        <ul>
+                          <li>
+                            1) 과학단지 <br />크게 신주(Hsinchu-북부 지역), 중부, 남부 과학단지로 분류된다. 단지별로 핵심 업종이 다르다. 신주 단지는 반도체, 중부는 정밀기계, 남부는 광전자 및 반도체 유력 기업들이 밀집해 있다. <br />단지별로 중심 거점을 두고 여러 개의 위성 단지(지구)가 분포해 있다. 신주과학단지의 경우 TSMC 같은 대만 유수 기업과 이공계 명문대, 첨단기술 연구기관이 집결해 있어 대만의 실리콘밸리로 불리는 신주 지구를 포함해 총 6개로 형성돼 있다. 중부 단지는 타이중을 중심으로 5개의 지구, 남부 단지는 타이난을 중심으로 3개의 지구가 운영되고 있다. 남부 단지에서 추진하는 신규 위성 단지 개발사업(총 3곳)까지 포함하면 총 17개의 과학단지가 분포돼 있다고 할 수 있다. <br />과학단지의 공장 부지와 건물은 모두 임대차로만 입주할 수 있다. 입주기업이 자체 용도로 기계 설비/원료/연료/반제품을 수입할 경우 관세/물품세/부가가치세가 면제되며 상품/용역 수출 시 부가가치세가 면제된다.
+                            <br />
+                            <br />2) 산업단지(舊, 공업단지) <br />경제부 산업단지관리국과 기타 중앙부처, 지자체, 공/민영 기업이 개발한 단지를 합해 대만 전역에 총 123개가 분포해 있다. 이 가운데 71개는 경제부 산업단지 관리국이 관리하고 있다. 부지와 공장은 임대차·매매가 가능하며, 단지별 임대차/매매 정보 등은 경제부 산업단지관리국의 '대만공업용지공급서비스정보망(https://land.bip.gov.tw/supply/)'을 활용해 입수할 수 있다.
+                            <br />
+                            <br />3) 테크놀로지산업단지(舊, 가공수출구역) <br />총 9개의 단지가 중부 지역 타이중, 남부 지역 가오슝·핑둥에 각각 3개, 5개, 1개씩 분포해 있다. 초창기에는 경공업 제품을 가공수출하는 특화구역(가공수출구역)이었으나 산업 고도화에 따라 IT업계 입주가 많아지면서 2021년에 '테크놀로지산업단지'로 개명해 운영 중이다. <br />지역별로 타이중 소재 단지에는 광전자, 평판 디스플레이, 금속, 기계, 정보통신 서비스, 디지털 콘텐츠, 전자상거래 업종이 입주해 있고 가오슝 단지에는 반도체, 평판 디스플레이, 모니터, S/W, 디지털 콘텐츠 업종이, 핑둥 단지에는 태양광, 금속제품 업종이 입주해 있다. <br />토지는 임대차만 가능하며 투자자는 토지를 임차해 직접 공장을 짓거나 표준 공장을 매입할 수 있다. 토지 임차료는 공시 지가의 2.24~5% 수준으로 산정되며, 임대차 기간은 원칙 10년, 최장 20년까지 설정할 수 있고 계약 만료 후 갱신이 가능하다. <br />입주 시 투자신청에서 심사, 원산지 증명, 통관, 노무 행정, 사업자 등록 등 각종 회사설립/운영 관련 절차를 일괄 처리해주므로 편의성이 높다. <br />해외에서 수입한 기계 설비/원료/연료/반제품/샘플에 대한 수입 관세/물품세/부가가치세를 면제받을 수 있고 상품/용역의 수출 또는 단지 내 입주업체에 판매한 기계 설비/원료/연료/반제품에도 부가가치세가 면제된다.
+                            <br />
+                            <br />4) 자유무역구역 <br />국제공항, 항구에서 총 7개 단지(공항 1, 항구 6)를 운영 중이며 단지별로 입주에 적합한 분야가 다르다. <br />
+                            - 기룽항 단지(북부 지역): 부품류, 소비재 <br />
+                            - 가오슝항 단지(남부 지역): 철강, 금속제품, 기계, 몰드 <br />
+                            - 타이중항 단지(중부 지역): 정밀기계, 전자제품, 재생에너지, 자전거, 자동차부품 <br />
+                            - 타이베이항 단지(북부 지역): 농산물, 의료기기, 스마트 물류, 자동차 물류, 해상운송 택배, 해공(sea-air) 복합운송 <br />
+                            - 타오위앤 국제항공 단지(북부 지역): 전자, 국제물류, 의료용품, 화장품 <br />
+                            - 쑤아오항 단지(동부 지역): 국제물류, 재생에너지 <br />
+                            - 안핑항 단지(남부 지역): 창고관리, 국제물류 <br />수출입 통관 행정업무가 간편하고 입주 시 각종 조세감면혜택을 누릴 수 있다. <br />수입 원료의 경우 관세를 비롯한 물품세/부가가치세/담뱃세/주류세/항만서비스비 등을 면제받을 수 있고 수입 연료/반제품/기계 설비의 경우 관세/물품세/부가가치세/항만서비스비/무역진흥서비스비를 면제받을 수 있다. 상품/용역의 수출과 대만 과세지역으로부터 구입한 원료/반제품/기계 설비에는 부가가치세가 면제된다."""
+                          </li>
+                        </ul>
+                        <p class="txtMid">산업단지</p>
+                      </div>
+                      <ul class="list_dotBlack">
+                        <li>Nankang Software Park</li>
+                      </ul>
+                      <div class="lineTop_tbArea">
+                        <table class="lineTop_tb2" style="min-width: 540px">
+                          <caption>
+                            <p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p>
+                          </caption>
+                          <colgroup>
+                            <col style="width: 150px" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="col">규모</th>
+                              <td class="txtL">총 10ha</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">위치</th>
+                              <td class="txtL">No.19-2~19-16, Sanchong Rd., Nangang Dist., Taipei City, Taiwan</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">임차료</th>
+                              <td class="txtL alignPre">별도 문의 필요</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">관할기관 및 연락처</th>
+                              <td class="txtL alignPre">&nbsp;&nbsp;ㅇ 전화: 886-2-2655-3777 ㅇ 홈페이지: http://www.nksp.com.tw</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">비고</th>
+                              <td class="txtL alignPre">S/W 개발, 컴퓨터/전자통신 제품 업체 위주로 입주해 있다.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <ul class="list_dotBlack">
+                        <li>Hsinchu Science Park</li>
+                      </ul>
+                      <div class="lineTop_tbArea">
+                        <table class="lineTop_tb2" style="min-width: 540px">
+                          <caption>
+                            <p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p>
+                          </caption>
+                          <colgroup>
+                            <col style="width: 150px" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="col">규모</th>
+                              <td class="txtL">총 1,470.73ha</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">위치</th>
+                              <td class="txtL">No.2, Xin'an Rd., East Dist., Hsinchu City, Taiwan</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">임차료</th>
+                              <td class="txtL alignPre">ㅇ 지구별 토지(대만달러/제곱미터/월): 신주 59.54, 주난 28.22, 룽탄 20.87, 퉁뤄 23.92, 이란 24.66, 바이오메디컬 85.73 ㅇ 지구별 표준공장(대만달러/제곱미터/월): 신주 101~129, 주난 125, 이란 125~133, 바이오메디컬 114~177</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">관할기관 및 연락처</th>
+                              <td class="txtL alignPre">ㅇ 전화: 886-3-577-3311 #1705 ㅇ 홈페이지: https://www.sipa.gov.tw</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">비고</th>
+                              <td class="txtL alignPre">대만의 대표적인 IT산업단지로 반도체, 컴퓨터, 광전자 업종 등이 밀집해 있고 총 6개 지구로 구분(신주, 주난, 룽탄, 퉁뤄, 이란, 바이오메디컬)한다. 이 중 신주지구 규모가 가장 크다. 총 면적 가운데 신주지구가 과반(53%)을 차지한다.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <ul class="list_dotBlack">
+                        <li>Central Taiwan Science Park</li>
+                      </ul>
+                      <div class="lineTop_tbArea">
+                        <table class="lineTop_tb2" style="min-width: 540px">
+                          <caption>
+                            <p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p>
+                          </caption>
+                          <colgroup>
+                            <col style="width: 150px" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="col">규모</th>
+                              <td class="txtL">총 1,575.09ha</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">위치</th>
+                              <td class="txtL">No.2 Zhongke Rd., Xitun Dist., Taichung City, Taiwan</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">임차료</th>
+                              <td class="txtL alignPre">ㅇ 지구별 토지(대만달러/제곱미터/월): 타이중 33.93, 허우리 27.87, 후웨이 20.72, 얼린 10.28, 중씽 21.42 ㅇ 지구별 공장(대만달러/월): 타이중 10만~15만(200~300평), 후웨이 11만~31만(100~300평)</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">관할기관 및 연락처</th>
+                              <td class="txtL alignPre">ㅇ 전화: 886-4-2565-8588 ㅇ 홈페이지: https://www.ctsp.gov.tw</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">비고</th>
+                              <td class="txtL alignPre">대만 중부 지역은 정밀기계산업 발달지역으로 이 단지에도 정밀기계, 광전자 업종 등 위주로 입주해 있다. 총 5개 지구로 구분(타이중, 후웨이, 허우리, 얼린, 중싱)하며 이 중 얼린지구 규모가 가장 크다.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <ul class="list_dotBlack">
+                        <li>Southern Taiwan Science Park</li>
+                      </ul>
+                      <div class="lineTop_tbArea">
+                        <table class="lineTop_tb2" style="min-width: 540px">
+                          <caption>
+                            <p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p>
+                          </caption>
+                          <colgroup>
+                            <col style="width: 150px" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="col">규모</th>
+                              <td class="txtL">총 2,148.60ha</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">위치</th>
+                              <td class="txtL">No.22, Nanke 3rd Rd., Xinshi Dist., Tainan City, Taiwan</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">임차료</th>
+                              <td class="txtL alignPre">ㅇ 지구별 토지(대만달러/제곱미터/월): 타이난 37.59, 가오슝 22.35, 챠오터우 28.75, 쟈이(공사 중) 21.54, 핑동(공사 중) 20.81 ㅇ 지구별 공장(대만달러/제곱미터/월): 타이난 94~142, 가오슝 91~120</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">관할기관 및 연락처</th>
+                              <td class="txtL alignPre">ㅇ 전화: 886-6-505-1001 (투자과: #2103, #2118, #2530, #2136, #2113, #2153) ㅇ 홈페이지: https://www.stsp.gov.tw</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">비고</th>
+                              <td class="txtL alignPre">타이난 단지는 반도체, 정밀기계, 바이오테크, 녹색에너지 분야 위주로 입주해 있다. 세계 1위 파운드리 업체인 TSMC의 선단공정(5나노, 3나노, 2나노) 팹이 소재해 있어 북부 지역의 신주과학단지와 균형을 이루고 있다.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <ul class="list_dotBlack">
+                        <li>Taichung Port Technology Industrial Park</li>
+                      </ul>
+                      <div class="lineTop_tbArea">
+                        <table class="lineTop_tb2" style="min-width: 540px">
+                          <caption>
+                            <p>산업단지명, 규모, 위치, 임차료, 관할기관 및 연락처, 비고에 대한 정보를 알 수 있는 표</p>
+                          </caption>
+                          <colgroup>
+                            <col style="width: 150px" />
+                            <col />
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th scope="col">규모</th>
+                              <td class="txtL">177.28ha</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">위치</th>
+                              <td class="txtL">No.6, Daguan Rd., Wuqi Dist., Taichung City, Taiwan</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">임차료</th>
+                              <td class="txtL alignPre">ㅇ 토지(대만달러/제곱미터/월): 전체 테크놀로지산업단지 기준 1.71~53.76</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">관할기관 및 연락처</th>
+                              <td class="txtL alignPre">&nbsp;&nbsp;ㅇ 전화: 886-4-2658-1215~9 &nbsp;&nbsp;ㅇ 이메일: tn_director@bip.gov.tw &nbsp;&nbsp;ㅇ 홈페이지: https://www.bip.gov.tw/harbor/index.aspx</td>
+                            </tr>
+                            <tr>
+                              <th scope="col">비고</th>
+                              <td class="txtL alignPre">타이중 지역에 소재한 거점으로 테크놀로지산업단지 중 면적이 가장 크다. 평판 디스플레이 관련 제조업 위주로 입주해 있다.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p class="exclamS" style="margin-bottom: 30px">자료원 : KOTRA 타이베이무역관 자체 조사</p>
+                      <p class="txtMid">주요 지역별 여건</p>
+                      <ul class="list_dotBlack">
+                        <li>타이베이(Taipei)</li>
+                      </ul>
+                      <ul style="margin-bottom: 20px">
+                        <li class="alignPre">ㅇ 면적: 272㎢ ㅇ 인구: 2026년 4월 기준 2,429,429명 ㅇ 대만의 수도로 상업이 발달해 있다. 백화점, 편의점, 대형 마트, 슈퍼마켓 등 소매유통채널이 운집해 있고, 타이베이 외곽의 신베이(New Taipei) 인구까지 합산 시 대만 인구의 28%가 수도권에 밀집해 있어 현지 시장 트렌드 조사에 유리하다.</li>
+                      </ul>
+                      <ul class="list_dotBlack">
+                        <li>타이중(Taichung)</li>
+                      </ul>
+                      <ul style="margin-bottom: 20px">
+                        <li class="alignPre">ㅇ 면적: 2,215㎢ ㅇ 인구: 2026년 4월 기준 2,868,452명 ㅇ 중부 지역 중심 도시로 경공업, 기계 산업이 밀집해 있다. 중소형 가족기업 위주로 구성돼 업계 내 네트워크, 분업이 면밀하다.</li>
+                      </ul>
+                      <ul class="list_dotBlack">
+                        <li>가오슝(Kaohsiung)</li>
+                      </ul>
+                      <ul style="margin-bottom: 20px">
+                        <li class="alignPre">ㅇ 면적: 2,952㎢ ㅇ 인구: 2026년 4월 기준 2,713,032명 ㅇ 남부 지역 중심 도시로 대만 최대 국제 항구인 가오슝항이 위치해있다. 원료/발주권을 보유한 철강/석유화학 분야 대기업 아래 하청업체가 피라미드식 구조로 형성돼 있다.</li>
+                      </ul>
+                      <ul class="list_dotBlack">
+                        <li>신베이(New Taipei)</li>
+                      </ul>
+                      <ul style="margin-bottom: 20px">
+                        <li class="alignPre">ㅇ 면적: 2,053㎢ ㅇ 인구: 2026년 4월 기준 4,041,149명 ㅇ 타이베이를 에워싸고 있는 도시로 지자체 중 최다 인구를 보유하고 있다. 전통산업(기계, 금속, 플라스틱, 방직), IT산업이 서부 지역 일대에 밀집해 있으며 동/남/북부 지역은 레저·관광업이 발달해 있다.</li>
+                      </ul>
+                      <ul class="list_dotBlack">
+                        <li>타오위앤(Taoyuan)</li>
+                      </ul>
+                      <ul style="margin-bottom: 20px">
+                        <li class="alignPre">ㅇ 면적: 1,221㎢ ㅇ 인구: 2026년 4월 기준 2,356,795명 ㅇ 타오위앤국제공항이 위치해 있는 대만의 관문 도시이다. 자유무역구역을 비롯해 신주과학단지의 롱탄지구, 경제부 관할 산업단지 등이 분포해 있다.</li>
+                      </ul>
+                      <ul class="list_dotBlack">
+                        <li>타이난(Tainan)</li>
+                      </ul>
+                      <ul style="margin-bottom: 20px">
+                        <li class="alignPre">ㅇ 면적: 2,192㎢ ㅇ 인구: 2026년 4월 기준 1,849,762명 ㅇ 풍부한 역사 유산과 전통문화가 살아 있는 곳으로 사원과 고적이 밀집해 있다. TSMC 선단공정 팹을 중심으로 첨단산업도 발전해 전통과 현대가 공존하는 특색을 지니고 있다.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="dateInfo">최종수정 : 2026-05-27 19:09</p>
+            </div>
+
+            <div class="board_area"></div>
+
+            <div class="lineList_tb noCateg nationNews">
+              <strong class="contTit_line">국가정보 - 관련뉴스</strong>
+              <table>
+                <caption>
+                  <p>국가정보 - 관련뉴스</p>
+                </caption>
+                <colgroup>
+                  <col style="width: 7%" />
+                  <col />
+                  <col style="width: 12%" />
+                  <col style="width: 12%" />
+                  <col style="width: 12%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">국가</th>
+                    <th scope="col">무역관</th>
+                    <th scope="col">게시일</th>
+                  </tr>
+                </thead>
+                <tbody id="newsBody">
+                  <tr data-idno="240338" class="nttTr">
+                    <td class="no">1</td>
+                    <td class="txtL"><a href="/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=100&amp;CONTENTS_NO=1&amp;bbsSn=322&amp;pNttSn=240338" class="subjectTxt">대만의 데이터센터 투자 촉진 행보, 우리 기업의 시장 진출 기회로 부상</a></td>
+                    <td><em class="mSort">국가</em>대만</td>
+                    <td><em class="mSort">무역관</em>타이베이무역관</td>
+                    <td><em class="mSort">게시일</em>2026-04-09</td>
+                  </tr>
+                  <tr data-idno="232026" class="nttTr">
+                    <td class="no">2</td>
+                    <td class="txtL"><a href="/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&amp;MENU_ID=100&amp;CONTENTS_NO=1&amp;bbsSn=322&amp;pNttSn=232026" class="subjectTxt">대만 전력시장 동향과 시장진출 기회요인</a></td>
+                    <td><em class="mSort">국가</em>대만</td>
+                    <td><em class="mSort">무역관</em>타이베이무역관</td>
+                    <td><em class="mSort">게시일</em>2025-08-04</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="board_area">
+                <div class="lineList_v">
+                  <dl>
+                    <dd style="padding: 0px; margin-top: 30px">
+                      <div class="add_openNoti">
+                        <img src="https://dream.kotra.or.kr/type/common/img/board/img_opentype01.png" alt="공공누리 제 1유형(출처표시) - 공공저작물 자유이용허락" class="copyrightImg" />
+                        <p>국가정보[투자환경] 항목은 <em class="point_black">"공공누리 1유형 출처표시"</em> 조건에 따라 이용 할 수 있습니다.</p>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- //board -->
+        </article>
       </div>
     </div>
     <!-- 푸터 -->

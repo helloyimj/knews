@@ -1769,7 +1769,6 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 		flex: 1 1 auto;
 		gap: 20px;
 		min-width: 0;
-
 		position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -2157,6 +2156,15 @@ body.is-gnb-web {
 				}
 			}
 		}
+
+	.news_top_search {
+		justify-content: end;
+		position: relative;
+    left: unset;
+		// right: 0;
+    transform: unset;
+	}
+
 	}
 }
 
@@ -2611,14 +2619,11 @@ body.is-gnb-web {
 			}
 		}
 
-
-
-
 		.header_container {
-			.logo {
-				width: 94px;
-				height: 32px;
-			}
+			// .logo {
+			// 	width: 94px;
+			// 	height: 32px;
+			// }
 
 			.header_actions {
 				gap: 0;
@@ -2653,8 +2658,6 @@ body.is-gnb-web {
 				}
 			}
 		}
-
-
 	}
 }
 

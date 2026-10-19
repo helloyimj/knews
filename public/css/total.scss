@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// 엔트리. 컴파일하면 total.css 한 장으로 펼쳐진다.
+// 엔트리. 컴파일하면 total.css 한 장으로 컴파일됨.
 // sass css/total.scss css/total.css
 
 @import "fonts";
@@ -11,7 +11,7 @@
 
 // 기존 common css 분리
 @import "util";
-@import "pop";
+@import "popup";
 @import "pnb";
 @import "snb";
 // @import "footer"; // 기존푸터 kotra로 수정
@@ -21,10 +21,14 @@
 @import "form";
 @import "pagination";
 
+// 코트라 아이덴티티, 푸터 
+@import "masthead_kotra";
+@import "footer_kotra";
+
 // 기존 common css 분리 // public\type\common\css 2002609
 @import "input";
 @import "datepicker";
-@import "page_tab"; // 시장뉴스에는 #pageTab, #selectTab_wrap 이 없음 , #contTab_fix은 존재함
+@import "page_tab"; 
 
 // 검색조건 — _search_filter.scss 는 _search_option.scss 에 통합 (0930)
 @import "search_option";
@@ -32,15 +36,15 @@
 
 // 2002609 분리 // public\type\common\css
 
-@import "top_notice";
+@import "top_notice"; // 상단공지
 
 // 기존 css 선언 순서 상단으로 변경 
 // @import "common"; // public\type\common\css
 // @import "common_res"; // public\type\common\css
 
 // @import "common_etc";
-@import "news";
-@import "kor";
+@import "news"; // authInfoView
+@import "kor"; // 정보이미지 검색
 @import "html_css";
 
 // 게시판
@@ -50,17 +54,12 @@
 @import "board_etc"; // 게시판 상세페이지 유틸 등
 @import "pages"; // 개별 페이지(수출파트너, 해외진출기업, 로그인, 에러)
 
-// 코트라 아이덴티티, 푸터 
-@import "masthead_kotra";
-@import "footer_kotra";
-
 // 생성예정
 // @import "search_total";
 
 // dream 분리 — 시장뉴스 html 미사용(마이드림, mbti, ODA, 대시보드 등)
 @import "common_dream";
-// 팝업
-@import "popup";
+
 
 // 삭제 예정
 @import "header";
