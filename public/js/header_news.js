@@ -58,8 +58,23 @@ const scrollManager = {
 
 // common
 const common = {
+  isFocusableVisible(el, root) {
+    if (!el || el.disabled || el.getAttribute("aria-hidden") === "true") return false;
+    if (el.closest("[inert]")) return false;
+    let node = el;
+    while (node && node !== root && node !== document.documentElement) {
+      const style = window.getComputedStyle(node);
+      if (style.display === "none" || style.visibility === "hidden") return false;
+      node = node.parentElement;
+    }
+    return true;
+  },
+  getFocusableElements(root) {
+    const selector = `a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])`;
+    return [...root.querySelectorAll(selector)].filter((el) => this.isFocusableVisible(el, root));
+  },
   focusTrap(trap) {
-    const focusableElements = trap.querySelectorAll(`a, button, [tabindex="0"], input, textarea, select`);
+    const focusableElements = this.getFocusableElements(trap);
 
     if (!focusableElements.length) return;
 
@@ -67,20 +82,73 @@ const common = {
     const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
     trap.addEventListener("keydown", (event) => {
-      if (event.key === "Tab") {
-        if (event.shiftKey && document.activeElement === firstFocusableElement) {
-          event.preventDefault();
-          lastFocusableElement.focus();
-        } else if (!event.shiftKey && document.activeElement === lastFocusableElement) {
-          event.preventDefault();
-          firstFocusableElement.focus();
-          // 모달 오픈 후 첫 초점 역방향 제어(modal-content가 첫초점이 아니면 사용 안해도 됨)
-        } else if (event.key === "Tab" && event.shiftKey && document.activeElement === trap) {
-          event.preventDefault();
-          lastFocusableElement.focus();
-        }
+      if (event.key !== "Tab") return;
+      const list = this.getFocusableElements(trap);
+      if (!list.length) return;
+      const first = list[0];
+      const last = list[list.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      } else if (event.shiftKey && document.activeElement === trap) {
+        event.preventDefault();
+        last.focus();
       }
     });
+  },
+};
+
+/** PC/모바일에서 display:none·닫힌 패널로 Tab 포커스가 가지 않도록 inert 동기화 */
+const headerFocusScope = {
+  setInert(el, on) {
+    if (!el) return;
+    if (on) el.setAttribute("inert", "");
+    else el.removeAttribute("inert");
+  },
+  sync() {
+    windowSize.setWinSize();
+    const isMobile = windowSize.getWinSize() === "mob";
+    const pcMenu = document.querySelector(".header_news .news_main_menu:not(.sample)");
+    const mobileMenu = document.querySelector(".header_news .news_main_menu_mobile:not(.sample)");
+    const topSearch = document.querySelector(".header_news .news_top_search");
+    const headerUtility = document.querySelector(".header_news .header_utility");
+    const mobileOpen = !!mobileMenu?.classList.contains("is-open");
+
+    if (isMobile) {
+      // PC GNB·상단검색 등 숨김 영역은 탭 순서에서 제외
+      this.setInert(pcMenu, true);
+      this.setInert(topSearch, true);
+      this.setInert(headerUtility, true);
+      // 모바일 전체메뉴: 닫혀 있으면 제외, 열려 있으면 허용
+      this.setInert(mobileMenu, !mobileOpen);
+      if (mobileMenu && !mobileOpen) {
+        mobileMenu.style.display = "none";
+      }
+    } else {
+      this.setInert(pcMenu, false);
+      this.setInert(topSearch, false);
+      this.setInert(headerUtility, false);
+      this.setInert(mobileMenu, true);
+      if (mobileMenu && !mobileOpen) {
+        mobileMenu.style.display = "none";
+      }
+      // PC에서는 모바일 메뉴 오픈 시 걸었던 inert 잔여 정리
+      if (!mobileOpen) {
+        document.querySelector(".header_news .header_in")?.removeAttribute("inert");
+        document.getElementById("container")?.removeAttribute("inert");
+        document.getElementById("footer")?.removeAttribute("inert");
+      }
+    }
+
+    // inert 영역 안에 포커스가 남으면 제거
+    const active = document.activeElement;
+    if (active && typeof active.closest === "function" && active.closest("[inert]")) {
+      active.blur();
+    }
   },
 };
 
@@ -336,6 +404,7 @@ const news_mainMenuMobile = {
     this.setupAriaAttributes(mobileGnb);
 
     this.attachEvents(mobileGnb);
+    headerFocusScope.sync();
   },
   setupAriaAttributes(mobileGnb) {
     const tabList = mobileGnb.querySelector(".menu_wrap");
@@ -395,8 +464,13 @@ const news_mainMenuMobile = {
 
     // 반응형 처리
     window.addEventListener("resize", () => {
+      windowSize.setWinSize();
       const isPC = windowSize.getWinSize() === "pc";
-      if (isPC) this.closeMainMenu(mobileGnb);
+      if (isPC && mobileGnb.classList.contains("is-open")) {
+        this.closeMainMenu(mobileGnb);
+      } else {
+        headerFocusScope.sync();
+      }
     });
   },
   openMainMenu(mobileGnb) {
@@ -405,6 +479,7 @@ const news_mainMenuMobile = {
     const openGnb = id ? document.querySelector(`[aria-controls="${id}"]`) : null;
 
     mobileGnb.style.display = "block";
+    mobileGnb.removeAttribute("inert");
     navContainer?.setAttribute("tabindex", 0);
     openGnb?.setAttribute("aria-expanded", "true");
 
@@ -431,10 +506,11 @@ const news_mainMenuMobile = {
       navContainer.focus();
       mobileGnb.removeEventListener("transitionend", onTransitionEnd);
 
-      // inert 설정
+      // inert 설정 — 배경(헤더/본문)만 막고, 모바일 메뉴는 포커스 허용
       document.querySelector(".header_news .header_in")?.setAttribute("inert", "");
       document.getElementById("container")?.setAttribute("inert", "");
       document.getElementById("footer")?.setAttribute("inert", "");
+      headerFocusScope.sync();
       
       // 포커스 트랩 설정
       common.focusTrap(mobileGnb);
@@ -463,6 +539,7 @@ const news_mainMenuMobile = {
     setTimeout(() => {
       mobileGnb.style.display = "none";
       document.body.classList.remove("is-gnb-mobile");
+      headerFocusScope.sync();
     }, 400);
   },
   setupAnchorScroll(mobileGnb) {
@@ -818,16 +895,34 @@ const newsHotRoll = {
   },
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+/**
+ * 헤더 인터랙션 초기화.
+ * - 정적 HTML(#header 안에 마크업) 페이지: DOMContentLoaded 에서 실행
+ * - layout_common 주입 페이지: jQuery ready 가 DOMContentLoaded 보다 늦을 수 있어
+ *   주입 직후 layout_common 에서 다시 호출해야 함
+ */
+window.initHeaderNews = function initHeaderNews() {
+  if (window.initHeaderNews._bound) return true;
+  // 헤더 DOM이 아직 없으면(주입 전) 실패 — 나중에 재호출
+  if (!document.querySelector(".news_main_menu:not(.sample) .gnb_menu")) return false;
+
   windowSize.setWinSize();
-  try { newsHotRoll.init(); } catch (e) { console.error("[news_header] newsHotRoll", e); }
-  try { news_mainMenuPC.init(); } catch (e) { console.error("[news_header] news_mainMenuPC", e); }
-  try { news_mainMenuMobile.init(); } catch (e) { console.error("[news_header] news_mainMenuMobile", e); }
-  try { news_dropEvent.init(); } catch (e) { console.error("[news_header] news_dropEvent", e); }
+  try { newsHotRoll.init(); } catch (e) { console.error("[header_news] newsHotRoll", e); }
+  try { news_mainMenuPC.init(); } catch (e) { console.error("[header_news] news_mainMenuPC", e); }
+  try { news_mainMenuMobile.init(); } catch (e) { console.error("[header_news] news_mainMenuMobile", e); }
+  try { news_dropEvent.init(); } catch (e) { console.error("[header_news] news_dropEvent", e); }
+  try { headerFocusScope.sync(); } catch (e) { console.error("[header_news] headerFocusScope", e); }
+  window.initHeaderNews._bound = true;
+  return true;
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  window.initHeaderNews();
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   windowSize.setWinSize();
+  try { headerFocusScope.sync(); } catch (e) { console.error("[header_news] headerFocusScope", e); }
   document.querySelectorAll(".news_main_menu .gnb_toggle_wrap.is-open .gnb_main_list").forEach((list) => {
     news_mainMenuPC.adjustSubMenuHeight(list);
   });

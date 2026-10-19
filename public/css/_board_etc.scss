@@ -426,7 +426,7 @@
 
     .replyArea {padding-top:15px;padding-bottom:25px;}
     .replyArea .tit {margin-bottom:4px;}
-    .replyArea h1 {font-size:16px;}
+    .replyArea h1, .replyArea h2 {font-size:16px;}
     .replyArea .num {font-size:17px;}
     .replyArea .write .txtInfo>span {margin-right:6px;}
     .replyArea .write .txtInfo .writer {font-size:15px;line-height:22px;}
@@ -484,7 +484,7 @@
     .prevNnext li {height:40px;padding:0 10px;}
     .prevNnext li>strong {width:75px;height:40px;padding-left:22px;font-size:13px;line-height:41px;}
     .prevNnext li>p {width:calc(100% - 75px);font-size:13px;line-height:41px;}
-    .prevNnext li>p>a {font-size:13px;line-height:41px;}
+    .prevNnext li>p>a {font-size:13px;}
 
     /* 공공누리 */
     .KOGL_area {padding-bottom:30px;margin-top:40px;}

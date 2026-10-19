@@ -9,33 +9,29 @@
 // 기존 css 
 @import "common"; // public\type\common\css
 
-// 기존 common css 분리
-@import "util";
-@import "popup";
-@import "pnb";
-@import "snb";
-// @import "footer"; // 기존푸터 kotra로 수정
 @import "layout_frame";
 
 @import "button";
 @import "form";
 @import "pagination";
 
-// 코트라 아이덴티티, 푸터 
-@import "masthead_kotra";
-@import "footer_kotra";
+// 기존 common css 분리
+@import "util";
+@import "popup";
+@import "pnb";
+@import "snb";
 
 // 기존 common css 분리 // public\type\common\css 2002609
 @import "input";
 @import "datepicker";
 @import "page_tab"; 
 
-// 검색조건 — _search_filter.scss 는 _search_option.scss 에 통합 (0930)
-@import "search_option";
-@import "table_style";
+// 코트라 아이덴티티, 푸터 
+@import "masthead_kotra";
+@import "footer_kotra";
+@import "header";
 
 // 2002609 분리 // public\type\common\css
-
 @import "top_notice"; // 상단공지
 
 // 기존 css 선언 순서 상단으로 변경 
@@ -44,27 +40,31 @@
 
 // @import "common_etc";
 @import "news"; // authInfoView
-@import "kor"; // 정보이미지 검색
 @import "html_css";
+@import "kor"; // 정보이미지 검색
 
 // 게시판
 @import "board_common";
 @import "board_list"; // 게시판 목록페이지 레이아웃 관련
 @import "board_detail"; // 게시판 상세페이지 레이아웃 관련
 @import "board_etc"; // 게시판 상세페이지 유틸 등
-@import "pages"; // 개별 페이지(수출파트너, 해외진출기업, 로그인, 에러)
+
+// 검색조건 — _search_filter.scss 는 _search_option.scss 에 통합 (0930)
+@import "search_option";
+@import "table_style";
+
+// 개별 페이지
+@import "pages"; // (수출파트너, 해외진출기업, 로그인, 에러)
+// 임시 html 인라인 소스코드 분리 (__news_page4~12, 15)
+@import "pages_other";
 
 // 생성예정
 // @import "search_total";
 
+// 삭제 예정
+@import "sitemap"; // .sitemapBox / .sitemapArea (구 common.css 사이트맵)
+
 // dream 분리 — 시장뉴스 html 미사용(마이드림, mbti, ODA, 대시보드 등)
 @import "common_dream";
 
-
-// 삭제 예정
-@import "header";
-@import "sitemap"; // .sitemapBox / .sitemapArea (구 common.css 사이트맵)
-
-// 임시 html 인라인 소스코드 분리 (__news_page4~12, 15)
-@import "pages_other";
 

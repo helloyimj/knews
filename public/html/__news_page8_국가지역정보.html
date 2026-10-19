@@ -45,6 +45,7 @@
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
     <script src="../js/layout_common.js"></script>
+    <script src="../js/header_news.js"></script>
     <script src="../js/cms_file.js"></script>
     <!-- SNS -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -73,7 +74,7 @@
     <div id="dim"></div>
     <div id="gnb_dim"></div>
     <div id="masthead_kotra"></div>
-    <!-- <div id="header"></div> -->
+    <div id="header"></div>
     <!-- 사이트맵 -->
     <!-- <section class="sitemapBox"></section> -->
 
@@ -526,73 +527,73 @@
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_320" value="320" /><label for="natSn_320"><span class="txtHidden">과테말라</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '320')" value="320"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_GT.png" alt="" /><span>과테말라</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '320')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_GT.png" alt="" /><span>과테말라</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_214" value="214" /><label for="natSn_214"><span class="txtHidden">도미니카공화국</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '214')" value="214"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_DO.png" alt="" /><span>도미니카공화국</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '214')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_DO.png" alt="" /><span>도미니카공화국</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_484" value="484" /><label for="natSn_484"><span class="txtHidden">멕시코</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '484')" value="484"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_MX.png" alt="" /><span>멕시코</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '484')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_MX.png" alt="" /><span>멕시코</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_76" value="76" /><label for="natSn_76"><span class="txtHidden">브라질</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '76')" value="76"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_BR.png" alt="" /><span>브라질</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '76')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_BR.png" alt="" /><span>브라질</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_32" value="32" /><label for="natSn_32"><span class="txtHidden">아르헨티나</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '32')" value="32"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_AR.png" alt="" /><span>아르헨티나</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '32')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_AR.png" alt="" /><span>아르헨티나</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_218" value="218" /><label for="natSn_218"><span class="txtHidden">에콰도르</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '218')" value="218"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_EC.png" alt="" /><span>에콰도르</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '218')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_EC.png" alt="" /><span>에콰도르</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_152" value="152" /><label for="natSn_152"><span class="txtHidden">칠레</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '152')" value="152"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_CL.png" alt="" /><span>칠레</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '152')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_CL.png" alt="" /><span>칠레</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_170" value="170" /><label for="natSn_170"><span class="txtHidden">콜롬비아</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '170')" value="170"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_CO.png" alt="" /><span>콜롬비아</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '170')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_CO.png" alt="" /><span>콜롬비아</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_192" value="192" /><label for="natSn_192"><span class="txtHidden">쿠바</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '192')" value="192"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_CU.png" alt="" /><span>쿠바</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '192')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_CU.png" alt="" /><span>쿠바</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_591" value="591" /><label for="natSn_591"><span class="txtHidden">파나마</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '591')" value="591"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_PA.png" alt="" /><span>파나마</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '591')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_PA.png" alt="" /><span>파나마</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_600" value="600" /><label for="natSn_600"><span class="txtHidden">파라과이</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '600')" value="600"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_PY.png" alt="" /><span>파라과이</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '600')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_PY.png" alt="" /><span>파라과이</span></a>
                 </li>
                 <li>
                   <span class="inp_c only"
                     ><input type="checkbox" class="nation_lamrc" name="chkNatSn" id="natSn_604" value="604" /><label for="natSn_604"><span class="txtHidden">페루</span></label></span
                   >
-                  <a href="#" onclick="fn_actionNatIemList('05', '604')" value="604"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_PE.png" alt="" /><span>페루</span></a>
+                  <a href="#" onclick="fn_actionNatIemList('05', '604')"><img src="https://dream.kotra.or.kr/type/common/img/common/flag/flag_PE.png" alt="" /><span>페루</span></a>
                 </li>
               </ul>
               <strong class="flagTit"

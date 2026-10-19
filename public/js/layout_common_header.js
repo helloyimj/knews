@@ -1957,13 +1957,15 @@ function initMobileGnb() {
  * ============================================================ */
 function initFooterExtras() {
   // top버튼
-  $("#btn_top").click(function () {
-    $("html, body").stop().animate({
-      scrollTop: 0
-    }, 150);
-    setTimeout(function () {
-      $('header a').eq(0).focus();
-    })
+  // 클릭/Enter 시 포커스를 header로 옮기면 #btn_top 링이 잠깐 보이다
+  // 헤더 링크의 기본 focus-ring으로 바뀌어 보임 → 스크롤 완료 후 이동
+  $("#btn_top").on("click", function () {
+    $("html, body").stop().animate({ scrollTop: 0 }, 150, function () {
+      var $target = $("header a").filter(":visible").first();
+      if ($target.length) {
+        $target.focus();
+      }
+    });
   });
 
   $("#snb_nav .snb_util .zoom>button").click(function () {

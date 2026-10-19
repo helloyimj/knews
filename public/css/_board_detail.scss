@@ -190,7 +190,7 @@
 .add_openNoti>p .point_black {color:#111;font-style:normal;font-size:inherit;line-height:inherit;}
 .add_openNoti .copyrightImg {position:absolute;left:50px;top:25px;}
 dt+dd .add_openNoti {width:calc(100% + 100px);margin-left:-50px;}
-dd .add_openNoti {width:100%;margin-left:0px;}
+dd .add_openNoti {width:100%;margin-left:0px; margin-top: 30px}
 .txt_copyRightHolder {margin-top:80px;font-size:18px;color:#333;}
 .add_sympathy+.add_openNoti {margin-top:55px;}
 
@@ -312,6 +312,7 @@ dd .add_openNoti {width:100%;margin-left:0px;}
 
 
 .btn_reply {display:inline-block;height:45px;padding:0 21px;background:#4286ea;color:#fff;border-radius:2px;font-size:15px;line-height:45px;vertical-align:middle;color:#fff;}
+// .btn_reply:focus-visible { // @include focus-ring-contrast; }
 .btn_reply>span {font-size:inherit;}
 .btn_replyS {display:inline-block;position:relative;right:auto;top:auto;margin-right:5px;overflow:hidden;height:25px;box-sizing:border-box;padding:0 8px;border:1px solid #d9d9d9;font-size:14px;vertical-align:middle;color:#666;line-height:25px;}
 .btn_replyS>span {font-size:inherit;}
@@ -319,7 +320,7 @@ dd .add_openNoti {width:100%;margin-left:0px;}
 .replyArea .list>li>.btn .btn_reply {height:25px;padding:0 8px;border:1px solid #212e4e;background:#fff;color:#212e4e;border-radius:0;line-height:25px;font-size:14px;letter-spacing:-.5px;}
 .replyArea {padding-top:45px;padding-bottom:50px;}
 .replyArea .tit {overflow:hidden;width:100%;margin-bottom:8px;box-sizing:border-box;text-align:left;}
-.replyArea h1 {display:inline-block;padding:10px 0;color:#222;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:22px;font-weight:700;letter-spacing:-1px;}
+.replyArea h1, .replyArea h2 {display:inline-block;padding:10px 0;color:#222;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:22px;font-weight:700;letter-spacing:-1px;}
 .replyArea .num {font-size:24px;color:#4286ea;font-weight:500}
 .replyArea textarea {height:70px;padding:10px 10px 10px 10px;border:1px solid #d9d9d9;resize:none;}
 .replyArea fieldset {position:relative;}
@@ -536,10 +537,10 @@ dd .add_openNoti {width:100%;margin-left:0px;}
 
 .prevNnext {clear:both;}
 .prevNnext ul {border-top:1px solid #e2e2e2;}
-.prevNnext li {overflow:hidden;position:relative;height:59px;box-sizing:border-box;padding:0 20px 0 30px;border-bottom:1px solid #e2e2e2;white-space:nowrap;}
+.prevNnext li {overflow:visible;position:relative;height:59px;box-sizing:border-box;padding:0 20px 0 30px;border-bottom:1px solid #e2e2e2;white-space:nowrap;}
 .prevNnext li>strong {position:relative;display:block;float:left;overflow:hidden;width:114px;height:59px;box-sizing:border-box;padding-left:23px;color:#888;font-size:15px;font-weight:400;line-height:60px;text-align:left;}
 .prevNnext li.prev>strong:before {content:'';position:absolute;left:0;top:50%;display:block;width:13px;height:7px;margin-top:-3.5px;background: url(../img/common/sprite_component.png) no-repeat  -230px -344px;}
 .prevNnext li.next>strong:before {content:'';position:absolute;left:0;top:50%;display:block;width:13px;height:7px;margin-top:-3.5px;background: url(../img/common/sprite_component.png) no-repeat  -356px -317px;}
-.prevNnext li>p {display:block;float:left;overflow:hidden;width:calc(100% - 114px);height:59px;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;font-weight:400;line-height:60px;text-align:left;white-space:nowrap;}
-.prevNnext li>p>a {display:inline-block;overflow:hidden;text-overflow:ellipsis;max-width:100%;color:#222;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;font-weight:400;line-height:60px;text-align:left;white-space:nowrap;}
+.prevNnext li>p {display:block;float:left;overflow:visible;width:calc(100% - 114px);height:59px;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;font-weight:400;line-height:60px;text-align:left;white-space:nowrap;}
+.prevNnext li>p>a {display:block;overflow:hidden;text-overflow:ellipsis;width:100%;color:#222;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;font-weight:400;text-align:left;white-space:nowrap;}
 .prevNnext li>.no_article {padding:0 !important;background:none !important;color:#666;}

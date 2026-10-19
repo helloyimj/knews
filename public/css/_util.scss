@@ -7,23 +7,71 @@
    ($inset kept for call-site compat; always inner) */
 @mixin focus-ring-contrast($inset: true, $important: false) {
 	@if $important {
-		outline: 2px dashed #fff !important;
+		outline: 2px solid #fff !important;
+		// outline: 2px dashed #fff !important;
 		outline-offset: -2px !important;
 		box-shadow: inset 0 0 0 4px #212E4E !important;
 	} @else {
-		outline: 2px dashed #fff;
+		outline: 2px solid #fff;
+		// outline: 2px dashed #fff;
 		outline-offset: -2px;
 		box-shadow: inset 0 0 0 4px #212E4E;
 	}
 }
 
+// /* 키보드 포커스 공통 — 믹스인 밖에 둬야 CSS로 출력됨 */
+:where(
+	a[href],
+	button:not(:disabled):not(#btn_top),
+	input:not(:disabled),
+	select:not(:disabled),
+	textarea:not(:disabled),
+	summary,
+	[tabindex]:not([tabindex="-1"])
+):focus-visible {
+	// @include focus-ring-contrast;
+}
+
+/* 진한배경색 버튼용 */
+@mixin focus-ring-on-dark {
+  outline: 2px solid #fff;
+  outline-offset: 2px; /* 바깥 */
+  box-shadow: 0 0 0 4px #212E4E;
+}
+
+/* 진한 채움 버튼 — 기본 inset 링이 안 보이므로 바깥 링 */
+.btnC.Navy,
+.btnC.Blue,
+.btnC_s.Navy,
+.btnC_s.Blue,
+.btnC_s.Gray,
+.btnI.fileDown.Navy,
+.btnI.fileDown.Blue,
+.btnC_s.typeChk.on,
+.btn_scrap.on,
+#btn_top {
+	&:focus-visible {
+		overflow: visible;
+		// @include focus-ring-on-dark;
+	}
+}
+
+/* 링 끄기 */
+.no-focus-ring:focus-visible {
+	outline: none;
+	box-shadow: none;
+}
+
+
 /* skip menu */
 #skip_menu a{position:absolute;opacity:0;}
 #skip_menu a:focus{display:inline-block;z-index:9999;padding:10px;background:#000;color:#fff;font-size:15px;opacity:1;}
+
 /* btn_top */
 /* .typeMain #btn_top {display:none;} */
-#btn_top {display:block;position:fixed;right:30px;bottom:263px;overflow:hidden;width:48px;height:48px;border-radius:50%;background: url(../img/layout/layout_sprite.png) no-repeat -89px -94px;text-indent:-999px;z-index:10;opacity:0;transition:0.3s all;}
+#btn_top {display:block;position:fixed;right:30px;bottom:263px;overflow:hidden;width:48px;height:48px;border-radius:50%;background: url(../img/layout/layout_sprite.png) no-repeat -89px -94px;text-indent:-9999999px;z-index:10;opacity:0;transition:opacity 0.3s;}
 #btn_top.on {opacity:1;}
+/* #btn_top:focus-visible → 상단 진한 채움 버튼 포커스 링 묶음 */
 
 @media all and (max-width: 1041px) {
     #btn_top {
@@ -42,7 +90,7 @@
 }
 
 /* ============================================================ */
-/* ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¸ / ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼ */
+/* 유틸 / 헬퍼 */
 /* ============================================================ */
 .topExclam.txtR { margin-bottom:10px;}
 .txtL { text-align:left !important;}
@@ -377,9 +425,9 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, 
 	}
 }
 /* ============================================================ */
-/* ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ·ÃÂÃÂÃÂÃÂ¼ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ± */
+/* 웹접근성 */
 /* ============================================================ */
-/* ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ·ÃÂÃÂÃÂÃÂ¼ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ± */
+/* 웹접근성 */
 .sr-only {
 	position: absolute !important;
 	width: 1px !important;
@@ -391,7 +439,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, 
 	border: 0 !important;
 }
 
-/* hs code ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂ¾ÃÂÃÂÃÂÃÂªÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂ° ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ²ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ­ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¼ ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¹ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂ ÃÂÃÂÃÂÃÂ (ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ·ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤ÃÂÃÂÃÂÃÂ¬ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ´ÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ) */
+/* hs code 찾기 버튼 위치 조정 (뷰어다운로드) */
 @media all and (max-width:450px) {
 .lineTop_tbArea .lineTop_tb2{
             min-width: auto !important;

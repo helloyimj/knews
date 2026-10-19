@@ -905,9 +905,446 @@ function initCommonLayout() {
   // </header>
   // `);
 
+  // HTML에 이미 #header > #header_news 가 있으면 덮어쓰지 않음 (header_news.js 바인딩 유지)
+  if (!$('#header #header_news.header_news').length) {
   $('#header').html(`
-    
+          <!-- header -->
+      <header id="header_news" class="header_news">
+        <!-- 헤더 컨텐츠 영역  -->
+        <div class="header_in">
+          <!-- 헤더 상단 기타메뉴 -->
+          <div class="header_container">
+            <div class="inner">
+              <div class="header_branding">
+                <h2 class="logo">
+                  <a href="#" target="_self" aria-label="해외시장뉴스 메인(페이지 이동)"></a>
+                </h2>
+                <div class="news_top_search">
+                  <form class="news_search" role="search" action="https://dream.kotra.or.kr/kotranews/index.do" method="get">
+                    <label class="sr_only" for="newsSearchInput">검색어</label>
+                    <input id="newsSearchInput" class="news_search_input" type="search" name="searchWrd" placeholder="검색어를 입력해주세요" autocomplete="off" />
+                    <button type="submit" class="news_search_submit" aria-label="검색">
+                      <i class="svg_icon ico_sch"></i>
+                    </button>
+                  </form>
+                  <div class="news_hot">
+                    <span class="news_hot_badge">HOT</span>
+                    <div class="news_hot_viewport">
+                      <ul class="news_hot_list">
+                        <li><a href="https://dream.kotra.or.kr/kotranews/index.do?searchWrd=미국 배송로봇" target="_self" aria-label="미국 배송로봇(페이지 이동)">미국 배송로봇</a></li>
+                        <li><a href="https://dream.kotra.or.kr/kotranews/index.do?searchWrd=유럽 탄소국경세" target="_self" aria-label="유럽 탄소국경세(페이지 이동)">유럽 탄소국경세</a></li>
+                        <li><a href="https://dream.kotra.or.kr/kotranews/index.do?searchWrd=베트남 수출규제" target="_self" aria-label="베트남 수출규제(페이지 이동)">베트남 수출규제</a></li>
+                        <li><a href="https://dream.kotra.or.kr/kotranews/index.do?searchWrd=일본 반도체" target="_self" aria-label="일본 반도체(페이지 이동)">일본 반도체</a></li>
+                        <li><a href="https://dream.kotra.or.kr/kotranews/index.do?searchWrd=중동 플랜트" target="_self" aria-label="중동 플랜트(페이지 이동)">중동 플랜트</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="header_actions">
+                  <button type="button" class="btn_navi all" aria-controls="mobile_nav" aria-expanded="false">전체메뉴</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //헤더 상단 기타메뉴 -->
+
+          <!-- 메인메뉴 : wide -->
+          <nav class="news_main_menu">
+            <div class="main_menu_inner">
+              <ul class="gnb_menu">
+                <li>
+                  <button type="button" class="gnb_main_trigger" data-trigger="gnb" data-sub="Y">뉴스</button>
+                  <div class="gnb_toggle_wrap">
+                    <div class="gnb_main_list" data-has-submenu="true">
+                      <div class="gnb_sub_list">
+                        <div class="gnb_sub_content">
+                          <ul class="gnb_depth2">
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=70" class="depth2_title" data-sub="N" target="_self" aria-label="전체(페이지 이동)">
+                                <span>전체</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=80" class="depth2_title" data-sub="N" target="_self" aria-label="경제∙무역(페이지 이동)">
+                                <span>경제∙무역</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=90" class="depth2_title" data-sub="N" target="_self" aria-label="통상∙규제(페이지 이동)">
+                                <span>통상∙규제</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=100" class="depth2_title" data-sub="N" target="_self" aria-label="투자진출(페이지 이동)">
+                                <span>투자진출</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=110" class="depth2_title" data-sub="N" target="_self" aria-label="현장∙인터뷰(페이지 이동)">
+                                <span>현장∙인터뷰</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=1480" class="depth2_title" data-sub="Y" target="_self" aria-label="기고(페이지 이동)">
+                                <span>기고</span>
+                              </a>
+                              <ul class="depth3_list">
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=130" data-sub="N" target="_self" aria-label="전문가기고(페이지 이동)">전문가기고</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=140" data-sub="N" target="_self" aria-label="직원기고(페이지 이동)">직원기고</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=290" class="depth2_title" data-sub="N" target="_self" aria-label="글로벌 이슈 모니터링(페이지 이동)">
+                                <span>글로벌 이슈 모니터링</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=1550" class="depth2_title" data-sub="Y" target="_self" aria-label="글로벌 공급망 동향(페이지 이동)">
+                                <span>글로벌 공급망 동향</span>
+                              </a>
+                              <ul class="depth3_list">
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=1360" data-sub="N" target="_self" aria-label="동향뉴스(페이지 이동)">동향뉴스</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=1560" data-sub="N" target="_self" aria-label="글로벌 공급망 인사이트(페이지 이동)">글로벌 공급망 인사이트</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=1500" class="depth2_title" data-sub="Y" target="_self" aria-label="글로벌 ESG 정보(페이지 이동)">
+                                <span>글로벌 ESG 정보</span>
+                              </a>
+                              <ul class="depth3_list">
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=1520" data-sub="N" target="_self" aria-label="동향뉴스(페이지 이동)">동향뉴스</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=1510" data-sub="N" target="_self" aria-label="연관 보고서(페이지 이동)">연관 보고서</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=1570" data-sub="N" target="_self" aria-label="ESG 활용지원센터(페이지 이동)">ESG 활용지원센터</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=1580" class="depth2_title" data-sub="N" target="_self" aria-label="미국 통상정책 주요 동향(페이지 이동)">
+                                <span>미국 통상정책 주요 동향</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=1470" class="depth2_title" data-sub="Y" target="_self" aria-label="핫클립(페이지 이동)">
+                                <span>핫클립</span>
+                              </a>
+                              <ul class="depth3_list">
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=1590" data-sub="N" target="_self" aria-label="우크라이나 사태 해외동향(페이지 이동)">우크라이나 사태 해외동향</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=1490" data-sub="N" target="_self" aria-label="중동 관련 주요 동향(페이지 이동)">중동 관련 주요 동향</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=1460" data-sub="N" target="_self" aria-label="지금 수출 현장은(페이지 이동)">지금 수출 현장은</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=120" data-sub="N" target="_self" aria-label="기획리포트(페이지 이동)">기획리포트</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=150" data-sub="N" target="_self" aria-label="일자리동향(페이지 이동)">일자리동향</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=1630" class="depth2_title" data-sub="N" target="_self" aria-label="산업뉴스콕콕(페이지 이동)">
+                                <span>산업뉴스콕콕</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <button type="button" class="gnb_main_trigger" data-trigger="gnb" data-sub="Y">상품·산업</button>
+                  <div class="gnb_toggle_wrap">
+                    <div class="gnb_main_list">
+                      <div class="gnb_sub_list">
+                        <div class="gnb_sub_content">
+                          <ul class="gnb_depth2">
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=170" class="depth2_title" data-sub="N" target="_self" aria-label="상품·산업 전체(페이지 이동)"><span>전체</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=180" class="depth2_title" data-sub="N" target="_self" aria-label="트렌드(페이지 이동)"><span>트렌드</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=190" class="depth2_title" data-sub="N" target="_self" aria-label="상품DB(페이지 이동)"><span>상품DB</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=200" class="depth2_title" data-sub="N" target="_self" aria-label="국별주요산업(페이지 이동)"><span>국별주요산업</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=210" class="depth2_title" data-sub="N" target="_self" aria-label="해외인증정보(페이지 이동)"><span>해외인증정보</span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <button type="button" class="gnb_main_trigger" data-trigger="gnb" data-sub="Y">국가·지역정보</button>
+                  <div class="gnb_toggle_wrap">
+                    <div class="gnb_main_list" data-has-submenu="true">
+                      <div class="gnb_sub_list">
+                        <div class="gnb_sub_content">
+                          <ul class="gnb_depth2">
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=220" class="depth2_title" data-sub="N" target="_self" aria-label="국가지역정보(페이지 이동)"><span>국가지역정보</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=240" class="depth2_title" data-sub="Y" target="_self" aria-label="북한정보(페이지 이동)"><span>북한정보</span></a>
+                              <ul class="depth3_list">
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=520" data-sub="N" target="_self" aria-label="북한정보(페이지 이동)">북한정보</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=530" data-sub="N" target="_self" aria-label="북한대외무역동향(페이지 이동)">북한대외무역동향</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=250" class="depth2_title" data-sub="N" target="_self" aria-label="진출전략(페이지 이동)"><span>진출전략</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=260" class="depth2_title" data-sub="N" target="_self" aria-label="출장자료(페이지 이동)"><span>출장자료</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=270" class="depth2_title" data-sub="N" target="_self" aria-label="무역관뉴스레터(페이지 이동)"><span>무역관뉴스레터</span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <button type="button" class="gnb_main_trigger" data-trigger="gnb" data-sub="Y">보고서</button>
+                  <div class="gnb_toggle_wrap">
+                    <div class="gnb_main_list">
+                      <div class="gnb_sub_list">
+                        <div class="gnb_sub_content">
+                          <ul class="gnb_depth2">
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=280" class="depth2_title" data-sub="N" target="_self" aria-label="보고서 전체(페이지 이동)"><span>전체</span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <button type="button" class="gnb_main_trigger" data-trigger="gnb" data-sub="Y">멀티미디어뉴스</button>
+                  <div class="gnb_toggle_wrap">
+                    <div class="gnb_main_list">
+                      <div class="gnb_sub_list">
+                        <div class="gnb_sub_content">
+                          <ul class="gnb_depth2">
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=540" class="depth2_title" data-sub="N" target="_self" aria-label="동영상뉴스(페이지 이동)"><span>동영상뉴스</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=310" class="depth2_title" data-sub="N" target="_self" aria-label="포토뉴스(페이지 이동)"><span>포토뉴스</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=320" class="depth2_title" data-sub="N" target="_self" aria-label="카드뉴스(페이지 이동)"><span>카드뉴스</span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <button type="button" class="gnb_main_trigger" data-trigger="gnb" data-sub="Y">해외투자</button>
+                  <div class="gnb_toggle_wrap">
+                    <div class="gnb_main_list" data-has-submenu="true">
+                      <div class="gnb_sub_list">
+                        <div class="gnb_sub_content">
+                          <ul class="gnb_depth2">
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=350" class="depth2_title" data-sub="N" target="_self" aria-label="해외투자안내(페이지 이동)"><span>해외투자안내</span></a>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=360" class="depth2_title" data-sub="Y" target="_self" aria-label="직접투자절차(페이지 이동)"><span>직접투자절차</span></a>
+                              <ul class="depth3_list">
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=570" data-sub="N" target="_self" aria-label="해외투자준비(페이지 이동)">해외투자준비</a></li>
+                                <li>
+                                  <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 이동)">청산·국내복귀<i class="svg_icon ico_go"></i></a>
+                                </li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=600" data-sub="N" target="_self" aria-label="FAQ(페이지 이동)">FAQ</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=370" class="depth2_title" data-sub="Y" target="_self" aria-label="국별참고자료(페이지 이동)"><span>국별참고자료</span></a>
+                              <ul class="depth3_list">
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=610" data-sub="N" target="_self" aria-label="법규·서식(페이지 이동)">법규·서식</a></li>
+                                <li><a href="/kotranews/cms/com/index.do?MENU_ID=620" data-sub="N" target="_self" aria-label="진출기업지원세미나자료(페이지 이동)">진출기업지원세미나자료</a></li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="/kotranews/cms/com/index.do?MENU_ID=1350" class="depth2_title" data-sub="N" target="_self" aria-label="진출기업정보(페이지 이동)"><span>진출기업정보</span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- //메인메뉴 : wide -->
+        </div>
+        <!-- //헤더 컨텐츠 영역  -->
+
+        <!-- 메인메뉴 : mobile -->
+        <div id="mobile_nav" class="news_main_menu_mobile">
+          <div class="gnb_wrap">
+            <!-- gnb-header -->
+            <div class="gnb_header">
+              <!-- gnb-close : mobile 메뉴 열림 시 우측 상단 -->
+              <button type="button" class="news_btn medium icon" id="close_nav">
+                <span class="sr_only">전체메뉴 닫기</span>
+                <i class="svg_icon ico_popup_close"></i>
+              </button>
+              <!-- //gnb-close -->
+              <!-- gnb-login -->
+              <div class="gnb_login">
+                <!-- 로그인 전 -->
+                <!-- <button type="button" class="news_btn large text">로그인을 해주세요</button> -->
+                <!-- <button type="button" class="news_btn large text"><i class="svg_icon ico_log"></i> 로그인을 해주세요</button> -->
+
+                <!-- 로그인 후 -->
+
+                <!-- <span class="user">홍길동님</span>
+                <button type="button" class="news_btn large text"><i class="svg_icon ico_logout"></i> 로그아웃</button> -->
+                <!-- <a href="javascript:void(0);" class="gnb_main_trigger news_btn large text" target="_self" aria-label="마이페이지(페이지 이동)">홍길동님</a> -->
+                <button type="button" class="news_btn large text">홍길동 님</button>
+                <button type="button" class="news_btn large text"><i class="svg_icon ico_logout"></i> 로그아웃</button>
+              </div>
+              <!-- //gnb-login -->
+              <!-- 검색 -->
+              <div class="sch_input">
+                <input type="text" class="news_input" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+                <button type="button" class="news_btn medium icon ico_search">
+                  <span class="sr_only">검색</span>
+                  <i class="svg_icon ico_sch"></i>
+                </button>
+              </div>
+              <!-- //검색 -->
+            </div>
+            <!-- //gnb-header -->
+
+            <!-- gnb-body -->
+            <div class="gnb_body">
+              <!-- gnb-menu -->
+              <div class="gnb_menu">
+                <div class="menu_wrap">
+                  <ul>
+                    <li>
+                      <a href="#mGnb_anchor1" class="gnb_main_trigger" data-sub="Y" target="_self" aria-label="뉴스(페이지 이동)">뉴스</a>
+                    </li>
+                    <li>
+                      <a href="#mGnb_anchor2" class="gnb_main_trigger" data-sub="Y" target="_self" aria-label="상품·산업(페이지 이동)">상품·산업</a>
+                    </li>
+                    <li>
+                      <a href="#mGnb_anchor3" class="gnb_main_trigger" data-sub="Y" target="_self" aria-label="국가·지역정보(페이지 이동)">국가·지역정보</a>
+                    </li>
+                    <li>
+                      <a href="#mGnb_anchor4" class="gnb_main_trigger" data-sub="Y" target="_self" aria-label="보고서(페이지 이동)">보고서</a>
+                    </li>
+                    <li>
+                      <a href="#mGnb_anchor5" class="gnb_main_trigger" data-sub="Y" target="_self" aria-label="멀티미디어뉴스(페이지 이동)">멀티미디어뉴스</a>
+                    </li>
+                    <li>
+                      <a href="#mGnb_anchor6" class="gnb_main_trigger" data-sub="Y" target="_self" aria-label="해외투자(페이지 이동)">해외투자</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="submenu_wrap">
+                  <div class="gnb_sub_list" id="mGnb_anchor1">
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=70" data-sub="N" target="_self" aria-label="뉴스 전체(페이지 이동)">전체</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=80" data-sub="N" target="_self" aria-label="경제∙무역(페이지 이동)">경제∙무역</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=90" data-sub="N" target="_self" aria-label="통상∙규제(페이지 이동)">통상∙규제</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=100" data-sub="N" target="_self" aria-label="투자진출(페이지 이동)">투자진출</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=110" data-sub="N" target="_self" aria-label="현장∙인터뷰(페이지 이동)">현장∙인터뷰</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=1480" data-sub="Y" target="_self" aria-label="기고(페이지 이동)">기고</a>
+                    <ul>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=130" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="전문가기고(페이지 이동)">전문가기고</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=140" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="직원기고(페이지 이동)">직원기고</a></li>
+                    </ul>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=290" data-sub="N" target="_self" aria-label="글로벌 이슈 모니터링(페이지 이동)">글로벌 이슈 모니터링</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=1550" data-sub="Y" target="_self" aria-label="글로벌 공급망 동향(페이지 이동)">글로벌 공급망 동향</a>
+                    <ul>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=1360" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="동향뉴스(페이지 이동)">동향뉴스</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=1560" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="글로벌 공급망 인사이트(페이지 이동)">글로벌 공급망 인사이트</a></li>
+                    </ul>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=1500" data-sub="Y" target="_self" aria-label="글로벌 ESG 정보(페이지 이동)">글로벌 ESG 정보</a>
+                    <ul>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=1520" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="동향뉴스(페이지 이동)">동향뉴스</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=1510" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="연관 보고서(페이지 이동)">연관 보고서</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=1570" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="ESG 활용지원센터(페이지 이동)">ESG 활용지원센터</a></li>
+                    </ul>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=1580" data-sub="N" target="_self" aria-label="미국 통상정책 주요 동향(페이지 이동)">미국 통상정책 주요 동향</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=1470" data-sub="Y" target="_self" aria-label="핫클립(페이지 이동)">핫클립</a>
+                    <ul>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=1590" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="우크라이나 사태 해외동향(페이지 이동)">우크라이나 사태 해외동향</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=1490" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="중동 관련 주요 동향(페이지 이동)">중동 관련 주요 동향</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=1460" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="지금 수출 현장은(페이지 이동)">지금 수출 현장은</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=120" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="기획리포트(페이지 이동)">기획리포트</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=150" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="일자리동향(페이지 이동)">일자리동향</a></li>
+                    </ul>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=1630" data-sub="Y" target="_self" aria-label="산업뉴스콕콕(페이지 이동)">산업뉴스콕콕</a>
+                  </div>
+                  <div class="gnb_sub_list" id="mGnb_anchor2">
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=170" data-sub="N" target="_self" aria-label="전체(페이지 이동)">전체</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=180" data-sub="N" target="_self" aria-label="트렌드(페이지 이동)">트렌드</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=190" data-sub="N" target="_self" aria-label="상품DB(페이지 이동)">상품DB</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=200" data-sub="N" target="_self" aria-label="국별주요산업(페이지 이동)">국별주요산업</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=210" data-sub="N" target="_self" aria-label="해외인증정보(페이지 이동)">해외인증정보</a>
+                  </div>
+                  <div class="gnb_sub_list" id="mGnb_anchor3">
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=220" data-sub="N" target="_self" aria-label="국가지역정보(페이지 이동)">국가지역정보</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=240" data-sub="Y" target="_self" aria-label="북한정보(페이지 이동)">북한정보</a>
+                    <ul>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=520" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="북한정보(페이지 이동)">북한정보</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=530" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="북한대외무역동향(페이지 이동)">북한대외무역동향</a></li>
+                    </ul>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=250" data-sub="N" target="_self" aria-label="진출전략(페이지 이동)">진출전략</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=260" data-sub="N" target="_self" aria-label="출장자료(페이지 이동)">출장자료</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=270" data-sub="N" target="_self" aria-label="무역관뉴스레터(페이지 이동)">무역관뉴스레터</a>
+                  </div>
+                  <div class="gnb_sub_list" id="mGnb_anchor4">
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=280" data-sub="N" target="_self" aria-label="전체(페이지 이동)">전체</a>
+                  </div>
+                  <div class="gnb_sub_list" id="mGnb_anchor5">
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=540" data-sub="N" target="_self" aria-label="동영상뉴스(페이지 이동)">동영상뉴스</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=310" data-sub="N" target="_self" aria-label="포토뉴스(페이지 이동)">포토뉴스</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=320" data-sub="N" target="_self" aria-label="카드뉴스(페이지 이동)">카드뉴스</a>
+                  </div>
+                  <div class="gnb_sub_list" id="mGnb_anchor6">
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=350" data-sub="N" target="_self" aria-label="해외투자안내(페이지 이동)">해외투자안내</a>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=360" data-sub="Y" target="_self" aria-label="직접투자절차(페이지 이동)">직접투자절차</a>
+                    <ul>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=570" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="해외투자준비(페이지 이동)">해외투자준비</a></li>
+                      <li>
+                        <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="gnb_sub_trigger" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 이동)">청산·국내복귀<i class="svg_icon ico_go"></i></a>
+                      </li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=600" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="FAQ(페이지 이동)">FAQ</a></li>
+                    </ul>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=370" data-sub="Y" target="_self" aria-label="국별참고자료(페이지 이동)">국별참고자료</a>
+                    <ul>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=610" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="법규·서식(페이지 이동)">법규·서식</a></li>
+                      <li><a href="/kotranews/cms/com/index.do?MENU_ID=620" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="진출기업지원세미나자료(페이지 이동)">진출기업지원세미나자료</a></li>
+                    </ul>
+                    <a class="sub_title" href="/kotranews/cms/com/index.do?MENU_ID=1350" data-sub="N" target="_self" aria-label="진출기업정보(페이지 이동)">진출기업정보</a>
+                  </div>
+                </div>
+              </div>
+              <!-- //gnb-menu -->
+            </div>
+            <!-- //gnb-body -->
+          </div>
+        </div>
+        <!-- //메인메뉴 : mobile -->
+      </header>
+      <!-- //header -->
   `);
+  }
+
+  // jQuery 3 ready는 DOMContentLoaded보다 늦게 돌 수 있음 → 헤더 주입 후 이벤트 바인딩
+  if (typeof window.initHeaderNews === "function") {
+    window.initHeaderNews();
+  }
 
 
   // 사이트맵 (닫기 버튼을 DOM 앞에 두어 Tab 시 X가 먼저 포커스됨. 위치는 absolute)
@@ -2052,13 +2489,15 @@ function initMobileGnb() {
  * ============================================================ */
 function initFooterExtras() {
   // top버튼
-  $("#btn_top").click(function () {
-    $("html, body").stop().animate({
-      scrollTop: 0
-    }, 150);
-    setTimeout(function () {
-      $('header a').eq(0).focus();
-    })
+  // 클릭/Enter 시 포커스를 header로 옮기면 #btn_top 링이 잠깐 보이다
+  // 헤더 링크의 기본 focus-ring으로 바뀌어 보임 → 스크롤 완료 후 이동
+  $("#btn_top").on("click", function () {
+    $("html, body").stop().animate({ scrollTop: 0 }, 150, function () {
+      var $target = $("header a").filter(":visible").first();
+      if ($target.length) {
+        $target.focus();
+      }
+    });
   });
 
   $("#snb_nav .snb_util .zoom>button").click(function () {

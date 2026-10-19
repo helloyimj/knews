@@ -734,7 +734,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 				}
 
 				&:focus {
-					@include focus-ring-contrast;
+					// @include focus-ring-contrast;
 				}
 
 				&.active {
@@ -917,7 +917,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 								}
 
 								&:focus {
-									@include focus-ring-contrast;
+									// @include focus-ring-contrast;
 								}
 
 								.ico_go {
@@ -1153,7 +1153,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 							}
 
 							&:focus {
-								@include focus-ring-contrast;
+								// @include focus-ring-contrast;
 								background-color: #d6e0eb;
 							}
 
@@ -1293,7 +1293,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 									}
 
 									&:focus {
-										@include focus-ring-contrast;
+										// @include focus-ring-contrast;
 									}
 
 									&:hover {
@@ -2129,15 +2129,16 @@ body.is-gnb-web {
 
 					&::before {
 						height: 6px;
-						background-color: #212E4E;
+						background-color: #4286ea;
+						
 					}
 
 					&.active, &.selected {
-						color: #212E4E;
+						color: #4286ea;
 					}
 
 					&.active::after, &.selected::after {
-						background-color: #212E4E;
+						background-color: #4286ea;
 					}
 				}
 			}
@@ -2557,7 +2558,8 @@ body.is-gnb-web {
 											&:hover, &.active, &.selected {
 												font-size: 16px;
 												font-weight: bold;
-												color: #212e4e;
+												// color: #212e4e;
+												color: #464c53;
 											}
 										}
 									}

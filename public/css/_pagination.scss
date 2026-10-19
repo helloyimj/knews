@@ -27,13 +27,13 @@
 .pagination .paging>li>button:focus-visible,
 .pagination .paging>li>a:focus,
 .pagination .paging>li>a:focus-visible {
-	@include focus-ring-contrast;
+	// @include focus-ring-contrast;
 }
 .pagination>button:focus,
 .pagination>button:focus-visible,
 .pagination>a:focus,
 .pagination>a:focus-visible {
-	@include focus-ring-contrast(false);
+	// @include focus-ring-contrast(false);
 }
 
 .typeNoArticle { height:auto !important;padding:0 !important;}

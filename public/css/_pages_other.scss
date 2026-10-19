@@ -47,7 +47,7 @@
 .fileDownRow .btnGrp .btnC_s.btnPdf>span {height:auto;line-height:normal;}
 
 .viewDataWrap > p.viewAuthor {text-align:right;}
-.prevNnext .article > a {white-space:pre-line;}
+/* prevNnext 말줄임(nowrap+ellipsis)과 충돌하므로 pre-line 적용하지 않음 */
 
 .thumbList__items-tit [id^="NotNation_"],
 .thumbList__items-tit .notNation {

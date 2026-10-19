@@ -44,7 +44,7 @@ input.inp_t~.timepicker { margin-left:5px;}
 .searchOpt .date-picker-control:focus-visible,
 .searchOptBox .date-picker-control:focus,
 .searchOptBox .date-picker-control:focus-visible {
-	@include focus-ring-contrast($important: true);
+	// @include focus-ring-contrast($important: true);
 }
 
 .searchOpt .inp_t:focus,
@@ -56,5 +56,5 @@ input.inp_t~.timepicker { margin-left:5px;}
 .searchOptBox .inp_s:focus,
 .searchOptBox .inp_s:focus-visible {
 	border-color: #d9d9d9 !important;
-	@include focus-ring-contrast($important: true);
+	// @include focus-ring-contrast($important: true);
 }
