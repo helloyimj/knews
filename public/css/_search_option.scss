@@ -12,7 +12,8 @@
 .searchOptBox .searchOpt .optGrp>.sort { display:block;position:absolute;top:10px;left:0;width:30px;color:#000;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;line-height:20px;font-weight:500;text-align:left;}
 .searchOptBox .searchOpt .optGrp>.opt { display:block;text-align:left;vertical-align:middle;}
 .searchOptBox .searchOpt .btn { padding-top:10px;font-size:0;text-align:center;}
-.searchOptBox .searchOpt .btn a+a { margin-left:7px;}
+.searchOptBox .searchOpt .btn a+a,
+.searchOptBox .searchOpt .btn button+button { margin-left:7px;}
 .searchOptBox .searchOpt>ul>li.typeHalf { text-align:left;}
 .searchOptBox .searchOpt>ul>li.typeHalf .optGrp { width:calc(50% - 20px);}
 .searchOptBox .searchOpt>ul>li.typeHalf .optGrp+.optGrp { margin-left:40px;}

@@ -52,6 +52,8 @@
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
+    <script src="../js/pnb_org_trails.js"></script>
+    <script src="../js/pnb.js"></script>
     <script src="../js/layout_common.js"></script>
     <script src="../js/header_news.js"></script>
     <script src="../js/cms_file.js"></script>
@@ -154,7 +156,7 @@
               <button type="button" class="btn_sym"><span class="txtHidden">공감하기</span><em>0</em></button>
             </div>
             <div class="btnGrp">
-              <a href="#;" class="btnC_s" onclick="fn_listPage()"><span>목록</span></a>
+              <button type="button" class="btnC_s" onclick="fn_listPage()"><span>목록</span></button>
             </div>
           </div>
 
@@ -164,7 +166,7 @@
               <dl>
                 <dt>
                   <div class="txtL">
-                    <strong> [헤럴드경제 기고] 리허설이 없는 무대, 선전 </strong>
+                    <h1>[헤럴드경제 기고] 리허설이 없는 무대, 선전</h1>
                   </div>
                   <div class="txtInfo">
                     <ul>
@@ -244,7 +246,7 @@
                       </p>
                       <p><span>출처 : 헤럴드경제</span></p>
                       <p>
-                        <a href="https://biz.heraldcorp.com/article/10866294" target="_blank"><span>https://</span><span>biz.heraldcorp.com/article/10866294</span></a
+                        <a href="https://biz.heraldcorp.com/article/10866294" target="_blank" rel="noopener noreferrer" title="새 창 열림"><span>https://</span><span>biz.heraldcorp.com/article/10866294</span></a
                         ><br />
                       </p>
                     </div>
@@ -271,7 +273,7 @@
 
             <!-- 페이지 버튼 -->
             <div class="btnAreaC">
-              <a href="#;" class="btnC" onclick="fn_listPage()"><span>목록</span></a>
+              <button type="button" class="btnC" onclick="fn_listPage()"><span>목록</span></button>
             </div>
             <!-- //페이지 버튼 -->
 
@@ -310,7 +312,7 @@
 
               <section class="replyArea">
                 <div class="tit">
-                  <h1>댓글</h1>
+                  <h2>댓글</h2>
                   <span class="num" id="comment_count">0</span>
                 </div>
 

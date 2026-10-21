@@ -2,6 +2,14 @@
 
 /*** style_guide ***/
 /* button */
+button.btnC,
+button.btnI,
+button.btnC_s {
+	font: inherit;
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+}
 .btnC { display:inline-block;overflow:hidden;box-sizing:border-box;min-width:240px;margin:0 0 5px 0;padding:0 15px;padding:0;border:1px solid #212e4e;border-radius:2px;background:#fff;transition:0.2s;vertical-align:top;}
 .btnC>span { display:block;overflow:hidden;height:54px;color:#212e4e;font-size:18px;line-height:54px;font-weight:500;text-align:center;letter-spacing:-0.5px;transition:0.2s;}
 .btnC:hover { background-color:#212e4e !important;}
@@ -200,9 +208,11 @@
 .btnAreaL {padding:40px 0 55px;font-size:0;text-align:left;}
 .btnAreaC {position:relative;padding:40px 0 55px;font-size:0;text-align:center;}
 .btnAreaR {padding:40px 0 55px;font-size:0;text-align:right;}
-.btnAreaC a+a {margin-left:10px;}
+.btnAreaC a+a,
+.btnAreaC button+button {margin-left:10px;}
 .btnAreaC>.btnGrp {position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:0;}
-.btnAreaC>.btnGrp a+a {margin-left:5px;}
+.btnAreaC>.btnGrp a+a,
+.btnAreaC>.btnGrp button+button {margin-left:5px;}
 .btnAreaC>.btnGrp .radioGrp {display:inline-block;margin-right:8px;vertical-align:top;font-size:0;;}
 .btnAreaC>.btnGrp .radioGrp .sort {display:inline-block;padding-right:15px;vertical-align:top;line-height:40px;font-size:16px;color:#0f0f0f;font-weight:500;}
 .btnAreaC>.btnGrp .radioGrp .inp_r {margin-top:7px;margin-right:10px;}
@@ -286,7 +296,8 @@
     .btnAreaL,
     .btnAreaC,
     .btnAreaR {padding:20px 0 30px;}
-    .btnAreaC a+a {margin-left:5px;}
+    .btnAreaC a+a,
+    .btnAreaC button+button {margin-left:5px;}
     .btnAreaC>.btnGrp .radioGrp .inp_r {margin-top:3px;}
     .btnAreaC>.btnGrp .radioGrp .sort {padding-right:10px;font-size:14px;line-height:30px;}
     .view_data.multi + .btnAreaC>.btnGrp {position:relative;left:0;right:auto;top:0;margin-top:15px;transform:none;}

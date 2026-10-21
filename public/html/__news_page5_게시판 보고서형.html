@@ -44,6 +44,8 @@
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
+    <script src="../js/pnb_org_trails.js"></script>
+    <script src="../js/pnb.js"></script>
     <script src="../js/layout_common.js"></script>
     <script src="../js/header_news.js"></script>
     <script src="../js/cms_file.js"></script>
@@ -83,6 +85,7 @@
         <!-- 브레드크럼, 페이지 SNS 공유 -->
         <div id="pnb"></div>
         <article>
+          <h3 class="sr-only">연관 보고서</h3>
           <!-- datepicker -->
 
           <div class="searchOptBox on">
@@ -277,8 +280,8 @@
                     </li>
                   </ul>
                   <div class="btn">
-                    <a href="#;" onclick="fn_searchReset()" class="btnC"><span>조건 초기화</span></a>
-                    <a href="#;" onclick="fn_linkPage(1)" class="btnC Navy"><span>검색</span></a>
+                    <button type="button" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></button>
+                    <button type="button" class="btnC Navy" onclick="fn_linkPage(1)"><span>검색</span></button>
                   </div>
                 </div>
                 <div class="boxBtn">

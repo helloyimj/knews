@@ -1992,7 +1992,7 @@ p.txt+.icoLineBox {margin-top:20px;}
 
 .policy .contTit_s {font-size:24px;color:#0f0f0f;}
 .policyFlowChart {position:relative;margin-top:20px;padding:42px 20px;background:#f5f6f8;font-size:0;text-align:center;z-index:-1;overflow-x:auto;}
-.policyFlowChart .roundTit {position:relative;display:block;margin:0 auto 27px auto;padding:15px 10px;box-sizing:border-box;border-radius:50px;background:#4286ea;text-align:center;color:#fff;}
+.policyFlowChart .roundTit {position:relative;display:block;margin:0 auto 27px auto;padding:15px 10px;box-sizing:border-box;border-radius:50px;background:#4286ea;text-align:center;color:#fff;font-size:16px;}
 .policyFlowChart .roundTit:before {content:'';display:block;position:absolute;left:50%;bottom:-29px;width:11px;height:29px;background:url(../img/kor/etc/policy_arrB3.png) no-repeat center;}
 .policyFlowChart .roundTit.Navy {width:230px;background:#212e4e;}
 .policyFlowChart .roundTit.Navy:before {content:'';position:absolute;left:50%;top:28px;display:block;width:715px;height:1px;margin-left:-357px;background:#4286ea;z-index:-2;}
@@ -4250,7 +4250,7 @@ text-align:center;letter-spacing:-.5px;transition:.2s;}
     .policyFlowChart {padding:20px;z-index:1;}
     .policyFlowChart .roundTit.Navy {width:180px;margin-bottom:53px;}
     .policyFlowChart .roundTit.Navy:before {display:none;}
-    .policyFlowChart .roundTit {padding:10px 7px;margin-bottom:15px;}
+    .policyFlowChart .roundTit {padding:10px 7px;margin-bottom:15px;font-size:14px;}
     .policyFlowChart .box {padding:10px 7px;font-size:13px;}
     .policyFlowChart .flow2 {margin-top:20px;width:395px;left:0;}
     .policyFlowChart .flow2 .half .roundTit {width:180px;}

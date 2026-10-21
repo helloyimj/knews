@@ -44,6 +44,8 @@
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
+    <script src="../js/pnb_org_trails.js"></script>
+    <script src="../js/pnb.js"></script>
     <script src="../js/layout_common.js"></script>
     <script src="../js/cms_file.js"></script>
     <!-- SNS -->
@@ -329,7 +331,7 @@
                               <ul class="depth3_list">
                                 <li><a href="/kotranews/cms/com/index.do?MENU_ID=570" data-sub="N" target="_self" aria-label="해외투자준비(페이지 이동)">해외투자준비</a></li>
                                 <li>
-                                  <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 이동)">청산·국내복귀<i class="svg_icon ico_go"></i></a>
+                                  <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 이동)" rel="noopener noreferrer" title="새 창 열림">청산·국내복귀<i class="svg_icon ico_go"></i></a>
                                 </li>
                                 <li><a href="/kotranews/cms/com/index.do?MENU_ID=600" data-sub="N" target="_self" aria-label="FAQ(페이지 이동)">FAQ</a></li>
                               </ul>
@@ -488,7 +490,7 @@
                     <ul>
                       <li><a href="/kotranews/cms/com/index.do?MENU_ID=570" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="해외투자준비(페이지 이동)">해외투자준비</a></li>
                       <li>
-                        <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="gnb_sub_trigger" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 이동)">청산·국내복귀<i class="svg_icon ico_go"></i></a>
+                        <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="gnb_sub_trigger" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 이동)" rel="noopener noreferrer" title="새 창 열림">청산·국내복귀<i class="svg_icon ico_go"></i></a>
                       </li>
                       <li><a href="/kotranews/cms/com/index.do?MENU_ID=600" class="gnb_sub_trigger" data-sub="N" target="_self" aria-label="FAQ(페이지 이동)">FAQ</a></li>
                     </ul>
@@ -681,8 +683,8 @@
                     </li>
                   </ul>
                   <div class="btn">
-                    <a href="#;" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></a>
-                    <a href="#;" class="btnC Navy btn_search" onclick="fn_linkPage('1')"><span>검색</span></a>
+                    <button type="button" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></button>
+                    <button type="button" class="btnC Navy btn_search" onclick="fn_linkPage('1')"><span>검색</span></button>
                   </div>
                 </div>
                 <div class="boxBtn">

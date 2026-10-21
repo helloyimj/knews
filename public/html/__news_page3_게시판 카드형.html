@@ -44,6 +44,8 @@
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
+    <script src="../js/pnb_org_trails.js"></script>
+    <script src="../js/pnb.js"></script>
     <script src="../js/layout_common.js"></script>
     <script src="../js/header_news.js"></script>
     <script src="../js/cms_file.js"></script>
@@ -96,12 +98,12 @@
                     <button type="button" class="btnTit">국가·지역정보</button>
 
                     <ul>
-                      <li><a href="#;" data-menuno="10" title="현재창 이동" target="_self">뉴스</a></li>
-                      <li><a href="#;" data-menuno="20" title="현재창 이동" target="_self">상품·산업</a></li>
-                      <li><a href="#;" data-menuno="30" title="현재창 이동" target="_self">국가·지역정보</a></li>
-                      <li><a href="#;" data-menuno="40" title="현재창 이동" target="_self">보고서</a></li>
-                      <li><a href="#;" data-menuno="50" title="현재창 이동" target="_self">멀티미디어뉴스</a></li>
-                      <li><a href="#;" data-menuno="60" title="현재창 이동" target="_self">해외투자</a></li>
+                      <li><a href="#;" data-menuno="10" target="_self">뉴스</a></li>
+                      <li><a href="#;" data-menuno="20" target="_self">상품·산업</a></li>
+                      <li><a href="#;" data-menuno="30" target="_self">국가·지역정보</a></li>
+                      <li><a href="#;" data-menuno="40" target="_self">보고서</a></li>
+                      <li><a href="#;" data-menuno="50" target="_self">멀티미디어뉴스</a></li>
+                      <li><a href="#;" data-menuno="60" target="_self">해외투자</a></li>
                     </ul>
                   </div>
                 </div>
@@ -116,15 +118,15 @@
                 <button type="button" class="btnTit">진출전략</button>
 
                 <ul>
-                  <li><a href="#;" data-menuno="220" title="현재창 이동" target="_self">국가지역정보</a></li>
+                  <li><a href="#;" data-menuno="220" target="_self">국가지역정보</a></li>
 
-                  <li><a href="#;" data-menuno="240" title="현재창 이동" target="_self">북한정보</a></li>
+                  <li><a href="#;" data-menuno="240" target="_self">북한정보</a></li>
 
-                  <li><a href="#;" data-menuno="250" title="현재창 이동" target="_self">진출전략</a></li>
+                  <li><a href="#;" data-menuno="250" target="_self">진출전략</a></li>
 
-                  <li><a href="#;" data-menuno="260" title="현재창 이동" target="_self">출장자료</a></li>
+                  <li><a href="#;" data-menuno="260" target="_self">출장자료</a></li>
 
-                  <li><a href="#;" data-menuno="270" title="현재창 이동" target="_self">무역관뉴스레터</a></li>
+                  <li><a href="#;" data-menuno="270" target="_self">무역관뉴스레터</a></li>
                 </ul>
               </div>
               <!--             <p class="menu_txt"> -->
@@ -322,8 +324,8 @@
                     </li>
                   </ul>
                   <div class="btn">
-                    <a href="#;" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></a>
-                    <a href="#;" class="btnC Navy btn_search" onclick="fn_linkPage('1')"><span>검색</span></a>
+                    <button type="button" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></button>
+                    <button type="button" class="btnC Navy btn_search" onclick="fn_linkPage('1')"><span>검색</span></button>
                   </div>
                 </div>
                 <div class="boxBtn">

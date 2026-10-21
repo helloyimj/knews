@@ -44,6 +44,8 @@
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
+    <script src="../js/pnb_org_trails.js"></script>
+    <script src="../js/pnb.js"></script>
     <script src="../js/layout_common.js"></script>
     <script src="../js/header_news.js"></script>
     <script src="../js/cms_file.js"></script>
@@ -260,8 +262,8 @@
                     </li>
                   </ul>
                   <div class="btn">
-                    <a href="#;" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></a>
-                    <a href="#;" class="btnC Navy btn_search" onclick="fn_linkPage('1')"><span>검색</span></a>
+                    <button type="button" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></button>
+                    <button type="button" class="btnC Navy btn_search" onclick="fn_linkPage('1')"><span>검색</span></button>
                   </div>
                 </div>
                 <div class="boxBtn">
@@ -292,7 +294,7 @@
           </div>
           <!-- <div class="board_area" data-board-type="news">
             <div class="lineList_ul typeGalleryList">
-              <ul id="tbody">
+              <ul id="tbody_viewSample">
                 <li class="nttTr">
                   <span class="no">000001</span>                  
                   <div class="photo">
@@ -537,12 +539,12 @@
                 </li>
               </ul>
             </div>
-            <script id="noListTemplate" type="text/x-jquery-tmpl">
+            <script id="noListTemplate_viewSample" type="text/x-jquery-tmpl">
               <li class="typeNoArticle">
               	<p class="no_article">등록된 게시물이 없습니다.</p>
               </li>
             </script>
-            <script id="listTemplate" type="text/x-jquery-tmpl">
+            <script id="listTemplate_viewSample" type="text/x-jquery-tmpl">
               <li class="nttTr">
               	<span class="no">{%= RNUM_DESC%}</span>
 

@@ -44,6 +44,8 @@
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
+    <script src="../js/pnb_org_trails.js"></script>
+    <script src="../js/pnb.js"></script>
     <script src="../js/layout_common.js"></script>
     <script src="../js/header_news.js"></script>
     <script src="../js/cms_file.js"></script>
@@ -83,6 +85,7 @@
         <!-- 브레드크럼, 페이지 SNS 공유 -->
         <div id="pnb"></div>
         <article>
+          <h3 class="sr-only">동영상뉴스</h3>
           <!-- datepicker -->
           <!-- datepicker -->
 
@@ -245,8 +248,8 @@
                     </li>
                   </ul>
                   <div class="btn">
-                    <a href="#;" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></a>
-                    <a href="#;" class="btnC Navy btn_search"><span>검색</span></a>
+                    <button type="button" class="btnC" onclick="fn_searchReset()"><span>조건 초기화</span></button>
+                    <button type="button" class="btnC Navy btn_search" onclick="fn_linkPage(1)"><span>검색</span></button>
                   </div>
                 </div>
                 <div class="boxBtn">
@@ -432,7 +435,7 @@
               <ul id="galley_list">
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1269"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1269" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1269" aria-label="비결(비즈니스 직결!) 해외시장정보 | [코라지 9월호] 브라질 화장품부터 파라과이 K-소비재까지! 변화하는 중남미 소비시장"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1269" alt="비결(비즈니스 직결!) 해외시장정보 | [코라지 9월호] 브라질 화장품부터 파라과이 K-소비재까지! 변화하는 중남미 소비시장" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1269"> 비결(비즈니스 직결!) 해외시장정보 | [코라지 9월호] 브라질 화장품부터 파라과이 K-소비재까지! 변화하는 중남미 소비시장</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -446,7 +449,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1268"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1268" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1268" aria-label="더우인 라이브커머스로 K-소비재 팔아봤습니다! 칭다오 K-Connect Day 현장"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1268" alt="더우인 라이브커머스로 K-소비재 팔아봤습니다! 칭다오 K-Connect Day 현장" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1268"> 더우인 라이브커머스로 K-소비재 팔아봤습니다! 칭다오 K-Connect Day 현장</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -460,7 +463,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1267"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1267" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1267" aria-label="호주 취업, 진짜 이렇게 합니다 [2026 대양주 취업박람회]"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1267" alt="호주 취업, 진짜 이렇게 합니다 [2026 대양주 취업박람회]" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1267"> 호주 취업, 진짜 이렇게 합니다 [2026 대양주 취업박람회]</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -474,7 +477,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1266"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1266" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1266" aria-label="비결(비즈니스 직결!) 해외시장정보 | [해.시.태그] 하얀 석유 리튬의 시대, 전 세계 공급망 재편 전략"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1266" alt="비결(비즈니스 직결!) 해외시장정보 | [해.시.태그] 하얀 석유 리튬의 시대, 전 세계 공급망 재편 전략" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1266"> 비결(비즈니스 직결!) 해외시장정보 | [해.시.태그] 하얀 석유 리튬의 시대, 전 세계 공급망 재편 전략</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -487,7 +490,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1265"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1265" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1265" aria-label="비결(비즈니스 직결!) 해외시장정보 | [세계이슈톡톡] Ep18. 할랄 인증 없으면 못 판다? - 인도네시아 소비재 시장의 새 기준"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1265" alt="비결(비즈니스 직결!) 해외시장정보 | [세계이슈톡톡] Ep18. 할랄 인증 없으면 못 판다? - 인도네시아 소비재 시장의 새 기준" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1265"> 비결(비즈니스 직결!) 해외시장정보 | [세계이슈톡톡] Ep18. 할랄 인증 없으면 못 판다? - 인도네시아 소비재 시장의 새 기준</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -501,7 +504,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1264"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1264" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1264" aria-label="비결(비즈니스 직결!) 해외시장정보 | 카자흐스탄 사람들 대부분이 쓰는 앱!(Kaspi)"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1264" alt="비결(비즈니스 직결!) 해외시장정보 | 카자흐스탄 사람들 대부분이 쓰는 앱!(Kaspi)" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1264"> 비결(비즈니스 직결!) 해외시장정보 | 카자흐스탄 사람들 대부분이 쓰는 앱!(Kaspi)</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -515,7 +518,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1263"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1263" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1263" aria-label="비결(비즈니스 직결!) 해외시장정보 | [코라지 8월호] 브라질 SAF부터 파나마 K-푸드까지! 변화하는 중남미 산업·소비시장"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1263" alt="비결(비즈니스 직결!) 해외시장정보 | [코라지 8월호] 브라질 SAF부터 파나마 K-푸드까지! 변화하는 중남미 산업·소비시장" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1263"> 비결(비즈니스 직결!) 해외시장정보 | [코라지 8월호] 브라질 SAF부터 파나마 K-푸드까지! 변화하는 중남미 산업·소비시장</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -529,7 +532,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1262"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1262" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1262" aria-label="비결(비즈니스 직결!) 해외시장정보 | 건기식부터 화장품까지, 운남에서 발견한 새로운 성장 기회"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1262" alt="비결(비즈니스 직결!) 해외시장정보 | 건기식부터 화장품까지, 운남에서 발견한 새로운 성장 기회" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1262"> 비결(비즈니스 직결!) 해외시장정보 | 건기식부터 화장품까지, 운남에서 발견한 새로운 성장 기회</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -543,7 +546,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1261"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1261" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1261" aria-label="“어서 와, 한국!” 요르단 2만 명이 몰렸다?!?! Ya Hala, Meet Korea"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1261" alt="“어서 와, 한국!” 요르단 2만 명이 몰렸다?!?! Ya Hala, Meet Korea" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1261"> “어서 와, 한국!” 요르단 2만 명이 몰렸다?!?! Ya Hala, Meet Korea</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -557,7 +560,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1260"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1260" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1260" aria-label="[세계이슈톡톡] 세계인의 일상에 스며드는 K-라이프스타일"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1260" alt="[세계이슈톡톡] 세계인의 일상에 스며드는 K-라이프스타일" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1260"> [세계이슈톡톡] 세계인의 일상에 스며드는 K-라이프스타일</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -570,7 +573,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1259"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1259" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1259" aria-label="[세계이슈톡톡] Ep15. 미국인들이 K-소비재에 빠진 진짜 이유 - 웰니스(Wellness)의 나라 한국"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1259" alt="[세계이슈톡톡] Ep15. 미국인들이 K-소비재에 빠진 진짜 이유 - 웰니스(Wellness)의 나라 한국" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1259"> [세계이슈톡톡] Ep15. 미국인들이 K-소비재에 빠진 진짜 이유 - 웰니스(Wellness)의 나라 한국</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -583,7 +586,7 @@
                 </li>
                 <li class="typeIco">
                   <div class="photo">
-                    <a href="#" data-idno="1258"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1258" alt="" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
+                    <a href="#" data-idno="1258" aria-label="[세계이슈톡톡] Ep14. 라이브 한 번에 재고가 싹?!🤯 더우인 역직구로 중국 시장 뚫는 법 전부 알려드림"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&amp;SITE_NO=3&amp;BOARD_SEQ=1&amp;BBS_SEQ=1258" alt="[세계이슈톡톡] Ep14. 라이브 한 번에 재고가 싹?!🤯 더우인 역직구로 중국 시장 뚫는 법 전부 알려드림" onerror="$(this).attr('src', '/type/common/img/board/blankImg_thumb_default.png')" style="height: 226px" /></a>
                   </div>
                   <div class="txtL"><a href="#" data-idno="1258"> [세계이슈톡톡] Ep14. 라이브 한 번에 재고가 싹?!🤯 더우인 역직구로 중국 시장 뚫는 법 전부 알려드림</a> <span class="info_comment"></span></div>
                   <div class="txtInfo">
@@ -604,7 +607,7 @@
               <script id="galleyListTemplate" type="text/x-jquery-tmpl">
                 <li class="typeIco {%if COMMENT_CNT > 0 %}typeComment{%/if%}">
                 	<div class="photo">
-                		<a href="#" data-idno="{%= BBS_SEQ %}"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&SITE_NO={%= SITE_NO %}&BOARD_SEQ={%= BOARD_SEQ %}&BBS_SEQ={%= BBS_SEQ %}" alt="{%= THUMB_SUB_TEXT %}" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')"/></a>
+                		<a href="#" data-idno="{%= BBS_SEQ %}" aria-label="{%= THUMB_SUB_TEXT %}"><img src="https://dream.kotra.or.kr/ajaxa/fileCpnt/fileView.do?gbn=b01&SITE_NO={%= SITE_NO %}&BOARD_SEQ={%= BOARD_SEQ %}&BBS_SEQ={%= BBS_SEQ %}" alt="{%= THUMB_SUB_TEXT %}" onerror="$(this).attr('src','/type/common/img/board/blankImg_thumb_default.png')"/></a>
                 	</div>
                 	{%if TOP_YN == 'Y' %}<span class="mark_noti">공지</span>{%/if%}
 

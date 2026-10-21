@@ -44,6 +44,8 @@
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
+    <script src="../js/pnb_org_trails.js"></script>
+    <script src="../js/pnb.js"></script>
     <script src="../js/layout_common.js"></script>
     <script src="../js/header_news.js"></script>
     <script src="../js/cms_file.js"></script>
@@ -85,6 +87,7 @@
         <!-- 브레드크럼, 페이지 SNS 공유 -->
         <div id="pnb"></div>
         <article>
+          <h3 class="sr-only">진출기업정보</h3>
           <div class="board_area">
             <div class="lineList_v noSpacing">
               <dl>
@@ -99,7 +102,7 @@
                         <li>비용부과유무 : 무료</li>
                       </ul>
                       <p class="exclam Orange">
-                        기업 세부정보 포함 자료는 유료 판매중 (무역자료실/간행물판매) <a href="#;" class="btnI fileDown" title="가격 및 구입방법 안내문  다운로드" data-gbncd="I" data-filenm="가격 및 구입방법 안내문(25.03.10.).hwp" onclick="fn_fileDown(this)"> <span>가격 및 구입방법 안내문 </span> </a>
+                        기업 세부정보 포함 자료는 유료 판매중 (무역자료실/간행물판매) <button type="button" class="btnI fileDown" title="가격 및 구입방법 안내문 다운로드" data-gbncd="I" data-filenm="가격 및 구입방법 안내문(25.03.10.).hwp" onclick="fn_fileDown(this)"> <span>가격 및 구입방법 안내문 </span> </button>
                       </p>
                       <p class="txt">- 본 디렉토리는 해외진출기업 전수를 수록한 것이 아니며, 정보제공에 동의 의사를 표하는 기업에 한해 수록된 자료입니다.</p>
                       <p class="txt">- 조사시점은 2024년 6~9월이나, 기업의 요청에 따른 추가 등재 및 철수 후 삭제를 반영하고 있습니다.</p>
@@ -253,7 +256,7 @@
                       </div>
                     </div>
                     <div class="func">
-                      <a href="#none" class="btnI fileDown Navy excelDown" data-gbncd="D" data-filenm="2025 해외진출 한국기업 디렉토리 (외부).xlsx" onclick="fn_fileDown(this)" title="전문 다운로드"><span>전문 다운로드</span></a>
+                      <button type="button" class="btnI fileDown Navy excelDown" data-gbncd="D" data-filenm="2025 해외진출 한국기업 디렉토리 (외부).xlsx" onclick="fn_fileDown(this)" title="전문 다운로드"><span>전문 다운로드</span></button>
                     </div>
                   </div>
                   <!-- 리스트(항목노출) -->

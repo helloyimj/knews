@@ -75,7 +75,7 @@
 /* text & list */
 p.txt{color:#0f0f0f;font-size:16px;line-height:1.9em;}
 p.exclam{margin-top:5px;padding-left:25px;background:url(../img/common/ico_exclam.png) no-repeat 0 4px;color:#666;font-size:16px;line-height:1.9em;font-weight:400;letter-spacing:-0.5px;}
-p.exclam.Orange { display:inline-block; position:relative;background:none;color:#666;font-size:15px;vertical-align:top; }
+p.exclam.Orange, p.exclam.Orange a { display:inline-block; position:relative; color:#666;font-size:15px;vertical-align:top; }
 p.exclam.Orange:before { display:block;position:absolute;top:5px;left:0;width:18px;height:18px;background: url(../img/common/sprite_component.png) no-repeat -356px -124px;content:'';
 }
 p.exclam.Orange .dot { display:block;position:relative;padding-left:8px;color:#666;font-size:14px;line-height:1.6em;}

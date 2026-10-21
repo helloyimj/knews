@@ -65,7 +65,9 @@
 .lineList_v .fileArea ul {overflow:hidden;margin-top:-10px;}
 .lineList_v .fileArea ul>li {display:block;float:left;width:50%;margin-top:10px;box-sizing:border-box;padding-right:30px;}
 .lineList_v .fileArea ul>li:first-child:nth-last-child(1) {width:100%;}
-.lineList_v .fileArea ul>li a {display:block;overflow:hidden;text-overflow:ellipsis;min-height:22px;box-sizing:border-box;padding-top:2px;background-repeat:no-repeat;background-position:left top;color:#333;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:18px;text-align:left;white-space:nowrap;}
+.lineList_v .fileArea ul>li a,
+.lineList_v .fileArea ul>li button {display:block;overflow:hidden;text-overflow:ellipsis;width:100%;min-height:22px;box-sizing:border-box;padding:2px 0 0;border:0;background-color:transparent;background-repeat:no-repeat;background-position:left top;color:#333;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:18px;text-align:left;white-space:nowrap;cursor:pointer;}
+.lineList_v .fileArea ul>li button {-webkit-appearance:none;appearance:none;}
 .lineList_v .fileArea ul>li .file_exel {padding-left:28px;background-image:url(../img/common/file_exel.png)}
 .lineList_v .fileArea ul>li .file_excel {padding-left:28px;background-image:url(../img/common/file_exel.png)}
 .lineList_v .fileArea ul>li .file_hwp {padding-left:28px;background-image:url(../img/common/file_hwp.png)}
@@ -223,7 +225,9 @@ dd .add_openNoti {width:100%;margin-left:0px; margin-top: 30px}
 
 .lineList_v.typeReportView dd {padding-left:0;padding-right:0;}
 .lineList_v.typeReportView dd .view_txt>p {line-height:1.9em;}
-.lineList_v.typeReportView dt .reportInfo ul>li a {display:block;overflow:hidden;text-overflow:ellipsis;min-height:22px;box-sizing:border-box;padding-top:4px;background-repeat:no-repeat;background-position:left top;color:#333;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:18px;text-align:left;}
+.lineList_v.typeReportView dt .reportInfo ul>li a,
+.lineList_v.typeReportView dt .reportInfo ul>li button {display:block;overflow:hidden;text-overflow:ellipsis;width:100%;min-height:22px;box-sizing:border-box;padding:4px 0 0;border:0;background-color:transparent;background-repeat:no-repeat;background-position:left top;color:#333;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:18px;text-align:left;cursor:pointer;}
+.lineList_v.typeReportView dt .reportInfo ul>li button {-webkit-appearance:none;appearance:none;}
 .lineList_v.typeReportView dt .reportInfo ul>li .file_exel {padding-left:28px;background-image:url(../img/common/file_exel.png)}
 .lineList_v.typeReportView dt .reportInfo ul>li .file_excel {padding-left:28px;background-image:url(../img/common/file_exel.png)}
 .lineList_v.typeReportView dt .reportInfo ul>li .file_hwp {padding-left:28px;background-image:url(../img/common/file_hwp.png)}

@@ -69,8 +69,10 @@ $(document).ready(function () {
   window.gnbDep2 = 0;
   window.gnbDep3 = 0;
 
-  // 2-1. MENU_ID / gnb on 기준으로 현재 메뉴 표시
-  applyGnbCurrentByMenuId();
+  // 2-1. MENU_ID / gnb on 기준으로 현재 메뉴 표시 (pnb.js)
+  if (typeof window.applyGnbCurrentByMenuId === 'function') {
+    applyGnbCurrentByMenuId();
+  }
 
   // 3. 상단 공지 슬라이더 (inline Script)
   initTopNotice();
@@ -101,8 +103,10 @@ $(document).ready(function () {
   // 11. gnb 현재 메뉴 on 클래스 세팅 (layout.js)
   initGnbCurrentState();
 
-  // 11-1. gnb on 경로를 pnb(브레드크럼) 텍스트/목록으로 치환
-  initPnbFromGnb();
+  // 11-1. pnb: 뼈대·메뉴 채움 + 드롭다운 클릭 + 옵션 UI (pnb.js / html_org 기준)
+  if (typeof window.initPnb === 'function') {
+    initPnb();
+  }
 
   // 12. gnb 마우스오버/호버 (PC) (layout.js)
   initGnbHover();
@@ -116,8 +120,7 @@ $(document).ready(function () {
   // 15. 스크롤 이벤트 (sticky, top버튼 노출) (layout.js)
   initScrollHandler();
 
-  // 16. pnb / snb 옵션박스 동작 (layout.js)
-  initPnbOptions();
+  // 16. (pnb UI → initPnb / js/pnb.js)
 
   // 17. 상단 사이트맵 팝업 열기/닫기 (layout.js, initSitemap과는 별도 - pnb류 팝업 오픈 트리거)
   initSitemapPopupTrigger();
@@ -605,7 +608,7 @@ function initCommonLayout() {
   //   <nav>
   //     <ul id="gnb">
   //       <li class="child">
-  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=10" title="뉴스 현재창  이동" data-sub="Y" target="_self" class="10">뉴스</a>
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=10" data-sub="Y" target="_self" class="10">뉴스</a>
   //         <p class="gnbTit">
   //           <b>뉴스</b>
   //           <span></span>
@@ -616,22 +619,22 @@ function initCommonLayout() {
   //             <p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p>
   //           </li>
   //           <li class="">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" class="70" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" class="70" data-sub="N" target="_self">전체</a>
   //           </li>
   //           <li class="">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" class="80" title="경제∙무역 현재창  이동" data-sub="N" target="_self">경제∙무역</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" class="80" data-sub="N" target="_self">경제∙무역</a>
   //           </li>
   //           <li class="">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" class="90" title="통상∙규제 현재창  이동" data-sub="N" target="_self">통상∙규제</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" class="90" data-sub="N" target="_self">통상∙규제</a>
   //           </li>
   //           <li class="">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" class="100" title="투자진출 현재창  이동" data-sub="N" target="_self">투자진출</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" class="100" data-sub="N" target="_self">투자진출</a>
   //           </li>
   //           <li class="">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" class="110" title="현장∙인터뷰 현재창  이동" data-sub="N" target="_self">현장∙인터뷰</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" class="110" data-sub="N" target="_self">현장∙인터뷰</a>
   //           </li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" class="1480" title="기고 현재창  이동" data-sub="Y" target="_self">기고</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" class="1480" data-sub="Y" target="_self">기고</a>
   //             <ul class="menuS">
   //               <li class="">
   //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=130" class="130" title="" data-sub="N" target="_self">전문가기고</a>
@@ -642,10 +645,10 @@ function initCommonLayout() {
   //             </ul>
   //           </li>
   //           <li class="">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" class="290" title="글로벌 이슈 모니터링 현재창  이동" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" class="290" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
   //           </li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" class="1550" title="글로벌 공급망 동향 현재창  이동" data-sub="Y" target="_self">글로벌 공급망 동향</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" class="1550" data-sub="Y" target="_self">글로벌 공급망 동향</a>
   //             <ul class="menuS">
   //               <li class="">
   //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1360" class="1360" title="" data-sub="N" target="_self">동향뉴스</a>
@@ -656,7 +659,7 @@ function initCommonLayout() {
   //             </ul>
   //           </li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" class="1500" title="글로벌 ESG 정보 현재창  이동" data-sub="Y" target="_self">글로벌 ESG 정보</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" class="1500" data-sub="Y" target="_self">글로벌 ESG 정보</a>
   //             <ul class="menuS">
   //               <li class="">
   //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1520" class="1520" title="" data-sub="N" target="_self">동향뉴스</a>
@@ -670,10 +673,10 @@ function initCommonLayout() {
   //             </ul>
   //           </li>
   //           <li class="">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" class="1580" title="미국 통상정책 주요 동향 현재창  이동" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" class="1580" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
   //           </li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" class="1470" title="핫클립 현재창  이동" data-sub="Y" target="_self">핫클립</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" class="1470" data-sub="Y" target="_self">핫클립</a>
   //             <ul class="menuS">
   //               <li class="">
   //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1590" class="1590" title="" data-sub="N" target="_self">우크라이나 사태 해외동향</a>
@@ -693,71 +696,71 @@ function initCommonLayout() {
   //             </ul>
   //           </li>
   //           <li class="">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" class="1630" title="산업뉴스콕콕 현재창  이동" data-sub="Y" target="_self">산업뉴스콕콕</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" class="1630" data-sub="Y" target="_self">산업뉴스콕콕</a>
   //           </li>
   //         </ul>
   //       </li>
 
   //       <li class="child">
-  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=20" title="상품·산업 현재창  이동" data-sub="Y" target="_self" class="20">상품·산업</a>
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=20" data-sub="Y" target="_self" class="20">상품·산업</a>
   //         <p class="gnbTit"><b>상품·산업</b><span></span></p>
   //         <ul class="menuM">
   //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" class="170" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" class="180" title="트렌드 현재창  이동" data-sub="N" target="_self">트렌드</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" class="190" title="상품DB 현재창  이동" data-sub="N" target="_self">상품DB</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" class="200" title="국별주요산업 현재창  이동" data-sub="N" target="_self">국별주요산업</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" class="210" title="해외인증정보 현재창  이동" data-sub="N" target="_self">해외인증정보</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" class="170" data-sub="N" target="_self">전체</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" class="180" data-sub="N" target="_self">트렌드</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" class="190" data-sub="N" target="_self">상품DB</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" class="200" data-sub="N" target="_self">국별주요산업</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" class="210" data-sub="N" target="_self">해외인증정보</a></li>
   //         </ul>
   //       </li>
 
   //       <li class="child">
-  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=30" title="국가·지역정보 현재창  이동" data-sub="Y" target="_self" class="30">국가·지역정보</a>
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=30" data-sub="Y" target="_self" class="30">국가·지역정보</a>
   //         <p class="gnbTit"><b>국가·지역정보</b><span></span></p>
   //         <ul class="menuM">
   //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" class="220" title="국가지역정보 현재창  이동" data-sub="N" target="_self">국가지역정보</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" class="220" data-sub="N" target="_self">국가지역정보</a></li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" class="240" title="북한정보 현재창  이동" data-sub="Y" target="_self">북한정보</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" class="240" data-sub="Y" target="_self">북한정보</a>
   //             <ul class="menuS">
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=520" class="520" title="" data-sub="N" target="_self">북한정보</a></li>
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=530" class="530" title="" data-sub="N" target="_self">북한대외무역동향</a></li>
   //             </ul>
   //           </li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" class="250" title="진출전략 현재창  이동" data-sub="N" target="_self">진출전략</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" class="260" title="출장자료 현재창  이동" data-sub="N" target="_self">출장자료</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" class="270" title="무역관뉴스레터 현재창  이동" data-sub="N" target="_self">무역관뉴스레터</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" class="250" data-sub="N" target="_self">진출전략</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" class="260" data-sub="N" target="_self">출장자료</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" class="270" data-sub="N" target="_self">무역관뉴스레터</a></li>
   //         </ul>
   //       </li>
 
   //       <li class="child">
-  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=40" title="보고서 현재창  이동" data-sub="Y" target="_self" class="40">보고서</a>
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=40" data-sub="Y" target="_self" class="40">보고서</a>
   //         <p class="gnbTit"><b>보고서</b><span></span></p>
   //         <ul class="menuM">
   //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" class="280" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" class="280" data-sub="N" target="_self">전체</a></li>
   //         </ul>
   //       </li>
 
   //       <li class="child">
-  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=50" title="멀티미디어뉴스 현재창  이동" data-sub="Y" target="_self" class="50">멀티미디어뉴스</a>
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=50" data-sub="Y" target="_self" class="50">멀티미디어뉴스</a>
   //         <p class="gnbTit"><b>멀티미디어뉴스</b><span></span></p>
   //         <ul class="menuM">
   //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" class="540" title="동영상뉴스 현재창  이동" data-sub="N" target="_self">동영상뉴스</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" class="310" title="포토뉴스 현재창  이동" data-sub="N" target="_self">포토뉴스</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" class="320" title="카드뉴스 현재창  이동" data-sub="N" target="_self">카드뉴스</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" class="540" data-sub="N" target="_self">동영상뉴스</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" class="310" data-sub="N" target="_self">포토뉴스</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" class="320" data-sub="N" target="_self">카드뉴스</a></li>
   //         </ul>
   //       </li>
 
   //       <li class="child">
-  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=60" title="해외투자 현재창  이동" data-sub="Y" target="_self" class="60">해외투자</a>
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=60" data-sub="Y" target="_self" class="60">해외투자</a>
   //         <p class="gnbTit"><b>해외투자</b><span></span></p>
   //         <ul class="menuM">
   //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" class="350" title="해외투자안내 현재창  이동" data-sub="N" target="_self">해외투자안내</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" class="350" data-sub="N" target="_self">해외투자안내</a></li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" class="360" title="직접투자절차 현재창  이동" data-sub="Y" target="_self">직접투자절차</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" class="360" data-sub="Y" target="_self">직접투자절차</a>
   //             <ul class="menuS">
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=570" class="570" title="" data-sub="N" target="_self">해외투자준비</a></li>
   //               <li class=""><a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a></li>
@@ -765,32 +768,32 @@ function initCommonLayout() {
   //             </ul>
   //           </li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" class="370" title="국별참고자료 현재창  이동" data-sub="Y" target="_self">국별참고자료</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" class="370" data-sub="Y" target="_self">국별참고자료</a>
   //             <ul class="menuS">
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=610" class="610" title="" data-sub="N" target="_self">법규&middot;서식</a></li>
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=620" class="620" title="" data-sub="N" target="_self">진출기업지원세미나자료</a></li>
   //             </ul>
   //           </li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" class="1350" title="진출기업정보 현재창  이동" data-sub="N" target="_self">진출기업정보</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" class="1350" data-sub="N" target="_self">진출기업정보</a></li>
   //         </ul>
   //       </li>
 
   //       <li class="child" style="display: none">
-  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=400" title="열린마당 현재창  이동" data-sub="Y" target="_self" class="400">열린마당</a>
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=400" data-sub="Y" target="_self" class="400">열린마당</a>
   //         <p class="gnbTit"><b>열린마당</b><span></span></p>
   //         <ul class="menuM">
   //           <li class="emptyArea"><p class="exclam Orange">좌측 메뉴를 클릭하시면 상세 메뉴정보를 확인하실 수 있습니다.</p></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" class="1310" title="공지사항 현재창  이동" data-sub="Y" target="_self">공지사항</a></li>
-  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" class="1320" title="고객조사제안  현재창  이동" data-sub="Y" target="_self">고객조사제안 </a></li>
-  //           <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" class="670" title="뉴스레터신청 현재창  이동" data-sub="Y" target="_self">뉴스레터신청</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" class="1310" data-sub="Y" target="_self">공지사항</a></li>
+  //           <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" class="1320" data-sub="Y" target="_self">고객조사제안 </a></li>
+  //           <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" class="670" data-sub="Y" target="_self">뉴스레터신청</a></li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" class="1340" title="고객문의 현재창  이동" data-sub="Y" target="_self">고객문의</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" class="1340" data-sub="Y" target="_self">고객문의</a>
   //             <ul class="menuS">
   //               <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=640" class="640" title="" data-sub="Y" target="_self">고객문의</a></li>
   //             </ul>
   //           </li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" class="680" title="사이트이용 현재창  이동" data-sub="Y" target="_self">사이트이용</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" class="680" data-sub="Y" target="_self">사이트이용</a>
   //             <ul class="menuS">
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=710" class="710" title="" data-sub="Y" target="_self">API</a></li>
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=720" class="720" title="" data-sub="Y" target="_self">RSS2.0</a></li>
@@ -798,7 +801,7 @@ function initCommonLayout() {
   //             </ul>
   //           </li>
   //           <li class="child">
-  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" class="730" title="정책∙방침 현재창  이동" data-sub="Y" target="_self">정책∙방침</a>
+  //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" class="730" data-sub="Y" target="_self">정책∙방침</a>
   //             <ul class="menuS">
   //               <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1010" class="1010" title="" data-sub="Y" target="_self">저작권정책</a></li>
   //               <li class="">
@@ -816,7 +819,7 @@ function initCommonLayout() {
   //       </li>
 
   //       <li class="" style="display: none">
-  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=770" title="로그인 현재창  이동" data-sub="Y" target="_self" class="770">로그인</a>
+  //         <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=770" data-sub="Y" target="_self" class="770">로그인</a>
   //         <p class="gnbTit"><b>로그인</b><span></span></p>
   //       </li>
   //     </ul>
@@ -864,37 +867,37 @@ function initCommonLayout() {
   //           <li class="child">
   //             <h3 class="txtHidden">뉴스</h3>
   //             <ul class="menuM menuStep">
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" title="경제∙무역 현재창  이동" data-sub="N" target="_self">경제∙무역</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" title="통상∙규제 현재창  이동" data-sub="N" target="_self">통상∙규제</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" title="투자진출 현재창  이동" data-sub="N" target="_self">투자진출</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" title="현장∙인터뷰 현재창  이동" data-sub="N" target="_self">현장∙인터뷰</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" data-sub="N" target="_self">전체</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" data-sub="N" target="_self">경제∙무역</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" data-sub="N" target="_self">통상∙규제</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" data-sub="N" target="_self">투자진출</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" data-sub="N" target="_self">현장∙인터뷰</a></li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" title="기고 현재창  이동" data-sub="Y" target="_self">기고</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" data-sub="Y" target="_self">기고</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=130" title="" data-sub="N" target="_self">전문가기고</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=140" title="" data-sub="N" target="_self">직원기고</a></li>
   //                 </ul>
   //               </li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" title="글로벌 이슈 모니터링 현재창  이동" data-sub="N" target="_self">글로벌 이슈 모니터링</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" data-sub="N" target="_self">글로벌 이슈 모니터링</a></li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" title="글로벌 공급망 동향 현재창  이동" data-sub="Y" target="_self">글로벌 공급망 동향</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" data-sub="Y" target="_self">글로벌 공급망 동향</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1360" title="" data-sub="N" target="_self">동향뉴스</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1560" title="" data-sub="N" target="_self">글로벌 공급망 인사이트</a></li>
   //                 </ul>
   //               </li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" title="글로벌 ESG 정보 현재창  이동" data-sub="Y" target="_self">글로벌 ESG 정보</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" data-sub="Y" target="_self">글로벌 ESG 정보</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1520" title="" data-sub="N" target="_self">동향뉴스</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1510" title="" data-sub="N" target="_self">연관 보고서</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1570" title="" data-sub="N" target="_self">ESG 활용지원센터</a></li>
   //                 </ul>
   //               </li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" title="미국 통상정책 주요 동향 현재창  이동" data-sub="N" target="_self">미국 통상정책 주요 동향</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" data-sub="N" target="_self">미국 통상정책 주요 동향</a></li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" title="핫클립 현재창  이동" data-sub="Y" target="_self">핫클립</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" data-sub="Y" target="_self">핫클립</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1590" title="" data-sub="N" target="_self">우크라이나 사태 해외동향</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1490" title="" data-sub="N" target="_self">중동 관련 주요 동향</a></li>
@@ -903,55 +906,55 @@ function initCommonLayout() {
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=150" title="" data-sub="N" target="_self">일자리동향</a></li>
   //                 </ul>
   //               </li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" title="산업뉴스콕콕 현재창  이동" data-sub="Y" target="_self">산업뉴스콕콕</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" data-sub="Y" target="_self">산업뉴스콕콕</a></li>
   //             </ul>
   //           </li>
   //           <li class="child">
   //             <h3 class="txtHidden">상품·산업</h3>
   //             <ul class="menuM menuStep">
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" title="트렌드 현재창  이동" data-sub="N" target="_self">트렌드</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" title="상품DB 현재창  이동" data-sub="N" target="_self">상품DB</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" title="국별주요산업 현재창  이동" data-sub="N" target="_self">국별주요산업</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" title="해외인증정보 현재창  이동" data-sub="N" target="_self">해외인증정보</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" data-sub="N" target="_self">전체</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" data-sub="N" target="_self">트렌드</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" data-sub="N" target="_self">상품DB</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" data-sub="N" target="_self">국별주요산업</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" data-sub="N" target="_self">해외인증정보</a></li>
   //             </ul>
   //           </li>
   //           <li class="child">
   //             <h3 class="txtHidden">국가·지역정보</h3>
   //             <ul class="menuM menuStep">
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" title="국가지역정보 현재창  이동" data-sub="N" target="_self">국가지역정보</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" data-sub="N" target="_self">국가지역정보</a></li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" title="북한정보 현재창  이동" data-sub="Y" target="_self">북한정보</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" data-sub="Y" target="_self">북한정보</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=520" title="" data-sub="N" target="_self">북한정보</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=530" title="" data-sub="N" target="_self">북한대외무역동향</a></li>
   //                 </ul>
   //               </li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" title="진출전략 현재창  이동" data-sub="N" target="_self">진출전략</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" title="출장자료 현재창  이동" data-sub="N" target="_self">출장자료</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" title="무역관뉴스레터 현재창  이동" data-sub="N" target="_self">무역관뉴스레터</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" data-sub="N" target="_self">진출전략</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" data-sub="N" target="_self">출장자료</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" data-sub="N" target="_self">무역관뉴스레터</a></li>
   //             </ul>
   //           </li>
   //           <li class="child">
   //             <h3 class="txtHidden">보고서</h3>
   //             <ul class="menuM menuStep">
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" title="전체 현재창  이동" data-sub="N" target="_self">전체</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" data-sub="N" target="_self">전체</a></li>
   //             </ul>
   //           </li>
   //           <li class="child">
   //             <h3 class="txtHidden">멀티미디어뉴스</h3>
   //             <ul class="menuM menuStep">
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" title="동영상뉴스 현재창  이동" data-sub="N" target="_self">동영상뉴스</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" title="포토뉴스 현재창  이동" data-sub="N" target="_self">포토뉴스</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" title="카드뉴스 현재창  이동" data-sub="N" target="_self">카드뉴스</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" data-sub="N" target="_self">동영상뉴스</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" data-sub="N" target="_self">포토뉴스</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" data-sub="N" target="_self">카드뉴스</a></li>
   //             </ul>
   //           </li>
   //           <li class="child">
   //             <h3 class="txtHidden">해외투자</h3>
   //             <ul class="menuM menuStep">
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" title="해외투자안내 현재창  이동" data-sub="N" target="_self">해외투자안내</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" data-sub="N" target="_self">해외투자안내</a></li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" title="직접투자절차 현재창  이동" data-sub="Y" target="_self">직접투자절차</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" data-sub="Y" target="_self">직접투자절차</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=570" title="" data-sub="N" target="_self">해외투자준비</a></li>
   //                   <li class=""><a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a></li>
@@ -959,29 +962,29 @@ function initCommonLayout() {
   //                 </ul>
   //               </li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" title="국별참고자료 현재창  이동" data-sub="Y" target="_self">국별참고자료</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" data-sub="Y" target="_self">국별참고자료</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=610" title="" data-sub="N" target="_self">법규&middot;서식</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=620" title="" data-sub="N" target="_self">진출기업지원세미나자료</a></li>
   //                 </ul>
   //               </li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" title="진출기업정보 현재창  이동" data-sub="N" target="_self">진출기업정보</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" data-sub="N" target="_self">진출기업정보</a></li>
   //             </ul>
   //           </li>
   //           <li class="child">
   //             <h3 class="txtHidden">열린마당</h3>
   //             <ul class="menuM menuStep">
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" title="공지사항 현재창  이동" data-sub="Y" target="_self">공지사항</a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" title="고객조사제안  현재창  이동" data-sub="Y" target="_self">고객조사제안 </a></li>
-  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" title="뉴스레터신청 현재창  이동" data-sub="Y" target="_self">뉴스레터신청</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" data-sub="Y" target="_self">공지사항</a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" data-sub="Y" target="_self">고객조사제안 </a></li>
+  //               <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" data-sub="Y" target="_self">뉴스레터신청</a></li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" title="고객문의 현재창  이동" data-sub="Y" target="_self">고객문의</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" data-sub="Y" target="_self">고객문의</a>
   //                 <ul class="menuS">
   //                   <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=640" title="" data-sub="Y" target="_self">고객문의</a></li>
   //                 </ul>
   //               </li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" title="사이트이용 현재창  이동" data-sub="Y" target="_self">사이트이용</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" data-sub="Y" target="_self">사이트이용</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=710" title="" data-sub="Y" target="_self">API</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=720" title="" data-sub="Y" target="_self">RSS2.0</a></li>
@@ -989,7 +992,7 @@ function initCommonLayout() {
   //                 </ul>
   //               </li>
   //               <li class="child">
-  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" title="정책∙방침 현재창  이동" data-sub="Y" target="_self">정책∙방침</a>
+  //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" data-sub="Y" target="_self">정책∙방침</a>
   //                 <ul class="menuS">
   //                   <li class="" style="display: none"><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1010" title="" data-sub="Y" target="_self">저작권정책</a></li>
   //                   <li class="">
@@ -1013,42 +1016,10 @@ function initCommonLayout() {
   //   </div>
   // `);
 
-  // 브레드크럼: 메뉴명/목록은 initPnbFromGnb() 가 현재 MENU_ID 기준으로 채움
-  $('#container #contents #pnb').html(`
-          <div class="pnb_nav">
-            <a href="https://dream.kotra.or.kr/kotranews/index.do" class="btn_home" title="홈 화면 이동" target="_self"><span class="txtHidden">홈</span></a>
-            <ul></ul>
-          </div>
-          <div class="pnb_menu">
-            <div class="pnbList">
-              <div class="menu">
-                <button type="button" class="btnTit" title="열기"></button>
-                <ul></ul>
-              </div>
-            </div>
-          </div>
-          <div class="pnb_func">
-            <button type="button" class="btn_print" title="프린트">프린트</button>
-            <button type="button" class="btn_share" title="공유하기">공유</button>
-            <div class="shareBox">
-              <div class="shareBox_wrap">
-                <strong>공유하기</strong>
-                <ul>
-                  <li><a href="javascript:void(0);" class="btn_facebook" onclick="shareSns('facebook')" title="페이스북 공유하기">페이스북</a></li>
-                  <li><a href="javascript:void(0);" class="btn_twitter" onclick="shareSns('twitter')" title="X 공유하기">X</a></li>
-                  <li><a href="javascript:void(0);" id="kakao-link-btn" class="btn_kakaotalk" title="카카오톡 공유하기">카카오톡</a></li>
-                  <li><a href="javascript:void(0);" class="btn_nBlog" onclick="shareSns('blog')" title="네이버블로그 공유하기">네이버블로그</a></li>
-                  <li><a href="javascript:void(0);" class="btn_nBand" onclick="shareSns('band')" title="네이버밴드 공유하기">네이버밴드</a></li>
-                  <li class="etc">
-                    <input type="text" id="copyUrl" title="복사할 URL" />
-                    <button type="button" class="btn_urlCopy">URL 복사</button>
-                  </li>
-                </ul>
-                <button type="button" class="btn_close">닫기</button>
-              </div>
-            </div>
-          </div>
-        `);
+  // 브레드크럼 뼈대 → pnb.js (html_org #pnb 구조). 메뉴명/목록은 initPnb() 가 채움
+  if (typeof window.ensurePnbSkeleton === 'function') {
+    ensurePnbSkeleton();
+  }
 
   // TOP버튼
   $('#footer').before(`
@@ -1174,27 +1145,7 @@ function initGnbHrefDelegate() {
  * (inline Script)
  * ============================================================ */
 function initHeaderUtil() {
-
-  $(document).on("click", ".navList>.menu>ul>li>a", function () {
-    var val = $(this).data('menuno');
-    $("ul#gnb li").find('.' + val).closest('li').trigger('click');
-    if ($("ul#gnb li").find('.' + val).attr('target') == "_blank") {
-      window.open($("ul#gnb li").find('.' + val).attr('href'));
-    } else {
-      location.href = $("ul#gnb li").find('.' + val).attr('href');
-    }
-  });
-
-  $(document).on("click", ".pnbList>.menu>ul>li>a", function () {
-    var val = $(this).data('menuno');
-    $("ul#gnb li").find('.' + val).closest('li').trigger('click');
-    if ($("ul#gnb li").find('.' + val).attr('target') == "_blank") {
-      window.open($("ul#gnb li").find('.' + val).attr('href'));
-    } else {
-      location.href = $("ul#gnb li").find('.' + val).attr('href');
-    }
-    // $("ul#gnb li").find('.'+val).get(0).click();
-  });
+  // navList / pnbList 클릭 → pnb.js bindPnbMenuClicks()
 
   calcGnbDepthVars();
   var $gnbLeaf = getGnbLeafLi();
@@ -1565,159 +1516,7 @@ function initKotraSiteToggle() {
     $('.top_util .btn_kotraSite').trigger('click');
   });
 }
-/* ============================================================
- * gnb 현재 메뉴 / pnb(브레드크럼) 동기화
- * - MENU_ID 또는 gnb 의 가장 깊은 li.on / a.on 을 현재 페이지로 본다
- * - 홈(btn_home)은 유지하고, gnb 경로의 모든 뎁스를 생략 없이 채운다
- * - 2뎁스 페이지: 홈 > 1뎁스 > 현재페이지
- * - 3뎁스 페이지: 홈 > 1뎁스 > 2뎁스 > 현재페이지
- * ============================================================ */
-function getCurrentMenuId() {
-  var menuId = $.trim($('#MENU_ID').val() || $('input[name=MENU_ID]').val() || '');
-  if (menuId) return String(menuId);
-
-  try {
-    if (window.URLSearchParams) {
-      menuId = new URLSearchParams(window.location.search).get('MENU_ID') || '';
-      if (menuId) return String(menuId);
-    }
-  } catch (e) {}
-
-  var matched = String(window.location.search).match(/[?&]MENU_ID=(\d+)/i);
-  if (matched) return matched[1];
-
-  var pathMatch = String(window.location.pathname || '').match(/(?:^|\/)_?menu_(\d+)\.html$/i);
-  return pathMatch ? pathMatch[1] : '';
-}
-
-function getGnbMenuNo($a) {
-  if (!$a || !$a.length) return '';
-  var className = $a.attr('class') || '';
-  var classMatch = className.match(/\b(\d+)\b/);
-  if (classMatch) return classMatch[1];
-  var hrefMatch = String($a.attr('href') || '').match(/[?&]MENU_ID=(\d+)/i);
-  return hrefMatch ? hrefMatch[1] : '';
-}
-
-function getGnbLeafLi() {
-  var $leaf = $('#gnb li.on').filter(function () {
-    return $(this).find('li.on').length === 0;
-  }).first();
-  if ($leaf.length) return $leaf;
-
-  var $aOn = $('#gnb a.on').first();
-  if ($aOn.length) return $aOn.closest('li');
-  return $();
-}
-
-function applyGnbCurrentByMenuId() {
-  var menuId = getCurrentMenuId();
-  if (!menuId) return;
-
-  var $a = $('#gnb a').filter(function () {
-    return (' ' + (this.className || '') + ' ').indexOf(' ' + menuId + ' ') > -1;
-  });
-  if (!$a.length) {
-    $a = $('#gnb a[href*="MENU_ID=' + menuId + '"]');
-  }
-  if (!$a.length) return;
-
-  $('#gnb li').removeClass('on');
-  $('#gnb a').removeClass('on');
-
-  var $li = $a.closest('li');
-  $li.addClass('on');
-  $li.parents('#gnb li').addClass('on');
-  $li.closest('#gnb > li').children('a').addClass('on');
-}
-
-function calcGnbDepthVars() {
-  window.gnbDep1 = 0;
-  window.gnbDep2 = 0;
-  window.gnbDep3 = 0;
-
-  var $leaf = getGnbLeafLi();
-  if (!$leaf.length) return $leaf;
-
-  var $parentUl = $leaf.parent('ul');
-  if ($parentUl.hasClass('menuS')) {
-    window.gnbDep1 = $('#gnb > li').index($leaf.closest('ul.menuM').parent()) + 1;
-    window.gnbDep2 = $leaf.closest('ul.menuM').children('li').index($leaf.parent().closest('li')) + 1;
-    window.gnbDep3 = $parentUl.children('li').index($leaf) + 1;
-  } else if ($parentUl.hasClass('menuM')) {
-    window.gnbDep1 = $('#gnb > li').index($leaf.closest('ul.menuM').parent()) + 1;
-    window.gnbDep2 = $parentUl.children('li').index($leaf) + 1;
-  } else {
-    window.gnbDep1 = $('#gnb > li').index($leaf) + 1;
-  }
-  return $leaf;
-}
-
-function getVisibleSiblingLis($li) {
-  return $li.parent().children('li').not('.emptyArea').filter(function () {
-    return $(this).css('display') !== 'none';
-  });
-}
-
-function getPnbSiblingLis($li) {
-  return $li.parent().children('li').not('.emptyArea');
-}
-
-function escapePnbText(text) {
-  return $('<div>').text(text == null ? '' : text).html();
-}
-
-function escapePnbAttr(text) {
-  return String(text == null ? '' : text)
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/</g, '&lt;');
-}
-
-function buildPnbDropdownHtml($siblingLis) {
-  var html = '';
-  $siblingLis.each(function () {
-    var $a = $(this).children('a').first();
-    var href = $a.attr('href') || 'javascript:void(0);';
-    html += '<li><a href="' + escapePnbAttr(href) + '" data-menuno="' + getGnbMenuNo($a) + '" title="현재창 이동" target="_self">' + escapePnbText($.trim($a.text())) + '</a></li>';
-  });
-  return html;
-}
-
-function initPnbFromGnb() {
-  var $pnb = $('#pnb');
-  if (!$pnb.length) return;
-
-  var $leaf = getGnbLeafLi();
-  if (!$leaf.length) return;
-
-  var trail = [];
-  var $node = $leaf;
-  while ($node.length && $node.closest('#gnb').length) {
-    var $a = $node.children('a').first();
-    if ($a.length) {
-      trail.unshift({
-        text: $.trim($a.text()),
-        $li: $node
-      });
-    }
-    $node = $node.parent().closest('#gnb li');
-  }
-  if (!trail.length) return;
-
-  var current = trail[trail.length - 1];
-  var ancestors = trail.slice(0, -1);
-  var navHtml = '';
-  for (var i = 0; i < ancestors.length; i++) {
-    navHtml += '<li><div class="navList"><div class="menu">';
-    navHtml += '<button type="button" class="btnTit" title="열기">' + escapePnbText(ancestors[i].text) + '</button>';
-    navHtml += '<ul>' + buildPnbDropdownHtml(getPnbSiblingLis(ancestors[i].$li)) + '</ul>';
-    navHtml += '</div></div></li>';
-  }
-  $pnb.find('.pnb_nav > ul').html(navHtml);
-  $pnb.find('.pnb_menu .pnbList .btnTit').attr('title', '열기').text(current.text);
-  $pnb.find('.pnb_menu .pnbList .menu > ul').html(buildPnbDropdownHtml(getPnbSiblingLis(current.$li)));
-}
+/* pnb / gnb 동기화 · 브레드크럼 → js/pnb.js */
 /* ============================================================
  * 11. gnb 현재 메뉴 on 클래스 세팅 (layout.js)
  * ============================================================ */
@@ -2030,130 +1829,7 @@ function initScrollHandler() {
     }
   });
 }
-/* ============================================================
- * 16. pnb, snb (브레드크럼) / boardOptBox 게시판 정렬 옵션 동작 (layout.js)
- * ============================================================ */
-function initPnbOptions() {
-  function pnb_btnTit() {
-    $("#pnb .pnb_menu .pnbList .menu_txt").css({
-      "width": $("#pnb .pnb_menu .pnbList").width() - $("#pnb .pnb_menu .pnbList .menu").width() - 10
-    });
-  }
-  // 전역에서 load/resize 시 재사용할 수 있도록 window에 노출
-  window.pnb_btnTit = pnb_btnTit;
-
-  $("#pnb .pnb_menu .pnbList .btnTit").attr('title', '열기');
-  $("#pnb .pnb_menu .pnbList .btnTit").click(function () {
-
-    if ($("#pnb .pnb_nav .navList .menu>ul").hasClass('on')) {
-      $("#pnb .pnb_nav .navList .menu>ul").removeClass('on');
-      $("#pnb .pnb_nav .navList .menu>ul").slideUp(200);
-      $('#pnb .pnb_nav .navList .btnTit').attr('title', '열기');
-    }
-
-    if ($("#pnb .pnb_menu .pnbList").hasClass('on')) {
-      $("#pnb .pnb_menu .pnbList").removeClass('on');
-      $("#pnb .pnb_menu .pnbList .menu>ul").slideUp(200);
-      $(this).attr('title', '열기');
-    } else {
-      $("#pnb .pnb_menu .pnbList").addClass('on');
-      $("#pnb .pnb_menu .pnbList .menu>ul").slideDown(200);
-      $(this).attr('title', '닫기');
-    }
-  });
-
-  $("#pnb .pnb_nav .navList .btnTit").attr('title', '열기');
-  $("#pnb .pnb_nav .navList .btnTit").click(function () {
-    if ($("#pnb .pnb_menu .pnbList").hasClass('on')) {
-      $("#pnb .pnb_menu .pnbList").removeClass('on');
-      $("#pnb .pnb_menu .pnbList .menu>ul").slideUp(200);
-      $("#pnb .pnb_menu .pnbList .menu .btnTit").attr('title', '열기');
-    }
-
-    $("#pnb .pnb_nav .navList .btnTit").not(this).siblings('ul').removeClass('on');
-    $("#pnb .pnb_nav .navList .btnTit").not(this).siblings('ul').slideUp(200);
-    $("#pnb .pnb_nav .navList .btnTit").not(this).attr('title', '열기');
-
-    if ($(this).siblings('ul').hasClass('on')) {
-      $(this).siblings('ul').removeClass('on');
-      $(this).siblings('ul').slideUp(200);
-      $(this).attr('title', '열기');
-    } else {
-      $(this).siblings('ul').addClass('on');
-      $(this).siblings('ul').slideDown(200);
-      $(this).attr('title', '닫기');
-    }
-  });
-
-  $("#pnb .pnb_func .btn_share").click(function () {
-    $(this).addClass('on');
-    $("#pnb .pnb_func .shareBox").addClass('on');
-    $('#pnb .pnb_func .shareBox').attr('tabindex', '-1');
-    setTimeout(function () {
-      $('#pnb .pnb_func .shareBox').focus();
-    }, 300)
-  });
-
-  $("#pnb .pnb_func .shareBox .btn_close").click(function () {
-    $("#pnb .pnb_func .shareBox").removeClass('on');
-    $("#pnb .pnb_func .btn_share").removeClass('on');
-    setTimeout(function () {
-      $('#pnb .pnb_func .btn_share').focus();
-    }, 300)
-  });
-
-  $("#pnb .pnb_func .btn_bookmark").click(function () {
-    if ($(this).hasClass('on')) {
-      $("#pnb .pnb_func .btn_bookmark").removeClass('on');
-      $("#pnb .pnb_func .btn_bookmark").attr('title', '북마크 선택 안됨')
-    } else {
-      $("#pnb .pnb_func .btn_bookmark").addClass('on');
-      $("#pnb .pnb_func .btn_bookmark").attr('title', '북마크 선택됨')
-    }
-  });
-
-  $(".searchOptBox .boxBtn .btn_optBoxOpen").click(function () {
-    $(".searchOptBox").addClass('on');
-    $(".searchOptBox .searchOpt").slideDown(200);
-
-    $("#pnb .pnb_menu .pnbList.on .btnTit").trigger('click');
-    $("#pnb .pnb_func .shareBox").removeClass('on');
-  });
-
-  /* 2024-07-17 상세검색 열기닫기 변경 */
-  $(".searchOptBox .boxBtn .btn_optBoxClose").click(function () {
-    if ($(this).hasClass('seachOptTypeOpen')) {
-      $(this).removeClass('seachOptTypeOpen');
-      $(this).addClass('seachOptTypeClose');
-      $(this).html('<span>상세 검색 닫기</span>');
-      $('.searchBaseDN').addClass('searchOptShow');
-    } else if ($(this).hasClass('seachOptTypeClose')) {
-      $(this).removeClass('seachOptTypeClose');
-      $(this).addClass('seachOptTypeOpen');
-      $(this).html('<span>상세 검색 열기</span>');
-      $('.searchBaseDN').removeClass('searchOptShow');
-    } else {
-      $(".searchOptBox .searchOpt").slideUp(200);
-      $(".searchOptBox").removeClass('on');
-      setTimeout(function () {
-        $('.btn_optBoxOpen').focus();
-      })
-    }
-  });
-
-  $(".boardOptBox .optBox .typeView .typeList").click(function () {
-    if (!$(this).hasClass('on')) {
-      $(this).addClass('on');
-      $(".boardOptBox .optBox .typeView .typeThumb").removeClass('on')
-    }
-  });
-  $(".boardOptBox .optBox .typeView .typeThumb").click(function () {
-    if (!$(this).hasClass('on')) {
-      $(this).addClass('on');
-      $(".boardOptBox .optBox .typeView .typeList").removeClass('on')
-    }
-  });
-}
+/* 16. pnb UI → js/pnb.js (initPnbOptions) */
 /* ============================================================
  * 17. 상단 사이트맵 팝업 열기/닫기 트리거 (layout.js)
  * ============================================================ */

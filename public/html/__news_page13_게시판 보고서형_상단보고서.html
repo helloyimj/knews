@@ -44,6 +44,8 @@
     <script src="../js/lib/html2canvas.min.js"></script>
     <script src="../js/lib/bluebird.min.js"></script>
     <!-- 공통 레이아웃 통합 -->
+    <script src="../js/pnb_org_trails.js"></script>
+    <script src="../js/pnb.js"></script>
     <script src="../js/layout_common.js"></script>
     <script src="../js/header_news.js"></script>
     <script src="../js/cms_file.js"></script>
@@ -141,7 +143,7 @@
               <button type="button" class="btn_sym"><span class="txtHidden">공감하기</span><em>0</em></button>
             </div>
             <div class="btnGrp">
-              <a href="#;" class="btnC_s" onclick="fn_listPage()"><span>목록</span></a>
+              <button type="button" class="btnC_s" onclick="fn_listPage()"><span>목록</span></button>
             </div>
           </div>
 
@@ -154,7 +156,7 @@
                   </div>
 
                   <div class="txtL">
-                    <strong>&lt;K-Connect AI 연계&gt; 주요 제조국의 산업AI 정책 및 동향</strong>
+                    <h1>&lt;K-Connect AI 연계&gt; 주요 제조국의 산업AI 정책 및 동향</h1>
                   </div>
                   <div class="reportInfo">
                     <ul class="list_dotBlack">
@@ -198,11 +200,11 @@
                       <li>
                         <b class="tit">첨부파일</b>
                         <div class="fileDownRow">
-                          <a href="#;" class="file_pdf btn_fileDown btnPdf" title="26주요제조국의산업AI정책및동향.pdf" data-atfilesn="89402" data-filename="26주요제조국의산업AI정책및동향.pdf" data-fileExt="pdf" onclick="fn_fileDown(this)"> 26주요제조국의산업AI정책및동향.pdf </a>
+                          <button type="button" class="file_pdf btn_fileDown btnPdf" title="26주요제조국의산업AI정책및동향.pdf" data-atfilesn="89402" data-filename="26주요제조국의산업AI정책및동향.pdf" data-fileExt="pdf" onclick="fn_fileDown(this)"> 26주요제조국의산업AI정책및동향.pdf </button>
                           <div class="btnGrp">
-                            <a href="#;" class="btnC_s btnPdf" title="PDF파일 미리보기" data-atfilesn="89402" data-filename="26주요제조국의산업AI정책및동향.pdf" data-fileExt="pdf" onclick="fn_filePreview(this)">
+                            <button type="button" class="btnC_s btnPdf" title="PDF파일 미리보기" data-atfilesn="89402" data-filename="26주요제조국의산업AI정책및동향.pdf" data-fileExt="pdf" onclick="fn_filePreview(this)">
                               <span>전문보기</span>
-                            </a>
+                            </button>
                           </div>
                         </div>
 
@@ -289,7 +291,7 @@
 
             <!-- 페이지 버튼 -->
             <div class="btnAreaC">
-              <a href="#;" onclick="fn_listPage()" class="btnC"><span>목록</span></a>
+              <button type="button" class="btnC" onclick="fn_listPage()"><span>목록</span></button>
             </div>
             <!-- //페이지 버튼 -->
 

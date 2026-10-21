@@ -143,7 +143,7 @@ function initCommonLayout() {
     <nav>
       <ul id="gnb">
         <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=10" title="뉴스 현재창  이동" data-sub="Y" target="_self" class="10 on">뉴스</a>
+          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=10" data-sub="Y" target="_self" class="10 on">뉴스</a>
           <p class="gnbTit">
             <b>뉴스</b>
             <span></span>
@@ -155,27 +155,27 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" class="70" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" class="70" data-sub="N" target="_self">전체</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" class="80" title="경제∙무역 현재창  이동" data-sub="N" target="_self">경제∙무역</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" class="80" data-sub="N" target="_self">경제∙무역</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" class="90" title="통상∙규제 현재창  이동" data-sub="N" target="_self">통상∙규제</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" class="90" data-sub="N" target="_self">통상∙규제</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" class="100" title="투자진출 현재창  이동" data-sub="N" target="_self">투자진출</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" class="100" data-sub="N" target="_self">투자진출</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" class="110" title="현장∙인터뷰 현재창  이동" data-sub="N" target="_self">현장∙인터뷰</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" class="110" data-sub="N" target="_self">현장∙인터뷰</a>
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" class="1480" title="기고 현재창  이동" data-sub="Y" target="_self">기고</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" class="1480" data-sub="Y" target="_self">기고</a>
 
               <ul class="menuS">
                 <li class="">
@@ -189,11 +189,11 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" class="290" title="글로벌 이슈 모니터링 현재창  이동" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" class="290" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" class="1550" title="글로벌 공급망 동향 현재창  이동" data-sub="Y" target="_self">글로벌 공급망 동향</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" class="1550" data-sub="Y" target="_self">글로벌 공급망 동향</a>
 
               <ul class="menuS">
                 <li class="">
@@ -207,7 +207,7 @@ function initCommonLayout() {
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" class="1500" title="글로벌 ESG 정보 현재창  이동" data-sub="Y" target="_self">글로벌 ESG 정보</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" class="1500" data-sub="Y" target="_self">글로벌 ESG 정보</a>
 
               <ul class="menuS">
                 <li class="">
@@ -225,11 +225,11 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" class="1580" title="미국 통상정책 주요 동향 현재창  이동" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" class="1580" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" class="1470" title="핫클립 현재창  이동" data-sub="Y" target="_self">핫클립</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" class="1470" data-sub="Y" target="_self">핫클립</a>
 
               <ul class="menuS">
                 <li class="">
@@ -255,13 +255,13 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" class="1630" title="산업뉴스콕콕 현재창  이동" data-sub="Y" target="_self">산업뉴스콕콕</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" class="1630" data-sub="Y" target="_self">산업뉴스콕콕</a>
             </li>
           </ul>
         </li>
 
         <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=20" title="상품·산업 현재창  이동" data-sub="Y" target="_self" class="20">상품·산업</a>
+          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=20" data-sub="Y" target="_self" class="20">상품·산업</a>
           <p class="gnbTit">
             <b>상품·산업</b>
             <span></span>
@@ -273,29 +273,29 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" class="170" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" class="170" data-sub="N" target="_self">전체</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" class="180" title="트렌드 현재창  이동" data-sub="N" target="_self">트렌드</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" class="180" data-sub="N" target="_self">트렌드</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" class="190" title="상품DB 현재창  이동" data-sub="N" target="_self">상품DB</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" class="190" data-sub="N" target="_self">상품DB</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" class="200" title="국별주요산업 현재창  이동" data-sub="N" target="_self">국별주요산업</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" class="200" data-sub="N" target="_self">국별주요산업</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" class="210" title="해외인증정보 현재창  이동" data-sub="N" target="_self">해외인증정보</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" class="210" data-sub="N" target="_self">해외인증정보</a>
             </li>
           </ul>
         </li>
 
         <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=30" title="국가·지역정보 현재창  이동" data-sub="Y" target="_self" class="30">국가·지역정보</a>
+          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=30" data-sub="Y" target="_self" class="30">국가·지역정보</a>
           <p class="gnbTit">
             <b>국가·지역정보</b>
             <span></span>
@@ -307,11 +307,11 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" class="220" title="국가지역정보 현재창  이동" data-sub="N" target="_self">국가지역정보</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" class="220" data-sub="N" target="_self">국가지역정보</a>
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" class="240" title="북한정보 현재창  이동" data-sub="Y" target="_self">북한정보</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" class="240" data-sub="Y" target="_self">북한정보</a>
 
               <ul class="menuS">
                 <li class="">
@@ -325,21 +325,21 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" class="250" title="진출전략 현재창  이동" data-sub="N" target="_self">진출전략</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" class="250" data-sub="N" target="_self">진출전략</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" class="260" title="출장자료 현재창  이동" data-sub="N" target="_self">출장자료</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" class="260" data-sub="N" target="_self">출장자료</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" class="270" title="무역관뉴스레터 현재창  이동" data-sub="N" target="_self">무역관뉴스레터</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" class="270" data-sub="N" target="_self">무역관뉴스레터</a>
             </li>
           </ul>
         </li>
 
         <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=40" title="보고서 현재창  이동" data-sub="Y" target="_self" class="40">보고서</a>
+          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=40" data-sub="Y" target="_self" class="40">보고서</a>
           <p class="gnbTit">
             <b>보고서</b>
             <span></span>
@@ -351,13 +351,13 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" class="280" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" class="280" data-sub="N" target="_self">전체</a>
             </li>
           </ul>
         </li>
 
         <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=50" title="멀티미디어뉴스 현재창  이동" data-sub="Y" target="_self" class="50">멀티미디어뉴스</a>
+          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=50" data-sub="Y" target="_self" class="50">멀티미디어뉴스</a>
           <p class="gnbTit">
             <b>멀티미디어뉴스</b>
             <span></span>
@@ -369,21 +369,21 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" class="540" title="동영상뉴스 현재창  이동" data-sub="N" target="_self">동영상뉴스</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" class="540" data-sub="N" target="_self">동영상뉴스</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" class="310" title="포토뉴스 현재창  이동" data-sub="N" target="_self">포토뉴스</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" class="310" data-sub="N" target="_self">포토뉴스</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" class="320" title="카드뉴스 현재창  이동" data-sub="N" target="_self">카드뉴스</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" class="320" data-sub="N" target="_self">카드뉴스</a>
             </li>
           </ul>
         </li>
 
         <li class="child">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=60" title="해외투자 현재창  이동" data-sub="Y" target="_self" class="60">해외투자</a>
+          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=60" data-sub="Y" target="_self" class="60">해외투자</a>
           <p class="gnbTit">
             <b>해외투자</b>
             <span></span>
@@ -395,11 +395,11 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" class="350" title="해외투자안내 현재창  이동" data-sub="N" target="_self">해외투자안내</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" class="350" data-sub="N" target="_self">해외투자안내</a>
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" class="360" title="직접투자절차 현재창  이동" data-sub="Y" target="_self">직접투자절차</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" class="360" data-sub="Y" target="_self">직접투자절차</a>
 
               <ul class="menuS">
                 <li class="">
@@ -417,7 +417,7 @@ function initCommonLayout() {
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" class="370" title="국별참고자료 현재창  이동" data-sub="Y" target="_self">국별참고자료</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" class="370" data-sub="Y" target="_self">국별참고자료</a>
 
               <ul class="menuS">
                 <li class="">
@@ -431,13 +431,13 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" class="1350" title="진출기업정보 현재창  이동" data-sub="N" target="_self">진출기업정보</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" class="1350" data-sub="N" target="_self">진출기업정보</a>
             </li>
           </ul>
         </li>
 
         <li class="child" style="display: none">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=400" title="열린마당 현재창  이동" data-sub="Y" target="_self" class="400">열린마당</a>
+          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=400" data-sub="Y" target="_self" class="400">열린마당</a>
           <p class="gnbTit">
             <b>열린마당</b>
             <span></span>
@@ -449,19 +449,19 @@ function initCommonLayout() {
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" class="1310" title="공지사항 현재창  이동" data-sub="Y" target="_self">공지사항</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" class="1310" data-sub="Y" target="_self">공지사항</a>
             </li>
 
             <li class="">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" class="1320" title="고객조사제안  현재창  이동" data-sub="Y" target="_self">고객조사제안 </a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" class="1320" data-sub="Y" target="_self">고객조사제안 </a>
             </li>
 
             <li class="" style="display: none">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" class="670" title="뉴스레터신청 현재창  이동" data-sub="Y" target="_self">뉴스레터신청</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" class="670" data-sub="Y" target="_self">뉴스레터신청</a>
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" class="1340" title="고객문의 현재창  이동" data-sub="Y" target="_self">고객문의</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" class="1340" data-sub="Y" target="_self">고객문의</a>
 
               <ul class="menuS">
                 <li class="" style="display: none">
@@ -471,7 +471,7 @@ function initCommonLayout() {
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" class="680" title="사이트이용 현재창  이동" data-sub="Y" target="_self">사이트이용</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" class="680" data-sub="Y" target="_self">사이트이용</a>
 
               <ul class="menuS">
                 <li class="">
@@ -489,7 +489,7 @@ function initCommonLayout() {
             </li>
 
             <li class="child">
-              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" class="730" title="정책∙방침 현재창  이동" data-sub="Y" target="_self">정책∙방침</a>
+              <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" class="730" data-sub="Y" target="_self">정책∙방침</a>
 
               <ul class="menuS">
                 <li class="" style="display: none">
@@ -523,7 +523,7 @@ function initCommonLayout() {
         </li>
 
         <li class="" style="display: none">
-          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=770" title="로그인 현재창  이동" data-sub="Y" target="_self" class="770">로그인</a>
+          <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=770" data-sub="Y" target="_self" class="770">로그인</a>
           <p class="gnbTit">
             <b>로그인</b>
             <span></span>
@@ -583,22 +583,22 @@ $('section.sitemapBox').html(`
             <h3 class="txtHidden">뉴스</h3>
             <ul class="menuM menuStep">
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=70" data-sub="N" target="_self">전체</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" title="경제∙무역 현재창  이동" data-sub="N" target="_self">경제∙무역</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=80" data-sub="N" target="_self">경제∙무역</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" title="통상∙규제 현재창  이동" data-sub="N" target="_self">통상∙규제</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=90" data-sub="N" target="_self">통상∙규제</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" title="투자진출 현재창  이동" data-sub="N" target="_self">투자진출</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=100" data-sub="N" target="_self">투자진출</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" title="현장∙인터뷰 현재창  이동" data-sub="N" target="_self">현장∙인터뷰</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=110" data-sub="N" target="_self">현장∙인터뷰</a>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" title="기고 현재창  이동" data-sub="Y" target="_self">기고</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1480" data-sub="Y" target="_self">기고</a>
                 <ul class="menuS">
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=130" title="" data-sub="N" target="_self">전문가기고</a>
@@ -609,10 +609,10 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" title="글로벌 이슈 모니터링 현재창  이동" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=290" data-sub="N" target="_self">글로벌 이슈 모니터링</a>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" title="글로벌 공급망 동향 현재창  이동" data-sub="Y" target="_self">글로벌 공급망 동향</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1550" data-sub="Y" target="_self">글로벌 공급망 동향</a>
                 <ul class="menuS">
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1360" title="" data-sub="N" target="_self">동향뉴스</a>
@@ -623,7 +623,7 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" title="글로벌 ESG 정보 현재창  이동" data-sub="Y" target="_self">글로벌 ESG 정보</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1500" data-sub="Y" target="_self">글로벌 ESG 정보</a>
                 <ul class="menuS">
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1520" title="" data-sub="N" target="_self">동향뉴스</a>
@@ -637,10 +637,10 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" title="미국 통상정책 주요 동향 현재창  이동" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1580" data-sub="N" target="_self">미국 통상정책 주요 동향</a>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" title="핫클립 현재창  이동" data-sub="Y" target="_self">핫클립</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1470" data-sub="Y" target="_self">핫클립</a>
                 <ul class="menuS">
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1590" title="" data-sub="N" target="_self">우크라이나 사태 해외동향</a>
@@ -660,7 +660,7 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" title="산업뉴스콕콕 현재창  이동" data-sub="Y" target="_self">산업뉴스콕콕</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1630" data-sub="Y" target="_self">산업뉴스콕콕</a>
               </li>
             </ul>
           </li>
@@ -668,19 +668,19 @@ $('section.sitemapBox').html(`
             <h3 class="txtHidden">상품·산업</h3>
             <ul class="menuM menuStep">
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=170" data-sub="N" target="_self">전체</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" title="트렌드 현재창  이동" data-sub="N" target="_self">트렌드</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=180" data-sub="N" target="_self">트렌드</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" title="상품DB 현재창  이동" data-sub="N" target="_self">상품DB</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=190" data-sub="N" target="_self">상품DB</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" title="국별주요산업 현재창  이동" data-sub="N" target="_self">국별주요산업</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=200" data-sub="N" target="_self">국별주요산업</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" title="해외인증정보 현재창  이동" data-sub="N" target="_self">해외인증정보</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=210" data-sub="N" target="_self">해외인증정보</a>
               </li>
             </ul>
           </li>
@@ -688,10 +688,10 @@ $('section.sitemapBox').html(`
             <h3 class="txtHidden">국가·지역정보</h3>
             <ul class="menuM menuStep">
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" title="국가지역정보 현재창  이동" data-sub="N" target="_self">국가지역정보</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=220" data-sub="N" target="_self">국가지역정보</a>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" title="북한정보 현재창  이동" data-sub="Y" target="_self">북한정보</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=240" data-sub="Y" target="_self">북한정보</a>
                 <ul class="menuS">
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=520" title="" data-sub="N" target="_self">북한정보</a>
@@ -702,13 +702,13 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" title="진출전략 현재창  이동" data-sub="N" target="_self">진출전략</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=250" data-sub="N" target="_self">진출전략</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" title="출장자료 현재창  이동" data-sub="N" target="_self">출장자료</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=260" data-sub="N" target="_self">출장자료</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" title="무역관뉴스레터 현재창  이동" data-sub="N" target="_self">무역관뉴스레터</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=270" data-sub="N" target="_self">무역관뉴스레터</a>
               </li>
             </ul>
           </li>
@@ -716,7 +716,7 @@ $('section.sitemapBox').html(`
             <h3 class="txtHidden">보고서</h3>
             <ul class="menuM menuStep">
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" title="전체 현재창  이동" data-sub="N" target="_self">전체</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=280" data-sub="N" target="_self">전체</a>
               </li>
             </ul>
           </li>
@@ -724,13 +724,13 @@ $('section.sitemapBox').html(`
             <h3 class="txtHidden">멀티미디어뉴스</h3>
             <ul class="menuM menuStep">
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" title="동영상뉴스 현재창  이동" data-sub="N" target="_self">동영상뉴스</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=540" data-sub="N" target="_self">동영상뉴스</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" title="포토뉴스 현재창  이동" data-sub="N" target="_self">포토뉴스</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=310" data-sub="N" target="_self">포토뉴스</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" title="카드뉴스 현재창  이동" data-sub="N" target="_self">카드뉴스</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=320" data-sub="N" target="_self">카드뉴스</a>
               </li>
             </ul>
           </li>
@@ -738,10 +738,10 @@ $('section.sitemapBox').html(`
             <h3 class="txtHidden">해외투자</h3>
             <ul class="menuM menuStep">
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" title="해외투자안내 현재창  이동" data-sub="N" target="_self">해외투자안내</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=350" data-sub="N" target="_self">해외투자안내</a>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" title="직접투자절차 현재창  이동" data-sub="Y" target="_self">직접투자절차</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" data-sub="Y" target="_self">직접투자절차</a>
                 <ul class="menuS">
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=570" title="" data-sub="N" target="_self">해외투자준비</a>
@@ -755,7 +755,7 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" title="국별참고자료 현재창  이동" data-sub="Y" target="_self">국별참고자료</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=370" data-sub="Y" target="_self">국별참고자료</a>
                 <ul class="menuS">
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=610" title="" data-sub="N" target="_self">법규&middot;서식</a>
@@ -766,7 +766,7 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" title="진출기업정보 현재창  이동" data-sub="N" target="_self">진출기업정보</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1350" data-sub="N" target="_self">진출기업정보</a>
               </li>
             </ul>
           </li>
@@ -774,16 +774,16 @@ $('section.sitemapBox').html(`
             <h3 class="txtHidden">열린마당</h3>
             <ul class="menuM menuStep">
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" title="공지사항 현재창  이동" data-sub="Y" target="_self">공지사항</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1310" data-sub="Y" target="_self">공지사항</a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" title="고객조사제안  현재창  이동" data-sub="Y" target="_self">고객조사제안 </a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1320" data-sub="Y" target="_self">고객조사제안 </a>
               </li>
               <li>
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" title="뉴스레터신청 현재창  이동" data-sub="Y" target="_self">뉴스레터신청</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=670" data-sub="Y" target="_self">뉴스레터신청</a>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" title="고객문의 현재창  이동" data-sub="Y" target="_self">고객문의</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1340" data-sub="Y" target="_self">고객문의</a>
                 <ul class="menuS">
                   <li class="" style="display: none">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=640" title="" data-sub="Y" target="_self">고객문의</a>
@@ -791,7 +791,7 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" title="사이트이용 현재창  이동" data-sub="Y" target="_self">사이트이용</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=680" data-sub="Y" target="_self">사이트이용</a>
                 <ul class="menuS">
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=710" title="" data-sub="Y" target="_self">API</a>
@@ -805,7 +805,7 @@ $('section.sitemapBox').html(`
                 </ul>
               </li>
               <li class="child">
-                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" title="정책∙방침 현재창  이동" data-sub="Y" target="_self">정책∙방침</a>
+                <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=730" data-sub="Y" target="_self">정책∙방침</a>
                 <ul class="menuS">
                   <li class="" style="display: none">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1010" title="" data-sub="Y" target="_self">저작권정책</a>
@@ -857,17 +857,17 @@ $('section.sitemapBox').html(`
                     <button type="button" class="btnTit">뉴스</button>
 
                     <ul>
-                      <li><a href="javascript:void(0);" data-menuno="10" title="현재창 이동" target="_self">뉴스</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="10" target="_self">뉴스</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="20" title="현재창 이동" target="_self">상품·산업</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="20" target="_self">상품·산업</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="30" title="현재창 이동" target="_self">국가·지역정보</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="30" target="_self">국가·지역정보</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="40" title="현재창 이동" target="_self">보고서</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="40" target="_self">보고서</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="50" title="현재창 이동" target="_self">멀티미디어뉴스</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="50" target="_self">멀티미디어뉴스</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="60" title="현재창 이동" target="_self">해외투자</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="60" target="_self">해외투자</a></li>
                     </ul>
                   </div>
                 </div>
@@ -878,29 +878,29 @@ $('section.sitemapBox').html(`
                     <button type="button" class="btnTit">기고</button>
 
                     <ul>
-                      <li><a href="javascript:void(0);" data-menuno="70" title="현재창 이동" target="_self">전체</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="70" target="_self">전체</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="80" title="현재창 이동" target="_self">경제∙무역</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="80" target="_self">경제∙무역</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="90" title="현재창 이동" target="_self">통상∙규제</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="90" target="_self">통상∙규제</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="100" title="현재창 이동" target="_self">투자진출</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="100" target="_self">투자진출</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="110" title="현재창 이동" target="_self">현장∙인터뷰</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="110" target="_self">현장∙인터뷰</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="1480" title="현재창 이동" target="_self">기고</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="1480" target="_self">기고</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="290" title="현재창 이동" target="_self">글로벌 이슈 모니터링</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="290" target="_self">글로벌 이슈 모니터링</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="1550" title="현재창 이동" target="_self">글로벌 공급망 동향</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="1550" target="_self">글로벌 공급망 동향</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="1500" title="현재창 이동" target="_self">글로벌 ESG 정보</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="1500" target="_self">글로벌 ESG 정보</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="1580" title="현재창 이동" target="_self">미국 통상정책 주요 동향</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="1580" target="_self">미국 통상정책 주요 동향</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="1470" title="현재창 이동" target="_self">핫클립</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="1470" target="_self">핫클립</a></li>
 
-                      <li><a href="javascript:void(0);" data-menuno="1630" title="현재창 이동" target="_self">산업뉴스콕콕</a></li>
+                      <li><a href="javascript:void(0);" data-menuno="1630" target="_self">산업뉴스콕콕</a></li>
                     </ul>
                   </div>
                 </div>
@@ -914,9 +914,9 @@ $('section.sitemapBox').html(`
                 <button type="button" class="btnTit">직원기고</button>
 
                 <ul>
-                  <li><a href="javascript:void(0);" data-menuno="130" title="현재창 이동" target="_self">전문가기고</a></li>
+                  <li><a href="javascript:void(0);" data-menuno="130" target="_self">전문가기고</a></li>
 
-                  <li><a href="javascript:void(0);" data-menuno="140" title="현재창 이동" target="_self">직원기고</a></li>
+                  <li><a href="javascript:void(0);" data-menuno="140" target="_self">직원기고</a></li>
                 </ul>
               </div>
               <!--             <p class="menu_txt"> -->
@@ -964,11 +964,11 @@ $('#footer').before(`
 $('#footer').html(`
   <footer>
     <ul class="f_menu">
-      <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=750" target="_self" title="뷰어다운로드 현재창 열림">뷰어다운로드</a></li>
-      <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1010" target="_self" title="저작권정책 현재창 열림">저작권정책</a></li>
-      <li class="point"><a href="https://www.kotra.or.kr/module/stplatLog/selectPolicyLogList.do?stplatSeq=2000002272" target="_self" title="개인정보처리방침 현재창 열림">개인정보처리방침</a></li>
-      <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1030" target="_self" title="공공데이터개방 현재창 열림">공공데이터개방</a></li>
-      <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=720" target="_self" title="RSS2.0 현재창 열림">RSS2.0</a></li>
+      <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=750" target="_self">뷰어다운로드</a></li>
+      <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1010" target="_self">저작권정책</a></li>
+      <li class="point"><a href="https://www.kotra.or.kr/module/stplatLog/selectPolicyLogList.do?stplatSeq=2000002272" target="_self">개인정보처리방침</a></li>
+      <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=1030" target="_self">공공데이터개방</a></li>
+      <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=720" target="_self">RSS2.0</a></li>
     </ul>
     <address>
       <span class="address">(06792) 서울시 서초구 헌릉로 13 </span>

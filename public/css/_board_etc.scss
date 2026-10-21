@@ -177,7 +177,8 @@
     
     
     .lineList_v .fileArea {margin-bottom:26px;padding:15px 0 15px 15px;}
-    .lineList_v .fileArea ul>li a {min-height:17px;padding:0;font-size:13px;line-height:17px;}
+    .lineList_v .fileArea ul>li a,
+    .lineList_v .fileArea ul>li button {min-height:17px;padding:0;font-size:13px;line-height:17px;}
     .lineList_v .fileArea ul>li .file_exel,
     .lineList_v .fileArea ul>li .file_hwp,
     .lineList_v .fileArea ul>li .file_pdf,
@@ -295,7 +296,8 @@
     .lineList_v.typeReportView dt  .txtL>strong {padding-right:100px;}
     .lineList_v.typeReportView dt  .txtL>h2 {padding-right:100px;}
     .lineList_v.typeReportView dt .reportInfo ul>li {padding-left:75px;margin-top:10px;padding-right:0;}
-    .lineList_v.typeReportView dt .reportInfo ul>li a {padding-top:2px;font-size:14px;}
+    .lineList_v.typeReportView dt .reportInfo ul>li a,
+    .lineList_v.typeReportView dt .reportInfo ul>li button {padding-top:2px;font-size:14px;}
     .lineList_v.typeReportView dt .reportInfo ul>li.source>a:not(.btn_original) {padding-right:16px;background-position:right top 5px;background-size:11px auto;font-size:14px;}
     .lineList_v.typeReportView dt .reportInfo ul>li.source .btn_original {width:78px;height:23px;margin-top:-1px;margin-left:5px;font-size:12px;line-height:18px;}
     .lineList_v.typeReportView dt .reportInfo ul>li.source .btn_original:hover {color:#fff;background:#212e4e url(../img/common/ico_arrR_s_white.png) no-repeat right 10px center;}
