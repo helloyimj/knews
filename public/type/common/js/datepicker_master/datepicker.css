@@ -342,6 +342,37 @@
     /*font-family: georgia, times new roman, palatino, times, bookman, serif;*/
     cursor:pointer;
     }
+/* a11y: button reset (month/year/today) */
+.date-picker button.prev-but,
+.date-picker button.next-but,
+.date-picker button.today-but
+    {
+    appearance:none;
+    -webkit-appearance:none;
+    border:0;
+    background:transparent;
+    padding:0;
+    margin:0;
+    font:inherit;
+    color:inherit;
+    cursor:pointer;
+    line-height:inherit;
+    box-shadow:none;
+    }
+.date-picker button.prev-but:focus-visible,
+.date-picker button.next-but:focus-visible,
+.date-picker button.today-but:focus-visible
+    {
+    outline:2px solid #212e4e;
+    outline-offset:2px;
+    }
+.date-picker button.prev-but:disabled,
+.date-picker button.next-but:disabled,
+.date-picker button.today-but:disabled
+    {
+    cursor:default;
+    opacity:0.45;
+    }
 .date-picker .prev-but,
 .date-picker .next-but,
 .date-picker .today-but

@@ -106,8 +106,13 @@ const common = {
 const headerFocusScope = {
   setInert(el, on) {
     if (!el) return;
-    if (on) el.setAttribute("inert", "");
-    else el.removeAttribute("inert");
+    if (on) {
+      el.setAttribute("inert", "");
+      el.setAttribute("aria-hidden", "true");
+    } else {
+      el.removeAttribute("inert");
+      el.removeAttribute("aria-hidden");
+    }
   },
   sync() {
     windowSize.setWinSize();
@@ -119,16 +124,17 @@ const headerFocusScope = {
     const mobileOpen = !!mobileMenu?.classList.contains("is-open");
 
     if (isMobile) {
-      // PC GNB·상단검색 등 숨김 영역은 탭 순서에서 제외
+      // PC GNB·상단검색 등 숨김 영역은 탭 순서에서 제외 (로고 다음 = btn_navi)
       this.setInert(pcMenu, true);
       this.setInert(topSearch, true);
       this.setInert(headerUtility, true);
-      // 모바일 전체메뉴: 닫혀 있으면 제외, 열려 있으면 허용
       this.setInert(mobileMenu, !mobileOpen);
       if (mobileMenu && !mobileOpen) {
         mobileMenu.style.display = "none";
       }
     } else {
+      // PC 복귀 시 jQuery hide 등으로 남은 인라인 display 제거 → CSS MQ가 표시
+      if (pcMenu) pcMenu.style.display = "";
       this.setInert(pcMenu, false);
       this.setInert(topSearch, false);
       this.setInert(headerUtility, false);
@@ -136,7 +142,6 @@ const headerFocusScope = {
       if (mobileMenu && !mobileOpen) {
         mobileMenu.style.display = "none";
       }
-      // PC에서는 모바일 메뉴 오픈 시 걸었던 inert 잔여 정리
       if (!mobileOpen) {
         document.querySelector(".header_news .header_in")?.removeAttribute("inert");
         document.getElementById("container")?.removeAttribute("inert");
@@ -144,12 +149,19 @@ const headerFocusScope = {
       }
     }
 
-    // inert 영역 안에 포커스가 남으면 제거
     const active = document.activeElement;
     if (active && typeof active.closest === "function" && active.closest("[inert]")) {
       active.blur();
     }
   },
+};
+
+window.syncHeaderFocusScope = function syncHeaderFocusScope() {
+  try {
+    headerFocusScope.sync();
+  } catch (e) {
+    console.error("[header_news] syncHeaderFocusScope", e);
+  }
 };
 
 /*** * news_mainMenuPC * ***/
@@ -820,16 +832,24 @@ const news_dropEvent = {
 
 const newsHotRoll = {
   timer: null,
+  paused: false,
+  reduceMotion: false,
+  control: null,
   init() {
+    const root = document.querySelector(".news_hot");
     const viewport = document.querySelector(".news_hot_viewport");
     const list = viewport?.querySelector(".news_hot_list");
+    const control =
+      root?.querySelector(".news_hot_control") ||
+      document.querySelector(".news_hot_control");
     if (!viewport || !list) return;
 
+    this.control = control;
     const originalItems = [...list.children];
     if (originalItems.length < 2) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!reduceMotion) {
+    this.reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!this.reduceMotion) {
       const clone = originalItems[0].cloneNode(true);
       clone.setAttribute("aria-hidden", "true");
       clone.querySelector("a")?.setAttribute("tabindex", "-1");
@@ -842,12 +862,12 @@ const newsHotRoll = {
 
     const goTo = (i, { animate = true } = {}) => {
       index = i;
-      list.style.transition = animate && !reduceMotion ? "transform 0.45s ease" : "none";
+      list.style.transition = animate && !this.reduceMotion ? "transform 0.45s ease" : "none";
       list.style.transform = `translateY(-${index * itemHeight()}px)`;
     };
 
     const step = () => {
-      if (looping || viewport.contains(document.activeElement)) return;
+      if (this.paused || looping || viewport.contains(document.activeElement)) return;
       index += 1;
       goTo(index, { animate: true });
       if (index >= originalItems.length) {
@@ -860,10 +880,29 @@ const newsHotRoll = {
     };
 
     const start = () => {
-      if (reduceMotion) return;
+      if (this.reduceMotion || this.paused) return;
       if (viewport.contains(document.activeElement)) return;
-      this.stop();
+      this.stopTimer();
       this.timer = window.setInterval(step, 2500);
+    };
+
+    const syncControl = () => {
+      if (!control) return;
+      const isPaused = this.paused || this.reduceMotion;
+      /* 메인과 동일: .btn_play = 재생 아이콘, .btn_play.stop = 일시정지 아이콘 */
+      control.classList.add("btn_play");
+      control.classList.toggle("stop", !isPaused);
+      control.setAttribute("aria-pressed", isPaused ? "true" : "false");
+      control.setAttribute(
+        "aria-label",
+        isPaused ? "인기 검색어 롤링 재생" : "인기 검색어 롤링 일시정지"
+      );
+      const sr = control.querySelector(".sr_only");
+      if (sr) sr.textContent = isPaused ? "재생" : "일시정지";
+      if (this.reduceMotion) {
+        control.disabled = true;
+        control.setAttribute("aria-disabled", "true");
+      }
     };
 
     const showFocused = (link) => {
@@ -871,8 +910,7 @@ const newsHotRoll = {
       if (!li || !list.contains(li)) return;
       const i = [...list.children].indexOf(li);
       if (i < 0) return;
-      this.stop();
-      // 클론(마지막)에 포커스되면 원본 첫 항목으로 정렬
+      this.stopTimer();
       goTo(i >= originalItems.length ? 0 : i, { animate: false });
     };
 
@@ -880,18 +918,34 @@ const newsHotRoll = {
       link.addEventListener("focus", () => showFocused(link));
     });
 
-    viewport.addEventListener("mouseenter", () => this.stop());
-    viewport.addEventListener("mouseleave", start);
-    viewport.addEventListener("focusin", () => this.stop());
+    viewport.addEventListener("mouseenter", () => this.stopTimer());
+    viewport.addEventListener("mouseleave", () => start());
+    viewport.addEventListener("focusin", () => this.stopTimer());
     viewport.addEventListener("focusout", (event) => {
       if (!viewport.contains(event.relatedTarget)) start();
     });
 
-    if (!reduceMotion) start();
+    if (control) {
+      control.addEventListener("click", () => {
+        if (this.reduceMotion) return;
+        this.paused = !this.paused;
+        if (this.paused) this.stopTimer();
+        else start();
+        syncControl();
+      });
+    }
+
+    this.paused = !!this.reduceMotion;
+    syncControl();
+    if (!this.reduceMotion) start();
   },
-  stop() {
+  stopTimer() {
     window.clearInterval(this.timer);
     this.timer = null;
+  },
+  /** @deprecated use stopTimer — 외부 호환 */
+  stop() {
+    this.stopTimer();
   },
 };
 

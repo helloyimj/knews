@@ -1068,11 +1068,16 @@ var datePickerController = (function datePickerController() {
                 for(var i = 0, details; details = obj[i]; i++) {
                     var th = createTH(details);
                     tr.appendChild(th);
-                    var but = document.createElement('span');
+                    /* a11y: span → button (Tab/Enter 포커스·활성화) */
+                    var but = document.createElement('button');
+                    but.type = "button";
                     but.className = details.className;
                     but.id = o.id + details.id;
                     but.appendChild(document.createTextNode(details.text || o.nbsp));
                     but.title = details.title || "";
+                    if (details.title) {
+                        but.setAttribute("aria-label", details.title);
+                    }
                     but.unselectable = "on";
                     th.appendChild(but);
                 };
@@ -1433,6 +1438,7 @@ var datePickerController = (function datePickerController() {
             if(origEl.id.search(new RegExp("^" + o.id + "(-prev-year-but|-prev-month-but|-next-month-but|-next-year-but)$")) != -1) {
 
                 o.mouseDownElem = origEl;
+                o.navHandledByMouse = true;
 
                 addEvent(document, "mouseup", o.clearTimer);
                 addEvent(origEl, "mouseout",  o.clearTimer);
@@ -1506,9 +1512,15 @@ var datePickerController = (function datePickerController() {
                     o.stopTimer();
                     break;
                 } else if(el.id && el.id == o.id + "-today-but") {
-                    o.date = new Date();
-                    o.updateTable();
-                    o.stopTimer();
+                    o.activateHeaderControl(el);
+                    break;
+                } else if(el.id && el.id.search(new RegExp("^" + o.id + "(-prev-year-but|-prev-month-but|-next-month-but|-next-year-but)$")) != -1) {
+                    /* keyboard Enter/Space; mouse already handled in mousedown */
+                    if(o.navHandledByMouse) {
+                        o.navHandledByMouse = false;
+                        break;
+                    };
+                    o.activateHeaderControl(el);
                     break;
                 } else if(el.className.search(/date-picker-day-header/) != -1) {
                     var cnt = o.showWeeks ? -1 : 0,
@@ -1650,8 +1662,19 @@ var datePickerController = (function datePickerController() {
         };
 
         this.onblur = function(e) {
-            o.removeCursorHighlight();
-            o.hide();
+            /* a11y: Tab으로 월/년 버튼에 포커스가 가면 day 셀 blur가 나므로,
+               피커 내부에 포커스가 남으면 닫지 않음(닫히면 스킵메뉴로 포커스 이탈) */
+            window.setTimeout(function() {
+                if(!o.visible || !o.div) {
+                    return;
+                };
+                var active = document.activeElement;
+                if(active && (active === o.div || (o.div.contains && o.div.contains(active)))) {
+                    return;
+                };
+                o.removeCursorHighlight();
+                o.hide();
+            }, 0);
         };
         // The current cursor cell gains focus
         this.onfocus = function(e) {
@@ -1699,6 +1722,42 @@ var datePickerController = (function datePickerController() {
 
             return stopEvent(e);
         };
+        /* 헤더 버튼(« ‹ 오늘 › ») 클릭·Enter·Space 공통 동작 */
+        this.activateHeaderControl = function(el) {
+            if(!el || !el.id) {
+                return false;
+            };
+            if(el.className.search(/fd-disabled/) != -1 || el.disabled) {
+                return false;
+            };
+            if(el.id == o.id + "-today-but") {
+                o.date = new Date();
+                o.updateTable();
+                o.stopTimer();
+                try { el.focus(); } catch(err) {};
+                return true;
+            };
+            if(el.id.search(new RegExp("^" + o.id + "(-prev-year-but|-prev-month-but|-next-month-but|-next-year-but)$")) != -1) {
+                var navIncs = {
+                        "-prev-year-but":[0,-1,0],
+                        "-prev-month-but":[0,0,-1],
+                        "-next-year-but":[0,1,0],
+                        "-next-month-but":[0,0,1]
+                    },
+                    navCheck = el.id.replace(o.id, "");
+                o.stopTimer();
+                o.dayInc   = navIncs[navCheck][0];
+                o.yearInc  = navIncs[navCheck][1];
+                o.monthInc = navIncs[navCheck][2];
+                o.timerSet = false;
+                o.updateTable();
+                o.dayInc = o.yearInc = o.monthInc = 0;
+                try { el.focus(); } catch(err) {};
+                return true;
+            };
+            return false;
+        };
+
         this.onkeydown = function (e) {
             o.stopTimer();
 
@@ -1710,7 +1769,16 @@ var datePickerController = (function datePickerController() {
 
             var kc = e.keyCode ? e.keyCode : e.charCode;
 
+            /* capture 단계 document keydown이라 네이티브 버튼 click이 안 먹을 수 있음 → 직접 활성화 */
+            var activeEl = document.activeElement;
+            var focusOnNavBut = activeEl && activeEl.tagName && activeEl.tagName.toLowerCase() === "button"
+                && o.div && o.div.contains && o.div.contains(activeEl);
+
             if(kc == 13) {
+                if(focusOnNavBut) {
+                    o.activateHeaderControl(activeEl);
+                    return stopEvent(e);
+                };
                 // RETURN/ENTER: close & select the date
                 var td = document.getElementById(o.id + "-date-picker-hover");
                 if(!td || td.className.search(/cd-([0-9]{8})/) == -1 || td.className.search(/out-of-range|day-disabled/) != -1) {
@@ -1733,14 +1801,37 @@ var datePickerController = (function datePickerController() {
                 };
                 return true;
             } else if(kc == 32 || kc == 0) {
+                if(focusOnNavBut) {
+                    o.activateHeaderControl(activeEl);
+                    return stopEvent(e);
+                };
                 // SPACE: goto todays date
                 o.date = new Date();
                 o.updateTable();
 
                 return stopEvent(e);
             } else if(kc == 9) {
-                // TAB: pass focus - non popup datepickers only
+                // TAB: cycle focus among month/year/today buttons + day grid (popup trap)
                 if(!o.staticPos) {
+                    var focusables = o.getFocusableControls ? o.getFocusableControls() : [];
+                    if(!focusables.length) {
+                        return stopEvent(e);
+                    };
+                    var active = document.activeElement,
+                        idx = -1,
+                        fi;
+                    for(fi = 0; fi < focusables.length; fi++) {
+                        if(focusables[fi] === active) {
+                            idx = fi;
+                            break;
+                        };
+                    };
+                    var nextIdx = e.shiftKey
+                        ? (idx <= 0 ? focusables.length - 1 : idx - 1)
+                        : (idx < 0 || idx >= focusables.length - 1 ? 0 : idx + 1);
+                    try {
+                        focusables[nextIdx].focus();
+                    } catch(err) {};
                     return stopEvent(e);
                 };
                 return true;
@@ -2770,6 +2861,22 @@ var datePickerController = (function datePickerController() {
 
         return ret;
     };
+    datePicker.prototype.getFocusableControls = function() {
+        var list = [],
+            ids = ["-prev-year-but", "-prev-month-but", "-today-but", "-next-month-but", "-next-year-but"],
+            i, el, td;
+        for(i = 0; i < ids.length; i++) {
+            el = document.getElementById(this.id + ids[i]);
+            if(el && el.className.search(/fd-disabled/) == -1 && !el.disabled) {
+                list.push(el);
+            };
+        };
+        td = document.getElementById(this.id + "-date-picker-hover");
+        if(td) {
+            list.push(td);
+        };
+        return list;
+    };
     datePicker.prototype.showHideButtons = function(tmpDate) {
         if(!this.butPrevYear) {
             return;
@@ -2778,40 +2885,53 @@ var datePickerController = (function datePickerController() {
         var tdm = tmpDate.getMonth(),
             tdy = tmpDate.getFullYear();
 
+        function setNavDisabled(but, disabled) {
+            if(!but) return;
+            if(disabled) {
+                addClass(but, "fd-disabled");
+                but.disabled = true;
+                but.setAttribute("aria-disabled", "true");
+            } else {
+                removeClass(but, "fd-disabled");
+                but.disabled = false;
+                but.removeAttribute("aria-disabled");
+            };
+        };
+
         if(this.outOfRange(new Date((tdy - 1), tdm, daysInMonth(+tdm, tdy-1), 5, 0, 0))) {
-            addClass(this.butPrevYear, "fd-disabled");
+            setNavDisabled(this.butPrevYear, true);
             if(this.yearInc == -1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butPrevYear, "fd-disabled");
+            setNavDisabled(this.butPrevYear, false);
         };
 
         if(this.outOfRange(new Date(tdy, (+tdm - 1), daysInMonth(+tdm-1, tdy), 5, 0, 0))) {
-            addClass(this.butPrevMonth, "fd-disabled");
+            setNavDisabled(this.butPrevMonth, true);
             if(this.monthInc == -1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butPrevMonth, "fd-disabled");
+            setNavDisabled(this.butPrevMonth, false);
         };
 
         if(this.outOfRange(new Date((tdy + 1), +tdm, 1, 5, 0, 0))) {
-            addClass(this.butNextYear, "fd-disabled");
+            setNavDisabled(this.butNextYear, true);
             if(this.yearInc == 1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butNextYear, "fd-disabled");
+            setNavDisabled(this.butNextYear, false);
         };
 
         if(this.outOfRange(new Date(tdy, +tdm + 1, 1, 5, 0, 0))) {
-            addClass(this.butNextMonth, "fd-disabled");
+            setNavDisabled(this.butNextMonth, true);
             if(this.monthInc == 1) {
                 this.stopTimer();
             };
         } else {
-            removeClass(this.butNextMonth, "fd-disabled");
+            setNavDisabled(this.butNextMonth, false);
         };
     };
     var localeDefaults = {

@@ -44,53 +44,47 @@
 <![endif]-->
 
 <script src="/type/common/js/jquery-2.2.1.min.js"></script>
-<!-- <script src="/type/common/js/jquery-3.5.1.min.js"></script> -->
-<script src="/type/common/js/jquery.easing.1.3.js"></script>
+<!--    <script src="/type/common/js/lib/jquery-3.5.1.min.js"></script>
 
-<link rel="stylesheet" href="/type/common/css/jquery-ui.css" />
-<link rel="stylesheet" href="/type/common/css/jquery-ui.theme.css" />
+    <!-- slider / scroll -->
+    <link rel="stylesheet" type="text/css" href="/type/common/js/lib/slick/slick.css" />
+    <script src="/type/common/js/lib/slick/slick.min.js"></script>
+    <script src="/type/common/js/lib/slick/slick.acc.js"></script>
+    <script src="/type/common/js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/type/common/js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
 
-<link rel="stylesheet" type="text/css" href="/type/common/js/slick/slick.css"/><!-- 슬라이더 -->
-<script src="/type/common/js/slick/slick.min.js"></script><!-- 슬라이더 -->
-<script src="/type/common/js/slick/slick.acc.js"></script><!-- 슬라이더 -->
-<script src="/type/common/js/sly-master/sly.min.js"></script>
+    <!-- datepicker + UI 위젯 -->
+    <script src="/type/common/js/lib/datepicker_master/datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="/type/common/js/lib/datepicker_master/datepicker.css" />
+    <link rel="stylesheet" href="/type/common/js/lib/jquery-ui.css" />
+    <link rel="stylesheet" href="/type/common/js/lib/jquery-ui.theme.css" />
+    <script src="/type/common/js/lib/jquery-ui.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="/type/common/js/mCustomScrollbar/jquery.mCustomScrollbar.css" /><!-- 커스텀스크롤 -->
-<script src="/type/common/js/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script><!-- 커스텀스크롤 -->
+    <!-- board UI / form / ajax / tmpl -->
+    <script src="/type/common/js/lib/board.js"></script>
+    <script src="/type/common/js/lib/jquery.form.js"></script>
+    <script src="/type/common/js/lib/comm_fr.js"></script>
+    <script src="/type/common/js/lib/util.js"></script>
+    <script src="/type/common/js/lib/jquery.tmpl.js"></script>
 
-<script src="/type/common/js/board.js"></script><!-- board -->
+    <!-- share / print / pdf -->
+    <script src="/type/common/js/lib/clipboard.min.js"></script>
+    <script src="/type/common/js/lib/printThis.js"></script>
+    <script src="/type/common/js/lib/jspdf.min.js"></script>
+    <script src="/type/common/js/lib/html2canvas.min.js"></script>
+    <script src="/type/common/js/lib/bluebird.min.js"></script>
 
-<script src="/type/common/js/jquery.form.js"></script>
-<script src="/type/common/js/jquery-ui.min.js"></script>
-<script src="/type/common/js/comm_fr.js?v=20261007131240"></script>
-<script src="/type/common/js/util.js"></script>
-<script src="/type/common/js/jquery.tmpl.js"></script>
+    <!-- layout -->
+    <script src="/type/common/js/layout_common.js"></script>
+    <script src="/type/common/js/header_news.js"></script>
+    <script src="/type/common/js/breadcrumb.js"></script>
 
-<script src="/type/common/js/clipboard.min.js"></script>
-<script src="/type/admin/js/printThis.js"></script>
 
-<script src="/type/common/js/makePCookie.js"></script>
+    <script src="/type/common/js/cms_file.js"></script>
 
-<script src="/type/common/js/nlogger.js"></script>
-<script type="text/javascript">
-nLogger.configure({
-	nth_service_id: "dream", // 로그 생성 단위, 값 지정 필요 (하단 참조)
-	nth_logging_url_base_http: "https://collect.kotra.or.kr:9443/nlog", // 수집 서버 주소
-	nth_logging_url_base_https: "https://collect.kotra.or.kr:9443/nlog" // 수집 서버 주소
-});
-nLogger.log();
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLVY8EFGBN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FLVY8EFGBN');
-</script>
-</head>
+    <!-- SNS / logger -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="/type/common/js/logger.js"></script>  </head>
 <body class="typeSub">
 	
 
@@ -398,7 +392,7 @@ function fn_enterkey() {
 <!-- 								<a href="http://www.kotra.or.kr/wps/sso/loginBySSO.jsp?div=gw&amp;ret_url=https://www.kotra.or.kr/kh/main/KHMIUI010M.html" target="_blank" class="btn_s" style="display: inline-block;" title="새 창 열림"> -->
 <!-- 									<img src="/type/news/img/layout/logo_t_01.png" alt="코트라 지원안내" title="코트라 지원안내"> -->
 <!-- 								</a> -->
-<!-- 								<a href="http://www.kotra.or.kr/wps/sso/loginBySSO.jsp?div=gw&amp;ret_url=https://www.kotra.or.kr/kh/main/KHMIUI010M.html" target="_blank" class="btn_o" style="display: none;"> -->
+<!-- 								<a href="http://www.kotra.or.kr/wps/sso/loginBySSO.jsp?div=gw&amp;ret_url=https://www.kotra.or.kr/kh/main/KHMIUI010M.html" target="_blank" class="btn_o" style="display: none;" title="새 창 열림"> -->
 <!-- 									<strong>KOTRA 대표 홈페이지</strong> -->
 <!-- 								</a> -->
 <!-- 							</p> -->
@@ -406,7 +400,7 @@ function fn_enterkey() {
 								<a href="/kp/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block;" title="새 창 열림">
 									<img src="/type/common/img/common/more_siteLogo12.png" alt="KOTRA 무역투자24" title="KOTRA 무역투자24">
 								</a>
-								<a href="/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>KOTRA 무역투자24</strong>
 								</a>
 							</p>
@@ -414,7 +408,7 @@ function fn_enterkey() {
 								<a href="/dream/index.do" target="_blank" class="btn_s"  title="새 창 열림">
 									<img src="/type/news/img/layout/logo_t_12.png" alt="해외경제정보드림" title="해외경제정보드림">
 								</a>
-								<a href="/dream/index.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/dream/index.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>해외경제정보드림</strong>
 								</a>
 							</p>
@@ -422,7 +416,7 @@ function fn_enterkey() {
 								<a href="https://www.exportvoucher.com" target="_blank" class="btn_s" title="새 창 열림">
 									<img src="/type/news/img/layout/logo_t_03.png" alt="수출지원기반 활용사업" title="수출지원기반 활용사업">
 								</a>
-								<a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none;">
+								<a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>수출바우처 · 지사화</strong>
 								</a>
 							</p>
@@ -430,7 +424,7 @@ function fn_enterkey() {
 								<a href="/ob/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
 									<img src="/type/news/img/layout/logo_t_04.png" alt="옴부즈만" title="옴부즈만">
 								</a>
-								<a href="/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>외투기업고충처리</strong>
 								</a>
 							</p>
@@ -438,7 +432,7 @@ function fn_enterkey() {
 								<a href="/iv/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
 									<img src="/type/news/img/layout/logo_t_05.png" alt="Inverst KOREA" title="Inverst KOREA">
 								</a>							
-								<a href="/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>투자유치정보제공</strong>
 								</a>		
 							</p>
@@ -446,7 +440,7 @@ function fn_enterkey() {
 								<a href="/ge/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block;" title="새 창 열림">
 									<img src="/type/news/img/layout/logo_t_06.png" alt="글로벌 전시포털" title="글로벌 전시포털">
 								</a>
-								<a href="/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>국내 · 해외전시정보</strong>
 								</a>
 								
@@ -455,7 +449,7 @@ function fn_enterkey() {
 								<a href="/bk/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
 									<img src="/type/news/img/layout/logo_t_07.png" alt="바이코리아(Seller)" title="바이코리아(Seller)">
 								</a>
-								<a href="/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>수출지원 온라인 플랫폼</strong>
 								</a>
 							</p>
@@ -463,7 +457,7 @@ function fn_enterkey() {
 								<a href="/gw/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
 									<img src="/type/news/img/layout/logo_t_08.png" alt="경제외교 활용포털" title="경제외교 활용포털">
 								</a>
-								<a href="/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>경제외교 활용포털</strong>
 								</a>
 							</p>
@@ -471,7 +465,7 @@ function fn_enterkey() {
 								<a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_s" title="새 창 열림" style="">
 									<img src="/type/news/img/layout/logo_t_09.png" alt="Contract KOREA" title="Contract KOREA">
 								</a>
-								<a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>해외전문인력유치센터</strong>
 								</a>
 							</p>
@@ -479,7 +473,7 @@ function fn_enterkey() {
 								<a href="/kd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
 									<img src="/type/news/img/layout/logo_t_10.png" alt="Kodits" title="Kodits">
 								</a>	
-								<a href="/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>방산물자교역지원센터</strong>
 								</a>	
 							</p>
@@ -488,7 +482,7 @@ function fn_enterkey() {
 <!-- 								<a href="/bb/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style=""> -->
 <!-- 									<img src="/type/news/img/layout/logo_t_11.png" alt="북방경제협력 정보포털" title="북방경제협력 정보포털"> -->
 <!-- 								</a> -->
-<!-- 								<a href="/bb/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;"> -->
+<!-- 								<a href="/bb/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림"> -->
 <!-- 									<strong>북방경제협력 정보포털</strong> -->
 <!-- 								</a> -->
 <!-- 							</p> -->
@@ -496,7 +490,7 @@ function fn_enterkey() {
 								<a href="/bd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
 									<img src="/type/news/img/layout/logo_t_13.png" alt="무역투자빅데이터" title="무역투자빅데이터">
 								</a>
-								<a href="/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;">
+								<a href="/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림">
 									<strong>무역투자빅데이터</strong>
 								</a>
 							</p>
@@ -506,7 +500,7 @@ function fn_enterkey() {
 				</div>
 			</div>
 			
-			<a href="/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새창 이동"><span>해외경제정보드림</span></a>
+			<a href="/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새 창 열림"><span>해외경제정보드림</span></a>
 	    </div>
 		
 		<nav>
@@ -873,7 +867,7 @@ function fn_enterkey() {
 								</li>
 							
 								<li class="" >
-									<a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a>
+									<a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새 창 열림" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 열림)" rel="noopener noreferrer">청산·국내복귀</a>
 									
 									
 								</li>
@@ -1433,7 +1427,7 @@ $(function(){
     								</li>
     							
     								<li class="" >
-    									<a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a>
+    									<a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새 창 열림" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 열림)" rel="noopener noreferrer">청산·국내복귀</a>
     									
     								</li>
     							
@@ -1628,7 +1622,7 @@ $(function(){
 	
 </div>
 		
-		<div id="contents">
+		<main id="contents">
 			
 
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
@@ -2352,7 +2346,7 @@ function fn_detail(loc, pNatCd){
 	       			htmlObj += '<ul><li class="alignPre">'+data.POLICY_LAWORD_CN+'</li></ul>';
 	       			htmlObj += '</div>';
 	       			htmlObj += '</div></div></div>';
-        			htmlObj += '</div>';
+        			htmlObj += '</main>';
         		}else if(ctgySn == "487"){
         			//----2023-06-22 수정
         			//주요산업
@@ -2770,7 +2764,7 @@ function fn_detail(loc, pNatCd){
                 			htmlObj += '<tr><th scope="col">주소</th><td class="txtL">'+data.entpList[i].ENTP_ADRES_CN+'</td></tr>';
                 			htmlObj += '<tr><th scope="col">전화번호</th><td class="txtL">'+data.entpList[i].ENTP_TELNO_ENCPT+'</td></tr>';
                 			htmlObj += '<tr><th scope="col">이메일</th><td class="txtL"><a href="mailto:'+data.entpList[i].ENTP_EMAIL_ENCPT+'">'+data.entpList[i].ENTP_EMAIL_ENCPT+'</a></td></tr>';
-                			htmlObj += '<tr><th scope="col">홈페이지</th><td class="txtL"><a href="'+data.entpList[i].ENTP_HMPG_URL_CN+'" target="_blank">'+data.entpList[i].ENTP_HMPG_URL_CN+'</a></td></tr>';
+                			htmlObj += '<tr><th scope="col">홈페이지</th><td class="txtL"><a href="'+data.entpList[i].ENTP_HMPG_URL_CN+'" target="_blank" title="새 창 열림">'+data.entpList[i].ENTP_HMPG_URL_CN+'</a></td></tr>';
                 			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.entpList[i].ENTP_ETC_CN+'</td></tr>';
                 			htmlObj += '</tbody></table>';
                 			htmlObj += '</div>';
@@ -3322,7 +3316,7 @@ function fn_detail(loc, pNatCd){
 		        			htmlObj += '<colgroup><col style="width:20%"><col style="width:80%"></colgroup>';
 		        			htmlObj += '<tr><th scope="col">전화번호</th><td class="txtL">'+data.korInsttList[i].INSTT_TELNO_VAL+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소</th><td  class="txtL">'+data.korInsttList[i].INSTT_ADRES_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지</th><td  class="txtL"><a href="'+data.korInsttList[i].INSTT_HMPG_URL_CN+'" target="_blank" title="홈페이지이동">'+data.korInsttList[i].INSTT_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지</th><td  class="txtL"><a href="'+data.korInsttList[i].INSTT_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.korInsttList[i].INSTT_HMPG_URL_CN+'</a></td></tr>';
 		        			if(data.korInsttList[i].ETC_CN != ""){
 			        			htmlObj += '<tr><th scope="col">비고</th><td  class="txtL alignPre">'+data.korInsttList[i].ETC_CN+'</td></tr>';
 		        			}
@@ -3347,7 +3341,7 @@ function fn_detail(loc, pNatCd){
 		        			htmlObj += '<colgroup><col style="width:20%"><col style="width:80%"></colgroup>';
 		        			htmlObj += '<tr><th scope="col">전화번호</th><td class="txtL">'+data.lcInsttList[i].GVRN_INSTT_TELNO_VAL+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소</th><td  class="txtL">'+data.lcInsttList[i].GVRN_INSTT_ADRES_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지</th><td  class="txtL"><a href="'+data.lcInsttList[i].GVRN_INSTT_HMPG_URL_CN+'" target="_blank" title="홈페이지이동">'+data.lcInsttList[i].GVRN_INSTT_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지</th><td  class="txtL"><a href="'+data.lcInsttList[i].GVRN_INSTT_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.lcInsttList[i].GVRN_INSTT_HMPG_URL_CN+'</a></td></tr>';
 		        			if(data.lcInsttList[i].GVRN_INSTT_ETC_CN != ""){
 			        			htmlObj += '<tr><th scope="col">비고</th><td  class="txtL alignPre">'+data.lcInsttList[i].GVRN_INSTT_ETC_CN+'</td></tr>';
 		        			}

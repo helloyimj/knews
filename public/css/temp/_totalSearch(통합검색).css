@@ -145,10 +145,10 @@
 .resultGrp li.typeThumList .result_box ul>li.noThum .txt {float:left;width:calc(100% - 105px);height:auto;max-height:43px;}
 .resultGrp li.typeThumList .result_box ul>li.noThum .tit {width:calc(100% - 105px);}
 
-input.topSearch_inp::-webkit-input-placeholder { /* Chrome/Opera/Safari */color:#666;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
-input.topSearch_inp::-moz-placeholder { /* Firefox 19+ */color:#666;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
-input.topSearch_inp:-ms-input-placeholder { /* IE 10+ */color:#666;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
-input.topSearch_inp:-moz-placeholder { /* Firefox 18- */color:#666;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
+input.topSearch_inp::-webkit-input-placeholder { /* Chrome/Opera/Safari */color:#666;}
+input.topSearch_inp::-moz-placeholder { /* Firefox 19+ */color:#666;}
+input.topSearch_inp:-ms-input-placeholder { /* IE 10+ */color:#666;}
+input.topSearch_inp:-moz-placeholder { /* Firefox 18- */color:#666;}
 
 .totalSearchBox {animation:searchBoxAni 0.5s forwards ease-out;}
 
@@ -417,10 +417,10 @@ footer .f_etc .btn_wa {display:none;}
 .detailSch_area .w_schNation {width:calc(100% + 17px);margin-left:-17px;font-size:0;}
 .detailSch_area .w_schNation>.inp_s {width:calc(33.333% - 17px);margin-left:17px;}
 .detailSch_area .guide_txt {text-align:left;padding-left:130px;box-sizing:border-box;font-size:15px;}
-.detailSch_area .inp_t::-webkit-input-placeholder { /* Chrome/Opera/Safari */color:#9a9a9a;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
-.detailSch_area .inp_t::-moz-placeholder { /* Firefox 19+ */color:#9a9a9a;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
-.detailSch_area .inp_t:-ms-input-placeholder { /* IE 10+ */color:#9a9a9a;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
-.detailSch_area .inp_t:-moz-placeholder { /* Firefox 18- */color:#9a9a9a;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif}
+.detailSch_area .inp_t::-webkit-input-placeholder { /* Chrome/Opera/Safari */color:#9a9a9a;}
+.detailSch_area .inp_t::-moz-placeholder { /* Firefox 19+ */color:#9a9a9a;}
+.detailSch_area .inp_t:-ms-input-placeholder { /* IE 10+ */color:#9a9a9a;}
+.detailSch_area .inp_t:-moz-placeholder { /* Firefox 18- */color:#9a9a9a;}
 .detailSch_area .ico_guide {display:inline-block;width:18px;height:18px;border-radius:50%;background:#d2d2d2;font-size:13px;line-height:18px;color:#666;text-align:center;font-weight:500;vertical-align:top;}
 .detailSch_area .schDate .inp_t {max-width:140px;}
 .detailSch_area .schDate>span {display:inline-block;width:30px;height:40px;vertical-align:top;font-size:15px;color:#666;text-align:center;line-height:40px;}

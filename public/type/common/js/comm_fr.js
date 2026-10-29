@@ -428,6 +428,102 @@ $.fn.fn_comm_setFromCookie = function(pageId) {
  *            data
  * @param ...
  */
+
+/**
+ * 페이징 접근성 보강
+ * - .pagination → <nav aria-label="페이지 이동">
+ * - title → aria-label
+ * - 현재 페이지 aria-current="page"
+ * - 처음/이전(1페이지), 다음/끝(마지막) disabled + aria-disabled
+ */
+window.fn_a11yEnhancePagination = function (paginationSel, meta) {
+	meta = meta || {};
+	var $targets = paginationSel ? $(paginationSel) : $(".pagination");
+	if (!$targets.length) return;
+
+	$targets.each(function () {
+		var $el = $(this);
+		if (!$el.hasClass("pagination") && !$el.find(".paging, .btn_first, .btn_prev").length) {
+			return;
+		}
+
+		/* div.pagination → nav.pagination */
+		if (this.tagName && this.tagName.toLowerCase() !== "nav") {
+			var cls = $el.attr("class") || "pagination";
+			var id = $el.attr("id");
+			var $nav = $('<nav class="' + cls + '" aria-label="페이지 이동"></nav>');
+			if (id) $nav.attr("id", id);
+			$nav.append($el.contents());
+			$el.replaceWith($nav);
+			$el = $nav;
+		} else if (!$el.attr("aria-label")) {
+			$el.attr("aria-label", "페이지 이동");
+		}
+
+		/* title → aria-label (페이징 컨트롤만) */
+		$el.find("button[title], a[title]").each(function () {
+			var $b = $(this);
+			var t = $b.attr("title");
+			if (!t) return;
+			if (!$b.attr("aria-label")) {
+				$b.attr("aria-label", t);
+			}
+			$b.removeAttr("title");
+		});
+
+		/* 현재 페이지 */
+		var $current = $el.find(".paging button.on, .paging a.on, .paging .on").first();
+		$el.find(".paging [aria-current='page']").removeAttr("aria-current");
+		if ($current.length) {
+			$current.attr("aria-current", "page");
+			if ($current.attr("aria-label") === "선택됨" || !$current.attr("aria-label")) {
+				var pageTxt = $.trim($current.text());
+				if (pageTxt) {
+					$current.attr("aria-label", pageTxt + "페이지");
+				}
+			}
+		}
+
+		var current = Number(meta.currentPageNo);
+		if (!current || isNaN(current)) {
+			current = parseInt($.trim($current.text()), 10) || 1;
+		}
+		var total = Number(meta.totalPageCount);
+		if (!total || isNaN(total)) {
+			var m = ($el.find(".num_paging").text() || "").match(/\/\s*(\d+)/);
+			if (m) {
+				total = parseInt(m[1], 10);
+			} else if (meta.totalRecordCount && meta.recordCountPerPage) {
+				total = Math.max(1, Math.ceil(Number(meta.totalRecordCount) / Number(meta.recordCountPerPage)));
+			} else {
+				total = current;
+			}
+		}
+
+		function setDisabled($btn, disabled) {
+			if (!$btn.length) return;
+			if (disabled) {
+				$btn.attr("aria-disabled", "true");
+				if ($btn.is("button")) {
+					$btn.prop("disabled", true);
+				} else {
+					$btn.attr("tabindex", "-1");
+				}
+			} else {
+				$btn.removeAttr("aria-disabled tabindex");
+				if ($btn.is("button")) {
+					$btn.prop("disabled", false);
+				}
+			}
+		}
+
+		setDisabled($el.find(".btn_first"), current <= 1);
+		setDisabled($el.find(".btn_prev"), current <= 1);
+		setDisabled($el.find(".btn_next"), current >= total);
+		setDisabled($el.find(".btn_end"), current >= total);
+	});
+};
+
 var fn_comm_setList = function(parentId, data, dataTemplateId,
 		noDataTemplateId, rowCountId, paginationId, cb) {
 	$(parentId).fn_comm_setList(data, dataTemplateId, noDataTemplateId,
@@ -488,7 +584,11 @@ $.fn.fn_comm_setList = function(data, dataTemplateId, noDataTemplateId,
 	//test = test.replace('</script>', '</script><script>window.open("http:igloo.co.kr");</script>');
 	//$(dataTemplateId).tmpl(list).appendTo(this);
 	if (isPaging) {
-		
+		var pageMeta = {
+			currentPageNo: data.currentPageNo,
+			totalRecordCount: data.totalRecordCount,
+			recordCountPerPage: data.recordCountPerPage
+		};
 		$.ajax({
             url: "/bvs/pagingF.do",
             data : {
@@ -498,8 +598,11 @@ $.fn.fn_comm_setList = function(data, dataTemplateId, noDataTemplateId,
                 paginationJsFunction : data.jsFunction
             },
             type : "POST",
-            success : function(data) {
-            	$(paginationId).html(data);
+            success : function(html) {
+            	$(paginationId).html(html);
+            	if (typeof window.fn_a11yEnhancePagination === "function") {
+            		fn_a11yEnhancePagination(paginationId, pageMeta);
+            	}
             }
         });
 	}
@@ -564,7 +667,11 @@ $.fn.fn_comm_moreList = function(data, dataTemplateId, noDataTemplateId,
 	}
 	$(dataTemplateId).tmpl(list).appendTo(this);
 	if (isPaging) {
-		
+		var pageMeta = {
+			currentPageNo: data.currentPageNo,
+			totalRecordCount: data.totalRecordCount,
+			recordCountPerPage: data.recordCountPerPage
+		};
 		$.ajax({
 //            url: "/bvs/pagingF.do",
 			url : paginationId=='#p_moreF'?"/bvs/moreF.do":"/bvs/pagingF.do",
@@ -575,8 +682,11 @@ $.fn.fn_comm_moreList = function(data, dataTemplateId, noDataTemplateId,
                 paginationJsFunction : data.jsFunction
             },
             type : "POST",
-            success : function(data) {
-            	$(paginationId).html(data);
+            success : function(html) {
+            	$(paginationId).html(html);
+            	if (typeof window.fn_a11yEnhancePagination === "function") {
+            		fn_a11yEnhancePagination(paginationId, pageMeta);
+            	}
             }
         });
 	}
@@ -2009,6 +2119,13 @@ function paginationRend(data, paginationId) {
 		}
 	});
 	$(paginationId).html(pagination);
+	if (typeof window.fn_a11yEnhancePagination === "function") {
+		fn_a11yEnhancePagination(paginationId, {
+			currentPageNo: data.currentPageNo,
+			totalRecordCount: data.totalRecordCount,
+			recordCountPerPage: data.recordCountPerPage
+		});
+	}
 }
 
 /**
@@ -2682,3 +2799,9 @@ function fn_filename(gbn,boardseq,siteno,bbsseq) {
 	
 	return fileName;
 }
+
+$(function(){
+	if (typeof window.fn_a11yEnhancePagination === "function") {
+		fn_a11yEnhancePagination();
+	}
+});

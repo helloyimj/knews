@@ -2,13 +2,6 @@
 
 #footer {padding:31px 0 30px;background:#000;}
 #footer footer {position:relative;width:100%;max-width:1480px;margin:0 auto;box-sizing:border-box;padding:0 30px 5px;}
-footer .f_bnr {float:right;overflow:hidden;width:100%;max-width:715px;height:33px;margin-bottom:21px;}
-footer .f_bnr .list {overflow:hidden;padding:0 20px;}
-footer .f_bnr .unit {/*width:175px;*/font-size:0;text-align:center;}
-footer .f_bnr .unit a {display:inline-block;overflow:hidden;vertical-align:top;}
-footer .f_bnr .slick-arrow {display:block;position:absolute;top:9px;overflow:hidden;width:8px;height:16px;text-indent:-999px;}
-footer .f_bnr .slick-prev {left:2px;background:url(../img/layout/f_bnr_arrL.png) no-repeat center;}
-footer .f_bnr .slick-next {right:2px;background:url(../img/layout/f_bnr_arrR.png) no-repeat center;}
 footer .f_menu {float:left;overflow:hidden;padding-top:8px;}
 footer .f_menu li {float:left;position:relative;margin-right:13px;padding-right:14px;}
 footer .f_menu li::after {content:'';display:block;position:absolute;right:0;top:3px;overflow:hidden;width:1px;height:11px;background:#858585;}
@@ -60,30 +53,9 @@ footer .copyright br {display:none;}
     }
 }
 
-@media all and (max-width: 1280px) {
-    footer .f_bnr {
-        max-width:546px;
-    }
-}
-
-@media all and (max-width: 1240px) {
-    footer .f_bnr {
-        max-width:546px;
-    }
-}
-
-@media all and (max-width: 1041px) {
+@media all and (max-width:1023px) {
     #footer {
         padding-top:16px;
-    }
-    footer .f_bnr {
-        width:325px;height:25px;margin-bottom:16px;
-    }
-    footer .f_bnr .unit img {
-        height:25px;
-    }
-    footer .f_bnr .slick-arrow {
-        top:5px;
     }
     footer .f_menu {
         padding-top:5px;
@@ -158,15 +130,12 @@ footer .copyright br {display:none;}
     }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width:767px) {
     #footer {
         padding-bottom:0;
     }
     #footer footer {
         padding:10px 15px 50px;
-    }
-    footer .f_bnr {
-        float:none;width:100%;max-width:none;margin-bottom:16px;
     }
     footer .f_menu {
         width:100%;

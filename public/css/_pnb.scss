@@ -36,7 +36,9 @@
 #pnb .pnb_func .shareBox.on { display:block;}
 #pnb .pnb_func .shareBox .shareBox_wrap { position:relative;padding:20px 10px 10px;}
 #pnb .pnb_func .shareBox .btn_close { display:block;overflow:hidden;position:absolute;top:13px;right:20px;width:13px;height:13px;background:url(../img/common/sprite_component.png) no-repeat -145px -383px;text-indent:-999px;}
-#pnb .pnb_func .shareBox strong { display:block;margin-bottom:18px;padding:0 15px 0 10px;color:#000;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:19px;font-weight:500;text-align:left;}
+#pnb .pnb_func .shareBox strong { display:block;margin-bottom:18px;padding:0 15px 0 10px;
+    // color: #000;
+    color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:19px;font-weight:500;text-align:left;}
 #pnb .pnb_func .shareBox ul { overflow:hidden;}
 /* 2024-06-25 */
 #pnb .pnb_func .shareBox ul>li { float:left;box-sizing:border-box;width:20%;margin-bottom:10px;padding:0 10px;font-size:0;}
@@ -74,7 +76,7 @@
 #pnb .pnb_nav .navList .menu>ul>li>a { display:inline-block;overflow:hidden;color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:19px;font-weight:400;transition:0.2s;vertical-align:top;}
 #pnb .pnb_nav .navList .menu>ul>li>a:hover { color:#4286ea;text-decoration:underline;}
 
-@media all and (max-width:1041px){
+@media all and (max-width:1023px){
 
     #pnb .pnb_menu { padding-top:4px;}
     #pnb .pnb_menu .pnbTit,
@@ -114,7 +116,7 @@
     #pnb .pnb_nav .navList .menu>ul>li>a { font-size:13px;line-height:17px;}
 }
 
-@media all and (max-width:768px){
+@media all and (max-width:767px){
 
     /*pnb*/
     #pnb { margin-bottom:13px;padding:0;}

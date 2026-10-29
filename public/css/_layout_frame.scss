@@ -14,7 +14,7 @@ caption>p { display:inline;}
 #contents {position:relative;overflow:hidden;width:100%;max-width:1500px;min-height:500px;margin:0 auto;box-sizing:border-box;padding:35px 30px 130px}
 #contents>article {min-height:531px;}
 
-// @media all and (max-width: 1041px) {
+// @media all and (max-width:1023px) {
 //     // #container {
 //     //     padding-top:65px
 //     // }
@@ -42,7 +42,7 @@ caption>p { display:inline;}
     }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width:767px) {
     #contents {
         padding-top:15px;
     }

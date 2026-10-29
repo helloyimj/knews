@@ -15,7 +15,6 @@
 .mPopZone .closedArea .closedBtn {display:block;position:absolute;top:50%;right:20px;width:15px;height:15px;margin-top:-7.5px;background:url(../img/main/icon_mPop_dayClosed.png) no-repeat;}
 .mPopZone .closedArea .closedBtn>span {overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;margin:1px;border:none; clip:rect(0, 0, 0, 0);}
 
-
 /* Main */
 .typeMain{overflow-x:hidden !important;}
 .typeMain #contents {max-width:100%;padding:0;}
@@ -45,7 +44,9 @@
 .linkArea {margin-top:-5px;}
 .reportArea .linkArea {margin-top:-5px; margin-right:85px;}
 .arrLink{display:inline-block;vertical-align:top;}
-.arrLink>span{display:block;right:60px;box-sizing:border-box;width:86px;height:28px;margin-top:5px;border:1px solid #9a9a9a;border-radius:2px;color:#333;font-size:15px;line-height:27px;text-align:center;}
+.arrLink>span{display:block;right:60px;box-sizing:border-box;width:86px;height:28px;margin-top:5px;border:1px solid #9a9a9a;border-radius:2px;
+    // color: #333;
+    color:#666666;font-size:15px;line-height:27px;text-align:center;}
 
 .mPlus{display:inline-block;width:30px;height:30px;background:url(../img/main/icon_mPlus.png) no-repeat center center;text-indent:-9999px;}
 
@@ -281,7 +282,6 @@
 .mImgNotice .reportArea{display:inline-block;overflow: hidden;position:relative;width: calc(33.33% - 14px); margin-right: 40px;vertical-align:top;}
 .mImgNotice .globalArea{display:inline-block;overflow: hidden;position:relative;width: calc(33.33% - 14px); margin-right: 0;vertical-align:top;} 
 
-
 /* .mImgNotice .videoNews {position:relative;display:inline-block;margin-right:60px;width:calc(100% - 520px);vertical-align:top;font-size:0;}
 .mImgNotice .reportArea{position:relative;display:inline-block;width:460px;vertical-align:top;}
 .mImgNotice .globalArea{position:relative;display:inline-block;width:460px;vertical-align:top;} */
@@ -300,7 +300,9 @@
 .mImgNotice .reportList .item .topImg .downArea .btnI{position:absolute;top:50%;left:50%;z-index:2;width:140px;border-color:#fff;transform:translate(-50%,-50%);}
 .mImgNotice .reportList .item .topImg .downArea .btnI>span {position:relative;background:none !important;}
 .mImgNotice .reportList .item .topImg .downArea .btnI.fileDown.lineGray:hover {background:#fff !important;}
-.mImgNotice .reportList .item .topImg .downArea .btnI.fileDown.lineGray:hover>span {color:#000 !important;}
+.mImgNotice .reportList .item .topImg .downArea .btnI.fileDown.lineGray:hover>span {
+    // color: #000;
+    color:#0f0f0f!important;}
 .mImgNotice .reportList .item .topImg .downArea .btnI.fileDown.lineGray>span:before {display:block;position:absolute;top:50%;right:0;width:14px;height:16px;margin-top:-8px;background: url(../img/layout/layout_sprite.png) no-repeat -78px -422px;content:'';}
 .mImgNotice .reportList .item .topImg:focus .downArea,
 .mImgNotice .reportList .item .topImg:hover .downArea{top:0;}
@@ -329,7 +331,9 @@
 .mImgNotice .globalList .item .topImg .downArea .btnI{position:absolute;top:50%;left:50%;z-index:2;width:140px;border-color:#fff;transform:translate(-50%,-50%);}
 .mImgNotice .globalList .item .topImg .downArea .btnI>span {position:relative;background:none !important;}
 .mImgNotice .globalList .item .topImg .downArea .btnI.fileDown.lineGray:hover {background:#fff !important;}
-.mImgNotice .globalList .item .topImg .downArea .btnI.fileDown.lineGray:hover>span {color:#000 !important;}
+.mImgNotice .globalList .item .topImg .downArea .btnI.fileDown.lineGray:hover>span {
+    // color: #000;
+    color:#0f0f0f!important;}
 .mImgNotice .globalList .item .topImg .downArea .btnI.fileDown.lineGray>span:before {display:block;position:absolute;top:50%;right:0;width:14px;height:16px;margin-top:-8px;background: url(../img/layout/layout_sprite.png) no-repeat -78px -422px;content:'';}
 .mImgNotice .globalList .item .topImg:focus .downArea,
 .mImgNotice .globalList .item .topImg:hover .downArea{top:0;}
@@ -408,11 +412,10 @@
 .mAlertNNotice .noticeList .noArticle .no_article {padding-top:85px;padding-bottom:0;background-image:url(../img/main/ico_noArticle_white.png);background-position:left 50% top 0;}
 
 .mb_menuSlide {display:none;}
-@media all and (max-width:1700px){
+
+/* 브레이크포인트: _media.scss (1399 / 1023 / 767 / 479) */
+@media (max-width: 1399px){
     .mVisual .mNewsList {box-sizing:border-box;padding-left:10px;}
-}
-@media all and (max-width:1530px){
-    /* Main */
     .mVisual .mVisualSlider {margin-right:24px;margin-left:15px;}
     .mVisual .mNewsList {width:calc(100% - 753px);}
 }
@@ -450,8 +453,7 @@
     .mImgNotice .videoNews {width:calc(100% - 490px);margin-right:30px;}
 } */
 
-
-@media all and (max-width:1041px){
+@media (max-width: 1023px){
      /* 메인 팝업존 */
      .mPopZone {position:absolute;top:100px;left:0;padding:0 20px;text-align:center;;}
      .mPopZone .pop_admin {position:relative !important;top:auto !important;right:auto !important;bottom:auto !important;left:auto !important;left:auto !important;width:100% !important;max-width:700px;}
@@ -633,7 +635,7 @@
     .mAlertNNotice .noticeList>li .fileView {top:0;right:80px;background-size:9px auto;}
     .mAlertNNotice .linkArea .arrLink>span {height:26px;line-height:26px;}
 }
-@media all and (max-width:768px){
+@media (max-width: 767px){
     /* 메인 팝업존 */
     .mPopZone {padding:0 15px;}
     .mPopZone .closedArea .inp_c {top:3px;}
@@ -646,7 +648,9 @@
 
     .linkArea {margin-top:-5px;}
     /*.arrLink>span {width:70px;height:32px;line-height:32px;font-size:13px;margin-right:-20px;}*/
-    .arrLink>span{display:block;right:60px;box-sizing:border-box;width:75px;height:26px;margin-top:5px;border:1px solid #9a9a9a;border-radius:2px;color:#333;font-size:13px;line-height:26px;text-align:center;}
+    .arrLink>span{display:block;right:60px;box-sizing:border-box;width:75px;height:26px;margin-top:5px;border:1px solid #9a9a9a;border-radius:2px;
+    // color: #333;
+    color:#666666;font-size:13px;line-height:26px;text-align:center;}
     
 
     /* Main */
@@ -732,7 +736,7 @@
     .mBannerImgArea .slick-dots>li button {width:6px;height:6px;}
     .mBannerImgArea .slick-dots>li+li {margin-left:10px;}
 }
-@media all and (max-width:560px){
+@media (max-width: 560px){
     /* 팝업존 */
     .mPopZone {top:115px;}
     

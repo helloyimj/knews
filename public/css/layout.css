@@ -301,7 +301,7 @@ footer .copyright br {display:none;}
     
     footer .f_bnr {max-width:546px;}
 }
-@media all and (max-width: 1041px){
+@media all and (max-width: 1023px){
     #gnb_dim {top:51px;}
 
     .typeTopNotice header .mBtn_topMenu{top:105px;}
@@ -364,7 +364,7 @@ footer .copyright br {display:none;}
     
     #header.gnbOn header .gnb_util .btn_interestInfo>span {position:relative;width:auto;height:auto;margin:0;clip:unset;font-size:14px;line-height:25px;}
 
-    header .mMenu_menuSearch {display:block;position:fixed;left:-770px;top:52px;width:100%;max-width:768px;height:111px;box-sizing:border-box;padding:15px;background:#8366cf url(../img/layout/m/menuSearch_bg.png) no-repeat right top;background-size:auto 100%;z-index:1100;transition:0.2s;}
+    header .mMenu_menuSearch {display:block;position:fixed;left:-770px;top:52px;width:100%;max-width:767px;height:111px;box-sizing:border-box;padding:15px;background:#8366cf url(../img/layout/m/menuSearch_bg.png) no-repeat right top;background-size:auto 100%;z-index:1100;transition:0.2s;}
     header .mMenu_menuSearch .txt {display:block;float:left;overflow:hidden;width:calc(100% - 70px);height:23px;margin-bottom:15px;color:#fff;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:23px;}
     header .mMenu_menuSearch .btn_login,
     header .mMenu_menuSearch .btn_logout {float:right;overflow:hidden;width:59px;height:23px;margin-bottom:15px;box-sizing:border-box;border:1px solid #fff;border-radius:3px;color:#fff;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:12px;font-weight:400;line-height:24px;text-align:center;}
@@ -373,7 +373,7 @@ footer .copyright br {display:none;}
     header .mMenu_menuSearch fieldset>input {float:left;width:calc(100% - 38px);height:38px;padding:0 10px;box-sizing:border-box;border:none;font-size:15px;font-weight:400;}
     header .mMenu_menuSearch fieldset .btn_search {display:block;float:right;overflow:hidden;width:38px;height:38px;margin:0;box-sizing:border-box;padding:0;border-radius:0;background:#fff url(../img/layout/m/ico_menuSearch.png) no-repeat center;background-size:auto 16px;text-indent:-999px;}
 
-    header>nav {position:fixed !important;left:-770px;top:65px;width:100%;max-width:768px;height:100%;box-sizing:border-box;background:#fff;z-index:1100;transition:0.2s;}
+    header>nav {position:fixed !important;left:-770px;top:65px;width:100%;max-width:767px;height:100%;box-sizing:border-box;background:#fff;z-index:1100;transition:0.2s;}
     header>nav #gnb {position:relative;overflow-x:hidden;overflow-y:auto;padding:0;text-align:left;}
     header>nav #gnb:before  {content:'';display:block;position:absolute;left:0;top:108px;width:170px;height:calc(100% - 108px);background:#F1F1F1;z-index:1;}
     header>nav #gnb>li {display:block;width:25%;padding:0;float:left;}
@@ -415,7 +415,7 @@ footer .copyright br {display:none;}
     header>nav #gnb ul.menuSS>li::before {content:'';display:block;position:absolute;left:0;top:8px;width:5px;height:1px;background:#666;}
     header>nav #gnb ul.menuSS>li>a {display:inline-block;color:#666;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:19px;vertical-align:top;}
 
-    .typeSearchResult .m_searchResult {display:block;position:fixed;left:-770px;top:217px;width:100%;max-width:768px;border-top:1px solid #ddd;overflow-y:auto;}
+    .typeSearchResult .m_searchResult {display:block;position:fixed;left:-770px;top:217px;width:100%;max-width:767px;border-top:1px solid #ddd;overflow-y:auto;}
     .typeSearchResult .m_searchResult .inner {padding:20px 15px 35px 15px}
     .typeSearchResult .m_searchResult .tit {display:block;padding-bottom:15px;font-weight:700;font-size:20px;}
     .typeSearchResult .m_searchResult .tit:nth-child(n+2) {margin-top:30px;}
@@ -487,7 +487,7 @@ footer .copyright br {display:none;}
     header .top_util .btn_kotraSite {display:none !important;}
     header .top_util>.btn_join::after {display:none;}
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 767px){
     /* 상단배너 */
     .mTopNotice .Alert{width:calc(100% - 190px);}
     .mTopNotice .slick-prev {right:197px;}

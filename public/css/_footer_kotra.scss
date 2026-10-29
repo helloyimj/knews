@@ -156,7 +156,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .footer_kotra {
     height: auto;
 
@@ -180,18 +180,35 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
         }
       }
     }
+
+    .footer_list_info {
+      // flex-direction: column;
+      // gap: 5px 10px;
+      // li {
+      //   &::after {
+      //     display: none;
+      //   }
+      // }
+      span {
+        font-size: 15px;
+      }
+    }
+
+    .copyright {
+      font-size: 15px;
+      font-weight: normal;
+    }
+
   }
-}
 
-@media screen and (max-width: 780px) {
-  // .footer_kotra_logo {display:none}
-
+  
   .footer_kotra {
     .footer_kotra_wrapper {
       padding: 40px 20px;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 50px;
+      font-weight: normal;
 
       &::after {
         display: none;
@@ -208,6 +225,7 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
     &_logo {
       float: none;
       width: 150px;
+      height: 40px;
     }
 
     .footer_list_menu {
@@ -232,7 +250,13 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
       margin-top: 0;
     }
   }
+
 }
+
+// @media screen and (max-width: 767px) {
+//   // .footer_kotra_logo {display:none}
+
+// }
 
 @media screen and (max-width: 480px) {
   .footer_kotra {
@@ -278,8 +302,8 @@ $status-colors: ((green, #6dd400, #60c400), (yellow, #ffb900, #ff9600), (red, #d
       }
     }
 
-    .copyright {
-      font-size: 12px;
-    }
+    // .copyright {
+    //   font-size: 12px;
+    // }
   }
 }

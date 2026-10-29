@@ -17,7 +17,7 @@ $().ready(function() {
 		adaptiveHeight: true,
 		responsive: [
 			{
-				breakpoint: 1041,
+				breakpoint: 1024,
 				settings: {
 				arrows: false,
 				infinite: true

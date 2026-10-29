@@ -1,0 +1,731 @@
+# 레이아웃 우선 점검 (뉴스 활성 scss만)
+
+전체: `css/_mq_layout_classes_full.md`
+
+하나식 고칠 때 이 목록 위에서부터.
+
+## A. JS ↔ CSS `_media.scss` 정렬
+
+> JS: `<=1023` / `<1024` ≡ CSS `max-width:1023`  
+> JS: `<=767` / `<768` ≡ CSS `max-width:767`
+
+- [x] 구 `.f_bnr` 슬릭·CSS 제거
+- [x] `layout_common*.js` / `layout.js` / `board*.js` / dream `layout_reN.js` : 1041 → 1024·1023
+- [x] `board.css` / dream `layout.css` / `_news.scss` / `total.css` : MQ 1023·767
+- [x] `.prevNnext` 모바일 `strong`/`p` : height 40 + line-height 39 (상위 border 1px 보정)
+
+## B. max-width: 1023px (465)
+
+- `.add_openNoti` ← _board_etc.scss
+- `.add_sympathy` ← _board_etc.scss
+- `.addFile` ← _board_etc.scss
+- `.addInfo` ← _board_etc.scss
+- `.addReply` ← _board_etc.scss
+- `.address` ← _footer.scss
+- `.addTxt` ← _board_etc.scss
+- `.aiRecommArea` ← _board_etc.scss
+- `.Alert` ← _top_notice.scss
+- `.alertArea` ← main.scss
+- `.area` ← _board_etc.scss
+- `.areaInfo` ← _board_etc.scss
+- `.arrLink` ← main.scss
+- `.banner` ← main.scss
+- `.bg` ← main.scss
+- `.bnrArea` ← _common.scss
+- `.board_area` ← _board_etc.scss
+- `.boardOptBox` ← _board_etc.scss
+- `.bookMark` ← main.scss
+- `.boxBtn` ← _search_option.scss
+- `.br_m` ← _board_etc.scss
+- `.btn` ← _board_etc.scss, _search_option.scss
+- `.btn_familysite` ← _footer.scss
+- `.btn_fileAdd` ← _board_etc.scss
+- `.btn_fileDel` ← _board_etc.scss
+- `.btn_fileFind` ← _board_etc.scss
+- `.btn_fileRe` ← _board_etc.scss
+- `.btn_moreView` ← _board_etc.scss
+- `.btn_original` ← _board_etc.scss
+- `.btn_promisingBuyerSearch` ← _board_etc.scss
+- `.btn_R` ← _board_etc.scss
+- `.btn_recommAi` ← _board_etc.scss
+- `.btn_reply` ← _board_etc.scss
+- `.btn_replyS` ← _board_etc.scss
+- `.btn_scrap` ← _board_etc.scss
+- `.btn_shortcut` ← _pnb.scss
+- `.btn_subReport` ← _board_etc.scss
+- `.btn_videoPlay` ← _board_etc.scss
+- `.btn_wa` ← _footer.scss
+- `.btnArea` ← _board_etc.scss
+- `.btnC_s` ← _board_etc.scss, _search_option.scss
+- `.btnFile` ← _board_etc.scss
+- `.btnGrp` ← _board_etc.scss, _common.scss
+- `.btnPdf` ← _board_etc.scss
+- `.btnR` ← _board_etc.scss
+- `.btnTit` ← _pnb.scss
+- `.btnTitArea` ← _common.scss
+- `.cag` ← main.scss
+- `.calByte` ← _board_etc.scss
+- `.case` ← _board_etc.scss
+- `.caseChkBox` ← _board_etc.scss
+- `.closedArea` ← _top_notice.scss, main.scss
+- `.closedBtn` ← _top_notice.scss
+- `.code` ← _board_etc.scss, _common.scss
+- `.codeNum` ← _board_etc.scss
+- `.commentArea` ← _board_etc.scss
+- `.commentBtn` ← _board_etc.scss
+- `.compare` ← _search_option.scss
+- `.compare_Btn` ← _search_option.scss
+- `.contentsSp` ← _board_etc.scss
+- `.contine` ← _board_etc.scss
+- `.controller` ← main.scss
+- `.contTab_s` ← _page_tab.scss
+- `.contTit` ← _common.scss
+- `.contTit_g` ← _board_etc.scss, _common.scss
+- `.contTit_line` ← _common.scss
+- `.contTit_s` ← _board_etc.scss, _common.scss
+- `.contTit_ss` ← _board_etc.scss, _common.scss
+- `.copyright` ← _footer.scss
+- `.copyrightImg` ← _board_etc.scss
+- `.date` ← _board_etc.scss, _board_list.scss
+- `.date-picker-control` ← _board_etc.scss
+- `.dot` ← _board_etc.scss, _common.scss
+- `.downArea` ← main.scss
+- `.errorTxt` ← _board_etc.scss
+- `.exclam` ← _board_etc.scss, _common.scss
+- `.f_bnr` ← _footer.scss
+- `.f_etc` ← _footer.scss
+- `.f_menu` ← _footer.scss
+- `.f_sns` ← _footer.scss
+- `.familySite` ← _footer.scss
+- `.faq_q` ← _board_etc.scss
+- `.faqA_wrap` ← _board_etc.scss
+- `.file_avi` ← _board_etc.scss
+- `.file_bmp` ← _board_etc.scss
+- `.file_csv` ← _board_etc.scss
+- `.file_doc` ← _board_etc.scss
+- `.file_docx` ← _board_etc.scss
+- `.file_etc` ← _board_etc.scss
+- `.file_excel` ← _board_etc.scss
+- `.file_exel` ← _board_etc.scss
+- `.file_gif` ← _board_etc.scss
+- `.file_hwp` ← _board_etc.scss
+- `.file_img` ← _board_etc.scss
+- `.file_jpeg` ← _board_etc.scss
+- `.file_jpg` ← _board_etc.scss
+- `.file_mp4` ← _board_etc.scss
+- `.file_pdf` ← _board_etc.scss
+- `.file_png` ← _board_etc.scss
+- `.file_ppt` ← _board_etc.scss
+- `.file_pptx` ← _board_etc.scss
+- `.file_svg` ← _board_etc.scss
+- `.file_swf` ← _board_etc.scss
+- `.file_txt` ← _board_etc.scss
+- `.file_video` ← _board_etc.scss
+- `.file_word` ← _board_etc.scss
+- `.file_xls` ← _board_etc.scss
+- `.file_xlsx` ← _board_etc.scss
+- `.file_zip` ← _board_etc.scss
+- `.fileAdd` ← _board_etc.scss
+- `.fileArea` ← _board_etc.scss
+- `.fileI` ← _common.scss
+- `.fileView` ← main.scss
+- `.findHScode` ← _board_etc.scss
+- `.fix` ← _page_tab.scss
+- `.fullView` ← main.scss
+- `.func` ← _board_etc.scss
+- `.func_list` ← _board_etc.scss
+- `.globalArea` ← main.scss
+- `.globalList` ← main.scss
+- `.gnb-backdrop` ← _header.scss
+- `.h2` ← _board_etc.scss
+- `.hasFile` ← _board_etc.scss, _board_list.scss
+- `.head_tit` ← _board_etc.scss
+- `.header_news` ← _header.scss
+- `.hsCode` ← _board_etc.scss
+- `.ico_comment` ← _board_list.scss
+- `.ico_file_avi` ← _board_list.scss
+- `.ico_file_bmp` ← _board_list.scss
+- `.ico_file_csv` ← _board_list.scss
+- `.ico_file_doc` ← _board_list.scss
+- `.ico_file_docx` ← _board_list.scss
+- `.ico_file_etc` ← _board_list.scss
+- `.ico_file_excel` ← _board_list.scss
+- `.ico_file_exel` ← _board_list.scss
+- `.ico_file_gif` ← _board_list.scss
+- `.ico_file_hwp` ← _board_list.scss
+- `.ico_file_img` ← _board_list.scss
+- `.ico_file_jpeg` ← _board_list.scss
+- `.ico_file_jpg` ← _board_list.scss
+- `.ico_file_mp4` ← _board_list.scss
+- `.ico_file_pdf` ← _board_list.scss
+- `.ico_file_png` ← _board_list.scss
+- `.ico_file_ppt` ← _board_list.scss
+- `.ico_file_pptx` ← _board_list.scss
+- `.ico_file_svg` ← _board_list.scss
+- `.ico_file_swf` ← _board_list.scss
+- `.ico_file_txt` ← _board_list.scss
+- `.ico_file_video` ← _board_list.scss
+- `.ico_file_word` ← _board_list.scss
+- `.ico_file_xls` ← _board_list.scss
+- `.ico_file_xlsx` ← _board_list.scss
+- `.ico_file_zip` ← _board_list.scss
+- `.ico_lock` ← _board_list.scss
+- `.ico_new` ← _board_etc.scss, _board_list.scss, main.scss
+- `.ico_reply` ← _board_list.scss
+- `.ico_view` ← _board_list.scss
+- `.img` ← _board_etc.scss
+- `.imgArea` ← _board_etc.scss, main.scss
+- `.imgExplain` ← _board_etc.scss
+- `.info` ← _board_etc.scss, _common.scss
+- `.info_comment` ← _board_list.scss
+- `.info_LayerPop` ← _board_etc.scss
+- `.infoArea` ← _board_etc.scss
+- `.innerCont` ← main.scss
+- `.inp_area` ← _board_etc.scss
+- `.inp_c` ← _search_option.scss
+- `.inp_r` ← _board_etc.scss, _search_option.scss
+- `.inp_r_set` ← _board_etc.scss
+- `.inp_s` ← _board_etc.scss, _search_option.scss
+- `.inp_t` ← _board_etc.scss, _search_option.scss
+- `.ip` ← _board_etc.scss
+- `.is-gnb-mobile` ← _header.scss
+- `.item` ← _board_etc.scss, _common.scss, main.scss
+- `.itemSearch` ← _board_etc.scss
+- `.keyword` ← _board_etc.scss
+- `.keywordArea` ← _board_etc.scss
+- `.keywordSearch` ← _board_etc.scss
+- `.kock_dream` ← _page_tab.scss
+- `.KOGL_area` ← _board_etc.scss
+- `.level` ← _snb.scss
+- `.lineList_tb` ← _board_etc.scss, _board_list.scss
+- `.lineList_tbW` ← _board_etc.scss
+- `.lineList_ul` ← _board_etc.scss, _board_list.scss
+- `.lineList_v` ← _board_etc.scss
+- `.link` ← _board_etc.scss, _pnb.scss, main.scss
+- `.linkArea` ← main.scss
+- `.linkBox` ← _board_etc.scss
+- `.list` ← _board_etc.scss, _snb.scss, main.scss
+- `.list_btn` ← _page_tab.scss
+- `.list_cirBlue` ← _common.scss
+- `.list_dotBlack` ← _common.scss
+- `.list_familysite` ← _footer.scss
+- `.list_Item` ← _common.scss
+- `.list_lineBlack` ← _common.scss
+- `.list_moreNews` ← _board_etc.scss
+- `.listArea` ← main.scss
+- `.listNum` ← _board_etc.scss
+- `.listViewType` ← _board_etc.scss
+- `.listWrap` ← main.scss
+- `.lv2` ← _common.scss
+- `.lv3` ← _common.scss
+- `.lv4` ← _common.scss
+- `.mAlertNNotice` ← main.scss
+- `.map_gnb` ← _sitemap.scss
+- `.mark_categ` ← _board_etc.scss, _board_list.scss
+- `.mark_need` ← _board_etc.scss
+- `.mark_noti` ← _board_list.scss
+- `.mb_menuSlide` ← main.scss
+- `.mBannerImgArea` ← main.scss
+- `.mBtn_close` ← _top_notice.scss
+- `.mBtn_topMenu` ← _top_notice.scss
+- `.menu` ← _pnb.scss
+- `.menu_txt` ← _pnb.scss
+- `.menuM` ← _sitemap.scss
+- `.menuS` ← _sitemap.scss, _top_notice.scss
+- `.mEtc` ← main.scss
+- `.mEtcSlider` ← main.scss
+- `.mImgNotice` ← main.scss
+- `.mMenu_menuSearch` ← _top_notice.scss
+- `.mNationInfo` ← main.scss
+- `.mNationRanKing` ← main.scss
+- `.mNewsBtnArea` ← main.scss
+- `.mNewsList` ← main.scss
+- `.mNewsNNation` ← main.scss
+- `.mNewsSlider` ← main.scss
+- `.moreNewsArea` ← _board_etc.scss
+- `.moreReportArea` ← _board_etc.scss
+- `.moreSiteArea` ← _top_notice.scss
+- `.moreVideoArea` ← _board_etc.scss
+- `.mPopularNews` ← main.scss
+- `.mPopZone` ← main.scss
+- `.mTit` ← main.scss
+- `.mTopNotice` ← _top_notice.scss
+- `.multi` ← _common.scss
+- `.multiOpt` ← main.scss
+- `.mVisual` ← main.scss
+- `.mVisualSlider` ← main.scss
+- `.name` ← _snb.scss, main.scss
+- `.nationSearch` ← _board_etc.scss
+- `.navList` ← _pnb.scss
+- `.newsSwitch` ← main.scss
+- `.next` ← _board_etc.scss
+- `.no` ← _board_etc.scss, _board_list.scss
+- `.no_article` ← _board_etc.scss, _pagination.scss, main.scss
+- `.no_article_box` ← _pagination.scss
+- `.noArticle` ← main.scss
+- `.noNum` ← _board_list.scss
+- `.notiArea` ← main.scss
+- `.notice` ← main.scss
+- `.noticeList` ← main.scss
+- `.noticeTit` ← _common.scss
+- `.nTab` ← _page_tab.scss
+- `.num` ← _board_etc.scss, _common.scss
+- `.num_paging` ← _pagination.scss
+- `.numTit` ← _common.scss
+- `.ol_numList` ← _common.scss
+- `.on` ← _board_etc.scss, _page_tab.scss
+- `.opt` ← _search_option.scss
+- `.optBox` ← _board_etc.scss
+- `.optGrp` ← _search_option.scss
+- `.optSet01` ← _search_option.scss
+- `.optSetDate` ← _board_etc.scss, _search_option.scss
+- `.Orange` ← _common.scss
+- `.origin` ← _board_etc.scss
+- `.P70` ← _search_option.scss
+- `.pageBtm_bnr` ← _common.scss
+- `.PageIndex` ← main.scss
+- `.pagination` ← _pagination.scss
+- `.paging` ← _pagination.scss
+- `.path` ← _board_etc.scss
+- `.pcBr` ← _util.scss
+- `.pdf_info` ← _board_etc.scss
+- `.pdf_view` ← _board_etc.scss
+- `.pdfFrame` ← _common.scss
+- `.perPage` ← _board_etc.scss
+- `.photo` ← _board_list.scss
+- `.photo_txt` ← _board_etc.scss
+- `.photoSliderArea` ← _board_etc.scss
+- `.photoSoloSlider` ← _board_etc.scss
+- `.picker_txt` ← _search_option.scss
+- `.plusMinusSel` ← _board_etc.scss
+- `.pnb_func` ← _pnb.scss
+- `.pnb_menu` ← _pnb.scss
+- `.pnb_nav` ← _pnb.scss
+- `.pnbList` ← _pnb.scss
+- `.pnbTit` ← _pnb.scss
+- `.pointExclam` ← _common.scss
+- `.pop_admin` ← main.scss
+- `.pop_ct` ← main.scss
+- `.pop_tit` ← main.scss
+- `.prev` ← _board_etc.scss
+- `.preview` ← _board_etc.scss
+- `.prevNnext` ← _board_etc.scss
+- `.radioGrp` ← _board_etc.scss
+- `.radioNcheck` ← _search_option.scss
+- `.ranKing` ← main.scss
+- `.reN` ← _board_etc.scss
+- `.replyArea` ← _board_etc.scss
+- `.replyBtnArea` ← _board_etc.scss
+- `.reportArea` ← main.scss
+- `.reportInfo` ← _board_etc.scss
+- `.reportList` ← main.scss
+- `.schCodeArea` ← _common.scss
+- `.schResult` ← _common.scss
+- `.searchOp` ← _search_option.scss
+- `.searchOpt` ← _search_option.scss
+- `.searchOptBox` ← _search_option.scss
+- `.searchSite` ← _search_option.scss
+- `.searchSolo` ← _search_option.scss
+- `.searchWord` ← main.scss
+- `.selectBox` ← _search_option.scss
+- `.selectGrp` ← _search_option.scss
+- `.selectTab_wrap` ← _board_etc.scss, _page_tab.scss
+- `.shareBox` ← _pnb.scss
+- `.sitemapArea` ← _sitemap.scss
+- `.slick-arrow` ← _board_etc.scss, _footer.scss, _snb.scss, main.scss
+- `.slick-dots` ← _board_etc.scss, main.scss
+- `.slick-next` ← _board_etc.scss
+- `.slick-prev` ← _board_etc.scss
+- `.slide` ← main.scss
+- `.sliderWrap` ← main.scss
+- `.snb_bookmark` ← _snb.scss
+- `.snb_mem` ← _snb.scss
+- `.snb_memInfo` ← _snb.scss
+- `.snb_nav` ← _snb.scss
+- `.snb_wrap` ← _snb.scss
+- `.sns_facebook` ← _footer.scss
+- `.sns_nBlog` ← _footer.scss
+- `.sort` ← _board_etc.scss, _search_option.scss
+- `.source` ← _board_etc.scss
+- `.sub` ← main.scss
+- `.sub_util` ← _board_etc.scss
+- `.subTitleArea` ← _board_etc.scss
+- `.subtitles` ← _board_etc.scss
+- `.subTxt` ← main.scss
+- `.subView` ← main.scss
+- `.sumBox` ← _board_etc.scss
+- `.sumBoxArea` ← _board_etc.scss
+- `.sym_best` ← _board_etc.scss
+- `.sym_good` ← _board_etc.scss
+- `.sym_ok` ← _board_etc.scss
+- `.tab1` ← _page_tab.scss
+- `.tab10` ← _page_tab.scss
+- `.tab11` ← _page_tab.scss
+- `.tab12` ← _page_tab.scss
+- `.tab13` ← _page_tab.scss
+- `.tab14` ← _page_tab.scss
+- `.tab15` ← _page_tab.scss
+- `.tab16` ← _page_tab.scss
+- `.tab17` ← _page_tab.scss
+- `.tab18` ← _page_tab.scss
+- `.tab19` ← _page_tab.scss
+- `.tab2` ← _page_tab.scss
+- `.tab20` ← _page_tab.scss
+- `.tab3` ← _page_tab.scss
+- `.tab4` ← _page_tab.scss
+- `.tab5` ← _page_tab.scss
+- `.tab6` ← _page_tab.scss
+- `.tab7` ← _page_tab.scss
+- `.tab8` ← _page_tab.scss
+- `.tab9` ← _page_tab.scss
+- `.tabList` ← _page_tab.scss
+- `.tags` ← main.scss
+- `.tbArea_btn` ← _board_etc.scss
+- `.tbInfoArea` ← _board_etc.scss
+- `.tbInfoC` ← _board_etc.scss
+- `.tbInfoR` ← _board_etc.scss
+- `.telTxt` ← _common.scss
+- `.thumbnail` ← main.scss
+- `.thumnail` ← _board_etc.scss
+- `.tit` ← _board_etc.scss, _footer.scss, main.scss
+- `.titLine3` ← _board_list.scss
+- `.todayCk` ← _top_notice.scss
+- `.top_titArea` ← _board_etc.scss
+- `.top_util` ← _top_notice.scss
+- `.topImg` ← main.scss
+- `.topSearchOptBox` ← _search_option.scss
+- `.txt` ← _board_etc.scss, _common.scss, main.scss
+- `.txt_copyRightHolder` ← _board_etc.scss
+- `.txt_originSource` ← _board_etc.scss
+- `.txt_s` ← _board_etc.scss, _board_list.scss
+- `.txtArea` ← _board_etc.scss, _search_option.scss
+- `.txtContArea` ← _board_etc.scss
+- `.txtInfo` ← _board_etc.scss, _board_list.scss, main.scss
+- `.txtL` ← _board_etc.scss, _board_list.scss
+- `.txtNumList` ← _common.scss
+- `.txtS` ← _board_etc.scss
+- `.type2` ← _board_etc.scss, _common.scss
+- `.type3` ← _common.scss
+- `.typeBookcover` ← _board_list.scss
+- `.typeBtnSolo` ← _board_etc.scss
+- `.typeCheckbox` ← _board_list.scss
+- `.typeCommen` ← _board_list.scss
+- `.typeDiplomacy` ← _board_etc.scss
+- `.typeFaq` ← _board_etc.scss
+- `.typeFaqA` ← _board_etc.scss
+- `.typeFindCode` ← _search_option.scss
+- `.typeFindCode2` ← _search_option.scss
+- `.typeGallery` ← _board_list.scss
+- `.typeGalleryList` ← _board_list.scss
+- `.typeHalf` ← _search_option.scss
+- `.typeHalf2` ← _search_option.scss
+- `.typeHalf3` ← _search_option.scss
+- `.typeHalf4` ← _search_option.scss
+- `.typeIco` ← _board_list.scss
+- `.typeLimit` ← _board_etc.scss
+- `.typeLong` ← _board_etc.scss
+- `.typeMain` ← main.scss
+- `.typeNationInfo` ← _board_etc.scss
+- `.typeNoArticle` ← _board_list.scss
+- `.typeNoThumnail` ← _board_etc.scss
+- `.typePdfview` ← _board_etc.scss
+- `.typePhotoView` ← _board_etc.scss
+- `.typeQna` ← _board_etc.scss
+- `.typeReport` ← _board_etc.scss
+- `.typeReportView` ← _board_etc.scss
+- `.typeScrap` ← _board_etc.scss
+- `.typeSelect` ← _board_etc.scss
+- `.typeSort` ← _board_etc.scss
+- `.typeTopNotice` ← _top_notice.scss, main.scss
+- `.typeTriple3` ← _search_option.scss
+- `.typeVideoAd` ← _board_etc.scss
+- `.typeVideoView` ← _board_etc.scss
+- `.unit` ← _footer.scss, _snb.scss, main.scss
+- `.url_link` ← _board_etc.scss
+- `.urlTxt` ← _common.scss
+- `.video_info` ← _board_etc.scss
+- `.video_txt` ← _board_etc.scss
+- `.videoArea` ← _board_etc.scss
+- `.videoNews` ← main.scss
+- `.view_country_overview` ← _common.scss
+- `.view_txt` ← _board_etc.scss
+- `.viewDataWrap` ← _board_etc.scss
+- `.viewMajorInfo` ← _board_etc.scss
+- `.viewSwitch` ← main.scss
+- `.w_addFile_m` ← _board_etc.scss
+- `.w_addFile_s` ← _board_etc.scss
+- `.w_email` ← _board_etc.scss
+- `.w_url` ← _board_etc.scss
+- `.w300` ← _search_option.scss
+- `.write` ← _board_etc.scss
+- `.write_guide` ← _board_etc.scss
+- `.youtubeLink` ← _board_etc.scss
+- `.ytbTxt` ← _board_etc.scss
+- `#btn_top` ← _util.scss
+- `#container` ← main.scss
+- `#contents` ← _layout_frame.scss
+- `#contTab_fix` ← _page_tab.scss
+- `#contTab_line` ← _page_tab.scss
+- `#footer` ← _footer.scss
+- `#gnb` ← _top_notice.scss
+- `#header` ← _top_notice.scss
+- `#pageTab` ← _page_tab.scss
+- `#pnb` ← _pnb.scss
+- `#pop_board_imgView` ← _board_etc.scss
+- `#pop_fileView` ← _board_etc.scss
+- `#pop_fileView_error` ← _board_etc.scss
+- `#pop_registVideoPop` ← _board_etc.scss
+- `#selectTab` ← _page_tab.scss
+- `#sitemap` ← _sitemap.scss
+- `#skip_menu` ← _util.scss
+- `#snb` ← _snb.scss
+- `#snb_board` ← _snb.scss
+- `#snb_totalSearch` ← _snb.scss
+
+## C. max-width: 767px (245)
+
+- `.address` ← _footer.scss
+- `.Alert` ← _top_notice.scss
+- `.alertArea` ← main.scss
+- `.alertIcon` ← main.scss
+- `.announce` ← _board_etc.scss
+- `.arrLink` ← main.scss
+- `.autoProtection` ← _board_etc.scss
+- `.autoProtectionCheck` ← _board_etc.scss
+- `.BBS_option` ← _board_etc.scss
+- `.BBSlist_v` ← _board_etc.scss
+- `.bnrArea` ← _common.scss
+- `.boardOptBox` ← _board_etc.scss
+- `.btn` ← _board_etc.scss
+- `.btn_close` ← _pnb.scss
+- `.btn_familysite` ← _footer.scss
+- `.btn_original` ← _search_option.scss
+- `.btn_rss` ← _board_etc.scss
+- `.btn_scrap` ← _board_etc.scss
+- `.btn_search` ← _board_etc.scss
+- `.btn_subReport` ← _board_etc.scss
+- `.btn_txtDown` ← _board_etc.scss
+- `.btn_urlCopy` ← _pnb.scss
+- `.btnArea_v` ← _board_etc.scss
+- `.btnAreaC` ← _pagination.scss
+- `.btnAreaL` ← _pagination.scss
+- `.btnAreaR` ← _pagination.scss
+- `.btnC_ArrR` ← _board_etc.scss
+- `.btnC_s` ← _board_etc.scss
+- `.btnEtc` ← _board_etc.scss
+- `.btnGrp` ← _board_etc.scss
+- `.btnPdf` ← _board_etc.scss
+- `.btnSq_add` ← _board_etc.scss
+- `.btnSq_del` ← _board_etc.scss
+- `.case` ← _board_etc.scss
+- `.case_tit` ← _board_etc.scss
+- `.caseChkBox` ← _board_etc.scss
+- `.categ` ← _board_list.scss
+- `.checkbox` ← _board_list.scss
+- `.closedArea` ← _top_notice.scss, main.scss
+- `.closedBtn` ← _top_notice.scss, main.scss
+- `.code` ← _board_etc.scss
+- `.commentArea` ← _board_etc.scss
+- `.compare` ← _search_option.scss
+- `.compare_Btn` ← _search_option.scss
+- `.controller` ← main.scss
+- `.copyright` ← _footer.scss
+- `.date` ← _board_etc.scss
+- `.ele-1` ← _search_option.scss
+- `.etc` ← _pnb.scss
+- `.exclam2` ← _common.scss
+- `.f_bnr` ← _footer.scss
+- `.f_etc` ← _footer.scss
+- `.f_menu` ← _footer.scss
+- `.familySite` ← _footer.scss
+- `.faq_a` ← _board_etc.scss
+- `.faq_q` ← _board_etc.scss
+- `.fileArea` ← _board_etc.scss
+- `.FileDown` ← _board_etc.scss
+- `.findHScode` ← _board_etc.scss
+- `.fl` ← _pagination.scss
+- `.fL` ← _board_etc.scss, _pagination.scss
+- `.fR` ← _board_etc.scss, _pagination.scss
+- `.func_list` ← _board_etc.scss
+- `.globalArea` ← main.scss
+- `.globalList` ← main.scss
+- `.header_news` ← _header.scss
+- `.ico` ← main.scss
+- `.icoLineBox` ← _search_option.scss
+- `.imgArea` ← _board_etc.scss
+- `.innerCont` ← main.scss
+- `.inp_c` ← _search_option.scss, main.scss
+- `.inp_r` ← _search_option.scss
+- `.inp_s` ← _board_etc.scss, _search_option.scss
+- `.inp_t` ← _board_etc.scss, _search_option.scss
+- `.item` ← _board_etc.scss, _common.scss, main.scss
+- `.itemSearch` ← _board_etc.scss
+- `.KOGL_area` ← _board_etc.scss
+- `.limit` ← _board_etc.scss
+- `.lineList_tb` ← _board_etc.scss, _board_list.scss
+- `.lineList_tbW` ← _board_etc.scss
+- `.lineList_ul` ← _board_etc.scss, _board_list.scss
+- `.lineList_ul2` ← _board_etc.scss
+- `.lineList_v` ← _board_etc.scss
+- `.lineTop_tbArea` ← _board_etc.scss
+- `.lineTop_tbL2` ← _board_etc.scss
+- `.link` ← _pnb.scss
+- `.Link_TitTxt` ← _board_etc.scss
+- `.Link_View` ← _board_etc.scss
+- `.linkArea` ← main.scss
+- `.list` ← _board_etc.scss, main.scss
+- `.list_control` ← _top_notice.scss
+- `.listArea` ← main.scss
+- `.listNum` ← _board_etc.scss
+- `.long` ← _board_etc.scss
+- `.mAlertNNotice` ← main.scss
+- `.map_gnb` ← _sitemap.scss
+- `.mark_need` ← _board_etc.scss
+- `.mb_menuSlide` ← main.scss
+- `.mBannerImgArea` ← main.scss
+- `.mbHdn` ← _util.scss
+- `.menu_txt` ← _pnb.scss
+- `.menuM` ← _sitemap.scss
+- `.mImgNotice` ← main.scss
+- `.mNationInfo` ← main.scss
+- `.mNationRanKing` ← main.scss
+- `.mNewsList` ← main.scss
+- `.moreReportArea` ← _board_etc.scss
+- `.moreVideoArea` ← _board_etc.scss
+- `.mPopularNews` ← main.scss
+- `.mPopZone` ← main.scss
+- `.mSort` ← _board_etc.scss, _board_list.scss
+- `.mTopNotice` ← _top_notice.scss
+- `.mVisual` ← main.scss
+- `.mVisualSlider` ← main.scss
+- `.nationSearch` ← _board_etc.scss
+- `.navigation` ← _board_list.scss
+- `.next` ← _board_etc.scss
+- `.no` ← _board_list.scss
+- `.noArticle` ← _search_option.scss
+- `.noBorder_mb` ← _board_etc.scss
+- `.noCateg` ← _board_etc.scss, _board_list.scss
+- `.noDate` ← _board_etc.scss
+- `.noFile` ← _board_etc.scss
+- `.noNum` ← _board_list.scss
+- `.notice` ← main.scss
+- `.noticeList` ← main.scss
+- `.noTit` ← _board_list.scss
+- `.num` ← main.scss
+- `.on` ← _board_etc.scss
+- `.opt` ← _search_option.scss
+- `.opt1` ← _board_etc.scss
+- `.opt3` ← _board_etc.scss
+- `.optBox` ← _board_etc.scss
+- `.optGrp` ← _board_etc.scss, _search_option.scss
+- `.optSet01` ← _search_option.scss
+- `.optSetDate` ← _search_option.scss
+- `.pageBtm_bnr` ← _common.scss
+- `.PageIndex` ← main.scss
+- `.pageTit` ← _common.scss
+- `.pagination` ← _pagination.scss
+- `.paging` ← _pagination.scss
+- `.path` ← _board_etc.scss
+- `.pdf_info` ← _board_etc.scss
+- `.pdf_infoList` ← _board_etc.scss
+- `.pdf_view` ← _board_etc.scss
+- `.pnb_func` ← _pnb.scss
+- `.pnb_menu` ← _pnb.scss
+- `.pnb_nav` ← _pnb.scss
+- `.pnbList` ← _pnb.scss
+- `.prev` ← _board_etc.scss
+- `.radioNcheck` ← _search_option.scss
+- `.replyArea` ← _board_etc.scss
+- `.reportArea` ← main.scss
+- `.reportInfo` ← _board_etc.scss
+- `.reportList` ← main.scss
+- `.search` ← _board_etc.scss
+- `.searchBox` ← _board_etc.scss
+- `.searchOpt` ← _search_option.scss
+- `.searchOpt_wrap` ← _search_option.scss
+- `.searchOptBox` ← _search_option.scss
+- `.sel02` ← _board_etc.scss
+- `.sel03` ← _board_etc.scss
+- `.selectGrp` ← _search_option.scss
+- `.selectTab_wrap` ← _page_tab.scss
+- `.selectTriple` ← _search_option.scss
+- `.session` ← _board_etc.scss
+- `.setArea` ← _board_etc.scss
+- `.shareArea` ← _board_etc.scss
+- `.shareBox` ← _board_etc.scss, _pnb.scss
+- `.shareBox_wrap` ← _pnb.scss
+- `.sitemapArea` ← _sitemap.scss
+- `.slick-arrow` ← main.scss
+- `.slick-dots` ← main.scss
+- `.slick-next` ← _top_notice.scss
+- `.slick-prev` ← _top_notice.scss, main.scss
+- `.slide` ← main.scss
+- `.snb_mem` ← _snb.scss
+- `.snb_memInfo` ← _snb.scss
+- `.snb_wrap` ← _snb.scss
+- `.sort` ← _board_etc.scss, _search_option.scss
+- `.source` ← _board_etc.scss
+- `.stamp_list` ← _board_list.scss
+- `.sub_util` ← _board_etc.scss
+- `.sumTxt` ← _board_list.scss
+- `.tbInfoArea` ← _board_etc.scss
+- `.tbInfoC` ← _board_etc.scss
+- `.tbInfoR` ← _board_etc.scss
+- `.thumnail` ← _board_etc.scss
+- `.tit` ← _board_etc.scss, main.scss
+- `.titLine3` ← _board_list.scss
+- `.topExclam` ← _util.scss
+- `.topImg` ← main.scss
+- `.topSearchOptBox` ← _search_option.scss
+- `.txt` ← _board_etc.scss, _search_option.scss, main.scss
+- `.txt_s` ← _board_list.scss
+- `.txt_v` ← _board_etc.scss
+- `.txtInfo` ← _board_etc.scss, _board_list.scss
+- `.txtL` ← _board_etc.scss, _board_list.scss
+- `.txtR` ← _util.scss
+- `.txtViewInfo` ← _board_etc.scss
+- `.type2` ← _board_etc.scss, _common.scss
+- `.type3` ← _common.scss
+- `.typeBookcover` ← _board_list.scss
+- `.typeBookMark` ← _board_list.scss
+- `.typeCheckbox` ← _board_list.scss
+- `.typeDiplomacy` ← _board_etc.scss
+- `.typeFaq` ← _board_etc.scss
+- `.typeGallery` ← _board_list.scss
+- `.typeGalleryList` ← _board_list.scss
+- `.typeNationInfo` ← _board_etc.scss
+- `.typeNoArticle` ← _board_list.scss
+- `.typeNoThumnail` ← _board_etc.scss
+- `.typePdfview` ← _board_etc.scss
+- `.typePhotoView` ← _board_etc.scss
+- `.typeQna` ← _board_etc.scss
+- `.typeReport` ← _board_etc.scss
+- `.typeReportView` ← _board_etc.scss
+- `.typeScrap` ← _board_etc.scss
+- `.typeSPS` ← _board_list.scss
+- `.typeVideoAd` ← _board_etc.scss
+- `.typeVideoView` ← _board_etc.scss
+- `.unit` ← main.scss
+- `.videoNews` ← main.scss
+- `.videoNewsList` ← main.scss
+- `.view_txt` ← _board_etc.scss
+- `.w_addFile_s` ← _board_etc.scss
+- `.w_email` ← _board_etc.scss
+- `.w_link` ← _board_etc.scss
+- `.w_name` ← _board_etc.scss
+- `.w_nameNpw` ← _board_etc.scss
+- `.w_pw` ← _board_etc.scss
+- `.w_runTime` ← _board_etc.scss
+- `.ytbUrl` ← _board_etc.scss
+- `#contents` ← _layout_frame.scss
+- `#contTab_fix` ← _page_tab.scss
+- `#footer` ← _footer.scss
+- `#pageTab` ← _page_tab.scss
+- `#pnb` ← _pnb.scss
+- `#pop_board_imgView` ← _board_etc.scss
+- `#pop_diplomacyInfo` ← _board_etc.scss
+- `#pop_kockDream` ← _board_etc.scss
+- `#pop_pwCheck` ← _board_etc.scss
+- `#pop_registVideoPop` ← _board_etc.scss
+- `#sitemap` ← _sitemap.scss
+- `#snb` ← _snb.scss

@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* a11y — 키보드 포커스 / 포커스 링 (믹스인은 reset 직후 import 필수) */
+
+/* ============================================================ */
+/* 키보드 포커스 / 포커스 링 */
+/* ============================================================ */
+/* WCAG C40: dual focus ring (light + dark)
+   Always draw INSIDE the element so overflow:hidden parents cannot clip it.
+   - outline + negative offset: paints above children (visible on dark buttons)
+   - inset box-shadow: visible on light backgrounds
+   ($inset kept for call-site compat; always inner) */
+@mixin focus-ring-contrast($inset: true, $important: false) {
+	@if $important {
+		outline: 2px solid #fff !important;
+		// outline: 2px dashed #fff !important;
+		outline-offset: -2px !important;
+		box-shadow: inset 0 0 0 4px #212E4E !important;
+	} @else {
+		outline: 2px solid #fff;
+		// outline: 2px dashed #fff;
+		outline-offset: -2px;
+		box-shadow: inset 0 0 0 4px #212E4E;
+	}
+}
+
+// /* 키보드 포커스 공통 — 믹스인 밖에 둬야 CSS로 출력됨 */
+:where(
+	a[href],
+	button:not(:disabled):not(#btn_top),
+	input:not(:disabled),
+	select:not(:disabled),
+	textarea:not(:disabled),
+	summary,
+	[tabindex]:not([tabindex="-1"])
+):focus-visible {
+	// @include focus-ring-contrast;
+}
+
+/* 진한배경색 버튼용 */
+@mixin focus-ring-on-dark {
+  outline: 2px solid #fff;
+  outline-offset: 2px; /* 바깥 */
+  box-shadow: 0 0 0 4px #212E4E;
+}
+
+/* 진한 채움 버튼 — 기본 inset 링이 안 보이므로 바깥 링 */
+.btnC.Navy,
+.btnC.Blue,
+.btnC_s.Navy,
+.btnC_s.Blue,
+.btnC_s.Gray,
+.btnI.fileDown.Navy,
+.btnI.fileDown.Blue,
+.btnC_s.typeChk.on,
+.btn_scrap.on,
+#btn_top {
+	&:focus-visible {
+		overflow: visible;
+		// @include focus-ring-on-dark;
+	}
+}
+
+/* 링 끄기 */
+.no-focus-ring:focus-visible {
+	outline: none;
+	box-shadow: none;
+}

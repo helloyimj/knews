@@ -1,0 +1,1731 @@
+# 레이아웃 속성 변경 클래스 전체 (1041→1023 / 768→767)
+
+## max-width: 1023px (1097)
+
+- `.a` ← _common_dream.scss, _common_etc.scss
+- `.account` ← _common_dream.scss, _common_etc.scss
+- `.add_openNoti` ← _board_etc.scss, _kor.scss
+- `.add_sympathy` ← _board_etc.scss
+- `.addArea` ← _kor.scss
+- `.addFile` ← _board_etc.scss
+- `.addInfo` ← _board_etc.scss, _kor.scss
+- `.addReply` ← _board_etc.scss
+- `.address` ← _common_etc.scss, _footer.scss, _popup.scss
+- `.addTxt` ← _board_etc.scss
+- `.agreeArea` ← _common_dream.scss, _common_etc.scss, _kor.scss, _popup.scss
+- `.agreeBox` ← _common_etc.scss, _popup.scss
+- `.agreeCont` ← _common_etc.scss, _popup.scss
+- `.AI_report` ← _kor.scss
+- `.aiRecommArea` ← _board_etc.scss
+- `.Alert` ← _top_notice.scss
+- `.alertArea` ← main.scss
+- `.app` ← _kor.scss
+- `.area` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _pages.scss
+- `.area1` ← _kor.scss
+- `.areaInfo` ← _board_etc.scss
+- `.arr` ← _kor.scss
+- `.Arr` ← _button.scss, _common_etc.scss
+- `.arrB_blue` ← _kor.scss
+- `.arrBtn` ← _common_etc.scss, _kor.scss, _popup.scss
+- `.arrLink` ← main.scss
+- `.arrow` ← _kor.scss
+- `.arrowB` ← _kor.scss
+- `.arrowR` ← _kor.scss
+- `.arrowT` ← _kor.scss
+- `.arrR` ← _common_dream.scss, _common_etc.scss
+- `.arrTxt1` ← _kor.scss
+- `.arrTxt2` ← _kor.scss
+- `.arrTxt3` ← _kor.scss
+- `.arrTxt4` ← _kor.scss
+- `.authInfoView` ← _kor.scss, _news.scss
+- `.auto_complete_port` ← _kor.scss
+- `.banner` ← main.scss
+- `.bar` ← _kor.scss
+- `.bg` ← main.scss
+- `.bgArea` ← _kor.scss
+- `.bgCont_box` ← _kor.scss
+- `.bgNum` ← _kor.scss
+- `.bid_view` ← _pages.scss
+- `.Blue` ← _button.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.BlueGreen` ← _kor.scss
+- `.bnrArea` ← _common.scss, _common_etc.scss
+- `.board_area` ← _board_etc.scss, _kor.scss
+- `.board_ship` ← _kor.scss
+- `.boardOptBox` ← _board_etc.scss, _common_etc.scss, _kor.scss, _popup.scss
+- `.bookmark` ← _common_etc.scss, _input.scss
+- `.bookMark` ← main.scss
+- `.border_vCustom` ← _kor.scss
+- `.border_vCustom_contBottom` ← _kor.scss
+- `.bottomTxt` ← _kor.scss
+- `.boucherFlow` ← _kor.scss
+- `.boucherFlow2` ← _kor.scss
+- `.box` ← _kor.scss
+- `.box_step1` ← _kor.scss
+- `.boxArea` ← _kor.scss
+- `.boxBtn` ← _common_etc.scss, _search_option.scss
+- `.boxCardNum` ← _kor.scss
+- `.boxNotice` ← _kor.scss
+- `.boxS_del` ← _button.scss, _common_etc.scss
+- `.br_m` ← _board_etc.scss
+- `.brightProject` ← _kor.scss
+- `.btmDocArea` ← _kor.scss
+- `.btn` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _search_option.scss
+- `.btn_area` ← _common_etc.scss, _pages.scss
+- `.btn_arrR_s` ← _kor.scss
+- `.btn_close` ← _kor.scss
+- `.btn_compare` ← _kor.scss
+- `.btn_del` ← _button.scss, _common_etc.scss
+- `.btn_downC` ← _button.scss, _common_etc.scss, _kor.scss
+- `.btn_dstn` ← _kor.scss
+- `.btn_familysite` ← _footer.scss
+- `.btn_fileAdd` ← _board_etc.scss
+- `.btn_fileDel` ← _board_etc.scss
+- `.btn_fileFind` ← _board_etc.scss
+- `.btn_fileRe` ← _board_etc.scss
+- `.btn_filter` ← _kor.scss
+- `.btn_help` ← _kor.scss
+- `.btn_like` ← _pages.scss
+- `.btn_linkBox` ← _button.scss, _common_etc.scss, _kor.scss
+- `.btn_moreView` ← _board_etc.scss
+- `.btn_original` ← _board_etc.scss, _common_etc.scss, _pages.scss
+- `.btn_popClose` ← _common_etc.scss, _popup.scss
+- `.btn_print` ← _button.scss, _common_etc.scss
+- `.btn_promisingBuyerSearch` ← _board_etc.scss, _common_dream.scss, _common_etc.scss
+- `.btn_r` ← _kor.scss
+- `.btn_R` ← _board_etc.scss
+- `.btn_recommAi` ← _board_etc.scss, _button.scss, _common_etc.scss
+- `.btn_reply` ← _board_etc.scss
+- `.btn_replyS` ← _board_etc.scss
+- `.btn_reset` ← _common_dream.scss, _common_etc.scss
+- `.btn_rss` ← _kor.scss
+- `.btn_scrap` ← _board_etc.scss, _button.scss, _common_etc.scss
+- `.btn_shortcut` ← _common_etc.scss, _pnb.scss
+- `.btn_subReport` ← _board_etc.scss, _button.scss, _common_etc.scss
+- `.btn_sym` ← _button.scss, _common_etc.scss
+- `.btn_titR` ← _button.scss, _common_etc.scss
+- `.btn_txtDown` ← _button.scss, _common_etc.scss
+- `.btn_videoPlay` ← _board_etc.scss
+- `.btn_wa` ← _footer.scss
+- `.btnArea` ← _board_etc.scss, _button.scss, _common_etc.scss, _kor.scss, _popup.scss
+- `.btnAreaC` ← _button.scss, _kor.scss
+- `.btnAreaL` ← _button.scss
+- `.btnAreaR` ← _button.scss
+- `.btnC` ← _button.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.btnC_s` ← _board_etc.scss, _button.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _popup.scss, _search_option.scss
+- `.btnDel` ← _common_dream.scss, _common_etc.scss
+- `.btnFile` ← _board_etc.scss, _kor.scss
+- `.btnFind` ← _common_dream.scss, _common_etc.scss
+- `.btnGrp` ← _board_etc.scss, _button.scss, _common.scss, _common_etc.scss, _kor.scss
+- `.btnI` ← _button.scss, _common_etc.scss, _kor.scss
+- `.btnL` ← _common_dream.scss, _common_etc.scss
+- `.btnLow` ← _common_etc.scss, _popup.scss
+- `.btnPdf` ← _board_etc.scss
+- `.btnR` ← _board_etc.scss, _button.scss, _common_etc.scss
+- `.btnSq_add` ← _button.scss, _common_etc.scss
+- `.btnSq_del` ← _button.scss, _common_etc.scss
+- `.btnTit` ← _common_etc.scss, _pnb.scss
+- `.btnTitArea` ← _common.scss, _common_etc.scss
+- `.btnView_report` ← _kor.scss
+- `.btnView_web` ← _kor.scss
+- `.businessInformation` ← _kor.scss
+- `.cag` ← _kor.scss, main.scss
+- `.cal` ← _kor.scss
+- `.calByte` ← _board_etc.scss
+- `.cardBox` ← _kor.scss
+- `.case` ← _board_etc.scss
+- `.caseChkBox` ← _board_etc.scss
+- `.center` ← _kor.scss
+- `.certifiStandard` ← _kor.scss
+- `.chart1` ← _kor.scss
+- `.chart2` ← _kor.scss
+- `.chartText` ← _kor.scss
+- `.chartTextArea` ← _kor.scss
+- `.chat` ← _kor.scss
+- `.chatArea` ← _kor.scss
+- `.checkArea` ← _kor.scss
+- `.chk_radio` ← _common_dream.scss, _common_etc.scss
+- `.cir` ← _kor.scss
+- `.cir_contArea` ← _kor.scss
+- `.cirIco` ← _kor.scss
+- `.cirWrap` ← _kor.scss
+- `.closedArea` ← _top_notice.scss, main.scss
+- `.closedBtn` ← _top_notice.scss
+- `.cntn_chart` ← _common_dream.scss, _common_etc.scss
+- `.code` ← _board_etc.scss, _common.scss, _common_etc.scss, _popup.scss
+- `.codeNum` ← _board_etc.scss
+- `.codeSechBox` ← _kor.scss
+- `.codeTable` ← _common_etc.scss, _popup.scss
+- `.col10` ← _kor.scss
+- `.col11` ← _kor.scss
+- `.col12` ← _kor.scss
+- `.col13` ← _kor.scss
+- `.col14` ← _kor.scss
+- `.col15` ← _kor.scss
+- `.col16` ← _kor.scss
+- `.col17` ← _kor.scss
+- `.col18` ← _kor.scss
+- `.col19` ← _kor.scss
+- `.col2` ← _kor.scss
+- `.col20` ← _kor.scss
+- `.col21` ← _kor.scss
+- `.col4` ← _kor.scss
+- `.col5` ← _kor.scss
+- `.col6` ← _kor.scss
+- `.col7` ← _kor.scss
+- `.col8` ← _kor.scss
+- `.col9` ← _kor.scss
+- `.collectionList` ← _kor.scss
+- `.comepareList` ← _kor.scss
+- `.commentArea` ← _board_etc.scss
+- `.commentBtn` ← _board_etc.scss
+- `.commonDistribution` ← _kor.scss
+- `.compare` ← _button.scss, _common_etc.scss, _kor.scss, _search_option.scss
+- `.compare_Btn` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.compare_HSCODE` ← _kor.scss
+- `.compareDtlSeting` ← _kor.scss
+- `.compareDtlSetingSelect` ← _kor.scss
+- `.compareOne_Btn` ← _kor.scss
+- `.compareSeting_Btn` ← _kor.scss
+- `.cont` ← _kor.scss
+- `.cont_area` ← _kor.scss
+- `.cont2` ← _kor.scss
+- `.cont3` ← _kor.scss
+- `.cont4` ← _kor.scss
+- `.cont5` ← _kor.scss
+- `.cont7` ← _kor.scss
+- `.contArea` ← _kor.scss
+- `.contentsSp` ← _board_etc.scss
+- `.contine` ← _board_etc.scss
+- `.continent` ← _pages.scss
+- `.contListBox` ← _kor.scss
+- `.contractsDoc` ← _kor.scss
+- `.contractsTerms` ← _kor.scss
+- `.controller` ← main.scss
+- `.conts_error` ← _common_etc.scss, _pages.scss
+- `.contSq` ← _kor.scss
+- `.contTab_s` ← _common_etc.scss, _page_tab.scss
+- `.contTit` ← _common.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.contTit_b` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.contTit_g` ← _board_etc.scss, _common.scss, _common_etc.scss
+- `.contTit_line` ← _common.scss, _common_etc.scss, _kor.scss, _news.scss
+- `.contTit_s` ← _board_etc.scss, _common.scss, _common_etc.scss, _kor.scss
+- `.contTit_ss` ← _board_etc.scss, _common.scss, _common_etc.scss, _kor.scss
+- `.contType1` ← _kor.scss
+- `.contType2` ← _kor.scss
+- `.copyright` ← _footer.scss, _kor.scss
+- `.copyrightImg` ← _board_etc.scss
+- `.copyrightList` ← _kor.scss
+- `.copyrightListArea` ← _kor.scss
+- `.copyrightPolicy` ← _kor.scss
+- `.country` ← _kor.scss
+- `.customer_inquiry` ← _kor.scss
+- `.customs_procedures` ← _kor.scss
+- `.customs_summary` ← _kor.scss
+- `.dataOpen` ← _kor.scss
+- `.date` ← _board_etc.scss, _board_list.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.date-picker-control` ← _board_etc.scss, _common_etc.scss, _datepicker.scss, _kor.scss
+- `.dateInfo` ← _kor.scss
+- `.debtCollection` ← _kor.scss
+- `.default` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.defaultBtn` ← _kor.scss
+- `.defineList` ← _kor.scss
+- `.defulat` ← _kor.scss
+- `.desc` ← _kor.scss
+- `.detail` ← _pages.scss
+- `.diagramWrap` ← _kor.scss
+- `.dictionary` ← _kor.scss
+- `.div_link_list` ← _kor.scss
+- `.docInfo` ← _kor.scss
+- `.dot` ← _board_etc.scss, _common.scss, _common_etc.scss
+- `.Dot` ← _kor.scss
+- `.doughnut` ← _kor.scss
+- `.downArea` ← main.scss
+- `.downListArea` ← _pages.scss
+- `.download` ← _pages.scss
+- `.dream_ImgSech` ← _kor.scss
+- `.dreamGuide` ← _kor.scss
+- `.dreamUseGuide` ← _kor.scss
+- `.dropDown_Area` ← _kor.scss
+- `.dropDown_infoArea` ← _common_dream.scss, _common_etc.scss
+- `.dropDown_numArea` ← _kor.scss
+- `.dropDownBox` ← _kor.scss
+- `.dropIcon` ← _kor.scss
+- `.dstn` ← _kor.scss
+- `.dtail_open` ← _kor.scss
+- `.EI_requirement` ← _kor.scss
+- `.end_Day` ← _kor.scss
+- `.enquiryOutline` ← _kor.scss
+- `.errorBox` ← _common_etc.scss, _pages.scss
+- `.errorTxt` ← _board_etc.scss
+- `.exchange_sch` ← _common_dream.scss, _common_etc.scss
+- `.exclam` ← _board_etc.scss, _common.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.exclamS` ← _kor.scss
+- `.exclamStep` ← _kor.scss
+- `.explain` ← _kor.scss
+- `.explainBox` ← _kor.scss
+- `.exportInsurance` ← _kor.scss
+- `.exportPartner` ← _kor.scss
+- `.exportStat` ← _kor.scss
+- `.exportStep` ← _kor.scss
+- `.f_bnr` ← _footer.scss
+- `.f_etc` ← _footer.scss
+- `.f_menu` ← _footer.scss
+- `.f_sns` ← _footer.scss
+- `.familySite` ← _footer.scss
+- `.FAQ` ← _kor.scss
+- `.faq_q` ← _board_etc.scss
+- `.faqA_wrap` ← _board_etc.scss
+- `.favorite_country` ← _common_dream.scss, _common_etc.scss
+- `.favorite_list_box` ← _common_dream.scss, _common_etc.scss
+- `.file` ← _kor.scss
+- `.file_avi` ← _board_etc.scss
+- `.file_bmp` ← _board_etc.scss
+- `.file_csv` ← _board_etc.scss
+- `.file_doc` ← _board_etc.scss
+- `.file_docx` ← _board_etc.scss
+- `.file_etc` ← _board_etc.scss
+- `.file_excel` ← _board_etc.scss
+- `.file_exel` ← _board_etc.scss
+- `.file_gif` ← _board_etc.scss
+- `.file_hwp` ← _board_etc.scss
+- `.file_img` ← _board_etc.scss
+- `.file_jpeg` ← _board_etc.scss
+- `.file_jpg` ← _board_etc.scss
+- `.file_mp4` ← _board_etc.scss
+- `.file_pdf` ← _board_etc.scss
+- `.file_png` ← _board_etc.scss
+- `.file_ppt` ← _board_etc.scss
+- `.file_pptx` ← _board_etc.scss
+- `.file_svg` ← _board_etc.scss
+- `.file_swf` ← _board_etc.scss
+- `.file_txt` ← _board_etc.scss
+- `.file_video` ← _board_etc.scss
+- `.file_word` ← _board_etc.scss
+- `.file_xls` ← _board_etc.scss
+- `.file_xlsx` ← _board_etc.scss
+- `.file_zip` ← _board_etc.scss
+- `.file-download` ← _button.scss, _common_etc.scss
+- `.fileAdd` ← _board_etc.scss
+- `.fileAdd_R` ← _button.scss, _common_etc.scss
+- `.fileArea` ← _board_etc.scss
+- `.fileArray` ← _kor.scss
+- `.fileDown` ← _button.scss, _common_etc.scss, _kor.scss
+- `.fileI` ← _common.scss, _common_etc.scss, _kor.scss, _news.scss
+- `.fileIcon` ← _kor.scss
+- `.fileView` ← main.scss
+- `.filingProgress` ← _kor.scss
+- `.filterSearch` ← _kor.scss
+- `.filterSel` ← _kor.scss
+- `.find` ← _common_dream.scss, _common_etc.scss
+- `.find_itemCode` ← _kor.scss
+- `.findAddress` ← _common_dream.scss, _common_etc.scss, _popup.scss
+- `.findCodeArea` ← _common_dream.scss, _common_etc.scss
+- `.findHScode` ← _board_etc.scss
+- `.findParter_view` ← _common_dream.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.findPartner` ← _common_dream.scss, _common_etc.scss
+- `.findSel` ← _common_dream.scss, _common_etc.scss
+- `.findSelCode` ← _common_dream.scss, _common_etc.scss
+- `.findSelCode1` ← _common_dream.scss, _common_etc.scss
+- `.findSelCode2` ← _common_dream.scss, _common_etc.scss
+- `.findSelCode3` ← _common_dream.scss, _common_etc.scss
+- `.fix` ← _common_etc.scss, _page_tab.scss
+- `.fixed` ← _kor.scss
+- `.flag` ← _kor.scss
+- `.flagList` ← _common_etc.scss, _pages.scss
+- `.flagList2` ← _common_etc.scss, _pages.scss
+- `.flagTit` ← _common_etc.scss, _pages.scss
+- `.flow` ← _kor.scss
+- `.flow1` ← _kor.scss
+- `.flow2` ← _kor.scss
+- `.flow3` ← _kor.scss
+- `.flow4` ← _kor.scss
+- `.flowArea` ← _kor.scss
+- `.flowBox` ← _common_dream.scss, _common_etc.scss
+- `.flowChart` ← _kor.scss
+- `.flowChartArea` ← _kor.scss
+- `.foreign_exchange` ← _kor.scss
+- `.foreign_exchange_report` ← _kor.scss
+- `.foreign_investment` ← _kor.scss
+- `.FTA_define` ← _kor.scss
+- `.fullView` ← main.scss
+- `.func` ← _board_etc.scss, _kor.scss
+- `.func_list` ← _board_etc.scss
+- `.global_expert` ← _kor.scss
+- `.globalArea` ← main.scss
+- `.globalList` ← main.scss
+- `.gnb_infoArea` ← _common_dream.scss, _common_etc.scss
+- `.gnb-backdrop` ← _header.scss
+- `.graph` ← _kor.scss
+- `.graph_bar` ← _kor.scss
+- `.gray_Icon_box` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.grayBgBox` ← _kor.scss
+- `.grayBox` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.grayBoxInfo` ← _kor.scss
+- `.Green` ← _kor.scss
+- `.grp` ← _common_dream.scss, _common_etc.scss
+- `.grp_date` ← _kor.scss
+- `.grp_dstn` ← _kor.scss
+- `.grp_radio` ← _kor.scss
+- `.grp_search` ← _kor.scss
+- `.guideLink` ← _kor.scss
+- `.h2` ← _board_etc.scss
+- `.half` ← _kor.scss
+- `.hasFile` ← _board_etc.scss, _board_list.scss
+- `.head_tit` ← _board_etc.scss
+- `.header_news` ← _header.scss
+- `.helpArea` ← _kor.scss
+- `.hint` ← _common_dream.scss, _common_etc.scss
+- `.hsCode` ← _board_etc.scss
+- `.I_avi` ← _kor.scss
+- `.I_bmp` ← _kor.scss
+- `.I_csv` ← _kor.scss
+- `.I_doc` ← _kor.scss
+- `.I_docx` ← _kor.scss
+- `.I_etc` ← _kor.scss
+- `.I_exel` ← _kor.scss
+- `.I_gif` ← _kor.scss
+- `.I_hwp` ← _kor.scss
+- `.I_img` ← _kor.scss
+- `.I_jpeg` ← _kor.scss
+- `.I_jpg` ← _kor.scss
+- `.I_mp4` ← _kor.scss
+- `.I_pdf` ← _kor.scss
+- `.I_png` ← _kor.scss
+- `.I_ppt` ← _kor.scss
+- `.I_pptx` ← _kor.scss
+- `.I_svg` ← _kor.scss
+- `.I_swf` ← _kor.scss
+- `.I_txt` ← _kor.scss
+- `.I_video` ← _kor.scss
+- `.I_word` ← _kor.scss
+- `.I_xls` ← _kor.scss
+- `.I_xlsx` ← _kor.scss
+- `.I_zip` ← _kor.scss
+- `.ico` ← _kor.scss
+- `.ico_comment` ← _board_list.scss
+- `.ico_downBox` ← _kor.scss
+- `.ico_file_avi` ← _board_list.scss
+- `.ico_file_bmp` ← _board_list.scss
+- `.ico_file_csv` ← _board_list.scss
+- `.ico_file_doc` ← _board_list.scss
+- `.ico_file_docx` ← _board_list.scss
+- `.ico_file_etc` ← _board_list.scss
+- `.ico_file_excel` ← _board_list.scss
+- `.ico_file_exel` ← _board_list.scss
+- `.ico_file_gif` ← _board_list.scss
+- `.ico_file_hwp` ← _board_list.scss
+- `.ico_file_img` ← _board_list.scss
+- `.ico_file_jpeg` ← _board_list.scss
+- `.ico_file_jpg` ← _board_list.scss
+- `.ico_file_mp4` ← _board_list.scss
+- `.ico_file_pdf` ← _board_list.scss
+- `.ico_file_png` ← _board_list.scss
+- `.ico_file_ppt` ← _board_list.scss
+- `.ico_file_pptx` ← _board_list.scss
+- `.ico_file_svg` ← _board_list.scss
+- `.ico_file_swf` ← _board_list.scss
+- `.ico_file_txt` ← _board_list.scss
+- `.ico_file_video` ← _board_list.scss
+- `.ico_file_word` ← _board_list.scss
+- `.ico_file_xls` ← _board_list.scss
+- `.ico_file_xlsx` ← _board_list.scss
+- `.ico_file_zip` ← _board_list.scss
+- `.ico_img` ← _kor.scss
+- `.ico_InfoBox` ← _kor.scss
+- `.ico_lock` ← _board_list.scss
+- `.ico_new` ← _board_etc.scss, _board_list.scss, main.scss
+- `.ico_reply` ← _board_list.scss
+- `.ico_view` ← _board_list.scss
+- `.icoCir` ← _kor.scss
+- `.icoDownBox` ← _kor.scss
+- `.icoLineBox` ← _common_etc.scss, _kor.scss, _pages.scss
+- `.icon` ← _kor.scss
+- `.icon_info_view` ← _kor.scss
+- `.iconTop_infoBox` ← _kor.scss, _pages.scss
+- `.img` ← _board_etc.scss, _kor.scss
+- `.img_cont` ← _kor.scss
+- `.img_sech_list` ← _kor.scss
+- `.img_select_Dtl` ← _kor.scss
+- `.imgArea` ← _board_etc.scss, _kor.scss, main.scss
+- `.imgBox` ← _kor.scss
+- `.imgBoxBtn` ← _kor.scss
+- `.imgDtl_Closed` ← _kor.scss
+- `.imgExplain` ← _board_etc.scss
+- `.imgList` ← _kor.scss
+- `.info` ← _board_etc.scss, _common.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.info_bubble` ← _button.scss, _common_etc.scss
+- `.info_comment` ← _board_list.scss
+- `.info_exclam` ← _kor.scss
+- `.info_fullImgBox` ← _kor.scss
+- `.info_imgBox` ← _kor.scss
+- `.info_LayerPop` ← _board_etc.scss
+- `.info_list` ← _kor.scss
+- `.info_topBox` ← _kor.scss
+- `.infoArea` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.infoArrow` ← _kor.scss
+- `.infoArrow2` ← _kor.scss
+- `.infoL` ← _kor.scss
+- `.infoList` ← _kor.scss
+- `.infoTabArea` ← _kor.scss
+- `.infoTit` ← _kor.scss
+- `.infoView` ← _kor.scss
+- `.inner` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.innerArea` ← _kor.scss
+- `.innerBox` ← _kor.scss
+- `.innerCont` ← main.scss
+- `.innerPopArea` ← _common_etc.scss, _popup.scss
+- `.inp_area` ← _board_etc.scss
+- `.inp_c` ← _common_dream.scss, _common_etc.scss, _input.scss, _kor.scss, _pages.scss, _popup.scss, _search_option.scss, _table_style.scss
+- `.inp_c_s` ← _kor.scss
+- `.inp_r` ← _board_etc.scss, _button.scss, _common_dream.scss, _common_etc.scss, _input.scss, _kor.scss, _popup.scss, _search_option.scss
+- `.inp_r_set` ← _board_etc.scss
+- `.inp_s` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _input.scss, _kor.scss, _popup.scss, _search_option.scss
+- `.inp_t` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _input.scss, _kor.scss, _pages.scss, _popup.scss, _search_option.scss
+- `.inpW_findPw` ← _common_dream.scss, _common_etc.scss
+- `.inpW_id` ← _common_dream.scss, _common_etc.scss
+- `.inpW_set` ← _common_dream.scss, _common_etc.scss
+- `.inquiry_list` ← _kor.scss
+- `.inquiry_list_Col` ← _kor.scss
+- `.inquiry_reply` ← _kor.scss
+- `.inquiry_view` ← _kor.scss
+- `.inquiry_view_Col` ← _kor.scss
+- `.inquiry_write` ← _kor.scss
+- `.instit_counsel` ← _kor.scss
+- `.intellectualPropertyDispute` ← _kor.scss
+- `.intro` ← _kor.scss
+- `.invest_basicInfo` ← _kor.scss
+- `.invest_companyInfo` ← _kor.scss
+- `.invest_concept` ← _kor.scss
+- `.invest_domesticStep` ← _kor.scss
+- `.invest_exclam` ← _kor.scss
+- `.invest_fieldStep` ← _kor.scss
+- `.invest_financialSupport` ← _kor.scss
+- `.invest_investFunds` ← _kor.scss
+- `.invest_investReport` ← _kor.scss
+- `.invest_manufacInfo` ← _kor.scss
+- `.invest_reportStep` ← _kor.scss
+- `.invest_settlementStep` ← _kor.scss
+- `.invest_supportSystem` ← _kor.scss
+- `.invest_targetSupport` ← _kor.scss
+- `.invest_trademarkSurvey` ← _kor.scss
+- `.invest_workingFunds` ← _kor.scss
+- `.investDiff` ← _kor.scss
+- `.investNumStep` ← _kor.scss
+- `.investReview` ← _kor.scss
+- `.ip` ← _board_etc.scss, _common_dream.scss, _common_etc.scss
+- `.IP_DESK` ← _kor.scss
+- `.is-gnb-mobile` ← _header.scss
+- `.issueSel` ← _common_dream.scss, _common_etc.scss
+- `.item` ← _board_etc.scss, _common.scss, _common_etc.scss, _kor.scss, main.scss
+- `.item3` ← _kor.scss
+- `.item5` ← _kor.scss
+- `.itemScreening_step` ← _kor.scss
+- `.itemSearch` ← _board_etc.scss
+- `.keyword` ← _board_etc.scss
+- `.keywordArea` ← _board_etc.scss, _pages.scss
+- `.keywordSearch` ← _board_etc.scss
+- `.keywordSech` ← _kor.scss
+- `.kock_dream` ← _common_dream.scss, _common_etc.scss, _page_tab.scss
+- `.KOGL_area` ← _board_etc.scss
+- `.label` ← _common_etc.scss, _pages.scss
+- `.labelSel` ← _common_dream.scss, _common_etc.scss
+- `.langSelGrp` ← _kor.scss
+- `.layerChkSel` ← _kor.scss
+- `.level` ← _common_etc.scss, _snb.scss
+- `.likeBtn` ← _pages.scss
+- `.limit` ← _common_etc.scss, _popup.scss
+- `.limitX` ← _kor.scss
+- `.lineBlue` ← _button.scss, _common_etc.scss
+- `.lineBox` ← _kor.scss
+- `.lineGray` ← _button.scss, _common_etc.scss, _kor.scss
+- `.lineInfo` ← _common_etc.scss, _pages.scss
+- `.lineList` ← _kor.scss
+- `.lineList_tb` ← _board_etc.scss, _board_list.scss, _common_dream.scss, _common_etc.scss
+- `.lineList_tbW` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.lineList_ul` ← _board_etc.scss, _board_list.scss, _pages.scss
+- `.lineList_v` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.lineTop_tb` ← _common_etc.scss, _popup.scss, _table_style.scss
+- `.lineTop_tb2` ← _common_dream.scss, _common_etc.scss, _kor.scss, _popup.scss, _table_style.scss
+- `.lineTop_tbArea` ← _common_dream.scss, _common_etc.scss, _kor.scss, _news.scss, _popup.scss, _table_style.scss
+- `.lineTop_tbL` ← _common_etc.scss, _table_style.scss
+- `.lineTop_tbL2` ← _common_etc.scss, _kor.scss, _news.scss, _table_style.scss
+- `.link` ← _board_etc.scss, _common_etc.scss, _kor.scss, _pnb.scss, main.scss
+- `.linkArea` ← main.scss
+- `.linkBox` ← _board_etc.scss, _kor.scss
+- `.linkGrp` ← _common_etc.scss, _pages.scss
+- `.list` ← _board_etc.scss, _common_etc.scss, _kor.scss, _pages.scss, _snb.scss, main.scss
+- `.list_btn` ← _common_etc.scss, _page_tab.scss
+- `.list_cirBlue` ← _common.scss, _common_etc.scss, _kor.scss
+- `.list_dotBlack` ← _common.scss, _common_etc.scss, _kor.scss
+- `.list_familysite` ← _footer.scss
+- `.list_hyphen` ← _common_etc.scss, _kor.scss, _popup.scss
+- `.list_item` ← _kor.scss
+- `.list_Item` ← _common.scss, _common_etc.scss, _kor.scss
+- `.list_lineBlack` ← _common.scss, _common_etc.scss, _kor.scss
+- `.list_logoBoxArea` ← _kor.scss
+- `.list_moreNews` ← _board_etc.scss
+- `.listArea` ← main.scss
+- `.listArrBox` ← _kor.scss
+- `.listBox` ← _kor.scss
+- `.listNum` ← _board_etc.scss, _common_dream.scss, _common_etc.scss
+- `.listSolo` ← _button.scss, _common_etc.scss
+- `.listViewType` ← _board_etc.scss
+- `.listWrap` ← main.scss
+- `.login` ← _common_etc.scss, _pages.scss
+- `.loginFid` ← _common_etc.scss, _pages.scss
+- `.logo` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.logo_s` ← _kor.scss
+- `.logoBox` ← _kor.scss
+- `.logout` ← _common_etc.scss, _popup.scss
+- `.logStatus` ← _common_dream.scss, _common_etc.scss
+- `.lv2` ← _common.scss, _common_etc.scss
+- `.lv3` ← _common.scss, _common_etc.scss
+- `.lv4` ← _common.scss, _common_etc.scss
+- `.m-content` ← _common_dream.scss, _common_etc.scss
+- `.mailArea` ← _kor.scss
+- `.major_tit` ← _kor.scss
+- `.mAlertNNotice` ← main.scss
+- `.map_gnb` ← _common_etc.scss, _sitemap.scss
+- `.mark_categ` ← _board_etc.scss, _board_list.scss
+- `.mark_need` ← _board_etc.scss
+- `.mark_noti` ← _board_list.scss
+- `.mb_menuSlide` ← main.scss
+- `.mBannerImgArea` ← main.scss
+- `.mbti` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt--items` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt--opt` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt--opt-cnt` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt--opt-tit` ← _common_dream.scss, _common_etc.scss
+- `.mbti-result` ← _common_dream.scss, _common_etc.scss
+- `.mbti-result__index` ← _common_dream.scss, _common_etc.scss
+- `.mbti-result__index--charact` ← _common_dream.scss, _common_etc.scss
+- `.mbti-result__type` ← _common_dream.scss, _common_etc.scss
+- `.mBtn_close` ← _top_notice.scss
+- `.mBtn_topMenu` ← _top_notice.scss
+- `.menu` ← _common_etc.scss, _pnb.scss
+- `.menu_txt` ← _common_etc.scss, _pnb.scss
+- `.menuM` ← _common_etc.scss, _sitemap.scss
+- `.menuS` ← _common_etc.scss, _sitemap.scss, _top_notice.scss
+- `.mEtc` ← main.scss
+- `.mEtcSlider` ← main.scss
+- `.mid` ← _kor.scss
+- `.mImgNotice` ← main.scss
+- `.mMenu_menuSearch` ← _top_notice.scss
+- `.mNationInfo` ← main.scss
+- `.mNationRanKing` ← main.scss
+- `.mNewsBtnArea` ← main.scss
+- `.mNewsList` ← main.scss
+- `.mNewsNNation` ← main.scss
+- `.mNewsSlider` ← main.scss
+- `.mock` ← _kor.scss
+- `.moreNewsArea` ← _board_etc.scss
+- `.moreReportArea` ← _board_etc.scss
+- `.moreSiteArea` ← _top_notice.scss
+- `.moreVideoArea` ← _board_etc.scss, _button.scss, _common_etc.scss
+- `.mPopularNews` ← main.scss
+- `.mPopZone` ← main.scss
+- `.mT50` ← _kor.scss
+- `.mTit` ← main.scss
+- `.mTopNotice` ← _top_notice.scss
+- `.multi` ← _button.scss, _common.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.multi_Col_Info` ← _kor.scss
+- `.multi_Dot_Info` ← _kor.scss
+- `.multi_Option` ← _kor.scss
+- `.multiOpt` ← main.scss
+- `.multipickerBox` ← _common_etc.scss, _datepicker.scss, _pages_other.scss
+- `.mVisual` ← main.scss
+- `.mVisualSlider` ← main.scss
+- `.myDream` ← _common_dream.scss, _common_etc.scss
+- `.mypage-new` ← _common_dream.scss, _common_etc.scss
+- `.MytabList` ← _common_dream.scss, _common_etc.scss
+- `.name` ← _common_etc.scss, _snb.scss, main.scss
+- `.nation` ← _pages.scss
+- `.nation_areainfo` ← _kor.scss
+- `.nation_areainfo_dtl` ← _kor.scss
+- `.nation_name` ← _kor.scss
+- `.nationFilter` ← _kor.scss
+- `.nationSearch` ← _board_etc.scss
+- `.nationSlickArea` ← _kor.scss
+- `.nationTit` ← _kor.scss
+- `.navi` ← _common_dream.scss, _common_etc.scss
+- `.navList` ← _common_etc.scss, _pnb.scss
+- `.Navy` ← _button.scss, _common_etc.scss, _kor.scss
+- `.newsletter` ← _kor.scss
+- `.newsSwitch` ← main.scss
+- `.next` ← _board_etc.scss
+- `.no` ← _board_etc.scss, _board_list.scss
+- `.no_address` ← _common_etc.scss, _popup.scss
+- `.no_article` ← _board_etc.scss, _common_etc.scss, _kor.scss, _pagination.scss, _popup.scss, main.scss
+- `.no_article_box` ← _common_etc.scss, _pagination.scss
+- `.noArticle` ← _common_etc.scss, _pages.scss, main.scss
+- `.noDataInfo` ← _kor.scss
+- `.noNum` ← _board_list.scss
+- `.notiArea` ← main.scss
+- `.notice` ← main.scss
+- `.noticeList` ← main.scss
+- `.noticeTit` ← _common.scss, _common_etc.scss
+- `.nTab` ← _common_etc.scss, _page_tab.scss
+- `.num` ← _board_etc.scss, _common.scss, _common_etc.scss, _kor.scss
+- `.Num` ← _kor.scss
+- `.num_paging` ← _pagination.scss
+- `.numTit` ← _common.scss, _common_etc.scss, _kor.scss
+- `.oceanFreight` ← _kor.scss
+- `.oda-resutl__chart` ← _common_dream.scss, _common_etc.scss
+- `.ol_numList` ← _common.scss, _common_etc.scss
+- `.on` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _page_tab.scss, _popup.scss
+- `.onlineDistribution` ← _kor.scss
+- `.only` ← _common_dream.scss, _common_etc.scss, _input.scss, _table_style.scss
+- `.open` ← _kor.scss
+- `.open_intro` ← _common_dream.scss, _common_etc.scss
+- `.opt` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.optBox` ← _board_etc.scss, _common_etc.scss, _popup.scss
+- `.optBoxWrap` ← _common_etc.scss, _popup.scss
+- `.optCol1_2` ← _kor.scss
+- `.optCol2` ← _kor.scss
+- `.optGrp` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.optSet01` ← _common_etc.scss, _search_option.scss
+- `.optSetData` ← _kor.scss
+- `.optSetDate` ← _board_etc.scss, _common_etc.scss, _pages_other.scss, _search_option.scss
+- `.Orange` ← _common.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.oreign_investment` ← _kor.scss
+- `.origin` ← _board_etc.scss, _kor.scss
+- `.outlineArea` ← _common_dream.scss, _common_etc.scss
+- `.oversea-map__africa` ← _pages.scss
+- `.oversea-map__asia` ← _pages.scss
+- `.oversea-map__continent--label-txt` ← _pages.scss
+- `.oversea-map__europe` ← _pages.scss
+- `.oversea-map__middle-east` ← _pages.scss
+- `.oversea-map__north-america` ← _pages.scss
+- `.oversea-map__oceania` ← _pages.scss
+- `.oversea-map__south-america` ← _pages.scss
+- `.overviewArea` ← _kor.scss
+- `.overviewFlow` ← _kor.scss
+- `.overviewList` ← _kor.scss
+- `.P70` ← _common_etc.scss, _search_option.scss
+- `.pageBtm_bnr` ← _common.scss, _common_etc.scss
+- `.PageIndex` ← main.scss
+- `.pagination` ← _common_etc.scss, _pagination.scss
+- `.paging` ← _common_etc.scss, _pagination.scss
+- `.partner` ← _pages.scss
+- `.partner_write` ← _common_dream.scss, _common_etc.scss
+- `.path` ← _board_etc.scss
+- `.pc-content` ← _common_dream.scss, _common_etc.scss
+- `.pcBr` ← _common_etc.scss, _util.scss
+- `.pdf_info` ← _board_etc.scss
+- `.pdf_view` ← _board_etc.scss
+- `.pdfDown` ← _kor.scss
+- `.pdfFrame` ← _common.scss, _common_etc.scss
+- `.perPage` ← _board_etc.scss
+- `.photo` ← _board_list.scss, _pages.scss
+- `.photo_txt` ← _board_etc.scss
+- `.photoSliderArea` ← _board_etc.scss
+- `.photoSoloSlider` ← _board_etc.scss
+- `.picker` ← _kor.scss
+- `.picker_txt` ← _common_etc.scss, _datepicker.scss, _pages_other.scss, _search_option.scss
+- `.playerBox` ← _common_dream.scss, _common_etc.scss
+- `.plusMinusSel` ← _board_etc.scss
+- `.pnb_func` ← _button.scss, _common_etc.scss, _pnb.scss
+- `.pnb_menu` ← _common_etc.scss, _pnb.scss
+- `.pnb_nav` ← _common_etc.scss, _pnb.scss
+- `.pnbList` ← _common_etc.scss, _pnb.scss
+- `.pnbTit` ← _common_etc.scss, _pnb.scss
+- `.pointExclam` ← _common.scss, _common_etc.scss
+- `.policy` ← _kor.scss
+- `.policyFlowChart` ← _kor.scss
+- `.pop_admin` ← main.scss
+- `.pop_ct` ← main.scss
+- `.pop_tit` ← main.scss
+- `.popConts` ← _common_etc.scss, _popup.scss
+- `.popInner` ← _common_etc.scss, _popup.scss
+- `.popLayout` ← _common_etc.scss, _popup.scss
+- `.popTit` ← _common_etc.scss, _popup.scss
+- `.port` ← _kor.scss
+- `.port_list` ← _kor.scss
+- `.prev` ← _board_etc.scss
+- `.prevent_trade_fund` ← _kor.scss
+- `.preview` ← _board_etc.scss
+- `.prevNnext` ← _board_etc.scss
+- `.processArea` ← _kor.scss
+- `.project` ← _kor.scss
+- `.promotionStep` ← _kor.scss
+- `.proof_form` ← _kor.scss
+- `.q` ← _common_dream.scss, _common_etc.scss
+- `.QA` ← _kor.scss
+- `.radioG` ← _kor.scss
+- `.radioGrp` ← _board_etc.scss, _button.scss, _common_etc.scss
+- `.radioNcheck` ← _common_dream.scss, _common_etc.scss, _kor.scss, _search_option.scss
+- `.ranking` ← _kor.scss
+- `.ranKing` ← main.scss
+- `.recomend-box__item--tit` ← _common_dream.scss, _common_etc.scss
+- `.recomend-box__item--tit-img` ← _common_dream.scss, _common_etc.scss
+- `.Red` ← _kor.scss
+- `.reN` ← _board_etc.scss, _kor.scss
+- `.reN_distribution` ← _kor.scss
+- `.reply` ← _kor.scss
+- `.replyArea` ← _board_etc.scss, _kor.scss
+- `.replyBtnArea` ← _board_etc.scss
+- `.reportArea` ← main.scss
+- `.reportFlow` ← _kor.scss
+- `.reportInfo` ← _board_etc.scss, _kor.scss
+- `.reportList` ← main.scss
+- `.restraintTech1` ← _kor.scss
+- `.result` ← _kor.scss
+- `.resultObject` ← _kor.scss
+- `.round_Step2` ← _kor.scss
+- `.roundBox` ← _kor.scss
+- `.roundTit` ← _kor.scss
+- `.row1_Fix` ← _kor.scss
+- `.rss20` ← _kor.scss
+- `.ruleArea` ← _kor.scss
+- `.ruleBox` ← _kor.scss
+- `.s_Group` ← _kor.scss, _pages.scss
+- `.safetyLv` ← _kor.scss
+- `.sanitaryQuarantine_view` ← _kor.scss
+- `.sch-opt__cnts` ← _pages.scss
+- `.schCodeArea` ← _common.scss, _common_etc.scss
+- `.schGrp` ← _common_dream.scss, _common_etc.scss
+- `.schResult` ← _common.scss, _common_etc.scss
+- `.schSel` ← _common_dream.scss, _common_etc.scss
+- `.screeningNreport` ← _kor.scss
+- `.scrollTab` ← _kor.scss
+- `.sDot` ← _kor.scss
+- `.searchOp` ← _common_etc.scss, _search_option.scss
+- `.searchOpt` ← _common_dream.scss, _common_etc.scss, _kor.scss, _pages_other.scss, _search_option.scss
+- `.searchOpt_result` ← _kor.scss
+- `.searchOptBox` ← _common_dream.scss, _common_etc.scss, _kor.scss, _pages_other.scss, _search_option.scss
+- `.searchSite` ← _common_etc.scss, _search_option.scss
+- `.searchSolo` ← _common_etc.scss, _search_option.scss
+- `.searchWord` ← main.scss
+- `.sechImg_contents` ← _kor.scss
+- `.sel_port` ← _kor.scss
+- `.sel_port_all` ← _kor.scss
+- `.selBox` ← _kor.scss
+- `.selCode` ← _common_dream.scss, _common_etc.scss
+- `.selCountry` ← _common_dream.scss, _common_etc.scss
+- `.select_Opt` ← _kor.scss, _pages.scss
+- `.selectBox` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.selectGrp` ← _common_etc.scss, _search_option.scss
+- `.selectOption` ← _kor.scss
+- `.selectTab_wrap` ← _board_etc.scss, _common_etc.scss, _page_tab.scss
+- `.selGrp` ← _kor.scss
+- `.selIndustry` ← _common_dream.scss, _common_etc.scss, _popup.scss
+- `.selInfo` ← _common_etc.scss, _popup.scss
+- `.selResonArea` ← _common_etc.scss, _popup.scss
+- `.set_S` ← _kor.scss
+- `.set_U` ← _kor.scss
+- `.shareBox` ← _common_etc.scss, _pnb.scss
+- `.shipStatus` ← _kor.scss
+- `.short_insurance` ← _kor.scss
+- `.shortTxt` ← _kor.scss
+- `.sitemapArea` ← _common_etc.scss, _sitemap.scss
+- `.siteZone` ← _common_dream.scss, _common_etc.scss
+- `.slick-arrow` ← _board_etc.scss, _common_etc.scss, _footer.scss, _kor.scss, _snb.scss, main.scss
+- `.slick-dots` ← _board_etc.scss, main.scss
+- `.slick-list` ← _kor.scss
+- `.slick-next` ← _board_etc.scss, _kor.scss
+- `.slick-prev` ← _board_etc.scss, _kor.scss
+- `.slide` ← main.scss
+- `.sliderWrap` ← main.scss
+- `.snb_bookmark` ← _common_etc.scss, _snb.scss
+- `.snb_mem` ← _common_etc.scss, _snb.scss
+- `.snb_memInfo` ← _common_etc.scss, _snb.scss
+- `.snb_nav` ← _common_etc.scss, _snb.scss
+- `.snb_wrap` ← _common_dream.scss, _common_etc.scss, _snb.scss
+- `.sns_facebook` ← _footer.scss
+- `.sns_nBlog` ← _footer.scss
+- `.sort` ← _board_etc.scss, _button.scss, _common_etc.scss, _kor.scss, _pages.scss, _popup.scss, _search_option.scss
+- `.source` ← _board_etc.scss
+- `.source_Custom` ← _kor.scss
+- `.spaceTb` ← _kor.scss
+- `.sq` ← _kor.scss
+- `.stamp_board` ← _common_dream.scss, _common_etc.scss
+- `.stamp_step` ← _common_dream.scss, _common_etc.scss
+- `.stamp_step_title` ← _common_dream.scss, _common_etc.scss
+- `.stamp_target_check` ← _common_dream.scss, _common_etc.scss
+- `.stamp_title` ← _common_dream.scss, _common_etc.scss
+- `.state` ← _common_dream.scss, _common_etc.scss
+- `.statistics` ← _kor.scss
+- `.stats_graph` ← _kor.scss
+- `.status` ← _pages.scss
+- `.status-tbl` ← _common_dream.scss, _common_etc.scss
+- `.status-tit` ← _common_dream.scss, _common_etc.scss
+- `.status-tit__sub` ← _common_dream.scss, _common_etc.scss
+- `.step` ← _kor.scss
+- `.step_arrB_box` ← _kor.scss
+- `.step_arrR_box` ← _kor.scss
+- `.stepArea` ← _kor.scss
+- `.stepArrowBox` ← _kor.scss
+- `.stepBox` ← _kor.scss
+- `.stepDiagram` ← _kor.scss
+- `.stepGuidance` ← _kor.scss
+- `.stepInfo` ← _common_dream.scss, _common_etc.scss
+- `.stepTit` ← _kor.scss
+- `.strategicGoods_approval` ← _kor.scss
+- `.structureArea` ← _kor.scss
+- `.style` ← _kor.scss
+- `.sub` ← main.scss
+- `.sub_util` ← _board_etc.scss, _common_etc.scss
+- `.subLv3` ← _kor.scss
+- `.subTab_Btn` ← _kor.scss
+- `.subTab_Cont` ← _kor.scss
+- `.subTabArea` ← _kor.scss
+- `.subTitleArea` ← _board_etc.scss
+- `.subtitles` ← _board_etc.scss
+- `.subTxt` ← main.scss
+- `.subView` ← main.scss
+- `.sumBox` ← _board_etc.scss
+- `.sumBoxArea` ← _board_etc.scss
+- `.support_project` ← _kor.scss
+- `.supportBusiness` ← _kor.scss
+- `.supportCenter` ← _kor.scss
+- `.sym_best` ← _board_etc.scss
+- `.sym_good` ← _board_etc.scss
+- `.sym_ok` ← _board_etc.scss
+- `.system_policy_tab6` ← _kor.scss
+- `.t_body` ← _kor.scss
+- `.t_header` ← _kor.scss
+- `.T3` ← _kor.scss
+- `.tab1` ← _common_etc.scss, _page_tab.scss
+- `.tab10` ← _common_etc.scss, _page_tab.scss
+- `.tab11` ← _common_etc.scss, _page_tab.scss
+- `.tab12` ← _common_etc.scss, _page_tab.scss
+- `.tab13` ← _common_etc.scss, _page_tab.scss
+- `.tab14` ← _common_etc.scss, _page_tab.scss
+- `.tab15` ← _common_etc.scss, _page_tab.scss
+- `.tab16` ← _common_etc.scss, _page_tab.scss
+- `.tab17` ← _common_etc.scss, _page_tab.scss
+- `.tab18` ← _common_etc.scss, _page_tab.scss
+- `.tab19` ← _common_etc.scss, _page_tab.scss
+- `.tab2` ← _common_etc.scss, _page_tab.scss
+- `.tab20` ← _common_etc.scss, _page_tab.scss
+- `.tab3` ← _common_etc.scss, _page_tab.scss
+- `.tab4` ← _common_etc.scss, _page_tab.scss
+- `.tab5` ← _common_etc.scss, _page_tab.scss
+- `.tab6` ← _common_etc.scss, _page_tab.scss
+- `.tab7` ← _common_etc.scss, _page_tab.scss
+- `.tab8` ← _common_etc.scss, _page_tab.scss
+- `.tab9` ← _common_etc.scss, _page_tab.scss
+- `.tabList` ← _common_etc.scss, _page_tab.scss
+- `.tags` ← main.scss
+- `.talk` ← _common_dream.scss, _common_etc.scss
+- `.targetBox` ← _kor.scss
+- `.taxTable` ← _kor.scss
+- `.taxTable_navi` ← _kor.scss
+- `.tb_counselList` ← _kor.scss
+- `.tb_typeFixHead` ← _kor.scss
+- `.tbArea` ← _kor.scss
+- `.tbArea_btn` ← _board_etc.scss, _button.scss, _common_dream.scss, _common_etc.scss
+- `.tbInfo` ← _kor.scss
+- `.tbInfoArea` ← _board_etc.scss
+- `.tbInfoC` ← _board_etc.scss
+- `.tbInfoR` ← _board_etc.scss
+- `.TBT_overview` ← _kor.scss
+- `.tbType2` ← _kor.scss
+- `.telTxt` ← _common.scss, _common_etc.scss, _kor.scss
+- `.thum` ← _kor.scss
+- `.thumbnail` ← main.scss
+- `.thumnail` ← _board_etc.scss
+- `.tit` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _footer.scss, _kor.scss, _news.scss, _pages.scss, main.scss
+- `.tit_btn` ← _common_dream.scss, _common_etc.scss
+- `.tit_gg` ← _kor.scss
+- `.tit_line` ← _kor.scss
+- `.tit_s` ← _common_dream.scss, _common_etc.scss
+- `.titArea` ← _kor.scss
+- `.titBtn` ← _common_dream.scss, _common_etc.scss
+- `.titDot` ← _kor.scss
+- `.title` ← _kor.scss
+- `.titleBtn` ← _kor.scss
+- `.titleInfo` ← _pages.scss
+- `.titLine3` ← _board_list.scss
+- `.todayCk` ← _top_notice.scss
+- `.top` ← _kor.scss
+- `.top_area` ← _kor.scss
+- `.top_lineBox` ← _kor.scss
+- `.top_titArea` ← _board_etc.scss
+- `.top_util` ← _top_notice.scss
+- `.topBtn` ← _common_dream.scss, _common_etc.scss
+- `.topImg` ← _kor.scss, main.scss
+- `.topImg_bottomTxt` ← _kor.scss
+- `.topLine_divList` ← _kor.scss
+- `.topSearchOptBox` ← _common_etc.scss, _search_option.scss
+- `.topTxt` ← _common_dream.scss, _common_etc.scss, _popup.scss
+- `.trade_appliDoc` ← _kor.scss
+- `.trade_dispute` ← _kor.scss
+- `.trade_dispute_step` ← _kor.scss
+- `.trade_payment` ← _kor.scss
+- `.trade_promotion` ← _kor.scss
+- `.tradeClame` ← _kor.scss
+- `.tradeMark_regist` ← _kor.scss
+- `.tradeReturns` ← _kor.scss
+- `.txt` ← _board_etc.scss, _common.scss, _common_etc.scss, _kor.scss, main.scss
+- `.txt_copyRightHolder` ← _board_etc.scss, _kor.scss
+- `.txt_lv2` ← _kor.scss
+- `.txt_originSource` ← _board_etc.scss
+- `.txt_s` ← _board_etc.scss, _board_list.scss, _kor.scss, _pages.scss
+- `.txtArea` ← _board_etc.scss, _common_etc.scss, _kor.scss, _search_option.scss
+- `.txtC` ← _kor.scss
+- `.txtContArea` ← _board_etc.scss, _kor.scss
+- `.txtG` ← _kor.scss
+- `.txtGrayBox` ← _kor.scss
+- `.txtInfo` ← _board_etc.scss, _board_list.scss, _common_dream.scss, _common_etc.scss, _kor.scss, main.scss
+- `.txtL` ← _board_etc.scss, _board_list.scss, _common_etc.scss, _popup.scss
+- `.txtLg` ← _kor.scss
+- `.txtMid` ← _kor.scss
+- `.txtNumList` ← _common.scss, _common_etc.scss
+- `.txtS` ← _board_etc.scss, _kor.scss
+- `.txtUnit` ← _kor.scss
+- `.txtWrap` ← _kor.scss
+- `.type1` ← _kor.scss
+- `.type2` ← _board_etc.scss, _common.scss, _common_etc.scss, _kor.scss
+- `.type3` ← _common.scss, _common_etc.scss, _kor.scss
+- `.typeAIReport` ← _kor.scss
+- `.typeAreaInfoList` ← _kor.scss
+- `.typeBookcover` ← _board_list.scss
+- `.typeBtnSolo` ← _board_etc.scss
+- `.typeCheckbox` ← _board_list.scss
+- `.typeChk` ← _button.scss, _common_etc.scss, _kor.scss
+- `.typeCodeTb` ← _common_dream.scss, _common_etc.scss
+- `.typeCommen` ← _board_list.scss
+- `.typeCompany` ← _kor.scss
+- `.typeDiplomacy` ← _board_etc.scss
+- `.typeDropDownTb` ← _kor.scss
+- `.typeFaq` ← _board_etc.scss
+- `.typeFaqA` ← _board_etc.scss
+- `.typeFindCode` ← _common_etc.scss, _search_option.scss
+- `.typeFindCode2` ← _common_etc.scss, _search_option.scss
+- `.typeFindPartner` ← _kor.scss
+- `.typeFLC` ← _kor.scss
+- `.typeFull` ← _kor.scss
+- `.typeGallery` ← _board_list.scss
+- `.typeGalleryList` ← _board_list.scss
+- `.typeGraph` ← _kor.scss
+- `.typeHalf` ← _common_etc.scss, _search_option.scss
+- `.typeHalf2` ← _common_etc.scss, _search_option.scss
+- `.typeHalf3` ← _common_etc.scss, _pages_other.scss, _search_option.scss
+- `.typeHalf4` ← _common_etc.scss, _search_option.scss
+- `.typeIco` ← _board_list.scss
+- `.typeImg` ← _kor.scss
+- `.typeInterstInfo` ← _common_dream.scss, _common_etc.scss
+- `.typeISO` ← _kor.scss
+- `.typeLikeList` ← _pages.scss
+- `.typeLimit` ← _board_etc.scss
+- `.typeLong` ← _board_etc.scss
+- `.typeMain` ← main.scss
+- `.typeNationInfo` ← _board_etc.scss
+- `.typeNoArticle` ← _board_list.scss
+- `.typeNoThumnail` ← _board_etc.scss
+- `.typeNum` ← _kor.scss
+- `.typeOptFull` ← _kor.scss
+- `.typePdfview` ← _board_etc.scss
+- `.typePhotoView` ← _board_etc.scss
+- `.typeQna` ← _board_etc.scss
+- `.typeQuad` ← _kor.scss
+- `.typeReport` ← _board_etc.scss
+- `.typeReportView` ← _board_etc.scss, _kor.scss
+- `.typeScrap` ← _board_etc.scss, _common_dream.scss, _common_etc.scss
+- `.typeSelect` ← _board_etc.scss
+- `.typeSort` ← _board_etc.scss
+- `.typeTaxTable` ← _kor.scss
+- `.typeTermDic` ← _kor.scss
+- `.typeTopNotice` ← _top_notice.scss, main.scss
+- `.typeTriple` ← _kor.scss
+- `.typeTriple3` ← _common_etc.scss, _search_option.scss
+- `.typeVideoAd` ← _board_etc.scss
+- `.typeVideoView` ← _board_etc.scss
+- `.typeWhite` ← _kor.scss
+- `.unit` ← _common_dream.scss, _common_etc.scss, _footer.scss, _kor.scss, _snb.scss, main.scss
+- `.url_link` ← _board_etc.scss, _common_etc.scss
+- `.urlTxt` ← _common.scss, _common_etc.scss, _kor.scss
+- `.val` ← _kor.scss
+- `.VerDreamAI` ← _kor.scss
+- `.VerDreamAI_invest` ← _kor.scss
+- `.video_info` ← _board_etc.scss
+- `.video_txt` ← _board_etc.scss
+- `.videoArea` ← _board_etc.scss
+- `.videoNews` ← main.scss
+- `.view` ← _kor.scss
+- `.view_cont` ← _kor.scss
+- `.view_Copy` ← _kor.scss
+- `.view_country_overview` ← _common.scss, _common_etc.scss, _kor.scss
+- `.view_data` ← _button.scss, _kor.scss, _pages.scss
+- `.view_infoTb` ← _kor.scss
+- `.view_txt` ← _board_etc.scss, _kor.scss
+- `.viewDataWrap` ← _board_etc.scss
+- `.viewMajorInfo` ← _board_etc.scss
+- `.viewReport` ← _kor.scss
+- `.viewSwitch` ← main.scss
+- `.w_addFile_m` ← _board_etc.scss
+- `.w_addFile_s` ← _board_etc.scss
+- `.w_email` ← _board_etc.scss
+- `.w_name` ← _kor.scss
+- `.w_sort` ← _kor.scss
+- `.w_url` ← _board_etc.scss
+- `.w300` ← _common_etc.scss, _search_option.scss
+- `.word_C` ← _kor.scss
+- `.wrap` ← _common_dream.scss, _common_etc.scss
+- `.write` ← _board_etc.scss, _kor.scss
+- `.write_guide` ← _board_etc.scss
+- `.youtubeLink` ← _board_etc.scss
+- `.ytbTxt` ← _board_etc.scss
+- `#btn_top` ← _util.scss
+- `#cntn` ← _common_dream.scss, _common_etc.scss
+- `#container` ← main.scss
+- `#contents` ← _layout_frame.scss
+- `#contTab_fix` ← _common_etc.scss, _kor.scss, _page_tab.scss
+- `#contTab_line` ← _common_etc.scss, _kor.scss, _page_tab.scss
+- `#contTabFix` ← _common_etc.scss
+- `#footer` ← _footer.scss
+- `#gnb` ← _top_notice.scss
+- `#header` ← _top_notice.scss
+- `#MypageTab` ← _common_dream.scss, _common_etc.scss
+- `#pageTab` ← _common_etc.scss, _kor.scss, _page_tab.scss
+- `#pnb` ← _button.scss, _common_etc.scss, _pnb.scss
+- `#pop_applyNewsLetter` ← _common_etc.scss, _popup.scss
+- `#pop_articleView` ← _common_etc.scss, _popup.scss
+- `#pop_board_imgView` ← _board_etc.scss
+- `#pop_commentReport` ← _common_etc.scss, _popup.scss
+- `#pop_fileView` ← _board_etc.scss
+- `#pop_fileView_error` ← _board_etc.scss
+- `#pop_findAddress` ← _common_etc.scss, _popup.scss
+- `#pop_hskNmtiCode` ← _common_etc.scss, _popup.scss
+- `#pop_item_All` ← _kor.scss
+- `#pop_kiscCode` ← _common_etc.scss, _popup.scss
+- `#pop_logout` ← _common_etc.scss, _popup.scss
+- `#pop_registVideoPop` ← _board_etc.scss
+- `#selectTab` ← _common_etc.scss, _page_tab.scss
+- `#sitemap` ← _common_etc.scss, _sitemap.scss
+- `#skip_menu` ← _common_etc.scss, _util.scss
+- `#snb` ← _common_dream.scss, _common_etc.scss, _snb.scss
+- `#snb_board` ← _common_etc.scss, _snb.scss
+- `#snb_totalSearch` ← _common_etc.scss, _snb.scss
+- `#stamp_target_check` ← _common_dream.scss, _common_etc.scss
+
+## max-width: 767px (627)
+
+- `.a` ← _common_dream.scss, _common_etc.scss
+- `.a__opt` ← _common_dream.scss, _common_etc.scss
+- `.a__opt--tit` ← _common_dream.scss, _common_etc.scss
+- `.active` ← _common_dream.scss, _common_etc.scss
+- `.addArea` ← _common_etc.scss, _popup.scss
+- `.address` ← _footer.scss
+- `.agreeArea` ← _common_etc.scss, _popup.scss
+- `.AI_report` ← _kor.scss
+- `.Alert` ← _top_notice.scss
+- `.alertArea` ← main.scss
+- `.alertIcon` ← main.scss
+- `.announce` ← _board_etc.scss
+- `.applyStep` ← _kor.scss
+- `.area01` ← _common_dream.scss, _common_etc.scss
+- `.area02` ← _common_dream.scss, _common_etc.scss
+- `.Arr` ← _kor.scss
+- `.arrival_box` ← _kor.scss
+- `.arrLink` ← main.scss
+- `.authInfoView` ← _news.scss
+- `.auto_complete_port` ← _kor.scss
+- `.autoProtection` ← _board_etc.scss
+- `.autoProtectionCheck` ← _board_etc.scss
+- `.banner` ← _common_dream.scss, _common_etc.scss
+- `.banner-Area` ← _common_dream.scss, _common_etc.scss
+- `.bar` ← _kor.scss
+- `.BBS_option` ← _board_etc.scss
+- `.BBSlist_v` ← _board_etc.scss
+- `.bnrArea` ← _common.scss, _common_etc.scss
+- `.boardOptBox` ← _board_etc.scss, _kor.scss
+- `.bookmark_list` ← _common_etc.scss, _popup.scss
+- `.border_vCustom_contBottom` ← _kor.scss
+- `.bottomArea` ← _kor.scss
+- `.bottomTxt` ← _kor.scss
+- `.box` ← _kor.scss
+- `.box_step1` ← _kor.scss
+- `.boxArea` ← _kor.scss
+- `.boxCardNum` ← _kor.scss
+- `.boxNotice` ← _kor.scss
+- `.btm` ← _kor.scss
+- `.btn` ← _board_etc.scss, _kor.scss
+- `.btn_agreeArr` ← _common_etc.scss, _popup.scss
+- `.btn_area` ← _common_etc.scss, _pages.scss
+- `.btn_close` ← _common_etc.scss, _pnb.scss
+- `.btn_downC` ← _kor.scss
+- `.btn_dstn` ← _kor.scss
+- `.btn_familysite` ← _footer.scss
+- `.btn_original` ← _common_etc.scss, _search_option.scss
+- `.btn_reset` ← _common_etc.scss, _popup.scss
+- `.btn_rss` ← _board_etc.scss
+- `.btn_scrap` ← _board_etc.scss
+- `.btn_search` ← _board_etc.scss
+- `.btn_subReport` ← _board_etc.scss
+- `.btn_titR` ← _common_dream.scss, _common_etc.scss
+- `.btn_txtDown` ← _board_etc.scss
+- `.btn_urlCopy` ← _common_etc.scss, _pnb.scss
+- `.btn-area` ← _common_dream.scss, _common_etc.scss
+- `.btn-quick` ← _common_dream.scss, _common_etc.scss
+- `.btnArea` ← _common_etc.scss, _kor.scss, _popup.scss
+- `.btnArea_v` ← _board_etc.scss
+- `.btnAreaC` ← _button.scss, _common_etc.scss, _pagination.scss
+- `.btnAreaL` ← _button.scss, _common_etc.scss, _pagination.scss
+- `.btnAreaR` ← _button.scss, _common_etc.scss, _pagination.scss
+- `.btnBox` ← _kor.scss
+- `.btnC` ← _common_etc.scss, _kor.scss, _pages.scss
+- `.btnC_ArrR` ← _board_etc.scss
+- `.btnC_s` ← _board_etc.scss, _kor.scss
+- `.btnEtc` ← _board_etc.scss, _common_dream.scss, _common_etc.scss
+- `.btnGrp` ← _board_etc.scss, _button.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.btnI` ← _kor.scss
+- `.btnPdf` ← _board_etc.scss
+- `.btnSq_add` ← _board_etc.scss
+- `.btnSq_del` ← _board_etc.scss
+- `.btnYear` ← _common_dream.scss, _common_etc.scss
+- `.businessInformation` ← _kor.scss
+- `.cag` ← _kor.scss
+- `.cardBox` ← _kor.scss
+- `.case` ← _board_etc.scss
+- `.case_tit` ← _board_etc.scss
+- `.caseChkBox` ← _board_etc.scss
+- `.categ` ← _board_list.scss, _common_dream.scss, _common_etc.scss
+- `.chatArea` ← _kor.scss
+- `.checkbox` ← _board_list.scss
+- `.chk` ← _kor.scss
+- `.cir` ← _kor.scss
+- `.closedArea` ← _top_notice.scss, main.scss
+- `.closedBtn` ← _top_notice.scss, main.scss
+- `.cntn_chart` ← _common_dream.scss, _common_etc.scss
+- `.code` ← _board_etc.scss, _kor.scss
+- `.codeSechBox` ← _kor.scss
+- `.codeTable` ← _common_etc.scss, _popup.scss
+- `.commentArea` ← _board_etc.scss
+- `.compare` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.compare_Btn` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.compareDtlSeting` ← _kor.scss
+- `.compareDtlSetingSelect` ← _kor.scss
+- `.compareOne_Btn` ← _kor.scss
+- `.compareSeting_Btn` ← _kor.scss
+- `.cont` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.cont_area` ← _kor.scss
+- `.cont_line` ← _kor.scss
+- `.contArea` ← _kor.scss
+- `.contractsDoc` ← _kor.scss
+- `.contractsTerms` ← _kor.scss
+- `.controller` ← main.scss
+- `.conts_error` ← _common_etc.scss, _pages.scss
+- `.contTit_line` ← _kor.scss, _news.scss
+- `.contTit_s` ← _kor.scss
+- `.copyright` ← _footer.scss
+- `.country` ← _kor.scss
+- `.customer_inquiry` ← _kor.scss
+- `.customs_refund` ← _kor.scss
+- `.customs_refund_process` ← _kor.scss
+- `.dashboard-section01` ← _common_dream.scss, _common_etc.scss
+- `.dashboard-section02` ← _common_dream.scss, _common_etc.scss
+- `.dashboard-section03` ← _common_dream.scss, _common_etc.scss
+- `.dashboard-section04` ← _common_dream.scss, _common_etc.scss
+- `.dashboard-section05` ← _common_dream.scss, _common_etc.scss
+- `.dashboard-section06` ← _common_dream.scss, _common_etc.scss
+- `.dataview_flex` ← _common_dream.scss, _common_etc.scss
+- `.date` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _pages.scss
+- `.debtCollection` ← _kor.scss
+- `.defineList` ← _kor.scss
+- `.defulat` ← _kor.scss
+- `.detail` ← _pages.scss
+- `.div_link_list` ← _kor.scss
+- `.divide_chart` ← _common_dream.scss, _common_etc.scss
+- `.divide_table` ← _common_dream.scss, _common_etc.scss
+- `.downArea` ← _kor.scss
+- `.dream_ImgSech` ← _kor.scss
+- `.dreamSech` ← _kor.scss
+- `.dreamUseGuide` ← _kor.scss
+- `.dropDown_Area` ← _kor.scss
+- `.dstn` ← _kor.scss
+- `.ele-1` ← _common_etc.scss, _search_option.scss
+- `.end_Day` ← _kor.scss
+- `.errorBox` ← _common_etc.scss, _pages.scss
+- `.etc` ← _common_etc.scss, _kor.scss, _pnb.scss
+- `.exclam` ← _kor.scss
+- `.exclam2` ← _common.scss, _common_etc.scss
+- `.exclamS` ← _kor.scss
+- `.export_payment_info` ← _common_dream.scss, _common_etc.scss
+- `.exportPartner` ← _kor.scss
+- `.f_bnr` ← _footer.scss
+- `.f_etc` ← _footer.scss
+- `.f_menu` ← _footer.scss
+- `.familySite` ← _footer.scss
+- `.faq_a` ← _board_etc.scss
+- `.faq_q` ← _board_etc.scss
+- `.FAT_div_list` ← _kor.scss
+- `.fileArea` ← _board_etc.scss
+- `.fileBtn_Area` ← _kor.scss
+- `.fileDown` ← _kor.scss
+- `.FileDown` ← _board_etc.scss
+- `.findHScode` ← _board_etc.scss
+- `.findParter_view` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.findPartner` ← _common_dream.scss, _common_etc.scss
+- `.fl` ← _common_etc.scss, _pagination.scss
+- `.fL` ← _board_etc.scss, _common_etc.scss, _pagination.scss
+- `.flag` ← _kor.scss
+- `.flagArea` ← _common_dream.scss, _common_etc.scss
+- `.flagList` ← _common_etc.scss, _pages.scss
+- `.flowBox` ← _common_etc.scss, _popup.scss
+- `.foreign_exchange` ← _kor.scss
+- `.foreign_exchange_report` ← _kor.scss
+- `.foreign_investment` ← _kor.scss
+- `.fowarder_list` ← _kor.scss
+- `.fowarderInfo_view` ← _kor.scss
+- `.fR` ← _board_etc.scss, _common_etc.scss, _pagination.scss
+- `.func` ← _kor.scss
+- `.func_list` ← _board_etc.scss
+- `.gird` ← _kor.scss
+- `.global_expert` ← _kor.scss
+- `.globalArea` ← main.scss
+- `.globalList` ← main.scss
+- `.gray_Icon_box` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.groupDiv` ← _kor.scss
+- `.grp_date` ← _kor.scss
+- `.grp_dstn` ← _kor.scss
+- `.grp_radio` ← _kor.scss
+- `.grp_search` ← _kor.scss
+- `.half` ← _kor.scss
+- `.header_news` ← _header.scss
+- `.hint` ← _common_dream.scss, _common_etc.scss
+- `.ico` ← main.scss
+- `.icoCir` ← _kor.scss
+- `.icoLineBox` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.icon` ← _kor.scss
+- `.icon_info_view` ← _kor.scss
+- `.iconArea` ← _common_dream.scss, _common_etc.scss
+- `.iconTop_infoBox` ← _kor.scss
+- `.iconType` ← _kor.scss
+- `.img` ← _kor.scss
+- `.img_sech_list` ← _kor.scss
+- `.img_select_Dtl` ← _kor.scss
+- `.imgArea` ← _board_etc.scss, _kor.scss
+- `.imgInfo` ← _kor.scss
+- `.info` ← _common_etc.scss, _popup.scss
+- `.info_box` ← _kor.scss
+- `.info_fullImgBox` ← _kor.scss
+- `.info_imgBox` ← _kor.scss
+- `.info_list` ← _kor.scss
+- `.info_R` ← _kor.scss
+- `.info_topBox` ← _kor.scss
+- `.info-area` ← _common_dream.scss, _common_etc.scss
+- `.info-Area` ← _common_dream.scss, _common_etc.scss
+- `.infoArea` ← _kor.scss
+- `.infoStatus` ← _common_dream.scss, _common_etc.scss
+- `.innerBox` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.innerCont` ← main.scss
+- `.innerRow` ← _kor.scss
+- `.inp_c` ← _common_etc.scss, _kor.scss, _pages.scss, _popup.scss, _search_option.scss, main.scss
+- `.inp_r` ← _common_dream.scss, _common_etc.scss, _search_option.scss
+- `.inp_s` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _search_option.scss
+- `.inp_t` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _search_option.scss
+- `.inpW_findPw` ← _common_dream.scss, _common_etc.scss
+- `.inpW_set` ← _common_dream.scss, _common_etc.scss
+- `.inquiry_list` ← _kor.scss
+- `.inquiry_reply` ← _kor.scss
+- `.inquiry_view` ← _kor.scss
+- `.inquiry_view_Col` ← _kor.scss
+- `.instit_counsel` ← _kor.scss
+- `.interestInfo` ← _common_dream.scss, _common_etc.scss
+- `.invest_basicInfo` ← _kor.scss
+- `.invest_companyInfo` ← _kor.scss
+- `.invest_concept` ← _kor.scss
+- `.invest_financialSupport` ← _kor.scss
+- `.invest_investFunds` ← _kor.scss
+- `.invest_investReport` ← _kor.scss
+- `.invest_reportStep` ← _kor.scss
+- `.invest_settlementStep` ← _kor.scss
+- `.invest_targetSupport` ← _kor.scss
+- `.investNumStep` ← _kor.scss
+- `.item` ← _board_etc.scss, _common.scss, _common_etc.scss, _kor.scss, main.scss
+- `.item3` ← _kor.scss
+- `.item4` ← _kor.scss
+- `.item5` ← _kor.scss
+- `.itemScreening_way` ← _kor.scss
+- `.itemSearch` ← _board_etc.scss
+- `.keywordArea` ← _pages.scss
+- `.keywordSech` ← _kor.scss
+- `.kock_dream` ← _common_dream.scss, _common_etc.scss
+- `.kockDream_tit` ← _common_dream.scss, _common_etc.scss
+- `.KOGL_area` ← _board_etc.scss
+- `.left` ← _common_dream.scss, _common_etc.scss
+- `.legend_div` ← _kor.scss
+- `.likeBtn` ← _pages.scss
+- `.likePartner` ← _kor.scss
+- `.limit` ← _board_etc.scss, _common_etc.scss, _popup.scss
+- `.limitX` ← _kor.scss
+- `.lineList_tb` ← _board_etc.scss, _board_list.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.lineList_tbW` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.lineList_ul` ← _board_etc.scss, _board_list.scss, _pages.scss
+- `.lineList_ul2` ← _board_etc.scss
+- `.lineList_v` ← _board_etc.scss, _kor.scss
+- `.lineTop_tb2` ← _common_etc.scss, _kor.scss, _popup.scss
+- `.lineTop_tbArea` ← _board_etc.scss, _common_etc.scss, _kor.scss, _popup.scss
+- `.lineTop_tbL2` ← _board_etc.scss, _kor.scss
+- `.link` ← _common_etc.scss, _pnb.scss
+- `.link_Arr` ← _kor.scss
+- `.Link_TitTxt` ← _board_etc.scss
+- `.Link_View` ← _board_etc.scss
+- `.linkArea` ← main.scss
+- `.list` ← _board_etc.scss, main.scss
+- `.list_control` ← _top_notice.scss
+- `.list_dotBlack` ← _kor.scss
+- `.list_Item` ← _kor.scss
+- `.list_logoBoxArea` ← _kor.scss
+- `.listArea` ← main.scss
+- `.listNum` ← _board_etc.scss
+- `.login` ← _common_etc.scss, _pages.scss
+- `.loginFid` ← _common_etc.scss, _pages.scss
+- `.logoBox` ← _kor.scss
+- `.long` ← _board_etc.scss
+- `.mailArea` ← _kor.scss
+- `.mAlertNNotice` ← main.scss
+- `.map_gnb` ← _common_etc.scss, _sitemap.scss
+- `.mark_need` ← _board_etc.scss
+- `.masthead_kotra` ← _masthead_kotra.scss
+- `.mb_menuSlide` ← main.scss
+- `.mBannerImgArea` ← main.scss
+- `.mbHdn` ← _common_etc.scss, _util.scss
+- `.mbti` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt--items` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt--opt` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt--opt-cnt` ← _common_dream.scss, _common_etc.scss
+- `.mbti-box__cnt--opt-tit` ← _common_dream.scss, _common_etc.scss
+- `.mbti-result__index--charact` ← _common_dream.scss, _common_etc.scss
+- `.menu_txt` ← _common_etc.scss, _pnb.scss
+- `.menuM` ← _common_etc.scss, _sitemap.scss
+- `.midArea` ← _kor.scss
+- `.mImgNotice` ← main.scss
+- `.mNationInfo` ← main.scss
+- `.mNationRanKing` ← main.scss
+- `.mNewsList` ← main.scss
+- `.mock` ← _kor.scss
+- `.moreReportArea` ← _board_etc.scss
+- `.moreVideoArea` ← _board_etc.scss
+- `.mPopularNews` ← main.scss
+- `.mPopZone` ← main.scss
+- `.mSort` ← _board_etc.scss, _board_list.scss, _common_dream.scss, _common_etc.scss
+- `.mTopNotice` ← _top_notice.scss
+- `.multi` ← _kor.scss
+- `.multi_Col_Info` ← _kor.scss
+- `.multi_Dot_Info` ← _kor.scss
+- `.multi_Option` ← _kor.scss
+- `.mVisual` ← main.scss
+- `.mVisualSlider` ← main.scss
+- `.myDream` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.mytabnav` ← _common_dream.scss, _common_etc.scss
+- `.nation` ← _common_dream.scss, _common_etc.scss, _kor.scss, _pages.scss
+- `.nation_areainfo_dtl` ← _kor.scss
+- `.nationOpt` ← _kor.scss
+- `.nationSearch` ← _board_etc.scss
+- `.nationTit` ← _kor.scss
+- `.navi` ← _common_dream.scss, _common_etc.scss
+- `.navigation` ← _board_list.scss, _common_dream.scss, _common_etc.scss
+- `.newsletter` ← _kor.scss
+- `.next` ← _board_etc.scss
+- `.no` ← _board_list.scss, _kor.scss
+- `.noArticle` ← _common_etc.scss, _search_option.scss
+- `.noBorder_mb` ← _board_etc.scss
+- `.noCateg` ← _board_etc.scss, _board_list.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.noDataInfo` ← _kor.scss
+- `.noDate` ← _board_etc.scss
+- `.noFile` ← _board_etc.scss
+- `.noNum` ← _board_list.scss
+- `.notice` ← main.scss
+- `.noticeList` ← main.scss
+- `.noTit` ← _board_list.scss
+- `.num` ← main.scss
+- `.Num` ← _kor.scss
+- `.oceanFreight` ← _kor.scss
+- `.oda-resutl__chart` ← _common_dream.scss, _common_etc.scss
+- `.on` ← _board_etc.scss
+- `.only` ← _common_etc.scss, _pages.scss
+- `.open_intro` ← _common_dream.scss, _common_etc.scss
+- `.opt` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.opt1` ← _board_etc.scss
+- `.opt3` ← _board_etc.scss
+- `.optBox` ← _board_etc.scss, _common_etc.scss, _kor.scss, _popup.scss
+- `.optBoxWrap` ← _common_etc.scss, _popup.scss
+- `.optGrp` ← _board_etc.scss, _common_etc.scss, _kor.scss, _search_option.scss
+- `.optionItem` ← _kor.scss
+- `.optSet01` ← _common_etc.scss, _search_option.scss
+- `.optSetData` ← _kor.scss
+- `.optSetDate` ← _common_etc.scss, _search_option.scss
+- `.Orange` ← _kor.scss
+- `.oreign_investment` ← _kor.scss
+- `.origin` ← _kor.scss
+- `.oversea-map__africa` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.oversea-map__asia` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.oversea-map__continent` ← _pages.scss
+- `.oversea-map__continent--label-img` ← _pages.scss
+- `.oversea-map__continent--label-txt` ← _common_dream.scss, _common_etc.scss
+- `.oversea-map__europe` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.oversea-map__middle-east` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.oversea-map__north-america` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.oversea-map__oceania` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.oversea-map__south-america` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.pageBtm_bnr` ← _common.scss, _common_etc.scss
+- `.PageIndex` ← main.scss
+- `.pageTit` ← _common.scss, _common_etc.scss
+- `.pagination` ← _button.scss, _common_etc.scss, _pagination.scss
+- `.paging` ← _common_etc.scss, _pagination.scss
+- `.panel-content` ← _common_dream.scss, _common_etc.scss
+- `.panel-hdr-m` ← _common_dream.scss, _common_etc.scss
+- `.panel-inbox40` ← _common_dream.scss, _common_etc.scss
+- `.panel-inbox60` ← _common_dream.scss, _common_etc.scss
+- `.partner_write` ← _common_dream.scss, _common_etc.scss
+- `.path` ← _board_etc.scss
+- `.pdf_info` ← _board_etc.scss
+- `.pdf_infoList` ← _board_etc.scss
+- `.pdf_view` ← _board_etc.scss
+- `.photo` ← _pages.scss
+- `.pnb_func` ← _common_etc.scss, _pnb.scss
+- `.pnb_menu` ← _common_etc.scss, _pnb.scss
+- `.pnb_nav` ← _common_etc.scss, _pnb.scss
+- `.pnbList` ← _common_etc.scss, _pnb.scss
+- `.policyFlowChart` ← _kor.scss
+- `.popConts` ← _common_etc.scss, _popup.scss
+- `.popInner` ← _common_etc.scss, _popup.scss
+- `.popLayout` ← _common_etc.scss, _popup.scss
+- `.port` ← _kor.scss
+- `.port_list` ← _kor.scss
+- `.prev` ← _board_etc.scss
+- `.prevent_trade_fraud` ← _kor.scss
+- `.project` ← _kor.scss
+- `.proof_form` ← _kor.scss
+- `.q` ← _common_dream.scss, _common_etc.scss
+- `.q__num` ← _common_dream.scss, _common_etc.scss
+- `.radioNcheck` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.recomend-box__item` ← _common_dream.scss, _common_etc.scss
+- `.recomend-box__item--cnt` ← _common_dream.scss, _common_etc.scss
+- `.reN` ← _common_dream.scss, _common_etc.scss
+- `.reN_distribution` ← _kor.scss
+- `.replyArea` ← _board_etc.scss, _kor.scss
+- `.reportArea` ← main.scss
+- `.reportInfo` ← _board_etc.scss, _kor.scss
+- `.reportList` ← _common_dream.scss, _common_etc.scss, main.scss
+- `.resultObject` ← _kor.scss
+- `.right` ← _common_dream.scss, _common_etc.scss
+- `.round_Step` ← _kor.scss
+- `.round_Step2` ← _kor.scss
+- `.roundLink` ← _kor.scss
+- `.row1_Fix` ← _kor.scss
+- `.RowM` ← _kor.scss
+- `.rss20` ← _kor.scss
+- `.s_Group` ← _kor.scss
+- `.sch-opt__cnts` ← _common_dream.scss, _common_etc.scss, _pages.scss
+- `.sch-opt__tit` ← _pages.scss
+- `.schSel` ← _common_dream.scss, _common_etc.scss
+- `.sDot` ← _kor.scss
+- `.search` ← _board_etc.scss
+- `.searchBox` ← _board_etc.scss
+- `.searchOpt` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.searchOpt_wrap` ← _common_etc.scss, _search_option.scss
+- `.searchOptBox` ← _common_etc.scss, _kor.scss, _search_option.scss
+- `.sech_Keyword` ← _kor.scss
+- `.sechBtn` ← _kor.scss
+- `.sechTotal` ← _kor.scss
+- `.sel_port` ← _kor.scss
+- `.sel_port_all` ← _kor.scss
+- `.sel02` ← _board_etc.scss
+- `.sel03` ← _board_etc.scss
+- `.select_Opt` ← _kor.scss
+- `.selectArea` ← _kor.scss
+- `.selectGrp` ← _common_etc.scss, _search_option.scss
+- `.selectOption` ← _kor.scss
+- `.selectTab_wrap` ← _common_etc.scss, _page_tab.scss
+- `.selectTriple` ← _common_etc.scss, _search_option.scss
+- `.selectType` ← _kor.scss
+- `.selIndustry` ← _common_etc.scss, _popup.scss
+- `.selInfo` ← _common_etc.scss, _popup.scss
+- `.serviceNation` ← _kor.scss
+- `.session` ← _board_etc.scss
+- `.set_radio` ← _kor.scss
+- `.set_sel` ← _kor.scss
+- `.setArea` ← _board_etc.scss
+- `.shareArea` ← _board_etc.scss
+- `.shareBox` ← _board_etc.scss, _common_etc.scss, _pnb.scss
+- `.shareBox_wrap` ← _common_etc.scss, _pnb.scss
+- `.sitemapArea` ← _common_etc.scss, _sitemap.scss
+- `.slick-arrow` ← main.scss
+- `.slick-dots` ← main.scss
+- `.slick-next` ← _top_notice.scss
+- `.slick-prev` ← _top_notice.scss, main.scss
+- `.slide` ← main.scss
+- `.small` ← _common_dream.scss, _common_etc.scss
+- `.snb_mem` ← _common_etc.scss, _snb.scss
+- `.snb_memInfo` ← _common_etc.scss, _snb.scss
+- `.snb_wrap` ← _common_etc.scss, _snb.scss
+- `.sort` ← _board_etc.scss, _common_etc.scss, _kor.scss, _popup.scss, _search_option.scss
+- `.source` ← _board_etc.scss
+- `.source_Custom` ← _kor.scss
+- `.sq` ← _kor.scss
+- `.stamp_board` ← _common_dream.scss, _common_etc.scss
+- `.stamp_check` ← _common_dream.scss, _common_etc.scss
+- `.stamp_list` ← _board_list.scss, _common_etc.scss
+- `.stats_graph` ← _kor.scss
+- `.status-analytics` ← _common_dream.scss, _common_etc.scss
+- `.status-analytics__item` ← _common_dream.scss, _common_etc.scss
+- `.status-export` ← _common_dream.scss, _common_etc.scss
+- `.status-export__graph` ← _common_dream.scss, _common_etc.scss
+- `.status-tbl` ← _common_dream.scss, _common_etc.scss
+- `.status-tit` ← _common_dream.scss, _common_etc.scss
+- `.status-tit__sub` ← _common_dream.scss, _common_etc.scss
+- `.step` ← _kor.scss
+- `.step_arrB_box` ← _kor.scss
+- `.step01` ← _common_dream.scss, _common_etc.scss
+- `.step02` ← _common_dream.scss, _common_etc.scss
+- `.stepArea` ← _kor.scss
+- `.stepArrowBox` ← _kor.scss
+- `.stepBox` ← _kor.scss
+- `.stepDiagram` ← _kor.scss
+- `.sub_tit` ← _common_dream.scss, _common_etc.scss
+- `.sub_util` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.subLv3` ← _kor.scss
+- `.subTab_Btn` ← _kor.scss
+- `.subTab_Cont` ← _kor.scss
+- `.subTabArea` ← _kor.scss
+- `.sumTxt` ← _board_list.scss
+- `.support_project` ← _kor.scss
+- `.system_policy` ← _kor.scss
+- `.T3` ← _kor.scss
+- `.T8` ← _kor.scss
+- `.tab-chart` ← _common_dream.scss, _common_etc.scss
+- `.tab-cont` ← _common_dream.scss, _common_etc.scss
+- `.tab-kcci` ← _common_dream.scss, _common_etc.scss
+- `.tab10` ← _common_etc.scss
+- `.tab11` ← _common_etc.scss
+- `.tab12` ← _common_etc.scss
+- `.tab13` ← _common_etc.scss
+- `.tab14` ← _common_etc.scss
+- `.tab15` ← _common_etc.scss
+- `.tab16` ← _common_etc.scss
+- `.tab17` ← _common_etc.scss
+- `.tab18` ← _common_etc.scss
+- `.tab19` ← _common_etc.scss
+- `.tab2` ← _common_etc.scss
+- `.tab20` ← _common_etc.scss
+- `.tab3` ← _common_etc.scss
+- `.tab4` ← _common_etc.scss
+- `.tab5` ← _common_etc.scss
+- `.tab6` ← _common_etc.scss
+- `.tab7` ← _common_etc.scss
+- `.tab8` ← _common_etc.scss
+- `.tab9` ← _common_etc.scss
+- `.tabcontent-kcci` ← _common_dream.scss, _common_etc.scss
+- `.tabList` ← _common_etc.scss, _kor.scss
+- `.tabnav-kcci` ← _common_dream.scss, _common_etc.scss
+- `.tabnav2` ← _common_dream.scss, _common_etc.scss
+- `.targetBox` ← _kor.scss
+- `.taxTable` ← _kor.scss
+- `.taxTable_navi` ← _kor.scss
+- `.tb_counselList` ← _kor.scss
+- `.tbArea` ← _common_dream.scss, _common_etc.scss, _kor.scss
+- `.tbFix1` ← _kor.scss
+- `.tbInfo` ← _kor.scss
+- `.tbInfoArea` ← _board_etc.scss
+- `.tbInfoC` ← _board_etc.scss
+- `.tbInfoR` ← _board_etc.scss
+- `.tbListA` ← _common_dream.scss, _common_etc.scss
+- `.Tel` ← _kor.scss
+- `.thumnail` ← _board_etc.scss
+- `.tit` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _pages.scss, main.scss
+- `.titArea` ← _kor.scss
+- `.title` ← _kor.scss
+- `.titleInfo` ← _pages.scss
+- `.titLine3` ← _board_list.scss
+- `.top` ← _kor.scss
+- `.top_area` ← _kor.scss
+- `.top_opt` ← _kor.scss
+- `.topExclam` ← _common_etc.scss, _util.scss
+- `.topImg` ← _kor.scss, main.scss
+- `.topImg_bottomTxt` ← _kor.scss
+- `.topSearchOptBox` ← _common_etc.scss, _search_option.scss
+- `.topTxt` ← _common_dream.scss, _common_etc.scss
+- `.trade_dispute_step` ← _kor.scss
+- `.tradeReturns` ← _kor.scss
+- `.txt` ← _board_etc.scss, _common_dream.scss, _common_etc.scss, _kor.scss, _search_option.scss, main.scss
+- `.txt_Info` ← _kor.scss
+- `.txt_s` ← _board_list.scss
+- `.txt_v` ← _board_etc.scss
+- `.txtContArea` ← _kor.scss
+- `.txtDel` ← _kor.scss
+- `.txtField` ← _kor.scss
+- `.txtG` ← _kor.scss
+- `.txtInfo` ← _board_etc.scss, _board_list.scss
+- `.txtL` ← _board_etc.scss, _board_list.scss, _common_dream.scss, _common_etc.scss, _kor.scss
+- `.txtMid` ← _kor.scss
+- `.txtR` ← _common_etc.scss, _util.scss
+- `.txtViewInfo` ← _board_etc.scss
+- `.type02` ← _kor.scss
+- `.type2` ← _board_etc.scss, _common.scss, _common_etc.scss
+- `.type3` ← _common.scss, _common_etc.scss
+- `.typeAreaInfoList` ← _kor.scss
+- `.typeBookcover` ← _board_list.scss
+- `.typeBookMark` ← _board_list.scss, _common_dream.scss, _common_etc.scss
+- `.typeCheckbox` ← _board_list.scss, _common_dream.scss, _common_etc.scss
+- `.typeChk` ← _common_etc.scss, _pages.scss
+- `.typeCodeTb` ← _common_dream.scss, _common_etc.scss
+- `.typeCompany` ← _kor.scss
+- `.typeDiplomacy` ← _board_etc.scss
+- `.typeFaq` ← _board_etc.scss
+- `.typeFindPartner` ← _kor.scss
+- `.typeFLC` ← _kor.scss
+- `.typeGallery` ← _board_list.scss
+- `.typeGalleryList` ← _board_list.scss
+- `.typeImg` ← _kor.scss
+- `.typeInterstInfo` ← _common_dream.scss, _common_etc.scss
+- `.typeLikeList` ← _pages.scss
+- `.typeNationInfo` ← _board_etc.scss
+- `.typeNoArticle` ← _board_list.scss
+- `.typeNoThumnail` ← _board_etc.scss
+- `.typeOptFull` ← _kor.scss
+- `.typePdfview` ← _board_etc.scss
+- `.typePhotoView` ← _board_etc.scss
+- `.typeQna` ← _board_etc.scss
+- `.typeQuad` ← _kor.scss
+- `.typeReport` ← _board_etc.scss
+- `.typeReportView` ← _board_etc.scss, _kor.scss
+- `.typeScrap` ← _board_etc.scss
+- `.typeSPS` ← _board_list.scss
+- `.typeVideoAd` ← _board_etc.scss
+- `.typeVideoView` ← _board_etc.scss
+- `.unit` ← main.scss
+- `.url_link` ← _kor.scss
+- `.urlTxt` ← _kor.scss
+- `.VerDreamAI` ← _kor.scss
+- `.videoNews` ← main.scss
+- `.videoNewsList` ← main.scss
+- `.view` ← _kor.scss
+- `.view_country_overview` ← _kor.scss
+- `.view_txt` ← _board_etc.scss
+- `.viewCopy` ← _kor.scss
+- `.w_addFile_s` ← _board_etc.scss
+- `.w_email` ← _board_etc.scss
+- `.w_link` ← _board_etc.scss
+- `.w_name` ← _board_etc.scss, _kor.scss
+- `.w_nameNpw` ← _board_etc.scss
+- `.w_pw` ← _board_etc.scss
+- `.w_runTime` ← _board_etc.scss
+- `.w_sort` ← _kor.scss
+- `.write` ← _kor.scss
+- `.yes` ← _kor.scss
+- `.ytbUrl` ← _board_etc.scss
+- `#cntn` ← _common_dream.scss, _common_etc.scss
+- `#contents` ← _kor.scss, _layout_frame.scss
+- `#contTab_fix` ← _common_etc.scss, _kor.scss, _page_tab.scss
+- `#contTab_line` ← _common_etc.scss, _kor.scss
+- `#crtfc` ← _common_dream.scss, _common_etc.scss
+- `#footer` ← _footer.scss
+- `#logistics` ← _common_dream.scss, _common_etc.scss
+- `#pageTab` ← _common_etc.scss, _page_tab.scss
+- `#pnb` ← _common_etc.scss, _pnb.scss
+- `#pop_applyNewsLetter` ← _common_etc.scss, _popup.scss
+- `#pop_board_imgView` ← _board_etc.scss
+- `#pop_diplomacyInfo` ← _board_etc.scss
+- `#pop_hskNmtiCode` ← _common_etc.scss, _popup.scss
+- `#pop_interestBookmark` ← _common_etc.scss, _popup.scss
+- `#pop_kockDream` ← _board_etc.scss
+- `#pop_myDream_account_logInfo` ← _common_etc.scss, _popup.scss
+- `#pop_pwCheck` ← _board_etc.scss
+- `#pop_registVideoPop` ← _board_etc.scss
+- `#sitemap` ← _common_etc.scss, _sitemap.scss
+- `#snb` ← _common_etc.scss, _snb.scss

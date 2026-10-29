@@ -89,7 +89,7 @@
 
 #contTab_fix+#contTab_line { margin-top:-20px;}
 
-@media all and (max-width:1041px){
+@media all and (max-width:1023px){
     /*TAB*/
     #pageTab,
     #contTab_fix { margin-bottom:30px;}
@@ -160,7 +160,7 @@
     #contTab_line .tabList.tab20>li { width:auto;}
 }
 
-@media all and (max-width:768px){
+@media all and (max-width:767px){
     /* TAB */
     #pageTab { margin-bottom:20px;}
     #contTab_fix { margin-bottom:20px;}
@@ -182,33 +182,33 @@
 /* ============================================================ */
 
 .selectTab_wrap { margin-bottom:40px;}
-#selectTab { position:relative;box-sizing:border-box;width:100%;margin:0 auto;padding:0;background:#fff;/*overflow:hidden;*/}
-#selectTab.fix { position:fixed;top:234px;left:0;z-index:9;}
-#selectTab ul { box-sizing:border-box;width:calc(100% - 1px);padding-bottom:1px;border-left:1px solid #d7d7d7;font-size:0;/*overflow:hidden;*/}
-#selectTab ul li { display:inline-table;box-sizing:border-box;margin:0 0 -1px 0;border-left:none;table-layout:fixed;border-collapse:collapse;vertical-align:top;}
-#selectTab ul li a { display:table-cell;box-sizing:border-box;width:100%;height:49px;padding:0 10px;border:1px solid #d7d7d7;border-left:none !important;background:#fff;color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;line-height:20px;font-weight:400;text-align:center;letter-spacing:-0.5px;transition:0.2s;vertical-align:middle;}
-#selectTab ul li a.on,
-#selectTab ul li a:hover { border:1px solid #8366d0;background:#8366d0;color:#fff;font-weight:500;box-shadow:5px 5px 15px -10px #333;}
-#selectTab ul.tab1>li { width:100%;}
-#selectTab ul.tab2>li { width:50%;}
-#selectTab ul.tab3>li { width:33.3%;}
-#selectTab ul.tab4>li { width:25%;}
-#selectTab ul.tab5>li { width:20%;}
-#selectTab ul.tab6>li { width:16.666%;}
-#selectTab ul.tab7>li { width:14.285%;}
-#selectTab ul.tab8>li { width:25%;}
-#selectTab ul.tab9>li { width:33.333%;}
-#selectTab ul.tab10>li,
-#selectTab ul.tab11>li,
-#selectTab ul.tab12>li,
-#selectTab ul.tab13>li,
-#selectTab ul.tab14>li,
-#selectTab ul.tab15>li,
-#selectTab ul.tab16>li,
-#selectTab ul.tab17>li,
-#selectTab ul.tab18>li,
-#selectTab ul.tab19>li,
-#selectTab ul.tab20>li { width:20%;}
+// #selectTab { position:relative;box-sizing:border-box;width:100%;margin:0 auto;padding:0;background:#fff;/*overflow:hidden;*/}
+// #selectTab.fix { position:fixed;top:234px;left:0;z-index:9;}
+// #selectTab ul { box-sizing:border-box;width:calc(100% - 1px);padding-bottom:1px;border-left:1px solid #d7d7d7;font-size:0;/*overflow:hidden;*/}
+// #selectTab ul li { display:inline-table;box-sizing:border-box;margin:0 0 -1px 0;border-left:none;table-layout:fixed;border-collapse:collapse;vertical-align:top;}
+// #selectTab ul li a { display:table-cell;box-sizing:border-box;width:100%;height:49px;padding:0 10px;border:1px solid #d7d7d7;border-left:none !important;background:#fff;color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:16px;line-height:20px;font-weight:400;text-align:center;letter-spacing:-0.5px;transition:0.2s;vertical-align:middle;}
+// #selectTab ul li a.on,
+// #selectTab ul li a:hover { border:1px solid #8366d0;background:#8366d0;color:#fff;font-weight:500;box-shadow:5px 5px 15px -10px #333;}
+// #selectTab ul.tab1>li { width:100%;}
+// #selectTab ul.tab2>li { width:50%;}
+// #selectTab ul.tab3>li { width:33.3%;}
+// #selectTab ul.tab4>li { width:25%;}
+// #selectTab ul.tab5>li { width:20%;}
+// #selectTab ul.tab6>li { width:16.666%;}
+// #selectTab ul.tab7>li { width:14.285%;}
+// #selectTab ul.tab8>li { width:25%;}
+// #selectTab ul.tab9>li { width:33.333%;}
+// #selectTab ul.tab10>li,
+// #selectTab ul.tab11>li,
+// #selectTab ul.tab12>li,
+// #selectTab ul.tab13>li,
+// #selectTab ul.tab14>li,
+// #selectTab ul.tab15>li,
+// #selectTab ul.tab16>li,
+// #selectTab ul.tab17>li,
+// #selectTab ul.tab18>li,
+// #selectTab ul.tab19>li,
+// #selectTab ul.tab20>li { width:20%;}
 
 .contTab_s { padding:20px 30px;background:#f4f5f7;}
 .contTab_s>ul { margin-top:-10px;}
@@ -217,8 +217,8 @@
 .contTab_s>ul>li>a:hover,
 .contTab_s>ul>li>a.on { background:#212e4e;color:#fff;}
 
-@media all and (max-width:1041px){
-    #selectTab .tabList>li a  { height:40px;font-size:14px;line-height:16px;}
+@media all and (max-width:1023px){
+    // #selectTab .tabList>li a  { height:40px;font-size:14px;line-height:16px;}
     #contTab_line.nTab .tabList { padding-left:0;white-space: nowrap;overflow-x:auto;}
     #contTab_line.nTab .tabList li+li { padding-left:12px;}
 
@@ -228,17 +228,17 @@
     .contTab_s>ul>li>a { padding:5px 10px;font-size:13px;}
     .kock_dream .list_btn { margin:10px 0;}
     .selectTab_wrap { margin-bottom:30px;}
-    #selectTab { max-width:100%;margin-top:0;padding-bottom:1px;border-bottom:1px solid #d9d9d9;touch-action:none;}
-    #selectTab.fix { top:181px;}
-    #selectTab .tabList { padding:0 15px;border:none;white-space:nowrap;}
-    #selectTab .tabList li { width:auto !important;}
-    #selectTab .tabList li a { position:relative;height:42px;padding:0 13px;border:none;}
-    #selectTab .tabList li a:hover { border:inherit;;background:inherit;color:inherit;font-weight:inherit;box-shadow:none;}
-    #selectTab .tabList li a.on { border:none;;background:none;color:#0f0f0f;color:#8366d0;font-weight:700;box-shadow:none;}
-    #selectTab .tabList li a:hover:before { display:none;}
-    #selectTab .tabList li a.on:before { display:block;position:absolute;bottom:0;left:0;width:100%;height:3px;background:#8366d0;content:'';}
+    // #selectTab { max-width:100%;margin-top:0;padding-bottom:1px;border-bottom:1px solid #d9d9d9;touch-action:none;}
+    // #selectTab.fix { top:181px;}
+    // #selectTab .tabList { padding:0 15px;border:none;white-space:nowrap;}
+    // #selectTab .tabList li { width:auto !important;}
+    // #selectTab .tabList li a { position:relative;height:42px;padding:0 13px;border:none;}
+    // #selectTab .tabList li a:hover { border:inherit;;background:inherit;color:inherit;font-weight:inherit;box-shadow:none;}
+    // #selectTab .tabList li a.on { border:none;;background:none;color:#0f0f0f;color:#8366d0;font-weight:700;box-shadow:none;}
+    // #selectTab .tabList li a:hover:before { display:none;}
+    // #selectTab .tabList li a.on:before { display:block;position:absolute;bottom:0;left:0;width:100%;height:3px;background:#8366d0;content:'';}
 }
 
-@media all and (max-width:768px){
+@media all and (max-width:767px){
     .selectTab_wrap { margin-bottom:20px;}
 }

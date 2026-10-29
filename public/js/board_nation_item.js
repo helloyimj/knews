@@ -15,7 +15,7 @@ $().ready(function() {
 		adaptiveHeight: true,
 		responsive: [
 			{
-				breakpoint: 1041,
+				breakpoint: 1024,
 				settings: {
 					arrows: false,
 					infinite: true
@@ -1073,7 +1073,7 @@ function fn_detail(){
                 			htmlObj += '<tr><th scope="col">주소</th><td class="txtL">'+data.entpList[i].ENTP_ADRES_CN+'</td></tr>';
                 			htmlObj += '<tr><th scope="col">전화번호</th><td class="txtL">'+data.entpList[i].ENTP_TELNO_ENCPT+'</td></tr>';
                 			htmlObj += '<tr><th scope="col">이메일</th><td class="txtL"><a href="mailto:'+data.entpList[i].ENTP_EMAIL_ENCPT+'">'+data.entpList[i].ENTP_EMAIL_ENCPT+'</a></td></tr>';
-                			htmlObj += '<tr><th scope="col">홈페이지</th><td class="txtL"><a href="'+data.entpList[i].ENTP_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동">'+data.entpList[i].ENTP_HMPG_URL_CN+'</a></td></tr>';
+                			htmlObj += '<tr><th scope="col">홈페이지</th><td class="txtL"><a href="'+data.entpList[i].ENTP_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.entpList[i].ENTP_HMPG_URL_CN+'</a></td></tr>';
                 			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.entpList[i].ENTP_ETC_CN+'</td></tr>';
                 			htmlObj += '</tbody></table>';
                 			htmlObj += '</div>';
@@ -1402,7 +1402,7 @@ function fn_detail(){
 		        			htmlObj += '<tbody>'; 
 		        			htmlObj += '<tr><th scope="col">전화번호</th><td class="txtL">'+data.cprList[i].CO_TELNO_ENCPT+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소</th><td class="txtL">'+data.cprList[i].CO_ADRES_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지</th><td class="txtL"><a href="'+data.cprList[i].CO_HMPG_URL_CN+'" target="_blank">'+data.cprList[i].CO_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지</th><td class="txtL"><a href="'+data.cprList[i].CO_HMPG_URL_CN+'" target="_blank" title="새 창 열림">'+data.cprList[i].CO_HMPG_URL_CN+'</a></td></tr>';
 		        			htmlObj += '<tr><th scope="col">이메일</th><td class="txtL"><a href="mailto:'+data.cprList[i].CO_HMPG_URL_CN+'">'+data.cprList[i].CO_EMAIL_ENCPT+'</a></td></tr>';
 		        			htmlObj += '<tr><th scope="col">한국인교포 변호사 유무</th><td class="txtL">'+data.cprList[i].KRPP_OVKR_LAWYER_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.cprList[i].ETC_CN+'</td></tr>';
@@ -1735,7 +1735,7 @@ function fn_detail(){
 		        			htmlObj += '<colgroup><col style="width:20%"><col style="width:80%"></colgroup>';
 		        			htmlObj += '<tr><th scope="col">전화번호</th><td class="txtL">'+data.korInsttList[i].INSTT_TELNO_VAL+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소</th><td  class="txtL">'+data.korInsttList[i].INSTT_ADRES_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지</th><td  class="txtL"><a href="'+data.korInsttList[i].INSTT_HMPG_URL_CN+'" target="_blank" title="홈페이지이동">'+data.korInsttList[i].INSTT_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지</th><td  class="txtL"><a href="'+data.korInsttList[i].INSTT_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.korInsttList[i].INSTT_HMPG_URL_CN+'</a></td></tr>';
 		        			if(data.korInsttList[i].ETC_CN != ""){
 			        			htmlObj += '<tr><th scope="col">비고</th><td  class="txtL alignPre">'+data.korInsttList[i].ETC_CN+'</td></tr>';
 		        			}
@@ -1760,7 +1760,7 @@ function fn_detail(){
 		        			htmlObj += '<colgroup><col style="width:20%"><col style="width:80%"></colgroup>';
 		        			htmlObj += '<tr><th scope="col">전화번호</th><td class="txtL">'+data.lcInsttList[i].GVRN_INSTT_TELNO_VAL+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소</th><td  class="txtL">'+data.lcInsttList[i].GVRN_INSTT_ADRES_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지</th><td  class="txtL"><a href="'+data.lcInsttList[i].GVRN_INSTT_HMPG_URL_CN+'" target="_blank" title="홈페이지이동">'+data.lcInsttList[i].GVRN_INSTT_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지</th><td  class="txtL"><a href="'+data.lcInsttList[i].GVRN_INSTT_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.lcInsttList[i].GVRN_INSTT_HMPG_URL_CN+'</a></td></tr>';
 		        			if(data.lcInsttList[i].GVRN_INSTT_ETC_CN != ""){
 			        			htmlObj += '<tr><th scope="col">비고</th><td  class="txtL alignPre">'+data.lcInsttList[i].GVRN_INSTT_ETC_CN+'</td></tr>';
 		        			}
@@ -1944,7 +1944,7 @@ function fn_detail(){
 		        			htmlObj += '<tr><th scope="col">도시명</th><td class="txtL">'+data.bizHotelList[i].BSNS_HOTEL_CTY_NAME+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소 </th><td class="txtL">'+data.bizHotelList[i].BSNS_HOTEL_ADRES_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">전화번호   </th><td class="txtL">'+data.bizHotelList[i].BSNS_HOTEL_TELNO_VAL+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지   </th><td class="txtL"><a href="'+data.bizHotelList[i].BSNS_HOTEL_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동">'+data.bizHotelList[i].BSNS_HOTEL_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지   </th><td class="txtL"><a href="'+data.bizHotelList[i].BSNS_HOTEL_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.bizHotelList[i].BSNS_HOTEL_HMPG_URL_CN+'</a></td></tr>';
 		        			htmlObj += '<tr><th scope="col">숙박료   </th><td class="txtL alignPre">'+data.bizHotelList[i].BSNS_HOTEL_STAYNG_FEE_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">소개   </th><td class="txtL alignPre">'+data.bizHotelList[i].BSNS_HOTEL_INTRCN_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.bizHotelList[i].BSNS_HOTEL_ETC_CN+'</td></tr>';
@@ -1965,7 +1965,7 @@ function fn_detail(){
 		        			htmlObj += '<tr><th scope="col">도시명</th><td class="txtL">'+data.gsthsList[i].GSTHS_CTY_NAME+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소 </th><td class="txtL">'+data.gsthsList[i].GSTHS_ADRES_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">전화번호   </th><td class="txtL">'+data.gsthsList[i].GSTHS_TELNO_VAL+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지   </th><td class="txtL"><a href="'+data.gsthsList[i].GSTHS_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동">'+data.gsthsList[i].GSTHS_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지   </th><td class="txtL"><a href="'+data.gsthsList[i].GSTHS_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.gsthsList[i].GSTHS_HMPG_URL_CN+'</a></td></tr>';
 		        			htmlObj += '<tr><th scope="col">숙박료   </th><td class="txtL alignPre">'+data.gsthsList[i].GSTHS_STAYNG_FEE_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">소개   </th><td class="txtL alignPre">'+data.gsthsList[i].GSTHS_INTRCN_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.gsthsList[i].GSTHS_ETC_CN+'</td></tr>';
@@ -2056,7 +2056,7 @@ function fn_detail(){
 		        			htmlObj += '<tr><th scope="col">도시명</th><td class="txtL">'+data.intrlSchulList[i].INTRL_SCHUL_CTY_NAME+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">커리큘럼</th><td class="txtL alignPre">'+data.intrlSchulList[i].INTRL_SCHUL_EDC_CRSE_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">학비</th><td class="txtL alignPre">'+data.intrlSchulList[i].INTRL_SCHUL_SCHXP_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지 </th><td class="txtL"><a href="'+data.intrlSchulList[i].INTRL_SCHUL_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동">'+data.intrlSchulList[i].INTRL_SCHUL_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지 </th><td class="txtL"><a href="'+data.intrlSchulList[i].INTRL_SCHUL_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.intrlSchulList[i].INTRL_SCHUL_HMPG_URL_CN+'</a></td></tr>';
 		        			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.intrlSchulList[i].INTRL_SCHUL_ETC_CN+'</td></tr>';
         					htmlObj += '</tbody></table>';
         					htmlObj += '</div>';
@@ -2075,7 +2075,7 @@ function fn_detail(){
 		        			htmlObj += '<tr><th scope="col">도시명</th><td class="txtL">'+data.apclcSchulList[i].LC_SCHUL_CTY_NAME+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">커리큘럼</th><td class="txtL alignPre">'+data.apclcSchulList[i].LC_SCHUL_EDC_CRSE_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">학비</th><td class="txtL alignPre">'+data.apclcSchulList[i].LC_SCHUL_SCHXP_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지 </th><td class="txtL"><a href="'+data.apclcSchulList[i].LC_SCHUL_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동">'+data.apclcSchulList[i].LC_SCHUL_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지 </th><td class="txtL"><a href="'+data.apclcSchulList[i].LC_SCHUL_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.apclcSchulList[i].LC_SCHUL_HMPG_URL_CN+'</a></td></tr>';
 		        			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.apclcSchulList[i].LC_SCHUL_ETC_CN+'</td></tr>';
         					htmlObj += '</tbody></table>';
         					htmlObj += '</div>';
@@ -2127,7 +2127,7 @@ function fn_detail(){
 		        			htmlObj += '<tbody>'; 
 		        			htmlObj += '<tr><th scope="col">도시명</th><td class="txtL">'+data.shpgList[i].SHOPNG_BSSH_CTY_NAME+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소</th><td class="txtL">'+data.shpgList[i].SHOPNG_BSSH_ADRES_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지 </th><td class="txtL"><a href="'+data.shpgList[i].SHOPNG_BSSH_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동">'+data.shpgList[i].SHOPNG_BSSH_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지 </th><td class="txtL"><a href="'+data.shpgList[i].SHOPNG_BSSH_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.shpgList[i].SHOPNG_BSSH_HMPG_URL_CN+'</a></td></tr>';
 		        			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.shpgList[i].SHOPNG_BSSH_ETC_CN+'</td></tr>';
         					htmlObj += '</tbody></table>';
         					htmlObj += '</div>';
@@ -2163,7 +2163,7 @@ function fn_detail(){
 		        			htmlObj += '<tbody>'; 
 		        			htmlObj += '<tr><th scope="col">도시명</th><td class="txtL">'+data.etcCvntlList[i].ETC_CNVNC_FCLTY_CTY_NAME+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">주소</th><td class="txtL">'+data.etcCvntlList[i].ETC_CNVNC_FCLTY_ADRES_CN+'</td></tr>';
-		        			htmlObj += '<tr><th scope="col">홈페이지</th><td class="txtL"><a href="'+data.etcCvntlList[i].ETC_CNVNC_FCLTY_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동">'+data.etcCvntlList[i].ETC_CNVNC_FCLTY_HMPG_URL_CN+'</a></td></tr>';
+		        			htmlObj += '<tr><th scope="col">홈페이지</th><td class="txtL"><a href="'+data.etcCvntlList[i].ETC_CNVNC_FCLTY_HMPG_URL_CN+'" target="_blank" title="홈페이지 이동 (새 창 열림)">'+data.etcCvntlList[i].ETC_CNVNC_FCLTY_HMPG_URL_CN+'</a></td></tr>';
 		        			htmlObj += '<tr><th scope="col">소개</th><td class="txtL alignPre">'+data.etcCvntlList[i].ETC_CNVNC_FCLTY_INTRCN_CN+'</td></tr>';
 		        			htmlObj += '<tr><th scope="col">비고</th><td class="txtL alignPre">'+data.etcCvntlList[i].ETC_CNVNC_FCLTY_ETC_CN+'</td></tr>';
         					htmlObj += '</tbody></table>';

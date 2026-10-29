@@ -6,6 +6,8 @@
 @import "fonts";
 @import "reset";
 
+@import "a11y"; // 포커스 링 믹스인·규칙
+
 // 기존 css 
 @import "common"; // public\type\common\css
 
@@ -38,11 +40,6 @@
 // @import "common"; // public\type\common\css
 // @import "common_res"; // public\type\common\css
 
-// @import "common_etc";
-@import "news"; // authInfoView
-@import "html_css";
-@import "kor"; // 정보이미지 검색
-
 // 게시판
 @import "board_common";
 @import "board_list"; // 게시판 목록페이지 레이아웃 관련
@@ -52,6 +49,11 @@
 // 검색조건 — _search_filter.scss 는 _search_option.scss 에 통합 (0930)
 @import "search_option";
 @import "table_style";
+
+// @import "common_etc";
+@import "news"; // authInfoView
+@import "html_css";
+@import "kor"; // 정보이미지 검색
 
 // 개별 페이지
 @import "pages"; // (수출파트너, 해외진출기업, 로그인, 에러)

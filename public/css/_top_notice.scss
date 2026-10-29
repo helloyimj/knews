@@ -39,7 +39,7 @@
     }
 }
 
-@media all and (max-width: 1041px) {
+@media all and (max-width:1023px) {
     .typeTopNotice header .mBtn_topMenu {
         top:105px;
     }
@@ -91,7 +91,7 @@
     }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width:767px) {
     /* 상단배너 */
     .mTopNotice .Alert {
         width:calc(100% - 190px);

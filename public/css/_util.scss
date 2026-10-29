@@ -1,71 +1,11 @@
 @charset "utf-8";
 
-/* WCAG C40: dual focus ring (light + dark)
-   Always draw INSIDE the element so overflow:hidden parents cannot clip it.
-   - outline + negative offset: paints above children (visible on dark buttons)
-   - inset box-shadow: visible on light backgrounds
-   ($inset kept for call-site compat; always inner) */
-@mixin focus-ring-contrast($inset: true, $important: false) {
-	@if $important {
-		outline: 2px solid #fff !important;
-		// outline: 2px dashed #fff !important;
-		outline-offset: -2px !important;
-		box-shadow: inset 0 0 0 4px #212E4E !important;
-	} @else {
-		outline: 2px solid #fff;
-		// outline: 2px dashed #fff;
-		outline-offset: -2px;
-		box-shadow: inset 0 0 0 4px #212E4E;
-	}
-}
-
-// /* 키보드 포커스 공통 — 믹스인 밖에 둬야 CSS로 출력됨 */
-:where(
-	a[href],
-	button:not(:disabled):not(#btn_top),
-	input:not(:disabled),
-	select:not(:disabled),
-	textarea:not(:disabled),
-	summary,
-	[tabindex]:not([tabindex="-1"])
-):focus-visible {
-	// @include focus-ring-contrast;
-}
-
-/* 진한배경색 버튼용 */
-@mixin focus-ring-on-dark {
-  outline: 2px solid #fff;
-  outline-offset: 2px; /* 바깥 */
-  box-shadow: 0 0 0 4px #212E4E;
-}
-
-/* 진한 채움 버튼 — 기본 inset 링이 안 보이므로 바깥 링 */
-.btnC.Navy,
-.btnC.Blue,
-.btnC_s.Navy,
-.btnC_s.Blue,
-.btnC_s.Gray,
-.btnI.fileDown.Navy,
-.btnI.fileDown.Blue,
-.btnC_s.typeChk.on,
-.btn_scrap.on,
-#btn_top {
-	&:focus-visible {
-		overflow: visible;
-		// @include focus-ring-on-dark;
-	}
-}
-
-/* 링 끄기 */
-.no-focus-ring:focus-visible {
-	outline: none;
-	box-shadow: none;
-}
-
-
 /* skip menu */
 #skip_menu a{position:absolute;opacity:0;}
 #skip_menu a:focus{display:inline-block;z-index:9999;padding:10px;background:#000;color:#fff;font-size:15px;opacity:1;}
+@media all and (max-width:1023px) {
+	#skip_menu a:nth-child(n+2){display:none;}
+}
 
 /* btn_top */
 /* .typeMain #btn_top {display:none;} */
@@ -73,7 +13,7 @@
 #btn_top.on {opacity:1;}
 /* #btn_top:focus-visible → 상단 진한 채움 버튼 포커스 링 묶음 */
 
-@media all and (max-width: 1041px) {
+@media all and (max-width:1023px) {
     #btn_top {
         right:15px;bottom:100px;width:36px;height:36px;background-size:auto 36px;
     }
@@ -82,10 +22,10 @@
     }
 }
 
-@media all and (max-width:1041px) {
+@media all and (max-width:1023px) {
 .pcBr { display:none;}
 }
-@media all and (max-width:768px) {
+@media all and (max-width:767px) {
 .mbHdn { display:none;}
 }
 
@@ -384,59 +324,9 @@
 .pL40 { padding-left:40px !important;}
 .pL45 { padding-left:45px !important;}
 .pL50 { padding-left:50px !important;}
-@media all and (max-width:1041px) {
-html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td
-        { font-size:14px;line-height:1.4;}
-#skip_menu a:nth-child(n+2){display:none;}
-}
-@media all and (max-width:768px) {
+
+@media all and (max-width:767px) {
 .topExclam.txtR { margin-bottom:10px;text-align:left !important;}
-}
-/* ============================================================ */
-/* print */
-/* ============================================================ */
-/* print */
-@media print {
-    html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td { 
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        margin: 0; 
-        padding: 0;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-    #header, #footer, #snb_nav { 
-    	display:none;
-    	position: absolute;
-    	left: -9999px;
-    	height:0 !important;
-    	margin:0 !important;
-    	padding:0 !important;
-    }
-	.reN #snb_board { display:none; height:0;}
-	img{
-		break-inside: avoid;
-	}
-	.after-break { 
-		break-after: page;
-	}
-	.before-break { 
-		break-before: page;
-	}
-}
-/* ============================================================ */
-/* 웹접근성 */
-/* ============================================================ */
-/* 웹접근성 */
-.sr-only {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	padding: 0 !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	white-space: nowrap !important;
-	border: 0 !important;
 }
 
 /* hs code 찾기 버튼 위치 조정 (뷰어다운로드) */

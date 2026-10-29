@@ -38,7 +38,9 @@ button.btnC_s {
 .btnR { display:inline-block;overflow:hidden;box-sizing:border-box;min-width:220px;margin:0 0 5px 0;padding:0 15px;border:1px solid #ddd;border-radius:23px;background:#fff;font-size:0;text-align:center;transition:0.2s;vertical-align:top;}
 .btnR>span { display:inline-block;overflow:hidden;box-sizing:border-box;height:45px;padding:0;color:#0f0f0f;font-size:15px;line-height:45px;text-align:left;letter-spacing:-0.5px;transition:0.2s;vertical-align:top;}
 .btnR:hover { background-color:#ddd !important;}
-.btnR:hover>span { color:#000 !important;}
+.btnR:hover>span { 
+    // color: #000;
+    color:#0f0f0f!important;}
 
 .btnR.Arr>span { position:relative;padding:0 20px 0 0;}
 .btnR.Arr>span:before { display:block;position:absolute;top:50%;right:0;width:13px;height:7px;margin-top:-3.5px;background: url(../img/common/sprite_component.png) no-repeat -209px -383px;content:'';}
@@ -88,7 +90,9 @@ button.btnC_s {
 .btnC_s.lineGray:hover { background:#fff !important;}
 
 .btnC_s.lineBlack { border:1px solid #222 !important;}
-.btnC_s.lineBlack>span { color:#222 !important;}
+.btnC_s.lineBlack>span { 
+    // color: #222;
+    color:#0f0f0f!important;}
 .btnC_s.lineBlack:hover { background:#fff !important;}
 
 .btnC_s.lineBlue { min-width:120px !important;border:1px solid #4286ea !important;}
@@ -161,14 +165,20 @@ button.btnC_s {
 
 .btn_reset { display:inline-block;padding-left:19px;background:url(../img/common/ico_reset_gray.png) no-repeat left top;color:#666;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:14px;line-height:22px;font-weight:400;}
 
-.btnSq_add  { overflow:hidden;box-sizing:border-box;width:40px;height:40px;border:1px solid #d9d9d9;border-radius:2px;background:#fff url(../img/common/sprite_component.png) no-repeat -344px -331px;color:#555;font-size:14px;line-height:40px;font-weight:normal;text-indent:-999px;}
-.btnSq_del  { overflow:hidden;box-sizing:border-box;width:40px;height:40px;border:1px solid #d9d9d9;border-radius:2px;background:#fff url(../img/common/sprite_component.png) no-repeat -344px -362px;color:#555;font-size:14px;line-height:40px;font-weight:normal;text-indent:-999px;}
+.btnSq_add  { overflow:hidden;box-sizing:border-box;width:40px;height:40px;border:1px solid #d9d9d9;border-radius:2px;background:#fff url(../img/common/sprite_component.png) no-repeat -344px -331px;
+    // color: #555;
+    color:#666666;font-size:14px;line-height:40px;font-weight:normal;text-indent:-999px;}
+.btnSq_del  { overflow:hidden;box-sizing:border-box;width:40px;height:40px;border:1px solid #d9d9d9;border-radius:2px;background:#fff url(../img/common/sprite_component.png) no-repeat -344px -362px;
+    // color: #555;
+    color:#666666;font-size:14px;line-height:40px;font-weight:normal;text-indent:-999px;}
 
 .btn_linkBox { display:inline-block;overflow:hidden;box-sizing:border-box;margin:0 0 5px 0;padding:0 20px;border:1px solid #212e4e;border-radius:2px;background:#fff;font-size:0;text-align:center;transition:0.2s;vertical-align:top;}
 .btn_linkBox>span { display:inline-block;overflow:hidden;box-sizing:border-box;height:52px;padding:0 25px 0 0;background:url(../img/common/ico_b_link.png) no-repeat right top 18px !important;color:#212e4e;font-size:15px;line-height:52px;text-align:left;letter-spacing:-0.5px;transition:0.2s;vertical-align:top;}
 
 .btn_txtDown { display:inline-block;vertical-align:top;}
-.btn_txtDown>span { display:block;position:relative;padding-right:25px;color:#222;font-size:16px;}
+.btn_txtDown>span { display:block;position:relative;padding-right:25px;
+    // color: #222;
+    color:#0f0f0f;font-size:16px;}
 .btn_txtDown>span:before { display:block;position:absolute;top:50%;right:0;width:12px;height:17px;margin-top:-7.5px;background: url(../img/common/sprite_component.png) no-repeat -395px -115px;content:'';}
 
 .fileAdd_R { margin-bottom:10px;text-align:right;}
@@ -177,7 +187,9 @@ button.btnC_s {
 .sympathy { float:left;font-size:0;}
 
 .btn_sym { display:inline-block;box-sizing:border-box;min-width:76px;height:40px;padding:0 16px;border: 1px solid #ccc;border-radius:2px;line-height:40px;vertical-align:top;}
-.btn_sym>em { position:relative;padding-left:25px;color:#4286eb;font-size:16px;font-style:normal;}
+.btn_sym>em { position:relative;padding-left:25px;
+    // color: #4286eb;
+    color:#4286ea;font-size:16px;font-style:normal;}
 .btn_sym>em:before  { display:block;position:absolute;top:50%; left:0;width:17px;height:17px;margin-top:-8.5px;background: url(../img/common/sprite_component.png) no-repeat  -309px -499px;content:'';}
 /*2023 리뉴얼 새로 추가*/
 .btn_write{float:right;}
@@ -240,10 +252,7 @@ button.btnC_s {
 .btn_titR .tit_mail { display:inline-block;margin-right:10px;line-height: 40px;vertical-align:top;}
 .btn_titR a+a { margin-left:5px;}
 
-
-
-
-@media all and (max-width:1041px){
+@media all and (max-width:1023px){
     /*** style_guide ***/
     /*button*/
     .btnC { min-width:120px;}
@@ -355,7 +364,7 @@ button.btnC_s {
     .moreVideoArea .file-download img { height:17px;}
 }
 
-@media all and (max-width:768px){
+@media all and (max-width:767px){
     .btnAreaC>.btnGrp {position:inherit;top:0;left:0;right:auto;transform:none;margin-top:15px;}
     .pagination+.btnAreaL,
     .pagination+.btnAreaR,

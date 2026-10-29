@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+// 엔트리. 컴파일하면 total.css 한 장으로 컴파일됨.
+// sass css/total.scss css/total.css
+
+@import "fonts";
+@import "reset";
+
+@import "a11y"; // 포커스 링 믹스인·규칙
+
+// 기존 css 
+@import "common"; // public\type\common\css
+
+@import "layout_frame";
+
+@import "button";
+@import "form";
+@import "pagination";
+
+// 기존 common css 분리
+@import "util";
+@import "popup";
+@import "pnb";
+@import "snb";
+
+// 기존 common css 분리 // public\type\common\css 2002609
+@import "input";
+@import "datepicker";
+@import "page_tab"; 
+
+// 코트라 아이덴티티, 푸터 
+@import "masthead_kotra";
+@import "footer_kotra";
+@import "header";
+
+// 2002609 분리 // public\type\common\css
+@import "top_notice"; // 상단공지
+
+// 기존 css 선언 순서 상단으로 변경 
+// @import "common"; // public\type\common\css
+// @import "common_res"; // public\type\common\css
+
+// @import "common_etc";
+@import "news"; // authInfoView
+@import "html_css";
+@import "kor"; // 정보이미지 검색
+
+
+// 개별 페이지
+@import "pages"; // (수출파트너, 해외진출기업, 로그인, 에러)
+// 임시 html 인라인 소스코드 분리 (__news_page4~12, 15)
+@import "pages_other";
+
+// 생성예정
+// @import "search_total";
+
+// 삭제 예정
+@import "sitemap"; // .sitemapBox / .sitemapArea (구 common.css 사이트맵)
+
+// dream 분리 — 시장뉴스 html 미사용(마이드림, mbti, ODA, 대시보드 등)
+@import "common_dream";
+
+

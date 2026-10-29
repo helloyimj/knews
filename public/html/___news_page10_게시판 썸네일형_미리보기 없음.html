@@ -13,52 +13,50 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
     <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+    
     <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
     <script src="../js/lib/jquery-3.5.1.min.js"></script>
-    <script src="../js/lib/jquery.easing.1.3.js"></script>
-    <!-- 슬라이더 -->
+
+    <!-- slider / scroll -->
     <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
     <script src="../js/lib/slick/slick.min.js"></script>
     <script src="../js/lib/slick/slick.acc.js"></script>
-    <script src="../js/lib/sly-master/sly.min.js"></script>
-    <!-- 커스텀스크롤 -->
     <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
-    <!-- datepicker -->
-    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+
+    <!-- datepicker + UI 위젯 -->
+    <script src="../js/lib/datepicker_master/datepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
-    <!-- board -->
-    <script src="../js/lib/board.js"></script>
-    <script src="../js/lib/jquery.form.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
     <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
-    <script src="../js/lib/jquery-ui.min.js"></script>
+
+    <!-- board UI / form / ajax / tmpl -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
     <script src="../js/lib/comm_fr.js"></script>
     <script src="../js/lib/util.js"></script>
     <script src="../js/lib/jquery.tmpl.js"></script>
+
+    <!-- utility -->
     <script src="../js/lib/clipboard.min.js"></script>
-    <script src="../type/admin/js/printThis.js"></script>
-    <script src="../js/lib/makePCookie.js"></script>
-    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/printThis.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
     <script src="../js/lib/jspdf.min.js"></script>
     <script src="../js/lib/html2canvas.min.js"></script>
-    <script src="../js/lib/bluebird.min.js"></script>
-    <!-- 공통 레이아웃 통합 -->
-    <script src="../js/pnb_org_trails.js"></script>
-    <script src="../js/pnb.js"></script>
-    <script src="../js/layout_common.js"></script>
     <script src="../js/cms_file.js"></script>
-    <!-- SNS -->
+
+    <!-- layout -->
+    <script src="../js/layout_common.js"></script>
+    <script src="../js/header_news.js"></script>
+    <script src="../js/breadcrumb.js"></script>
+
+    <!-- SNS / logger -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <!-- logger -->
     <script src="../js/logger.js"></script>
-    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
-    <!-- <script src="../js/board.js"></script>
-    <script src="../type/news/js/filter_board.js"></script> -->
-    <!-- board 추가 정리중 -->
+    <!-- page board -->
     <script src="../js/board_list.js"></script>
-    <!-- 상세 페이지용. 목록에서는 로드하지 않음 -->
-    <!-- <script src="../js/board_detail.js"></script> -->
   </head>
 
   <body class="typeSub">
@@ -333,7 +331,7 @@
                   <!-- 								<a href="http://www.kotra.or.kr/wps/sso/loginBySSO.jsp?div=gw&amp;ret_url=https://www.kotra.or.kr/kh/main/KHMIUI010M.html" target="_blank" class="btn_s" style="display: inline-block;" title="새 창 열림"> -->
                   <!-- 									<img src="/type/news/img/layout/logo_t_01.png" alt="코트라 지원안내" title="코트라 지원안내"> -->
                   <!-- 								</a> -->
-                  <!-- 								<a href="http://www.kotra.or.kr/wps/sso/loginBySSO.jsp?div=gw&amp;ret_url=https://www.kotra.or.kr/kh/main/KHMIUI010M.html" target="_blank" class="btn_o" style="display: none;"> -->
+                  <!-- 								<a href="http://www.kotra.or.kr/wps/sso/loginBySSO.jsp?div=gw&amp;ret_url=https://www.kotra.or.kr/kh/main/KHMIUI010M.html" target="_blank" class="btn_o" style="display: none;" title="새 창 열림"> -->
                   <!-- 									<strong>KOTRA 대표 홈페이지</strong> -->
                   <!-- 								</a> -->
                   <!-- 							</p> -->
@@ -341,7 +339,7 @@
                     <a href="/kp/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
                       <img src="/type/common/img/common/more_siteLogo12.png" alt="KOTRA 무역투자24" title="KOTRA 무역투자24" />
                     </a>
-                    <a href="/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>KOTRA 무역투자24</strong>
                     </a>
                   </p>
@@ -349,7 +347,7 @@
                     <a href="/dream/index.do" target="_blank" class="btn_s" title="새 창 열림">
                       <img src="/type/news/img/layout/logo_t_12.png" alt="해외경제정보드림" title="해외경제정보드림" />
                     </a>
-                    <a href="/dream/index.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/dream/index.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>해외경제정보드림</strong>
                     </a>
                   </p>
@@ -357,7 +355,7 @@
                     <a href="https://www.exportvoucher.com" target="_blank" class="btn_s" title="새 창 열림">
                       <img src="/type/news/img/layout/logo_t_03.png" alt="수출지원기반 활용사업" title="수출지원기반 활용사업" />
                     </a>
-                    <a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none">
+                    <a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>수출바우처 · 지사화</strong>
                     </a>
                   </p>
@@ -365,7 +363,7 @@
                     <a href="/ob/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                       <img src="/type/news/img/layout/logo_t_04.png" alt="옴부즈만" title="옴부즈만" />
                     </a>
-                    <a href="/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>외투기업고충처리</strong>
                     </a>
                   </p>
@@ -373,7 +371,7 @@
                     <a href="/iv/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                       <img src="/type/news/img/layout/logo_t_05.png" alt="Inverst KOREA" title="Inverst KOREA" />
                     </a>
-                    <a href="/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>투자유치정보제공</strong>
                     </a>
                   </p>
@@ -381,7 +379,7 @@
                     <a href="/ge/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
                       <img src="/type/news/img/layout/logo_t_06.png" alt="글로벌 전시포털" title="글로벌 전시포털" />
                     </a>
-                    <a href="/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>국내 · 해외전시정보</strong>
                     </a>
                   </p>
@@ -389,7 +387,7 @@
                     <a href="/bk/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                       <img src="/type/news/img/layout/logo_t_07.png" alt="바이코리아(Seller)" title="바이코리아(Seller)" />
                     </a>
-                    <a href="/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>수출지원 온라인 플랫폼</strong>
                     </a>
                   </p>
@@ -397,7 +395,7 @@
                     <a href="/gw/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                       <img src="/type/news/img/layout/logo_t_08.png" alt="경제외교 활용포털" title="경제외교 활용포털" />
                     </a>
-                    <a href="/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>경제외교 활용포털</strong>
                     </a>
                   </p>
@@ -405,7 +403,7 @@
                     <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                       <img src="/type/news/img/layout/logo_t_09.png" alt="Contract KOREA" title="Contract KOREA" />
                     </a>
-                    <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>해외전문인력유치센터</strong>
                     </a>
                   </p>
@@ -413,7 +411,7 @@
                     <a href="/kd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                       <img src="/type/news/img/layout/logo_t_10.png" alt="Kodits" title="Kodits" />
                     </a>
-                    <a href="/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>방산물자교역지원센터</strong>
                     </a>
                   </p>
@@ -422,7 +420,7 @@
                   <!-- 								<a href="/bb/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style=""> -->
                   <!-- 									<img src="/type/news/img/layout/logo_t_11.png" alt="북방경제협력 정보포털" title="북방경제협력 정보포털"> -->
                   <!-- 								</a> -->
-                  <!-- 								<a href="/bb/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;"> -->
+                  <!-- 								<a href="/bb/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none;" title="새 창 열림"> -->
                   <!-- 									<strong>북방경제협력 정보포털</strong> -->
                   <!-- 								</a> -->
                   <!-- 							</p> -->
@@ -430,7 +428,7 @@
                     <a href="/bd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                       <img src="/type/news/img/layout/logo_t_13.png" alt="무역투자빅데이터" title="무역투자빅데이터" />
                     </a>
-                    <a href="/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                    <a href="/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                       <strong>무역투자빅데이터</strong>
                     </a>
                   </p>
@@ -440,7 +438,7 @@
             </div>
           </div>
 
-          <a href="/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새창 이동"><span>해외경제정보드림</span></a>
+          <a href="/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새 창 열림"><span>해외경제정보드림</span></a>
         </div>
 
         <nav>
@@ -710,7 +708,7 @@
                     </li>
 
                     <li class="">
-                      <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a>
+                      <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새 창 열림" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 열림)" rel="noopener noreferrer">청산·국내복귀</a>
                     </li>
 
                     <li class="">
@@ -1149,7 +1147,7 @@
                           </li>
 
                           <li class="">
-                            <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a>
+                            <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새 창 열림" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 열림)" rel="noopener noreferrer">청산·국내복귀</a>
                           </li>
 
                           <li class="">
@@ -1305,7 +1303,7 @@
       </script>
       <div id="snb_board"></div>
 
-      <div id="contents">
+      <main id="contents">
         <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
         <script>
@@ -2475,21 +2473,21 @@
                       	</div>
                       </li>
             </script>
-            <div class="pagination">
+            <nav class="pagination" aria-label="페이지 이동">
               <div class="num_paging"><span>Page 1/69</span></div>
-              <button type="button" class="btn_first" onclick="fn_linkPage(1)" title="첫 페이지로 이동"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1)" title="이전 5개 목록 페이지로 이동"><span>이전</span></button>
+              <button type="button" class="btn_first" onclick="fn_linkPage(1)" aria-label="첫 페이지로 이동" disabled aria-disabled="true"><span>처음</span></button> <button type="button" class="btn_prev" onclick="fn_linkPage(1)" aria-label="이전 5개 목록 페이지로 이동" disabled aria-disabled="true"><span>이전</span></button>
               <ul class="paging">
-                <li><button type="button" class="on" title="선택됨">1</button></li>
-                <li><button type="button" onclick="fn_linkPage(2)" title="2번 페이지로 이동">2</button></li>
-                <li><button type="button" onclick="fn_linkPage(3)" title="3번 페이지로 이동">3</button></li>
-                <li><button type="button" onclick="fn_linkPage(4)" title="4번 페이지로 이동">4</button></li>
-                <li><button type="button" onclick="fn_linkPage(5)" title="5번 페이지로 이동">5</button></li>
+                <li><button type="button" class="on" aria-current="page">1</button></li>
+                <li><button type="button" onclick="fn_linkPage(2)" aria-label="2번 페이지로 이동">2</button></li>
+                <li><button type="button" onclick="fn_linkPage(3)" aria-label="3번 페이지로 이동">3</button></li>
+                <li><button type="button" onclick="fn_linkPage(4)" aria-label="4번 페이지로 이동">4</button></li>
+                <li><button type="button" onclick="fn_linkPage(5)" aria-label="5번 페이지로 이동">5</button></li>
               </ul>
-              <button type="button" class="btn_next" onclick="fn_linkPage(6)" title="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(69)" title="마지막 페이지로 이동"><span>끝</span></button>
-            </div>
+              <button type="button" class="btn_next" onclick="fn_linkPage(6)" aria-label="다음 5개 목록 페이지로 이동"><span>다음</span></button> <button type="button" class="btn_end" onclick="fn_linkPage(69)" aria-label="마지막 페이지로 이동"><span>끝</span></button>
+            </nav>
           </div>
         </article>
-      </div>
+      </main>
     </div>
     <button type="button" id="btn_top">TOP</button>
 

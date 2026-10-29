@@ -15,64 +15,51 @@
     <meta property="og:image" content="https://dream.kotra.or.kr/type/news/img/layout/logo_navi.png" />
 
     <link rel="shortcut icon" href="../img/common/favicon_news.ico" />
+    
 
     <link rel="stylesheet" type="text/css" href="../css/total.css" />
 
     <script src="../js/lib/jquery-3.5.1.min.js"></script>
-    <script src="../js/lib/jquery.easing.1.3.js"></script>
 
-    <!-- 슬라이더 -->
+    <!-- slider / scroll -->
     <link rel="stylesheet" type="text/css" href="../js/lib/slick/slick.css" />
     <script src="../js/lib/slick/slick.min.js"></script>
     <script src="../js/lib/slick/slick.acc.js"></script>
-    <script src="../js/lib/sly-master/sly.min.js"></script>
-
-    <!-- 커스텀스크롤 -->
     <script src="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../js/lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
 
-    <!-- datepicker -->
-    <script type="text/javascript" src="../js/lib/datepicker_master/datepicker.js"></script>
+    <!-- datepicker + UI 위젯 -->
+    <script src="../js/lib/datepicker_master/datepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="../js/lib/datepicker_master/datepicker.css" />
-
-    <!-- board -->
-    <script src="../js/lib/board.js"></script>
-    <script src="../js/lib/jquery.form.js"></script>
+    <script src="../js/lib/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="../js/lib/jquery-ui.css" />
     <link rel="stylesheet" href="../js/lib/jquery-ui.theme.css" />
-    <script src="../js/lib/jquery-ui.min.js"></script>
+
+    <!-- board UI / form / ajax / tmpl -->
+    <script src="../js/lib/board.js"></script>
+    <script src="../js/lib/jquery.form.js"></script>
     <script src="../js/lib/comm_fr.js"></script>
     <script src="../js/lib/util.js"></script>
     <script src="../js/lib/jquery.tmpl.js"></script>
+
+    <!-- utility -->
     <script src="../js/lib/clipboard.min.js"></script>
-    <script src="../type/admin/js/printThis.js"></script>
-    <script src="../js/lib/makePCookie.js"></script>
-    <script src="../js/lib/nlogger.js"></script>
+    <script src="../js/lib/printThis.js"></script>
+    <script src="../js/lib/bluebird.min.js"></script>
     <script src="../js/lib/jspdf.min.js"></script>
     <script src="../js/lib/html2canvas.min.js"></script>
-    <script src="../js/lib/bluebird.min.js"></script>
-
-    <!-- 공통 레이아웃 통합 -->
-    <script src="../js/pnb_org_trails.js"></script>
-    <script src="../js/pnb.js"></script>
-    <script src="../js/layout_common.js"></script>
     <script src="../js/cms_file.js"></script>
 
-    <!-- SNS -->
+    <!-- layout -->
+    <script src="../js/layout_common.js"></script>
+    <script src="../js/header_news.js"></script>
+    <script src="../js/breadcrumb.js"></script>
+
+    <!-- SNS / logger -->
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-
-    <!-- logger -->
     <script src="../js/logger.js"></script>
-
-    <!-- 페이지별 게시판 스크립트 인라인 -> 파일로 분리 -->
-    <!-- <script src="../js/board.js"></script>
-    <script src="../type/news/js/filter_board.js"></script> -->
-
-    <!-- board 추가 정리중 -->
+    <!-- page board -->
     <script src="../js/board_list.js"></script>
-    <!-- 상세 페이지용. 목록에서는 로드하지 않음 -->
-    <!-- <script src="../js/board_detail.js"></script> -->
-
   </head>
 
   <body class="typeSub">
@@ -99,7 +86,7 @@
     <div id="container">
       <div id="snb_board"></div>
 
-      <div id="contents">
+      <main id="contents">
         <!-- 브레드크럼, 페이지 SNS 공유 -->
         <div id="pnb"></div>
 
@@ -514,16 +501,16 @@
 				</script>
 			</table>
 		</div>
-		<div class="pagination">
+		<nav class="pagination" aria-label="페이지 이동">
 
 
 
-<div class="num_paging"><span>Page 1/184</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" title="첫 페이지로 이동"><span>처음</span>></button>
-              <button type="button" class="btn_prev" onclick="fn_linkPage(1);" title="이전 5개 목록 페이지로 이동"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" title="선택됨">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" title="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" title="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" title="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" title="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" title="다음 5개 목록 페이지로 이동"><span>다음</span>></button>
-              <button type="button" class="btn_end" onclick="fn_linkPage(184);" title="마지막 페이지로 이동"><span>끝</span></button> </div>
+<div class="num_paging"><span>Page 1/184</span></div><button type="button" class="btn_first" onclick="fn_linkPage(1);" aria-label="첫 페이지로 이동" disabled aria-disabled="true"><span>처음</span>></button>
+              <button type="button" class="btn_prev" onclick="fn_linkPage(1);" aria-label="이전 5개 목록 페이지로 이동" disabled aria-disabled="true"><span>이전</span></button> <ul class="paging"><li><button type="button" class="on" aria-current="page">1</button></li> <li><button type="button" onclick="fn_linkPage(2);" aria-label="2번 페이지로 이동">2</button></li> <li><button type="button" onclick="fn_linkPage(3);" aria-label="3번 페이지로 이동">3</button></li> <li><button type="button" onclick="fn_linkPage(4);" aria-label="4번 페이지로 이동">4</button></li> <li><button type="button" onclick="fn_linkPage(5);" aria-label="5번 페이지로 이동">5</button></li> </ul><button type="button" class="btn_next" onclick="fn_linkPage(6);" aria-label="다음 5개 목록 페이지로 이동"><span>다음</span>></button>
+              <button type="button" class="btn_end" onclick="fn_linkPage(184);" aria-label="마지막 페이지로 이동"><span>끝</span></button> </nav>
 </div>
         </article>
-      </div>
+      </main>
     </div>
 
     <!-- 푸터 -->

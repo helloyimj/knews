@@ -2,16 +2,24 @@
 
 /* input */
 /* placeholder 클릭 시 감춤 */
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { /* WebKit browsers */ color:transparent !important; }
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { /* WebKit browsers */ 
+	// color: transparent;
+	color:#666!important; }
 input:focus:-moz-placeholder,
-textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color:transparent !important; }
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ color:transparent !important; }
+textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	// color: transparent;
+	color:#666!important; }
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	// color: transparent;
+	color:#666!important; }
 input:focus:-ms-input-placeholder,
-textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color:transparent !important; }
+textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	// color: transparent;
+	color:#666!important; }
 
 /* .inp_r / .inp_c / .inp_s / .inp_t 기본형은 _form.scss */
 
-@media all and (max-width:1041px){
+@media all and (max-width:1023px){
 
     /* input */
     .inp_r>input[type=radio] { top:2.3px;left:1px;width:17px;height:17px;}

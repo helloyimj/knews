@@ -1,11 +1,10 @@
-
 /* ============================================================
  * layout_common.js
  * layout.js + inline Script 통합본
  * - 기존 기능/이벤트 삭제 없이 전부 유지
  * - 오타 수정 완료
  * - 역할별 init 함수로 구조화 (React 마이그레이션 시 useEffect 단위 대응 목적)
- * - 공통 영역에서 사용되는 레이아웃 DOM 
+ * - 공통 영역에서 사용되는 레이아웃 DOM
  * - 공통 영역에서만 사용되는 init 함수는 layout_common.js에 정의
  * ============================================================ */
 
@@ -18,42 +17,39 @@
  * - 기존 `layout.js`와 HTML 내부 인라인 스크립트를 하나로 통합한 파일입니다.
  * - 기존 기능 및 이벤트 핸들러의 누락 없이 100% 온전하게 보존하였습니다.
  * - 발견된 오타 및 잠재적 오류를 수정하여 안정성을 확보했습니다.
- * 
+ *
  * [아키텍처 및 구조 특징]
  * - 역할별 `init` 함수 패턴으로 구조화하여 코드의 응집도와 가독성을 높였습니다.
- * - 추후 React 등 모던 프론트엔드로 마이그레이션할 때, 컴포넌트별 
+ * - 추후 React 등 모던 프론트엔드로 마이그레이션할 때, 컴포넌트별
  *   `useEffect` 단위로 쉽게 쪼개어 대응할 수 있도록 모듈식으로 설계되었습니다.
- * 
+ *
  * [사용 범위]
  * - 전역 공통 영역(Header, Footer, GNB 등)에서 공통으로 사용되는 레이아웃 DOM 제어
  * - 공통 영역 전용 초기화 함수들을 본 파일 내에서 정의 및 관리
- * 
+ *
  * [기타]
  * - 기존 `layout.js`와 HTML 내부 인라인 스크립트의 기능을 모두 포함하고 있으므로,
  *  중복 로딩을 방지하기 위해 기존 파일들은 제거하고 본 파일만 로드하도록 권장합니다.
- *    
+ *
  * - 경로오류를 방지하기 위해, 임시로 루트 설정을 URL 상에서 `https://dream.kotra.or.kr`로 고정하였습니다.
  * ============================================================================
  */
 
 /* ============================================================
- * 추가 
+ * 추가
  * layout.js + inline Script 통합본
- * - slickSnbBookmark snb_board 하단에 있는 snb 가 시장뉴스 사이트에서는 pnb로 이룸이 변경되어있는것같고. snb 관련 태그 작성되어있는것이없음!
- * - 
- * - 
- * - 
- * - 
- * - 
- * - 
- * - 
+ * - snb_board(SNS 보드) 하단 snb 는 시장뉴스에서 pnb 로 바뀐 것으로 보이며, snb 관련 마크업이 없을 수 있음
+ * -
+ * -
+ * -
+ * -
+ * -
+ * -
+ * -
  * ============================================================ */
-// 
-
-
+//
 
 $(document).ready(function () {
-
   // 0. top_util 수정 20260921
   // initCommonheaderTopUtil();
 
@@ -69,8 +65,8 @@ $(document).ready(function () {
   window.gnbDep2 = 0;
   window.gnbDep3 = 0;
 
-  // 2-1. MENU_ID / gnb on 기준으로 현재 메뉴 표시 (pnb.js)
-  if (typeof window.applyGnbCurrentByMenuId === 'function') {
+  // 2-1. MENU_ID / gnb on 기준으로 현재 메뉴 표시 (breadcrumb.js)
+  if (typeof window.applyGnbCurrentByMenuId === "function") {
     applyGnbCurrentByMenuId();
   }
 
@@ -89,11 +85,8 @@ $(document).ready(function () {
   // 7. SNS 공유 / 카카오 / 북마크 / 프린트 / URL복사 (inline Script)
   initSnsShare();
 
-  // 8. SNS 보드 슬릭 (inline Script)
-  initSnsBoardSlick();
-
-  // 9. 푸터 배너 슬릭 (inline Script)
-  initFooterBannerSlick();
+  // 8. SNS 보드 슬라이더 (inline Script) — #snb_board .snb_bookmark 있을 때만
+  initSnsBoardSlider();
 
   // ---- 여기부터 layout.js  ----
 
@@ -103,8 +96,9 @@ $(document).ready(function () {
   // 11. gnb 현재 메뉴 on 클래스 세팅 (layout.js)
   initGnbCurrentState();
 
-  // 11-1. pnb: 뼈대·메뉴 채움 + 드롭다운 클릭 + 옵션 UI (pnb.js / html_org 기준)
-  if (typeof window.initPnb === 'function') {
+  // 11-1. pnb: 뼈대·메뉴 채움 + 드롭다운 클릭 + 옵션 UI (breadcrumb.js / html_org 기준)
+  // 메인(typeMain)에는 #pnb 없음
+  if (!$("body").hasClass("typeMain") && typeof window.initPnb === "function") {
     initPnb();
   }
 
@@ -120,7 +114,7 @@ $(document).ready(function () {
   // 15. 스크롤 이벤트 (sticky, top버튼 노출) (layout.js)
   initScrollHandler();
 
-  // 16. (pnb UI → initPnb / js/pnb.js)
+  // 16. (pnb UI → initPnb / js/breadcrumb.js)
 
   // 17. 상단 사이트맵 팝업 열기/닫기 (layout.js, initSitemap과는 별도 - pnb류 팝업 오픈 트리거)
   initSitemapPopupTrigger();
@@ -139,10 +133,7 @@ $(document).ready(function () {
 
   // 22. As-is 탑배너 팝업 (layout.js)
   initTopBannerPopup();
-
 });
-
-
 
 // // 0.initCommonheaderTopUtil
 // function initCommonheaderTopUtil() {
@@ -152,37 +143,34 @@ $(document).ready(function () {
 //   //  <div class="h-top">
 // 	// 			<div class="inner_wrapper">
 // 	// 				<div id="family-site">
-// 	// 					<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/" target="_blank"><img src="/bigdata/resources/images/comm/masthead_logo.png" alt="KOTRA"></a> 
+// 	// 					<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/" target="_blank" title="새 창 열림"><img src="/bigdata/resources/images/comm/masthead_logo.png" alt="KOTRA"></a>
 // 	// 					<button type="button" class="btn_more">
 // 	// 						<span>사이트 더보기</span>
 // 	// 					</button>
 // 	// 				</div>
 
-
 //   $('#skip_menu').prepend(`
-
 
 //       <header id="header_top">
 // 			<div class="h-top">
 // 				<div class="inner_wrapper">
 // 					<div id="family-site">
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/" target="_blank"><img src="/bigdata/resources/images/comm/masthead_logo.png" alt="KOTRA"></a> 
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/" target="_blank" title="새 창 열림"><img src="/bigdata/resources/images/comm/masthead_logo.png" alt="KOTRA"></a>
 // 						<button type="button" class="btn_more">
 // 							<span>사이트 더보기</span>
 // 						</button>
 // 					</div>
-					
+
 // 					<!-- 2024_kotra -->
 // 					<ul class="masthead_utils">
 // 						<li><a href="javascript:void(0);" onclick="login(); return false;">로그인</a></li>
 // 							<li><span>|</span></li>
 // 							<li><a href="https://www.kotra.or.kr/membership/indvdlMberJoinTyChoc.do?siteName=big">회원가입</a></li>
-// 						</ul>					
+// 						</ul>
 // 					<!-- //2024_kotra -->
-					
+
 // 					</div>
 // 			</div>
-
 
 // 			<script>
 // 				$(function() {
@@ -193,23 +181,23 @@ $(document).ready(function () {
 // 						$(this).addClass('on').siblings().removeClass('on');
 // 						// $(this).find('.btn_s').hide();
 // 						// $(this).find('.btn_o').show();
-// 					});			
-					
+// 					});
+
 // 					// $('div.pop_home p').mouseout(function(e){
 // 					// 	$(this).siblings('p').removeClass('on');
 // 					// 	$(this).siblings('p').find('.btn_o').hide();
 // 					// 	$(this).siblings('p').find('.btn_s').show();
-// 					// });		
-					
+// 					// });
+
 // 					// $('div.pop_home').hover(function(){
 // 					// 	var btnOn = $('div.pop_home p.on');
 // 					// 	btnOn.removeClass('on');
 // 					// 	if( btnOn ){
 // 					// 		btnOn.find('.btn_o').hide();
 // 					// 		btnOn.find('.btn_s').show();
-// 					// 	}						
-// 					// });			
-					
+// 					// 	}
+// 					// });
+
 // 					$('div.pop_home .btn_close').click(function(){
 // 						var btnOn = $('div.pop_home p.on');
 // 						btnOn.removeClass('on');
@@ -220,12 +208,12 @@ $(document).ready(function () {
 // 						if (window.innerWidth <= _TABLET_MAX_WIDTH) {
 // 							$('#header').hide();
 // 						}
-						
+
 // 						$('div.pop_home').slideUp();
 // 					});
-					
+
 // 				});
-				
+
 // 				function login(returnUrl, isNewWindow) {
 // 					if(returnUrl) {
 // 						returnUrl = 'https://' + location.hostname + contextPath + returnUrl;
@@ -235,28 +223,27 @@ $(document).ready(function () {
 // 					if(isNewWindow){
 //                         window.open('https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl));
 //                     }else{
-//                         location.href = 'https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl); 
+//                         location.href = 'https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl);
 //                     }
 // 				}
-				
+
 // 				function loginExt(returnUrl, isNewWindow) {
 // 					if(isNewWindow){
 //                         window.open('https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl));
 //                     }else{
-//                         location.href = 'https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl); 
+//                         location.href = 'https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl);
 //                     }
-// 				}				
-				
-                
+// 				}
+
 //                 function logout() {
 // 					sessionStorage.removeItem('mypage.member-profile')
 
 //                     $.get(contextPath + '/logout')
 //                         .always(function() {
-//                             location.href = contextPath + '/main'; 
+//                             location.href = contextPath + '/main';
 //                         });
 //                 }
-				
+
 // 				function gotoUrl(url){
 // 					window.location.href = url;
 // 				}
@@ -281,41 +268,41 @@ $(document).ready(function () {
 // 					</div>
 // 				</div>
 // 			</div>
-			
+
 // 			<div class="pop_home">
 // 				<ul class="home_box">
 // 					<li>
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr" target="_blank" class="family_site01">kotra 무역투자24</a>
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr" target="_blank" title="새 창 열림" class="family_site01">kotra 무역투자24</a>
 // 					</li>
 // 					<li>
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://dream.kotra.or.kr/dream" target="_blank" class="family_site02">해외비즈니스 정보 포털</a>
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://dream.kotra.or.kr/dream" target="_blank" title="새 창 열림" class="family_site02">해외비즈니스 정보 포털</a>
 // 					</li>
 // 					<li>
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.gep.or.kr/" target="_blank" class="family_site03">글로벌 전시포털</a> 
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.gep.or.kr/" target="_blank" title="새 창 열림" class="family_site03">글로벌 전시포털</a>
 // 					</li>
 // 					<li>
-// 						<a href="https://www.kotra.or.kr/gtc_kor" target="_blank" class="family_site04">KOTRA 해외인재유치센터</a>
+// 						<a href="https://www.kotra.or.kr/gtc_kor" target="_blank" title="새 창 열림" class="family_site04">KOTRA 해외인재유치센터</a>
 // 					</li>
 // 					<li>
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.investkorea.org/" target="_blank" class="family_site05">투자유치정보제공</a>
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.investkorea.org/" target="_blank" title="새 창 열림" class="family_site05" aria-label="청산·국내복귀(새 창 열림)">>투자유치정보제공</a>
 // 					</li>
 // 					<li>
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.buykorea.or.kr/" target="_blank" class="family_site06">수출지원 온라인 플랫폼</a>
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.buykorea.or.kr/" target="_blank" title="새 창 열림" class="family_site06">수출지원 온라인 플랫폼</a>
 // 					</li>
 // 					<li>
-// 						<a href="/bigdata/" target="_blank" class="family_site07">빅데이터 서비스</a>
+// 						<a href="/bigdata/" target="_blank" title="새 창 열림" class="family_site07">빅데이터 서비스</a>
 // 					</li>
 // 					<li>
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://president.globalwindow.org" target="_blank" class="family_site08">경제외교 활용포털</a>
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://president.globalwindow.org" target="_blank" title="새 창 열림" class="family_site08">경제외교 활용포털</a>
 // 					</li>
 // 					<li>
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/kodits" target="_blank" class="family_site09">방산물자교역지원센터</a>
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr/kodits" target="_blank" title="새 창 열림" class="family_site09">방산물자교역지원센터</a>
 // 					</li>
 // 					<li>
-// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://ombudsman.kotra.or.kr/ob-kr" target="_blank" class="family_site10">외투기업고충처리</a>
+// 						<a href="/bigdata/kotraSsoRedirect?targetURL=https://ombudsman.kotra.or.kr/ob-kr" target="_blank" title="새 창 열림" class="family_site10">외투기업고충처리</a>
 // 					</li>
 // 					<li>
-// 						<a href="https://www.exportvoucher.com" target="_blank" class="family_site11">수출바우처 &middot; 지사화</a>
+// 						<a href="https://www.exportvoucher.com" target="_blank" title="새 창 열림" class="family_site11">수출바우처 &middot; 지사화</a>
 // 					</li>
 // 				</ul>
 // 				<button type="button" class="btn_close">닫기</button>
@@ -334,23 +321,23 @@ $(document).ready(function () {
 //     //     $(this).addClass('on').siblings().removeClass('on');
 //     //     // $(this).find('.btn_s').hide();
 //     //     // $(this).find('.btn_o').show();
-//     //   });			
-      
+//     //   });
+
 //     //   // $('div.pop_home p').mouseout(function(e){
 //     //   // 	$(this).siblings('p').removeClass('on');
 //     //   // 	$(this).siblings('p').find('.btn_o').hide();
 //     //   // 	$(this).siblings('p').find('.btn_s').show();
-//     //   // });		
-      
+//     //   // });
+
 //     //   // $('div.pop_home').hover(function(){
 //     //   // 	var btnOn = $('div.pop_home p.on');
 //     //   // 	btnOn.removeClass('on');
 //     //   // 	if( btnOn ){
 //     //   // 		btnOn.find('.btn_o').hide();
 //     //   // 		btnOn.find('.btn_s').show();
-//     //   // 	}						
-//     //   // });			
-      
+//     //   // 	}
+//     //   // });
+
 //     //   $('div.pop_home .btn_close').click(function(){
 //     //     var btnOn = $('div.pop_home p.on');
 //     //     btnOn.removeClass('on');
@@ -361,12 +348,12 @@ $(document).ready(function () {
 //     //     if (window.innerWidth <= _TABLET_MAX_WIDTH) {
 //     //       $('#header').hide();
 //     //     }
-        
+
 //     //     $('div.pop_home').slideUp();
 //     //   });
-      
+
 //     // });
-				
+
 // 		// 		function login(returnUrl, isNewWindow) {
 // 		// 			if(returnUrl) {
 // 		// 				returnUrl = 'https://' + location.hostname + contextPath + returnUrl;
@@ -376,28 +363,24 @@ $(document).ready(function () {
 // 		// 			if(isNewWindow){
 //     //                     window.open('https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl));
 //     //                 }else{
-//     //                     location.href = 'https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl); 
+//     //                     location.href = 'https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl);
 //     //                 }
 // 		// 		}
-				
+
 // 		// 		function loginExt(returnUrl, isNewWindow) {
 // 		// 			if(isNewWindow){
 //     //                     window.open('https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl));
 //     //                 }else{
-//     //                     location.href = 'https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl); 
+//     //                     location.href = 'https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=big&retURL=' + encodeURIComponent(returnUrl);
 //     //                 }
-// 		// 		}				
-				
-    
-
+// 		// 		}
 
 /* ============================================================
  * 1. DOM 주입 (inline Script)
  * ============================================================ */
 function initCommonLayout() {
-
   // 스킵 메뉴
-  $('body.typeSub').prepend(`
+  $("body.typeSub").prepend(`
     <div id="skip_menu">
       <a href="#contents">본문 바로가기</a>
       <a href="#header">주메뉴 바로가기</a>
@@ -407,8 +390,8 @@ function initCommonLayout() {
     <div id="gnb_dim"></div>
         `);
 
-    // 최상단 masthead
-    $('#masthead_kotra').html(`
+  // 최상단 masthead
+  $("#masthead_kotra").html(`
           <!-- masthead -->
           <div class="masthead_kotra">
             <div class="masthead_wrapper">
@@ -485,7 +468,7 @@ function initCommonLayout() {
   //     </a>
   //   </h1>
   //   <button type="button" title="전체메뉴" class="mBtn_topMenu">전체메뉴</button>
-  //   <!-- 모바일 전용 
+  //   <!-- 모바일 전용
   //   <div class="top_util">
   //     <a href="javascript:void(0);" class="btn_topLogin" title="로그인"><span>로그인</span></a>
   //     <a href="https://www.kotra.or.kr/kp/cmm/mber/sbscrb/selectSbscrbUsrTy.do" class="btn_join" title="회원가입"><span>회원가입</span></a>
@@ -513,7 +496,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
   //                 <img src="https://dream.kotra.or.kr/type/common/img/common/more_siteLogo12.png" alt="KOTRA 무역투자24" title="KOTRA 무역투자24" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>KOTRA 무역투자24</strong>
   //               </a>
   //             </p>
@@ -521,7 +504,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_s" title="새 창 열림">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_12.png" alt="해외경제정보드림" title="해외경제정보드림" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>해외경제정보드림</strong>
   //               </a>
   //             </p>
@@ -529,7 +512,7 @@ function initCommonLayout() {
   //               <a href="https://www.exportvoucher.com" target="_blank" class="btn_s" title="새 창 열림">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_03.png" alt="수출지원기반 활용사업" title="수출지원기반 활용사업" />
   //               </a>
-  //               <a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>수출바우처 · 지사화</strong>
   //               </a>
   //             </p>
@@ -537,7 +520,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_04.png" alt="옴부즈만" title="옴부즈만" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>외투기업고충처리</strong>
   //               </a>
   //             </p>
@@ -545,7 +528,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_05.png" alt="Inverst KOREA" title="Inverst KOREA" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>투자유치정보제공</strong>
   //               </a>
   //             </p>
@@ -553,7 +536,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_06.png" alt="글로벌 전시포털" title="글로벌 전시포털" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>국내 · 해외전시정보</strong>
   //               </a>
   //             </p>
@@ -561,7 +544,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_07.png" alt="바이코리아(Seller)" title="바이코리아(Seller)" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>수출지원 온라인 플랫폼</strong>
   //               </a>
   //             </p>
@@ -569,7 +552,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_08.png" alt="경제외교 활용포털" title="경제외교 활용포털" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>경제외교 활용포털</strong>
   //               </a>
   //             </p>
@@ -577,7 +560,7 @@ function initCommonLayout() {
   //               <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_s" title="새 창 열림" style="">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_09.png" alt="Contract KOREA" title="Contract KOREA" />
   //               </a>
-  //               <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>해외전문인력유치센터</strong>
   //               </a>
   //             </p>
@@ -585,7 +568,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_10.png" alt="Kodits" title="Kodits" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>방산물자교역지원센터</strong>
   //               </a>
   //             </p>
@@ -593,7 +576,7 @@ function initCommonLayout() {
   //               <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
   //                 <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_13.png" alt="무역투자빅데이터" title="무역투자빅데이터" />
   //               </a>
-  //               <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+  //               <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
   //                 <strong>무역투자빅데이터</strong>
   //               </a>
   //             </p>
@@ -602,7 +585,7 @@ function initCommonLayout() {
   //         </div>
   //       </div>
   //     </div> -->
-  //     <a href="https://dream.kotra.or.kr/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새창 이동"><span>해외경제정보드림</span></a>
+  //     <a href="https://dream.kotra.or.kr/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새 창 열림"><span>해외경제정보드림</span></a>
   //   </div>
 
   //   <nav>
@@ -763,7 +746,7 @@ function initCommonLayout() {
   //             <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" class="360" data-sub="Y" target="_self">직접투자절차</a>
   //             <ul class="menuS">
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=570" class="570" title="" data-sub="N" target="_self">해외투자준비</a></li>
-  //               <li class=""><a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a></li>
+  //               <li class=""><a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새 창 열림" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 열림)" rel="noopener noreferrer">청산·국내복귀</a></li>
   //               <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=600" class="600" title="" data-sub="N" target="_self">FAQ</a></li>
   //             </ul>
   //           </li>
@@ -957,7 +940,7 @@ function initCommonLayout() {
   //                 <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=360" data-sub="Y" target="_self">직접투자절차</a>
   //                 <ul class="menuS">
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=570" title="" data-sub="N" target="_self">해외투자준비</a></li>
-  //                   <li class=""><a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a></li>
+  //                   <li class=""><a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새 창 열림" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 열림)" rel="noopener noreferrer">청산·국내복귀</a></li>
   //                   <li class=""><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=600" title="" data-sub="N" target="_self">FAQ</a></li>
   //                 </ul>
   //               </li>
@@ -1016,13 +999,14 @@ function initCommonLayout() {
   //   </div>
   // `);
 
-  // 브레드크럼 뼈대 → pnb.js (html_org #pnb 구조). 메뉴명/목록은 initPnb() 가 채움
-  if (typeof window.ensurePnbSkeleton === 'function') {
+  // 브레드크럼 뼈대 → breadcrumb.js (html_org #pnb 구조). 메뉴명/목록은 initPnb() 가 채움
+  // 메인(typeMain)에는 #pnb 없음
+  if (!$("body").hasClass("typeMain") && typeof window.ensurePnbSkeleton === "function") {
     ensurePnbSkeleton();
   }
 
   // TOP버튼
-  $('#footer').before(`
+  $("#footer").before(`
     <button type="button" id="btn_top">TOP</button>
     `);
 
@@ -1030,31 +1014,31 @@ function initCommonLayout() {
   // $('#footer').html(`
   //   <footer>
   //     <div class="mu-footer">
-	// 	<div class="wrapper">
-	// 		<p class="mu-footer-logo"><img src="https://www.kotra.or.kr/bigdata/resources/images/comm/logo_footer.png" alt="Kotra"></p>
-	// 		<div class="mu-footer-info">
-	// 			<ul class="mu-footer-menu">
-	// 				<li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr&amp;retURL=https://www.kotra.or.kr/module/stplatLog/selectStplatLogList.do?stplatSeq=20000002282" style="font-weight: bold;">이용약관</a></li>
+  // 	<div class="wrapper">
+  // 		<p class="mu-footer-logo"><img src="https://www.kotra.or.kr/bigdata/resources/images/comm/logo_footer.png" alt="Kotra"></p>
+  // 		<div class="mu-footer-info">
+  // 			<ul class="mu-footer-menu">
+  // 				<li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr&amp;retURL=https://www.kotra.or.kr/module/stplatLog/selectStplatLogList.do?stplatSeq=20000002282" style="font-weight: bold;">이용약관</a></li>
   //                   <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr&amp;retURL=https://www.kotra.or.kr/module/stplatLog/selectPolicyLogList.do?stplatSeq=20000002275">저작권정책</a></li>
   //                   <li class="policy"><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr&amp;retURL=https://www.kotra.or.kr/module/stplatLog/selectPolicyLogList.do?stplatSeq=20000002272">개인정보처리방침</a></li>
   //                   <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr&amp;retURL=https://www.kotra.or.kr/subList/20000005857">정보공개</a></li>
   //                   <li><a href="/bigdata/kotraSsoRedirect?targetURL=https://www.kotra.or.kr&amp;retURL=https://www.kotra.or.kr/sitemap.do">사이트맵</a></li>
-	// 			</ul>
-	// 			<ul class="copy">
-	// 				<li>
-	// 					서울시 서초구 헌릉로 13 &nbsp;|&nbsp;
-	// 					사업자등록번호 : 120-82-00275 &nbsp;|&nbsp;
-	// 					대표자명 : 강경성 &nbsp; TEL. <span class="mobile-tel"><a href="tel:02-3460-3309">1600-7119</a></span>
-	// 					<span class="desktop-tel">1600-7119</span>
-	// 					<span>(AI플랫폼팀)</span>
-	// 				</li>
-	// 				<li>
-	// 					<span>COPYRIGHT(c)2023 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</span>
-	// 				</li>
-	// 			</ul>
-	// 		</div>
-	// 	</div>
-	// </div>
+  // 			</ul>
+  // 			<ul class="copy">
+  // 				<li>
+  // 					서울시 서초구 헌릉로 13 &nbsp;|&nbsp;
+  // 					사업자등록번호 : 120-82-00275 &nbsp;|&nbsp;
+  // 					대표자명 : 강경성 &nbsp; TEL. <span class="mobile-tel"><a href="tel:02-3460-3309">1600-7119</a></span>
+  // 					<span class="desktop-tel">1600-7119</span>
+  // 					<span>(AI플랫폼팀)</span>
+  // 				</li>
+  // 				<li>
+  // 					<span>COPYRIGHT(c)2023 KOTRA. ALL RIGHTS RESERVED 대한무역투자진흥공사</span>
+  // 				</li>
+  // 			</ul>
+  // 		</div>
+  // 	</div>
+  // </div>
   //   </footer>
   // `);
 }
@@ -1113,8 +1097,12 @@ function setHref(obj, org) {
   if ($(obj).find("> div").length > 0) {
     if ($(obj).find("> div> ul > li:not('.emptyArea')").length > 0) {
       if ($(obj).find(">a").data("sub") == "Y") {
-        $(org).find(">a").attr("href", $(obj).find("> div> ul > li:not('.emptyArea'):eq(0) > a").attr("href"));
-        $(org).find(">a").attr("target", $(obj).find("> div> ul > li:not('.emptyArea'):eq(0) > a").attr("target"));
+        $(org)
+          .find(">a")
+          .attr("href", $(obj).find("> div> ul > li:not('.emptyArea'):eq(0) > a").attr("href"));
+        $(org)
+          .find(">a")
+          .attr("target", $(obj).find("> div> ul > li:not('.emptyArea'):eq(0) > a").attr("target"));
 
         setHref($(obj).find("> div> ul > li:not('.emptyArea'):eq(0)"), org);
       } else {
@@ -1124,8 +1112,12 @@ function setHref(obj, org) {
   } else {
     if ($(obj).find("> ul > li:not('.emptyArea')").length > 0) {
       if ($(obj).find(">a").data("sub") == "Y") {
-        $(org).find(">a").attr("href", $(obj).find("> ul > li:not('.emptyArea'):eq(0) > a").attr("href"));
-        $(org).find(">a").attr("target", $(obj).find("> ul > li:not('.emptyArea'):eq(0) > a").attr("target"));
+        $(org)
+          .find(">a")
+          .attr("href", $(obj).find("> ul > li:not('.emptyArea'):eq(0) > a").attr("href"));
+        $(org)
+          .find(">a")
+          .attr("target", $(obj).find("> ul > li:not('.emptyArea'):eq(0) > a").attr("target"));
 
         setHref($(obj).find("> ul > li:not('.emptyArea'):eq(0)"), org);
       } else {
@@ -1145,33 +1137,35 @@ function initGnbHrefDelegate() {
  * (inline Script)
  * ============================================================ */
 function initHeaderUtil() {
-  // navList / pnbList 클릭 → pnb.js bindPnbMenuClicks()
+  // navList / pnbList 클릭 → breadcrumb.js bindPnbMenuClicks()
 
   calcGnbDepthVars();
   var $gnbLeaf = getGnbLeafLi();
   if ($gnbLeaf.length) {
-    $('.sVisual strong').text($.trim($gnbLeaf.children('a').first().text()));
+    $(".sVisual strong").text($.trim($gnbLeaf.children("a").first().text()));
   }
 
-  $(document).on('click', '.btn_logout, .btn_topLogout', function () {
+  $(document).on("click", ".btn_logout, .btn_topLogout", function () {
     frameBtnObj = $(this);
     $("body").css("overflow-y", "hidden");
-    $('<iframe id="iframeLogoutPop" src="https://dream.kotra.or.kr/kotranews/cms/frCom/actionLogoutPop.do" class="pop_iframe on" height="100%" scrolling="no" frameborder="0" title="로그아웃 팝업"/>').appendTo($("body #container"));
+    $(
+      '<iframe id="iframeLogoutPop" src="https://dream.kotra.or.kr/kotranews/cms/frCom/actionLogoutPop.do" class="pop_iframe on" height="100%" scrolling="no" frameborder="0" title="로그아웃 팝업"/>'
+    ).appendTo($("body #container"));
   });
 
-  $(document).on('click', '.btn_login, .btn_topLogin', function () {
+  $(document).on("click", ".btn_login, .btn_topLogin", function () {
     //뉴스
     //location.href = "https://dream.kotra.or.kr/kotranews/login/topUtilLink.do?pRetUrl=" + encodeURIComponent(window.location.pathname + window.location.search);
-    sessionStorage.setItem('newsLogin', 'newsLogin');
-    location.href = "https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=kn"
+    sessionStorage.setItem("newsLogin", "newsLogin");
+    location.href = "https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=kn";
   });
 
-  $(document).on('click', '.btn_mypage', function () {
+  $(document).on("click", ".btn_mypage", function () {
     location.href = "https://dream.kotra.or.kr/dream/mypage/topUtilLink.do";
   });
 
-  $(document).on('click', '.gnb_util .btn_search', function () {
-    var pSearchTxt = $('.search_inp').val()
+  $(document).on("click", ".gnb_util .btn_search", function () {
+    var pSearchTxt = $(".search_inp").val();
 
     fn_comm_ajax({
       url: "https://dream.kotra.or.kr/ajaxf/totalSearch/getStopWordList.do",
@@ -1179,49 +1173,51 @@ function initHeaderUtil() {
       dataType: "json",
       async: false,
       success: function (data) {
-        if (null != data && '' != data) {
+        if (null != data && "" != data) {
           for (var i = 0; i < data.length; i++) {
             if (pSearchTxt == data[i].BAN_WORD) {
-              alert('\'' + data[i].BAN_WORD + '\'' + '은(는)' + ' 검색할 수 없는 단어입니다.');
+              alert("'" + data[i].BAN_WORD + "'" + "은(는)" + " 검색할 수 없는 단어입니다.");
               return false;
             }
           }
         }
 
-        $("#searchForm").find('[name=searchTxt]').val($('.search_inp').val());
-        $("#searchForm").find('[name=tDiv]').val($('.search_opt .btn_searchOpt').val());
-        $("#searchForm").find('[name=pRetUrl]').val((window.location.pathname + window.location.search));
+        $("#searchForm").find("[name=searchTxt]").val($(".search_inp").val());
+        $("#searchForm").find("[name=tDiv]").val($(".search_opt .btn_searchOpt").val());
+        $("#searchForm")
+          .find("[name=pRetUrl]")
+          .val(window.location.pathname + window.location.search);
         $("#searchForm").submit();
       }
     });
   });
 
-  $(document).on('click', '.search_opt > ul > li > button', function () {
+  $(document).on("click", ".search_opt > ul > li > button", function () {
     var sVal = $(this).val();
     var sText = $(this).text();
-    $('.search_opt .btn_searchOpt').val(sVal);
-    $('.search_opt .btn_searchOpt').text(sText);
+    $(".search_opt .btn_searchOpt").val(sVal);
+    $(".search_opt .btn_searchOpt").text(sText);
   });
 
   $("header .mBtn_topMenu").click(function () {
-    if (window.innerWidth < 1041) {
-      if (!$("nav>#gnb>li>a").hasClass('on')) {
-        $("nav>#gnb>li>a").eq(0).trigger('click');
+    if (window.innerWidth < 1024) {
+      if (!$("nav>#gnb>li>a").hasClass("on")) {
+        $("nav>#gnb>li>a").eq(0).trigger("click");
       }
     }
   });
 
   // 접근성 팝업 포커스 변경
-  $(document).on('DOMNodeInserted', '.pop_iframe', function () {
+  $(document).on("DOMNodeInserted", ".pop_iframe", function () {
     $(this).focus();
   });
-  $(document).on('DOMNodeRemoved', '.pop_iframe', function () {
+  $(document).on("DOMNodeRemoved", ".pop_iframe", function () {
     $(frameBtnObj).focus();
   });
 }
 
 function closeSearchPop() {
-  $('#iframeSearchPop').remove();
+  $("#iframeSearchPop").remove();
 }
 
 function closeTotalSearchPop() {
@@ -1236,20 +1232,20 @@ function closeLogoutPop() {
 }
 
 /************************************************************************
-* 함수명 : fn_logout
-* 설 명 :  로그아웃
-************************************************************************/
+ * 함수명 : fn_logout
+ * 설 명 :  로그아웃
+ ************************************************************************/
 function fn_logout() {
   location.href = "https://dream.kotra.or.kr/kotranews/action/actionLogout.do";
 }
 
 /************************************************************************
-* 함수명 : fn_enterkey
-* 설 명 :  엔터키 클릭 이벤트 호출
-************************************************************************/
+ * 함수명 : fn_enterkey
+ * 설 명 :  엔터키 클릭 이벤트 호출
+ ************************************************************************/
 function fn_enterkey() {
   if (window.event.keyCode == 13) {
-    $('.btn_search').trigger('click');
+    $(".btn_search").trigger("click");
   }
 }
 /* ============================================================
@@ -1271,7 +1267,31 @@ $.fn.focusWithoutScrolling = function () {
 };
 
 function initSitemap() {
-  $(".sitemapBox .map_nav").mCustomScrollbar();
+  var $mapNav = $(".sitemapBox .map_nav");
+  if ($mapNav.length && !$mapNav.hasClass("mCustomScrollbar")) {
+    $mapNav.mCustomScrollbar({
+      /* keyboard enable 시 .mCustomScrollBox 에 tabindex=0 이 붙음 → Tab 순서 오염 */
+      keyboard: { enable: false },
+      advanced: { autoScrollOnFocus: true }
+    });
+    $mapNav.find(".mCustomScrollBox").removeAttr("tabindex");
+  }
+
+  $(document)
+    .off("focusin.sitemapMapNav", ".sitemapBox .map_nav a")
+    .on("focusin.sitemapMapNav", ".sitemapBox .map_nav a", function () {
+      var $nav = $(".sitemapBox .map_nav");
+      var el = this;
+      if ($nav.length && $nav.data("mCS")) {
+        try {
+          $nav.mCustomScrollbar("scrollTo", el, { scrollInertia: 200 });
+        } catch (err) {
+          if (el.scrollIntoView) el.scrollIntoView({ block: "nearest" });
+        }
+      } else if (el.scrollIntoView) {
+        el.scrollIntoView({ block: "nearest" });
+      }
+    });
 
   $(".sitemapBox .map_gnb>li>a").click(function () {
     var mapGnb_num = $(this).parent("li").index();
@@ -1320,10 +1340,19 @@ function shareSns(sns) {
   var winOpt = new Array();
   var snsUrl = fn_getUrl();
 
-  snsItems["facebook"] = "http://www.facebook.com/share.php?t=" + encodeURIComponent(snsTitle) + "&u=" + encodeURIComponent(snsUrl);
-  snsItems["twitter"] = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(snsTitle + "\n" + snsUrl);
+  snsItems["facebook"] =
+    "http://www.facebook.com/share.php?t=" +
+    encodeURIComponent(snsTitle) +
+    "&u=" +
+    encodeURIComponent(snsUrl);
+  snsItems["twitter"] =
+    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(snsTitle + "\n" + snsUrl);
   snsItems["kakao"] = "https://story.kakao.com/share?url=" + encodeURIComponent(snsUrl);
-  snsItems["blog"] = "http://blog.naver.com/openapi/share?url=" + encodeURIComponent(snsUrl) + "&title=" + encodeURIComponent(snsTitle);
+  snsItems["blog"] =
+    "http://blog.naver.com/openapi/share?url=" +
+    encodeURIComponent(snsUrl) +
+    "&title=" +
+    encodeURIComponent(snsTitle);
   snsItems["band"] = "https://band.us/plugin/share?body=" + encodeURIComponent(snsUrl);
 
   winOpt["facebook"] = "width=700, height=500, resizable=yes";
@@ -1450,10 +1479,13 @@ function initSnsShare() {
   } catch (e) {}
 }
 /* ============================================================
- * SNS 보드 슬릭 (inline Script)
+ * SNS 보드 슬라이더 (inline Script)
+ * #snb_board .snb_bookmark .list 가 있을 때만 Slick 초기화
  * ============================================================ */
-function initSnsBoardSlick() {
-  var slickSnbBookmark = {
+function initSnsBoardSlider() {
+  var $list = $("#snb_board .snb_bookmark .list");
+  if (!$list.length) return;
+  var snsBoardSliderOpts = {
     infinite: true,
     autoplay: false,
     arrows: true,
@@ -1464,69 +1496,55 @@ function initSnsBoardSlick() {
     variableWidth: true,
     responsive: [
       {
-        breakpoint: 1041,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 5
         }
       }
     ]
   };
-  $("#snb_board .snb_bookmark .list").not(".slick-initialized").slick(slickSnbBookmark);
+  $list.not(".slick-initialized").slick(snsBoardSliderOpts);
 }
-/* ============================================================
- * 푸터 배너 슬릭 (inline Script)
- * ============================================================ */
-function initFooterBannerSlick() {
-  var slickFbnr = {
-    infinite: true,
-    autoplay: false,
-    arrows: true,
-    button: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    speed: 600,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3 } },
-      { breakpoint: 1041, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 3 } },
-      { breakpoint: 560, settings: { slidesToShow: 2 } }
-    ]
-  };
-  $("footer .f_bnr .list").not(".slick-initialized").slick(slickFbnr);
-}
-// (layout.js)
 
 /* ============================================================
  * 10. KOTRA 내부사이트 토글 (layout.js)
  * ============================================================ */
 function initKotraSiteToggle() {
-  $('.top_util .btn_kotraSite').click(function () {
-    if ($(this).hasClass('on')) {
-      $(this).removeClass('on');
-      $(this).parents('#header').removeClass('kotraSiteOn');
-      $(this).attr('title', 'KOTRA 내부사이트 열기');
+  $(".top_util .btn_kotraSite").click(function () {
+    if ($(this).hasClass("on")) {
+      $(this).removeClass("on");
+      $(this).parents("#header").removeClass("kotraSiteOn");
+      $(this).attr("title", "KOTRA 내부사이트 열기");
     } else {
-      $(this).addClass('on');
-      $(this).parents('#header').addClass('kotraSiteOn');
-      $(this).attr('title', 'KOTRA 내부사이트 닫기')
+      $(this).addClass("on");
+      $(this).parents("#header").addClass("kotraSiteOn");
+      $(this).attr("title", "KOTRA 내부사이트 닫기");
     }
   });
 
-  $('.top_util .moreSiteArea .btn_close').click(function () {
-    $('.top_util .btn_kotraSite').trigger('click');
+  $(".top_util .moreSiteArea .btn_close").click(function () {
+    $(".top_util .btn_kotraSite").trigger("click");
   });
 }
-/* pnb / gnb 동기화 · 브레드크럼 → js/pnb.js */
+/* pnb / gnb 동기화 · 브레드크럼 → js/breadcrumb.js */
 /* ============================================================
  * 11. gnb 현재 메뉴 on 클래스 세팅 (layout.js)
  * ============================================================ */
 function initGnbCurrentState() {
   calcGnbDepthVars();
 
-  var gnbCrt0 = $("#gnb>li:nth-child(" + (gnbDep1) + ")>a");
-  var gnbCrt1 = $("#gnb>li:nth-child(" + (gnbDep1) + ")>a");
-  var gnbCrt2 = $("#gnb>li:nth-child(" + (gnbDep1) + ")>ul>li:nth-child(" + (gnbDep2) + ")");
-  var gnbCrt3 = $("#gnb>li:nth-child(" + (gnbDep1) + ")>ul>li:nth-child(" + (gnbDep2) + ")>ul>li:nth-child(" + (gnbDep3) + ")");
+  var gnbCrt0 = $("#gnb>li:nth-child(" + gnbDep1 + ")>a");
+  var gnbCrt1 = $("#gnb>li:nth-child(" + gnbDep1 + ")>a");
+  var gnbCrt2 = $("#gnb>li:nth-child(" + gnbDep1 + ")>ul>li:nth-child(" + gnbDep2 + ")");
+  var gnbCrt3 = $(
+    "#gnb>li:nth-child(" +
+      gnbDep1 +
+      ")>ul>li:nth-child(" +
+      gnbDep2 +
+      ")>ul>li:nth-child(" +
+      gnbDep3 +
+      ")"
+  );
   /*var snbCrt1 = $("#snb>li:nth-child(" + (gnbDep1) + ")>a");
   var snbCrt2 = $("#snb>li:nth-child(" + (gnbDep1) + ")>ul>li:nth-child(" + (gnbDep2) + ")>a");
   var snbCrt3 = $("#snb>li:nth-child(" + (gnbDep1) + ")>ul>li:nth-child(" + (gnbDep2) + ")>ul>li:nth-child(" + (gnbDep3) + ")>a");*/
@@ -1541,7 +1559,7 @@ function initGnbCurrentState() {
   if(snbCrt3) snbCrt3.parent().addClass("on");*/
 
   /*function gnbW(){
-    if(window.innerWidth >= 1041){
+    if(window.innerWidth >= 1024){
       $("header>nav #gnb>li").css({
         "width": (100 / ($("#gnb>li").length - $("#gnb>li:hidden").length)) + "%"
       });
@@ -1553,42 +1571,47 @@ function initGnbCurrentState() {
  * ============================================================ */
 function initGnbHover() {
   $("#gnb>li>a").mouseover(function () {
-    if (window.innerWidth >= 1041) {
+    if (window.innerWidth >= 1024) {
       //$("#header").removeClass("gnbOn");
-      $("#gnb>li>a, #gnb>li>.gnbTit, #gnb>li>.menuM").removeClass('act');
+      $("#gnb>li>a, #gnb>li>.gnbTit, #gnb>li>.menuM").removeClass("act");
 
       $("#header").css("height", "");
       $(".gnbTit").css("height", "");
 
       $("#header").addClass("gnbOn");
       $("#gnb_dim").addClass("on");
-      $(this).addClass('act');
-      $(this).siblings().addClass('act');
+      $(this).addClass("act");
+      $(this).siblings().addClass("act");
 
-      if ($(this).parent('li').hasClass('child')) {
-        if ($(this).siblings('.menuM').height() > 125) {
-          $("#header").height($(this).siblings('.menuM').height() + 153);
+      if ($(this).parent("li").hasClass("child")) {
+        if ($(this).siblings(".menuM").height() > 125) {
+          $("#header").height($(this).siblings(".menuM").height() + 153);
         } else {
           $("#header").height(230);
         }
-        $(this).siblings('.gnbTit').height($(this).siblings('.menuM').height() + 100);
+        $(this)
+          .siblings(".gnbTit")
+          .height($(this).siblings(".menuM").height() + 100);
       } else {
-        $("#header").removeAttr('style');
+        $("#header").removeAttr("style");
       }
 
-      $(this).siblings('.menuStep').children('li').css({
-        "width": (100 / $(this).siblings('.menuStep').children('li').not('.emptyArea').length) + "%"
-      });
-    };
+      $(this)
+        .siblings(".menuStep")
+        .children("li")
+        .css({
+          width: 100 / $(this).siblings(".menuStep").children("li").not(".emptyArea").length + "%"
+        });
+    }
   });
 
   $("#header").mouseleave(function () {
-    if (window.innerWidth >= 1041) {
-      $("#header").removeClass("gnbOn").removeAttr('style');
+    if (window.innerWidth >= 1024) {
+      $("#header").removeClass("gnbOn").removeAttr("style");
       $("#gnb_dim").removeClass("on");
-      $("#gnb>li>a").removeClass('act');
-      $("#gnb, #gnb .gnbTit, #gnb .menuM").removeClass('act');
-      $("#gnb, #gnb .gnbTit, #gnb .menuM>li").removeClass('act').removeAttr('style');
+      $("#gnb>li>a").removeClass("act");
+      $("#gnb, #gnb .gnbTit, #gnb .menuM").removeClass("act");
+      $("#gnb, #gnb .gnbTit, #gnb .menuM>li").removeClass("act").removeAttr("style");
     }
   });
 }
@@ -1596,67 +1619,77 @@ function initGnbHover() {
  * 13. 모바일 gnb 메뉴 동작 (layout.js)
  * ============================================================ */
 function menuM() {
-  if (window.innerWidth < 1041) {
-    var depOneLength = $('header>nav #gnb>li:visible').length;
+  if (window.innerWidth < 1024) {
+    var depOneLength = $("header>nav #gnb>li:visible").length;
 
     // $("header>nav #gnb li>ul.menuM").css({
     // 	"top": 54 * (Math.ceil(depOneLength / 4))
     // });
 
-    if ($('body').hasClass('typeTopNotice')) {
+    if ($("body").hasClass("typeTopNotice")) {
       // 상단배너 있는 경우
       $("header>nav #gnb ul.menuM").css({
-        "height": window.innerHeight - 294
+        height: window.innerHeight - 294
       });
     } else {
       $("header>nav #gnb ul.menuM").css({
-        "height": window.innerHeight - 209
+        height: window.innerHeight - 209
       });
     }
   } else {
     // $("header>nav #gnb li>ul.menuM").css('top','');
-    $("header>nav #gnb li>ul.menuM").css('height', '')
+    $("header>nav #gnb li>ul.menuM").css("height", "");
   }
 }
 
 function menuS() {
-  if (window.innerWidth < 1041) {
-    var depOneLength = $('header>nav #gnb>li:visible').length;
-    var depOneHeight = 54 * (Math.ceil(depOneLength / 4))
+  if (window.innerWidth < 1024) {
+    var depOneLength = $("header>nav #gnb>li:visible").length;
+    var depOneHeight = 54 * Math.ceil(depOneLength / 4);
 
     // $("header>nav #gnb li>ul.menuS").css({
     // 	"top": depOneHeight
     // });
 
     $("header>nav #gnb li>ul.menuS").css({
-      "height": window.innerHeight - depOneHeight - 52 - 80
+      height: window.innerHeight - depOneHeight - 52 - 80
     });
   } else {
     // $("header>nav #gnb li>ul.menuS").css('top','')
-    $("header>nav #gnb li>ul.menuS").css('height', '')
+    $("header>nav #gnb li>ul.menuS").css("height", "");
   }
 }
 
 function mbMenuResult() {
-  if (window.innerWidth < 1041) {
+  if (window.innerWidth < 1024) {
     $(".typeSearchResult .m_searchResult").css({
-      "height": window.innerHeight - 220
+      height: window.innerHeight - 220
     });
   }
 }
 
 function mBtnClose() {
-  $("#gnb_dim").removeClass('on');
-  $("#header").removeClass('gnbOn');
-  $("header>nav #gnb li").removeClass('act');
-  $('body').css('overflow', 'visible');
+  $("#gnb_dim").removeClass("on");
+  $("#header").removeClass("gnbOn");
+  $("header>nav #gnb li").removeClass("act");
+  $("body").css("overflow", "visible");
 
-  if (window.innerWidth < 1041) {
+  // 시장뉴스 PC GNB(.news_main_menu): display는 _header.scss MQ 담당.
+  // jQuery hide/show 인라인 style이 남으면 모바일→PC 복귀 시 메뉴가 안 보임.
+  var $newsNav = $("#header nav.news_main_menu, .header_news nav.news_main_menu");
+  $newsNav.css("display", "");
+
+  var $legacyNav = $("#header nav").not(".news_main_menu");
+  if (!$legacyNav.length) return;
+
+  if (window.innerWidth < 1024) {
     setTimeout(function () {
-      $("#header nav").hide();
+      if (window.innerWidth < 1024) {
+        $legacyNav.hide();
+      }
     }, 300);
   } else {
-    $("#header nav").show();
+    $legacyNav.show();
   }
 }
 
@@ -1665,43 +1698,43 @@ function initMobileGnb() {
   menuS();
 
   $("header .mBtn_topMenu").click(function () {
-    if (window.innerWidth < 1041) {
+    if (window.innerWidth < 1024) {
       $(this).nextAll("nav").show();
-      $("header>nav #gnb").removeAttr('style')//reset
-      $("header>nav #gnb ul.menuM>li").removeClass('act');//reset
-      $("header>nav #gnb .on").addClass('act');//reset
-      $("header>nav #gnb li.on>.menuSS").slideDown(0);//reset
+      $("header>nav #gnb").removeAttr("style"); //reset
+      $("header>nav #gnb ul.menuM>li").removeClass("act"); //reset
+      $("header>nav #gnb .on").addClass("act"); //reset
+      $("header>nav #gnb li.on>.menuSS").slideDown(0); //reset
 
-      $("#gnb_dim").addClass('on');
-      $("#header").addClass('gnbOn');
+      $("#gnb_dim").addClass("on");
+      $("#header").addClass("gnbOn");
       $("header>nav #gnb").css({
-        "height": window.innerHeight - $("#header").height()
+        height: window.innerHeight - $("#header").height()
       });
 
       menuM();
 
-      $('body').css('overflow', 'hidden');
+      $("body").css("overflow", "hidden");
     }
   });
 
   $("header>nav #gnb>li>a").click(function () {
-    if (window.innerWidth < 1041) {
-      if ($(this).parent('li').hasClass('child')) {
-        $("header>nav #gnb li").removeClass('act');//reset
-        $("header>nav #gnb li.on>.menuSS").slideDown(0);//reset
+    if (window.innerWidth < 1024) {
+      if ($(this).parent("li").hasClass("child")) {
+        $("header>nav #gnb li").removeClass("act"); //reset
+        $("header>nav #gnb li.on>.menuSS").slideDown(0); //reset
 
         /*if(!$(this).hasClass('act') && !$(this).hasClass('on')){
           $("header>nav #gnb ul.menuM>li:first-child").addClass('act');
         }*/
 
-        if ($(this).parent('li').hasClass('child')) {
-          if (!$(this).hasClass('act')) {
-            $("header>nav #gnb>li>a.act").removeClass('act');
-            $(this).addClass('act');
+        if ($(this).parent("li").hasClass("child")) {
+          if (!$(this).hasClass("act")) {
+            $("header>nav #gnb>li>a.act").removeClass("act");
+            $(this).addClass("act");
           }
         }
 
-        $("header>nav #gnb li.on").addClass('act');
+        $("header>nav #gnb li.on").addClass("act");
 
         return false;
       } else {
@@ -1711,14 +1744,17 @@ function initMobileGnb() {
   });
 
   $("header>nav #gnb ul.menuM>li>a").click(function () {
-    if (window.innerWidth < 1041) {
-      if ($(this).parent('li').attr('class') == 'child' || $(this).parent('li').attr('class') == 'child on') {
-        $("header>nav #gnb li").removeClass('act');
-        $(this).parent('li').addClass('act');
+    if (window.innerWidth < 1024) {
+      if (
+        $(this).parent("li").attr("class") == "child" ||
+        $(this).parent("li").attr("class") == "child on"
+      ) {
+        $("header>nav #gnb li").removeClass("act");
+        $(this).parent("li").addClass("act");
 
         return false;
-      } else if ($(this).parent('li').attr('class') == 'child act') {
-        $(this).parent('li').removeClass('act');
+      } else if ($(this).parent("li").attr("class") == "child act") {
+        $(this).parent("li").removeClass("act");
 
         return false;
       } else {
@@ -1728,17 +1764,23 @@ function initMobileGnb() {
   });
 
   $("header>nav #gnb ul.menuS>li>a").click(function () {
-    if (window.innerWidth < 1041) {
-      if ($(this).parent('li').attr('class') == 'child' || $(this).parent('li').attr('class') == 'child on') {
-        $("header>nav #gnb .menuS>li").removeClass('act');
+    if (window.innerWidth < 1024) {
+      if (
+        $(this).parent("li").attr("class") == "child" ||
+        $(this).parent("li").attr("class") == "child on"
+      ) {
+        $("header>nav #gnb .menuS>li").removeClass("act");
         $("header>nav #gnb .menuSS").slideUp(200);
-        $(this).parent('li').addClass('act');
-        $(this).siblings('.menuSS').slideDown(200);
+        $(this).parent("li").addClass("act");
+        $(this).siblings(".menuSS").slideDown(200);
 
         return false;
-      } else if ($(this).parent('li').attr('class') == 'child act' || $(this).parent('li').attr('class') == 'child on act') {
-        $(this).parent('li').removeClass('act');
-        $(this).siblings('.menuSS').slideUp(200);
+      } else if (
+        $(this).parent("li").attr("class") == "child act" ||
+        $(this).parent("li").attr("class") == "child on act"
+      ) {
+        $(this).parent("li").removeClass("act");
+        $(this).siblings(".menuSS").slideUp(200);
 
         return false;
       } else {
@@ -1759,30 +1801,32 @@ function initFooterExtras() {
   // 클릭/Enter 시 포커스를 header로 옮기면 #btn_top 링이 잠깐 보이다
   // 헤더 링크의 기본 focus-ring으로 바뀌어 보임 → 스크롤 완료 후 이동
   $("#btn_top").on("click", function () {
-    $("html, body").stop().animate({ scrollTop: 0 }, 150, function () {
-      var $target = $("header a").filter(":visible").first();
-      if ($target.length) {
-        $target.focus();
-      }
-    });
+    $("html, body")
+      .stop()
+      .animate({ scrollTop: 0 }, 150, function () {
+        var $target = $("header a").filter(":visible").first();
+        if ($target.length) {
+          $target.focus();
+        }
+      });
   });
 
   $("#snb_nav .snb_util .zoom>button").click(function () {
-    $('#contents article').FontSize({
+    $("#contents article").FontSize({
       increaseTimes: 3,
       reduceTimes: 3,
       step: 3,
-      increaseBtn: '.btn_zoomIn',
-      reduceBtn: '.btn_zoomOut'
+      increaseBtn: ".btn_zoomIn",
+      reduceBtn: ".btn_zoomOut"
     });
   });
 
   // familySite
   $("#footer .btn_familysite").click(function () {
-    if ($("#footer .familySite").hasClass('on')) {
-      $("#footer .familySite").removeClass('on');
+    if ($("#footer .familySite").hasClass("on")) {
+      $("#footer .familySite").removeClass("on");
     } else {
-      $("#footer .familySite").addClass('on');
+      $("#footer .familySite").addClass("on");
     }
   });
 
@@ -1798,220 +1842,388 @@ function initScrollHandler() {
   $(window).scroll(function () {
     conts_loc = $(window).scrollTop();
 
-    if ($("body").hasClass('typeMain')) {
+    if ($("body").hasClass("typeMain")) {
       if (conts_loc > 0) {
-        $("body").addClass('mSticky');
+        $("body").addClass("mSticky");
       } else {
-        $("body").removeClass('mSticky');
+        $("body").removeClass("mSticky");
       }
     }
 
-    if ($("body").hasClass('typeSub')) {
-      if (window.innerWidth >= 1041) {
+    if ($("body").hasClass("typeSub")) {
+      if (window.innerWidth >= 1024) {
         if (conts_loc > 400) {
-          $("body").addClass('stickyFix');
+          $("body").addClass("stickyFix");
         } else {
-          $("body").removeClass('stickyFix');
+          $("body").removeClass("stickyFix");
         }
       } else {
         if (conts_loc > 181) {
-          $("body").addClass('stickyFix');
+          $("body").addClass("stickyFix");
         } else {
-          $("body").removeClass('stickyFix');
+          $("body").removeClass("stickyFix");
         }
       }
     }
 
     if (conts_loc > 100) {
-      $("#btn_top").addClass('on');
+      $("#btn_top").addClass("on");
     } else {
-      $("#btn_top").removeClass('on');
+      $("#btn_top").removeClass("on");
     }
   });
 }
-/* 16. pnb UI → js/pnb.js (initPnbOptions) */
+/* 16. pnb UI → js/breadcrumb.js (initPnbOptions) */
 /* ============================================================
  * 17. 상단 사이트맵 팝업 열기/닫기 트리거 (layout.js)
  * ============================================================ */
-function initSitemapPopupTrigger() {
-  var sitemapPrevLoc;
+function initMastheadSitemapBox() {
+  var sitemapPrevLoc = 0;
+  var sitemapBtnSel = ".masthead_kotra .btn_sitemap, header .gnb_util .btn_sitemap";
+  var focusableSel = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  var inertSel = "#skip_menu, #masthead_kotra, #header, #container, #footer, #btn_top, #gnb_dim";
 
-  $("header .gnb_util .btn_sitemap").click(function () {
+  function $panel() {
+    var $sec = $("section.sitemapBox");
+    if ($sec.length) return $sec.first();
+    return $(".sitemapBox").first();
+  }
+
+  function $trigger() {
+    var $btn = $(".masthead_kotra .btn_sitemap");
+    if (!$btn.length) {
+      $btn = $("header .gnb_util .btn_sitemap");
+    }
+    return $btn;
+  }
+
+  function isOpen() {
+    return $panel().hasClass("on");
+  }
+
+  function getFocusable() {
+    return $panel()
+      .find(focusableSel)
+      .filter(function () {
+        var $el = $(this);
+        if (!$el.is(":visible")) return false;
+        if ($el.closest(".mCSB_scrollTools").length) return false;
+        return true;
+      });
+  }
+
+  function focusFirstInPanel() {
+    var $close = $panel().find(".btn_close").filter(":visible").first();
+    if ($close.length) {
+      $close.focus();
+      return;
+    }
+    var $items = getFocusable();
+    if ($items.length) $items.first().focus();
+  }
+
+  function setBackgroundInert(on) {
+    $(inertSel).each(function () {
+      if (on) {
+        this.setAttribute("inert", "");
+        this.setAttribute("aria-hidden", "true");
+      } else {
+        this.removeAttribute("inert");
+        this.removeAttribute("aria-hidden");
+      }
+    });
+  }
+
+  function openSitemapBox() {
+    var $p = $panel();
+    if (!$p.length) return;
+
     sitemapPrevLoc = $(window).scrollTop();
-    var siteMapInnerH = $('.map_nav').height();
-    var siteMapLastH = $('.sitemapBox #sitemap>li:last-child .menuM').height();
+    var siteMapInnerH = $p.find(".map_nav").height();
+    var siteMapLastH = $p.find("#sitemap>li:last-child .menuM").height();
 
-    $("html").css('overflow', 'hidden');
-    $("body").css('overflow', 'hidden');
+    $("html").css("overflow", "hidden");
+    $("body").css("overflow", "hidden");
+    if (siteMapInnerH && siteMapLastH) {
+      $p.find("#sitemap>li:last-child").css("height", siteMapInnerH - siteMapLastH);
+    }
+    $("#dim").addClass("on");
+    $p.addClass("on").removeClass("off").attr({
+      "aria-hidden": "false",
+      role: "dialog",
+      "aria-modal": "true",
+      "aria-label": "사이트맵"
+    });
+    $trigger().attr("aria-expanded", "true");
+    /* map_nav 는 Tab 순서에 넣지 않음 → 닫기 다음 = map_gnb 첫 메뉴(뉴스) */
+    setBackgroundInert(true);
+    window.setTimeout(focusFirstInPanel, 50);
+  }
 
-    $('.sitemapBox #sitemap>li:last-child').css('height', siteMapInnerH - siteMapLastH)
+  function closeSitemapBox() {
+    var $p = $panel();
+    $("html").css("overflow", "");
+    $("body").css("overflow", "");
+    $("html, body").animate({ scrollTop: sitemapPrevLoc }, 0);
+    $p.addClass("off")
+      .removeClass("on")
+      .attr("aria-hidden", "true")
+      .removeAttr("role")
+      .removeAttr("aria-modal")
+      .removeAttr("aria-label");
+    $("#dim").removeClass("on");
+    setBackgroundInert(false);
+    $trigger().attr("aria-expanded", "false").focus();
+  }
 
-    $("#dim").addClass('on');
-    $(".sitemapBox").addClass('on').removeClass('off');
-  });
+  $(document)
+    .off("click.sitemapBox")
+    .on("click.sitemapBox", sitemapBtnSel, function (e) {
+      e.preventDefault();
+      if (isOpen()) closeSitemapBox();
+      else openSitemapBox();
+    });
 
-  $(".sitemapBox .btn_close").click(function () {
-    $("html").css('overflow', '');
-    $("body").css('overflow', '');
-    $("html, body").animate({
-      scrollTop: sitemapPrevLoc
-    }, 0);
+  $(document)
+    .off("click.sitemapBoxClose")
+    .on("click.sitemapBoxClose", ".sitemapBox .btn_close", function (e) {
+      e.preventDefault();
+      closeSitemapBox();
+    });
 
-    $(".sitemapBox").addClass('off').removeClass('on');
-    $("#dim").removeClass('on');
-  });
+  $(document)
+    .off("click.sitemapDim")
+    .on("click.sitemapDim", "#dim.on", function () {
+      if (isOpen()) closeSitemapBox();
+    });
+
+  $(document)
+    .off("focusin.sitemapBoxTrap")
+    .on("focusin.sitemapBoxTrap", function (e) {
+      if (!isOpen()) return;
+      var panel = $panel()[0];
+      if (panel && !panel.contains(e.target)) {
+        e.stopPropagation();
+        focusFirstInPanel();
+      }
+    });
+
+  $(document)
+    .off("keydown.sitemapBox")
+    .on("keydown.sitemapBox", function (e) {
+      if (!isOpen()) return;
+      var key = e.key || e.keyCode;
+      var panel = $panel()[0];
+      var $items = getFocusable();
+      if (!$items.length) return;
+      var $first = $items.first();
+      var $last = $items.last();
+      var active = document.activeElement;
+
+      if (key === "Escape" || key === "Esc" || key === 27) {
+        e.preventDefault();
+        closeSitemapBox();
+        return;
+      }
+
+      var scrollKeys = {
+        ArrowDown: 40,
+        ArrowUp: -40,
+        PageDown: 200,
+        PageUp: -200,
+        End: "bottom",
+        Home: "top"
+      };
+      if (scrollKeys.hasOwnProperty(key) && panel && panel.contains(active)) {
+        var $nav = $panel().find(".map_nav");
+        var inMapNav = $(active).closest(".map_nav").length || active === $nav[0];
+        if (inMapNav && $nav.length) {
+          var delta = scrollKeys[key];
+          if ($nav.data("mCS")) {
+            e.preventDefault();
+            if (delta === "top" || delta === "bottom") {
+              $nav.mCustomScrollbar("scrollTo", delta);
+            } else {
+              $nav.mCustomScrollbar("scrollTo", (delta > 0 ? "+=" : "-=") + Math.abs(delta), {
+                scrollInertia: 120
+              });
+            }
+            return;
+          }
+          if ($nav[0].scrollHeight > $nav[0].clientHeight) {
+            e.preventDefault();
+            if (delta === "top") $nav[0].scrollTop = 0;
+            else if (delta === "bottom") $nav[0].scrollTop = $nav[0].scrollHeight;
+            else $nav[0].scrollTop += delta;
+            return;
+          }
+        }
+      }
+
+      if (key !== "Tab" && key !== 9) return;
+
+      if (!panel || !panel.contains(active)) {
+        e.preventDefault();
+        if (e.shiftKey) $last.focus();
+        else $first.focus();
+        return;
+      }
+
+      if (e.shiftKey) {
+        if (active === $first[0]) {
+          e.preventDefault();
+          $last.focus();
+        }
+      } else if (active === $last[0]) {
+        e.preventDefault();
+        $first.focus();
+      }
+    });
 
   window.sitemapClose = function sitemapClose() {
-    if (window.innerWidth <= 1041) {
-      if ($('.sitemapBox').hasClass('on')) {
-        $("html").css('overflow', '');
-        $("html, body").animate({
-          scrollTop: sitemapPrevLoc
-        }, 0);
-        $(".sitemapBox").addClass('off').removeClass('on');
-        $("#dim").removeClass('on');
-      }
-    }
+    if (isOpen()) closeSitemapBox();
   };
+  window.initMastheadSitemapBox = initMastheadSitemapBox;
+}
+
+function initSitemapPopupTrigger() {
+  initMastheadSitemapBox();
 
   $("header .gnb_util .totalSearchArea .btn_searchOpt").click(function () {
-    if ($('.search_opt').hasClass('on')) {
-      $('.search_opt').removeClass('on');
+    if ($(".search_opt").hasClass("on")) {
+      $(".search_opt").removeClass("on");
     } else {
-      $('.search_opt').addClass('on');
+      $(".search_opt").addClass("on");
     }
   });
 
   $("header .gnb_util .totalSearchArea .search_opt ul button").click(function () {
-    $('.search_opt').removeClass('on');
+    $(".search_opt").removeClass("on");
   });
 }
 /* ============================================================
  * 18. 탭 너비 계산 / 모바일 탭 슬라이드 (layout.js)
  * ============================================================ */
 function tab_w() {
-  if (window.innerWidth >= 1041) {
+  if (window.innerWidth >= 1024) {
     $("#pageTab li").css({
-      "width": (100 / $("#pageTab li").length) + "%"
+      width: 100 / $("#pageTab li").length + "%"
     });
   } else {
     $("#pageTab li").css({
-      "width": ""
+      width: ""
     });
   }
 
-  if (window.innerWidth >= 1041) {
+  if (window.innerWidth >= 1024) {
     $("#pageTab02 li").css({
-      "width": (100 / $("#pageTab02 li").length) + "%"
+      width: 100 / $("#pageTab02 li").length + "%"
     });
   } else {
     $("#pageTab02 li").css({
-      "width": ""
+      width: ""
     });
   }
 
-  if (window.innerWidth >= 1041) {
+  if (window.innerWidth >= 1024) {
     $("#contTab_line li").css({
-      "width": (100 / $("#contTab_line li").length) + "%"
+      width: 100 / $("#contTab_line li").length + "%"
     });
   } else {
     $("#contTab_line li").css({
-      "width": ""
+      width: ""
     });
   }
 
   $("#contTab_fix li").each(function () {
-    if (window.innerWidth >= 1041) {
+    if (window.innerWidth >= 1024) {
       $(this).css({
-        "width": (100 / $("#contTab_fix li").length) + "%"
+        width: 100 / $("#contTab_fix li").length + "%"
       });
     } else {
       $(this).css({
-        "width": ""
+        width: ""
       });
     }
   });
 }
 
 /* 모바일 탭 슬라이드 전환 */
-function mbSlickTab() {
-  if (window.innerWidth <= 1041) {
-    var tabNum = $('#pageTab .tabList>li').length;
+function mbTabSlide() {
+  if (window.innerWidth <= 1023) {
+    var tabNum = $("#pageTab .tabList>li").length;
 
     if (tabNum > 2) {
-      var on = $('#pageTab .tabList li').find('.on').parent('li').index();
-      $('#pageTab').sly({
+      var on = $("#pageTab .tabList li").find(".on").parent("li").index();
+      $("#pageTab").sly({
         horizontal: 1,
-        itemNav: 'centered',
+        itemNav: "centered",
         speed: 300,
         smart: 1,
-        activateOn: 'click',
+        activateOn: "click",
         mouseDragging: 1,
         touchDragging: 1,
         activateMiddle: 1,
         releaseSwing: 1,
-        activeClass: 'active',
+        activeClass: "active",
         startAt: on
       });
-      // var frame = new Sly('#pageTab', options).init();
 
       setTimeout(function () {
-        $('#pageTab ul').css('width', function (i) {
+        $("#pageTab ul").css("width", function (i) {
           return $(this).width() + 80;
         });
-      }, 100)
-
+      }, 100);
     }
   } else {
-    $('#pageTab').sly(false);
-    $('#pageTab .tabList').css('width', 'auto');
+    $("#pageTab").sly(false);
+    $("#pageTab .tabList").css("width", "auto");
   }
 }
 
-function mbSlickTab02() {
-  if (window.innerWidth <= 1041) {
-    var tabNum = $('#contTab_line .tabList>li').length;
+function mbTabSlide02() {
+  if (window.innerWidth <= 1023) {
+    var tabNum = $("#contTab_line .tabList>li").length;
 
     if (tabNum > 1) {
-      var on = $('#contTab_line .tabList li').find('.on').parent('li').index();
-      $('#contTab_line').sly({
+      var on = $("#contTab_line .tabList li").find(".on").parent("li").index();
+      $("#contTab_line").sly({
         horizontal: 1,
-        itemNav: 'centered',
+        itemNav: "centered",
         speed: 300,
         smart: 1,
-        activateOn: 'click',
+        activateOn: "click",
         mouseDragging: 1,
         touchDragging: 1,
         activateMiddle: 1,
         releaseSwing: 1,
-        activeClass: 'active',
+        activeClass: "active",
         startAt: on
       });
-      // var frame = new Sly('#contTab_line', options).init();
 
       setTimeout(function () {
-        $('#contTab_line ul').css('width', function (i) {
+        $("#contTab_line ul").css("width", function (i) {
           return $(this).width() + 70;
         });
-      }, 300)
+      }, 300);
     }
   } else {
-    $('#contTab_line').sly(false);
-    $('#contTab_line .tabList').css('width', '100%');
+    $("#contTab_line").sly(false);
+    $("#contTab_line .tabList").css("width", "100%");
   }
 }
 
 function initTabResize() {
-  $(window).bind('load resize', function () {
-    if (typeof window.pnb_btnTit === 'function') window.pnb_btnTit();
-    mbSlickTab();
-    mbSlickTab02();
+  $(window).bind("load resize", function () {
+    if (typeof window.pnb_btnTit === "function") window.pnb_btnTit();
+    mbTabSlide();
+    mbTabSlide02();
     mbMenuResult();
     // tab_w();
 
     /** 해제 **/
     mBtnClose(); //모바일메뉴
-    if (typeof window.sitemapClose === 'function') window.sitemapClose(); // sitemap
+    if (typeof window.sitemapClose === "function") window.sitemapClose(); // sitemap
   });
 }
 /* ============================================================
@@ -2034,23 +2246,36 @@ function initOrientationReload() {
         window.location.reload();
         break;
     }
-  }
+  };
 }
 /* ============================================================
  * 20. 접근성 (skip menu, 키보드 포커스 이동) (layout.js)
  * ============================================================ */
 function initAccessibility() {
+  // 본문 랜드마크: HTML은 <main id="contents">. 구 마크업(div)만 남아 있으면 main으로 교체
+  if ($("#contents").length && !$("#contents").is("main") && !$("main#contents").length) {
+    $("#contents").each(function () {
+      var $el = $(this);
+      var $main = $("<main id=\"contents\"></main>");
+      $main.append($el.contents());
+      $.each(this.attributes, function () {
+        if (this.name === "id" || this.name === "role") return;
+        $main.attr(this.name, this.value);
+      });
+      $el.replaceWith($main);
+    });
+  }
   $("#skip_menu a").focusin(function () {
-    $("#contents").attr('tabindex', '0');
-    $("#gnb").attr('tabindex', '0');
-    $("#footer").attr('tabindex', '0');
+    $("#contents").attr("tabindex", "0");
+    $("#gnb").attr("tabindex", "0");
+    $("#footer").attr("tabindex", "0");
     typeKeyNav = 1;
   });
 
   $("#skip_menu").focusout(function () {
-    $("#contents").removeAttr('tabindex');
-    $("#gnb").removeAttr('tabindex');
-    $("#footer").removeAttr('tabindex');
+    $("#contents").removeAttr("tabindex");
+    $("#gnb").removeAttr("tabindex");
+    $("#footer").removeAttr("tabindex");
   });
 
   $(".top_util .moreSiteArea .btn_close").keydown(function (event) {
@@ -2058,7 +2283,7 @@ function initAccessibility() {
 
     if (v_keyCode == 9) {
       if (!event.shiftKey) {
-        $(".top_util .moreSiteArea ul li:first-child").find('a').focus();
+        $(".top_util .moreSiteArea ul li:first-child").find("a").focus();
         return false;
       }
     }
@@ -2066,27 +2291,41 @@ function initAccessibility() {
 
   //gnbON
   $("#gnb>li>a").focusin(function () {
-    $(this).trigger('mouseover');
+    $(this).trigger("mouseover");
   });
 
   $("#gnb>li>a").keydown(function (event) {
-    var gnb_loc = $(this).parent('li').index();
+    var gnb_loc = $(this).parent("li").index();
     var v_keyCode = event.keyCode || event.which;
     if (v_keyCode == 9) {
       if (event.shiftKey) {
         if (gnb_loc > 0) {
-          $(this).parent('li').prev('li').find('a').first().trigger('mouseover');
-          if ($(this).prev('li').hasClass('child')) {
-            if ($("header>nav #gnb>li:nth-child(" + gnb_loc + ") .menuM>li:last-child").hasClass('child')) {
-              $("header>nav #gnb>li:nth-child(" + gnb_loc + ") .menuM>li:last-child .menuS>li:last-child").find('a').first().focus();
+          $(this).parent("li").prev("li").find("a").first().trigger("mouseover");
+          if ($(this).prev("li").hasClass("child")) {
+            if (
+              $("header>nav #gnb>li:nth-child(" + gnb_loc + ") .menuM>li:last-child").hasClass(
+                "child"
+              )
+            ) {
+              $(
+                "header>nav #gnb>li:nth-child(" +
+                  gnb_loc +
+                  ") .menuM>li:last-child .menuS>li:last-child"
+              )
+                .find("a")
+                .first()
+                .focus();
               return false;
             } else {
-              $("header>nav #gnb>li:nth-child(" + gnb_loc + ") .menuM>li:last-child").find('a').first().focus();
+              $("header>nav #gnb>li:nth-child(" + gnb_loc + ") .menuM>li:last-child")
+                .find("a")
+                .first()
+                .focus();
               return false;
             }
           }
         } else {
-          $(this).trigger('mouseleave');
+          $(this).trigger("mouseleave");
           $(".top_util .btn_goDream").focus();
           return false;
         }
@@ -2095,202 +2334,218 @@ function initAccessibility() {
   });
 
   //gnb Off
-  $("header .logo>a").on('focusout', function (e) {
-    $(this).trigger('mouseleave');
+  $("header .logo>a").on("focusout", function (e) {
+    $(this).trigger("mouseleave");
   });
 
   /*
-  *GBN 하위 메뉴중 display:none 을 제외한 마지막 객체 제어
-  */
+   *GBN 하위 메뉴중 display:none 을 제외한 마지막 객체 제어
+   */
   //Show, hide 상태 검증 변수 브라우저별 display:none 띄워쓰기 달라서 경우의 수에 따라 검증 범위 확장
-  var TargetState = "[style*='display:none'], [style*='display: none'], [style*='display :none'], [style*='display : none']";
+  var TargetState =
+    "[style*='display:none'], [style*='display: none'], [style*='display :none'], [style*='display : none']";
 
-  $("header>nav #gnb>li").not(TargetState).last().find(".menuM>li").not(TargetState).last().find(".menuS>li").not(TargetState).last().on('focusout', function (e) {
-    $(this).trigger('mouseleave');
-  });
+  $("header>nav #gnb>li")
+    .not(TargetState)
+    .last()
+    .find(".menuM>li")
+    .not(TargetState)
+    .last()
+    .find(".menuS>li")
+    .not(TargetState)
+    .last()
+    .on("focusout", function (e) {
+      $(this).trigger("mouseleave");
+    });
 
-  $("header>nav #gnb>li").not(TargetState).last().find(".menuM>li").not(TargetState).last().on('focusout', function (e) {
-    if (!$(this).hasClass("child")) {
-      $(this).trigger('mouseleave');
-    }
-  });
-
-  $('header .gnb_util button:last-child').on('focusout', function (e) {
-    $(this).trigger('mouseleave');
-  });
-
-  //사이트맵 팝업
-  $(".sitemapBox .btn_close").keydown(function (event) {
-    var v_keyCode = event.keyCode || event.which;
-
-    if (v_keyCode == 13) {
-      $("header .gnb_util .btn_sitemap").focus();
-      $(".sitemapBox .btn_close").trigger('click');
-      return false;
-    }
-
-    if (v_keyCode == 9) {
-      if (!event.shiftKey) {
-        $('.sitemapBox .map_gnb li:first-child').find('a').focus();
-        return false;
+  $("header>nav #gnb>li")
+    .not(TargetState)
+    .last()
+    .find(".menuM>li")
+    .not(TargetState)
+    .last()
+    .on("focusout", function (e) {
+      if (!$(this).hasClass("child")) {
+        $(this).trigger("mouseleave");
       }
-    }
+    });
+
+  $("header .gnb_util button:last-child").on("focusout", function (e) {
+    $(this).trigger("mouseleave");
   });
 
-  $('.sitemapBox .map_gnb li:first-child a').keydown(function (event) {
-    var v_keyCode = event.keyCode || event.which;
-
-    if (v_keyCode == 9) {
-      if (event.shiftKey) {
-        $('.sitemapBox .btn_close').focus()
-        return false;
-      }
-    }
-  });
+  // 사이트맵 포커스 트랩은 initMastheadSitemapBox() 에서 처리
 
   //pnb
   $("#pnb .pnb_func .shareBox .btn_close").keydown(function (event) {
     var v_keyCode = event.keyCode || event.which;
     if (v_keyCode == 9) {
       if (!event.shiftKey) {
-        $('.shareBox_wrap ul li:first-child').find('a').focus()
+        $(".shareBox_wrap ul li:first-child").find("a").focus();
         return false;
       }
     }
   });
 
-  $('.shareBox_wrap ul li:first-child a').keydown(function (event) {
+  $(".shareBox_wrap ul li:first-child a").keydown(function (event) {
     var v_keyCode = event.keyCode || event.which;
     if (v_keyCode == 9) {
       if (event.shiftKey) {
-        $("#pnb .pnb_func .shareBox .btn_close").focus()
+        $("#pnb .pnb_func .shareBox .btn_close").focus();
         return false;
       }
     }
   });
 }
 /* ============================================================
- * 21. 모바일 접근성 (load/resize 시 tabindex 재설정) (layout.js)
+ * 21. 모바일 접근성 — 헤더 Tab 순서 (숨은 PC 영역 스킵)
+ * 시장뉴스: logo → .btn_navi.all
+ * 드림/구헤더: logo → .mBtn_topMenu
  * ============================================================ */
 function initMobileAccessibility() {
-  $(window).bind('load resize', function () {
-    if ($(window).innerWidth() <= 1041) {
+  var ns = ".mobileA11yHeader";
+  var $logoSel = "header .logo a, .header_news .logo a";
+  var $bindSel =
+    $logoSel +
+    ", .header_news .btn_navi.all, header .mBtn_topMenu, header .gnb_util .btn_mypage, header .gnb_util .btn_login, header .gnb_util .btn_search";
 
-      //gnb
-      $("header .logo a").keydown(function (event) {
-        var v_keyCode = event.keyCode || event.which;
+  function isTab(e) {
+    return e.key === "Tab" || e.keyCode === 9 || e.which === 9;
+  }
 
-        if (v_keyCode == 9) {
-          if (!event.shiftKey) {
-            $('header .top_util a:first-child').focus();
-            return false;
-          }
-        }
+  function unbindHeaderTab() {
+    $($bindSel).off("keydown" + ns);
+  }
+
+  function bindHeaderTab() {
+    unbindHeaderTab();
+
+    var $logo = $($logoSel).first();
+    var $btnNavi = $(".header_news .btn_navi.all").filter(":visible").first();
+    if (!$btnNavi.length) $btnNavi = $(".header_news .btn_navi.all").first();
+    var $mBtn = $("header .mBtn_topMenu").first();
+
+    if ($(".header_news").length && $btnNavi.length) {
+      $logo.on("keydown" + ns, function (e) {
+        if (!isTab(e) || e.shiftKey) return;
+        e.preventDefault();
+        $btnNavi.trigger("focus");
       });
-
-      $("header .gnb_util .btn_mypage").keydown(function (event) {
-        var v_keyCode = event.keyCode || event.which;
-
-        if (v_keyCode == 9) {
-          if (!event.shiftKey) {
-            $('header .mBtn_topMenu').focus();
-            return false;
-          }
-        }
+      $btnNavi.on("keydown" + ns, function (e) {
+        if (!isTab(e) || !e.shiftKey) return;
+        e.preventDefault();
+        $logo.trigger("focus");
       });
-
-      $("header .gnb_util .btn_login").keydown(function (event) {
-        var v_keyCode = event.keyCode || event.which;
-
-        if (v_keyCode == 9) {
-          if (!event.shiftKey) {
-            $('header .mBtn_topMenu').focus();
-            return false;
-          }
-        }
-      });
-
-      //mVisual
-      $("header .mBtn_topMenu").keydown(function (event) {
-        var v_keyCode = event.keyCode || event.which;
-
-        if (v_keyCode == 9) {
-          if (event.shiftKey) {
-            if ($('header .gnb_util .btn_mypage').length > 0) {
-              $('header .gnb_util .btn_mypage').focus();
-              return false;
-            } else {
-              $('header .gnb_util .btn_search').focus();
-              return false;
-            }
-          } else {
-            $('#container').find('a').first().focus();
-          }
-        }
-      });
-
-      $("header .gnb_util .btn_search").keydown(function (event) {
-        var v_keyCode = event.keyCode || event.which;
-
-        if (v_keyCode == 9) {
-          if (event.shiftKey) {
-            $('header .logo a').focus();
-            return false;
-          }
-        }
-      });
-
-      // bookmark
-      $('.snb_bookmark .list .unit').attr('aria-hidden', 'false');
-      $('.snb_bookmark .list .unit a').attr('tabindex', '0');
-
-      // tab
-      $('#pageTab .slick-slide').attr('aria-hidden', 'false');
-      $('#pageTab .slick-slide a').attr('tabindex', '0');
-      $('#contTab_line .slick-slide').attr('aria-hidden', 'false');
-      $('#contTab_line .slick-slide a').attr('tabindex', '0');
-    } else {
-      $("#header nav").show();
+      if (typeof window.syncHeaderFocusScope === "function") {
+        window.syncHeaderFocusScope();
+      }
+      return;
     }
-  });
+
+    if ($mBtn.length) {
+      $logo.on("keydown" + ns, function (e) {
+        if (!isTab(e) || e.shiftKey) return;
+        e.preventDefault();
+        $mBtn.trigger("focus");
+      });
+
+      $("header .gnb_util .btn_mypage").on("keydown" + ns, function (e) {
+        if (!isTab(e) || e.shiftKey) return;
+        e.preventDefault();
+        $mBtn.trigger("focus");
+      });
+
+      $("header .gnb_util .btn_login").on("keydown" + ns, function (e) {
+        if (!isTab(e) || e.shiftKey) return;
+        e.preventDefault();
+        $mBtn.trigger("focus");
+      });
+
+      $mBtn.on("keydown" + ns, function (e) {
+        if (!isTab(e)) return;
+        if (e.shiftKey) {
+          e.preventDefault();
+          if ($("header .gnb_util .btn_mypage").length) {
+            $("header .gnb_util .btn_mypage").trigger("focus");
+          } else if ($("header .gnb_util .btn_search").length) {
+            $("header .gnb_util .btn_search").trigger("focus");
+          } else {
+            $logo.trigger("focus");
+          }
+        } else {
+          var $next = $("#container").find("a:visible, button:visible").first();
+          if ($next.length) $next.trigger("focus");
+        }
+      });
+
+      $("header .gnb_util .btn_search").on("keydown" + ns, function (e) {
+        if (!isTab(e) || !e.shiftKey) return;
+        e.preventDefault();
+        $logo.trigger("focus");
+      });
+    }
+  }
+
+  $(window)
+    .off("load" + ns + " resize" + ns)
+    .on("load" + ns + " resize" + ns, function () {
+      if (window.innerWidth <= 1023) {
+        bindHeaderTab();
+
+        $(".snb_bookmark .list .unit").attr("aria-hidden", "false");
+        $(".snb_bookmark .list .unit a").attr("tabindex", "0");
+        $("#pageTab .slick-slide").attr("aria-hidden", "false");
+        $("#pageTab .slick-slide a").attr("tabindex", "0");
+        $("#contTab_line .slick-slide").attr("aria-hidden", "false");
+        $("#contTab_line .slick-slide a").attr("tabindex", "0");
+      } else {
+        unbindHeaderTab();
+        // 뉴스 GNB는 MQ에 맡기고 인라인 display만 제거 / 구헤더만 show
+        $("#header nav.news_main_menu, .header_news nav.news_main_menu").css("display", "");
+        $("#header nav").not(".news_main_menu").show();
+      }
+      if (typeof window.syncHeaderFocusScope === "function") {
+        window.syncHeaderFocusScope();
+      }
+    });
 }
 /* ============================================================
  * 22. As-is 탑배너 팝업 (layout.js)
  * ============================================================ */
 function initTopBannerPopup() {
-  $('.new_header_19 .btn_more').click(function () {
-    $('div.pop_home').slideDown(200);
+  $(".new_header_19 .btn_more").click(function () {
+    $("div.pop_home").slideDown(200);
   });
 
-  $('div.pop_home p').hover(function () {
-    $(this).addClass('on');
-    $(this).find('.btn_s').hide();
-    $(this).find('.btn_o').show();
+  $("div.pop_home p").hover(function () {
+    $(this).addClass("on");
+    $(this).find(".btn_s").hide();
+    $(this).find(".btn_o").show();
   });
 
-  $('div.pop_home p').mouseout(function (e) {
-    $(this).siblings('p').removeClass('on');
-    $(this).siblings('p').find('.btn_o').hide();
-    $(this).siblings('p').find('.btn_s').show();
+  $("div.pop_home p").mouseout(function (e) {
+    $(this).siblings("p").removeClass("on");
+    $(this).siblings("p").find(".btn_o").hide();
+    $(this).siblings("p").find(".btn_s").show();
   });
 
-  $('div.home_box').hover(function () {
-    var btnOn = $('div.pop_home p.on');
-    btnOn.removeClass('on');
+  $("div.home_box").hover(function () {
+    var btnOn = $("div.pop_home p.on");
+    btnOn.removeClass("on");
     if (btnOn) {
-      btnOn.find('.btn_o').hide();
-      btnOn.find('.btn_s').show();
+      btnOn.find(".btn_o").hide();
+      btnOn.find(".btn_s").show();
     }
   });
 
-  $('div.home_box .btn_close').click(function () {
-    var btnOn = $('div.pop_home p.on');
-    btnOn.removeClass('on');
+  $("div.home_box .btn_close").click(function () {
+    var btnOn = $("div.pop_home p.on");
+    btnOn.removeClass("on");
     if (btnOn) {
-      btnOn.find('.btn_o').hide();
-      btnOn.find('.btn_s').show();
+      btnOn.find(".btn_o").hide();
+      btnOn.find(".btn_s").show();
     }
 
-    $('div.pop_home').slideUp(200);
+    $("div.pop_home").slideUp(200);
   });
 }

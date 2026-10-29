@@ -72,7 +72,7 @@
 .lineList_tb.noCateg.nationNews {margin-top:25px;border:0;}
 
 /* datepicker ~ 텍스트: 앞선 부분의 데스크톱 .picker_txt 보다 미디어쿼리가 지도록 엔트리 마지막에 둔다 */
-@media (max-width: 1041px) {
+@media (max-width:1023px) {
     .picker_txt {
         padding-left: 8px;
         line-height: 30px;

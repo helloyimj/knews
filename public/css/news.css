@@ -9,7 +9,7 @@
 .authInfoView .lineTop_tbArea .lineTop_tbL2 td .tit:nth-child(n+2) {margin-top:6px;}
 .authInfoView .lineTop_tbArea .lineTop_tbL2 td .exclamTxt {margin:5px 0;}
 .authInfoView .lineTop_tbArea .lineTop_tbL2 td ul+.exclamTxt {padding-left:10px;}
-@media all and (max-width:1041px){
+@media all and (max-width:1023px){
     .fileI {padding-left:23px !important;background-size:auto 17px !important}
 
     .authInfoView .contTit_line:nth-of-type(n+2) {margin-top:45px}
@@ -20,7 +20,7 @@
     .authInfoView .lineTop_tbArea .lineTop_tbL2 td .tit {margin-bottom:3px;}
     .authInfoView .lineTop_tbArea .lineTop_tbL2 td .tit:nth-child(n+2) {margin-top:3px;}
 }
-@media all and (max-width:768px){
+@media all and (max-width:767px){
     .authInfoView .contTit_line:nth-of-type(n+2) {margin-top:30px}
 }
 

@@ -1,7 +1,6 @@
 function initCommonLayout() {
-
-// 스킵 메뉴 
- $('body.typeSub').prepend(`
+  // 스킵 메뉴
+  $("body.typeSub").prepend(`
     <div id="skip_menu">
       <a href="#contents">본문 바로가기</a>
       <a href="#header">주메뉴 바로가기</a>
@@ -11,8 +10,8 @@ function initCommonLayout() {
     <div id="gnb_dim"></div>
         `);
 
-// 헤더
-  $('#header').html(`
+  // 헤더
+  $("#header").html(`
       <header>
     <h1 class="logo">
       <a href="https://dream.kotra.or.kr/kotranews/index.do">
@@ -48,7 +47,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
                   <img src="https://dream.kotra.or.kr/type/common/img/common/more_siteLogo12.png" alt="KOTRA 무역투자24" title="KOTRA 무역투자24" />
                 </a>
-                <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/kp/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>KOTRA 무역투자24</strong>
                 </a>
               </p>
@@ -56,7 +55,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_s" title="새 창 열림">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_12.png" alt="해외경제정보드림" title="해외경제정보드림" />
                 </a>
-                <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/dream/index.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>해외경제정보드림</strong>
                 </a>
               </p>
@@ -64,7 +63,7 @@ function initCommonLayout() {
                 <a href="https://www.exportvoucher.com" target="_blank" class="btn_s" title="새 창 열림">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_03.png" alt="수출지원기반 활용사업" title="수출지원기반 활용사업" />
                 </a>
-                <a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none">
+                <a href="https://www.exportvoucher.com" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>수출바우처 · 지사화</strong>
                 </a>
               </p>
@@ -72,7 +71,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_04.png" alt="옴부즈만" title="옴부즈만" />
                 </a>
-                <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/ob/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>외투기업고충처리</strong>
                 </a>
               </p>
@@ -80,7 +79,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_05.png" alt="Inverst KOREA" title="Inverst KOREA" />
                 </a>
-                <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/iv/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>투자유치정보제공</strong>
                 </a>
               </p>
@@ -88,7 +87,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_s" style="display: inline-block" title="새 창 열림">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_06.png" alt="글로벌 전시포털" title="글로벌 전시포털" />
                 </a>
-                <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/ge/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>국내 · 해외전시정보</strong>
                 </a>
               </p>
@@ -96,7 +95,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_07.png" alt="바이코리아(Seller)" title="바이코리아(Seller)" />
                 </a>
-                <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/bk/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>수출지원 온라인 플랫폼</strong>
                 </a>
               </p>
@@ -104,7 +103,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_08.png" alt="경제외교 활용포털" title="경제외교 활용포털" />
                 </a>
-                <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/gw/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>경제외교 활용포털</strong>
                 </a>
               </p>
@@ -112,7 +111,7 @@ function initCommonLayout() {
                 <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_09.png" alt="Contract KOREA" title="Contract KOREA" />
                 </a>
-                <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://www.kotra.or.kr/gtc_kor/index.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>해외전문인력유치센터</strong>
                 </a>
               </p>
@@ -120,7 +119,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_10.png" alt="Kodits" title="Kodits" />
                 </a>
-                <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/kd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>방산물자교역지원센터</strong>
                 </a>
               </p>
@@ -128,7 +127,7 @@ function initCommonLayout() {
                 <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_s" title="새 창 열림" style="">
                   <img src="https://dream.kotra.or.kr/type/news/img/layout/logo_t_13.png" alt="무역투자빅데이터" title="무역투자빅데이터" />
                 </a>
-                <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none">
+                <a href="https://dream.kotra.or.kr/bd/kotraSsoUrl.do" target="_blank" class="btn_o" style="display: none" title="새 창 열림">
                   <strong>무역투자빅데이터</strong>
                 </a>
               </p>
@@ -137,7 +136,7 @@ function initCommonLayout() {
           </div>
         </div>
       </div>
-      <a href="https://dream.kotra.or.kr/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새창 이동"><span>해외경제정보드림</span></a>
+      <a href="https://dream.kotra.or.kr/dream/index.do" class="btn_goDream" target="_blank" title="해외경제정보드림 새 창 열림"><span>해외경제정보드림</span></a>
     </div>
 
     <nav>
@@ -407,7 +406,7 @@ function initCommonLayout() {
                 </li>
 
                 <li class="">
-                  <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a>
+                  <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" class="590" title="새 창 열림" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 열림)" rel="noopener noreferrer">청산·국내복귀</a>
                 </li>
 
                 <li class="">
@@ -561,9 +560,9 @@ function initCommonLayout() {
 
   `);
 
-// 사이트맵
+  // 사이트맵
 
-$('section.sitemapBox').html(`
+  $("section.sitemapBox").html(`
   <div class="sitemap_wrap">
     <h2 class="box_tit">사이트맵</h2>
     <div class="box_ct">
@@ -747,7 +746,7 @@ $('section.sitemapBox').html(`
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=570" title="" data-sub="N" target="_self">해외투자준비</a>
                   </li>
                   <li class="">
-                    <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새창열림" data-sub="N" target="_blank">청산·국내복귀</a>
+                    <a href="https://www.investkorea.org/ik-kr/cntnts/i-237/web.do" title="새 창 열림" data-sub="N" target="_blank" aria-label="청산·국내복귀(새 창 열림)" rel="noopener noreferrer">청산·국내복귀</a>
                   </li>
                   <li class="">
                     <a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=600" title="" data-sub="N" target="_self">FAQ</a>
@@ -839,15 +838,14 @@ $('section.sitemapBox').html(`
   </div>
   `);
 
+  // SNS 보드
+  //  $('#snb_board').html(`
+  //         `);
 
-// SNS 보드
-//  $('#snb_board').html(`
-//         `);
+  // {/* <div id="snb_board"></div> */}
+  // SNS공유
 
-// {/* <div id="snb_board"></div> */}
-// SNS공유
-
- $('#container #contents #pnb').html(`
+  $("#container #contents #pnb").html(`
           <div class="pnb_nav">
             <a href="https://dream.kotra.or.kr/kotranews/index.do" class="btn_home" title="홈 화면 이동" target="_self"><span class="txtHidden">홈</span></a>
             <ul>
@@ -952,16 +950,15 @@ $('section.sitemapBox').html(`
           </div>
         `);
 
-
-// TOP버튼
-// $('#btnTop').html(`
-$('#footer').before(`
+  // TOP버튼
+  // $('#btnTop').html(`
+  $("#footer").before(`
   <button type="button" id="btn_top">TOP</button>
   `);
 
-// 푸터
+  // 푸터
 
-$('#footer').html(`
+  $("#footer").html(`
   <footer>
     <ul class="f_menu">
       <li><a href="https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=750" target="_self">뷰어다운로드</a></li>
@@ -999,540 +996,553 @@ $('#footer').html(`
   </footer>
 `);
 
+  // <!-- 스킵 메뉴 -->
+  //  $('body.typeSub').prepend(`
+  //     <div id="skip_menu">
+  //       <a href="#contents">본문 바로가기</a>
+  //       <a href="#header">주메뉴 바로가기</a>
+  //       <a href="#footer">푸터 바로가기</a>
+  //     </div>
+  //     <div id="dim"></div>
+  //     <div id="gnb_dim"></div>
+  //         `);
 
-
-
-// <!-- 스킵 메뉴 -->
-//  $('body.typeSub').prepend(`
-//     <div id="skip_menu">
-//       <a href="#contents">본문 바로가기</a>
-//       <a href="#header">주메뉴 바로가기</a>
-//       <a href="#footer">푸터 바로가기</a>
-//     </div>
-//     <div id="dim"></div>
-//     <div id="gnb_dim"></div>
-//         `);
-
-// <!-- 스킵 메뉴 -->
-
-
-};
-  
-
-
-
+  // <!-- 스킵 메뉴 -->
+}
 
 $(document).ready(function () {
-  
   initCommonLayout();
-      // var gnbDep1 = 0;
-      // var gnbDep2 = 0;
-      // var gnbDep3 = 0;
 
-      // !!! 임시로 전역변수로 변경
-      window.gnbDep1 = 0;
-      window.gnbDep2 = 0;
-      window.gnbDep3 = 0;
+  // 본문 랜드마크: HTML은 <main id="contents">. 구 마크업(div)만 남아 있으면 main으로 교체
+  if ($("#contents").length && !$("#contents").is("main") && !$("main#contents").length) {
+    $("#contents").each(function () {
+      var $el = $(this);
+      var $main = $("<main id=\"contents\"></main>");
+      $main.append($el.contents());
+      $.each(this.attributes, function () {
+        if (this.name === "id" || this.name === "role") return;
+        $main.attr(this.name, this.value);
+      });
+      $el.replaceWith($main);
+    });
+  }
 
-      // $().ready(function () {
-        $(".mTopNotice .innerCont").not(".slick-initialized").slick({
-          speed: 300,
-          dots: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true,
-          infinite: true,
-          // 21-11-24 추가
-          autoplay: true
-        });
+  // var gnbDep1 = 0;
+  // var gnbDep2 = 0;
+  // var gnbDep3 = 0;
 
-        /* 21-11-15 탑배너 버튼 추가 1 */
-        if ($(".mTopNotice .slick-arrow").length < 1) {
-          $(".mTopNotice .list_control").removeClass("on");
-        } else {
-          $(".mTopNotice .list_control").addClass("on");
-        }
+  // !!! 임시로 전역변수로 변경
+  window.gnbDep1 = 0;
+  window.gnbDep2 = 0;
+  window.gnbDep3 = 0;
 
-        $(".mTopNotice .list_control>button").click(function () {
-          if ($(this).hasClass("btn_pause")) {
-            $(".mTopNotice .slick-slider").slick("slickPause");
-            $(this).attr("class", "btn_play").text("재생");
-          } else {
-            $(".mTopNotice .slick-slider").slick("slickPlay");
-            $(this).attr("class", "btn_pause").text("일시정지");
-          }
-        });
-        /* //21-11-15 탑배너 버튼 추가 1 */
+  // $().ready(function () {
+  $(".mTopNotice .innerCont").not(".slick-initialized").slick({
+    speed: 300,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: true,
+    // 21-11-24 추가
+    autoplay: true
+  });
 
-        //상단공지 닫기
-        $(document).on("click", ".mTopNotice .closedArea .closedBtn", function (e) {
-          if ($("input[name=news_top_cls]").prop("checked")) {
-            setCookie("news_top_cls", "done", 1);
-          }
-          $("body").removeClass("typeTopNotice");
-          $(".mTopNotice").hide();
-        });
+  /* 21-11-15 탑배너 버튼 추가 1 */
+  if ($(".mTopNotice .slick-arrow").length < 1) {
+    $(".mTopNotice .list_control").removeClass("on");
+  } else {
+    $(".mTopNotice .list_control").addClass("on");
+  }
 
-        $(".mTopNotice").hide();
-        $(".typeMain").removeClass("typeTopNotice");
-      // });
-// <!-- 스킵 메뉴 -->
-
-
-//  헤더 GNB 
-var frameBtnObj;
-
-function setHref(obj, org){
-	if($(obj).find("> div").length > 0){
-		if($(obj).find("> div> ul > li:not('.emptyArea')").length > 0){
-			if($(obj).find(">a").data("sub")=="Y"){
-				$(org).find(">a").attr("href",$(obj).find("> div> ul > li:not('.emptyArea'):eq(0) > a").attr("href"));
-				$(org).find(">a").attr("target",$(obj).find("> div> ul > li:not('.emptyArea'):eq(0) > a").attr("target"));
-				
-				setHref($(obj).find("> div> ul > li:not('.emptyArea'):eq(0)"),org);
-			}else{
-				$(org).find(">a").attr("href",$(org).find(">a").attr("href"));
-			}
-		}
-	}else{
-		if($(obj).find("> ul > li:not('.emptyArea')").length > 0){
-			if($(obj).find(">a").data("sub")=="Y"){
-				$(org).find(">a").attr("href",$(obj).find("> ul > li:not('.emptyArea'):eq(0) > a").attr("href"));
-				$(org).find(">a").attr("target",$(obj).find("> ul > li:not('.emptyArea'):eq(0) > a").attr("target"));
-				
-				setHref($(obj).find("> ul > li:not('.emptyArea'):eq(0)"),org);
-			}else{
-				$(org).find(">a").attr("href",$(org).find(">a").attr("href"));
-			}
-		}
-	}
-	
-}
-
-// $(function(){
-	$(document).on("click", "ul#gnb li, ul#snb li", function(){
-		setHref($(this),$(this));
-	});
-	 
-	$(document).on("click", ".navList>.menu>ul>li>a", function(){
-		var val = $(this).data('menuno');
-		$("ul#gnb li").find('.'+val).closest('li').trigger('click');
-		if($("ul#gnb li").find('.'+val).attr('target') == "_blank"){
-			window.open($("ul#gnb li").find('.'+val).attr('href'));
-		}else{
-			location.href = $("ul#gnb li").find('.'+val).attr('href'); 			
-		} 
-	});
-	
-	$(document).on("click", ".pnbList>.menu>ul>li>a", function(){
-		var val = $(this).data('menuno');
-		$("ul#gnb li").find('.'+val).closest('li').trigger('click');
-		if($("ul#gnb li").find('.'+val).attr('target') == "_blank"){
-			window.open($("ul#gnb li").find('.'+val).attr('href'));
-		}else{
-			location.href = $("ul#gnb li").find('.'+val).attr('href'); 			
-		}
-// 		$("ul#gnb li").find('.'+val).get(0).click();
-	});
-		
-	if($('#gnb li.on').parents('ul').hasClass('menuS')){
-		gnbDep1 = $('#gnb > li').index($('#gnb li.on').parents('ul.menuM').parent())+1;
-		gnbDep2 = $('#gnb li.on').parents('ul.menuM').find('>li').index($('#gnb li.on').parents('ul.menuS').parent())+1;
-		gnbDep3 = $('#gnb li.on').parents('ul.menuS').find('>li').index($('#gnb li.on'))+1;
-	}else if($('#gnb li.on').parents('ul').hasClass('menuM')){
-		gnbDep1 = $('#gnb > li').index($('#gnb li.on').parents('ul.menuM').parent())+1;
-		gnbDep2 = $('#gnb li.on').parents('ul.menuM').find('>li').index($('#gnb li.on'))+1;
-	}else{
-		gnbDep1 = $('#gnb > li').index($('#gnb li.on'))+1;
-	}
-	$('.sVisual strong').text($('#gnb li.on > a').text());
-	
-	$(document).on('click', '.btn_logout, .btn_topLogout', function(){
-		frameBtnObj = $(this);
-		$("body").css("overflow-y","hidden");
-		$('<iframe id="iframeLogoutPop" src="https://dream.kotra.or.kr/kotranews/cms/frCom/actionLogoutPop.do" class="pop_iframe on" height="100%" scrolling="no" frameborder="0" title="로그아웃 팝업"/>').appendTo($("body #container"));
-	});
-	
-	$(document).on('click', '.btn_login, .btn_topLogin', function(){
-		//뉴스
-		//location.href = "https://dream.kotra.or.kr/kotranews/login/topUtilLink.do?pRetUrl=" + encodeURIComponent(window.location.pathname + window.location.search);
-		sessionStorage.setItem('newsLogin', 'newsLogin');
-		location.href = "https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=kn"
-	});
-	
-	$(document).on('click', '.btn_mypage', function(){
-		location.href = "https://dream.kotra.or.kr/dream/mypage/topUtilLink.do";
-	});
-	
-	$(document).on('click', '.gnb_util .btn_search', function(){
-		var pSearchTxt = $('.search_inp').val()
-		
-		fn_comm_ajax({
-			url : "/ajaxf/totalSearch/getStopWordList.do",
-			data : {},
-			dataType : "json",
-			async : false,
-			success : function(data) {
-				if (null != data && '' != data) {
-					for(var i=0; i < data.length; i++){
-						if(pSearchTxt == data[i].BAN_WORD){
-							alert('\''+data[i].BAN_WORD+'\''+'은(는)'+' 검색할 수 없는 단어입니다.');
-							return false;
-						}
-					}
-				}
-				
-				$("#searchForm").find('[name=searchTxt]').val($('.search_inp').val());
-				$("#searchForm").find('[name=tDiv]').val($('.search_opt .btn_searchOpt').val());
-				$("#searchForm").find('[name=pRetUrl]').val((window.location.pathname + window.location.search));
-				$("#searchForm").submit();
-			}
-		});
-	});
-	
-	$(document).on('click', '.search_opt > ul > li > button', function(){
-		var sVal = $(this).val();
-		var sText = $(this).text();
-		$('.search_opt .btn_searchOpt').val(sVal);
-		$('.search_opt .btn_searchOpt').text(sText);
-	});
-	
-	$("header .mBtn_topMenu").click(function(){
-		if(window.innerWidth < 1041){
-			if(!$("nav>#gnb>li>a").hasClass('on')){
-				$("nav>#gnb>li>a").eq(0).trigger('click');
-			}
-		}
-	});
-	
-	//접근성 팝업 포커스 변경
-	$(document).on('DOMNodeInserted', '.pop_iframe', function(){
-		$(this).focus();
-	});
-	$(document).on('DOMNodeRemoved', '.pop_iframe', function(){
-		$(frameBtnObj).focus();
-	});
-// });
-
-function closeSearchPop(){
-	$('#iframeSearchPop').remove();
-}
-
-function closeTotalSearchPop(){
-	$("body").css("overflow","");
-	$("body").css("overflow-y","");
-	$("#iframeSearchPop").remove();
-}
-function closeLogoutPop(){
-	$("body").css("overflow","");
-	$("body").css("overflow-y","");
-	$("#iframeLogoutPop").remove();
-}
-
-/************************************************************************
-* 함수명 : fn_logout
-* 설 명 :  로그아웃
-* 인 자 :
-* 작성자 : bvs
-* 수정일 수정자 수정내용
-* ------ ------ -------------------
-* 2021.03.15 bvs 최초생성
-************************************************************************/
-function fn_logout(){
-	location.href = "https://dream.kotra.or.kr/kotranews/action/actionLogout.do";
-}
-
-/************************************************************************
-* 함수명 : fn_enterkey
-* 설 명 :  엔터키 클릭 이벤트 호출
-* 인 자 :
-* 작성자 : bvs
-* 수정일 수정자 수정내용
-* ------ ------ -------------------
-* 2021.03.15 bvs 최초생성
-************************************************************************/
-function fn_enterkey() {
-    if (window.event.keyCode == 13) {
-         $('.btn_search').trigger('click');
+  $(".mTopNotice .list_control>button").click(function () {
+    if ($(this).hasClass("btn_pause")) {
+      $(".mTopNotice .slick-slider").slick("slickPause");
+      $(this).attr("class", "btn_play").text("재생");
+    } else {
+      $(".mTopNotice .slick-slider").slick("slickPlay");
+      $(this).attr("class", "btn_pause").text("일시정지");
     }
-}
-//  GNB 헤더
+  });
+  /* //21-11-15 탑배너 버튼 추가 1 */
 
-// 사이트맵
-      // $(function () {
-        function sitemap() {
-          $(".sitemapBox .map_nav").css({
-            height: window.innerHeight - 240
-          });
+  //상단공지 닫기
+  $(document).on("click", ".mTopNotice .closedArea .closedBtn", function (e) {
+    if ($("input[name=news_top_cls]").prop("checked")) {
+      setCookie("news_top_cls", "done", 1);
+    }
+    $("body").removeClass("typeTopNotice");
+    $(".mTopNotice").hide();
+  });
+
+  $(".mTopNotice").hide();
+  $(".typeMain").removeClass("typeTopNotice");
+  // });
+  // <!-- 스킵 메뉴 -->
+
+  //  헤더 GNB
+  var frameBtnObj;
+
+  function setHref(obj, org) {
+    if ($(obj).find("> div").length > 0) {
+      if ($(obj).find("> div> ul > li:not('.emptyArea')").length > 0) {
+        if ($(obj).find(">a").data("sub") == "Y") {
+          $(org)
+            .find(">a")
+            .attr("href", $(obj).find("> div> ul > li:not('.emptyArea'):eq(0) > a").attr("href"));
+          $(org)
+            .find(">a")
+            .attr(
+              "target",
+              $(obj).find("> div> ul > li:not('.emptyArea'):eq(0) > a").attr("target")
+            );
+
+          setHref($(obj).find("> div> ul > li:not('.emptyArea'):eq(0)"), org);
+        } else {
+          $(org).find(">a").attr("href", $(org).find(">a").attr("href"));
+        }
+      }
+    } else {
+      if ($(obj).find("> ul > li:not('.emptyArea')").length > 0) {
+        if ($(obj).find(">a").data("sub") == "Y") {
+          $(org)
+            .find(">a")
+            .attr("href", $(obj).find("> ul > li:not('.emptyArea'):eq(0) > a").attr("href"));
+          $(org)
+            .find(">a")
+            .attr("target", $(obj).find("> ul > li:not('.emptyArea'):eq(0) > a").attr("target"));
+
+          setHref($(obj).find("> ul > li:not('.emptyArea'):eq(0)"), org);
+        } else {
+          $(org).find(">a").attr("href", $(org).find(">a").attr("href"));
+        }
+      }
+    }
+  }
+
+  // $(function(){
+  $(document).on("click", "ul#gnb li, ul#snb li", function () {
+    setHref($(this), $(this));
+  });
+
+  $(document).on("click", ".navList>.menu>ul>li>a", function () {
+    var val = $(this).data("menuno");
+    $("ul#gnb li")
+      .find("." + val)
+      .closest("li")
+      .trigger("click");
+    if (
+      $("ul#gnb li")
+        .find("." + val)
+        .attr("target") == "_blank"
+    ) {
+      window.open(
+        $("ul#gnb li")
+          .find("." + val)
+          .attr("href")
+      );
+    } else {
+      location.href = $("ul#gnb li")
+        .find("." + val)
+        .attr("href");
+    }
+  });
+
+  $(document).on("click", ".pnbList>.menu>ul>li>a", function () {
+    var val = $(this).data("menuno");
+    $("ul#gnb li")
+      .find("." + val)
+      .closest("li")
+      .trigger("click");
+    if (
+      $("ul#gnb li")
+        .find("." + val)
+        .attr("target") == "_blank"
+    ) {
+      window.open(
+        $("ul#gnb li")
+          .find("." + val)
+          .attr("href")
+      );
+    } else {
+      location.href = $("ul#gnb li")
+        .find("." + val)
+        .attr("href");
+    }
+    // 		$("ul#gnb li").find('.'+val).get(0).click();
+  });
+
+  if ($("#gnb li.on").parents("ul").hasClass("menuS")) {
+    gnbDep1 = $("#gnb > li").index($("#gnb li.on").parents("ul.menuM").parent()) + 1;
+    gnbDep2 =
+      $("#gnb li.on")
+        .parents("ul.menuM")
+        .find(">li")
+        .index($("#gnb li.on").parents("ul.menuS").parent()) + 1;
+    gnbDep3 = $("#gnb li.on").parents("ul.menuS").find(">li").index($("#gnb li.on")) + 1;
+  } else if ($("#gnb li.on").parents("ul").hasClass("menuM")) {
+    gnbDep1 = $("#gnb > li").index($("#gnb li.on").parents("ul.menuM").parent()) + 1;
+    gnbDep2 = $("#gnb li.on").parents("ul.menuM").find(">li").index($("#gnb li.on")) + 1;
+  } else {
+    gnbDep1 = $("#gnb > li").index($("#gnb li.on")) + 1;
+  }
+  $(".sVisual strong").text($("#gnb li.on > a").text());
+
+  $(document).on("click", ".btn_logout, .btn_topLogout", function () {
+    frameBtnObj = $(this);
+    $("body").css("overflow-y", "hidden");
+    $(
+      '<iframe id="iframeLogoutPop" src="https://dream.kotra.or.kr/kotranews/cms/frCom/actionLogoutPop.do" class="pop_iframe on" height="100%" scrolling="no" frameborder="0" title="로그아웃 팝업"/>'
+    ).appendTo($("body #container"));
+  });
+
+  $(document).on("click", ".btn_login, .btn_topLogin", function () {
+    //뉴스
+    //location.href = "https://dream.kotra.or.kr/kotranews/login/topUtilLink.do?pRetUrl=" + encodeURIComponent(window.location.pathname + window.location.search);
+    sessionStorage.setItem("newsLogin", "newsLogin");
+    location.href = "https://www.kotra.or.kr/membership/membershipLoginForm.do?siteName=kn";
+  });
+
+  $(document).on("click", ".btn_mypage", function () {
+    location.href = "https://dream.kotra.or.kr/dream/mypage/topUtilLink.do";
+  });
+
+  $(document).on("click", ".gnb_util .btn_search", function () {
+    var pSearchTxt = $(".search_inp").val();
+
+    fn_comm_ajax({
+      url: "/ajaxf/totalSearch/getStopWordList.do",
+      data: {},
+      dataType: "json",
+      async: false,
+      success: function (data) {
+        if (null != data && "" != data) {
+          for (var i = 0; i < data.length; i++) {
+            if (pSearchTxt == data[i].BAN_WORD) {
+              alert("'" + data[i].BAN_WORD + "'" + "은(는)" + " 검색할 수 없는 단어입니다.");
+              return false;
+            }
+          }
         }
 
-        // 포커스 시 초점 이동 막기
-        $.fn.focusWithoutScrolling = function () {
-          var x = window.scrollX,
-            y = window.scrollY;
-          this.focus();
-          window.scrollTo(x, y);
-          return this; //chainability
-        };
+        $("#searchForm").find("[name=searchTxt]").val($(".search_inp").val());
+        $("#searchForm").find("[name=tDiv]").val($(".search_opt .btn_searchOpt").val());
+        $("#searchForm")
+          .find("[name=pRetUrl]")
+          .val(window.location.pathname + window.location.search);
+        $("#searchForm").submit();
+      }
+    });
+  });
 
-        $(".sitemapBox .map_nav").mCustomScrollbar();
+  $(document).on("click", ".search_opt > ul > li > button", function () {
+    var sVal = $(this).val();
+    var sText = $(this).text();
+    $(".search_opt .btn_searchOpt").val(sVal);
+    $(".search_opt .btn_searchOpt").text(sText);
+  });
 
-        $(".sitemapBox .map_gnb>li>a").click(function () {
-          var mapGnb_num = $(this).parent("li").index();
-          $(".sitemapBox .map_gnb>li>a").removeClass("on");
-          $(this).addClass("on");
+  $("header .mBtn_topMenu").click(function () {
+    if (window.innerWidth < 1024) {
+      if (!$("nav>#gnb>li>a").hasClass("on")) {
+        $("nav>#gnb>li>a").eq(0).trigger("click");
+      }
+    }
+  });
 
-          $(".sitemapBox .map_nav")
-            .find(".mCSB_container")
-            .find("#sitemap>li:eq(" + mapGnb_num + ")")
-            .find(".menuM>li:eq(0)>a")
-            .focusWithoutScrolling();
+  //접근성 팝업 포커스 변경
+  $(document).on("DOMNodeInserted", ".pop_iframe", function () {
+    $(this).focus();
+  });
+  $(document).on("DOMNodeRemoved", ".pop_iframe", function () {
+    $(frameBtnObj).focus();
+  });
+  // });
 
-          $(".sitemapBox .map_nav").mCustomScrollbar(
-            "scrollTo",
-            $(".sitemapBox .map_nav")
-              .find(".mCSB_container")
-              .find("#sitemap>li:eq(" + mapGnb_num + ")")
-          );
-        });
+  function closeSearchPop() {
+    $("#iframeSearchPop").remove();
+  }
 
-        $(window).bind("load resize", function () {
-          sitemap();
-        });
+  function closeTotalSearchPop() {
+    $("body").css("overflow", "");
+    $("body").css("overflow-y", "");
+    $("#iframeSearchPop").remove();
+  }
+  function closeLogoutPop() {
+    $("body").css("overflow", "");
+    $("body").css("overflow-y", "");
+    $("#iframeLogoutPop").remove();
+  }
 
-        $(document).on("click", "ul#sitemap li", function () {
-          setHref($(this), $(this));
-        });
-      // });
+  /************************************************************************
+   * 함수명 : fn_logout
+   * 설 명 :  로그아웃
+   * 인 자 :
+   * 작성자 : bvs
+   * 수정일 수정자 수정내용
+   * ------ ------ -------------------
+   * 2021.03.15 bvs 최초생성
+   ************************************************************************/
+  function fn_logout() {
+    location.href = "https://dream.kotra.or.kr/kotranews/action/actionLogout.do";
+  }
 
-// // 사이트맵 
+  /************************************************************************
+   * 함수명 : fn_enterkey
+   * 설 명 :  엔터키 클릭 이벤트 호출
+   * 인 자 :
+   * 작성자 : bvs
+   * 수정일 수정자 수정내용
+   * ------ ------ -------------------
+   * 2021.03.15 bvs 최초생성
+   ************************************************************************/
+  function fn_enterkey() {
+    if (window.event.keyCode == 13) {
+      $(".btn_search").trigger("click");
+    }
+  }
+  //  GNB 헤더
 
+  // 사이트맵
+  // $(function () {
+  function sitemap() {
+    $(".sitemapBox .map_nav").css({
+      height: window.innerHeight - 240
+    });
+  }
 
+  // 포커스 시 초점 이동 막기
+  $.fn.focusWithoutScrolling = function () {
+    var x = window.scrollX,
+      y = window.scrollY;
+    this.focus();
+    window.scrollTo(x, y);
+    return this; //chainability
+  };
 
+  $(".sitemapBox .map_nav").mCustomScrollbar({
+    keyboard: { enable: false },
+    advanced: { autoScrollOnFocus: true }
+  });
+  $(".sitemapBox .map_nav .mCustomScrollBox").removeAttr("tabindex");
 
-// SNS공유
+  $(".sitemapBox .map_gnb>li>a").click(function () {
+    var mapGnb_num = $(this).parent("li").index();
+    $(".sitemapBox .map_gnb>li>a").removeClass("on");
+    $(this).addClass("on");
+
+    $(".sitemapBox .map_nav")
+      .find(".mCSB_container")
+      .find("#sitemap>li:eq(" + mapGnb_num + ")")
+      .find(".menuM>li:eq(0)>a")
+      .focusWithoutScrolling();
+
+    $(".sitemapBox .map_nav").mCustomScrollbar(
+      "scrollTo",
+      $(".sitemapBox .map_nav")
+        .find(".mCSB_container")
+        .find("#sitemap>li:eq(" + mapGnb_num + ")")
+    );
+  });
+
+  $(window).bind("load resize", function () {
+    sitemap();
+  });
+
+  $(document).on("click", "ul#sitemap li", function () {
+    setHref($(this), $(this));
+  });
+  // });
+
+  // // 사이트맵
+
+  // SNS공유
   // 카카오 SDK 로드
   // $.getScript('https://developers.kakao.com/sdk/js/kakao.min.js', function () {
   //   // 로드 완료 후 초기화
   //   Kakao.init('여기에_JS키');
   // });
 
-            $(".btn_print").bind("click", function () {
-              if ($(".nation_areainfo").length > 0) {
-                $(".nation_areainfo").printThis();
-              } else if ($("#pdfArea").length > 0) {
-                $("#pdfArea").printThis();
-              } else if ($(".lineList_v").length > 0) {
-                $(".lineList_v").printThis();
-              } else {
-                window.print();
-              }
-            });
+  $(".btn_print").bind("click", function () {
+    if ($(".nation_areainfo").length > 0) {
+      $(".nation_areainfo").printThis();
+    } else if ($("#pdfArea").length > 0) {
+      $("#pdfArea").printThis();
+    } else if ($(".lineList_v").length > 0) {
+      $(".lineList_v").printThis();
+    } else {
+      window.print();
+    }
+  });
 
-            var clipboard = new ClipboardJS(".btn_urlCopy", {
-              text: function () {
-                return fn_getUrl();
-              }
-            });
-            clipboard.on("success", function (e) {
-              alert("URL이 복사되었습니다.");
-            });
-            clipboard.on("error", function (e) {
-              alert("URL복사에 실패했습니다.");  
-            });
+  var clipboard = new ClipboardJS(".btn_urlCopy", {
+    text: function () {
+      return fn_getUrl();
+    }
+  });
+  clipboard.on("success", function (e) {
+    alert("URL이 복사되었습니다.");
+  });
+  clipboard.on("error", function (e) {
+    alert("URL복사에 실패했습니다.");
+  });
 
-            $(document).on("click", ".btn_bookmark", function () {
-              var val = $(this).val();
-              if (val == null || val == "") val = "N";
-              fn_comm_ajax({
-                url: "/ajaxf/frCom/setBookmark.do",
-                data: {SITE_NO: "3", MENU_NO: "140", CONTENTS_NO: "1", bookmarkYn: val},
-                dataType: "json",
-                success: function (data) {
-                  if (data != null) {
-                    alert(data.MSG);
+  $(document).on("click", ".btn_bookmark", function () {
+    var val = $(this).val();
+    if (val == null || val == "") val = "N";
+    fn_comm_ajax({
+      url: "/ajaxf/frCom/setBookmark.do",
+      data: { SITE_NO: "3", MENU_NO: "140", CONTENTS_NO: "1", bookmarkYn: val },
+      dataType: "json",
+      success: function (data) {
+        if (data != null) {
+          alert(data.MSG);
 
-                    if ("SUCCESS" == data.RESULT) {
-                      if (val == "Y") {
-                        $(".btn_bookmark").val("N");
-                        $(".btn_bookmark").removeClass("on");
-                      } else {
-                        $(".btn_bookmark").val("Y");
-                        $(".btn_bookmark").addClass("on");
-                      }
-                    }
-                  }
-                }
-              });
-            });
-
-            //$("#copyUrl").val(fn_getUrl());
-            $(document).on("click", ".btn_share", function () {
-              if ($("#copyUrl").val() == "") $("#copyUrl").val(fn_getUrl());
-            });
-            try {
-              Kakao.init("db8f875d5ed49c0de3dbd61f92fbc7d0");
-            } catch (e) {}
-
-            var title2 = $(document).attr("title");
-
-            var newsImageUrl = "http://dream.kotra.or.kr/type/news/img/layout/logo_navi.png";
-
-            try {
-              Kakao.Link.createDefaultButton({
-                container: "#kakao-link-btn",
-                objectType: "feed",
-                content: {
-                  title: title2,
-                  description: title2,
-                  imageUrl: newsImageUrl,
-                  imageWidth: 60,
-                  imageHeight: 15,
-                  link: {
-                    mobileWebUrl: location.href,
-                    webUrl: location.href,
-                    androidExecParams: location.href,
-                    iosExecParams: location.href
-                  }
-                },
-                buttons: [
-                  {
-                    title: "웹으로 보기",
-                    link: {
-                      mobileWebUrl: location.href,
-                      webUrl: location.href
-                    }
-                  }
-                ]
-              });
-            } catch (e) {}
-
-          function fn_getUrl() {
-            var rtnUrl = "";
-            var url = decodeURIComponent(location.href);
-            url = decodeURIComponent(url).replace("#", "");
-            url = decodeURIComponent(url).replace(";", "");
-            rtnUrl = url.replace("#;", "");
-            rtnUrl = fn_makeShortUrl(rtnUrl);
-            return rtnUrl;
-          }
-
-          // 2024-06-25 네이버 밴드 추가
-          function shareSns(sns) {
-            var snsTitle = "";
-            var snsItems = new Array();
-            var winOpt = new Array();
-            var snsUrl = fn_getUrl();
-
-            snsItems["facebook"] = "http://www.facebook.com/share.php?t=" + encodeURIComponent(snsTitle) + "&u=" + encodeURIComponent(snsUrl);
-            snsItems["twitter"] = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(snsTitle + "\n" + snsUrl);
-            snsItems["kakao"] = "https://story.kakao.com/share?url=" + encodeURIComponent(snsUrl);
-            snsItems["blog"] = "http://blog.naver.com/openapi/share?url=" + encodeURIComponent(snsUrl) + "&title=" + encodeURIComponent(snsTitle);
-            snsItems["band"] = "https://band.us/plugin/share?body=" + encodeURIComponent(snsUrl);
-
-            winOpt["facebook"] = "width=700, height=500, resizable=yes";
-            winOpt["twitter"] = "width=700, height=500, resizable=yes";
-            winOpt["kakao"] = "width=500, height=500, resizable=yes";
-            winOpt["blog"] = "width=500, height=500, resizeable=yes";
-            winOpt["band"] = "width=500, height=500, resizeable=yes";
-
-            var win = window.open(snsItems[sns], sns, winOpt[sns]);
-            if (win) {
-              win.focus();
+          if ("SUCCESS" == data.RESULT) {
+            if (val == "Y") {
+              $(".btn_bookmark").val("N");
+              $(".btn_bookmark").removeClass("on");
+            } else {
+              $(".btn_bookmark").val("Y");
+              $(".btn_bookmark").addClass("on");
             }
           }
+        }
+      }
+    });
+  });
 
-          function fn_makeShortUrl(url) {
-            var shortUrl;
+  //$("#copyUrl").val(fn_getUrl());
+  $(document).on("click", ".btn_share", function () {
+    if ($("#copyUrl").val() == "") $("#copyUrl").val(fn_getUrl());
+  });
+  try {
+    Kakao.init("db8f875d5ed49c0de3dbd61f92fbc7d0");
+  } catch (e) {}
 
-            fn_comm_ajax({
-              url: "/ajaxf/frBoard/getKotraShortUrl.do",
-              data: {url: encodeURIComponent(url)},
-              dataType: "json",
-              async: false,
-              success: function (data) {
-                if (data != null && data.shortUrl != null) {
-                  shortUrl = data.shortUrl;
-                } else {
-                  shortUrl = url;
-                }
-              }
-            });
+  var title2 = $(document).attr("title");
 
-            return shortUrl;
+  var newsImageUrl = "http://dream.kotra.or.kr/type/news/img/layout/logo_navi.png";
+
+  try {
+    Kakao.Link.createDefaultButton({
+      container: "#kakao-link-btn",
+      objectType: "feed",
+      content: {
+        title: title2,
+        description: title2,
+        imageUrl: newsImageUrl,
+        imageWidth: 60,
+        imageHeight: 15,
+        link: {
+          mobileWebUrl: location.href,
+          webUrl: location.href,
+          androidExecParams: location.href,
+          iosExecParams: location.href
+        }
+      },
+      buttons: [
+        {
+          title: "웹으로 보기",
+          link: {
+            mobileWebUrl: location.href,
+            webUrl: location.href
           }
+        }
+      ]
+    });
+  } catch (e) {}
 
-          // SNS 보드
+  function fn_getUrl() {
+    var rtnUrl = "";
+    var url = decodeURIComponent(location.href);
+    url = decodeURIComponent(url).replace("#", "");
+    url = decodeURIComponent(url).replace(";", "");
+    rtnUrl = url.replace("#;", "");
+    rtnUrl = fn_makeShortUrl(rtnUrl);
+    return rtnUrl;
+  }
 
-           var slickSnbBookmark = {
-            infinite: true,
-            autoplay: false,
-            arrows: true,
-            button: false,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            speed: 600,
-            variableWidth: true,
-            responsive: [
-              {
-                breakpoint: 1041,
-                settings: {
-                  slidesToShow: 5
-                }
-              }
-            ]
-          };
-          $("#snb_board .snb_bookmark .list").not(".slick-initialized").slick(slickSnbBookmark);
+  // 2024-06-25 네이버 밴드 추가
+  function shareSns(sns) {
+    var snsTitle = "";
+    var snsItems = new Array();
+    var winOpt = new Array();
+    var snsUrl = fn_getUrl();
 
-// SNS공유
+    snsItems["facebook"] =
+      "http://www.facebook.com/share.php?t=" +
+      encodeURIComponent(snsTitle) +
+      "&u=" +
+      encodeURIComponent(snsUrl);
+    snsItems["twitter"] =
+      "https://twitter.com/intent/tweet?text=" + encodeURIComponent(snsTitle + "\n" + snsUrl);
+    snsItems["kakao"] = "https://story.kakao.com/share?url=" + encodeURIComponent(snsUrl);
+    snsItems["blog"] =
+      "http://blog.naver.com/openapi/share?url=" +
+      encodeURIComponent(snsUrl) +
+      "&title=" +
+      encodeURIComponent(snsTitle);
+    snsItems["band"] = "https://band.us/plugin/share?body=" + encodeURIComponent(snsUrl);
 
+    winOpt["facebook"] = "width=700, height=500, resizable=yes";
+    winOpt["twitter"] = "width=700, height=500, resizable=yes";
+    winOpt["kakao"] = "width=500, height=500, resizable=yes";
+    winOpt["blog"] = "width=500, height=500, resizeable=yes";
+    winOpt["band"] = "width=500, height=500, resizeable=yes";
 
-// 푸터
-      // $(function () {
-        var slickFbnr = {
-          infinite: true,
-          autoplay: false,
-          arrows: true,
-          button: false,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          speed: 600,
-          responsive: [
-            {
-              breakpoint: 1280,
-              settings: {
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 1041,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 560,
-              settings: {
-                slidesToShow: 2
-              }
-            }
-          ]
-        };
-        $("footer .f_bnr .list").not(".slick-initialized").slick(slickFbnr);
-      // });
+    var win = window.open(snsItems[sns], sns, winOpt[sns]);
+    if (win) {
+      win.focus();
+    }
+  }
 
+  function fn_makeShortUrl(url) {
+    var shortUrl;
 
+    fn_comm_ajax({
+      url: "/ajaxf/frBoard/getKotraShortUrl.do",
+      data: { url: encodeURIComponent(url) },
+      dataType: "json",
+      async: false,
+      success: function (data) {
+        if (data != null && data.shortUrl != null) {
+          shortUrl = data.shortUrl;
+        } else {
+          shortUrl = url;
+        }
+      }
+    });
 
+    return shortUrl;
+  }
 
+  // SNS 보드 슬라이더 — #snb_board .snb_bookmark 있을 때만
+  var $snsBoardList = $("#snb_board .snb_bookmark .list");
+  if ($snsBoardList.length) {
+    var snsBoardSliderOpts = {
+      infinite: true,
+      autoplay: false,
+      arrows: true,
+      button: false,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      speed: 600,
+      variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 5
+          }
+        }
+      ]
+    };
+    $snsBoardList.not(".slick-initialized").slick(snsBoardSliderOpts);
+  }
 
-        });
-
+  // SNS공유
+});
 
 //  $('#skip_menu').html(`
 //       <a href="#contents">본문 바로가기</a>
@@ -1542,6 +1552,3 @@ function fn_enterkey() {
 
 //     <div id="dim"></div>
 //     <div id="gnb_dim"></div>
-    
-
-

@@ -117,7 +117,7 @@ $(function(){
 	});
 	
 	$("header .mBtn_topMenu").click(function(){
-		if(window.innerWidth < 1041){
+		if(window.innerWidth < 1024){
 			if(!$("nav>#gnb>li>a").hasClass('on')){
 				$("nav>#gnb>li>a").eq(0).trigger('click');
 			}

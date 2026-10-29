@@ -6,6 +6,35 @@
 .picker_txt { display:inline-block;padding-left:5px;line-height:40px;text-align:center;vertical-align:top; box-sizing: content-box; font-size: 16px; }
 .date-picker .prev-but,
 .date-picker .next-but { font-size:18px !important;}
+
+/* a11y: month/year/today controls are <button> — keep span-like look */
+.date-picker button.prev-but,
+.date-picker button.next-but,
+.date-picker button.today-but {
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+	line-height: inherit;
+	box-shadow: none;
+}
+.date-picker button.prev-but:focus-visible,
+.date-picker button.next-but:focus-visible,
+.date-picker button.today-but:focus-visible {
+	outline: 2px solid #212e4e;
+	outline-offset: 2px;
+}
+.date-picker button.prev-but:disabled,
+.date-picker button.next-but:disabled,
+.date-picker button.today-but:disabled {
+	cursor: default;
+	opacity: 0.45;
+}
 .ui-datepicker td a { padding:0 !important;font-size:12px !important;text-align:center !important;letter-spacing:-0.5px !important;}
 
 input.timepicker { padding-right:30px;background:#fff url(../img/common/ico_clock_black.png) no-repeat right 10px top 11px !important;}
@@ -22,7 +51,7 @@ input.inp_t~.timepicker { margin-left:5px;}
 .yearPickerBox  { display:inline-block;position:relative;vertical-align:top;}
 .yearPickerBox >input { padding-right:30px;background:#fff url(../js/multidatepicker/datepicker-calendar.png) no-repeat right 10px top 10px !important;cursor:pointer;}
 
-@media all and (max-width:1041px){
+@media all and (max-width:1023px){
     .picker_txt { padding-left:8px;line-height:30px;}
     .date-picker-control:link,
     .date-picker-control:visited { top:5px !important;vertical-align:top !important;}

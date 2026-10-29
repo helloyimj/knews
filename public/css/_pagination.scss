@@ -5,7 +5,9 @@
  .pagination * {box-sizing: content-box;}
 .pagination .num_paging { position:absolute;top:0;left:0;}
 .pagination>button,
-.pagination>a { display:inline-block;overflow:hidden;width:18px;height:30px;color:#222;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:30px;vertical-align:top;}
+.pagination>a { display:inline-block;overflow:hidden;width:18px;height:30px;
+ // color: #222;
+ color:#0f0f0f;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;line-height:30px;vertical-align:top;}
 .pagination>button>span,
 .pagination>a>span { display:block;width:18px;height:30px;background-repeat:no-repeat;background-position:center;text-indent:-999px;}
 .pagination>.btn_first,
@@ -42,9 +44,7 @@
 .num_paging {display:block;position:relative;height:40px;margin-bottom:-40px;box-sizing:border-box;padding-top:18px;font-size:0;}
 .num_paging>span {display:inline-block;color:#666;font-family:'Roboto','Noto Sans KR',sans-serif;font-size:15px;font-weight:400;line-height:19px;vertical-align:top;}
 
-
-@media all and (max-width:1041px){
-
+@media all and (max-width:1023px){
 
     /* paging */
     .pagination>button,
@@ -64,7 +64,7 @@
 
 }
 
-@media all and (max-width:768px){
+@media all and (max-width:767px){
       /* paging */
     .pagination .paging { width:160px;}
     .pagination .paging>li { padding:0 1px;}

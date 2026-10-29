@@ -276,7 +276,8 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 		&.text {
 			background-color: rgba(255, 255, 255, 0);
 			border-color: rgba(0, 0, 0, 0);
-			color: #1e2124;
+			// color: #1e2124;
+			color: #0f0f0f;
 			display: inline-block;
 			height: auto !important;
 			padding: 5px 2px;
@@ -542,7 +543,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 			border-radius: 4px;
 			font-size: 18px;
 			// font-weight: 700;
-			color: #1e2124;
+			// color: #1e2124;
 			transition: 0.4s ease-in-out;
 
 			&::before {
@@ -683,6 +684,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 				height: 56px;
 				color: #464c53;
 				padding: 0 16px;
+				letter-spacing: -0.025em;
 				transition: 0.4s ease-in-out;
 
 				&,
@@ -729,7 +731,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 				}
 
 				&:active {
-					color: #1e2124;
+					// color: #1e2124;
 					background-color: #d6e0eb;
 				}
 
@@ -818,7 +820,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 						padding: 8px 4px 0;
 						font-size: 24px;
 						font-weight: 700;
-						color: #1e2124;
+						// color: #1e2124;
 					}
 
 					> ul.gnb_depth2 {
@@ -848,7 +850,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
                 padding: 0;
                 background-color: transparent;
                 font-size: 18px;
-                color: #1e2124;
+                // color: #1e2124;
                 padding: 8px 10px;
                 border-radius: 4px;
                 font-weight: 500;
@@ -897,8 +899,9 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 								padding: 6px 6px 6px 16px;
 								border-radius: 6px;
 								background-color: transparent;
-								font-size: 18px;								
-								color: #1e2124;
+								font-size: 18px;
+								// color: #1e2124;
+								color: #666;
 
 								&::before {
 									content: "";
@@ -1683,19 +1686,27 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 		}
 
 		&::-webkit-input-placeholder {
-			color: #8a949e;
+			
+			// color: #8a949e;
+			color: #666;
 		}
 
 		&::-moz-placeholder {
-			color: #8a949e;
+			
+			// color: #8a949e;
+			color: #666;
 		}
 
 		&:-ms-input-placeholder {
-			color: #8a949e;
+			
+			// color: #8a949e;
+			color: #666;
 		}
 
 		&::-ms-input-placeholder {
-			color: #8a949e;
+			
+			// color: #8a949e;
+			color: #666;
 		}
 
 		&:not(textarea) {
@@ -1856,7 +1867,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 		display: flex;
 		align-items: center;
 		flex: 0 0 auto;
-		gap: 14px;
+		gap: 0;
 	}
 
 	.news_hot_badge {
@@ -1866,6 +1877,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 		// box-sizing: border-box; 
 		width: 60px;
 		height: 30px;
+		margin-right: 14px;
 		border: solid 1.5px #132f75;
 		border-radius: 4px;
 		background-color: #fff;
@@ -1876,13 +1888,38 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 	}
 
 	.news_hot_viewport {
-		width: 150px;
+		width: 100px;
 		height: 23px;
+		margin-right: 10px;
 		overflow: hidden;
 
 		// overflow에 잘리지 않도록 컨테이너에만 기본 포커스 링 1개 표시
 		&:focus-within {
 			outline: auto;
+			outline-offset: 2px;
+		}
+	}
+
+	/* layout_sprite — 재생: -492px -242px / 일시정지(.stop): -493px -274px */
+	.news_hot_control.btn_play {
+		flex: 0 0 auto;
+		display: block;
+		overflow: hidden;
+		box-sizing: border-box;
+		width: 22px;
+		height: 24px;
+		padding: 0;
+		border: 0;
+		background: url(../img/layout/layout_sprite.png) no-repeat -492px -242px;
+		cursor: pointer;
+		text-indent: -999px;
+
+		&.stop {
+			background-position: -493px -274px;
+		}
+
+		&:focus-visible {
+			outline: 2px solid #132f75;
 			outline-offset: 2px;
 		}
 	}
@@ -1898,7 +1935,7 @@ $ico-popup-close-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height
 
 		a {
 			display: block;
-			width: 150px;
+			width: 100px;
 			height: 23px;
 			overflow: hidden;
 			// 
@@ -2041,7 +2078,7 @@ body.is-gnb-web {
 							padding: 8px 4px 0;
 							font-size: 24px;
 							font-weight: 700;
-							color: #1e2124;
+							// color: #1e2124;
 						}
 
 						> ul.gnb_depth2 {
@@ -2089,12 +2126,7 @@ body.is-gnb-web {
 								a {
 									font-size: 16px;
 									// color: #666;
-
-									&:hover {
-										background-color: #eef2f7;
-										font-weight: bold;
-										color: #212e4e;
-									}
+									color: #666;
 								}
 							}
 						}
@@ -2405,7 +2437,6 @@ body.is-gnb-web {
 // 	.header_news .news_main_menu_mobile .gnb_wrap .gnb_header {
 //     padding: 16px 48px 24px 16px;
 // }
-
 
 	.header_news {
 

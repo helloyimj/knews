@@ -10,7 +10,7 @@
 .authInfoView .lineTop_tbArea .lineTop_tbL2 td .exclamTxt {margin:5px 0;} 
 .authInfoView .lineTop_tbArea .lineTop_tbL2 td ul+.exclamTxt {padding-left:10px;} 
 
-@media all and (max-width:1041px){ 
+@media all and (max-width:1023px){ 
 .fileI {padding-left:23px !important;background-size:auto 17px !important} 
 .authInfoView .contTit_line:nth-of-type(n+2) {margin-top:45px} 
 .authInfoView .lineTop_tbArea {margin-top:20px;} 
@@ -21,13 +21,15 @@
 .authInfoView .lineTop_tbArea .lineTop_tbL2 td .tit:nth-child(n+2) {margin-top:3px;} 
 } 
 
-@media all and (max-width:768px){ 
+@media all and (max-width:767px){ 
 .authInfoView .contTit_line:nth-of-type(n+2) {margin-top:30px} } 
 .infoLst{ position: relative; display:flex; flex-wrap: wrap; border-top: 1px solid #080808; } 
 .infoLst::after{ content: ''; position: absolute; left:0; bottom:0; width:100%; border-bottom: 1px solid #d9d9d9; } 
 .infoLst dl{ display:flex; width:100%; } 
 .infoLst dt , .infoLst dd{ float:left; width:50%; border-bottom: 1px solid #d9d9d9; text-align: center; vertical-align: middle; } 
-.infoLst dt{ display: table; padding-right: 0.5rem; padding-left: 0.5rem; border-right: 1px solid #d9d9d9; background-color: #f4f5f7; color: #222; } 
+.infoLst dt{ display: table; padding-right: 0.5rem; padding-left: 0.5rem; border-right: 1px solid #d9d9d9; background-color: #f4f5f7; 
+    // color: #222;
+    color: #0f0f0f; } 
 .infoLst dt span{ display: table-row; } 
 .infoLst dt span b{ display:table-cell; font-weight: normal; vertical-align: middle; } 
 .infoLst dd{ padding: 0.5rem; } 
@@ -38,7 +40,7 @@
 }
  
 
-@media all and (min-width:1041px){ 
+@media all and (min-width:1024px){ 
 .infoLst dl{ width:calc(100% / 3); } 
 }
  

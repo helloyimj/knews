@@ -338,7 +338,9 @@
 
 .section02 .section02-inner .search-wrap .search .inputsch::placeholder
 	{
-	color: #004A98;
+	
+	// color: #004A98;
+	color: #666;
 	font-weight: 700;
 }
 
@@ -384,7 +386,9 @@
 	top: 20px;
 	right: 90px;
 	font-size: .875rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	display: none;
 }
 @media screen and (max-width: 580px) {
@@ -474,7 +478,9 @@
 
 .section02 .section02-inner .search-wrap .search .bot-line .btn-close {
 	font-size: 0.875rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	border: 0;
 	background-color: transparent;
 }
@@ -499,7 +505,9 @@
 	position: relative;
 	font-size: 1.225rem;
 	font-weight: 700;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	display: inline-flex;
 	align-items: center;
 	padding-right: 15px;
@@ -710,7 +718,7 @@
 	background-color: #ECF3FD;
 	border-radius: 5em;
 	font-size: 0.875rem;
-	color: #4286EA;
+	color: #4286ea;
 	font-weight: 500;
 	align-items: center;
 	margin-top: 25px;
@@ -720,7 +728,9 @@
 	.section03 .section03-inner .news-box01 .list-type03 li .title,
 	.section03 .section03-inner .news-box01 .list-type04 li .title {
 	font-size: 1rem;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	font-weight: 500;
 	line-height: 1.4em;
 	margin-top: 20px;
@@ -743,7 +753,9 @@
 	.section03 .section03-inner .news-box01 .list-type04 li .date {
 	display: block;
 	font-size: 0.938rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	font-weight: 500;
 	margin-top: 15px;
 	margin-left: 3px;
@@ -872,7 +884,9 @@
 
 .section03 .section03-inner .news-box02 .list-type05 li .cont .title {
 	font-size: 1rem;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	font-weight: 500;
 	line-height: 1.4em;
 	white-space: nowrap;
@@ -904,7 +918,7 @@
 	display: inline-flex;
 	border-radius: 5em;
 	font-size: 0.875rem;
-	color: #4286EA;
+	color: #4286ea;
 	font-weight: 500;
 	align-items: center;
 }
@@ -913,7 +927,9 @@
 	position: relative;
 	display: inline-block;
 	font-size: 0.875rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	font-weight: 500;
 	padding-left: 10px;
 	margin-left: 10px;
@@ -929,7 +945,7 @@
 	height: 12px;
 	background-color: #ccc;
 }
-@media screen and (max-width: 1041px) {
+@media screen and (max-width: 1023px) {
 	.section03 .section03-inner .news-box02 .list-type05 li .cont .date::before
 		{
 		top: 3px;
@@ -998,14 +1014,18 @@
 .section03 .section03-inner .news-box02 .list-type06 li .country-info .c-name
 	{
 	font-size: 1.225rem;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	font-weight: 700;
 }
 
 .section03 .section03-inner .news-box02 .list-type06 li .country-info .division
 	{
 	font-size: 0.938rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	font-weight: 500;
 	margin-left: 10px;
 }
@@ -1113,7 +1133,7 @@
 		width: 250px;
 	}
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 767px) {
 	.section04 .section04-inner .sec04-list-wrap .header-line {
 		width: 170px;
 	}
@@ -1127,7 +1147,9 @@
 
 .section04 .section04-inner .sec04-list-wrap .header-line .h3 {
 	font-size: 1.375rem;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	/*   font-family: 'GmarketSans'; */ /*2024-10-21 수정*/
 	font-weight: 700;
 }
@@ -1271,7 +1293,9 @@
 
 .section04 .section04-inner .sec04-list-wrap .slider-wrap .slider-list li .top .title p
 	{
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	font-size: 1.25rem;
 	font-weight: 700;
 	display: inline-block;
@@ -1301,7 +1325,9 @@
 	width: 50px;
 	height: 50px;
 	font-size: 0.875rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	font-weight: 700;
 	text-align: center;
 	display: inline-flex;
@@ -1348,7 +1374,9 @@
 	{
 	display: inline-block;
 	font-size: 0.813rem !important;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	margin-right: 5px;
 }
 
@@ -1390,7 +1418,7 @@
 	{
 	display: inline-block;
 	font-size: 0.875rem;
-	color: #4286EA;
+	color: #4286ea;
 }
 
 .section04 .section04-inner .sec04-list-wrap .slider-wrap .slider-list.second li .top .title
@@ -1402,7 +1430,9 @@
 
 .section04 .section04-inner .sec04-list-wrap .slider-wrap .slider-list.second li .top .title p
 	{
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	font-size: 1.25rem;
 	font-weight: 700;
 	display: inline-block;
@@ -1834,7 +1864,9 @@
 	min-height: 56px;
 	padding: 14px 25px;
 	font-size: 1.125rem;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	font-weight: 700;
 	box-sizing: border-box;
 	width: 100%;
@@ -2105,7 +2137,9 @@
 .section08 .section08-inner .left .notice-list li .title {
 	font-size: 1rem;
 	font-weight: 500;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	flex-grow: 1;
 	white-space: nowrap;
 	overflow: hidden;
@@ -2116,7 +2150,9 @@
 	width: 70px;
 	font-size: 0.875rem;
 	font-weight: 500;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	flex-shrink: 0;
 	text-align: right;
 	margin-left: 20px;
@@ -2141,7 +2177,9 @@
 .section08 .section08-inner .left .notice-list li:first-child .title {
 	font-size: 1.25rem;
 	font-weight: 700;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	flex-grow: 1;
 	white-space: nowrap;
 	overflow: hidden;
@@ -2155,7 +2193,7 @@
 	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.section08 .section08-inner .left .notice-list li:first-child .title {
 		height: 5.4em;
 	}
@@ -2538,7 +2576,9 @@
 .tab-list>ul>li>a>span {
 	display: inline-block;
 	font-size: 1.375rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	font-weight: 700;
 	/*   font-family: 'GmarketSans'; */ /*2024-10-21 수정*/
 	line-height: 1.8em;
@@ -2856,7 +2896,7 @@
 }
 
 .tab-list.type02>ul>li>ul>li>.setting .txt {
-	color: #4286EA
+	color: #4286ea
 }
 
 .tab-list.type02>ul>li>.default .default-txt {
@@ -2872,7 +2912,9 @@
 .tab-list.type02>ul>li>.default .default-txt p {
 	display: inline-block;
 	font-size: 1rem;
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	font-weight: 700;
 	text-align: center;
 	padding-top: 100px;
@@ -2898,7 +2940,7 @@
 }
 
 .tab-list.type02>ul>li>.default>li>.setting .txt {
-	color: #4286EA
+	color: #4286ea
 }
 
 /*popupArea*/
@@ -2948,7 +2990,7 @@
 
 .popupWindow.setting {
 	width: 100%;
-	max-width: 1024px;
+	max-width: 1023px;
 	border-radius: 20px;
 	background: #FFF;
 	padding: 40px 60px;
@@ -2975,7 +3017,9 @@
 
 .popupWindow.setting .heading-txt {
 	font-size: 1rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	text-align: center;
 	margin-top: 5px;
 }
@@ -3113,7 +3157,9 @@
 }
 
 .popupWindow.setting .info-txt {
-	color: #222;
+	
+	// color: #222;
+	color: #0f0f0f;
 	font-weight: 500;
 	font-size: 1rem;
 	margin-top: 10px;
@@ -3284,7 +3330,7 @@
 , .popupWindow.banner02 .head .info-txt .highlight
 , .popupWindow.banner03 .head .info-txt .highlight
 	{
-	color: #4286EA;
+	color: #4286ea;
 }
 
 /*20250116*/
@@ -3467,7 +3513,7 @@
 }
 
 .tab-list.type02>ul>li>ul>li .setting {
-	color: #4286EA
+	color: #4286ea
 }
 
 .tab-list.type02>ul>li>ul>li a:hover {
@@ -3568,7 +3614,9 @@
 .tab-list.type02 .swiper-button-next:after, .tab-list.type02 .swiper-button-prev:after
 	{
 	font-size: 14px;
-	color: #111;
+	
+	// color: #111;
+	color: #0f0f0f;
 	font-weight: 700;
 }
 
@@ -3675,14 +3723,16 @@
   background-color: #ECF3FD;
   border-radius: 5em;
   font-size: 0.875rem;
-  color: #4286EA;
+  color: #4286ea;
   font-weight: 500;
   align-items: center;
   margin-top: 25px;
 }
 .sec1028-swiper .swiper-slide .title{
   font-size: 1rem;
-  color: #222;
+  
+  // color: #222;
+  color: #0f0f0f;
   font-weight: 500;
   line-height: 1.4em;
   margin-top: 20px;
@@ -3702,7 +3752,9 @@
 .sec1028-swiper .swiper-slide .date{
 	display: block;
 	font-size: 0.938rem;
-	color: #555;
+	
+	// color: #555;
+	color: #666666;
 	font-weight: 500;
 	margin-top: 15px;
 	margin-left: 3px;
@@ -3729,7 +3781,7 @@
   opacity: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
 	.sec1028-swiper .swiper-button-next,
 	.sec1028-swiper .swiper-button-prev{
 		top: 38%; /*2024-10-29 수정*/
@@ -3737,7 +3789,7 @@
 		height: 54px; /*2024-10-29 수정*/
 	}
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.sec1028-swiper01 .new-list-type>.swiper-slide,
 	.sec1028-swiper03 .new-list-type>.swiper-slide,
 	.sec1028-swiper04 .new-list-type>.swiper-slide,
@@ -3968,7 +4020,7 @@
 	    top: 46%;
 	}
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.sec09-slider-wrap .swiper-button-next
 	, .sec09-slider-wrap .swiper-button-prev {
 	    top: 52%;

@@ -1,7 +1,6 @@
 /*
- * 프론트 HTML/JS만 공통 모듈화한다.
- * /ajaxf, /ajaxa, /bvs, /kotranews, /cms 등 서버 경로·파일은 변경하지 않는다.
- * 아래 URL은 기존 board4.js 와 동일하게 호출만 한다.
+ * 프론트 HTML/JS만 공통 모듈화
+ * /ajaxf, /ajaxa, /bvs, /kotranews, /cms 등 서버 경로·파일은 변경하지 않음
  */
 (function (window, $) {
 	"use strict";

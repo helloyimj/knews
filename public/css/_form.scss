@@ -4,7 +4,9 @@
 /* [참고] 사각라디오버튼,원형체크박스는 접근성에 맞지않아 사용불가 */
 .inp_r { display:inline-block;position:relative;margin-right:10px;font-size:0;}
 .inp_r>input[type=radio] { position:absolute;top:0;left:0;z-index:0;width:24px;height:24px;}
-.inp_r>label { display:inline-block;overflow:hidden;position:relative;position:relative;z-index:1;min-height:20px;padding:4px 0 0 34px;background:none;color:#222;font-size:16px;line-height:20px;text-align:left;cursor:pointer;}
+.inp_r>label { display:inline-block;overflow:hidden;position:relative;position:relative;z-index:1;min-height:20px;padding:4px 0 0 34px;background:none;
+    // color: #222;
+    color:#0f0f0f;font-size:16px;line-height:20px;text-align:left;cursor:pointer;}
 .inp_r>label:before { display:block;position:absolute;top:0;left:0;width:24px;height:24px;background:url(../img/common/sprite_component.png) no-repeat -186px -259px;content:'';}
 .inp_r>input[type=radio]:checked+label:before { background-position:-312px -10px;}
 .inp_r>input[type=radio]:disabled+label:before { background-position:-230px -259px;color:#b6b6b6;cursor:default;}
@@ -12,7 +14,9 @@
 
 .inp_c { display:inline-block;position:relative;margin-right:10px;font-size:0;box-sizing:content-box;}
 .inp_c>input[type=checkbox] { position:absolute;top:0;left:-1px;z-index:0;width:26px;height:23px;border:none;box-sizing:content-box;opacity:0;-webkit-appearance:none;appearance:none;}
-.inp_c>label { display:inline-block;overflow:hidden;position:relative;z-index:1;min-height:20px;padding:4px 0 0 34px;background:none;color:#222;font-size:16px;line-height:20px;text-align:left;cursor:pointer;box-sizing:content-box;}
+.inp_c>label { display:inline-block;overflow:hidden;position:relative;z-index:1;min-height:20px;padding:4px 0 0 34px;background:none;
+    // color: #222;
+    color:#0f0f0f;font-size:16px;line-height:20px;text-align:left;cursor:pointer;box-sizing:content-box;}
 .inp_c>label:before { display:block;position:absolute;top:0;left:0;width:24px;height:24px;background:url(../img/common/sprite_component.png) no-repeat -10px -259px;content:'';}
 .inp_c>input[type=checkbox]:checked+label:before { background-position:-98px -259px;}
 .inp_c>input[type=checkbox]:disabled+label { color:#b6b6b6;cursor:default;}
@@ -27,10 +31,18 @@
 .inp_c.bookmark>input[type=checkbox]:checked+label{color:#4286ea;}
 .inp_c.bookmark>input[type=checkbox]:checked+label:before { background-position:-114px -344px;}
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */color:#777;}
-::-moz-placeholder { /* Firefox 19+ */color:#777;}
-:-ms-input-placeholder { /* IE 10+ */color:#777;}
-:-moz-placeholder { /* Firefox 18- */color:#777;}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	// color: #777;
+	color:#666;}
+::-moz-placeholder { /* Firefox 19+ */
+	// color: #777;
+	color:#666;}
+:-ms-input-placeholder { /* IE 10+ */
+	// color: #777;
+	color:#666;}
+:-moz-placeholder { /* Firefox 18- */
+	// color: #777;
+	color:#666;}
 
 /* select박스 스타일 */
 .inp_s { 
@@ -55,7 +67,9 @@
 	// @include focus-ring-contrast;
 }
 .inp_t { box-sizing:border-box;width:100%;height:40px;padding:0 12px;border:1px solid #d9d9d9;
-    border-radius:0;color:#222;font-size:15px;line-height:42px;
+    border-radius:0;
+    // color: #222;
+    color:#0f0f0f;font-size:15px;line-height:42px;
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;/* iOS 둥근모서리 제거 *//* 네이티브 외형 감추기 */
@@ -63,12 +77,16 @@
 .searchOpt_wrap .inp_s:disabled { background-color:#fff;color:#b3b2b2;opacity: 1;}
 .inp_t:disabled  { background-color:#f1f1f1;}
 // .inp_t:focus { border:1px solid #4286ea;outline:none !important;}
-.inp_area { box-sizing:border-box;width:100%;padding:5px 10px;border:1px solid #d9d9d9;color:#222;font-size:15px;text-align:left;resize:none;}
+.inp_area { box-sizing:border-box;width:100%;padding:5px 10px;border:1px solid #d9d9d9;
+    // color: #222;
+    color:#0f0f0f;font-size:15px;text-align:left;resize:none;}
 .inp_area:disabled  { background-color:#f1f1f1;}
 // .inp_area:focus { border:1px solid #4286ea;outline:none !important;}
 .inp_t.half { width:50%;}
 .inp_t.w_short { width:400px;}
 
 .calByte { text-align:right;}
-.calByte>span { display:inline-block;color:#999;font-size:14px;vertical-align:top;}
+.calByte>span { display:inline-block;
+    // color: #999;
+    color:#666666;font-size:14px;vertical-align:top;}
 .calByte>span b { display:inline-block;color:#0f0f0f;font-weight:400;vertical-align:top;;}

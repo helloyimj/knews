@@ -1165,6 +1165,13 @@ p.txt+.icoLineBox {margin-top:20px;}
 .txtG.RowM .txt:nth-of-type(n+2){margin-top:30px;}
 .txtG.RowM .txt ~ .txtMid{margin-top:30px;}
 .txtG .txtMid:nth-of-type(n+2){margin-top:30px;}
+/* 게시물/본문형 .txtG 내부 본문 */
+.txtG > p,
+.txtG > p *,
+.txtG .txt,
+.txtG .txt *,
+.txtG p.txt,
+.txtG p.txt * {font-family: "Roboto", "Noto Sans KR", sans-serif !important;font-size: 16px !important;line-height: 1.6 !important;}
 .txtMid{display:block;font-size:18px;font-weight:500;color:#0f0f0f;letter-spacing:-0.5px;margin-bottom:10px;line-height:26px;}
 .txtSm{display:block;font-size:15px;font-weight:400;color:#666;letter-spacing:-0.5px;margin-bottom:10px;line-height:22px;}
 .txtUnit{display:block;font-size:14px;font-weight:400;color:#949494;letter-spacing:-0.5px;margin-bottom:10px;line-height:20px;}
@@ -2468,9 +2475,9 @@ text-align:center;letter-spacing:-.5px;transition:.2s;}
 .brightProject .txtContArea{margin-bottom:0;}
 .brightProject .txtContArea .lineTop_tbArea .txtG .txt:nth-of-type(n+2){margin-top:40px;}
 .brightProject .txtContArea .lineTop_tbArea .txtG .txt ~ .list_dotBlack{margin-top:40px;}
-.brightProject .lineTop_tbArea .lineTop_tbL2 th  {font-size:16px !important;font-weight:500 !important;line-height:1.9em !important;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif !important;}
-.brightProject .lineTop_tbArea .lineTop_tbL2 td {font-size:16px !important;font-weight:400 !important;line-height:1.9em !important;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif !important;} 
-.brightProject .lineTop_tbArea .lineTop_tbL2 p {font-size:16px !important;font-weight:400 !important;line-height:1.9em !important;font-family:'Roboto','Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif !important;} 
+.brightProject .lineTop_tbArea .lineTop_tbL2 th  {font-size:16px !important;font-weight:500 !important;line-height:1.9em !important;}
+.brightProject .lineTop_tbArea .lineTop_tbL2 td {font-size:16px !important;font-weight:400 !important;line-height:1.9em !important;} 
+.brightProject .lineTop_tbArea .lineTop_tbL2 p {font-size:16px !important;font-weight:400 !important;line-height:1.9em !important;} 
 .txt.view_Copy{margin-top:20px;}
 
 /* 07.해외투자 > 05.진출기업정보 */
@@ -3299,9 +3306,15 @@ text-align:center;letter-spacing:-.5px;transition:.2s;}
     .reN_distribution .col2>ul>li .box {height:300px;}
 
 }
-@media all and (max-width: 1041px){
+@media all and (max-width: 1023px){
     /* 게시글 상세 */
-    .lineList_v .view_txt .view_cont {padding-top:10px;} 
+    .lineList_v .view_txt .view_cont {padding-top:10px;}
+    .txtG > p,
+    .txtG > p *,
+    .txtG .txt,
+    .txtG .txt *,
+    .txtG p.txt,
+    .txtG p.txt * {font-family: "Roboto", "Noto Sans KR", sans-serif !important;font-size: 14px !important;line-height: 1.6 !important;} 
     .txtContArea .lineTop_tbArea {margin:20px 0 0 0;}
     .txtContArea p.txt+.lineTop_tbArea {margin-top:10px;}
     .gray_Icon_box+.txtContArea {margin-top:35px} 
@@ -4639,7 +4652,7 @@ text-align:center;letter-spacing:-.5px;transition:.2s;}
     .invest_concept .investDiff dd .tit:before {content:'';position:absolute;left:0;top:9px;display:block;width:7px;height:7px;border-radius:50%;background:#4286ea;}
     .invest_concept .investDiff dd+dd {margin-top:20px;} */
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 767px){
     /* 상세 */
     .icoLineBox {padding:65px 15px 15px 15px;background-position:top 20px left 50%;}
     .icoLineBox p+p {margin-top:5px;}

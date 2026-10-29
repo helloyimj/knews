@@ -448,7 +448,7 @@
 				arrows: true,
 				variableWidth: true,
 				adaptiveHeight: true,
-				responsive: [{ breakpoint: 1041, settings: { arrows: false, infinite: true } }]
+				responsive: [{ breakpoint: 1024, settings: { arrows: false, infinite: true } }]
 			});
 		}
 

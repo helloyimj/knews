@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* Reset */
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td
+{
+    box-sizing: border-box;
+    margin:0; padding:0;
+    /* font-family:'Noto Sans KR',굴림,Gulim,돋움,Dotum, Sans-serif; */
+    /* none: 구형 iOS가 가로모드에서 본문 글자를 임의로 키워 레이아웃이 깨지는 것을 막으려던 관행.
+       접근성(시스템 글자 크기)까지 막히므로 확대 배율만 고정하는 100%로 둔다. 시각 크기는 기존과 같다. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing:antialiased;
+}
+b, span, strong, input, a, button { color:inherit;font-family:inherit;font-size:inherit;
+// box-sizing: border-box;
+}
+article, aside, dialog, footer, header, section, footer, nav, figure, hgroup, details, summary, figure, figcaption { display:block;}
+cite { display:inline;}
+html, body { 
+    
+    height:100%; font-size:16px;  color:#0f0f0f;
+ /* 디자인 스타일 가이드 기준 설정 */
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif; 
+    /* 접근성 최적화 폰트 설정 (시스템 폴백 폰트 추가 20260916) */
+    /* font-family: 'Roboto', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;  */
+    // line-height:1.6; 
+    line-height:1.5; 
+}
+
+/* Reset */
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+b, span, strong, input, a, button {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+@media (max-width: 1023px) {
+	html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td {
+		font-size:14px;line-height:1.4;
+	}
+}
+
+
+body { 
+    margin:0;overflow-x:hidden;
+    color: #0f0f0f;
+}
+a:link,
+a:visited { text-decoration:none;}
+img{max-width:100%;border:0;}
+label, input, textarea, select{vertical-align:middle;
+font-family:inherit;
+}
+ol, ul { list-style:none;}
+table { border-collapse:collapse;table-layout:fixed;}
+fieldset { border:none;}
+.skip, hr, legend{overflow:hidden;position:absolute;left:-1000%;width:1px;height:1px;font-size:0;line-height:0;}
+button { display:inline-block;margin:0;padding:0;border:none;background:none;cursor:pointer;}
+.date-picker-control:link,
+.date-picker-control:visited { top:-6px !important;}
+.txtHidden { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;white-space:nowrap;border:0;}
+
+/* placeholder 클릭 시 감춤 */
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { /* WebKit browsers */ color:transparent !important; }
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color:transparent !important; }
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ color:transparent !important; }
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */ color:transparent !important; }
+
+
+// 추가 20260922
+a, button{
+    display: block;
+}
+
+li {
+box-sizing: content-box;
+}
+// div, h1, h2, h3, h4, h5, h6, p, a, button{
+//     box-sizing: border-box;}
