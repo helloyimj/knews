@@ -1171,7 +1171,7 @@ p.txt+.icoLineBox {margin-top:20px;}
 .txtG .txt,
 .txtG .txt *,
 .txtG p.txt,
-.txtG p.txt * {font-family: "Roboto", "Noto Sans KR", sans-serif !important;font-size: 16px !important;line-height: 1.6 !important;}
+.txtG p.txt * {font-family: "Roboto", "Noto Sans KR", sans-serif !important;font-size: 16px !important;/* line-height: 1.6 !important; */}
 .txtMid{display:block;font-size:18px;font-weight:500;color:#0f0f0f;letter-spacing:-0.5px;margin-bottom:10px;line-height:26px;}
 .txtSm{display:block;font-size:15px;font-weight:400;color:#666;letter-spacing:-0.5px;margin-bottom:10px;line-height:22px;}
 .txtUnit{display:block;font-size:14px;font-weight:400;color:#949494;letter-spacing:-0.5px;margin-bottom:10px;line-height:20px;}
@@ -3314,7 +3314,7 @@ text-align:center;letter-spacing:-.5px;transition:.2s;}
     .txtG .txt,
     .txtG .txt *,
     .txtG p.txt,
-    .txtG p.txt * {font-family: "Roboto", "Noto Sans KR", sans-serif !important;font-size: 14px !important;line-height: 1.6 !important;} 
+    .txtG p.txt * {font-family: "Roboto", "Noto Sans KR", sans-serif !important;font-size: 14px !important;/* line-height: 1.6 !important; */} 
     .txtContArea .lineTop_tbArea {margin:20px 0 0 0;}
     .txtContArea p.txt+.lineTop_tbArea {margin-top:10px;}
     .gray_Icon_box+.txtContArea {margin-top:35px} 

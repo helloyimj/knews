@@ -587,7 +587,7 @@ input.inp_t~.timepicker {margin-left:5px;}
 .btn_infoOpen.on+.info_bubble {display:block;}
 
 /* text & list*/
-p.txt{color:#0f0f0f;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:16px !important;line-height:1.6 !important;}
+p.txt{color:#0f0f0f;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:16px !important;/* line-height: 1.6 !important; */}
 
 p.exclam{margin-top:5px;padding-left:25px;background:url(../img/common/ico_exclam.png) no-repeat 0 4px;font-size:16px;line-height:1.9em;font-weight:400;color:#666;letter-spacing:-0.5px;}
 p.exclam.Orange {display:inline-block;position:relative;background:none;font-size:15px;color:#666;vertical-align:top;}
@@ -2217,13 +2217,13 @@ td .needs {font-weight:bold;color:#272727;}
 
     .pointExclam {margin-top:8px;}
 
-    p.txt {font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;line-height:1.6 !important;}
+    p.txt {font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;/* line-height: 1.6 !important; */}
 
     .urlTxt {padding-right:15px;background-position:right 0 top 6px;background-size:11px auto;}
 
     .list_cirBlue>li {padding-left:14px;font-size:15px;line-height:1.5em;}
     .list_cirBlue>li::before {top:6px;width:8px;height:8px;border-width:2px;}
-    .list_cirBlue>li p.txt {padding:5px 0;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;line-height:1.6 !important;}
+    .list_cirBlue>li p.txt {padding:5px 0;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;/* line-height: 1.6 !important; */}
     .list_cirBlue>li>.list_dotBlack {padding:5px 0;}
 
     .list_dotBlack>li {font-size:14px;line-height:1.5em;}
@@ -2726,7 +2726,7 @@ td .needs {font-weight:bold;color:#272727;}
     .pageTit {margin:0 0 25px;font-size:23px;line-height:33px;}
     
     /* text & list*/
-    p.txt{font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;line-height:1.6 !important;}
+    p.txt{font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;/* line-height: 1.6 !important; */}
 
     ul.list_dotBrown>li {font-size:14px;line-height:20px;}
     ul.list_num>li {font-size:14px;line-height:1.5em;}

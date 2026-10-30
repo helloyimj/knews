@@ -86,7 +86,7 @@
 /* text & list */
 /* ============================================================ */
 /* text & list */
-p.txt{color:#0f0f0f;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:16px !important;line-height:1.6 !important;}
+p.txt{color:#0f0f0f;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:16px !important;/* line-height: 1.6 !important; */}
 p.exclam{margin-top:5px;padding-left:25px;background:url(../img/common/ico_exclam.png) no-repeat 0 4px;color:#666;font-size:16px;line-height:1.9em;font-weight:400;letter-spacing:-0.5px;}
 p.exclam.Orange, p.exclam.Orange a { display:inline-block; position:relative; color:#666;font-size:15px;vertical-align:top; }
 p.exclam.Orange:before { display:block;position:absolute;top:5px;left:0;width:18px;height:18px;background: url(../img/common/sprite_component.png) no-repeat -356px -124px;content:'';
@@ -133,11 +133,11 @@ p.exclam+p.exclam { margin-top:0;}
 .txtNumList>li+li { margin-top:4px;}
 .outlineArea ul.list_dotBlack { display:inline-block;text-align:left;vertical-align:top;}
 @media all and (max-width:1023px) {
-p.txt { font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;line-height:1.6 !important;}
+p.txt { font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;/* line-height: 1.6 !important; */}
 .urlTxt { padding-right:15px;background-position:right 0 top 6px;background-size:11px auto;}
 .list_cirBlue>li { padding-left:14px;font-size:15px;line-height:1.5em;}
 .list_cirBlue>li::before { top:6px;width:8px;height:8px;border-width:2px;}
-.list_cirBlue>li p.txt { padding:5px 0;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;line-height:1.6 !important;}
+.list_cirBlue>li p.txt { padding:5px 0;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;/* line-height: 1.6 !important; */}
 .list_cirBlue>li>.list_dotBlack { padding:5px 0;}
 .list_dotBlack>li { font-size:14px;line-height:1.5em;}
 .list_dotBlack>li+li { margin-top:4px;}
@@ -161,7 +161,7 @@ p.exclam.Orange .dot:before { top:8px;}
 }
 @media all and (max-width:767px) {
 /* text & list */
-p.txt{font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;line-height:1.6 !important;}
+p.txt{font-family:"Roboto","Noto Sans KR",sans-serif !important;font-size:14px !important;/* line-height: 1.6 !important; */}
 ul.list_dotBrown>li { font-size:14px;line-height:20px;}
 ul.list_num>li { font-size:14px;line-height:1.5em;}
 ul.list_dotLine>li { font-size:14px;line-height:1.5em;}

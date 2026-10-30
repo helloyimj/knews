@@ -434,11 +434,11 @@ function initCommonLayout() {
                     <li class="child">
                       <a href="/kotranews/cms/com/index.do?MENU_ID=1340" data-sub="Y" target="_self">고객문의</a>
 
-              <ul class="menuS">
-                        <li class="" style="display: none">
-                          <a href="/kotranews/cms/com/index.do?MENU_ID=640" title="" data-sub="Y" target="_self">고객문의</a>
-                        </li>
-              </ul>
+                    <ul class="menuS">
+                      <li class="" style="display: none">
+                        <a href="/kotranews/cms/com/index.do?MENU_ID=640" title="" data-sub="Y" target="_self">고객문의</a>
+                      </li>
+                    </ul>
             </li>
             <li class="child">
                       <a href="/kotranews/cms/com/index.do?MENU_ID=680" data-sub="Y" target="_self">사이트이용</a>
@@ -896,7 +896,7 @@ function initCommonLayout() {
   // HTML에 이미 #header > #header_news 가 있으면 덮어쓰지 않음 (header_news.js 바인딩 유지)
   if (!$("#header #header_news.header_news").length) {
     $("#header").html(`
-          <!-- header -->
+      <!-- header -->
       <header id="header_news" class="header_news">
         <!-- 헤더 컨텐츠 영역  -->
         <div class="header_in">
@@ -904,9 +904,11 @@ function initCommonLayout() {
           <div class="header_container">
             <div class="inner">
               <div class="header_branding">
-                <h2 class="logo">
-                  <a href="#" target="_self" aria-label="KOTRA 해외시장뉴스"></a>
-                </h2>
+                <h1 class="logo">
+                  <a href="#" target="_self" aria-label="KOTRA 해외시장뉴스">
+                  <span class="sr_only">코트라 해외시장뉴스</span>
+                  </a>
+                </h1>
                 <div class="news_top_search">
                   <form class="news_search" role="search" action="https://dream.kotra.or.kr/kotranews/index.do" method="get">
                     <label class="sr_only" for="newsSearchInput">검색어</label>

@@ -109,12 +109,13 @@
 .lineList_v .subTitleArea .subTit+.subTit {margin-top:5px;}
 .lineList_v .view_txt {display:block;margin-bottom:0px;margin-top:30px;
     // color: #333;
-    color:#666666;font-family:'Roboto','Noto Sans KR',sans-serif !important;
+    // color:#666666;
+    font-family:'Roboto','Noto Sans KR',sans-serif !important;
     // font-size:18px;
     font-size:16px !important;
     font-weight:400;
     // line-height:1.9em;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
     word-break:break-all;}
 .lineList_v .view_txt hr {position:inherit;left:0;display:block;width:100%;height:auto;}
 .lineList_v .view_txt strong {font-weight:500 !important}
@@ -126,13 +127,13 @@
     // line-height:1.9em !important;
     // font-size:18px !important;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
 }
 .lineList_v .view_txt .viewDataWrap * {font-family:'Roboto','Noto Sans KR',sans-serif !important;
     // line-height:1.9em !important;
     // font-size:18px !important;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
     white-space:normal;}
 .lineList_v .view_txt .viewDataWrap * img {margin:0 auto !important;}
 .lineList_v .view_txt .viewDataWrap li,
@@ -144,13 +145,13 @@
     // line-height:1.9em !important;
     // font-size:18px !important;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
 }
 .lineList_v .view_txt .contentsSp * {font-family:'Roboto','Noto Sans KR',sans-serif !important;
     // line-height:1.9em !important;
     // font-size:18px !important;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
 }
 .lineList_v .view_txt .txtG > p,
 .lineList_v .view_txt .txtG > p *,
@@ -160,7 +161,7 @@
 .lineList_v .view_txt .txtG p.txt * {
     font-family: "Roboto", "Noto Sans KR", sans-serif !important;
     font-size: 16px !important;
-    line-height: 1.6 !important;
+    // line-height: 1.6 !important;
 }
 .lineList_v .view_txt .contentsSp b,
 .lineList_v .view_txt .contentsSp strong  {font-weight:500 !important;}
@@ -259,7 +260,7 @@ dd .add_openNoti {width:100%;margin-left:0px; margin-top: 30px}
     // font-size:16px !important;
     // line-height:1.9em !important;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
 }
 .lineList_v .contTit_s:nth-child(n+2) {margin-top:30px;}
 .lineList_v.typeReportView  {border-top:1px solid #333 !important;}
@@ -287,7 +288,7 @@ dd .add_openNoti {width:100%;margin-left:0px; margin-top: 30px}
 .lineList_v.typeReportView dd .view_txt>p {
     // line-height:1.9em;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
 }
 .lineList_v.typeReportView dt .reportInfo ul>li a,
 .lineList_v.typeReportView dt .reportInfo ul>li button {display:block;overflow:hidden;text-overflow:ellipsis;width:100%;min-height:22px;box-sizing:border-box;padding:4px 0 0;border:0;background-color:transparent;background-repeat:no-repeat;background-position:left top;
@@ -348,14 +349,14 @@ dd .add_openNoti {width:100%;margin-left:0px; margin-top: 30px}
     // line-height:1.9em;
     // font-size:18px;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
     // color: #333;
     color:#666666;}
 .typeVideoView .view_txt .video_txt * {
     // line-height:1.9em !important;
     // font-size:18px !important;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
     // color: #333;
     color:#666666!important;background:none !important;font-family:"Roboto","Noto Sans KR",sans-serif !important;font-weight:400 !important;}
 .typeVideoView .view_txt .video_txt>span {font-size: inherit !important;font-weight: inherit !important;font-family: inherit !important;background: #fff !important;line-height: inherit !important;color: inherit !important;}
@@ -371,7 +372,7 @@ dd .add_openNoti {width:100%;margin-left:0px; margin-top: 30px}
 .videoArea .video_info .fileArea {margin-bottom:0;}
 .videoArea .video_info .subtitles {padding:20px 30px;max-height:140px;box-sizing:border-box;overflow-y:auto;
     // line-height:1.9em;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
 }
 
 /* 포토 상세 */
@@ -380,7 +381,7 @@ dd .add_openNoti {width:100%;margin-left:0px; margin-top: 30px}
     // line-height:1.9em;
     // font-size:18px;
     font-size:16px !important;
-    line-height:1.6 !important;
+    // line-height: 1.6 !important;
     // color: #333;
     color:#666666;}
 .typePhotoView .photoSoloSlider {position:relative;;margin:0 auto;max-width:800px;;}
